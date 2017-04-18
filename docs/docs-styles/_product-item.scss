@@ -1,0 +1,9 @@
+.product-item {
+    max-width: 270px;
+}
+
+.products-grid {
+    .product-item {
+        max-width: none;
+    }
+}

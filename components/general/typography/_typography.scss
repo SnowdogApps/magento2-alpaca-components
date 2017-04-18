@@ -1,0 +1,100 @@
+h1,
+h2 {
+    font-family: $font-family-extra-bold;
+    margin: 0 0 10px;
+    color: $font-color;
+    line-height: 1.4;
+}
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-bold;
+    margin: 0 0 10px;
+    color: $font-color;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 24px;
+
+    @include mq($screen-m) {
+        font-size: 28px;
+    }
+
+    @include mq($screen-l) {
+        font-size: 30px;
+    }
+}
+h2 {
+    font-size: 18px;
+
+    @include mq($screen-m) {
+        font-size: 20px;
+    }
+
+    @include mq($screen-l) {
+        font-size: 24px;
+    }
+}
+h3 {
+    font-size: 16px;
+
+    @include mq($screen-m) {
+        font-size: 20px;
+    }
+}
+h4 {
+    font-size: 15px;
+
+    @include mq($screen-m) {
+        font-size: 18px;
+    }
+}
+h5 {
+    font-size: 17px;
+}
+h6 {
+    font-size: 16px;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+
+    &:after {
+        content: '';
+        width: 70px;
+        height: 2px;
+        background-color: $color-main1;
+        display: block;
+        margin-top: 10px;
+    }
+
+    &--short-line {
+        &:after {
+            width: 25px;
+        }
+    }
+}
+
+.heading-secondary {
+    font-family: $font-family-regular;
+    padding: 0 0 7px;
+    border-bottom: 1px solid $border-base;
+}
+
+.heading-white {
+    color: $color-white;
+    text-transform: uppercase;
+}
+
+a {
+    @include links(active) {
+        color: $color-main1;
+        text-decoration: none;
+    }
+    @include links(hover) {
+        color: $color-main1;
+        text-decoration: underline;
+    }
+}

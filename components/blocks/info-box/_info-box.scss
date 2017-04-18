@@ -1,0 +1,133 @@
+.info-box {
+    display: block;
+    padding: 0 30px 30px;
+
+    @include mq($screen-l) {
+        width: 50%;
+        padding-left: 60px;
+    }
+
+    &--darken-bg {
+        padding: 0 15px 30px;
+
+        @include mq($screen-l) {
+            width: 50%;
+        }
+
+        .info-box__date {
+            color: $color-white;
+        }
+
+        .info-box__title {
+            color: $color-white;
+            margin-bottom: 20px;
+        }
+
+        .info-box__button {
+            @include links(active) {
+                color: $color-white;
+            }
+
+            @include links(hover) {
+                color: $font-color;
+
+                .inco-box__button-icon {
+                    fill: $font-color;
+                }
+            }
+        }
+
+        .inco-box__button-icon {
+            fill: $color-white;
+        }
+    }
+
+    &__date {
+        display: block;
+        margin: 40px 0 40px;
+        font-family: $font-family-light;
+        font-size: 24px;
+    }
+
+    &__address {
+        display: block;
+        margin-bottom: 20px;
+        font-style: normal;
+    }
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 40px;
+
+        @include mq($screen-m) {
+            margin-bottom: 50px;
+        }
+
+        @include mq($screen-l) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__download-link {
+        display: block;
+        margin: 20px 0;
+
+        @include links(active) {
+            color: $font-color;
+            text-decoration: underline;
+        }
+
+        @include links(hover) {
+            color: $color-white;
+        }
+    }
+
+    &__main {
+        color: $font-color-lighter2;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    &__button {
+        padding-left: 0;
+        margin-top: 30px;
+        text-align: left;
+        background-color: transparent;
+
+        @include mq($screen-m) {
+            margin-top: 40px;
+        }
+
+        @include mq($screen-l) {
+            margin-top: 30px;
+        }
+    }
+
+    &--carousel-item {
+        width: auto;
+
+        .info-box__date {
+            font-family: $font-family-regular;
+            font-size: 14px;
+            margin: 0 0 25px;
+
+            @include mq($screen-m) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .info-box__title {
+            font-family: $font-family-regular;
+            font-size: 24px;
+            margin-bottom: 5px;
+
+            @include mq($screen-m) {
+                font-size: 30px;
+            }
+        }
+
+        .info-box__button {
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div class="cards">
+    <div class="cards__container">
+        {{#each cardsItems as |card|}}
+            <div class="cards__item{{#if cardModifier}} cards__item--{{ cardModifier }}{{/if}}">
+                <a href="{{ cardLink }}" class="cards__link">
+                    <h6 class="cards__title heading--short-line">
+                        <span class="cards__title--anchor">{{ cardTitle }}</span>
+                    </h6>
+                    <img class="cards__image lazyload" data-src="{{ cardImage }}" />
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>

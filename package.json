@@ -1,0 +1,13 @@
+{
+  "name": "snowdog-frontend-components",
+  "version": "0.1.0",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.1",
+    "autoprefixer": "^6.7.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp": "^3.9.1"
+  }
+}

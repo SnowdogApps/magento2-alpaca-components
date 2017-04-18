@@ -1,0 +1,42 @@
+.breadcrumbs {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 20px;
+    max-width: $max-content-width;
+    margin: 0 auto;
+
+    @include mq($screen-xl) {
+        padding-left: 0;
+    }
+
+    &__item {
+        @include links(active) {
+            color: $font-color-lighter2;
+            display: inline-block;
+            padding-bottom: 10px;
+            text-decoration: none;
+        }
+
+        @include links(hover) {
+            color: $font-color;
+            text-decoration: none;
+        }
+
+        &:after {
+            content: '/';
+            display: inline-block;
+            margin: 0 10px;
+            color: $font-color-lighter2;
+        }
+
+        &:last-child {
+            color: $font-color-lighter2;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

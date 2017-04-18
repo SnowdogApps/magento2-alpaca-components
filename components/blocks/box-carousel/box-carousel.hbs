@@ -1,0 +1,31 @@
+<div class="box-carousel">
+    <div class="box-carousel__image">
+        <picture class="box-carousel__img">
+            <source data-srcset="{{ image480 }}"
+                    media="(max-width: 480px)"
+            />
+            <source data-srcset="{{ image768 }}"
+                    media="(max-width: 768px)"
+            />
+            <source data-srcset="{{ image992 }}"
+                    media="(max-width: 992px)"
+            />
+            <source data-srcset="{{ image }}" />
+            <img class="box-carousel__img lazyload"
+                 alt="{{ title }}"
+            />
+        </picture>
+    </div>
+    <div class="box-carousel__content">
+        <h2 class="box-carousel__title">
+            {{ title }}
+        </h2>
+        <div class="box-carousel__items">
+            {{#each items as |item| }}
+                {{ render '@info-box--carousel-item' item }}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script src="{{#jsPath 'box-carousel' }}{{/jsPath}}"></script>

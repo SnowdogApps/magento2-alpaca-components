@@ -1,0 +1,45 @@
+.columns {
+    position: relative;
+    width: 100%;
+
+    &__main {
+        position: relative;
+        width: 100%;
+        padding: 0;
+    }
+
+    &__left,
+    &__right {
+        position: relative;
+        width: 100%;
+        padding: 0;
+
+        @include mq($screen-l) {
+            flex-basis: 33.33%;
+            padding-right: 15px;
+        }
+    }
+
+    &__right {
+        @include mq($screen-l) {
+            padding-right: 0;
+            padding-left: 15px;
+        }
+    }
+
+    &--right,
+    &--left,
+    &--both {
+        @include mq($screen-l) {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+
+    &--both {
+        .columns__right,
+        .columns__left {
+            flex-basis: 25%;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.box-carousel {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: $max-content-width;
+    margin: 0 auto;
+    min-height: 600px;
+
+    @include mq($screen-l) {
+        margin: 60px auto;
+        min-height: 500px;
+    }
+
+    &__image {
+        @include mq($screen-m) {
+            padding-bottom: 200px;
+        }
+
+        @include mq(850px) {
+            padding-bottom: 250px;
+        }
+
+        @include mq($screen-l) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: block;
+        top: 60px;
+        height: 0;
+        margin-bottom: 0;
+        padding-right: 30px;
+        font-family: $font-family-regular;
+        font-size: 14px;
+        color: $font-color-lighter2;
+        text-transform: uppercase;
+        text-align: right;
+
+        @include mq($screen-m) {
+            top: 30px;
+        }
+    }
+
+    &__content {
+        background-color: $color-white;
+        max-height: 500px;
+        overflow: hidden;
+
+        @include mq($screen-m) {
+            position: absolute;
+            left: 15%;
+            top: 350px;
+            width: 70%;
+            z-index: 3;
+        }
+
+        @include mq(850px) {
+            top: 450px;
+        }
+
+        @include mq($screen-l) {
+            top: 60px;
+            width: 570px;
+            left: auto;
+            right: 30px;
+        }
+
+        @include mq($screen-xl) {
+            top: 90px;
+        }
+    }
+
+    &__items {
+        padding: 60px 0 0;
+
+        @include mq($screen-m) {
+            padding: 30px 30px 0;
+        }
+
+        &.loaded {
+            .box-carousel__item {
+                visibility: visible;
+            }
+        }
+    }
+
+    &__item {
+        &:not(:first-of-type) {
+            visibility: hidden;
+        }
+        height: auto;
+    }
+
+    &__icon {
+        display: block;
+        position: absolute;
+        width: 37px;
+        height: 34px;
+        top: 15px;
+        padding: 10px;
+        cursor: pointer;
+
+        @include mq($screen-m) {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        @include links(hover) {
+            fill: $color-main1;
+        }
+
+        &-prev {
+            left: 5px;
+        }
+
+        &-next {
+            right: 5px;
+        }
+    }
+}

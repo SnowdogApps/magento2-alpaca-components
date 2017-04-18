@@ -1,0 +1,22 @@
+.icons {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+
+    &__item {
+        padding: 5px 0;
+    }
+}
+
+.icon {
+
+    &__name {
+        position: relative;
+        top: -5px;
+        margin-left: 15px;
+    }
+    &--docs {
+        width: 20px;
+        height: 20px;
+    }
+}

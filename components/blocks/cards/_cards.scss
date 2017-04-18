@@ -1,0 +1,73 @@
+.cards {
+    background-color: $color-bg-gray;
+    width: 100%;
+    padding: 23px 0;
+    display: block;
+
+    @include mq($screen-m) {
+        padding: 23px 15px;
+    }
+
+    @include mq($screen-l) {
+        @include clearfix();
+    }
+
+    &__container {
+        display: block;
+        width: 100%;
+        max-width: $max-content-width;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: $color-white;
+        position: relative;
+        min-height: 200px;
+        overflow: hidden;
+        box-shadow: 1.5px 2.6px 18px 0 rgba(0, 0, 0, 0.04);
+
+        @include mq($screen-l) {
+            float: left;
+            width: 32%;
+            margin-bottom: 0;
+            margin-right: 2%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            @include mq($screen-l) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__title {
+        position: absolute;
+        left: 18px;
+        bottom: 20px;
+        z-index: 5;
+        pointer-events: none;
+
+        &--anchor {
+            display: table-caption;
+        }
+    }
+
+    &__image {
+        max-width: none;
+        float: right;
+        margin-right: -85px;
+    }
+
+    &__link {
+        @include clearfix();
+        display: block;
+        max-width: 350px;
+        position: relative;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,18 @@
+.var {
+    width: 100%;
+    margin-bottom: 15px;
+
+    &__color {
+        padding: 10px;
+        display: inline-block;
+        margin-right: 20px;
+        width: 100px;
+        text-align: center;
+    }
+
+    &__name {
+        display: inline-block;
+        width: 170px;
+        margin-right: 20px;
+    }
+}

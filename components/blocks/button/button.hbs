@@ -1,0 +1,19 @@
+{{#if asLink}}
+    <a href="#" class="button button--{{ modifier }}">
+        {{ text }}
+        {{#if iconId }}
+            <svg title="{{ iconId }}" class="{{ iconClass }}">
+                <use xlink:href="/images/icon-sprite.svg#{{ iconId }}"></use>
+            </svg>
+        {{/if}}
+    </a>
+{{else}}
+    <button type="button" name="button" class="button{{#if modifier}} button--{{ modifier }}{{/if}}{{#if modifier2}} button--{{modifier2}}{{/if}}">
+        {{ text }}
+        {{#if iconId }}
+            <svg title="{{ iconId }}" class="{{ iconClass }}">
+                <use xlink:href="/images/icon-sprite.svg#{{ iconId }}"></use>
+            </svg>
+        {{/if}}
+    </button>
+{{/if}}

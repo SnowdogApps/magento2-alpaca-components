@@ -1,0 +1,16 @@
+<ul class="icons">
+    {{#each icons as |icon|}}
+        <li class="icons__item">
+            {{> icon classValue=false}}
+        </li>
+        {{#if this.classColors}}
+            {{#each classColors  as |color|}}
+                {{#with icon}}
+                    <li class="icons__item">
+                        {{> icon classValue=color}}
+                    </li>
+                {{/with}}
+            {{/each}}
+        {{/if}}
+    {{/each}}
+</ul>

@@ -1,0 +1,118 @@
+.button {
+    display: block;
+    padding: 15px 30px;
+    width: 100%;
+    border: 1px solid $color-white;
+    box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+    font-family: $font-family-bold;
+    background-color: $color-white;
+    color: $font-color;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s, background 0.3s;
+    text-decoration: none;
+
+    @include links() {
+        color: $font-color;
+    }
+
+    @include mq($screen-s) {
+        display: inline-block;
+        width: auto;
+    }
+
+    @include links(hover) {
+        color: $color-main1;
+        text-decoration: none;
+
+        .button__icon {
+            fill: $color-main1;
+        }
+    }
+
+    &__icon {
+        fill: $font-color;
+        width: 8px;
+        height: 13px;
+        position: relative;
+        top: 1.5px;
+        margin-left: 10px;
+        transition: fill 0.3s;
+    }
+
+    &--light {
+        border: 0 none;
+        box-shadow: none;
+
+        .button__icon {
+            fill: $color-main1;
+        }
+    }
+
+    &--color-icon {
+        .button__icon {
+            fill: $color-main1;
+        }
+    }
+
+    &--capital {
+        text-transform: uppercase;
+    }
+
+    &--dark {
+        background-color: $color-main1;
+        box-shadow: none;
+        @include links(active) {
+            color: $color-white;
+        }
+
+        @include links(hover) {
+            color: $color-white;
+            background-color: $color-main2;
+
+            .button__icon {
+                fill: $color-white;
+            }
+        }
+
+        .button__icon {
+            fill: $color-white;
+        }
+    }
+
+    &--borders {
+        border: 2px solid $border-base;
+        box-shadow: none;
+        transition: color 0.3s, background 0.3s, borders 0.3s;
+
+        @include links(hover) {
+            background-color: $color-main1;
+            color: $color-white;
+            border: 2px solid $color-main1;
+
+            .button__icon {
+                fill: $color-white;
+            }
+        }
+    }
+
+    &--search {
+        text-transform: uppercase;
+        width: 100%;
+        border-top: 1px solid $color-main1;
+    }
+
+    &--blue {
+        width: 100%;
+        background-color: $color-main1;
+        box-shadow: none;
+        @include links(active) {
+            color: $color-white;
+        }
+
+        @include links(hover) {
+            color: $color-white;
+            background-color: $color-main2;
+        }
+    }
+}
