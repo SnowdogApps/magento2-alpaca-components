@@ -1,5 +1,5 @@
 {{#if asLink}}
-    <a href="#" class="button button--{{ modifier }}">
+    <a href="#" class="button button--{{ modifier }} {{#if additionalClass}} {{ additionalClass }}{{/if}}">
         {{ text }}
         {{#if iconId }}
             <svg title="{{ iconId }}" class="{{ iconClass }}">
@@ -8,7 +8,13 @@
         {{/if}}
     </a>
 {{else}}
-    <button type="button" name="button" class="button{{#if modifier}} button--{{ modifier }}{{/if}}{{#if modifier2}} button--{{modifier2}}{{/if}}">
+    <button type="button"
+            name="button"
+            class="button{{#if modifier}}
+                   button--{{ modifier }}
+                   {{/if}}{{#if modifier2}} button--{{modifier2}}{{/if}}
+                   {{#if additionalClass}} {{ additionalClass }}{{/if}}"
+    >
         {{ text }}
         {{#if iconId }}
             <svg title="{{ iconId }}" class="{{ iconClass }}">

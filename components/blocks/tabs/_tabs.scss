@@ -1,0 +1,107 @@
+.tabs {
+    position: relative;
+    @include mq($screen-l) {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    &__title {
+        position: relative;
+        padding: 15px;
+        border-bottom: 1px solid $border-base;
+        font-weight: 700;
+        cursor: pointer;
+        text-align: left;
+
+        @include mq($screen-l) {
+            flex-basis: 25%;
+            order: -1;
+            margin-right: 10px;
+            background-color: $color-bg-gray;
+            border-bottom: 0 none;
+            bottom: -1px;
+            color: $font-color-lighter2;
+        }
+
+        &.active {
+            @include mq($screen-l) {
+                border-color: $border-base;
+                border-width: 1px 1px 0 1px;
+                border-style: solid;
+                background-color: $color-white;
+                z-index: 2;
+                color: $font-color;
+            }
+
+            .tabs__icon {
+                transform: rotate(45deg);
+
+                @include mq($screen-l) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 10px;
+        width: 13px;
+        height: 13px;
+        top: 17px;
+        fill: $color-gray1;
+        transition: transform 0.3s;
+
+        @include mq($screen-l) {
+            display: none;
+        }
+    }
+
+    &__content {
+        display: none;
+        padding: 10px;
+        z-index: -1;
+        opacity: 0;
+        overflow-y: hidden;
+        position: relative;
+        transition: opacity 0.5s;
+        width: 100%;
+        overflow: hidden;
+
+        @include mq($screen-l) {
+            flex-basis: 100%;
+            z-index: 1;
+        }
+
+        &.active {
+            display: block;
+            opacity: 1;
+            border-bottom: 1px solid $border-base;
+            @include mq($screen-l) {
+                border-bottom: 0 none;
+                border-top: 1px solid $border-base;
+            }
+        }
+    }
+
+    //modificators
+    &--product-view {
+        .tabs__title {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: $font-color-lighter2;
+
+            &.active {
+                color: $color-black;
+            }
+        }
+
+        .tabs__content {
+            padding: 15px 20px;
+        }
+
+        .tabs__icon {
+            right: 20px;
+        }
+    }
+}

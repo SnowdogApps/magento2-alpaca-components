@@ -1,0 +1,32 @@
+.products-grid {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 10px 15px;
+    justify-content: flex-start;
+
+    @include mq($screen-m) {
+        padding-left: 20px;
+    }
+
+    &--4-in-row {
+        .products-grid__item {
+            @include mq($screen-l) {
+                flex-basis: calc(25% - 20px);
+            }
+        }
+    }
+
+    &__item {
+        flex-basis: calc(50% - 15px);
+        margin-bottom: 15px;
+        margin-right: 15px;
+
+        @include mq($screen-m) {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+    }
+}

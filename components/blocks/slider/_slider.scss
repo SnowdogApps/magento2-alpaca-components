@@ -1,0 +1,76 @@
+@import 'slide';
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    @include clearfix();
+
+    @include mq($screen-l) {
+        min-height: 300px;
+    }
+
+    @include mq($screen-xl) {
+        min-height: 400px;
+    }
+
+    &__items {
+        height: auto;
+
+        &.loaded {
+            .slider__item {
+                visibility: visible;
+            }
+        }
+    }
+
+    &__item {
+        height: auto;
+        visibility: hidden;
+
+        &:first-of-type {
+            visibility: visible;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        z-index: 5;
+        width: 25px;
+        height: 36px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 5px;
+        cursor: pointer;
+
+        @include links(hover) {
+            fill: $color-main1;
+        }
+
+        &-prev {
+            left: 5px;
+
+            @include mq($screen-xl) {
+                left: 5vw;
+            }
+
+            @include mq($screen-xxl) {
+                left: 18vw;
+            }
+        }
+
+        &-next {
+            right: 5px;
+
+            @include mq($screen-xl) {
+                right: 10vw;
+            }
+
+            @include mq($screen-xxl) {
+                right: 18vw;
+            }
+        }
+    }
+}

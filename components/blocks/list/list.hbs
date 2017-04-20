@@ -1,0 +1,48 @@
+<div class="list-wrap">
+    {{#if listTitle }}
+        <div class="list-title" data-list="{{ listId }}">
+            <span class="list-title__text">
+                {{ listTitle }}
+            </span>
+            <svg title="icon-close" class="list-title__icon">
+                <use xlink:href="#icon-plus"></use>
+            </svg>
+        </div>
+    {{/if}}
+    <ul class="list{{#if modifier}} list--{{modifier}}{{/if}}{{#if modifier2}} list--{{modifier2}}{{/if}}"
+        {{#if listId }} data-listcontent="{{ listId }}"{{/if}}
+    >
+
+        {{#each contentList}}
+            <li class="list__item">
+                {{#if link}}
+                    <a href="#" class="list__link">
+                {{/if}}
+                    {{#if label}}
+                        <span class="list__label">
+                            {{label}}
+                        </span>
+                    {{/if}}
+                    {{#if value}}
+                        <span class="list__value">
+                            {{value}}
+                        </span>
+                    {{/if}}
+                    {{#if text}}
+                        {{text}}
+                    {{/if}}
+                    {{#if itemQty }}
+                        <span class="list__item-qty">
+                            ({{ itemQty }})
+                        </span>
+                    {{/if}}
+                {{#if link}}
+                    </a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+{{#if listTitle}}
+    <script src="{{#jsPath 'list' }}{{/jsPath}}"></script>
+{{/if}}

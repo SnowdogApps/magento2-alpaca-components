@@ -1,0 +1,24 @@
+<li class="product-item{{#if modifier}} product-item--{{modifier}}{{/if}}{{#if additionalClass}} {{additionalClass}}{{/if}}">
+    <a href="{{ link }}" class="product-item__link">
+        <div class="product-item__img-box">
+            <img src="{{ imagesrc }}" alt="{{ alttext }}" class="product-item__img">
+        </div>
+        <div class="product-item__info">
+            <h2 class="product-item__name">
+                {{ name }}
+            </h2>
+            <div class="product-item__price">
+                {{ price }}
+            </div>
+            <div class="product-item__type">
+                typ {{ type }}
+            </div>
+            {{#if buttonAddToCart}}
+                {{ render '@button--dark' button}}
+            {{/if}}
+        </div>
+    </a>
+    {{#if newflag}}
+        {{ render '@new-label' }}
+    {{/if}}
+</li>

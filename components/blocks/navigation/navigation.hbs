@@ -1,0 +1,50 @@
+<div class="menu__mobile">
+    <svg title="icon-arrow-down" class="menu__mobile-icon">
+        <use xlink:href="#icon-mobile-menu"></use>
+    </svg>
+</div>
+<nav class="menu">
+    <ul class="menu__list">
+        {{#each menuItems as |item|}}
+        <li class="menu__item{{#if submenu}} menu__item--parent{{/if}}">
+            <a href="{{itemLink}}" class="menu__link" {{#if itemId }}data-menu="{{ itemId }}"{{/if}}>
+                {{ itemName }}
+                {{#if submenu }}
+                    <svg title="view more" class="menu__icon">
+                        <use xlink:href="#icon-arrow-down"></use>
+                    </svg>
+                {{/if}}
+            </a>
+            {{#if submenu}}
+                <ul class="menu__inner-list menu__inner-list--level1" {{#if itemId }}data-menu="{{ item.itemId }}"{{/if}}>
+                    {{#each submenu}}
+                        <li class="menu__inner-item {{#if submenu}} menu__inner-item--parent{{/if}}">
+                            <a href="{{itemLink}}" class="menu__inner-link" {{#if itemId }}data-menu="{{ itemId }}"{{/if}}>
+                                {{ itemName }}
+                                {{#if submenu }}
+                                    <svg title="view more" class="menu__icon menu__icon--inner">
+                                        <use xlink:href="#icon-plus"></use>
+                                    </svg>
+                                {{/if}}
+                            </a>
+                            {{#if submenu}}
+                                <ul class="menu__inner-list menu__inner-list--level2" {{#if itemId }}data-menu="{{ itemId }}"{{/if}}>
+                                    {{#each submenu}}
+                                        <li class="menu__inner-item menu__inner-item--level2">
+                                            <a href="{{itemLink}}" class="menu__inner-link">
+                                                {{ itemName }}
+                                            </a>
+                                        </li>
+                                    {{/each}}
+                                </ul>
+                            {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+        </li>
+        {{/each}}
+    </ul>
+    <div class="menu__mobile-bg"></div>
+</nav>
+<script src="{{#jsPath 'navigation' }}{{/jsPath}}"></script>

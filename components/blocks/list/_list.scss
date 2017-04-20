@@ -1,0 +1,153 @@
+@import 'list-title';
+@import 'list-wrap';
+
+.list {
+    display: block;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    line-height: 1.4;
+
+    &__item {
+        color: $font-color;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        margin-right: 7px;
+    }
+
+    &__value {
+        color: $font-color-lighter1;
+    }
+
+    &__link {
+        display: block;
+        @include links(active) {
+            color: $font-color-lighter1;
+        }
+    }
+
+    &__social-icon {
+        fill: $color-black;
+        width: 16px;
+        height: 16px;
+
+        &--twitter {
+            width: 21px;
+        }
+
+        &--google {
+            width: 25px;
+        }
+    }
+
+    &--labeling {
+        .list__item {
+            @include mq($screen-m) {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+            }
+        }
+
+        .list__label {
+            font-weight: 400;
+            margin-right: 0;
+            display: block;
+            text-align: center;
+            margin-bottom: 10px;
+
+            @include mq($screen-m) {
+                width: 50%;
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+
+        .list__value {
+            text-align: right;
+            display: block;
+            text-align: center;
+
+            @include mq($screen-m) {
+                width: 50%;
+                text-align: right;
+            }
+        }
+    }
+
+    &--odd-even {
+        .list__item {
+            padding: 10px;
+            margin-bottom: 0;
+
+            &:nth-child(odd) {
+                background-color: $color-bg-gray;
+            }
+
+            @include mq($screen-m) {
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    &--titled {
+        display: block;
+        height: 0;
+        padding: 0 10px;
+        overflow: hidden;
+        transition: height 0.5s;
+
+        @include mq($screen-m) {
+            display: block;
+            height: auto;
+        }
+
+        .list__item {
+            margin: 0;
+        }
+
+        .list__link {
+            padding-top: 10px;
+            display: block;
+        }
+    }
+
+    &--2cols {
+        @include mq($screen-l) {
+            column-count: 2;
+        }
+    }
+
+    &--search {
+        padding: 0;
+
+        .list__item {
+            padding: 5px 0;
+        }
+
+        .list__link {
+            text-decoration: none;
+        }
+    }
+
+    &--social {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        @include mq($screen-m) {
+            justify-content: flex-end;
+        }
+
+        .list__item {
+            margin-right: 25px;
+        }
+
+    }
+}
