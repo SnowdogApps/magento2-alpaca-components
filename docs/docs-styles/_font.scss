@@ -2,24 +2,15 @@
     font-size: 18px;
 
     &--regular {
-        font-family: $font-family-regular;
+        font-weight: 400;
     }
     &--light {
-        font-family: $font-family-light;
+        font-weight: 300;
     }
     &--bold {
-        font-family: $font-family-bold;
-    }
-    &--italic {
-        font-family: $font-family-italic;
-    }
-    &--bold-italic {
-        font-family: $font-family-bold-italic;
-    }
-    &--light-italic {
-        font-family: $font-family-light-italic;
+        font-weight: 700;
     }
     &--extra-bold {
-        font-family: $font-family-extra-bold;
+        font-weight: 800;;
     }
 }

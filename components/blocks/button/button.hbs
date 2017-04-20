@@ -3,7 +3,7 @@
         {{ text }}
         {{#if iconId }}
             <svg title="{{ iconId }}" class="{{ iconClass }}">
-                <use xlink:href="/images/icon-sprite.svg#{{ iconId }}"></use>
+                <use xlink:href="#{{ iconId }}"></use>
             </svg>
         {{/if}}
     </a>
@@ -12,7 +12,7 @@
         {{ text }}
         {{#if iconId }}
             <svg title="{{ iconId }}" class="{{ iconClass }}">
-                <use xlink:href="/images/icon-sprite.svg#{{ iconId }}"></use>
+                <use xlink:href="#{{ iconId }}"></use>
             </svg>
         {{/if}}
     </button>

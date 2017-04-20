@@ -1,16 +1,12 @@
-<ul class="icons">
-    {{#each icons as |icon|}}
-        <li class="icons__item">
-            {{> icon classValue=false}}
-        </li>
-        {{#if this.classColors}}
-            {{#each classColors  as |color|}}
-                {{#with icon}}
-                    <li class="icons__item">
-                        {{> icon classValue=color}}
-                    </li>
-                {{/with}}
-            {{/each}}
-        {{/if}}
+<div class="icons">
+    {{#each icons}}
+        <div class="icons__item">
+           <svg class="icons__svg">
+               <use xlink:href="#{{ this }}"></use>
+           </svg>
+           <span class="icons__name">
+               {{ this }}
+           </span>
+       </div>
     {{/each}}
-</ul>
+</div>

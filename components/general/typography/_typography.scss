@@ -1,6 +1,6 @@
 h1,
 h2 {
-    font-family: $font-family-extra-bold;
+    font-weight: 800;;
     margin: 0 0 10px;
     color: $font-color;
     line-height: 1.4;
@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-family-bold;
+    font-weight: 700;
     margin: 0 0 10px;
     color: $font-color;
     line-height: 1.4;
@@ -78,7 +78,7 @@ h6 {
 }
 
 .heading-secondary {
-    font-family: $font-family-regular;
+    font-weight: 400;
     padding: 0 0 7px;
     border-bottom: 1px solid $border-base;
 }

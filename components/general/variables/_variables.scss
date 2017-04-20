@@ -26,13 +26,8 @@ $screen-xxl: 1600px;
 
 // fonts
 
-$font-family-regular: 'open_sans_regular';
-$font-family-bold: 'open_sans_bold';
-$font-family-light: 'open_sans_light';
-$font-family-italic: 'open_sans_italic';
-$font-family-bold-italic: 'open_sans_bold_italic';
-$font-family-light-italic: 'open_sans_light_italic';
-$font-family-extra-bold: 'open_sans_extra_bold';
+$font-family: 'Open Sans', sans-serif;
+
 $font-size-base: 14px;
 $font-color: $color-gray-dark;
 $font-color-lighter1: rgba($font-color, 0.8);

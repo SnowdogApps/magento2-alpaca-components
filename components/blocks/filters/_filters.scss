@@ -54,7 +54,7 @@
         display: block;
         padding: 0;
         color: $font-color;
-        font-family: $font-family-bold;
+        font-weight: 700;
         font-size: 12px;
         text-transform: uppercase;
         cursor: pointer;
@@ -94,7 +94,7 @@
         @include links(active) {
             display: block;
             padding: 15px;
-            font-family: $font-family-bold;
+            font-weight: 700;
             color: $font-color;
             transition: box-shadow 0.5s;
 
@@ -159,7 +159,7 @@
         &--level1 {
             .filters__inner-link {
                 @include links(hover) {
-                    font-family: $font-family-bold;
+                    font-weight: 700;
                     text-decoration: none;
                 }
             }
@@ -168,7 +168,7 @@
         &--level2 {
             .filters__inner-link {
                 @include links(hover) {
-                    font-family: $font-family-regular;
+                    font-weight: 400;
                     color: $color-main1;
                     text-decoration: underline;
                 }
@@ -189,7 +189,7 @@
             display: block;
             padding: 15px 20px;
             text-transform: none;
-            font-family: $font-family-regular;
+            font-weight: 400;
             color: $font-color;
         }
 

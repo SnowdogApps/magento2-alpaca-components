@@ -3,46 +3,25 @@ module.exports = {
     status: 'wip',
     context: {
         icons: [
-            {
-                iconName: 'icon-arrow-down',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-arrow-right',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-arrow-up',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-close',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-mobile-menu',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-ok',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-plus',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-search',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'icon-x',
-                sprite: '/images/icon-sprite.svg'
-            },
-            {
-                iconName: 'loader',
-                sprite: '/images/icon-sprite.svg'
-            }
+            'icon-arrow-down',
+            'icon-arrow-right',
+            'icon-arrow-up',
+            'icon-close',
+            'icon-fb',
+            'icon-full-screen',
+            'icon-google',
+            'icon-heating',
+            'icon-installation',
+            'icon-linkedin',
+            'icon-mobile-menu',
+            'icon-heating-2',
+            'icon-ok',
+            'icon-plus',
+            'icon-search',
+            'icon-twitter',
+            'icon-water',
+            'icon-x',
+            'loader'
         ]
     }
 }

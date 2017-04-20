@@ -13,7 +13,7 @@
         display: block;
         line-height: 25px;
         margin: 0;
-        font-family: $font-family-regular;
+        font-weight: 400;
         color: $font-color;
         font-size: 20px;
     }
@@ -71,7 +71,7 @@
         z-index: 1;
 
         &.lazyloading {
-            background: transparent url('../images/icon-sprite.svg#loader-view') no-repeat center center;
+            background: transparent url('#loader-view') no-repeat center center;
             font-size: 0;
             background-size: 80px 80px;
         }
@@ -120,7 +120,7 @@
         transform-origin: bottom;
         z-index: 2;
         color: rgba($color-white, 0.5);
-        font-family: $font-family-light;
+        font-weight: 300;
         font-size: 60px;
         font-size: 18vw;
         text-align: justify;
@@ -218,7 +218,7 @@
 
         .banner__title {
             color: lighten($color-black, 40%);
-            font-family: $font-family-regular;
+            font-weight: 400;
             font-weight: normal;
             font-size: 18px;
             line-height: 24px;
@@ -457,7 +457,7 @@
         }
 
         .banner__title {
-            font-family: $font-family-light;
+            font-weight: 300;
             color: $color-white;
             font-size: 36px;
             margin-bottom: 30px;

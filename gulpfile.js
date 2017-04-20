@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer'),
       fractal      = require('@frctl/fractal').create(),
+      fs           = require('fs'),
       gulp         = require('gulp'),
       mandelbrot   = require('@frctl/mandelbrot'),
       plumber      = require('gulp-plumber'),
@@ -13,12 +14,11 @@ const processors = [
 
 const paths = {
     css: 'public/css',
-    maps: 'cssmaps',
-    js: 'public/components/preview/js'
+    maps: 'cssmaps'
 }
 
 // Fractal configuration
-fractal.set('project.title', 'Component documentation'); // title for the project
+fractal.set('project.title', 'magento2-ui-components'); // title for the project
 fractal.web.set('static.path', `${__dirname}/public`);
 fractal.web.set('builder.dest', 'build'); // destination for the static export
 fractal.docs.set('path', `${__dirname}/docs`); // location of the documentation directory.
@@ -34,21 +34,6 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 
 // get handlebars component engine (default) and register partial
 const hbsEngine = fractal.components.engine();
-
-// partial template for displaying icons
-hbsEngine.handlebars.registerPartial('icon',
-    `<svg title="{{ iconName }}"
-          class="icon icon--docs {{ iconName }} {{#if classValue}}icon--{{ classValue }}{{/if}}"
-     >
-        <use xlink:href="{{ sprite }}#{{ iconName }}"></use>
-    </svg>
-    <span class="icon__name">
-        {{ iconName }}
-        {{#if classValue}}
-            icon--{{ classValue }}
-        {{/if}}
-    </span>`
-);
 
 hbsEngine.handlebars.registerHelper('pager', function (context, options) {
     var ret = "";
@@ -145,6 +130,8 @@ hbsEngine.handlebars.registerHelper('ifCond', function (v1, operator, v2, option
             return options.inverse(this);
     }
 });
+
+hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'));
 
 // Fractal gulp tasks
 

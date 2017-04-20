@@ -1,6 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
     <link media="all" rel="stylesheet" href="{{ path '/css/styles.css' }}">
     <script src="{{ path '/js/svg4everybody.js' }}"></script>
     <script src="{{ path '/js/lazysizes.min.js' }}"></script>
@@ -10,8 +11,7 @@
     <title>{{ title }}</title>
 </head>
 <body>
-
+    {{{ inline "components/general/icons/icon-sprite.svg" }}}
     {{{ yield }}}
-
 </body>
 </html>
