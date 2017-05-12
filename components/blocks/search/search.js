@@ -7,5 +7,5 @@ const searchLabel = document.querySelector('.search__label'),
 
 searchLabel.addEventListener('click', () => searchBlock.classList.toggle('visible'));
 if (searchClose) {
-    searchClose.addEventListener('click', () => searchAutocomplete.classList.toggle('visible'));
+  searchClose.addEventListener('click', () => searchAutocomplete.classList.toggle('visible'));
 }

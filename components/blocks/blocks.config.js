@@ -1,5 +1,5 @@
 module.exports = {
-    title: 'Blocks collection',
-    label: 'Blocks',
-    preview: '@preview'
+  title: 'Blocks collection',
+  label: 'Blocks',
+  preview: '@preview'
 };

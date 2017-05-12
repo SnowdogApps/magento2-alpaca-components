@@ -1,4 +1,4 @@
 module.exports = {
-    title: 'Form fields',
-    status: 'wip'
+  title: 'Form fields',
+  status: 'wip'
 }

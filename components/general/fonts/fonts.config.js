@@ -1,4 +1,4 @@
 module.exports = {
-    title: 'Fonts',
-    status: 'wip'
+  title: 'Fonts',
+  status: 'wip'
 }
