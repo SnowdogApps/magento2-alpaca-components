@@ -7,6 +7,7 @@ const autoprefixer = require('autoprefixer'),
       mandelbrot   = require('@frctl/mandelbrot'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
+      reporter     = require('postcss-reporter'),
       runSequence  = require('run-sequence'),
       sass         = require('gulp-sass'),
       sassLint     = require('gulp-sass-lint'),
@@ -176,7 +177,7 @@ gulp.task('watch', () => {
             .pipe(postcss(processors))
             .pipe(sourcemaps.write(paths.maps))
             .pipe(gulp.dest(paths.css))
-        
+
         runSequence('sass-lint', 'sass', 'css-lint');
     })
 });
