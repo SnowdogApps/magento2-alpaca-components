@@ -18,5 +18,8 @@
     "run-sequence": "~1.2.2",
     "stylelint": "~7.10.1",
     "stylelint-config-standard": "~16.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/eslint/bin/eslint.js *.js helper/*.js task/*.js"
   }
 }
