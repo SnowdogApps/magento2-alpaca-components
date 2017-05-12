@@ -1,20 +1,28 @@
 const autoprefixer = require('autoprefixer'),
+      eslint       = require('gulp-eslint'),
       fractal      = require('@frctl/fractal').create(),
       fs           = require('fs'),
       gulp         = require('gulp'),
+      gulpif       = require('gulp-if'),
       mandelbrot   = require('@frctl/mandelbrot'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
+      runSequence  = require('run-sequence'),
       sass         = require('gulp-sass'),
-      sourcemaps   = require('gulp-sourcemaps');
+      sassLint     = require('gulp-sass-lint'),
+      sourcemaps   = require('gulp-sourcemaps'),
+      stylelint    = require('stylelint'),
+      util         = require('gulp-util');
 
 const processors = [
     autoprefixer()
 ];
 
 const paths = {
-    css: 'public/css',
-    maps: 'cssmaps'
+    components: 'components',
+    css : 'public/css',
+    maps: 'cssmaps',
+    sass: 'docs/styles.scss',
 }
 
 // Fractal configuration
@@ -160,14 +168,16 @@ gulp.task('fractal:build', ['sass'], () => {
 // Gulp tasks
 
 gulp.task('watch', () => {
-    gulp.watch('**/*.scss', event => {
-        gulp.src('docs/styles.scss')
+    gulp.watch('**/*.scss', () => {
+        gulp.src(paths.scss)
             .pipe(plumber())
             .pipe(sourcemaps.init())
             .pipe(sass({outputStyle: 'compressed'}))
             .pipe(postcss(processors))
             .pipe(sourcemaps.write(paths.maps))
             .pipe(gulp.dest(paths.css))
+        
+        runSequence('sass-lint', 'sass', 'css-lint');
     })
 });
 
@@ -179,4 +189,28 @@ gulp.task('sass', () => {
         .pipe(postcss(processors))
         .pipe(sourcemaps.write(paths.maps))
         .pipe(gulp.dest(paths.css))
+});
+
+gulp.task('sass-lint', () => {
+    return gulp.src(paths.components + '/**/*.scss')
+        .pipe(sassLint())
+        .pipe(sassLint.format())
+        .pipe(gulpif(util.env.ci, sassLint.failOnError()));
+});
+
+gulp.task('css-lint', () => {
+    return gulp.src(paths.css + '/**/*.css')
+        .pipe(postcss([
+            stylelint(),
+            reporter({
+                throwError: util.env.ci || false
+            })
+        ]));
+});
+
+gulp.task('js-lint', () => {
+    return gulp.src(paths.components + '/**/*.js')
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(gulpif(util.env.ci, eslint.failAfterError()));
 });
