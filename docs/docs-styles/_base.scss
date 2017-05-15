@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: $font-family;
     font-weight: 400;
     font-size: $font-size-base;
+    margin: 20px;
 }

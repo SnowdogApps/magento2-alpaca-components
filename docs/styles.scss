@@ -13,8 +13,6 @@
 // variables
 @import '../components/general/variables/variables';
 
-@import 'base';
-
 // components
 @import '../components/general/typography/typography';
 @import '../components/blocks/button/button';
@@ -48,6 +46,7 @@
 @import '../components/blocks/video-box/video-box';
 
 // documentation style
+@import 'docs-styles/base';
 @import 'docs-styles/icons';
 @import 'docs-styles/var-list';
 @import 'docs-styles/var';
