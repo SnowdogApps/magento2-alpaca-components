@@ -6,14 +6,12 @@
 @import '../components/general/libs/scss/slick';
 
 // mixins
-@import 'mixins/mq';
-@import 'mixins/clearfix';
-@import 'mixins/links';
+@import '../components/general/mixins/mq';
+@import '../components/general/mixins/clearfix';
+@import '../components/general/mixins/links';
 
 // variables
 @import '../components/general/variables/variables';
-
-@import 'base';
 
 // components
 @import '../components/general/typography/typography';
@@ -45,11 +43,12 @@
 @import '../components/blocks/search/search';
 @import '../components/blocks/slider/slider';
 @import '../components/blocks/tabs/tabs';
-@import '../components/blocks/video-box/video-box';
 
 // documentation style
-@import 'docs-styles/icons';
-@import 'docs-styles/var-list';
-@import 'docs-styles/var';
-@import 'docs-styles/font';
-@import 'docs-styles/product-item';
+@import 'styles/base';
+@import 'styles/icons';
+@import 'styles/var-list';
+@import 'styles/var';
+@import 'styles/font';
+@import 'styles/product-item';
+@import 'styles/video-box';
