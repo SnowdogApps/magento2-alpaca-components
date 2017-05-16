@@ -169,8 +169,7 @@ gulp.task('watch', () => {
     gulp.watch([
         paths.components + '/**/*.scss',
         'docs/**/*.scss'
-    ],
-    () => {
+    ], () => {
         runSequence('sass');
     });
 });
