@@ -131,9 +131,7 @@ hbsEngine.handlebars.registerHelper('ifCond', function (v1, operator, v2, option
     }
 });
 
-hbsEngine.handlebars.registerHelper('libs', file => {
-  return '/components/raw/libs/' + file;
-});
+hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file}`);
 
 hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'));
 
