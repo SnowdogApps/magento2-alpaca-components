@@ -6,9 +6,9 @@
 @import 'lib/slick';
 
 // mixins
-@import 'mixins/mq';
-@import 'mixins/clearfix';
-@import 'mixins/links';
+@import '../components/general/mixins/mq';
+@import '../components/general/mixins/clearfix';
+@import '../components/general/mixins/links';
 
 // variables
 @import '../components/general/variables/variables';
