@@ -176,19 +176,7 @@ gulp.task('fractal:build', ['sass'], () => {
 
 gulp.task('watch', () => {
   gulp.watch('**/*.scss', () => {
-    gulp.src(paths.scss)
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass(
-      {
-        outputStyle: 'compressed'
-      }
-    ))
-    .pipe(postcss(processors))
-    .pipe(sourcemaps.write(paths.maps))
-    .pipe(gulp.dest(paths.css))
-
-    runSequence('sass-lint', 'sass', 'css-lint');
+    runSequence('sass', 'sass-lint', 'css-lint');
   })
 });
 

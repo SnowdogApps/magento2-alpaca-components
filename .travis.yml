@@ -6,6 +6,6 @@ cache:
     - node_modules
 script:
   - yarn test
-  - gulp sass-lint
-  - gulp js-lint
-  - gulp css-lint
+  - gulp sass-lint --ci
+  - gulp js-lint --ci
+  - gulp css-lint --ci

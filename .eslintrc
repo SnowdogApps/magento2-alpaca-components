@@ -3,7 +3,6 @@ extends:
   - idiomatic
 env:
   browser: true
-  node: true
   es6: true
   amd: true
   jquery: true
