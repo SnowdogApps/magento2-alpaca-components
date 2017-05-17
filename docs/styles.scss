@@ -2,8 +2,8 @@
 @import '../components/general/fonts/fonts';
 
 // libs
-@import 'lib/normalize';
-@import 'lib/slick';
+@import '../components/general/libs/scss/normalize';
+@import '../components/general/libs/scss/slick';
 
 // mixins
 @import '../components/general/mixins/mq';
