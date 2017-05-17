@@ -1,34 +1,37 @@
-// fonts
-@import '../components/general/fonts/fonts';
-
 // libs
 @import '../components/general/libs/scss/normalize';
 @import '../components/general/libs/scss/slick';
+
+// variables
+@import '../components/general/variables/variables';
 
 // mixins
 @import '../components/general/mixins/mq';
 @import '../components/general/mixins/clearfix';
 @import '../components/general/mixins/links';
 
-// variables
-@import '../components/general/variables/variables';
+// typography
+@import '../components/general/fonts/fonts';
+@import '../components/general/typography/typography';
+
+// documentation styles
+@import 'styles/base';
 
 // components
-@import '../components/general/typography/typography';
-@import '../components/blocks/button/button';
 @import '../components/blocks/banners/banners';
 @import '../components/blocks/bars/bars';
 @import '../components/blocks/box/box';
 @import '../components/blocks/box-carousel/box-carousel';
 @import '../components/blocks/breadcrumbs/breadcrumbs';
+@import '../components/blocks/button/button';
 @import '../components/blocks/cards/cards';
 @import '../components/blocks/cms-2cols/cms-2cols';
 @import '../components/blocks/cms-block/cms-block';
 @import '../components/blocks/columns/columns';
 @import '../components/blocks/downloadable-item/downloadable-item';
 @import '../components/blocks/filters/filters';
-@import '../components/blocks/form-fields/form/form';
 @import '../components/blocks/form-fields/checkbox/checkbox';
+@import '../components/blocks/form-fields/form/form';
 @import '../components/blocks/form-fields/input/input';
 @import '../components/blocks/form-fields/textarea/textarea';
 @import '../components/blocks/info-box/info-box';
@@ -43,13 +46,3 @@
 @import '../components/blocks/search/search';
 @import '../components/blocks/slider/slider';
 @import '../components/blocks/tabs/tabs';
-
-// documentation style
-@import 'styles/base';
-@import 'styles/font';
-@import 'styles/icons';
-@import 'styles/product-item';
-@import 'styles/typography';
-@import 'styles/var-list';
-@import 'styles/var';
-@import 'styles/video-box';
