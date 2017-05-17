@@ -6,14 +6,12 @@
 @import 'lib/slick';
 
 // mixins
-@import 'mixins/mq';
-@import 'mixins/clearfix';
-@import 'mixins/links';
+@import '../components/general/mixins/mq';
+@import '../components/general/mixins/clearfix';
+@import '../components/general/mixins/links';
 
 // variables
 @import '../components/general/variables/variables';
-
-@import 'base';
 
 // components
 @import '../components/general/typography/typography';
@@ -47,6 +45,7 @@
 @import '../components/blocks/tabs/tabs';
 
 // documentation style
+@import 'styles/base';
 @import 'styles/font';
 @import 'styles/icons';
 @import 'styles/product-item';

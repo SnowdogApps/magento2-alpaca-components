@@ -2,19 +2,25 @@ const autoprefixer = require('autoprefixer'),
       fractal      = require('@frctl/fractal').create(),
       fs           = require('fs'),
       gulp         = require('gulp'),
+      gulpif       = require('gulp-if'),
       mandelbrot   = require('@frctl/mandelbrot'),
+      notify       = require('gulp-notify'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
       sass         = require('gulp-sass'),
-      sourcemaps   = require('gulp-sourcemaps');
+      sassError    = require('gulp-sass-error'),
+      sourcemaps   = require('gulp-sourcemaps'),
+      util         = require('gulp-util');
 
 const processors = [
     autoprefixer()
 ];
 
 const paths = {
+    components: 'components',
     css: 'public/css',
-    maps: 'cssmaps'
+    maps: 'cssmaps',
+    sass : 'docs/styles.scss'
 }
 
 // Fractal configuration
@@ -160,23 +166,30 @@ gulp.task('fractal:build', ['sass'], () => {
 // Gulp tasks
 
 gulp.task('watch', () => {
-    gulp.watch('**/*.scss', event => {
-        gulp.src('docs/styles.scss')
-            .pipe(plumber())
-            .pipe(sourcemaps.init())
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(postcss(processors))
-            .pipe(sourcemaps.write(paths.maps))
-            .pipe(gulp.dest(paths.css))
-    })
+    gulp.watch([
+        paths.components + '/**/*.scss',
+        'docs/**/*.scss'
+    ], () => {
+        runSequence('sass');
+    });
 });
 
 gulp.task('sass', () => {
-    gulp.src('docs/styles.scss')
-        .pipe(plumber())
+    return gulp.src(paths.sass)
+        .pipe(
+            gulpif(
+                !util.env.ci,
+                plumber({
+                    errorHandler: notify.onError('Error: <%= error.message %>')
+                })
+            )
+        )
         .pipe(sourcemaps.init())
+        .pipe(
+            sass().on('error', sassError.gulpSassError(util.env.ci || false))
+        )
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(postcss(processors))
         .pipe(sourcemaps.write(paths.maps))
-        .pipe(gulp.dest(paths.css))
+        .pipe(gulp.dest(paths.css));
 });
