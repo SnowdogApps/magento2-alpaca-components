@@ -92,9 +92,7 @@ gulp.task('sass', () => {
   gulp.src('docs/styles.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass())
     .pipe(postcss(processors))
     .pipe(sourcemaps.write(paths.maps))
     .pipe(gulp.dest(paths.css))

@@ -5,7 +5,8 @@ cache:
   directories:
     - node_modules
 script:
-  - yarn --ci
-  - gulp sass-lint --ci
   - gulp js-lint --ci
+  - gulp sass-lint --ci
+  - gulp sass
   - gulp css-lint --ci
+  - gulp icons
