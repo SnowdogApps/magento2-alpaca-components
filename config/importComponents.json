@@ -1,0 +1,6 @@
+{
+  "this-folder": {
+    "src": "components",
+    "dest": "temp"
+  }
+}

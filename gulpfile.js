@@ -1,12 +1,15 @@
 const autoprefixer = require('autoprefixer'),
       fractal      = require('@frctl/fractal').create(),
-      fs           = require('fs'),
+      fs           = require('fs-extra'),
+      globby       = require('globby'),
       gulp         = require('gulp'),
       gulpif       = require('gulp-if'),
       mandelbrot   = require('@frctl/mandelbrot'),
       notify       = require('gulp-notify'),
+      path         = require('path'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
+      runSequence  = require('run-sequence'),
       sass         = require('gulp-sass'),
       sassError    = require('gulp-sass-error'),
       sourcemaps   = require('gulp-sourcemaps'),
@@ -16,11 +19,12 @@ const processors = [
     autoprefixer()
 ];
 
-const paths = {
-    components: 'components',
-    css: 'public/css',
-    maps: 'cssmaps',
-    sass : 'docs/styles.scss'
+const config = {
+    components       : 'components',
+    css              : 'public/css',
+    importComponents : require('./config/importComponents.json'),
+    maps             : 'cssmaps',
+    sass             : 'docs/styles.scss'
 }
 
 // Fractal configuration
@@ -28,7 +32,7 @@ fractal.set('project.title', 'magento2-ui-components'); // title for the project
 fractal.web.set('static.path', `${__dirname}/public`);
 fractal.web.set('builder.dest', 'build'); // destination for the static export
 fractal.docs.set('path', `${__dirname}/docs`); // location of the documentation directory.
-fractal.components.set('path', `${__dirname}/components`); // location of the component directory.
+fractal.components.set('path', `${__dirname}/temp`); // location of the component directory.
 
 fractal.web.theme(
     mandelbrot({
@@ -141,7 +145,7 @@ hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'
 
 // Fractal gulp tasks
 
-gulp.task('fractal:start', ['sass', 'watch'], () => {
+gulp.task('fractal:start', ['inheritance', 'sass', 'watch'], () => {
     const server = fractal.web.server({
         sync: true,
         port: 4000
@@ -153,7 +157,7 @@ gulp.task('fractal:start', ['sass', 'watch'], () => {
     });
 });
 
-gulp.task('fractal:build', ['sass'], () => {
+gulp.task('fractal:build', ['inheritance', 'sass'], () => {
     const builder = fractal.web.builder();
     builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
     builder.on('error', err => logger.error(err.message));
@@ -165,9 +169,37 @@ gulp.task('fractal:build', ['sass'], () => {
 
 // Gulp tasks
 
+gulp.task('inheritance', () => {
+  const components = config.importComponents,
+        names      = Object.keys(config.importComponents);
+
+  function symlinkFile(srcFile, destFile) {
+    fs.removeSync(destFile);
+    fs.ensureSymlinkSync(srcFile, destFile);
+  }
+
+  function generateSymlink(srcPath, destPath) {
+    globby.sync(
+      [srcPath + '/**'],
+      { nodir: true }
+    ).forEach(file => {
+      const newSrc = file.replace(srcPath, destPath);
+      
+      symlinkFile(file, newSrc);
+    });
+  }
+
+  names.forEach(name => {
+    const dst = components[name].dest,
+          src = components[name].src;
+
+    generateSymlink(src, dst);
+  })
+});
+
 gulp.task('watch', () => {
     gulp.watch([
-        paths.components + '/**/*.scss',
+        config.components + '/**/*.scss',
         'docs/**/*.scss'
     ], () => {
         runSequence('sass');
@@ -175,7 +207,7 @@ gulp.task('watch', () => {
 });
 
 gulp.task('sass', () => {
-    return gulp.src(paths.sass)
+    return gulp.src(config.sass)
         .pipe(
             gulpif(
                 !util.env.ci,
@@ -190,6 +222,6 @@ gulp.task('sass', () => {
         )
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(postcss(processors))
-        .pipe(sourcemaps.write(paths.maps))
-        .pipe(gulp.dest(paths.css));
+        .pipe(sourcemaps.write(config.maps))
+        .pipe(gulp.dest(config.css));
 });

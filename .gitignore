@@ -8,3 +8,7 @@ node_modules/*
 build/*
 public/css/*
 /public/images/icons-sprite.svg
+
+// Libs
+vendor/*
+temp/*
