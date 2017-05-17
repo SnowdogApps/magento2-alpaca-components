@@ -10,7 +10,7 @@ const autoprefixer = require('autoprefixer'),
       sass         = require('gulp-sass'),
       sassError    = require('gulp-sass-error'),
       sourcemaps   = require('gulp-sourcemaps'),
-      svgSprite    = require('gulp-svg-sprite');
+      svgSprite    = require('gulp-svg-sprite'),
       util         = require('gulp-util');
 
 const processors = [
@@ -21,7 +21,7 @@ const paths = {
     components: 'components',
     css: 'public/css',
     icons: 'components/general/icons/files',
-    maps: 'cssmaps'
+    maps: 'cssmaps',
     sass : 'docs/styles.scss'
 }
 
