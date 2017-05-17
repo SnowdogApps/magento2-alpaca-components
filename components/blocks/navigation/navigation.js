@@ -36,7 +36,6 @@ function toggleSubmenu(item, inner) {
 
   item.parentNode.classList.toggle('open');
 
-
   if (menuList && menuList.clientHeight > 0) {
     if (innerLists) {
       innerLists.forEach(key => {
@@ -62,7 +61,7 @@ function toggleSubmenu(item, inner) {
 itemParent.forEach(
   key => key.addEventListener(
     'click',
-    function(e) {
+    e => {
       if (!desktopViewport.matches) {
         e.preventDefault();
         toggleSubmenu(key, false);
@@ -75,7 +74,7 @@ itemParent.forEach(
 itemInnerParent.forEach(
   key => key.addEventListener(
     'click',
-    function(e) {
+    e => {
       if (!desktopViewport.matches) {
         e.preventDefault();
         toggleSubmenu(key, true);
@@ -85,19 +84,19 @@ itemInnerParent.forEach(
     )
   );
 
-mobileMenu.addEventListener('click', function() {
+mobileMenu.addEventListener('click', () => {
   navMenu.classList.toggle('open');
     // disable document scrolling while menu is open
   documentBody.classList.toggle('menu-open');
 });
 
-menuBg.addEventListener('click', function() {
+menuBg.addEventListener('click', () => {
   navMenu.classList.toggle('open');
     // disable document scrolling while menu is open
   documentBody.classList.toggle('menu-open');
 });
 
-window.onresize = function() {
+window.onresize = () => {
   if (desktopViewport.matches) {
     menuInnerLists.forEach(key => key.style.height = 'auto');
     document.querySelectorAll('.menu__list li')

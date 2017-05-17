@@ -41,6 +41,6 @@ function statList() {
 }
 
 statList();
-window.onresize = function() {
+window.onresize = () => {
   statList();
-}
+};
