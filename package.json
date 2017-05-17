@@ -1,6 +1,5 @@
 {
   "name": "snowdog-frontend-components",
-  "version": "0.1.0",
   "dependencies": {
     "@frctl/fractal": "~1.1.1",
     "autoprefixer": "~6.7.2",
