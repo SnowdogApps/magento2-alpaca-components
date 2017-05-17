@@ -6,6 +6,8 @@ env:
   es6: true
   amd: true
   jquery: true
+globals:
+  module: true
 rules:
   no-multi-spaces: 0
   space-in-parens: 0

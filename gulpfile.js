@@ -1,7 +1,3 @@
-/* eslint no-inline-comments: 0 */
-/* eslint one-var: 0 */
-/* eslint-env es6 */
-
 const autoprefixer = require('autoprefixer'),
       eslint       = require('gulp-eslint'),
       fractal      = require('@frctl/fractal').create(),
