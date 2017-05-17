@@ -6,6 +6,8 @@ module.exports = {
       'icon-arrow-down',
       'icon-arrow-right',
       'icon-arrow-up',
+      'icon-carousel-left',
+      'icon-carousel-right',
       'icon-close',
       'icon-fb',
       'icon-full-screen',
@@ -24,4 +26,4 @@ module.exports = {
       'loader'
     ]
   }
-}
+};
