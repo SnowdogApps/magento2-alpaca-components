@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer'),
       sass         = require('gulp-sass'),
       sassError    = require('gulp-sass-error'),
       sourcemaps   = require('gulp-sourcemaps'),
+      svgSprite    = require('gulp-svg-sprite'),
       util         = require('gulp-util');
 
 const processors = [
@@ -19,6 +20,7 @@ const processors = [
 const paths = {
     components: 'components',
     css: 'public/css',
+    icons: 'components/general/icons/files',
     maps: 'cssmaps',
     sass : 'docs/styles.scss'
 }
@@ -141,7 +143,7 @@ hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'
 
 // Fractal gulp tasks
 
-gulp.task('fractal:start', ['sass', 'watch'], () => {
+gulp.task('fractal:start', [ 'icons', 'sass', 'watch'], () => {
     const server = fractal.web.server({
         sync: true,
         port: 4000
@@ -153,7 +155,7 @@ gulp.task('fractal:start', ['sass', 'watch'], () => {
     });
 });
 
-gulp.task('fractal:build', ['sass'], () => {
+gulp.task('fractal:build', [ 'icons', 'sass'], () => {
     const builder = fractal.web.builder();
     builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
     builder.on('error', err => logger.error(err.message));
@@ -193,3 +195,18 @@ gulp.task('sass', () => {
         .pipe(sourcemaps.write(paths.maps))
         .pipe(gulp.dest(paths.css));
 });
+
+gulp.task('icons', () => {
+  return gulp.src(paths.icons + '/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          inline: true,
+          dest: 'images',
+          sprite: 'icons-sprite.svg'
+        }
+      }
+    }))
+    .pipe(gulp.dest('public'));
+});
+
