@@ -1,5 +1,5 @@
 // sass-lint:disable-all
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -89,6 +89,7 @@ hr {
  */
 
 pre {
+  /* stylelint-disable-next-line font-family-no-duplicate-names */
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
@@ -143,6 +144,7 @@ strong {
 code,
 kbd,
 samp {
+  /* stylelint-disable-next-line font-family-no-duplicate-names */
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
