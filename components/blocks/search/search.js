@@ -1,9 +1,9 @@
 'use strict'
 
-const searchLabel = document.querySelector('.search__label'),
-      searchBlock = document.querySelector('.search-block'),
-      searchAutocomplete = document.querySelector('.solr-search'),
-      searchClose = document.querySelector('.solr-search__close');
+const searchAutocomplete = document.querySelector('.solr-search'),
+      searchBlock        = document.querySelector('.search-block'),
+      searchClose        = document.querySelector('.solr-search__close'),
+      searchLabel        = document.querySelector('.search__label');
 
 searchLabel.addEventListener('click', () => searchBlock.classList.toggle('visible'));
 if (searchClose) {

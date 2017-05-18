@@ -17,8 +17,21 @@
             margin-top: 10px;
             border-top: 2px solid $color-gray-dark;
         }
+
         .list-title__icon {
             display: none;
+        }
+    }
+
+    &--active {
+        .list-title__icon {
+            transform: rotate(45deg);
+        }
+
+        @include mq($screen-l) {
+            .list-title__icon {
+                display: none;
+            }
         }
     }
 
@@ -37,18 +50,6 @@
 
         @include mq($screen-l) {
             display: none;
-        }
-    }
-
-    &--active {
-        .list-title__icon {
-            transform: rotate(45deg);
-        }
-
-        @include mq($screen-l) {
-            .list-title__icon {
-                display: none;
-            }
         }
     }
 }

@@ -1,6 +1,4 @@
 .box {
-    display: block;
-    width: 100%;
     max-width: $max-content-width;
     margin: 0 auto;
     padding-top: 30px;
@@ -9,15 +7,6 @@
         padding: 0 30px;
         font-size: 24px;
         text-transform: uppercase;
-
-        &:after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 2px;
-            background-color: $color-main1;
-            margin-top: 10px;
-        }
 
         @include mq($screen-m) {
             padding: 0 60px;
@@ -29,6 +18,15 @@
 
         @include mq($screen-xl) {
             padding: 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: $color-main1;
+            margin-top: 10px;
         }
     }
 

@@ -1,19 +1,33 @@
 <div class="columns
-            {{#ifCond columnLeft '&&' columnRight}} columns--both{{/ifCond}}
-            {{#if columnLeft}} columns--left{{/if}}
-            {{#if columnRight}} columns--right{{/if}}"
+            {{#if columnBoth}}
+                columns--both
+            {{/if}}
+            {{#if columnLeft}}
+                columns--left
+            {{/if}}
+            {{#if columnRight}}
+                columns--right
+            {{/if}}"
 >
     {{#if columnLeft}}
         <div class="columns__left">
-            {{ sidebarContent }}
+            <p class="columns__text">
+                {{ sidebarContent }}
+            </p>
         </div>
     {{/if}}
+
     <div class="columns__main">
-        {{ mainContent }}
+        <p class="columns__text">
+            {{ mainContent }}
+        </p>
     </div>
+
     {{#if columnRight}}
         <div class="columns__right">
-            {{ sidebarContent }}
+            <p class="columns__text">
+                {{ sidebarContent }}
+            </p>
         </div>
     {{/if}}
 </div>

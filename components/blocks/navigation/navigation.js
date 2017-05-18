@@ -69,7 +69,7 @@ itemParent.forEach(
     },
     false
     )
-  );
+);
 
 itemInnerParent.forEach(
   key => key.addEventListener(
@@ -82,7 +82,7 @@ itemInnerParent.forEach(
     },
     false
     )
-  );
+);
 
 mobileMenu.addEventListener('click', () => {
   navMenu.classList.toggle('open');

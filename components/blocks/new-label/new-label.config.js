@@ -4,4 +4,4 @@ module.exports = {
   context : {
     text: 'New'
   }
-}
+};

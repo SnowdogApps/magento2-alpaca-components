@@ -1,5 +1,4 @@
 .info-box {
-    display: block;
     padding: 0 30px 30px;
 
     @include mq($screen-l) {
@@ -39,6 +38,34 @@
 
         .inco-box__button-icon {
             fill: $color-white;
+        }
+    }
+
+    &--carousel-item {
+        width: auto;
+
+        .info-box__date {
+            font-weight: 400;
+            font-size: 14px;
+            margin: 0 0 25px;
+
+            @include mq($screen-m) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .info-box__title {
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 5px;
+
+            @include mq($screen-m) {
+                font-size: 30px;
+            }
+        }
+
+        .info-box__button {
+            margin-top: 20px;
         }
     }
 
@@ -100,34 +127,6 @@
 
         @include mq($screen-l) {
             margin-top: 30px;
-        }
-    }
-
-    &--carousel-item {
-        width: auto;
-
-        .info-box__date {
-            font-weight: 400;
-            font-size: 14px;
-            margin: 0 0 25px;
-
-            @include mq($screen-m) {
-                margin-bottom: 30px;
-            }
-        }
-
-        .info-box__title {
-            font-weight: 400;
-            font-size: 24px;
-            margin-bottom: 5px;
-
-            @include mq($screen-m) {
-                font-size: 30px;
-            }
-        }
-
-        .info-box__button {
-            margin-top: 20px;
         }
     }
 }

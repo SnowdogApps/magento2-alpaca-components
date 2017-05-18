@@ -1,6 +1,7 @@
 .promotion {
     &__container {
         padding: 20px;
+
         @include mq($screen-m) {
             padding: 40px 65px;
         }
@@ -19,6 +20,7 @@
         color: $color-main1;
         display: block;
         margin-bottom: 30px;
+
         @include mq($screen-m) {
             font-size: 36px;
             letter-spacing: -3px;
@@ -32,6 +34,7 @@
         line-height: 30px;
         text-transform: uppercase;
         margin: 0;
+
         @include mq($screen-m) {
             font-size: 30px;
         }
@@ -44,6 +47,7 @@
         line-height: 30px;
         text-transform: uppercase;
         margin-bottom: 25px;
+
         @include mq($screen-m) {
             font-size: 36px;
             margin-bottom: 50px;
@@ -54,6 +58,7 @@
         font-weight: 400;
         font-size: 16px;
         color: $color-gray-dark;
+
         @include mq($screen-m) {
             font-size: 20px;
         }

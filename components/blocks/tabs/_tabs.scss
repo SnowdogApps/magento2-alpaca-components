@@ -1,8 +1,30 @@
 .tabs {
     position: relative;
+
     @include mq($screen-l) {
         display: flex;
         flex-flow: row wrap;
+    }
+
+    //modificators
+    &--product-view {
+        .tabs__title {
+            padding: 15px 20px;
+            font-size: 16px;
+            color: $font-color-lighter2;
+
+            &.active {
+                color: $color-black;
+            }
+        }
+
+        .tabs__content {
+            padding: 15px 20px;
+        }
+
+        .tabs__icon {
+            right: 20px;
+        }
     }
 
     &__title {
@@ -81,27 +103,6 @@
                 border-bottom: 0 none;
                 border-top: 1px solid $border-base;
             }
-        }
-    }
-
-    //modificators
-    &--product-view {
-        .tabs__title {
-            padding: 15px 20px;
-            font-size: 16px;
-            color: $font-color-lighter2;
-
-            &.active {
-                color: $color-black;
-            }
-        }
-
-        .tabs__content {
-            padding: 15px 20px;
-        }
-
-        .tabs__icon {
-            right: 20px;
         }
     }
 }
