@@ -12,13 +12,14 @@
     transition: color 0.3s, background 0.3s;
     text-decoration: none;
 
-    @include links() {
-        color: $font-color;
-    }
-
     @include mq($screen-s) {
         display: inline-block;
         width: auto;
+    }
+
+    @include links() {
+        color: $font-color;
+        outline: none;
     }
 
     @include links(hover) {
