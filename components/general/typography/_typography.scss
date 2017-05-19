@@ -1,100 +1,67 @@
-h1,
-h2 {
-    font-weight: 800;;
-    margin: 0 0 10px;
+.heading {
     color: $font-color;
-    line-height: 1.4;
-}
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: $font-color;
-    line-height: 1.4;
-}
-
-h1 {
-    font-size: 24px;
-
-    @include mq($screen-m) {
-        font-size: 28px;
-    }
-
-    @include mq($screen-l) {
-        font-size: 30px;
-    }
-}
-h2 {
-    font-size: 18px;
-
-    @include mq($screen-m) {
-        font-size: 20px;
-    }
-
-    @include mq($screen-l) {
-        font-size: 24px;
-    }
-}
-h3 {
-    font-size: 16px;
-
-    @include mq($screen-m) {
-        font-size: 20px;
-    }
-}
-h4 {
-    font-size: 15px;
-
-    @include mq($screen-m) {
-        font-size: 18px;
-    }
-}
-h5 {
-    font-size: 17px;
-}
-h6 {
-    font-size: 16px;
-}
-
-.heading-primary {
+    font-family: $font-family;
+    font-weight: 400;
+    margin: 0 0 15px;
+    font-size: 14px;
     text-transform: uppercase;
 
-    &:after {
-        content: '';
-        width: 70px;
-        height: 2px;
-        background-color: $color-main1;
-        display: block;
-        margin-top: 10px;
-    }
+    &--bodoni-font {
+        font-family: 'Bodoni-font' $font-family;
 
-    &--short-line {
-        &:after {
-            width: 25px;
+        &--italic {
+            font-family: 'Bodoni-font-italic' $font-family;
         }
     }
-}
 
-.heading-secondary {
-    font-weight: 400;
-    padding: 0 0 7px;
-    border-bottom: 1px solid $border-base;
-}
+    &--futura-font {
+        font-family: 'Futura-font' $font-family;
 
-.heading-white {
-    color: $color-white;
-    text-transform: uppercase;
-}
-
-a {
-    @include links(active) {
-        color: $color-main1;
-        text-decoration: none;
+        &--italic {
+            font-family: 'Futura-font-italic' $font-family;
+        }
     }
-    @include links(hover) {
-        color: $color-main1;
-        text-decoration: underline;
+
+    &--mixed-font {
+        font-family: 'Futura-font' $font-family;
+
+        @include mq($screen-m) {
+            font-family: 'Bodoni-font' $font-family;
+        }
+
+        &--italic {
+            font-family: 'Futura-font-italic' $font-family;
+
+            @iclude mq($screen-m) {
+                font-family: 'Bodoni-font-italic' $font-family;
+            }
+        }
+    }
+
+    &--first-level {
+        font-size: 18px;
+        margin-bottom: 0;
+
+        @include mq($screen-m) {
+            font-size: 30px;
+        }
+    }
+
+    &--second-level {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &--third-level {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &--fourth-level {
+        font-size: 14px;
+
+        @include mq($screen-m) {
+            font-size: 18px;
+        }
     }
 }
