@@ -23,7 +23,8 @@ module.exports = {
       'icon-twitter',
       'icon-water',
       'icon-x',
-      'loader'
+      'loader',
+      'janus-et-cie-logo'
     ]
   }
 };
