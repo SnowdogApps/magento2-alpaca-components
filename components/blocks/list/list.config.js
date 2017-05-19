@@ -160,23 +160,28 @@ module.exports = {
         modifier: 'social',
         contentList: [
           {
-            iconId: 'icon-fb',
+            iconId: 'icon-facebook-project',
             iconClass: 'facebook',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-twitter',
+            iconId: 'icon-twitter-project',
             iconClass: 'twitter',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-google',
-            iconClass: 'google',
+            iconId: 'icon-instagram-project',
+            iconClass: 'instagram',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-linkedin',
-            iconClass: 'linkedin',
+            iconId: 'icon-pinterest-project',
+            iconClass: 'pinterest',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-houzz-project',
+            iconClass: 'houzz',
             iconLink: '#somelink'
           }
         ]

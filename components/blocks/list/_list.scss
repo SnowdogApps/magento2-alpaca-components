@@ -5,7 +5,7 @@
     display: block;
     list-style-type: none;
     padding: 10px;
-    margin: 0;
+    margin: 0 0 30px;
     line-height: 1.4;
 
     &__item {
@@ -34,16 +34,13 @@
     }
 
     &__social-icon {
-        fill: $color-black;
-        width: 16px;
-        height: 16px;
+        fill: $color-light-gray;
+        width: 30px;
+        height: 30px;
+        transition: $transitionDuration;
 
-        &--twitter {
-            width: 21px;
-        }
-
-        &--google {
-            width: 25px;
+        &:hover {
+            fill: $color-gray-dark;
         }
     }
 
@@ -138,15 +135,18 @@
     }
 
     &--social {
+        padding: 0;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
+
         @include mq($screen-m) {
             justify-content: flex-end;
         }
 
         .list__item {
-            margin-right: 25px;
+            padding: 10px;
+            margin-bottom: 0;
         }
 
     }
