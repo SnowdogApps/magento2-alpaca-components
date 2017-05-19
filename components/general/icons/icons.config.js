@@ -23,7 +23,20 @@ module.exports = {
       'icon-twitter',
       'icon-water',
       'icon-x',
-      'loader'
+      'loader',
+      'icon-info-project',
+      'icon-search-project',
+      'icon-twitter-project',
+      'icon-pinterest-project',
+      'icon-houzz-project',
+      'icon-instagram-project',
+      'icon-facebook-project',
+      'icon-like-project',
+      'icon-cart-project',
+      'icon-arrow-left-project',
+      'icon-mail-project',
+      'icon-edit-project',
+      'icon-delete-project'
     ]
   }
 };
