@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Cards',
-  status: 'wip',
   context: {
     cardsItems: [
       {

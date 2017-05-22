@@ -8,8 +8,8 @@
                 >
                     {{ filterTitle }}
                     {{#if filterList }}
-                        <svg title="icon-arrow-down" class="filters__icon">
-                            <use xlink:href="#icon-arrow-down"></use>
+                        <svg class="filters__icon">
+                            <use xlink:href="#arrow-down"></use>
                         </svg>
                     {{/if}}
                 </a>
@@ -20,8 +20,8 @@
                                 <a href="{{ itemLink }}" class="filters__inner-link" {{#if filterId }}data-filter="{{ filterId }}"{{/if}}>
                                     {{ itemName }}
                                     {{#if sublist }}
-                                        <svg title="icon-plus" class="filters__icon filters__icon--inner">
-                                            <use xlink:href="#icon-plus"></use>
+                                        <svg class="filters__icon filters__icon--inner">
+                                            <use xlink:href="#plus"></use>
                                         </svg>
                                     {{/if}}
                                 </a>

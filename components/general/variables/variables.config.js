@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Variables',
-  status: 'wip',
   context: {
     heading1: 'Colors',
     colors: [
