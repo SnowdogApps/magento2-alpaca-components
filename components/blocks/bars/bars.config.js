@@ -4,7 +4,7 @@ module.exports = {
   context: {
     link: '#',
     linkAnchor: 'Action\'s details',
-    closeIcon: 'icon-x',
+    closeIcon: 'close',
     text: 'Some action / promotion text',
     modifier: 'top'
   },

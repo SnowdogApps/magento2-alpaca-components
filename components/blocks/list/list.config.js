@@ -160,22 +160,22 @@ module.exports = {
         modifier: 'social',
         contentList: [
           {
-            iconId: 'icon-fb',
+            iconId: 'facebook',
             iconClass: 'facebook',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-twitter',
+            iconId: 'twitter',
             iconClass: 'twitter',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-google',
+            iconId: 'google-plus',
             iconClass: 'google',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-linkedin',
+            iconId: 'linkedin',
             iconClass: 'linkedin',
             iconLink: '#somelink'
           }

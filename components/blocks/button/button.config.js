@@ -10,7 +10,7 @@ module.exports = {
       context: {
         text: 'Light button',
         modifier: 'light',
-        iconId: 'icon-arrow-right',
+        iconId: 'arrow-right',
         iconClass: 'button__icon'
       }
     },
@@ -19,7 +19,7 @@ module.exports = {
       context: {
         text: 'I am a button',
         modifier: 'icon',
-        iconId: 'icon-arrow-right',
+        iconId: 'arrow-right',
         iconClass: 'button__icon'
       }
     },
@@ -28,7 +28,7 @@ module.exports = {
       context: {
         text: 'I am a button',
         modifier: 'capital',
-        iconId: 'icon-arrow-right',
+        iconId: 'arrow-right',
         iconClass: 'button__icon'
       }
     },
@@ -37,7 +37,7 @@ module.exports = {
       context: {
         text: 'I am a button',
         modifier: 'color-icon',
-        iconId: 'icon-arrow-right',
+        iconId: 'arrow-right',
         iconClass: 'button__icon'
       }
     },
@@ -46,7 +46,7 @@ module.exports = {
       context: {
         text: 'I am a button',
         modifier: 'dark',
-        iconId: 'icon-arrow-right',
+        iconId: 'arrow-right',
         iconClass: 'button__icon'
       }
     },
@@ -56,7 +56,7 @@ module.exports = {
         text: 'I am a button',
         modifier: 'borders',
         modifier2: 'blue-icon',
-        iconId: 'icon-arrow-right',
+        iconId: 'arrow-right',
         iconClass: 'button__icon'
       }
     },
