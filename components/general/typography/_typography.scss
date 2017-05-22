@@ -32,7 +32,7 @@
         &--italic {
             font-family: 'Futura-font-italic' $font-family;
 
-            @iclude mq($screen-m) {
+            @include mq($screen-m) {
                 font-family: 'Bodoni-font-italic' $font-family;
             }
         }
