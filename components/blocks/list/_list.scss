@@ -1,5 +1,7 @@
 @import 'list-title';
 @import 'list-wrap';
+@import 'newsletter';
+@import 'product';
 
 .list {
     display: block;
@@ -34,7 +36,7 @@
     }
 
     &__social-icon {
-        fill: $color-light-gray;
+        fill: $color-gray-light;
         width: 30px;
         height: 30px;
         transition: $transitionDuration;
@@ -145,9 +147,15 @@
         }
 
         .list__item {
-            padding: 10px;
             margin-bottom: 0;
-        }
 
+            .list__link {
+                padding: 10px;
+
+                &:hover .list__social-icon {
+                    fill: $color-gray-dark;
+                }
+            }
+        }
     }
 }

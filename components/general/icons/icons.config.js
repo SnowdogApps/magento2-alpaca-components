@@ -29,7 +29,9 @@ module.exports = {
       'icon-instagram-project',
       'icon-pinterest-project',
       'icon-houzz-project',
-      'icon-like-project'
+      'icon-like-project',
+      'icon-arrow-project',
+      'icon-mail-project'
     ]
   }
 };

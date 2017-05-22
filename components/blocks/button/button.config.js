@@ -2,7 +2,10 @@ module.exports = {
   title: 'Button',
   status: 'wip',
   context: {
-    text: 'I am a button'
+    text: 'I am a button',
+    modifier: '',
+    iconId: '',
+    iconClass: ''
   },
   variants: [
     {
