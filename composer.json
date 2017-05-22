@@ -1,0 +1,5 @@
+{
+    "name": "snowdog/module-alpaka-ui-components",
+    "description": "UI Components to Alpaka theme for Magento 2",
+    "type": "magento2-module"
+}
