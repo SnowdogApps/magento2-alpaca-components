@@ -5,7 +5,7 @@ all icons are gather into *icon-sprite.svg* file
 Use sprite to display svg inline in your project:
 
 ```html
-<svg title="icon-title" class="icon-class">
+<svg class="icon-class">
     <use xlink:href="#icon-id"></use>
 </svg>
 ```
