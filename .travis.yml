@@ -9,4 +9,5 @@ script:
   - gulp sass-lint --ci
   - gulp sass
   - gulp css-lint --ci
-  - gulp icons
+  - gulp svg-sprite
+  - gulp fractal:build
