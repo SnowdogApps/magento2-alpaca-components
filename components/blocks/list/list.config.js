@@ -160,23 +160,100 @@ module.exports = {
         modifier: 'social',
         contentList: [
           {
-            iconId: 'icon-fb',
+            iconId: 'icon-facebook-project',
             iconClass: 'facebook',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-twitter',
+            iconId: 'icon-twitter-project',
             iconClass: 'twitter',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-google',
-            iconClass: 'google',
+            iconId: 'icon-instagram-project',
+            iconClass: 'instagram',
             iconLink: '#somelink'
           },
           {
-            iconId: 'icon-linkedin',
-            iconClass: 'linkedin',
+            iconId: 'icon-pinterest-project',
+            iconClass: 'pinterest',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-houzz-project',
+            iconClass: 'houzz',
+            iconLink: '#somelink'
+          }
+        ]
+      }
+    },
+    {
+      name: 'social-with-newsletter',
+      context: {
+        newsletterText: 'Stay connected',
+        modifier: 'social',
+        icon: true,
+        iconId: 'icon-arrow-project',
+        iconModificator: '--icon',
+        iconClass: 'button__icon',
+        text: '',
+        placeholder: 'Sign up for our newsletter',
+        contentList: [
+          {
+            iconId: 'icon-facebook-project',
+            iconClass: 'facebook',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-twitter-project',
+            iconClass: 'twitter',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-instagram-project',
+            iconClass: 'instagram',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-pinterest-project',
+            iconClass: 'pinterest',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-houzz-project',
+            iconClass: 'houzz',
+            iconLink: '#somelink'
+          }
+        ]
+      }
+    },
+    {
+      name: 'social-product',
+      context: {
+        modifier: 'social',
+        boxId: 'icon-like-project',
+        boxClass: 'like',
+        boxLink: '#somelink',
+        boxText: 'Save for later',
+        contentList: [
+          {
+            iconId: 'icon-facebook-project',
+            iconClass: 'facebook',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-instagram-project',
+            iconClass: 'instagram',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-pinterest-project',
+            iconClass: 'pinterest',
+            iconLink: '#somelink'
+          },
+          {
+            iconId: 'icon-mail-project',
+            iconClass: 'mail',
             iconLink: '#somelink'
           }
         ]

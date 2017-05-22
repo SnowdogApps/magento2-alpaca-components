@@ -1,0 +1,48 @@
+.newsletter-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mq($screen-m) {
+        flex-wrap: nowrap;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include mq($screen-xl) {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .input {
+        margin-bottom: 15px;
+
+        @include mq($screen-m) {
+            width: 40%;
+            margin-bottom: 0;
+        }
+    }
+
+    .button {
+        width: 30px;
+    }
+
+    .list {
+        @include mq($screen-m) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+        display: block;
+        color: $font-color-second;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        @include mq($screen-m) {
+            margin-bottom: 0;
+        }
+    }
+}

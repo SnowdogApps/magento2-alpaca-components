@@ -3,6 +3,12 @@ module.exports = {
   status: 'wip',
   context: {
     labelText: 'Label text',
-    placeholder: 'First and last name'
+    placeholder: 'First and last name',
+    icon: false,
+    iconId: 'icon-arrow-project',
+    iconModificator: '--icon',
+    iconClass: 'button__icon',
+    text: '',
+    modifier: 'icon-second'
   }
 }

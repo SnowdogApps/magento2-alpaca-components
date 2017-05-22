@@ -1,0 +1,14 @@
+<div class="list-social-product">
+    <a href="{{ boxLink }}" class="list-social-product__link">
+        <svg title="{{boxId}}"
+             class="list__social-icon list__social-icon--{{boxClass}}"
+        >
+            <use xlink:href="#{{boxId}}"></use>
+        </svg>
+
+        <span class="list-social-product__text">
+            {{ boxText }}
+        </span>
+    </a>
+    {{> '@list--social'}}
+</div>

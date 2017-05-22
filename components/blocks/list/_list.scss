@@ -1,11 +1,13 @@
 @import 'list-title';
 @import 'list-wrap';
+@import 'newsletter';
+@import 'product';
 
 .list {
     display: block;
     list-style-type: none;
     padding: 10px;
-    margin: 0;
+    margin: 0 0 30px;
     line-height: 1.4;
 
     &__item {
@@ -34,16 +36,13 @@
     }
 
     &__social-icon {
-        fill: $color-black;
-        width: 16px;
-        height: 16px;
+        fill: $color-gray-light;
+        width: 30px;
+        height: 30px;
+        transition: $transitionDuration;
 
-        &--twitter {
-            width: 21px;
-        }
-
-        &--google {
-            width: 25px;
+        &:hover {
+            fill: $color-gray-dark;
         }
     }
 
@@ -138,16 +137,25 @@
     }
 
     &--social {
+        padding: 0;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
+
         @include mq($screen-m) {
             justify-content: flex-end;
         }
 
         .list__item {
-            margin-right: 25px;
-        }
+            margin-bottom: 0;
 
+            .list__link {
+                padding: 10px;
+
+                &:hover .list__social-icon {
+                    fill: $color-gray-dark;
+                }
+            }
+        }
     }
 }

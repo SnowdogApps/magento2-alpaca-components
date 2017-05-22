@@ -1,22 +1,45 @@
 .input {
     width: 100%;
     position: relative;
+    margin-bottom: 15px;
+
+    @include mq($screen-m) {
+        margin-bottom: 30px;
+    }
+
+    &--icon {
+        display: flex;
+    }
 
     &__label {
         display: none;
     }
 
     &__field {
-        border: 1px solid $border-base;
-        height: 40px;
-        padding: 10px;
+        border: 2px solid $border-base;
+        height: 30px;
+        padding: 5px 10px;
         width: 100%;
-        color: $font-color;
-        font-size: 14px;
+        color: $font-color-second;
+        font-size: 12px;
         font-weight: 400;
+        transition: $transitionDuration;
+
+        @include links(active) {
+            outline: none;
+        }
+
+        &:focus {
+            border-color: $color-gray-dark;
+            color: $color-gray-dark;
+        }
+
+        &:focus + .button .button__icon {
+            fill: $color-gray-dark;
+        }
 
         &::placeholder {
-            color: $font-color-lighter3;
+            color: $font-color-second;
             opacity: 1;
         }
     }

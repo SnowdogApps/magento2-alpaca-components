@@ -1,0 +1,21 @@
+<div class="newsletter-box">
+    <span class="newsletter-box__title">
+        {{ newsletterText }}
+    </span>
+
+    {{> '@input' modifier='icon-second'}}
+
+    <ul class="list{{#if modifier}} list--{{modifier}}{{/if}}">
+        {{#each contentList}}
+            <li class="list__item">
+                <a href="{{ iconLink }}" class="list__link">
+                    <svg title="{{iconId}}"
+                         class="list__social-icon list__social-icon--{{iconClass}}"
+                    >
+                        <use xlink:href="#{{iconId}}"></use>
+                    </svg>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</div>

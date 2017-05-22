@@ -10,9 +10,13 @@ $color-aqua: #c0e9fd;
 $color-gray1: #9ea3a4;
 $color-gray2: #666666;
 $color-gray3: #c2c2c2;
-$color-gray-dark: #1b0d08;
+$color-gray-dark: #4d4d4d;
 $color-bg-gray: #e8e8e8;
-$border-base: #cccccc;
+$color-gray-light: #b3b3b3;
+$border-base: #b3b3b3;
+
+// transition
+$transitionDuration: 0.3s;
 
 
 // breakpoints
@@ -28,11 +32,17 @@ $screen-xxl: 1600px;
 
 $font-family: 'Open Sans', sans-serif;
 
-$font-size-base: 14px;
+$font-size-base: 12px;
 $font-color: $color-gray-dark;
 $font-color-lighter1: rgba($font-color, 0.8);
 $font-color-lighter2: rgba($font-color, 0.6);
 $font-color-lighter3: rgba($font-color, 0.4);
 $font-color-lighter4: rgba($font-color, 0.2);
+
+$font-color-second: $color-gray-light;
+$font-color-second-lighter1: rgba($font-color-second, 0.8);
+$font-color-second-lighter2: rgba($font-color-second, 0.6);
+$font-color-second-lighter3: rgba($font-color-second, 0.4);
+$font-color-second-lighter4: rgba($font-color-second, 0.2);
 
 $max-content-width: 1180px;

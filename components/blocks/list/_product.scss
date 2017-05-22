@@ -1,0 +1,42 @@
+.list-social-product {
+    display: flex;
+    justify-content: space-between;
+
+    &__link {
+        padding: 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        &:hover .list__social-icon {
+            fill: $color-gray-dark;
+        }
+
+        &:hover .list-social-product__text {
+            color: $font-color;
+        }
+
+        @include links(active) {
+            text-decoration: none;
+        }
+    }
+
+    &__text {
+        display: none;
+
+        @include mq($screen-xl) {
+            display: block;
+            font-size: 14px;
+            color: $font-color-second;
+            transition: $transitionDuration;
+            cursor: pointer;
+            margin-left: 10px;
+            visibility: visible;
+        }
+    }
+
+    .list--social {
+        margin-bottom: 0;
+        justify-content: flex-end;
+    }
+}
