@@ -1,3 +1,5 @@
+// TO DO
+
 'use strict'
 $(document).ready(() => {
   $('.slider__items')
