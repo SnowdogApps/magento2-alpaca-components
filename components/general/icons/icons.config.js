@@ -12,7 +12,7 @@ module.exports = {
       'facebook',
       'google-plus',
       'linkedin',
-      'loader.svg',
+      'loader',
       'mobile-menu',
       'plus',
       'search',
