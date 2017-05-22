@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Banners',
-  status: 'wip',
   context: {
     image: '/images/banners/banner-1_1170_300.png',
     image480: '/images/banners/banner-1_480_246.png',

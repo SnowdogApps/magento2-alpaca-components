@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Search',
-  status: 'wip',
   context: {
     placeholder: 'Search...',
     buttonText: 'Search'

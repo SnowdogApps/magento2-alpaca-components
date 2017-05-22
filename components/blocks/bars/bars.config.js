@@ -1,8 +1,6 @@
 module.exports = {
   title: 'Bars',
-  status: 'wip',
   context: {
-    link: '#',
     linkAnchor: 'Action\'s details',
     closeIcon: 'close',
     text: 'Some action / promotion text',
@@ -12,7 +10,6 @@ module.exports = {
     {
       name: 'Cookie bar',
       context: {
-        link: '#',
         linkAnchor: 'Details',
         closeIcon: false,
         closeLabel: 'OK, close',
