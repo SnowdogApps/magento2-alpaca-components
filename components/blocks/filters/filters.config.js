@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Filters',
-  status: 'wip',
   context: {
     filters: [
       {
@@ -162,4 +161,4 @@ module.exports = {
       }
     ]
   }
-}
+};

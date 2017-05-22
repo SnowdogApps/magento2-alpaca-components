@@ -3,15 +3,22 @@
         {{#unless pages.[0].active}}
             <li class="pager__item pager__item--prev">
                 <a href="#" class="pager__link">
-                    <svg title="icon-previous" class="pager__icon">
-                        <use xlink:href="#icon-arrow-right"></use>
+                    <svg class="pager__icon">
+                        <use xlink:href="#arrow-right"></use>
                     </svg>
                 </a>
             </li>
         {{/unless}}
+
         {{#pager pages as |page|}}
             {{#if this.active}}
-                <li class="pager__item pager__item--current {{#if @last}} last {{/if}}">
+                <li class="pager__item
+                           pager__item--current
+                           {{#if @last}}
+                                last
+                           {{/if}}
+                    "
+                >
                     {{ pageNo }}
                 </li>
             {{else}}
@@ -20,11 +27,12 @@
                 </li>
             {{/if}}
         {{/pager}}
+
         {{#unless (lastActive pages)}}
             <li class="pager__item pager__item--next">
                 <a href="#" class="pager__link">
-                    <svg title="icon-next" class="pager__icon">
-                        <use xlink:href="#icon-arrow-right"></use>
+                    <svg class="pager__icon">
+                        <use xlink:href="#arrow-right"></use>
                     </svg>
                 </a>
             </li>

@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Product grid item',
-  status: 'wip',
   context: {
     link: '#somelink',
     name: 'Some product name',
@@ -31,4 +30,4 @@ module.exports = {
       }
     }
   ]
-}
+};

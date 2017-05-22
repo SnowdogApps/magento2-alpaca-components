@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Product list',
-  status: 'wip',
   context: {
     productlist: [
       {
@@ -25,4 +24,4 @@ module.exports = {
       }
     ]
   }
-}
+};

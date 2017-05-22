@@ -1,6 +1,6 @@
 <div class="menu__mobile">
-    <svg title="icon-arrow-down" class="menu__mobile-icon">
-        <use xlink:href="#icon-mobile-menu"></use>
+    <svg class="menu__mobile-icon">
+        <use xlink:href="#mobile-menu"></use>
     </svg>
 </div>
 <nav class="menu">
@@ -10,8 +10,8 @@
             <a href="{{itemLink}}" class="menu__link" {{#if itemId }}data-menu="{{ itemId }}"{{/if}}>
                 {{ itemName }}
                 {{#if submenu }}
-                    <svg title="view more" class="menu__icon">
-                        <use xlink:href="#icon-arrow-down"></use>
+                    <svg class="menu__icon">
+                        <use xlink:href="#arrow-down"></use>
                     </svg>
                 {{/if}}
             </a>
@@ -22,8 +22,8 @@
                             <a href="{{itemLink}}" class="menu__inner-link" {{#if itemId }}data-menu="{{ itemId }}"{{/if}}>
                                 {{ itemName }}
                                 {{#if submenu }}
-                                    <svg title="view more" class="menu__icon menu__icon--inner">
-                                        <use xlink:href="#icon-plus"></use>
+                                    <svg class="menu__icon menu__icon--inner">
+                                        <use xlink:href="#plus"></use>
                                     </svg>
                                 {{/if}}
                             </a>
@@ -47,4 +47,4 @@
     </ul>
     <div class="menu__mobile-bg"></div>
 </nav>
-<script src="{{#jsPath 'navigation' }}{{/jsPath}}"></script>
+<script src="{{static 'navigation.js' }}"></script>

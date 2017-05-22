@@ -4,6 +4,66 @@
     transition: height 0.3s;
     box-sizing: border-box;
 
+    //modificators
+    &--cookie {
+        background-color: $color-bg-gray;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 6;
+
+        .infobar__message {
+            display: block;
+            margin-bottom: 10px;
+
+            @include mq($screen-m) {
+                display: inline-block;
+                margin-bottom: 0;
+                margin-right: 35px;
+            }
+        }
+
+        .infobar__text {
+            color: lighten($color-black, 50%);
+            text-transform: none;
+            display: inline;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .infobar__link {
+            color: lighten($color-black, 50%);
+            text-transform: none;
+            display: inline;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: underline;
+
+            @include links(hover) {
+                color: $color-black;
+            }
+        }
+
+        .infobar__close {
+            display: inline-block;
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
+            height: auto;
+            font-weight: 400;
+            color: lighten($color-black, 50%);
+            font-size: 12px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    //modificators end
+
     &.closed {
         overflow: hidden;
     }
@@ -72,63 +132,4 @@
             position: absolute;
         }
     }
-
-    //modificators
-    &--cookie {
-        background-color: $color-bg-gray;
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        z-index: 6;
-
-        .infobar__message {
-            display: block;
-            margin-bottom: 10px;
-
-            @include mq($screen-m) {
-                display: inline-block;
-                margin-bottom: 0;
-                margin-right: 35px;
-            }
-        }
-
-        .infobar__text {
-            color: lighten($color-black, 50%);
-            text-transform: none;
-            display: inline;
-            font-weight: 400;
-            margin: 0;
-        }
-
-        .infobar__link {
-            color: lighten($color-black, 50%);
-            text-transform: none;
-            display: inline;
-            border: none;
-            padding: 0;
-            margin: 0;
-            text-decoration: underline;
-
-            @include links(hover) {
-                color: $color-black;
-            }
-        }
-
-        .infobar__close {
-            display: inline-block;
-            position: relative;
-            top: auto;
-            right: auto;
-            width: auto;
-            height: auto;
-            font-weight: 400;
-            color: lighten($color-black, 50%);
-            font-size: 12px;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-    //modificators end
 }

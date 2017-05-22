@@ -1,13 +1,20 @@
 <div class="infobar{{#if modifier}} infobar--{{ modifier }}{{/if}}">
     <div class="infobar__container">
         <p class="infobar__message">
-            <span class="infobar__text">{{ text }}</span>
+            <span class="infobar__text">
+                {{ text }}
+            </span>
             {{#if link}}
-                <a href="{{ link }}" class="infobar__link">{{ linkAnchor }}</a>
+                <a href="#" class="infobar__link">
+                    {{ linkAnchor }}
+                </a>
             {{/if}}
         </p>
+
         <button class="infobar__close" type="button">
-            {{#if closeLabel}}{{ closeLabel }}{{/if}}
+            {{#if closeLabel}}
+                {{ closeLabel }}
+            {{/if}}
             {{#if closeIcon}}
                 <svg class="infobar__close--icon">
                     <use xlink:href="#{{ closeIcon }}"></use>
@@ -16,15 +23,4 @@
         </button>
     </div>
 </div>
-<script type="text/javascript">
-    // This script must be added here just b/c regual JS module loads after 1.5s
-    // and makes weird flashes of content
-    // Rest of more compilated stuff is still inside module
-    if (localStorage.getItem('infobar-top') == 1) {
-        document.querySelector('.infobar--top').style.display = 'none';
-    }
-    if (localStorage.getItem('infobar-cookie') == 1) {
-        document.querySelector('.infobar--cookie').style.display = 'none';
-    }
-</script>
-<script src="{{#jsPath 'bars' }}{{/jsPath}}"></script>
+<script src="{{static 'bars.js' }}"></script>

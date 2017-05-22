@@ -51,13 +51,70 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 // get handlebars component engine (default) and register partial
 const hbsEngine = fractal.components.engine();
 
-hbsEngine.handlebars.registerHelper('jsPath', function (componentName) {
-  return '/components/raw/' + componentName + '/' + componentName + '.js';
+hbsEngine.handlebars.registerHelper('static', (file, data) => {
+    return '/components/raw/' + data.data.root._self.baseHandle + '/' + file;
 });
 
 hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file}`);
 
 hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'));
+
+hbsEngine.handlebars.registerHelper('pager', function(context, options) {
+  let ret = '';
+
+  function findIndexByActive(source, active) {
+    for (let i = 0; i < source.length; i++) {
+      if (source[i].active === active) {
+        return i;
+      }
+    }
+  }
+
+  if (context.length > 6) {
+    let result = findIndexByActive(context, true),
+        arrayLength = context.length,
+        newContext = new Array(),
+        middlePage = {
+          pageNo: '...',
+          active: false
+        };
+
+    if ((arrayLength - result) > 6) {
+
+      for (let k = result; k < (result + 3); k++) {
+        newContext.push(context[k])
+      }
+      newContext.push(middlePage);
+      newContext.push(context[(context.length - 2)], context[(context.length - 1)]);
+
+      for (let i = 0, j = newContext.length; i < j; i++) {
+        ret = ret + options.fn(newContext[i]);
+      }
+
+    }
+    else {
+      for (let k = result; k < (result + 5); k++) {
+        newContext.push(context[k]);
+      }
+
+      for (let i = 0, j = newContext.length; i < j; i++) {
+        ret = ret + options.fn(newContext[i]);
+      }
+    }
+  }
+  else {
+    for (let i = 0, j = context.length; i < j; i++) {
+      ret = ret + options.fn(context[i]);
+    }
+  }
+
+  return ret;
+});
+
+hbsEngine.handlebars.registerHelper('lastActive', function(array) {
+  let last = array[array.length - 1];
+  return last.active;
+});
 
 // Fractal gulp tasks
 gulp.task('fractal:start', ['inheritance', 'sass', 'watch'], () => {

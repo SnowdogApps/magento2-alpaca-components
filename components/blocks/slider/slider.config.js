@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Slider',
-  status: 'wip',
   context: {
     sliderItems: [
       {
@@ -27,4 +26,4 @@ module.exports = {
       },
     ]
   }
-}
+};

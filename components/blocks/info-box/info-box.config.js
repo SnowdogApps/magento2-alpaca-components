@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Info box',
-  status: 'wip',
   context: {
     date: '30.12\r\n2016',
     title: 'Some title goes here',
@@ -21,4 +20,4 @@ module.exports = {
       }
     }
   ]
-}
+};

@@ -12,13 +12,14 @@
     transition: color 0.3s, background 0.3s;
     text-decoration: none;
 
-    @include links() {
-        color: $font-color;
-    }
-
     @include mq($screen-s) {
         display: inline-block;
         width: auto;
+    }
+
+    @include links() {
+        color: $font-color;
+        outline: none;
     }
 
     @include links(hover) {
@@ -28,16 +29,6 @@
         .button__icon {
             fill: $color-main1;
         }
-    }
-
-    &__icon {
-        fill: $font-color;
-        width: 8px;
-        height: 13px;
-        position: relative;
-        top: 1.5px;
-        margin-left: 10px;
-        transition: fill 0.3s;
     }
 
     &--light {
@@ -114,5 +105,15 @@
             color: $color-white;
             background-color: $color-main2;
         }
+    }
+
+    &__icon {
+        fill: $font-color;
+        width: 8px;
+        height: 13px;
+        position: relative;
+        top: 1.5px;
+        margin-left: 10px;
+        transition: fill 0.3s;
     }
 }

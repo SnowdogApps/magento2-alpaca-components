@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Breadcrumbs',
-  status: 'wip',
   context: {
     categories: [
       'category1',
@@ -11,4 +10,4 @@ module.exports = {
       'category6'
     ]
   }
-}
+};

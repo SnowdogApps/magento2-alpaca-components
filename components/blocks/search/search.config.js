@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Search',
-  status: 'wip',
   context: {
     placeholder: 'Search...',
     buttonText: 'Search'
@@ -15,7 +14,7 @@ module.exports = {
             text: 'See all products',
             modifier: 'light',
             modifier2: 'search',
-            iconId: 'icon-arrow-right',
+            iconId: 'arrow-right',
             iconClass: 'button__icon'
           },
           productstitle: 'Products',
@@ -26,4 +25,4 @@ module.exports = {
       }
     }
   ]
-}
+};

@@ -2,6 +2,22 @@
     position: relative;
     width: 100%;
 
+    &--right,
+    &--left,
+    &--both {
+        @include mq($screen-l) {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+
+    &--both {
+        .columns__right,
+        .columns__left {
+            flex-basis: 25%;
+        }
+    }
+
     &__main {
         position: relative;
         width: 100%;
@@ -27,19 +43,7 @@
         }
     }
 
-    &--right,
-    &--left,
-    &--both {
-        @include mq($screen-l) {
-            display: flex;
-            flex-flow: row nowrap;
-        }
-    }
-
-    &--both {
-        .columns__right,
-        .columns__left {
-            flex-basis: 25%;
-        }
+    &__text {
+        margin: 0;
     }
 }

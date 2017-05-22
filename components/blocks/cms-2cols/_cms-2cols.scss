@@ -3,6 +3,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+
     @include clearfix();
 
     @include mq($screen-l) {
@@ -10,8 +11,8 @@
     }
 
     &__left {
-        display: block;
         margin-bottom: 20px;
+
         @include mq($screen-m) {
             margin-bottom: 40px;
         }
@@ -24,9 +25,8 @@
     }
 
     &__right {
-        display: block;
-        display: block;
         margin-bottom: 20px;
+
         @include mq($screen-m) {
             margin-bottom: 40px;
         }

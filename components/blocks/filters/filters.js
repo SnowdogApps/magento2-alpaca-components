@@ -49,11 +49,14 @@ function slideList(item, inner) {
 function appendAllItem(item) {
   const itemHref = item.href,
         sublist = document.querySelector(`ul[data-filter="${item.dataset.filter}"]`),
-        levelClass = sublist.classList.value.includes('level1') ? ' filters__inner-item--level1' : ' filters__inner-item--level2',
+        levelClass = sublist.classList.value.includes('level1')
+        ? ' filters__inner-item--level1'
+        : ' filters__inner-item--level2',
         allLink = `<a href="${itemHref}" class="filters__inner-link">
         ${alliTemLabel}
         </a>`,
         allItem = document.createElement('li');
+
   allItem.innerHTML = allLink;
   allItem.classList = `filters__inner-item filters__inner-item--all ${levelClass}`;
   sublist.insertBefore(allItem, sublist.firstChild);
@@ -71,8 +74,7 @@ filterItem.forEach(
       );
     appendAllItem(key);
   }
-
-  );
+);
 
 filterInnerItem.forEach(
   key => {
@@ -86,5 +88,4 @@ filterInnerItem.forEach(
       );
     appendAllItem(key);
   }
-
-  );
+);
