@@ -24,13 +24,13 @@ const processors = [
   autoprefixer()
 ];
 
-const paths = {
+const config = {
   components: 'components',
   css       : 'public/css',
   icons     : 'components/general/icons/files',
-    importComponents : require('./config/importComponents.json'),
-    maps             : 'cssmaps',
-    sass             : 'docs/styles.scss'
+  importComponents : require('./config/importComponents.json'),
+  maps             : 'cssmaps',
+  sass             : 'docs/styles.scss'
 }
 
 // Fractal configuration
@@ -60,13 +60,6 @@ hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file
 hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'));
 
 // Fractal gulp tasks
-gulp.task('fractal:start', ['icons', 'sass', 'watch'], () => {
-  const server = fractal.web.server({
-    sync: true,
-    port: 4000
-  });
-  server.on('error', err => logger.error(err.message));
-
 gulp.task('fractal:start', ['inheritance', 'sass', 'watch'], () => {
     const server = fractal.web.server({
         sync: true,
@@ -106,7 +99,7 @@ gulp.task('inheritance', () => {
       { nodir: true }
     ).forEach(file => {
       const newSrc = file.replace(srcPath, destPath);
-      
+
       symlinkFile(file, newSrc);
     });
   }
