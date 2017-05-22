@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Checkbox field',
-  status: 'wip',
   context: {
     labelText: 'Checkbox field',
     checkboxId: 'checkbox1'

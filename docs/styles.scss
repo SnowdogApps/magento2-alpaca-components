@@ -11,11 +11,11 @@
 @import '../components/general/mixins/links';
 
 // typography
-@import '../components/general/fonts/fonts';
 @import '../components/general/typography/typography';
 
 // documentation styles
 @import 'styles/base';
+@import 'styles/icons';
 
 // components
 @import '../components/blocks/banners/banners';
@@ -36,6 +36,7 @@
 @import '../components/blocks/form-fields/textarea/textarea';
 @import '../components/blocks/info-box/info-box';
 @import '../components/blocks/list/list';
+@import '../components/blocks/logo/logo';
 @import '../components/blocks/navigation/navigation';
 @import '../components/blocks/new-label/new-label';
 @import '../components/blocks/pager/pager';

@@ -1,10 +1,15 @@
-<div class="banner{{#if modifier}}
-            banner--{{ modifier }}{{/if}}"
+<div class="
+         banner
+         {{#if modifier}}
+             banner--{{ modifier }}
+         {{/if}}
+     "
 >
-    <picture class="banner__image
-                    {{#if imageModifier}}
-                        banner__image--{{ imageModifier }}
-                    {{/if}}
+    <picture class="
+                 banner__image
+                 {{#if imageModifier}}
+                     banner__image--{{ imageModifier }}
+                 {{/if}}
              "
     >
         <source data-srcset="{{ image480 }}"
@@ -33,10 +38,11 @@
     </picture>
 
     {{#if showContent}}
-        <div class="banner__content
-                    {{#if contentModifier}}
-                        banner__content--{{ contentModifier }}
-                    {{/if}}
+        <div class="
+                 banner__content
+                 {{#if contentModifier}}
+                     banner__content--{{ contentModifier }}
+                 {{/if}}
              "
         >
             {{#if date}}
@@ -50,21 +56,18 @@
                     {{ pretitle }}
                 </h3>
             {{/if}}
-
             <h2 class="banner__title">
                 {{ title }}
             </h2>
-
             <p class="banner__info">
                 {{ info }}
             </p>
-
             <a href="{{ link }}"
                class="banner__button button button--{{ buttonVersion }}"
             >
                 {{ linkAnchor }}
                 <svg class="button__icon">
-                    <use xlink:href="#icon-arrow-right"></use>
+                    <use xlink:href="#arrow-right"></use>
                 </svg>
             </a>
         </div>

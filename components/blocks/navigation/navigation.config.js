@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Navigation component',
-  status: 'wip',
   context: {
     menuItems: [
       {

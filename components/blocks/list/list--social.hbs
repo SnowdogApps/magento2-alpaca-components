@@ -2,11 +2,7 @@
     {{#each contentList}}
         <li class="list__item">
             <a href="{{ iconLink }}" class="list__link">
-                <svg title="{{iconId}}"
-                     class="list__social-icon
-                            list__social-icon--{{iconClass}}
-                     "
-                >
+                <svg class="list__social-icon list__social-icon--{{iconClass}}">
                     <use xlink:href="#{{iconId}}"></use>
                 </svg>
             </a>

@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Box carousel',
-  status: 'wip',
   context: {
     title: 'some title',
     image480: '/images/box-carousel/banner-5_480_310.png',

@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Promotion',
-  status: 'wip',
   context: {
     pretitle: 'Pretitle goes here',
     title: 'Title goes here',

@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Pager component',
-  status: 'wip',
   context: {
     pages: [
       {

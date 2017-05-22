@@ -1,6 +1,5 @@
 module.exports = {
   title: 'Products grid',
-  status: 'wip',
   context: {
     productsGrid: [
       {
