@@ -1,7 +1,7 @@
 module.exports = {
-    title: 'New label component',
-    status: 'wip',
-    context : {
-        text: 'New'
-    }
+  title: 'New label component',
+  status: 'wip',
+  context : {
+    text: 'New'
+  }
 }

@@ -1,9 +1,8 @@
 module.exports = {
-    title: 'Input field',
-    status: 'wip',
-    context: {
-        labelText: 'Label text',
-        placeholder: 'Your message'
-    }
-
+  title: 'Input field',
+  status: 'wip',
+  context: {
+    labelText: 'Label text',
+    placeholder: 'Your message'
+  }
 }

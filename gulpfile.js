@@ -1,4 +1,5 @@
 const autoprefixer = require('autoprefixer'),
+      eslint       = require('gulp-eslint'),
       fractal      = require('@frctl/fractal').create(),
       fs           = require('fs-extra'),
       globby       = require('globby'),
@@ -9,19 +10,24 @@ const autoprefixer = require('autoprefixer'),
       path         = require('path'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
+      reporter     = require('postcss-reporter'),
       runSequence  = require('run-sequence'),
       sass         = require('gulp-sass'),
       sassError    = require('gulp-sass-error'),
+      sassLint     = require('gulp-sass-lint'),
       sourcemaps   = require('gulp-sourcemaps'),
+      stylelint    = require('stylelint'),
+      svgSprite    = require('gulp-svg-sprite'),
       util         = require('gulp-util');
 
 const processors = [
-    autoprefixer()
+  autoprefixer()
 ];
 
-const config = {
-    components       : 'components',
-    css              : 'public/css',
+const paths = {
+  components: 'components',
+  css       : 'public/css',
+  icons     : 'components/general/icons/files',
     importComponents : require('./config/importComponents.json'),
     maps             : 'cssmaps',
     sass             : 'docs/styles.scss'
@@ -35,9 +41,9 @@ fractal.docs.set('path', `${__dirname}/docs`); // location of the documentation 
 fractal.components.set('path', `${__dirname}/temp`); // location of the component directory.
 
 fractal.web.theme(
-    mandelbrot({
-        skin: "black"
-    })
+  mandelbrot({
+    skin: 'black'
+  })
 );
 
 const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
@@ -45,105 +51,21 @@ const logger = fractal.cli.console; // keep a reference to the fractal CLI conso
 // get handlebars component engine (default) and register partial
 const hbsEngine = fractal.components.engine();
 
-hbsEngine.handlebars.registerHelper('pager', function (context, options) {
-    var ret = "";
-
-    function findIndexByActive(source, active) {
-        for (var i = 0; i < source.length; i++) {
-            if (source[i].active === active) {
-                return i;
-            }
-        }
-    }
-
-    if (context.length > 6) {
-        var result = findIndexByActive(context, true),
-            arrayLength = context.length,
-            newContext = new Array(),
-            middlePage = {
-                pageNo: '...',
-                active: false
-            };
-
-        if ((arrayLength - result) > 6) {
-
-            for (var k = result; k < (result + 3); k++) {
-                newContext.push(context[k])
-            }
-            newContext.push(middlePage);
-            newContext.push(context[(context.length - 2)], context[(context.length - 1)]);
-
-            for (var i = 0, j = newContext.length; i < j; i++) {
-                ret = ret + options.fn(newContext[i]);
-            }
-
-        } else {
-            for (var k = result; k < (result + 5); k++) {
-                newContext.push(context[k]);
-            }
-
-            for (var i = 0, j = newContext.length; i < j; i++) {
-                ret = ret + options.fn(newContext[i]);
-            }
-        }
-    } else {
-        for (var i = 0, j = context.length; i < j; i++) {
-            ret = ret + options.fn(context[i]);
-        }
-    }
-
-    return ret;
-});
-
-hbsEngine.handlebars.registerHelper("lastActive", function (array) {
-    var last = array[array.length - 1];
-    return last.active;
-});
-
-hbsEngine.handlebars.registerHelper('tabList', function (context, options) {
-    var ret = '<ul class="tabs__list">';
-
-    for (var i = 0, j = context.length; i < j; i++) {
-        ret = ret + '<li class="tabs__list-item">' + options.fn(context[i]) + "</li>";
-    }
-
-    return ret + "</ul>";
-});
-
 hbsEngine.handlebars.registerHelper('jsPath', function (componentName) {
   return '/components/raw/' + componentName + '/' + componentName + '.js';
 });
 
-hbsEngine.handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
-    switch (operator) {
-        case '==':
-            return (v1 == v2) ? options.fn(this) : options.inverse(this);
-        case '===':
-            return (v1 === v2) ? options.fn(this) : options.inverse(this);
-        case '!=':
-            return (v1 != v2) ? options.fn(this) : options.inverse(this);
-        case '!==':
-            return (v1 !== v2) ? options.fn(this) : options.inverse(this);
-        case '<':
-            return (v1 < v2) ? options.fn(this) : options.inverse(this);
-        case '<=':
-            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
-        case '>':
-            return (v1 > v2) ? options.fn(this) : options.inverse(this);
-        case '>=':
-            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
-        case '&&':
-            return (v1 && v2) ? options.fn(this) : options.inverse(this);
-        case '||':
-            return (v1 || v2) ? options.fn(this) : options.inverse(this);
-        default:
-            return options.inverse(this);
-    }
-});
+hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file}`);
 
 hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'));
 
 // Fractal gulp tasks
+gulp.task('fractal:start', ['icons', 'sass', 'watch'], () => {
+  const server = fractal.web.server({
+    sync: true,
+    port: 4000
+  });
+  server.on('error', err => logger.error(err.message));
 
 gulp.task('fractal:start', ['inheritance', 'sass', 'watch'], () => {
     const server = fractal.web.server({
@@ -162,9 +84,9 @@ gulp.task('fractal:build', ['inheritance', 'sass'], () => {
     builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
     builder.on('error', err => logger.error(err.message));
 
-    return builder.build().then(() => {
-        logger.success('Fractal build completed!');
-    });
+  return builder.build().then(() => {
+    logger.success('Fractal build completed!');
+  });
 });
 
 // Gulp tasks
@@ -224,4 +146,42 @@ gulp.task('sass', () => {
         .pipe(postcss(processors))
         .pipe(sourcemaps.write(config.maps))
         .pipe(gulp.dest(config.css));
+});
+
+gulp.task('sass-lint', () => {
+  return gulp.src(paths.components + '/**/*.scss')
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(gulpif(util.env.ci, sassLint.failOnError()));
+});
+
+gulp.task('css-lint', () => {
+  return gulp.src(paths.css + '/**/*.css')
+    .pipe(postcss([
+      stylelint(),
+      reporter({
+        throwError: util.env.ci || false
+      })
+    ]));
+});
+
+gulp.task('js-lint', () => {
+  return gulp.src(paths.components + '/**/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(gulpif(util.env.ci, eslint.failAfterError()));
+});
+
+gulp.task('icons', () => {
+  return gulp.src(paths.icons + '/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          inline: true,
+          dest: 'images',
+          sprite: 'icons-sprite.svg'
+        }
+      }
+    }))
+    .pipe(gulp.dest('public'));
 });

@@ -2,8 +2,11 @@
 @import '../temp/general/fonts/fonts';
 
 // libs
-@import 'lib/normalize';
-@import 'lib/slick';
+@import '../components/general/libs/scss/normalize';
+@import '../components/general/libs/scss/slick';
+
+// variables
+@import '../components/general/variables/variables';
 
 // mixins
 @import '../temp/general/mixins/mq';
@@ -12,6 +15,12 @@
 
 // variables
 @import '../temp/general/variables/variables';
+// typography
+@import '../components/general/fonts/fonts';
+@import '../components/general/typography/typography';
+
+// documentation styles
+@import 'styles/base';
 
 // components
 @import '../temp/general/typography/typography';
@@ -43,13 +52,3 @@
 @import '../temp/blocks/search/search';
 @import '../temp/blocks/slider/slider';
 @import '../temp/blocks/tabs/tabs';
-
-// documentation style
-@import 'styles/base';
-@import 'styles/font';
-@import 'styles/icons';
-@import 'styles/product-item';
-@import 'styles/typography';
-@import 'styles/var-list';
-@import 'styles/var';
-@import 'styles/video-box';
