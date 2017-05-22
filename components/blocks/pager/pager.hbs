@@ -9,9 +9,16 @@
                 </a>
             </li>
         {{/unless}}
+
         {{#pager pages as |page|}}
             {{#if this.active}}
-                <li class="pager__item pager__item--current {{#if @last}} last {{/if}}">
+                <li class="pager__item
+                           pager__item--current
+                           {{#if @last}}
+                                last
+                           {{/if}}
+                    "
+                >
                     {{ pageNo }}
                 </li>
             {{else}}
@@ -20,6 +27,7 @@
                 </li>
             {{/if}}
         {{/pager}}
+
         {{#unless (lastActive pages)}}
             <li class="pager__item pager__item--next">
                 <a href="#" class="pager__link">

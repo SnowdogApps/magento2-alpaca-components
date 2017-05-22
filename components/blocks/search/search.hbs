@@ -6,6 +6,7 @@
                     <use xlink:href="#search"></use>
                 </svg>
             </label>
+
             <input id="search"
                    type="search"
                    name="search"
@@ -16,6 +17,7 @@
                    required="required"
                    class="search__input"
             >
+
             <button type="submit"
                     title="Search"
                     class="button search__button"
@@ -24,6 +26,7 @@
             </button>
         </div>
     </form>
+
     {{#if autocomplete}}
         <div class="solr-search visible">
             <div class="solr-search__close">
@@ -35,26 +38,37 @@
             <div class="solr-search__header">
                 <h3 class="solr-search__headertitle">
                     Results for:
-                    <span class="solr-search__headertitle-value"> {{ autocomplete.headertitleValue }}</span>
+                    <span class="solr-search__headertitle-value">
+                        {{ autocomplete.headertitleValue }}
+                    </span>
                 </h3>
             </div>
+
             <div class="solr-search__content">
                 <div class="solr-search__products">
                     <div class="solr-search__sub-title">
                         {{ autocomplete.productstitle }}
-                        <span class="solr-search__qty-result">{{ autocomplete.productqty }}</span>
+                        <span class="solr-search__qty-result">
+                            {{ autocomplete.productqty }}
+                        </span>
                     </div>
+
                     {{render '@products-list'}}
                 </div>
+
                 <div class="solr-search__category">
                     <div class="solr-search__sub-title">
                         {{ autocomplete.categoriestitle }}
-                        <span class="solr-search__qty-result">{{ autocomplete.categoriesqty }}</span>
+                        <span class="solr-search__qty-result">
+                            {{ autocomplete.categoriesqty }}
+                        </span>
                     </div>
+
                     <div class="solr-search__category-list">
                         {{ render '@list--search-categories' }}
                     </div>
                 </div>
+
                 <div class="solr-search__footer">
                    {{ render '@button' autocomplete.button }}
                 </div>
@@ -62,4 +76,5 @@
         </div>
     {{/if}}
 </div>
-<script src="{{#jsPath 'search' }}{{/jsPath}}"></script>
+
+<script src="{{static 'search.js' }}"></script>

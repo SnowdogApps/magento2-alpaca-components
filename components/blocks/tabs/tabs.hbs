@@ -6,16 +6,28 @@
             </svg>
             {{ title }}
         </div>
-        <div class="tabs__content {{#if active}} active{{/if}}" data-tabcontent="{{ tabId }}">
+
+        <div class="tabs__content {{#if active}} active{{/if}}"
+             data-tabcontent="{{ tabId }}"
+        >
             {{#if contentList}}
-                {{#tabList content}}
-                    <span class="list__item-label">{{ label }}</span>
-                    <span class="list__item-value">{{ value }}</span>
-                {{/tabList}}
+                <ul class="tabs__list">
+                    {{#each content}}
+                        <li class="tabs__list-item">
+                            <span class="list__item-label">
+                                {{ label }}
+                            </span>
+                            <span class="list__item-value">
+                                {{ value }}
+                            </span>
+                        </li>
+                    {{/each}}
+                </ul>
             {{else}}
                 <p>{{ content }}</p>
             {{/if}}
         </div>
     {{/each}}
 </div>
-<script src="{{#jsPath 'tabs' }}{{/jsPath}}"></script>
+
+<script src="{{static 'tabs.js' }}"></script>

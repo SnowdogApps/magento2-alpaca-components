@@ -5,4 +5,4 @@ module.exports = {
     title: 'Title goes here',
     date: '06. 10. 2017 – 31. 12. 2017'
   }
-}
+};

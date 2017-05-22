@@ -8,45 +8,6 @@
     margin: 0;
     line-height: 1.4;
 
-    &__item {
-        color: $font-color;
-        margin-bottom: 5px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    &__label {
-        font-weight: 700;
-        margin-right: 7px;
-    }
-
-    &__value {
-        color: $font-color-lighter1;
-    }
-
-    &__link {
-        display: block;
-        @include links(active) {
-            color: $font-color-lighter1;
-        }
-    }
-
-    &__social-icon {
-        fill: $color-black;
-        width: 16px;
-        height: 16px;
-
-        &--twitter {
-            width: 21px;
-        }
-
-        &--google {
-            width: 25px;
-        }
-    }
-
     &--labeling {
         .list__item {
             @include mq($screen-m) {
@@ -148,6 +109,44 @@
         .list__item {
             margin-right: 25px;
         }
+    }
 
+    &__item {
+        color: $font-color;
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        margin-right: 7px;
+    }
+
+    &__value {
+        color: $font-color-lighter1;
+    }
+
+    &__link {
+        display: block;
+        @include links(active) {
+            color: $font-color-lighter1;
+        }
+    }
+
+    &__social-icon {
+        fill: $color-black;
+        width: 16px;
+        height: 16px;
+
+        &--twitter {
+            width: 21px;
+        }
+
+        &--google {
+            width: 25px;
+        }
     }
 }

@@ -18,21 +18,25 @@
         <source data-srcset="{{ image768 }}"
                 media="(max-width: 768px)"
         />
+
         {{#if image992}}
             <source data-srcset="{{ image992 }}"
                     media="(max-width: 992px)"
             />
         {{/if}}
+
         {{#if image1600}}
             <source data-srcset="{{ image1600 }}"
                     media="(min-width: 1599px)"
             />
         {{/if}}
+
         <source data-srcset="{{ image }}" />
         <img class="banner__img lazyload"
              alt="banner-image"
         />
     </picture>
+
     {{#if showContent}}
         <div class="
                  banner__content
@@ -46,6 +50,7 @@
                     {{ date }}
                 </small>
             {{/if}}
+
             {{#if pretitle}}
                 <h3 class="banner__pretitle">
                     {{ pretitle }}
@@ -67,6 +72,7 @@
             </a>
         </div>
     {{/if}}
+
     {{#if bgLeftText }}
         <h2 class="banner__bg-left-text">
             {{ bgLeftText }}

@@ -4,4 +4,4 @@ module.exports = {
     labelText: 'Label text',
     placeholder: 'Your message'
   }
-}
+};

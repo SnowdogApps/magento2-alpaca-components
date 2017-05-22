@@ -20,13 +20,16 @@
                          alt="{{ title }}"
                     />
                 </picture>
+
                 <div class="slide__content">
                     <h2 class="slide__title">
                         {{ slideTitle }}
                     </h2>
+
                     <p class="slide__text">
                         {{ slideShortText }}
                     </p>
+
                     <a href="{{ link }}" class="button">
                         {{ linkText }}
                         <svg class="button__icon">
@@ -39,4 +42,4 @@
     </div>
 </div>
 
-<script src="{{#jsPath 'slider' }}{{/jsPath}}"></script>
+<script src="{{static 'slider.js' }}"></script>

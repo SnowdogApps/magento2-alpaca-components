@@ -21,8 +21,9 @@ module.exports = {
       name: 'columns left and right',
       context: {
         columnLeft: true,
-        columnRight: true
+        columnRight: true,
+        columnBoth: true
       }
     },
   ]
-}
+};

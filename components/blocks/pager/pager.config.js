@@ -250,4 +250,4 @@ module.exports = {
       }
     }
   ]
-}
+};

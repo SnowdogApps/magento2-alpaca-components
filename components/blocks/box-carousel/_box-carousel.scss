@@ -1,5 +1,4 @@
 .box-carousel {
-    display: block;
     position: relative;
     width: 100%;
     max-width: $max-content-width;
@@ -25,9 +24,12 @@
         }
     }
 
+    &__img {
+        max-width: 100%;
+    }
+
     &__title {
         position: relative;
-        display: block;
         top: 60px;
         height: 0;
         margin-bottom: 0;

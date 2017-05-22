@@ -1,5 +1,4 @@
 .banner {
-    display: block;
     position: relative;
     max-width: $max-content-width;
     margin: 0 auto;
@@ -7,144 +6,6 @@
 
     @include mq($screen-m) {
         text-align: right;
-    }
-
-    &__pretitle {
-        display: block;
-        line-height: 25px;
-        margin: 0;
-        font-weight: 400;
-        color: $font-color;
-        font-size: 20px;
-    }
-
-    &__title {
-        color: $color-main1;
-        line-height: 25px;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        font-size: 30px;
-    }
-
-    &__title-link {
-        @include links(active) {
-            color: $color-main1;
-        }
-        @include links(hover) {
-            text-decoration: none;
-        }
-    }
-
-    &__info {
-        margin: 0 0 10px 0;
-    }
-
-    &__date {
-        font-size: 12px;
-        margin-bottom: 17px;
-        display: block;
-        @include mq($screen-l) {
-            margin-bottom: 35px;
-        }
-    }
-
-    &__image {
-        display: block;
-        line-height: 0;
-
-        @include mq($screen-m) {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 1;
-            overflow: hidden;
-            min-width: 100%;
-            display: block;
-        }
-    }
-
-    &__img {
-        width: 100%;
-        height: auto;
-        position: relative;
-        z-index: 1;
-
-        &.lazyloading {
-            background: transparent url('#loader-view') no-repeat center center;
-            font-size: 0;
-            background-size: 80px 80px;
-        }
-
-        @include mq($screen-m) {
-            position: absolute;
-            left: 0;
-            max-width: none;
-            height: 100%;
-            width: auto;
-        }
-    }
-
-    &__content {
-        padding: 25px 15px;
-        text-align: left;
-
-        @include mq($screen-s) {
-            padding: 25px 30px;
-        }
-
-        @include mq($screen-m) {
-            position: relative;
-            display: inline-block;
-            z-index: 5;
-            background-color: $color-white;
-            width: 50%;
-            margin: 25px 25px 25px auto;
-        }
-
-        @include mq($screen-l) {
-            max-width: 470px;
-            min-height: 250px;
-        }
-    }
-
-    &__bg-left-text {
-        position: absolute;
-        top: 0;
-        left: -20px;
-        bottom: auto;
-        margin: 0;
-        padding: 0;
-        display: block;
-        transform: rotate(-90deg);
-        transform-origin: bottom;
-        z-index: 2;
-        color: rgba($color-white, 0.5);
-        font-weight: 300;
-        font-size: 60px;
-        font-size: 18vw;
-        text-align: justify;
-        text-transform: uppercase;
-
-        @include mq($screen-s) {
-            font-size: 60px;
-            font-size: 14vw;
-        }
-
-        @include mq($screen-m) {
-            font-size: 100px;
-        }
-
-        @include mq($screen-l) {
-            left: -30px;
-            font-size: 110px;
-        }
-    }
-
-    &__button {
-        padding-right: 0;
-        text-align: right;
-        display: block;
     }
 
     // modificators
@@ -503,4 +364,144 @@
         }
     }
     // modificators end
+
+    &__pretitle {
+        display: block;
+        line-height: 25px;
+        margin: 0;
+        font-weight: 400;
+        color: $font-color;
+        font-size: 20px;
+    }
+
+    &__title {
+        color: $color-main1;
+        line-height: 25px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+
+    &__title-link {
+        @include links(active) {
+            color: $color-main1;
+        }
+
+        @include links(hover) {
+            text-decoration: none;
+        }
+    }
+
+    &__info {
+        margin: 0 0 10px 0;
+    }
+
+    &__date {
+        font-size: 12px;
+        margin-bottom: 17px;
+        display: block;
+
+        @include mq($screen-l) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__image {
+        display: block;
+        line-height: 0;
+
+        @include mq($screen-m) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            overflow: hidden;
+            min-width: 100%;
+            display: block;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 1;
+
+        @include mq($screen-m) {
+            position: absolute;
+            left: 0;
+            max-width: none;
+            height: 100%;
+            width: auto;
+        }
+
+        &.lazyloading {
+            background: transparent url('#loader-view') no-repeat center center;
+            font-size: 0;
+            background-size: 80px 80px;
+        }
+    }
+
+    &__content {
+        padding: 25px 15px;
+        text-align: left;
+
+        @include mq($screen-s) {
+            padding: 25px 30px;
+        }
+
+        @include mq($screen-m) {
+            position: relative;
+            display: inline-block;
+            z-index: 5;
+            background-color: $color-white;
+            width: 50%;
+            margin: 25px 25px 25px auto;
+        }
+
+        @include mq($screen-l) {
+            max-width: 470px;
+            min-height: 250px;
+        }
+    }
+
+    &__bg-left-text {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        bottom: auto;
+        margin: 0;
+        padding: 0;
+        display: block;
+        transform: rotate(-90deg);
+        transform-origin: bottom;
+        z-index: 2;
+        color: rgba($color-white, 0.5);
+        font-weight: 300;
+        font-size: 60px;
+        font-size: 18vw;
+        text-align: justify;
+        text-transform: uppercase;
+
+        @include mq($screen-s) {
+            font-size: 60px;
+            font-size: 14vw;
+        }
+
+        @include mq($screen-m) {
+            font-size: 100px;
+        }
+
+        @include mq($screen-l) {
+            left: -30px;
+            font-size: 110px;
+        }
+    }
+
+    &__button {
+        padding-right: 0;
+        text-align: right;
+        display: block;
+    }
 }

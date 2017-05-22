@@ -112,6 +112,7 @@
                 box-shadow: none;
             }
         }
+
         // hack to set box-shadow on opening absolute list and title element
         &:after {
             content: '';

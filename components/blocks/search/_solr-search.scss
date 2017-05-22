@@ -1,5 +1,6 @@
 .solr-search {
     position: relative;
+
     @include clearfix();
 
     &.visible {

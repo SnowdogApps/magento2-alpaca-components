@@ -6,4 +6,4 @@ module.exports = {
     title2: 'Title 2:',
     text2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec arcu pretium,'
   }
-}
+};
