@@ -8,11 +8,11 @@ module.exports = {
         arrowRightVisible: true,
         pages: [
           {
-            pageNo: 1,
+            pageNo: '1',
             active: true
           },
           {
-            index: 2,
+            pageNo: 2,
             active: false
           },
           {
@@ -20,15 +20,15 @@ module.exports = {
             active: false
           },
           {
-            index: 4,
+            pageNo: 4,
             active: false
           },
           {
-            index: 5,
+            pageNo: 5,
             active: false
           },
           {
-            index: 6,
+            pageNo: 6,
             active: false
           }
         ]
@@ -39,11 +39,11 @@ module.exports = {
         arrowRightVisible: true,
         pages: [
           {
-            index: 1,
+            pageNo: 1,
             active: false
           },
           {
-            index: 2,
+            pageNo: 2,
             active: false
           },
           {
@@ -51,11 +51,11 @@ module.exports = {
             active: true
           },
           {
-            index: 4,
+            pageNo: 4,
             active: false
           },
           {
-            index: 5,
+            pageNo: 5,
             active: false
           },
           {
@@ -70,27 +70,27 @@ module.exports = {
         arrowRightVisible: false,
         pages: [
           {
-            index: 1,
+            pageNo: 1,
             active: false
           },
           {
-            index: 2,
+            pageNo: 2,
             active: false
           },
           {
-            index: 3,
+            pageNo: 3,
             active: false
           },
           {
-            index: 4,
+            pageNo: 4,
             active: false
           },
           {
-            index: 5,
+            pageNo: 5,
             active: false
           },
           {
-            index: 6,
+            pageNo: 6,
             active: true
           }
         ]
@@ -105,11 +105,11 @@ module.exports = {
             active: true
           },
           {
-            index: 7,
+            pageNo: 7,
             active: false
           },
           {
-            index: 8,
+            pageNo: 8,
             active: false
           },
           {
@@ -121,7 +121,7 @@ module.exports = {
             active: false
           },
           {
-            index: 18,
+            pageNo: 18,
             active: false
           }
         ]
@@ -136,19 +136,19 @@ module.exports = {
             active: true
           },
           {
-            index: 14,
+            pageNo: 14,
             active: false
           },
           {
-            index: 15,
+            pageNo: 15,
             active: false
           },
           {
-            index: 16,
+            pageNo: 16,
             active: false
           },
           {
-            index: 17,
+            pageNo: 17,
             active: false
           }
         ]
