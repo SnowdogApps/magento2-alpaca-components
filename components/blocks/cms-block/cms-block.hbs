@@ -1,0 +1,30 @@
+<div class="cms-block{{#if modifier}} cms-block--{{modifier}}{{/if}}">
+    {{#if bgImage}}
+        <picture class="cms-block__bg-image">
+            <source data-srcset="{{ bgImage480 }}"
+                    media="(max-width: 480px)"
+            />
+            <source data-srcset="{{ bgImage768 }}"
+                    media="(max-width: 768px)"
+            />
+            <source data-srcset="{{ bgImage992 }}"
+                    media="(max-width: 1200px)"
+            />
+            <source data-srcset="{{ bgImage1600 }}"
+                    media="(min-width: 1599px)"
+            />
+            <source data-srcset="{{ bgImage}}" />
+
+            <img class="cms-block__bg-img lazyload" alt="heating-image" />
+        </picture>
+    {{/if}}
+
+    <div class="cms-block__content">
+        <h2 class="cms-block__title">
+            {{ title }}
+        </h2>
+        <p class="cms-block__text">
+            {{ text }}
+        </p>
+    </div>
+</div>
