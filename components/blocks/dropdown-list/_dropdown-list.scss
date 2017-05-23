@@ -1,4 +1,4 @@
-.filters {
+.dropdown-list {
     width: 100%;
     position: relative;
     padding: 10px;
@@ -77,8 +77,8 @@
                 margin-top: 10px;
             }
 
-            .filters__link {
-                & > .filters__icon {
+            .dropdown-list__link {
+                & > .dropdown-list__icon {
                     transform: rotate(180deg);
                 }
                 @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
@@ -158,7 +158,7 @@
         display: block;
 
         &--level1 {
-            .filters__inner-link {
+            .dropdown-list__inner-link {
                 @include links(hover) {
                     font-weight: 700;
                     text-decoration: none;
@@ -167,7 +167,7 @@
         }
 
         &--level2 {
-            .filters__inner-link {
+            .dropdown-list__inner-link {
                 @include links(hover) {
                     font-weight: 400;
                     color: $color-main1;
@@ -177,8 +177,8 @@
         }
 
         &.open {
-            .filters__inner-link {
-                & > .filters__icon {
+            .dropdown-list__inner-link {
+                & > .dropdown-list__icon {
                     transform: rotate(45deg);
                 }
             }
