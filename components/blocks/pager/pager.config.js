@@ -12,7 +12,7 @@ module.exports = {
             active: true
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
@@ -20,15 +20,15 @@ module.exports = {
             active: false
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
-            pageNo: 6,
+            index: 6,
             active: false
           }
         ]
@@ -39,11 +39,11 @@ module.exports = {
         arrowRightVisible: true,
         pages: [
           {
-            pageNo: 1,
+            index: 1,
             active: false
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
@@ -51,11 +51,11 @@ module.exports = {
             active: true
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
@@ -70,27 +70,27 @@ module.exports = {
         arrowRightVisible: false,
         pages: [
           {
-            pageNo: 1,
+            index: 1,
             active: false
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
-            pageNo: 3,
+            index: 3,
             active: false
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
-            pageNo: 6,
+            index: 6,
             active: true
           }
         ]
@@ -105,11 +105,11 @@ module.exports = {
             active: true
           },
           {
-            pageNo: 7,
+            index: 7,
             active: false
           },
           {
-            pageNo: 8,
+            index: 8,
             active: false
           },
           {
@@ -121,7 +121,7 @@ module.exports = {
             active: false
           },
           {
-            pageNo: 18,
+            index: 18,
             active: false
           }
         ]
@@ -136,19 +136,19 @@ module.exports = {
             active: true
           },
           {
-            pageNo: 14,
+            index: 14,
             active: false
           },
           {
-            pageNo: 15,
+            index: 15,
             active: false
           },
           {
-            pageNo: 16,
+            index: 16,
             active: false
           },
           {
-            pageNo: 17,
+            index: 17,
             active: false
           }
         ]
