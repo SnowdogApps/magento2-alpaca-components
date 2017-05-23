@@ -1,7 +1,7 @@
 'use-strict'
 const dropdownItem      = document.querySelectorAll('.dropdown-list__item--parent > .dropdown-list__link'),
       dropdownInnerItem = document.querySelectorAll('.dropdown-list__inner-item--parent > .dropdown-list__inner-link'),
-      alliTemLabel    = 'All products';
+      alliTemLabel      = 'All products';
 
 function setListHeight(item) {
   return Array.from(item.children)
@@ -52,9 +52,11 @@ function appendAllItem(item) {
         levelClass = sublist.classList.value.includes('level1')
         ? ' dropdown-list__inner-item--level1'
         : ' dropdown-list__inner-item--level2',
-        allLink = `<a href="${itemHref}" class="dropdown-list__inner-link">
-        ${alliTemLabel}
-        </a>`,
+        allLink = `
+          <a href="${itemHref}" class="dropdown-list__inner-link">
+            ${alliTemLabel}
+          </a>
+        `,
         allItem = document.createElement('li');
 
   allItem.innerHTML = allLink;
@@ -64,28 +66,20 @@ function appendAllItem(item) {
 
 dropdownItem.forEach(
   key => {
-    key.addEventListener(
-      'click',
-      (e) => {
-        e.preventDefault();
-        slideList(key, false);
-      },
-      false
-      );
+    key.addEventListener('click', (e) => {
+      e.preventDefault();
+      slideList(key, false);
+    }, false);
     appendAllItem(key);
   }
 );
 
 dropdownInnerItem.forEach(
   key => {
-    key.addEventListener(
-      'click',
-      (e) => {
-        e.preventDefault();
-        slideList(key, true);
-      },
-      false
-      );
+    key.addEventListener('click', (e) => {
+      e.preventDefault();
+      slideList(key, true);
+    }, false);
     appendAllItem(key);
   }
 );
