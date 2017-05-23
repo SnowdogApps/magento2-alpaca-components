@@ -1,0 +1,41 @@
+.badge {
+    font-size: 12px;
+    width: auto;
+    position: absolute;
+    padding: 5px 10px;
+
+    &--new {
+        background: $color-accent;
+        color: $color-white;
+    }
+
+    &--alert {
+        background: $color-aqua;
+        color: $color-white;
+    }
+
+    &--error {
+        background: $color-main1;
+        color: $color-white;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--top {
+        top: 0;
+    }
+
+    &--bottom {
+        bottom: 0;
+    }
+
+    &--left {
+        left: 0;
+    }
+
+    &--right {
+        right: 0;
+    }
+}
