@@ -48,9 +48,6 @@
         min-width: 25%;
     }
 
-    &__image {
-    }
-
     &__link {
         @include clearfix();
         display: flex;
