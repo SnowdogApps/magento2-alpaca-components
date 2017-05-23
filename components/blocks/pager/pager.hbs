@@ -1,41 +1,44 @@
-<div class="pager">
-    <ul class="pager__list">
-        {{#unless pages.[0].active}}
-            <li class="pager__item pager__item--prev">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/unless}}
-
-        {{#pager pages as |page|}}
-            {{#if this.active}}
-                <li class="pager__item
-                           pager__item--current
-                           {{#if @last}}
-                                last
-                           {{/if}}
-                    "
-                >
-                    {{ pageNo }}
-                </li>
-            {{else}}
-                <li class="pager__item{{#if @last}} last {{/if}}">
-                    <a href="#" class="pager__link">{{ pageNo }}</a>
+{{#each types as |type|}}
+    {{ text }}
+    <div class="pager">
+        <ul class="pager__list">
+            {{#if arrowLeftVisible}}
+                <li class="pager__item pager__item--prev">
+                    <a href="#" class="pager__link">
+                        <svg class="pager__icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
                 </li>
             {{/if}}
-        {{/pager}}
 
-        {{#unless (lastActive pages)}}
-            <li class="pager__item pager__item--next">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/unless}}
-    </ul>
-</div>
+            {{#each pages as |page|}}
+                {{#if this.active}}
+                    <li class="pager__item
+                               pager__item--current
+                               {{#if @last}}
+                                    last
+                               {{/if}}
+                        "
+                    >
+                        {{ pageNo }}
+                    </li>
+                {{else}}
+                    <li class="pager__item{{#if @last}} last {{/if}}">
+                        <a href="#" class="pager__link">{{ pageNo }}</a>
+                    </li>
+                {{/if}}
+            {{/each}}
+
+            {{#if arrowRightVisible}}
+                <li class="pager__item pager__item--next">
+                    <a href="#" class="pager__link">
+                        <svg class="pager__icon">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </a>
+                </li>
+            {{/if}}
+        </ul>
+    </div>
+{{/each}}
