@@ -1,6 +1,5 @@
 'use-strict'
-const alliTemLabel      = 'All products',
-      currentInnerItem  = document.querySelector('.dropdown-list__inner-link.current'),
+const currentInnerItem  = document.querySelector('.dropdown-list__inner-link.current'),
       dropdownItem      = document.querySelectorAll('.dropdown-list__item--parent .dropdown-list__link'),
       dropdownInnerItem = document.querySelectorAll('.dropdown-list__inner-item--parent .dropdown-list__inner-link');
 
@@ -12,14 +11,14 @@ function setListHeight(item) {
 
 function toggleSubmenu(item, inner) {
   const dropdownId = item.dataset.dropdown;
-  let dropdownList = document.querySelector(`.dropdown-list__inner-list--level1[data-dropdown="${dropdownId}"]`);
-  let innerLists = item.parentNode.querySelectorAll(`.dropdown-list__inner-list--level2`);
-  let upperList  = null;
+  let dropdownList = document.querySelector(`.dropdown-list__inner-list--level1[data-dropdown="${dropdownId}"]`),
+      innerLists   = item.parentNode.querySelectorAll('.dropdown-list__inner-list--level2'),
+      upperList    = null;
 
   if (inner) {
     dropdownList = item.parentNode.querySelector(`.dropdown-list__inner-list--level2[data-dropdown="${dropdownId}"]`);
     innerLists = null;
-    upperList  = item.closest(`.dropdown-list__inner-list--level1`);
+    upperList  = item.closest('.dropdown-list__inner-list--level1');
   }
 
   item.parentNode.classList.toggle('open');
@@ -48,21 +47,21 @@ function toggleSubmenu(item, inner) {
 }
 
 if (currentInnerItem !== null) {
-    const currentList       = currentInnerItem.closest('.filters__inner-list'),
-          currentListHeight = setListHeight(currentList);
-    let currentUpperList = null;
+  const currentList       = currentInnerItem.closest('.filters__inner-list'),
+        currentListHeight = setListHeight(currentList);
+  let currentUpperList = null;
 
-    if (currentList.classList.contains('filters__inner-list--level2')) {
-        currentUpperList = currentList.closest('.filters__inner-list--level1');
-    }
+  if (currentList.classList.contains('filters__inner-list--level2')) {
+    currentUpperList = currentList.closest('.filters__inner-list--level1');
+  }
 
-    currentList.style.height = currentListHeight + 'px';
-    currentList.parentNode.classList.toggle('open');
+  currentList.style.height = currentListHeight + 'px';
+  currentList.parentNode.classList.toggle('open');
 
-    if (currentUpperList) {
-        currentUpperList.style.height = currentUpperList.clientHeight + setListHeight(currentUpperList) + currentListHeight + 'px';
-        currentUpperList.parentNode.classList.toggle('open');
-    }
+  if (currentUpperList) {
+    currentUpperList.style.height = currentUpperList.clientHeight + setListHeight(currentUpperList) + currentListHeight + 'px';
+    currentUpperList.parentNode.classList.toggle('open');
+  }
 }
 
 dropdownItem.forEach(
