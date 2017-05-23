@@ -3,6 +3,7 @@
     width: auto;
     position: absolute;
     padding: 5px 10px;
+    top: 0;
 
     &--new {
         background: $color-accent;
@@ -17,21 +18,5 @@
     &--error {
         background: $color-main1;
         color: $color-white;
-    }
-
-    &--top {
-        top: 0;
-    }
-
-    &--bottom {
-        bottom: 0;
-    }
-
-    &--left {
-        left: 0;
-    }
-
-    &--right {
-        right: 0;
     }
 }
