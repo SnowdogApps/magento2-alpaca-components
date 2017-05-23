@@ -10,14 +10,9 @@
             >
                 <a href="{{ cardLink }}" class="cards__link">
                     <h6 class="cards__title heading--short-line">
-                        <span class="
-                                  cards__title--anchor
-                              "
-                        >
-                            {{ cardTitle }}
-                        </span>
+                        {{ cardTitle }}
                     </h6>
-                    <img class="cards__image lazyload" data-src="{{ cardImage }}" />
+                    <img class="lazyload" data-src="{{ cardImage }}" />
                 </a>
             </div>
         {{/each}}
