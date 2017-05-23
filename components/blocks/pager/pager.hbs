@@ -1,41 +1,34 @@
 <div class="pager">
     <ul class="pager__list">
-        {{#unless pages.[0].active}}
-            <li class="pager__item pager__item--prev">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/unless}}
+        <li class="pager__item pager__item--prev">
+            <a href="#" class="pager__link">
+                <svg class="pager__icon">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a>
+        </li>
 
-        {{#pager pages as |page|}}
-            {{#if this.active}}
-                <li class="pager__item
-                           pager__item--current
-                           {{#if @last}}
-                                last
-                           {{/if}}
+        {{#each pages as |page|}}
+            <li class="pager__item">
+                <a href="#"
+                    class="
+                        pager__link
+                        {{#if page.active }}
+                            pager__item--current
+                        {{/if}}
                     "
                 >
-                    {{ pageNo }}
-                </li>
-            {{else}}
-                <li class="pager__item{{#if @last}} last {{/if}}">
-                    <a href="#" class="pager__link">{{ pageNo }}</a>
-                </li>
-            {{/if}}
-        {{/pager}}
-
-        {{#unless (lastActive pages)}}
-            <li class="pager__item pager__item--next">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="#arrow-right"></use>
-                    </svg>
+                    {{{ page.index }}}
                 </a>
             </li>
-        {{/unless}}
+        {{/each}}
+
+        <li class="pager__item pager__item--next">
+            <a href="#" class="pager__link">
+                <svg class="pager__icon">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a>
+        </li>
     </ul>
 </div>

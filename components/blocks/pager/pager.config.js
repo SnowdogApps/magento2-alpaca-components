@@ -3,27 +3,27 @@ module.exports = {
   context: {
     pages: [
       {
-        pageNo: 1,
+        index: 1,
         active: true
       },
       {
-        pageNo: 2,
+        index: 2,
         active: false
       },
       {
-        pageNo: 3,
+        index: 3,
         active: false
       },
       {
-        pageNo: 4,
+        index: 4,
         active: false
       },
       {
-        pageNo: 5,
+        index: 5,
         active: false
       },
       {
-        pageNo: 6,
+        index: 6,
         active: false
       }
     ]
@@ -34,27 +34,27 @@ module.exports = {
       context: {
         pages: [
           {
-            pageNo: 1,
+            index: 1,
             active: false
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
-            pageNo: 3,
+            index: 3,
             active: true
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
-            pageNo: 6,
+            index: 6,
             active: false
           }
         ]
@@ -65,27 +65,27 @@ module.exports = {
       context: {
         pages: [
           {
-            pageNo: 1,
+            index: 1,
             active: false
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
-            pageNo: 3,
+            index: 3,
             active: false
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
-            pageNo: 6,
+            index: 6,
             active: true
           }
         ]
@@ -96,75 +96,75 @@ module.exports = {
       context: {
         pages: [
           {
-            pageNo: 1,
+            index: 1,
             active: false
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
-            pageNo: 3,
+            index: 3,
             active: false
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
-            pageNo: 6,
+            index: 6,
             active: true
           },
           {
-            pageNo: 7,
+            index: 7,
             active: false
           },
           {
-            pageNo: 8,
+            index: 8,
             active: false
           },
           {
-            pageNo: 9,
+            index: 9,
             active: false
           },
           {
-            pageNo: 10,
+            index: 10,
             active: false
           },
           {
-            pageNo: 11,
+            index: 11,
             active: false
           },
           {
-            pageNo: 12,
+            index: 12,
             active: false
           },
           {
-            pageNo: 13,
+            index: 13,
             active: false
           },
           {
-            pageNo: 14,
+            index: 14,
             active: false
           },
           {
-            pageNo: 15,
+            index: 15,
             active: false
           },
           {
-            pageNo: 16,
+            index: 16,
             active: false
           },
           {
-            pageNo: 17,
+            index: 17,
             active: false
           },
           {
-            pageNo: 18,
+            index: 18,
             active: false
           }
         ]
@@ -175,75 +175,75 @@ module.exports = {
       context: {
         pages: [
           {
-            pageNo: 1,
+            index: 1,
             active: false
           },
           {
-            pageNo: 2,
+            index: 2,
             active: false
           },
           {
-            pageNo: 3,
+            index: 3,
             active: false
           },
           {
-            pageNo: 4,
+            index: 4,
             active: false
           },
           {
-            pageNo: 5,
+            index: 5,
             active: false
           },
           {
-            pageNo: 6,
+            index: 6,
             active: false
           },
           {
-            pageNo: 7,
+            index: 7,
             active: false
           },
           {
-            pageNo: 8,
+            index: 8,
             active: false
           },
           {
-            pageNo: 9,
+            index: 9,
             active: false
           },
           {
-            pageNo: 10,
+            index: 10,
             active: false
           },
           {
-            pageNo: 11,
+            index: 11,
             active: false
           },
           {
-            pageNo: 12,
+            index: 12,
             active: false
           },
           {
-            pageNo: 13,
+            index: 13,
             active: true
           },
           {
-            pageNo: 14,
+            index: 14,
             active: false
           },
           {
-            pageNo: 15,
+            index: 15,
             active: false
           },
           {
-            pageNo: 16,
+            index: 16,
             active: false
           },
           {
-            pageNo: 17,
+            index: 17,
             active: false
           },
           {
-            pageNo: 18,
+            index: 18,
             active: false
           }
         ]
