@@ -78,6 +78,8 @@
             }
 
             .dropdown-list__link {
+                text-decoration: none;
+
                 & > .dropdown-list__icon {
                     transform: rotate(180deg);
                 }
@@ -91,6 +93,8 @@
     }
 
     &__link {
+        text-decoration: none;
+
         @include links(active) {
             display: block;
             padding: 15px;
@@ -159,6 +163,8 @@
 
         &--level1 {
             .dropdown-list__inner-link {
+                text-decoration: none;
+
                 @include links(hover) {
                     font-weight: 700;
                     text-decoration: none;
@@ -168,6 +174,8 @@
 
         &--level2 {
             .dropdown-list__inner-link {
+                text-decoration: none;
+
                 @include links(hover) {
                     font-weight: 400;
                     color: $color-main1;
@@ -178,6 +186,8 @@
 
         &.open {
             .dropdown-list__inner-link {
+                text-decoration: none;
+
                 & > .dropdown-list__icon {
                     transform: rotate(45deg);
                 }
@@ -186,6 +196,8 @@
     }
 
     &__inner-link {
+        text-decoration: none;
+
         @include links(active) {
             display: block;
             padding: 15px 20px;
