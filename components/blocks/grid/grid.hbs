@@ -1,0 +1,11 @@
+{{#each grids as |grid|}}
+    <div class="grid">
+        {{#each grid}}
+            <div class="grid__column grid--{{this}}">
+                <p class="paragraph">
+                    This is column and this is text in column
+                </p>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}
