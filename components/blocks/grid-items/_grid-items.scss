@@ -44,7 +44,7 @@
         }
 
         &:nth-child(2n) {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l){
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
                 margin-right: 0;
             }
         }
@@ -69,7 +69,7 @@
         }
 
         &:nth-child(3n) {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-xl){
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 margin-right: 0;
             }
         }
