@@ -6,27 +6,6 @@
         flex-flow: row wrap;
     }
 
-    //modificators
-    &--product-view {
-        .tabs__title {
-            padding: 15px 20px;
-            font-size: 16px;
-            color: $font-color-lighter2;
-
-            &.active {
-                color: $color-black;
-            }
-        }
-
-        .tabs__content {
-            padding: 15px 20px;
-        }
-
-        .tabs__icon {
-            right: 20px;
-        }
-    }
-
     &__title {
         position: relative;
         padding: 15px;
@@ -45,7 +24,7 @@
             color: $font-color-lighter2;
         }
 
-        &.active {
+        &--active {
             @include mq($screen-l) {
                 border-color: $border-base;
                 border-width: 1px 1px 0 1px;
@@ -95,7 +74,7 @@
             z-index: 1;
         }
 
-        &.active {
+        &--active {
             display: block;
             opacity: 1;
             border-bottom: 1px solid $border-base;

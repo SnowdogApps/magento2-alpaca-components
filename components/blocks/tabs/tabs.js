@@ -1,27 +1,29 @@
 'use strict'
 
-const tab        = document.querySelectorAll('.tabs__title'),
-      tabContent = document.querySelectorAll('.tabs__content');
+const tab                = document.querySelectorAll('.tabs__title'),
+      content            = document.querySelectorAll('.tabs__content'),
+      activeTitleClass   = 'tabs__title--active',
+      activeContentClass = 'tabs__content--active';
 
-function activeTab() {
-  const tabId = this.dataset.tab;
 
-  if (this.classList.contains('active')) {
-    this.classList.remove('active');
+tab.forEach(key => key.addEventListener('click', event => {
+  const self = event.target,
+        tabId = self.dataset.tab;
+
+  if (self.classList.contains(activeTitleClass)) {
+    self.classList.remove(activeTitleClass);
   }
   else {
-    tab.forEach(key => key.classList.remove('active'));
-    this.classList.add('active');
+    tab.forEach(key => key.classList.remove(activeTitleClass));
+    self.classList.add(activeTitleClass);
   }
 
-  tabContent.forEach((key) => {
-    if (key.dataset.tabcontent === tabId && !key.classList.contains('active')) {
-      key.classList.add('active');
+  content.forEach(key => {
+    if (key.dataset.content === tabId && !key.classList.contains(activeContentClass)) {
+      key.classList.add(activeContentClass);
     }
     else {
-      key.classList.remove('active');
+      key.classList.remove(activeContentClass);
     }
   });
-}
-
-tab.forEach(key => key.addEventListener('click', activeTab));
+}));
