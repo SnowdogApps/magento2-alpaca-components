@@ -4,8 +4,7 @@
     transition: height 0.3s;
     box-sizing: border-box;
 
-    //modificators
-    &--cookie {
+    &--with-button {
         background-color: $color-bg-gray;
         text-align: center;
         position: fixed;
@@ -62,9 +61,8 @@
             }
         }
     }
-    //modificators end
 
-    &.closed {
+    &--closed {
         overflow: hidden;
     }
 

@@ -1,14 +1,14 @@
 // libs
-@import '../../components/general/libs/scss/normalize';
-@import '../../components/general/libs/scss/slick';
+@import '../../components/01-globals/libs/scss/normalize';
+@import '../../components/01-globals/libs/scss/slick';
 
 // variables
-@import '../../components/general/variables/variables';
+@import '../../components/01-globals/variables/variables';
 
 // mixins
-@import '../../components/general/mixins/mq';
-@import '../../components/general/mixins/clearfix';
-@import '../../components/general/mixins/links';
+@import '../../components/01-globals/mixins/mq';
+@import '../../components/01-globals/mixins/clearfix';
+@import '../../components/01-globals/mixins/links';
 
 // documentation styles
 @import 'base';
@@ -17,29 +17,27 @@
 @import 'typography';
 
 // components
-@import '../../components/blocks/banners/banners';
-@import '../../components/blocks/bars/bars';
-@import '../../components/blocks/box/box';
-@import '../../components/blocks/box-carousel/box-carousel';
-@import '../../components/blocks/breadcrumbs/breadcrumbs';
-@import '../../components/blocks/button/button';
-@import '../../components/blocks/dropdown-list/dropdown-list';
-@import '../../components/blocks/form/checkbox/checkbox';
-@import '../../components/blocks/form/form/form';
-@import '../../components/blocks/form/input/input';
-@import '../../components/blocks/form/textarea/textarea';
-@import '../../components/blocks/grid/grid';
-@import '../../components/blocks/heading/heading';
-@import '../../components/blocks/list/list';
-@import '../../components/blocks/logo/logo';
-@import '../../components/blocks/navigation/navigation';
-@import '../../components/blocks/new-label/new-label';
-@import '../../components/blocks/pager/pager';
-@import '../../components/blocks/paragraph/paragraph';
-@import '../../components/blocks/product-item/product-item';
-@import '../../components/blocks/products-grid/products-grid';
-@import '../../components/blocks/products-list/products-list';
-@import '../../components/blocks/search/search';
-@import '../../components/blocks/slider/slider';
-@import '../../components/blocks/tabs/tabs';
+@import '../../components/02-elements/banners/banners';
+@import '../../components/02-elements/breadcrumbs/breadcrumbs';
+@import '../../components/02-elements/button/button';
+@import '../../components/02-elements/dropdown-list/dropdown-list';
+@import '../../components/02-elements/form/checkbox/checkbox';
+@import '../../components/02-elements/form/form/form';
+@import '../../components/02-elements/form/input/input';
+@import '../../components/02-elements/form/textarea/textarea';
+@import '../../components/02-elements/grid/grid';
+@import '../../components/02-elements/heading/heading';
+@import '../../components/02-elements/list/list';
+@import '../../components/02-elements/logo/logo';
+@import '../../components/02-elements/message/message';
+@import '../../components/02-elements/navigation/navigation';
+@import '../../components/02-elements/new-label/new-label';
+@import '../../components/02-elements/pager/pager';
+@import '../../components/02-elements/paragraph/paragraph';
+@import '../../components/02-elements/product-item/product-item';
+@import '../../components/02-elements/products-grid/products-grid';
+@import '../../components/02-elements/products-list/products-list';
+@import '../../components/02-elements/search/search';
+@import '../../components/02-elements/slider/slider';
+@import '../../components/02-elements/tab/tab';
 

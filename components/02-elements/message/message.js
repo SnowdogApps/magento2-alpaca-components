@@ -1,3 +1,5 @@
+// TO DO - Needs a refactor
+
 'use strict'
 
 const infobarClose = document.querySelector('.infobar__close'),

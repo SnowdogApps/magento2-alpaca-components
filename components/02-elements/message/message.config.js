@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Bars',
+  title: 'Message',
   context: {
     linkAnchor: 'Action\'s details',
     closeIcon: 'close',
@@ -8,13 +8,13 @@ module.exports = {
   },
   variants: [
     {
-      name: 'Cookie bar',
+      name: 'With button',
       context: {
         linkAnchor: 'Details',
         closeIcon: false,
         closeLabel: 'OK, close',
         text: 'This website uses cookies. For information on cookies and how you can disable them see our',
-        modifier: 'cookie'
+        modifier: 'with-button'
       }
     }
   ]

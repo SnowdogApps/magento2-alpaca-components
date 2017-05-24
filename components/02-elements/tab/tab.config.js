@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Tabs component',
+  title: 'Tab',
   context: {
     tabs: [
       {
