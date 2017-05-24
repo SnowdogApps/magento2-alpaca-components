@@ -7,7 +7,7 @@ cache:
 script:
   - gulp js-lint --ci
   - gulp sass-lint --ci
-  - gulp sass
+  - gulp sass --ci
   - gulp css-lint --ci
   - gulp svg-sprite
   - gulp fractal:build
