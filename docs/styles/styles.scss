@@ -10,9 +10,6 @@
 @import '../../components/general/mixins/clearfix';
 @import '../../components/general/mixins/links';
 
-// typography
-@import '../../components/general/typography/typography';
-
 // documentation styles
 @import 'base';
 @import 'grid';
@@ -22,24 +19,27 @@
 // components
 @import '../../components/blocks/banners/banners';
 @import '../../components/blocks/bars/bars';
-@import '../../components/blocks/box/box';
 @import '../../components/blocks/box-carousel/box-carousel';
+@import '../../components/blocks/box/box';
 @import '../../components/blocks/breadcrumbs/breadcrumbs';
 @import '../../components/blocks/button/button';
 @import '../../components/blocks/cards/cards';
 @import '../../components/blocks/cms-block/cms-block';
+@import '../../components/blocks/dropdown-list/dropdown-list';
 @import '../../components/blocks/filters/filters';
 @import '../../components/blocks/form-fields/checkbox/checkbox';
 @import '../../components/blocks/form-fields/form/form';
 @import '../../components/blocks/form-fields/input/input';
 @import '../../components/blocks/form-fields/textarea/textarea';
 @import '../../components/blocks/grid/grid';
+@import '../../components/blocks/heading/heading';
 @import '../../components/blocks/info-box/info-box';
 @import '../../components/blocks/list/list';
 @import '../../components/blocks/logo/logo';
 @import '../../components/blocks/navigation/navigation';
 @import '../../components/blocks/new-label/new-label';
 @import '../../components/blocks/pager/pager';
+@import '../../components/blocks/paragraph/paragraph';
 @import '../../components/blocks/product-item/product-item';
 @import '../../components/blocks/products-grid/products-grid';
 @import '../../components/blocks/products-list/products-list';
@@ -47,3 +47,4 @@
 @import '../../components/blocks/search/search';
 @import '../../components/blocks/slider/slider';
 @import '../../components/blocks/tabs/tabs';
+

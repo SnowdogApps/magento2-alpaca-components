@@ -1,19 +1,19 @@
 module.exports = {
-  title: 'Filters',
+  title: 'Dropdown list',
   context: {
-    filters: [
+    dropdowns: [
       {
-        filterTitle: 'All products',
-        filterLink: '#'
+        title: 'All',
+        link: '#'
       },
       {
-        filterTitle: 'Filter title',
-        filterId: 'filter-1',
-        filterList: [
+        title: 'dropdown title',
+        id: 'dropdown-1',
+        list: [
           {
             itemName: 'Item name',
             itemLink: '#',
-            filterId: 'filter-2',
+            id: 'dropdown-2',
             sublist: [
               {
                 itemName: 'sublist item name',
@@ -36,7 +36,7 @@ module.exports = {
           {
             itemName: 'Item name',
             itemLink: '#',
-            filterId: 'filter-3',
+            id: 'dropdown-3',
             sublist: [
               {
                 itemName: 'sublist item name',
@@ -65,9 +65,9 @@ module.exports = {
         ]
       },
       {
-        filterTitle: 'Filter title',
-        filterId: 'filter-4',
-        filterList: [
+        title: 'dropdown title',
+        id: 'dropdown-4',
+        list: [
           {
             itemName: 'Item name',
             itemLink: '#',
@@ -81,13 +81,13 @@ module.exports = {
         ]
       },
       {
-        filterTitle: 'Filter title',
-        filterId: 'filter-5',
-        filterList: [
+        title: 'dropdown title',
+        id: 'dropdown-5',
+        list: [
           {
             itemName: 'Item name',
             itemLink: '#',
-            filterId: 'filter-6',
+            id: 'dropdown-6',
             sublist: [
               {
                 itemName: 'sublist item name',
@@ -107,7 +107,7 @@ module.exports = {
           {
             itemName: 'Item name',
             itemLink: '#',
-            filterId: 'filter-7',
+            id: 'dropdown-7',
             sublist: [
               {
                 itemName: 'sublist item name',
@@ -138,7 +138,7 @@ module.exports = {
           {
             itemName: 'Item name',
             itemLink: '#',
-            filterId: 'filter-8',
+            id: 'dropdown-8',
             sublist: [
               {
                 itemName: 'sublist item name',
@@ -149,7 +149,7 @@ module.exports = {
           {
             itemName: 'item name',
             itemLink: '#',
-            filterId: 'filter-9',
+            id: 'dropdown-9',
             sublist: [
               {
                 itemName: 'sublist item name',
