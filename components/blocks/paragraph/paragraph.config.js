@@ -1,3 +1,3 @@
-exports.config = {
+module.exports = {
   name:'Paragraph'
 }
