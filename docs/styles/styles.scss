@@ -12,23 +12,24 @@
 
 // documentation styles
 @import 'base';
+@import 'grid';
 @import 'icons';
+@import 'typography';
 
 // components
 @import '../../components/blocks/banners/banners';
 @import '../../components/blocks/bars/bars';
-@import '../../components/blocks/box-carousel/box-carousel';
 @import '../../components/blocks/box/box';
+@import '../../components/blocks/box-carousel/box-carousel';
 @import '../../components/blocks/breadcrumbs/breadcrumbs';
 @import '../../components/blocks/button/button';
 @import '../../components/blocks/cards/cards';
-@import '../../components/blocks/cms-2cols/cms-2cols';
-@import '../../components/blocks/columns/columns';
 @import '../../components/blocks/dropdown-list/dropdown-list';
 @import '../../components/blocks/form-fields/checkbox/checkbox';
 @import '../../components/blocks/form-fields/form/form';
 @import '../../components/blocks/form-fields/input/input';
 @import '../../components/blocks/form-fields/textarea/textarea';
+@import '../../components/blocks/grid/grid';
 @import '../../components/blocks/heading/heading';
 @import '../../components/blocks/info-box/info-box';
 @import '../../components/blocks/list/list';
@@ -44,3 +45,4 @@
 @import '../../components/blocks/search/search';
 @import '../../components/blocks/slider/slider';
 @import '../../components/blocks/tabs/tabs';
+
