@@ -38,7 +38,9 @@ hbsEngine.handlebars.registerHelper('static', (file, data) => {
 
 hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file}`);
 
-hbsEngine.handlebars.registerHelper('inline', src => fs.readFileSync(src, 'utf8'));
+hbsEngine.handlebars.registerHelper('inline', src => {
+  return fs.readFileSync(fractal.web.get('static.path') + '/' + src, 'utf8');
+});
 
 // Fractal gulp tasks
 gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () => {
@@ -165,8 +167,13 @@ gulp.task('inheritance', () => {
     // Go through array of module paths
     modules.forEach(path => {
       // Find all module files
+      path = path.replace(__dirname, '');
       globby
-        .sync(path + '/**', { nodir: true })
+        .sync([
+          path + fractal.components.get('path').replace(__dirname, '') + '/**',
+          path + fractal.docs.get('path').replace(__dirname, '') + '/**',
+          path + fractal.web.get('static.path').replace(__dirname, '') + '/**'
+        ], { nodir: true })
         .forEach(file => {
           const srcPath = __dirname + '/' + file,
                 destPath = srcPath.replace(path, 'build');
