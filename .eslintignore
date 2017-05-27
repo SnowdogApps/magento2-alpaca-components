@@ -1,2 +1,2 @@
-components/general/libs/*.js
-build/components/general/libs/*.js
+components/01-globals/libs/*.js
+build/components/01-globals/libs/*.js
