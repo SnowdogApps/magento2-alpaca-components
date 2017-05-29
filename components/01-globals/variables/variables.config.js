@@ -24,7 +24,7 @@ module.exports = {
         color: '#2e7501'
       },
       {
-        varName: '$color-gray1',
+        varName: '$color-gray',
         color: '#9ea3a4'
       },
       {

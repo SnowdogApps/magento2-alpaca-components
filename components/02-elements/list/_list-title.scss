@@ -45,7 +45,7 @@
         top: 12px;
         width: 13px;
         height: 13px;
-        fill: $color-gray1;
+        fill: $color-gray;
         transition: transform 0.3s;
 
         @include mq($screen-l) {
