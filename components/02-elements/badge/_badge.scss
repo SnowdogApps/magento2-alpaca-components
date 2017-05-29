@@ -1,9 +1,7 @@
 .badge {
     font-size: 12px;
-    width: auto;
-    position: absolute;
     padding: 5px 10px;
-    top: 0;
+    display: inline-flex;
 
     &--new {
         background: $color-accent;
