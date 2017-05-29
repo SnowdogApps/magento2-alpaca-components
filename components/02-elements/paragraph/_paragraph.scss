@@ -19,3 +19,17 @@ a {
     color: $color-main1;
     text-decoration: underline;
 }
+
+pre {
+    font-family: $font-family;
+    overflow: scroll;
+    padding: 20px;
+}
+
+blockquote {
+    font-family: $font-family;
+    border-left: 5px solid $color-main1;   
+    margin-left: 0;
+    padding: 10px 10px 10px 40px;
+    background: $color-bg-gray;
+}
