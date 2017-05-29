@@ -20,7 +20,7 @@ module.exports = {
         color: '#ffffff'
       },
       {
-        varName: '$color-accent',
+        varName: '$color-green',
         color: '#2e7501'
       },
       {
