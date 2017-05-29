@@ -46,7 +46,7 @@
         cursor: pointer;
 
         @include links(hover) {
-            fill: $color-main1;
+            fill: $color-orange;
         }
 
         &-prev {

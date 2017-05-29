@@ -23,11 +23,11 @@
     }
 
     @include links(hover) {
-        color: $color-main1;
+        color: $color-orange;
         text-decoration: none;
 
         .button__icon {
-            fill: $color-main1;
+            fill: $color-orange;
         }
     }
 
@@ -36,13 +36,13 @@
         box-shadow: none;
 
         .button__icon {
-            fill: $color-main1;
+            fill: $color-orange;
         }
     }
 
     &--color-icon {
         .button__icon {
-            fill: $color-main1;
+            fill: $color-orange;
         }
     }
 
@@ -51,7 +51,7 @@
     }
 
     &--dark {
-        background-color: $color-main1;
+        background-color: $color-orange;
         box-shadow: none;
         @include links(active) {
             color: $color-white;
@@ -77,9 +77,9 @@
         transition: color 0.3s, background 0.3s, borders 0.3s;
 
         @include links(hover) {
-            background-color: $color-main1;
+            background-color: $color-orange;
             color: $color-white;
-            border: 2px solid $color-main1;
+            border: 2px solid $color-orange;
 
             .button__icon {
                 fill: $color-white;
@@ -90,12 +90,12 @@
     &--search {
         text-transform: uppercase;
         width: 100%;
-        border-top: 1px solid $color-main1;
+        border-top: 1px solid $color-orange;
     }
 
     &--blue {
         width: 100%;
-        background-color: $color-main1;
+        background-color: $color-orange;
         box-shadow: none;
         @include links(active) {
             color: $color-white;

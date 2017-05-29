@@ -133,7 +133,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            background-color: $color-main1;
+            background-color: $color-orange;
             height: 60px;
             text-transform: uppercase;
             color: $color-white;
@@ -179,7 +179,7 @@
 
         .banner__content {
             padding: 45px 15px;
-            background-color: $color-main1;
+            background-color: $color-orange;
 
             @include mq($screen-m) {
                 position: absolute;
@@ -375,7 +375,7 @@
     }
 
     &__title {
-        color: $color-main1;
+        color: $color-orange;
         line-height: 25px;
         margin-bottom: 20px;
         text-transform: uppercase;
@@ -384,7 +384,7 @@
 
     &__title-link {
         @include links(active) {
-            color: $color-main1;
+            color: $color-orange;
         }
 
         @include links(hover) {

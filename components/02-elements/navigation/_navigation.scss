@@ -133,7 +133,7 @@
                 width: 70%;
                 height: 2px;
                 margin: 0 auto;
-                background-color: $color-main1;
+                background-color: $color-orange;
                 transform: scaleX(0);
                 transform-origin: left;
                 transition: transform 0.5s ease-in-out;
@@ -232,7 +232,7 @@
         margin: auto;
         width: 13px;
         height: 9px;
-        fill: $color-main1;
+        fill: $color-orange;
         transition: transform 0.3s;
 
         &--inner {
@@ -338,7 +338,7 @@
                     &:not(.menu__inner-item--level2) {
                         & > .menu__inner-link {
                             @include links(active) {
-                                color: $color-main1;
+                                color: $color-orange;
                                 text-decoration: none;
                             }
                         }
@@ -455,7 +455,7 @@
     }
 
     &__item-img-icon {
-        fill: $color-main1;
+        fill: $color-orange;
         width: 9px;
         height: 13px;
         display: block;
