@@ -1,0 +1,54 @@
+.grid {
+    $gutter: 1%;
+
+    @function column-width($quantity) {
+        @return 100% / $quantity - ($quantity - 1) * $gutter / $quantity;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__column {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+
+    &--two-cols {
+        @include mq($screen-m) {
+            flex-basis: column-width(2);
+        }
+    }
+
+    &--three-cols {
+        @include mq($screen-m) {
+            flex-basis: column-width(3);
+        }
+    }
+
+    &--four-cols {
+        @include mq($screen-m) {
+            flex-basis: column-width(2);
+        }
+
+        @include mq($screen-l) {
+            flex-basis: column-width(4);
+        }
+    }
+
+    &--five-cols {
+        @include mq($screen-m) {
+            flex-basis: column-width(5);
+        }
+    }
+
+    &--six-cols {
+        @include mq($screen-m) {
+            flex-basis: column-width(3);
+        }
+
+        @include mq($screen-xl) {
+            flex-basis: column-width(6);
+        }
+    }
+}

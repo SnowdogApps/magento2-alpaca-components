@@ -1,0 +1,22 @@
+<div class="tab {{#if modifier}}tab--{{modifier}}{{/if}}">
+    {{#each tab as |tab|}}
+        <div class="tab__title {{#if active}}tab__title--active{{/if}}"
+             data-tab="{{ tabId }}"
+        >
+            <svg class="tab__icon">
+                <use xlink:href="#plus"/>
+            </svg>
+            {{ title }}
+        </div>
+
+        <div class="tab__content {{#if active}}tab__content--active{{/if}}"
+             data-content="{{ tabId }}"
+        >
+            <p class="paragraph">
+                {{ content }}
+            </p>
+        </div>
+    {{/each}}
+</div>
+
+<script src="{{static 'tab.js' }}"></script>

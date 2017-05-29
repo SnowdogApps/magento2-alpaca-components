@@ -1,0 +1,35 @@
+.heading {
+    color: $font-color;
+    font-family: $font-family;
+    font-weight: 400;
+    margin: 0 0 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &--first-level {
+        font-size: 18px;
+        margin-bottom: 0;
+
+        @include mq($screen-m) {
+            font-size: 30px;
+        }
+    }
+
+    &--second-level {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &--third-level {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    &--fourth-level {
+        font-size: 14px;
+
+        @include mq($screen-m) {
+            font-size: 18px;
+        }
+    }
+}
