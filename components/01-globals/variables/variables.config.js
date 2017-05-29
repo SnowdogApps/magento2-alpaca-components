@@ -4,7 +4,7 @@ module.exports = {
     heading1: 'Colors',
     colors: [
       {
-        varName: '$color-main1',
+        varName: '$color-orange',
         color: '#f26322'
       },
       {
