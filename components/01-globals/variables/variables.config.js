@@ -8,7 +8,7 @@ module.exports = {
         color: '#f26322'
       },
       {
-        varName: '$color-main2',
+        varName: '$color-orange-second',
         color: '#ff5000'
       },
       {
