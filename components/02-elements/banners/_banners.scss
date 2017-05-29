@@ -221,7 +221,7 @@
         }
 
         .banner__info {
-            color: $color-main3;
+            color: $color-orange-dark;
             line-height: 18px;
 
             @include mq($screen-xl) {
@@ -236,11 +236,11 @@
             padding-left: 0;
 
             @include links(hover) {
-                color: $color-main3;
+                color: $color-orange-dark;
                 background-color: transparent;
 
                 .button__icon {
-                    fill: $color-main3;
+                    fill: $color-orange-dark;
                 }
             }
 
