@@ -32,7 +32,7 @@ module.exports = {
         color: '#666666'
       },
       {
-        varName: '$color-gray3',
+        varName: '$color-gray-third',
         color: '#c2c2c2'
       },
       {
