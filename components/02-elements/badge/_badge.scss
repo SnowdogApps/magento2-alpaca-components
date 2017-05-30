@@ -1,0 +1,22 @@
+.badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    display: inline-flex;
+    color: $color-white;
+    background: $color-black;
+
+    &--new {
+        background: $color-accent;
+        color: $color-white;
+    }
+
+    &--alert {
+        background: $color-aqua;
+        color: $color-white;
+    }
+
+    &--error {
+        background: $color-main1;
+        color: $color-white;
+    }
+}
