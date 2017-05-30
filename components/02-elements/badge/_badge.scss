@@ -2,6 +2,8 @@
     font-size: 12px;
     padding: 5px 10px;
     display: inline-flex;
+    color: $color-white;
+    background: $color-black;
 
     &--new {
         background: $color-accent;
