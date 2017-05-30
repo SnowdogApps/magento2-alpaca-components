@@ -6,17 +6,17 @@
     background: $color-black;
 
     &--new {
-        background: $color-accent;
+        background: $color-success;
         color: $color-white;
     }
 
     &--alert {
-        background: $color-aqua;
+        background: $color-primary;
         color: $color-white;
     }
 
     &--error {
-        background: $color-main1;
+        background: $color-international-orange;
         color: $color-white;
     }
 }
