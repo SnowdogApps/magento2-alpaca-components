@@ -1,35 +1,37 @@
-p {
-    font-family: $font-family;
-    font-size: 14px;
-    line-height: 24px;
-    margin: 15px 0;
-}
+.paragraph {
+    &--text {
+        font-family: $font-family;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 15px 0;
+    }
 
-span {
-    font-family: $font-family;
-    font-size: 12px;
-    line-height: 22px;
-    margin: 5px 0;
-}
+    &--text-hook {
+        font-family: $font-family;
+        font-size: 12px;
+        line-height: 22px;
+        margin: 5px 0;
+    }
 
-a {
-    font-family: $font-family;
-    font-size: 14px;
-    line-height: 24px;
-    color: $color-main1;
-    text-decoration: underline;
-}
+    &--link {
+        font-family: $font-family;
+        font-size: 14px;
+        line-height: 24px;
+        color: $color-main1;
+        text-decoration: underline;
+    }
 
-pre {
-    font-family: $font-family;
-    overflow: scroll;
-    padding: 20px;
-}
+    &--preformatted-text {
+        font-family: $font-family;
+        overflow: scroll;
+        padding: 20px;
+    }
 
-blockquote {
-    font-family: $font-family;
-    border-left: 5px solid $color-main1;   
-    margin-left: 0;
-    padding: 10px 10px 10px 40px;
-    background: $color-bg-gray;
+    &--quote {
+        font-family: $font-family;
+        border-left: 5px solid $color-main1;   
+        margin-left: 0;
+        padding: 10px 10px 10px 40px;
+        background: $color-bg-gray;
+    }
 }
