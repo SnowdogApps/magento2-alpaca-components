@@ -221,7 +221,7 @@
         }
 
         .banner__info {
-            color: $color-primary-dark;
+            color: $color-deep-red-orange;
             line-height: 18px;
 
             @include mq($screen-xl) {
@@ -236,11 +236,11 @@
             padding-left: 0;
 
             @include links(hover) {
-                color: $color-primary-dark;
+                color: $color-deep-red-orange;
                 background-color: transparent;
 
                 .button__icon {
-                    fill: $color-primary-dark;
+                    fill: $color-deep-red-orange;
                 }
             }
 
