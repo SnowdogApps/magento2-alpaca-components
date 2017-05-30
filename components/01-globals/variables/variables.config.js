@@ -20,7 +20,7 @@ module.exports = {
         color: '#ffffff'
       },
       {
-        varName: '$color-green',
+        varName: '$color-success',
         color: '#2e7501'
       },
       {
