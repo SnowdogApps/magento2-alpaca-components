@@ -36,7 +36,7 @@ module.exports = {
         color: '#c2c2c2'
       },
       {
-        varName: '$color-gray-dark',
+        varName: '$color-matterhorn-gray',
         color: '#1b0d08'
       },
       {
@@ -107,7 +107,7 @@ module.exports = {
       },
       {
         varName: '$font-color',
-        value: '$color-gray-dark'
+        value: '$color-matterhorn-gray'
       },
       {
         varName: '$font-color-lighter1',

@@ -7,10 +7,10 @@ $color-black: #000000;
 $color-white: #ffffff;
 $color-success: #2e7501;
 $color-pale-cyan: #c0e9fd;
-$color-gray-dark: #4d4d4d;
 $color-gull-gray: #9ea3a4;
 $color-dove-gray: #666666;
 $color-silver: #c2c2c2;
+$color-matterhorn-gray: #4d4d4d;
 $color-bg-gray: #e8e8e8;
 $border-base: #cccccc;
 
@@ -28,7 +28,7 @@ $screen-xxl: 1600px;
 $font-family: 'Open Sans', sans-serif;
 
 $font-size-base: 14px;
-$font-color: $color-gray-dark;
+$font-color: $color-matterhorn-gray;
 $font-color-lighter1: rgba($font-color, 0.8);
 $font-color-lighter2: rgba($font-color, 0.6);
 $font-color-lighter3: rgba($font-color, 0.4);
