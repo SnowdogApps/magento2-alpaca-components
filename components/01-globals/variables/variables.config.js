@@ -28,14 +28,6 @@ module.exports = {
         color: '#9ea3a4'
       },
       {
-        varName: '$color-dove-gray',
-        color: '#666666'
-      },
-      {
-        varName: '$color-silver',
-        color: '#c2c2c2'
-      },
-      {
         varName: '$color-matterhorn-gray',
         color: '#1b0d08'
       },
