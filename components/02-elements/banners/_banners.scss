@@ -133,7 +133,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            background-color: $color-orange;
+            background-color: $color-primary;
             height: 60px;
             text-transform: uppercase;
             color: $color-white;
@@ -179,7 +179,7 @@
 
         .banner__content {
             padding: 45px 15px;
-            background-color: $color-orange;
+            background-color: $color-primary;
 
             @include mq($screen-m) {
                 position: absolute;
@@ -221,7 +221,7 @@
         }
 
         .banner__info {
-            color: $color-orange-dark;
+            color: $color-primary-dark;
             line-height: 18px;
 
             @include mq($screen-xl) {
@@ -236,11 +236,11 @@
             padding-left: 0;
 
             @include links(hover) {
-                color: $color-orange-dark;
+                color: $color-primary-dark;
                 background-color: transparent;
 
                 .button__icon {
-                    fill: $color-orange-dark;
+                    fill: $color-primary-dark;
                 }
             }
 
@@ -375,7 +375,7 @@
     }
 
     &__title {
-        color: $color-orange;
+        color: $color-primary;
         line-height: 25px;
         margin-bottom: 20px;
         text-transform: uppercase;
@@ -384,7 +384,7 @@
 
     &__title-link {
         @include links(active) {
-            color: $color-orange;
+            color: $color-primary;
         }
 
         @include links(hover) {

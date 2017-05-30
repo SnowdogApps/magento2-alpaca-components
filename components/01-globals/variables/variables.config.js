@@ -4,11 +4,11 @@ module.exports = {
     heading1: 'Colors',
     colors: [
       {
-        varName: '$color-orange',
+        varName: '$color-primary',
         color: '#f26322'
       },
       {
-        varName: '$color-orange-second',
+        varName: '$color-primary-second',
         color: '#ff5000'
       },
       {
