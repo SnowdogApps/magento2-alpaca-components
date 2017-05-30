@@ -15,6 +15,7 @@
 @import 'grid';
 @import 'icons';
 @import 'typography';
+@import 'product';
 
 // components
 @import '../../components/02-elements/badge/badge';
@@ -34,10 +35,9 @@
 @import '../../components/02-elements/navigation/navigation';
 @import '../../components/02-elements/pager/pager';
 @import '../../components/02-elements/paragraph/paragraph';
-@import '../../components/02-elements/product-item/product-item';
+@import '../../components/02-elements/product/product';
 @import '../../components/02-elements/products-grid/products-grid';
 @import '../../components/02-elements/products-list/products-list';
 @import '../../components/02-elements/search/search';
 @import '../../components/02-elements/slider/slider';
 @import '../../components/02-elements/tab/tab';
-
