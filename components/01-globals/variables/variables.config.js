@@ -40,7 +40,7 @@ module.exports = {
         color: '#1b0d08'
       },
       {
-        varName: '$color-bg-gray',
+        varName: '$color-gray-background',
         color: '#e8e8e8'
       },
       {
