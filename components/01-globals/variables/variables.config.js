@@ -44,7 +44,7 @@ module.exports = {
         color: '#e8e8e8'
       },
       {
-        varName: '$border-base',
+        varName: '$color-border-primary',
         color: '#cccccc'
       }
     ],

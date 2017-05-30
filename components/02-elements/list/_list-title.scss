@@ -2,7 +2,7 @@
     display: block;
     padding: 10px 0;
     margin: 10px;
-    border-bottom: 1px solid $border-base;
+    border-bottom: 1px solid $color-border-primary;
     cursor: pointer;
 
     @include mq($screen-m) {

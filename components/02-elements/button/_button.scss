@@ -72,7 +72,7 @@
     }
 
     &--borders {
-        border: 2px solid $border-base;
+        border: 2px solid $color-border-primary;
         box-shadow: none;
         transition: color 0.3s, background 0.3s, borders 0.3s;
 
