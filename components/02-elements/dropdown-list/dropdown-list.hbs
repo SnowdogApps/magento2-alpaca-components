@@ -1,10 +1,11 @@
 <div class="dropdown-list">
     <ul class="dropdown-list__list">
         {{#each dropdowns as |dropdown|}}
-            <li class="dropdown-list__item
-                       {{#if list}}
-                            dropdown-list__item--parent
-                       {{/if}}
+            <li class="
+                    dropdown-list__item
+                    {{#if list}}
+                        dropdown-list__item--parent
+                    {{/if}}
                 "
             >
                 <a href="{{ link }}"
@@ -24,17 +25,21 @@
                 </a>
 
                 {{#if list }}
-                    <ul class="dropdown-list__inner-list dropdown-list__inner-list--level1"
+                    <ul class="
+                            dropdown-list__inner-list
+                            dropdown-list__inner-list--level1
+                        "
                         {{#if id }}
                             data-dropdown="{{ id }}"
                         {{/if}}
                     >
                         {{#each list }}
-                            <li class="dropdown-list__inner-item
-                                       dropdown-list__inner-item--level1
-                                       {{#if sublist}}
-                                            dropdown-list__inner-item--parent
-                                       {{/if}}
+                            <li class="
+                                    dropdown-list__inner-item
+                                    dropdown-list__inner-item--level1
+                                    {{#if sublist}}
+                                        dropdown-list__inner-item--parent
+                                    {{/if}}
                                 "
                             >
                                 <a href="{{ link }}"
