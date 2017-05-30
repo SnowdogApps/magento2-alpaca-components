@@ -59,7 +59,7 @@
 
         @include links(hover) {
             color: $color-white;
-            background-color: $color-primary-second;
+            background-color: $color-international-orange;
 
             .button__icon {
                 fill: $color-white;
@@ -103,7 +103,7 @@
 
         @include links(hover) {
             color: $color-white;
-            background-color: $color-primary-second;
+            background-color: $color-international-orange;
         }
     }
 
