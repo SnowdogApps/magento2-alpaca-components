@@ -1,19 +1,19 @@
 .paragraph {
-    &--text {
+   p {
         font-family: $font-family;
         font-size: 14px;
         line-height: 24px;
         margin: 15px 0;
     }
 
-    &--text-hook {
+    span {
         font-family: $font-family;
         font-size: 12px;
         line-height: 22px;
         margin: 5px 0;
     }
 
-    &--link {
+    a {
         font-family: $font-family;
         font-size: 14px;
         line-height: 24px;
@@ -21,13 +21,13 @@
         text-decoration: underline;
     }
 
-    &--preformatted-text {
+    pre {
         font-family: $font-family;
         overflow: scroll;
         padding: 20px;
     }
 
-    &--quote {
+    blockquote {
         font-family: $font-family;
         border-left: 5px solid $color-main1;   
         margin-left: 0;
