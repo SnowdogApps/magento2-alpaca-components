@@ -1,34 +1,65 @@
-// colors
+// Colors
 
-$color-primary: #f26322;
-$color-international-orange: #ff5000;
-$color-deep-red-orange: #883008;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-success: #2e7501;
-$color-gull-gray: #9ea3a4;
-$color-matterhorn-gray: #4d4d4d;
-$color-gray-background: #e8e8e8;
-$color-border-primary: #cccccc;
+// Start with assigning color names to specific hex values.
+$white                 : #fff !default;
+$black                 : #000 !default;
+$red                   : #d9534f !default;
+$orange                : #f0ad4e !default;
+$yellow                : #ffd500 !default;
+$green                 : #5cb85c !default;
+$blue                  : #0275d8 !default;
+$teal                  : #5bc0de !default;
+$pink                  : #ff5b77 !default;
+$purple                : #613d7c !default;
 
-// breakpoints
+// Create grayscale
+$gray-dark             : #292b2c !default;
+$gray                  : #464a4c !default;
+$gray-light            : #636c72 !default;
+$gray-lighter          : #eceeef !default;
+$gray-lightest         : #f7f7f9 !default;
 
-$screen-xs: 320px;
-$screen-s: 480px;
-$screen-m: 768px;
-$screen-l: 992px;
-$screen-xl: 1200px;
-$screen-xxl: 1600px;
+// Reassign color vars to semantic color scheme
+$color-primary         : $blue !default;
+$color-success         : $green !default;
+$color-info            : $teal !default;
+$color-warning         : $orange !default;
+$color-danger          : $red !default;
+$color-inverse         : $gray-dark !default;
 
-// fonts
+// Body
 
-$font-family: 'Open Sans', sans-serif;
+$body-bg               : $white !default;
+$body-color            : $gray-dark !default;
 
-$font-size-base: 14px;
-$font-color: $color-matterhorn-gray;
-$font-color-lighter1: rgba($font-color, 0.8);
-$font-color-lighter2: rgba($font-color, 0.6);
-$font-color-lighter3: rgba($font-color, 0.4);
-$font-color-lighter4: rgba($font-color, 0.2);
+// Links
 
-$max-content-width: 1180px;
+$link-color            : $color-primary !default;
+$link-decoration       : none !default;
+$link-hover-color      : darken($link-color, 15%) !default;
+$link-hover-decoration : underline !default;
+
+// Typography
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-monospace : Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base      : $font-family-sans-serif !default;
+
+$font-weight-normal    : normal !default;
+$font-weight-bold      : bold !default;
+$font-weight-base      : $font-weight-normal !default;
+$font-line-height      : 1.5 !default;
+$font-size-base        : 16px !default;
+
+// Layout
+
+$max-content-width     : 1180px;
+
+// Layout - breakpoints
+
+$screen-xs             : 320px;
+$screen-s              : 480px;
+$screen-m              : 768px;
+$screen-l              : 992px;
+$screen-xl             : 1200px;
+$screen-xxl            : 1600px;
