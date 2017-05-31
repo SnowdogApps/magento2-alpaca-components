@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     padding: 10px;
-    background-color: $color-white;
+    background-color: $white;
 
     @include mq($screen-l) {
         max-width: 320px;
@@ -33,7 +33,7 @@
         top: 20px;
         width: 10px;
         height: 6px;
-        color: $color-gull-gray;
+        color: $gray;
         transition: transform 0.3s, opacity 0.3s;
 
         @include mq($screen-m) {
@@ -53,7 +53,6 @@
         position: relative;
         display: block;
         padding: 0;
-        color: $font-color;
         font-weight: 700;
         font-size: 12px;
         text-transform: uppercase;
@@ -99,7 +98,7 @@
             display: block;
             padding: 15px;
             font-weight: 700;
-            color: $font-color;
+            color: $body-color;
             transition: box-shadow 0.5s;
 
             @include mq($screen-m) {
@@ -108,7 +107,7 @@
         }
 
         @include links(hover) {
-            color: $font-color;
+            color: $body-color;
             text-decoration: none;
             box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
 
@@ -124,7 +123,7 @@
             left: 0;
             bottom: 0;
             height: 10px;
-            background-color: $color-white;
+            background-color: $white;
             width: 100%;
             z-index: 109;
             visibility: hidden;
@@ -146,7 +145,7 @@
             @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
                 position: absolute;
                 width: 100%;
-                background-color: $color-white;
+                background-color: $white;
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
                 z-index: 99;
             }
@@ -203,7 +202,7 @@
             padding: 15px 20px;
             text-transform: none;
             font-weight: 400;
-            color: $font-color;
+            color: $body-color;
         }
 
     }

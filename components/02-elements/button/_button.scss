@@ -2,11 +2,11 @@
     display: block;
     padding: 15px 30px;
     width: 100%;
-    border: 1px solid $color-white;
+    border: 1px solid $white;
     box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
     font-weight: 700;
-    background-color: $color-white;
-    color: $font-color;
+    background-color: $white;
+    color: $body-color;
     text-align: center;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
@@ -18,7 +18,7 @@
     }
 
     @include links() {
-        color: $font-color;
+        color: $body-color;
         outline: none;
     }
 
@@ -54,35 +54,33 @@
         background-color: $color-primary;
         box-shadow: none;
         @include links(active) {
-            color: $color-white;
+            color: $white;
         }
 
         @include links(hover) {
-            color: $color-white;
-            background-color: $color-international-orange;
+            color: $white;
 
             .button__icon {
-                fill: $color-white;
+                fill: $white;
             }
         }
 
         .button__icon {
-            fill: $color-white;
+            fill: $white;
         }
     }
 
     &--borders {
-        border: 2px solid $color-border-primary;
+        border: 2px solid $color-primary;
         box-shadow: none;
         transition: color 0.3s, background 0.3s, borders 0.3s;
 
         @include links(hover) {
-            background-color: $color-primary;
-            color: $color-white;
+            color: $white;
             border: 2px solid $color-primary;
 
             .button__icon {
-                fill: $color-white;
+                fill: $white;
             }
         }
     }
@@ -98,22 +96,19 @@
         background-color: $color-primary;
         box-shadow: none;
         @include links(active) {
-            color: $color-white;
+            color: $white;
         }
 
         @include links(hover) {
-            color: $color-white;
-            background-color: $color-international-orange;
+            color: $white;
+            background-color: $color-primary;
         }
     }
 
     &__icon {
-        fill: $font-color;
+        fill: $body-color;
         width: 8px;
         height: 13px;
-        position: relative;
-        top: 1.5px;
         margin-left: 10px;
-        transition: fill 0.3s;
     }
 }

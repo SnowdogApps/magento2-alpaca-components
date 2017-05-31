@@ -13,14 +13,14 @@
 
     &__item {
         @include links(active) {
-            color: $font-color-lighter2;
+            color: $gray;
             display: inline-block;
             padding-bottom: 10px;
             text-decoration: none;
         }
 
         @include links(hover) {
-            color: $font-color;
+            color: $body-color;
             text-decoration: none;
         }
 
@@ -28,11 +28,11 @@
             content: '/';
             display: inline-block;
             margin: 0 10px;
-            color: $font-color-lighter2;
+            color: $gray;
         }
 
         &:last-child {
-            color: $font-color-lighter2;
+            color: $gray;
 
             &:after {
                 display: none;
