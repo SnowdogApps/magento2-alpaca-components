@@ -1,28 +1,36 @@
 module.exports = {
-  title: 'Badge component',
+  status: 'ready',
+  collated: true,
   context : {
-    text: 'Badge'
+    text: 'Default'
   },
   variants: [
     {
-      name: 'New',
+      name: 'success',
       context: {
-        text: 'New',
-        modifier: 'new'
+        text: 'Success',
+        modifier: 'success'
       }
     },
     {
-      name: 'Alert',
+      name: 'info',
       context: {
-        text: 'Alert',
-        modifier: 'alert'
+        text: 'Info',
+        modifier: 'info'
       }
     },
     {
-      name: 'Error',
+      name: 'warning',
       context: {
-        text: 'Error',
-        modifier: 'error'
+        text: 'Warning',
+        modifier: 'warning'
+      }
+    },
+    {
+      name: 'danger',
+      context: {
+        text: 'Danger',
+        modifier: 'danger'
       }
     }
   ]

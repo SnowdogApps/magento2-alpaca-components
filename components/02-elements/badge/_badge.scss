@@ -1,22 +1,24 @@
 .badge {
-    font-size: 12px;
-    padding: 5px 10px;
     display: inline-flex;
-    color: $color-white;
-    background: $color-black;
+    padding: 7px 10px;
+    font-size: $font-size-extra-small;
+    color: $white;
+    background: $color-primary;
+    border-radius: $border-radius;
 
-    &--new {
+    &--success {
         background: $color-success;
-        color: $color-white;
     }
 
-    &--alert {
-        background: $color-primary;
-        color: $color-white;
+    &--info {
+        background: $color-info;
     }
 
-    &--error {
-        background: $color-international-orange;
-        color: $color-white;
+    &--warning {
+        background: $color-warning;
+    }
+
+    &--danger {
+        background: $color-danger;
     }
 }
