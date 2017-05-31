@@ -1,27 +1,33 @@
 /* eslint-env node */
 
 const autoprefixer = require('autoprefixer'),
-      eslint      = require('gulp-eslint'),
-      fractal     = require('@frctl/fractal').create(),
-      fs          = require('fs-extra'),
-      globby      = require('globby'),
-      gulp        = require('gulp'),
-      gulpif      = require('gulp-if'),
-      hbsEngine   = fractal.components.engine(),
-      logger      = fractal.cli.console,
-      mandelbrot  = require('@frctl/mandelbrot'),
-      notify      = require('gulp-notify'),
-      plumber     = require('gulp-plumber'),
-      postcss     = require('gulp-postcss'),
-      reporter    = require('postcss-reporter'),
-      runSequence = require('run-sequence'),
-      sass        = require('gulp-sass'),
-      sassError   = require('gulp-sass-error'),
-      sassLint    = require('gulp-sass-lint'),
-      sourcemaps  = require('gulp-sourcemaps'),
-      stylelint   = require('stylelint'),
-      svgSprite   = require('gulp-svg-sprite'),
-      util        = require('gulp-util');
+      bluebird     = require('bluebird'),
+      eslint       = require('gulp-eslint'),
+      fractal      = require('@frctl/fractal').create(),
+      fs           = require('fs-extra'),
+      globby       = require('globby'),
+      gulp         = require('gulp'),
+      gulpif       = require('gulp-if'),
+      hbsEngine    = fractal.components.engine(),
+      logger       = fractal.cli.console,
+      mandelbrot   = require('@frctl/mandelbrot'),
+      notify       = require('gulp-notify'),
+      plumber      = require('gulp-plumber'),
+      postcss      = require('gulp-postcss'),
+      reporter     = require('postcss-reporter'),
+      runSequence  = require('run-sequence'),
+      sass         = require('gulp-sass'),
+      sassError    = require('gulp-sass-error'),
+      sassLint     = require('gulp-sass-lint'),
+      sourcemaps   = require('gulp-sourcemaps'),
+      stylelint    = require('stylelint'),
+      svgSprite    = require('gulp-svg-sprite'),
+      util         = require('gulp-util');
+
+// Turn off Bluebird unhandled promises warnings
+bluebird.config({
+  warnings: false
+});
 
 // Fractal configuration
 fractal.set('project.title', 'Alpaca UI Components for Magento 2');
