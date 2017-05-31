@@ -1,26 +1,26 @@
-<div class="infobar{{#if modifier}} infobar--{{ modifier }}{{/if}}">
-    <div class="infobar__container">
-        <p class="infobar__message">
-            <span class="infobar__text">
+<div class="message{{#if modifier}} message--{{ modifier }}{{/if}}">
+    <div class="message__container">
+        <p class="message__message">
+            <span class="message__text">
                 {{ text }}
             </span>
             {{#if link}}
-                <a href="#" class="infobar__link">
+                <a href="#" class="message__link">
                     {{ linkAnchor }}
                 </a>
             {{/if}}
         </p>
 
-        <button class="infobar__close" type="button">
+        <button class="message__close" type="button">
             {{#if closeLabel}}
                 {{ closeLabel }}
             {{/if}}
             {{#if closeIcon}}
-                <svg class="infobar__close--icon">
+                <svg class="message__close--icon">
                     <use xlink:href="#{{ closeIcon }}"></use>
                 </svg>
             {{/if}}
         </button>
     </div>
 </div>
-<script src="{{static 'bars.js' }}"></script>
+<script src="{{static 'message.js' }}"></script>
