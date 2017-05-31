@@ -49,7 +49,7 @@
             margin-bottom: 0;
 
             &:nth-child(odd) {
-                background-color: $color-gray-background;
+                background-color: $gray;
             }
 
             @include mq($screen-m) {
@@ -112,7 +112,7 @@
     }
 
     &__item {
-        color: $font-color;
+        color: $body-color;
         margin-bottom: 5px;
 
         &:last-child {
@@ -126,18 +126,18 @@
     }
 
     &__value {
-        color: $font-color-lighter1;
+        color: $gray;
     }
 
     &__link {
         display: block;
         @include links(active) {
-            color: $font-color-lighter1;
+            color: $gray;
         }
     }
 
     &__social-icon {
-        fill: $color-black;
+        fill: $black;
         width: 16px;
         height: 16px;
 

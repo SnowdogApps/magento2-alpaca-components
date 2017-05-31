@@ -1,7 +1,7 @@
 .product {
     display: block;
     padding: 15px;
-    border: 1px solid $color-border-primary;
+    border: 1px solid $gray-lightest;
 
     &__link {
         @include links(active) {
@@ -33,7 +33,7 @@
 
     &__name {
         font-weight: 700;
-        color: $font-color;
+        color: $body-color;
         font-size: 12px;
 
         @include mq($screen-m) {
@@ -44,7 +44,7 @@
     &__type {
         padding: 15px 0;
         font-size: 14px;
-        color: $font-color-lighter2;
+        color: $gray-light;
     }
 
     &__button {

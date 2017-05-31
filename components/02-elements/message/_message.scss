@@ -1,18 +1,17 @@
-.infobar {
+.message {
     width: 100%;
-    background-color: $color-international-orange;
+    background-color: $gray-lightest;
     transition: height 0.3s;
     box-sizing: border-box;
 
     &--with-button {
-        background-color: $color-gray-background;
         text-align: center;
         position: fixed;
         bottom: 0;
         left: 0;
         z-index: 6;
 
-        .infobar__message {
+        .message__message {
             display: block;
             margin-bottom: 10px;
 
@@ -23,16 +22,14 @@
             }
         }
 
-        .infobar__text {
-            color: lighten($color-black, 50%);
+        .message__text {
             text-transform: none;
             display: inline;
             font-weight: 400;
             margin: 0;
         }
 
-        .infobar__link {
-            color: lighten($color-black, 50%);
+        .message__link {
             text-transform: none;
             display: inline;
             border: none;
@@ -41,11 +38,11 @@
             text-decoration: underline;
 
             @include links(hover) {
-                color: $color-black;
+                color: $black;
             }
         }
 
-        .infobar__close {
+        .message__close {
             display: inline-block;
             position: relative;
             top: auto;
@@ -53,9 +50,7 @@
             width: auto;
             height: auto;
             font-weight: 400;
-            color: lighten($color-black, 50%);
             font-size: 12px;
-
             &:hover {
                 text-decoration: underline;
             }
@@ -83,7 +78,6 @@
 
     &__text {
         font-size: 12px;
-        color: $color-white;
         font-weight: 700;
         display: block;
         margin-bottom: 10px;
@@ -101,8 +95,7 @@
             display: inline-block;
             font-weight: 400;
             font-size: 12px;
-            color: $color-white;
-            border: 1px solid $color-white;
+            border: 1px solid $white;
             padding: 5px;
         }
     }
@@ -119,7 +112,7 @@
         cursor: pointer;
 
         &--icon {
-            fill: $color-white;
+            fill: $white;
             width: 10px;
             height: 10px;
             margin: auto;

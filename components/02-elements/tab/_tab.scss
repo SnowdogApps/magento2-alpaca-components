@@ -9,7 +9,7 @@
     &__title {
         position: relative;
         padding: 15px;
-        border-bottom: 1px solid $color-border-primary;
+        border-bottom: 1px solid $gray-light;
         font-weight: 700;
         cursor: pointer;
         text-align: left;
@@ -18,20 +18,20 @@
             flex-basis: 25%;
             order: -1;
             margin-right: 10px;
-            background-color: $color-gray-background;
+            background-color: $gray-lightest;
             border-bottom: 0 none;
             bottom: -1px;
-            color: $font-color-lighter2;
+            color: $body-color;
         }
 
         &--active {
             @include mq($screen-l) {
-                border-color: $color-border-primary;
+                border-color: $gray-light;
                 border-width: 1px 1px 0 1px;
                 border-style: solid;
-                background-color: $color-white;
+                background-color: $white;
                 z-index: 2;
-                color: $font-color;
+                color: $body-color;
             }
 
             .tabs__icon {
@@ -50,7 +50,7 @@
         width: 13px;
         height: 13px;
         top: 17px;
-        fill: $color-gull-gray;
+        fill: $gray;
         transition: transform 0.3s;
 
         @include mq($screen-l) {
@@ -77,10 +77,10 @@
         &--active {
             display: block;
             opacity: 1;
-            border-bottom: 1px solid $color-border-primary;
+            border-bottom: 1px solid $gray-light;
             @include mq($screen-l) {
                 border-bottom: 0 none;
-                border-top: 1px solid $color-border-primary;
+                border-top: 1px solid $gray-light;
             }
         }
     }

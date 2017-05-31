@@ -1,7 +1,6 @@
 .paragraph {
-    font-family: $font-family;
-    font-size: 16px;
     line-height: 2;
+    margin-top: 0;
 
     p {
         margin: 15px 0;
@@ -18,14 +17,13 @@
 
     pre {
         padding: 20px;
-        background: $color-gray-background;
+        background: $gray-lightest;
         overflow: scroll;
     }
 
     blockquote {
-        border-left: 5px solid $color-primary;
+        border-left: 5px solid $gray-light;
         margin: 10px 0;
-        padding: 10px 10px 10px 40px;
-        background: $color-gray-background;
+        padding: 10px 10px 10px 20px;
     }
 }

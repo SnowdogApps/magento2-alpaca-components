@@ -18,7 +18,7 @@
 
         &--current {
             background-color: $color-primary;
-            color: $color-white;
+            color: $white;
             padding: 10px;
 
             @include mq($screen-m) {
@@ -41,7 +41,7 @@
 
     &__link {
         @include links(active) {
-            color: $font-color-lighter2;
+            color: $gray;
             padding: 10px;
             text-decoration: none;
 
