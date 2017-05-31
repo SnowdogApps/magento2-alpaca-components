@@ -1,6 +1,5 @@
-.product-item {
+.product {
     display: block;
-    list-style-type: none;
     padding: 15px;
     border: 1px solid $border-base;
 
@@ -30,10 +29,6 @@
         max-width: 100%;
         width: auto;
         height: auto;
-    }
-
-    &__info {
-        padding-top: 10px;
     }
 
     &__name {

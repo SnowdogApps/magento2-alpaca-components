@@ -12,19 +12,18 @@ module.exports = {
   },
   variants: [
     {
-      name: 'new flag',
+      name: 'with-badge',
       context: {
         newflag: true
       }
     },
     {
-      name: 'cart',
+      name: 'with-add-to-cart-button',
       context: {
         buttonAddToCart: true,
         button: {
           text: 'Add to Cart',
           modifier: 'dark',
-          iconId: false,
           additionalClass: 'product-item__button'
         }
       }

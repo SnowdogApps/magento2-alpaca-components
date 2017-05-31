@@ -1,0 +1,16 @@
+<a href="#" class="banner">
+    <picture class="banner__picture">
+        <source data-srcset="{{ image480 }}" media="(max-width: 480px)" />
+        <source data-srcset="{{ image768 }}" media="(max-width: 768px)" />
+        <source data-srcset="{{ image992 }}" media="(max-width: 992px)" />
+        <source data-srcset="{{ image1170 }}" />
+        <img class="banner__image lazyload"
+             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+		     data-src="{{ image1170 }}"
+		     alt="image with artdirection"
+        />
+    </picture>
+	<h2 class="banner__heading heading heading--second-level">
+        {{ heading }}
+    </h2>
+</a>
