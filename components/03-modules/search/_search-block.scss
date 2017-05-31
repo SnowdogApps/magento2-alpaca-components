@@ -3,11 +3,10 @@
     top: 65px;
     width: 100%;
     visibility: hidden;
-    // box-shadow: 2px 3px 18px 0 rgba(0, 0, 0, 0.13);
     border: 1px solid #eaeaea;
     max-width: $max-content-width;
     z-index: 98;
-    background-color: $color-white;
+    background-color: $white;
 
     @include mq($screen-m) {
         top: 75px;
@@ -27,9 +26,8 @@
         height: 20px;
         display: block;
         transform: rotate(45deg);
-        // box-shadow: 2px 3px 18px 0 rgba(0, 0, 0, 0.13);
         border: 1px solid #eaeaea;
-        background-color: $color-white;
+        background-color: $white;
 
         @include mq($screen-l) {
             right: 50px;

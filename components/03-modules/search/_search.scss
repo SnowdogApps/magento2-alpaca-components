@@ -8,7 +8,7 @@
     width: 100%;
     position: relative;
     padding: 15px;
-    background-color: $color-white;
+    background-color: $white;
     @include clearfix();
 
     &__label {
@@ -43,7 +43,7 @@
         margin-right: 5%;
         height: 40px;
         border-style: solid;
-        border-color: $color-border-primary;
+        border-color: $gray;
         border-width: 0 0 2px 0;
     }
 

@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Search',
+  status: 'prototype',
   context: {
     placeholder: 'Search...',
     buttonText: 'Search'

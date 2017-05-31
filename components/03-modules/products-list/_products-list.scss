@@ -5,7 +5,7 @@
     padding: 0;
 
     &__item {
-        border: 1px solid $color-border-primary;
+        border: 1px solid $gray-light;
         padding: 10px;
         margin-bottom: 10px;
     }
@@ -25,7 +25,7 @@
     &__img-box {
         flex-basis: 70px;
         padding: 0 10px 0 0;
-        border-right: 1px solid $color-border-primary;
+        border-right: 1px solid $gray-light;
     }
 
     &__img {
@@ -40,11 +40,10 @@
         font-size: 14px;
         margin-bottom: 5px;
         font-weight: 700;
-        color: $font-color;
     }
 
     &__details {
-        color: $font-color-lighter2;
+        color: $gray-lighter;
         font-size: 12px;
     }
 }
