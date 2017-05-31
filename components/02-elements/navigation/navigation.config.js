@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Navigation component',
+  status: 'prototype',
   context: {
     menuItems: [
       {
