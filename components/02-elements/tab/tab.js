@@ -1,9 +1,9 @@
 'use strict'
 
-const tab                = document.querySelectorAll('.tabs__title'),
-      content            = document.querySelectorAll('.tabs__content'),
-      activeTitleClass   = 'tabs__title--active',
-      activeContentClass = 'tabs__content--active';
+const tab                = document.querySelectorAll('.tab__title'),
+      content            = document.querySelectorAll('.tab__content'),
+      activeTitleClass   = 'tab__title--active',
+      activeContentClass = 'tab__content--active';
 
 
 tab.forEach(key => key.addEventListener('click', event => {
