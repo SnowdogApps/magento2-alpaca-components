@@ -3,8 +3,8 @@
 }
 
 body {
-    font-family: $font-family;
-    font-weight: 400;
+    font-family: $font-family-base;
+    font-weight: $font-weight-base;
     font-size: $font-size-base;
     margin: 20px;
 }
