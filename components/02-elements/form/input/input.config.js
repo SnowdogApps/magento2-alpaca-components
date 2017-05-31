@@ -1,7 +1,14 @@
 module.exports = {
-  title: 'Input field',
   context: {
-    labelText: 'Label text',
+    label: 'Label text',
     placeholder: 'First and last name'
-  }
+  },
+  variants: [
+    {
+      name: 'textarea',
+      context: {
+        textarea: true
+      }
+    }
+  ]
 };
