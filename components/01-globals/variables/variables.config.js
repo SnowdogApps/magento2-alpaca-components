@@ -4,11 +4,11 @@ module.exports = {
     heading1: 'Colors',
     colors: [
       {
-        varName: '$color-main1',
+        varName: '$color-primary',
         color: '#f26322'
       },
       {
-        varName: '$color-main2',
+        varName: '$color-international-orange',
         color: '#ff5000'
       },
       {
@@ -20,31 +20,23 @@ module.exports = {
         color: '#ffffff'
       },
       {
-        varName: '$color-accent',
+        varName: '$color-success',
         color: '#2e7501'
       },
       {
-        varName: '$color-gray1',
+        varName: '$color-gull-gray',
         color: '#9ea3a4'
       },
       {
-        varName: '$color-gray2',
-        color: '#666666'
-      },
-      {
-        varName: '$color-gray3',
-        color: '#c2c2c2'
-      },
-      {
-        varName: '$color-gray-dark',
+        varName: '$color-matterhorn-gray',
         color: '#1b0d08'
       },
       {
-        varName: '$color-bg-gray',
+        varName: '$color-gray-background',
         color: '#e8e8e8'
       },
       {
-        varName: '$border-base',
+        varName: '$color-border-primary',
         color: '#cccccc'
       }
     ],
@@ -107,7 +99,7 @@ module.exports = {
       },
       {
         varName: '$font-color',
-        value: '$color-gray-dark'
+        value: '$color-matterhorn-gray'
       },
       {
         varName: '$font-color-lighter1',

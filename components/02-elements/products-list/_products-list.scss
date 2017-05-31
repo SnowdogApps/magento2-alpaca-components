@@ -5,7 +5,7 @@
     padding: 0;
 
     &__item {
-        border: 1px solid $border-base;
+        border: 1px solid $color-border-primary;
         padding: 10px;
         margin-bottom: 10px;
     }
@@ -25,7 +25,7 @@
     &__img-box {
         flex-basis: 70px;
         padding: 0 10px 0 0;
-        border-right: 1px solid $border-base;
+        border-right: 1px solid $color-border-primary;
     }
 
     &__img {

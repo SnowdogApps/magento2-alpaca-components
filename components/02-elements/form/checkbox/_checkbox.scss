@@ -30,7 +30,7 @@
             margin: -1px 10px 0 0;
             vertical-align: middle;
             cursor: pointer;
-            border: 1px solid $border-base;
+            border: 1px solid $color-border-primary;
         }
     }
 
@@ -40,7 +40,7 @@
         left: 5px;
         width: 10px;
         height: 8px;
-        fill: $color-main1;
+        fill: $color-primary;
         display: none;
     }
 }

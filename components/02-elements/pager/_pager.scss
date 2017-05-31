@@ -17,7 +17,7 @@
         display: inline-block;
 
         &--current {
-            background-color: $color-main1;
+            background-color: $color-primary;
             color: $color-white;
             padding: 10px;
 
@@ -51,7 +51,7 @@
         }
 
         @include links(hover) {
-            color: $color-main1;
+            color: $color-primary;
             text-decoration: none;
         }
     }
