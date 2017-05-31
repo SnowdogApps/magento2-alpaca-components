@@ -6,6 +6,7 @@ node_modules/*
 
 // Build
 build/*
+dest/*
 public/css/*
 public/images/icons-sprite.svg
 
