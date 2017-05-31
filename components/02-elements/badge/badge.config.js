@@ -1,5 +1,4 @@
 module.exports = {
-  status: 'ready',
   collated: true,
   context : {
     text: 'Default'

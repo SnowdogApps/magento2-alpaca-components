@@ -1,5 +1,6 @@
 module.exports = {
-  title: 'Button',
+  status: 'prototype',
+  collated: true,
   context: {
     text: 'I am a button'
   },

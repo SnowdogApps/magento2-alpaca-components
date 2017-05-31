@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Checkbox field',
+  collated: true,
   context: {
     labelText: 'Checkbox field',
     checkboxId: 'checkbox1'

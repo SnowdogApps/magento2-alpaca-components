@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Tab',
+  status: 'wip',
   context: {
     tabs: [
       {

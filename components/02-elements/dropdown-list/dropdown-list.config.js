@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Dropdown list',
+  status: 'wip',
   context: {
     dropdowns: [
       {
