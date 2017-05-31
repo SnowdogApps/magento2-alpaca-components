@@ -33,7 +33,7 @@
         top: 20px;
         width: 10px;
         height: 6px;
-        color: $color-gray1;
+        color: $color-gull-gray;
         transition: transform 0.3s, opacity 0.3s;
 
         @include mq($screen-m) {
@@ -178,7 +178,7 @@
 
                 @include links(hover) {
                     font-weight: 400;
-                    color: $color-main1;
+                    color: $color-primary;
                     text-decoration: underline;
                 }
             }

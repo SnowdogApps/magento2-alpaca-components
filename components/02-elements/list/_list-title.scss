@@ -2,7 +2,7 @@
     display: block;
     padding: 10px 0;
     margin: 10px;
-    border-bottom: 1px solid $border-base;
+    border-bottom: 1px solid $color-border-primary;
     cursor: pointer;
 
     @include mq($screen-m) {
@@ -15,7 +15,7 @@
             width: 70px;
             height: 2px;
             margin-top: 10px;
-            border-top: 2px solid $color-gray-dark;
+            border-top: 2px solid $color-matterhorn-gray;
         }
 
         .list-title__icon {
@@ -45,7 +45,7 @@
         top: 12px;
         width: 13px;
         height: 13px;
-        fill: $color-gray1;
+        fill: $color-gull-gray;
         transition: transform 0.3s;
 
         @include mq($screen-l) {

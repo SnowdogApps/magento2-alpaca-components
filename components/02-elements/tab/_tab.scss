@@ -9,7 +9,7 @@
     &__title {
         position: relative;
         padding: 15px;
-        border-bottom: 1px solid $border-base;
+        border-bottom: 1px solid $color-border-primary;
         font-weight: 700;
         cursor: pointer;
         text-align: left;
@@ -18,7 +18,7 @@
             flex-basis: 25%;
             order: -1;
             margin-right: 10px;
-            background-color: $color-bg-gray;
+            background-color: $color-gray-background;
             border-bottom: 0 none;
             bottom: -1px;
             color: $font-color-lighter2;
@@ -26,7 +26,7 @@
 
         &--active {
             @include mq($screen-l) {
-                border-color: $border-base;
+                border-color: $color-border-primary;
                 border-width: 1px 1px 0 1px;
                 border-style: solid;
                 background-color: $color-white;
@@ -50,7 +50,7 @@
         width: 13px;
         height: 13px;
         top: 17px;
-        fill: $color-gray1;
+        fill: $color-gull-gray;
         transition: transform 0.3s;
 
         @include mq($screen-l) {
@@ -77,10 +77,10 @@
         &--active {
             display: block;
             opacity: 1;
-            border-bottom: 1px solid $border-base;
+            border-bottom: 1px solid $color-border-primary;
             @include mq($screen-l) {
                 border-bottom: 0 none;
-                border-top: 1px solid $border-base;
+                border-top: 1px solid $color-border-primary;
             }
         }
     }

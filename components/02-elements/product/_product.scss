@@ -1,7 +1,7 @@
 .product {
     display: block;
     padding: 15px;
-    border: 1px solid $border-base;
+    border: 1px solid $color-border-primary;
 
     &__link {
         @include links(active) {

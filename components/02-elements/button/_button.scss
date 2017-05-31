@@ -23,11 +23,11 @@
     }
 
     @include links(hover) {
-        color: $color-main1;
+        color: $color-primary;
         text-decoration: none;
 
         .button__icon {
-            fill: $color-main1;
+            fill: $color-primary;
         }
     }
 
@@ -36,13 +36,13 @@
         box-shadow: none;
 
         .button__icon {
-            fill: $color-main1;
+            fill: $color-primary;
         }
     }
 
     &--color-icon {
         .button__icon {
-            fill: $color-main1;
+            fill: $color-primary;
         }
     }
 
@@ -51,7 +51,7 @@
     }
 
     &--dark {
-        background-color: $color-main1;
+        background-color: $color-primary;
         box-shadow: none;
         @include links(active) {
             color: $color-white;
@@ -59,7 +59,7 @@
 
         @include links(hover) {
             color: $color-white;
-            background-color: $color-main2;
+            background-color: $color-international-orange;
 
             .button__icon {
                 fill: $color-white;
@@ -72,14 +72,14 @@
     }
 
     &--borders {
-        border: 2px solid $border-base;
+        border: 2px solid $color-border-primary;
         box-shadow: none;
         transition: color 0.3s, background 0.3s, borders 0.3s;
 
         @include links(hover) {
-            background-color: $color-main1;
+            background-color: $color-primary;
             color: $color-white;
-            border: 2px solid $color-main1;
+            border: 2px solid $color-primary;
 
             .button__icon {
                 fill: $color-white;
@@ -90,12 +90,12 @@
     &--search {
         text-transform: uppercase;
         width: 100%;
-        border-top: 1px solid $color-main1;
+        border-top: 1px solid $color-primary;
     }
 
     &--blue {
         width: 100%;
-        background-color: $color-main1;
+        background-color: $color-primary;
         box-shadow: none;
         @include links(active) {
             color: $color-white;
@@ -103,7 +103,7 @@
 
         @include links(hover) {
             color: $color-white;
-            background-color: $color-main2;
+            background-color: $color-international-orange;
         }
     }
 
