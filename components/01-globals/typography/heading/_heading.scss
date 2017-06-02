@@ -3,6 +3,7 @@ $headings-font-family           : inherit !default;
 $headings-font-weight           : 500 !default;
 $headings-line-height           : 1.1 !default;
 $headings-color                 : inherit !default;
+$headings-text-transform        : none !default;
 
 $heading-font-size--first-level : 40px !default;
 $heading-font-size--second-level: 32px !default;
@@ -17,6 +18,8 @@ $heading-font-size--sixth-level : 16px !default;
     font-weight: $headings-font-weight;
     line-height: $headings-line-height;
     color: $headings-color;
+    text-transform: $headings-text-transform;
+
     &--first-level {
         font-size: $heading-font-size--first-level;
     }
