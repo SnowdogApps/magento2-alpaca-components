@@ -42,8 +42,6 @@ hbsEngine.handlebars.registerHelper('static', (file, data) => {
   return '/components/raw/' + data.data.root._self.baseHandle + '/' + file;
 });
 
-hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file}`);
-
 hbsEngine.handlebars.registerHelper('svg', icon => {
   return '/images/icons-sprite.svg#' + icon;
 });
