@@ -92,6 +92,10 @@ gulp.task('watch', () => {
 });
 
 gulp.task('sass', () => {
+  if (util.env.ci) {
+    runSequence('paths');
+  }
+
   return gulp.src(fractal.docs.get('path') + '/styles/**/*.scss')
     .pipe(
       gulpif(!util.env.ci,
@@ -109,6 +113,10 @@ gulp.task('sass', () => {
 });
 
 gulp.task('sass-lint', () => {
+  if (util.env.ci) {
+    runSequence('paths');
+  }
+
   return gulp.src(fractal.components.get('path') + '/**/*.scss')
     .pipe(sassLint())
     .pipe(sassLint.format())
@@ -116,6 +124,10 @@ gulp.task('sass-lint', () => {
 });
 
 gulp.task('css-lint', () => {
+  if (util.env.ci) {
+    runSequence('paths');
+  }
+
   return gulp.src(fractal.web.get('static.path') + '/**/*.css')
     .pipe(postcss([
       stylelint(),
@@ -124,6 +136,10 @@ gulp.task('css-lint', () => {
 });
 
 gulp.task('js-lint', () => {
+  if (util.env.ci) {
+    runSequence('paths');
+  }
+
   return gulp.src(fractal.components.get('path') + '/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
@@ -185,11 +201,15 @@ gulp.task('inheritance', () => {
           fs.ensureSymlinkSync(srcPath, destPath);
         });
     });
+  }
+  runSequence('paths');
+});
 
-    // Set new paths for Fractal and methods depending on this params
+gulp.task('paths', () => {
+  if (fs.existsSync('./modules.json')) {
+    // Set new paths for Fractal
     fractal.components.set('path', __dirname + '/build/components');
     fractal.docs.set('path', __dirname + '/build/docs');
     fractal.web.set('static.path', __dirname + '/build/public');
-    fractal.web.set('builder.dest', __dirname + '/build/dest');
   }
 });
