@@ -31,9 +31,9 @@ bluebird.config({
 
 // Fractal configuration
 fractal.set('project.title', 'Alpaca UI Components for Magento 2');
-fractal.components.set('path', __dirname + '/components');
-fractal.docs.set('path', __dirname + '/docs');
-fractal.web.set('static.path', __dirname + '/public');
+fractal.components.set('path', __dirname + '/build/components');
+fractal.docs.set('path', __dirname + '/build/docs');
+fractal.web.set('static.path', __dirname + '/build/public');
 fractal.web.set('builder.dest', __dirname + '/dest');
 fractal.web.theme(mandelbrot({ skin: 'black' }));
 
@@ -92,10 +92,6 @@ gulp.task('watch', () => {
 });
 
 gulp.task('sass', () => {
-  if (util.env.ci) {
-    runSequence('paths');
-  }
-
   return gulp.src(fractal.docs.get('path') + '/styles/**/*.scss')
     .pipe(
       gulpif(!util.env.ci,
@@ -113,10 +109,6 @@ gulp.task('sass', () => {
 });
 
 gulp.task('sass-lint', () => {
-  if (util.env.ci) {
-    runSequence('paths');
-  }
-
   return gulp.src(fractal.components.get('path') + '/**/*.scss')
     .pipe(sassLint())
     .pipe(sassLint.format())
@@ -124,10 +116,6 @@ gulp.task('sass-lint', () => {
 });
 
 gulp.task('css-lint', () => {
-  if (util.env.ci) {
-    runSequence('paths');
-  }
-
   return gulp.src(fractal.web.get('static.path') + '/**/*.css')
     .pipe(postcss([
       stylelint(),
@@ -136,10 +124,6 @@ gulp.task('css-lint', () => {
 });
 
 gulp.task('js-lint', () => {
-  if (util.env.ci) {
-    runSequence('paths');
-  }
-
   return gulp.src(fractal.components.get('path') + '/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
@@ -159,57 +143,63 @@ gulp.task('svg-sprite', () => {
     .pipe(gulp.dest(fractal.web.get('static.path')));
 });
 
-gulp.task('inheritance', () => {
-  // Check if configuration file exist
-  if (fs.existsSync('./modules.json')) {
-    // Remove old build directory
-    fs.removeSync('./build');
+gulp.task('inheritance', done => {
+  const components = fractal.components.get('path').replace(__dirname + '/build/', ''),
+        docs = fractal.docs.get('path').replace(__dirname + '/build/', ''),
+        static = fractal.web.get('static.path').replace(__dirname + '/build/', '');
 
-    // Find all local files
-    globby
-      .sync([
-        fractal.components.get('path') + '/**',
-        fractal.docs.get('path') + '/**',
-        fractal.web.get('static.path') + '/**'
-      ], { nodir: true })
-      .forEach(file => {
-        // Symlink all local files to build dir
+  // Remove old build directory
+  fs.removeSync('./build');
+
+
+  // Find all local files
+  globby
+    .sync([
+      components + '/**',
+      docs + '/**',
+      static + '/**'
+    ], { nodir: true })
+    .forEach(file => {
+      // Symlink all local files to build dir
+      if (util.env.ci) {
+        fs.copySync(
+          file,
+          'build/' + file
+        );
+      }
+      else {
         fs.ensureSymlinkSync(
           file,
-          file.replace(__dirname, __dirname + '/build')
+          'build/' + file
         );
-      });
+      }
+    });
 
-    // Read modules configuration file
+  if (fs.existsSync('./modules.json')) {
     const modules = require('./modules.json');
 
     // Go through array of module paths
     modules.forEach(path => {
       // Find all module files
-      path = path.replace(__dirname, '');
       globby
         .sync([
-          path + fractal.components.get('path').replace(__dirname, '') + '/**',
-          path + fractal.docs.get('path').replace(__dirname, '') + '/**',
-          path + fractal.web.get('static.path').replace(__dirname, '') + '/**'
+          path + '/' + components + '/**',
+          path + '/' + docs + '/**',
+          path + '/' + static + '/**'
         ], { nodir: true })
         .forEach(file => {
           const srcPath = __dirname + '/' + file,
                 destPath = srcPath.replace(path, 'build');
 
           // Symlink all module files to build dir
-          fs.ensureSymlinkSync(srcPath, destPath);
+          if (util.env.ci) {
+            fs.copySync(srcPath, destPath, { overwrite: false });
+          }
+          else {
+            fs.ensureSymlinkSync(srcPath, destPath);
+          }
         });
     });
   }
-  runSequence('paths');
-});
-
-gulp.task('paths', () => {
-  if (fs.existsSync('./modules.json')) {
-    // Set new paths for Fractal
-    fractal.components.set('path', __dirname + '/build/components');
-    fractal.docs.set('path', __dirname + '/build/docs');
-    fractal.web.set('static.path', __dirname + '/build/public');
-  }
+  done();
 });
