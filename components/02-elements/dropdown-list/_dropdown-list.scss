@@ -98,7 +98,7 @@
             display: block;
             padding: 15px;
             font-weight: 700;
-            color: $body-color;
+            color: $font-color-base;
             transition: box-shadow 0.5s;
 
             @include mq($screen-m) {
@@ -107,7 +107,7 @@
         }
 
         @include links(hover) {
-            color: $body-color;
+            color: $font-color-base;
             text-decoration: none;
             box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
 
@@ -202,7 +202,7 @@
             padding: 15px 20px;
             text-transform: none;
             font-weight: 400;
-            color: $body-color;
+            color: $font-color-base;
         }
 
     }

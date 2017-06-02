@@ -20,7 +20,7 @@
         }
 
         @include links(hover) {
-            color: $body-color;
+            color: $font-color-base;
             text-decoration: none;
         }
 

@@ -102,7 +102,7 @@
     }
 
     &__item {
-        color: $body-color;
+        color: $font-color-base;
         border-bottom: 1px solid $gray;
         padding: 0;
 
@@ -192,7 +192,7 @@
 
     &__link {
         @include links(active) {
-            color: $body-color;
+            color: $font-color-base;
             font-weight: 700;
             display: block;
             padding: 13px 25px 13px 0;
@@ -382,12 +382,12 @@
         @include links(active) {
             font-weight: 400;
             padding: 13px 15px 13px 0;
-            color: $body-color;
+            color: $font-color-base;
             text-decoration: none;
         }
 
         @include links(hover) {
-            color: $body-color;
+            color: $font-color-base;
             text-decoration: underline;
         }
 
@@ -395,7 +395,7 @@
             @include links(active) {
                 font-weight: 700;
                 padding: 13px;
-                color: $body-color;
+                color: $font-color-base;
 
                 &:after {
                     content: '';
@@ -432,7 +432,7 @@
             padding: 20px;
             background-color: rgba($white, 0.6);
             font-weight: 700;
-            color: $body-color;
+            color: $font-color-base;
             text-transform: uppercase;
             text-decoration: none;
         }

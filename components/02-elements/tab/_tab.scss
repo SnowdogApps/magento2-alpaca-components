@@ -21,7 +21,7 @@
             background-color: $gray-lightest;
             border-bottom: 0 none;
             bottom: -1px;
-            color: $body-color;
+            color: $font-color-base;
         }
 
         &--active {
@@ -31,7 +31,7 @@
                 border-style: solid;
                 background-color: $white;
                 z-index: 2;
-                color: $body-color;
+                color: $font-color-base;
             }
 
             .tabs__icon {

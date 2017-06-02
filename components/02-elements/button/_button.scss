@@ -6,7 +6,7 @@
     box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
     font-weight: 700;
     background-color: $white;
-    color: $body-color;
+    color: $font-color-base;
     text-align: center;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
@@ -18,7 +18,7 @@
     }
 
     @include links() {
-        color: $body-color;
+        color: $font-color-base;
         outline: none;
     }
 
@@ -106,7 +106,7 @@
     }
 
     &__icon {
-        fill: $body-color;
+        fill: $font-color-base;
         width: 8px;
         height: 13px;
         margin-left: 10px;

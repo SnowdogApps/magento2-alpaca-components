@@ -33,7 +33,7 @@
 
     &__name {
         font-weight: 700;
-        color: $body-color;
+        color: $font-color-base;
         font-size: 12px;
 
         @include mq($screen-m) {

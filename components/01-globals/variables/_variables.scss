@@ -27,7 +27,6 @@ $color-inverse         : $gray-dark !default;
 
 // Body
 $body-bg               : $white !default;
-$body-color            : $gray-dark !default;
 
 // Links
 $link-color            : $color-primary !default;
@@ -40,6 +39,7 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 $font-family-monospace : Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base      : $font-family-sans-serif !default;
 
+$font-color-base       : $gray-dark !default;
 $font-weight-normal    : normal !default;
 $font-weight-bold      : bold !default;
 $font-weight-base      : $font-weight-normal !default;
