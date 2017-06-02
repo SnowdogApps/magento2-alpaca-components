@@ -44,8 +44,8 @@ hbsEngine.handlebars.registerHelper('static', (file, data) => {
 
 hbsEngine.handlebars.registerHelper('libs', file => `/components/raw/libs/${file}`);
 
-hbsEngine.handlebars.registerHelper('inline', src => {
-  return fs.readFileSync(fractal.web.get('static.path') + '/' + src, 'utf8');
+hbsEngine.handlebars.registerHelper('svg', icon => {
+  return '/images/icons-sprite.svg#' + icon;
 });
 
 // Fractal gulp tasks
@@ -137,7 +137,6 @@ gulp.task('svg-sprite', () => {
     .pipe(svgSprite({
       mode: {
         symbol: {
-          inline: true,
           dest: 'images',
           sprite: 'icons-sprite.svg'
         }

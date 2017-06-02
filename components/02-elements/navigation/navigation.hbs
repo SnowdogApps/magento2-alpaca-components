@@ -1,6 +1,6 @@
 <div class="menu__mobile">
     <svg class="menu__mobile-icon">
-        <use xlink:href="#mobile-menu"></use>
+        <use xlink:href="{{ svg 'mobile-menu' }}"></use>
     </svg>
 </div>
 <nav class="menu">
@@ -11,7 +11,7 @@
                 {{ itemName }}
                 {{#if submenu }}
                     <svg class="menu__icon">
-                        <use xlink:href="#arrow-down"></use>
+                        <use xlink:href="{{ svg 'arrow-down' }}"></use>
                     </svg>
                 {{/if}}
             </a>
@@ -23,7 +23,7 @@
                                 {{ itemName }}
                                 {{#if submenu }}
                                     <svg class="menu__icon menu__icon--inner">
-                                        <use xlink:href="#plus"></use>
+                                        <use xlink:href="{{ svg 'plus' }}"></use>
                                     </svg>
                                 {{/if}}
                             </a>
