@@ -1,152 +1,70 @@
-@import 'list-title';
-@import 'list-wrap';
+$list-style: none !default;
+$list-margin: 10px 0 !default;
+$list-padding: 0 !default;
+
+$list-padding--horizontal: 10px !default;
 
 .list {
-    display: block;
-    list-style-type: none;
-    padding: 10px;
-    margin: 0;
-    line-height: 1.4;
-
-    &--labeling {
-        .list__item {
-            @include mq($screen-m) {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-            }
-        }
-
-        .list__label {
-            font-weight: 400;
-            margin-right: 0;
-            display: block;
-            text-align: center;
-            margin-bottom: 10px;
-
-            @include mq($screen-m) {
-                width: 50%;
-                margin-bottom: 0;
-                text-align: left;
-            }
-        }
-
-        .list__value {
-            text-align: right;
-            display: block;
-            text-align: center;
-
-            @include mq($screen-m) {
-                width: 50%;
-                text-align: right;
-            }
-        }
-    }
-
-    &--odd-even {
-        .list__item {
-            padding: 10px;
-            margin-bottom: 0;
-
-            &:nth-child(odd) {
-                background-color: $gray;
-            }
-
-            @include mq($screen-m) {
-                padding: 15px 30px;
-            }
-        }
-    }
-
-    &--titled {
-        display: block;
-        height: 0;
-        padding: 0 10px;
-        overflow: hidden;
-        transition: height 0.5s;
-
-        @include mq($screen-m) {
-            display: block;
-            height: auto;
-        }
-
-        .list__item {
-            margin: 0;
-        }
-
-        .list__link {
-            padding-top: 10px;
-            display: block;
-        }
-    }
-
-    &--2cols {
-        @include mq($screen-l) {
-            column-count: 2;
-        }
-    }
-
-    &--search {
-        padding: 0;
-
-        .list__item {
-            padding: 5px 0;
-        }
-
-        .list__link {
-            text-decoration: none;
-        }
-    }
-
-    &--social {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        @include mq($screen-m) {
-            justify-content: flex-end;
-        }
-
-        .list__item {
-            margin-right: 25px;
-        }
-    }
+    margin: $list-margin;
+    padding: $list-padding;
+    list-style: $list-style;
 
     &__item {
-        color: $font-color-base;
-        margin-bottom: 5px;
-
+        display: list-item;
+        padding: 5px 0;
+        &:first-child {
+            padding-top: 0;
+        }
         &:last-child {
-            margin-bottom: 0;
+            padding-bottom: 0;
         }
     }
-
-    &__label {
-        font-weight: 700;
-        margin-right: 7px;
+    .list__content {
+        padding-left: 10px;
     }
 
-    &__value {
-        color: $gray;
-    }
-
-    &__link {
-        display: block;
-        @include links(active) {
-            color: $gray;
+    &--horizontal {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .list__item {
+            padding: $list-padding--horizontal;
         }
     }
-
-    &__social-icon {
-        fill: $black;
-        width: 16px;
-        height: 16px;
-
-        &--twitter {
-            width: 21px;
+    &--with-icon {
+        .list__item {
+            display: flex;
+            align-items: center;
         }
-
-        &--google {
-            width: 25px;
+        .list__icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &--with-image {
+        .list__item {
+            display: flex;
+        }
+        .list__image {
+            width: 100px;
+            height: auto;
+        }
+    }
+    &--divided {
+        .list__item {
+            border-bottom: 1px solid $gray-dark;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        &.list--horizontal {
+            .list__item {
+                border-bottom: none;
+                border-right: 1px solid $gray-dark;
+                &:last-child {
+                    border-right: none;
+                }
+            }
         }
     }
 }
