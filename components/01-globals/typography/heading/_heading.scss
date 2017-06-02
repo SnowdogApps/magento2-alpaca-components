@@ -1,4 +1,4 @@
-$headings-margin-bottom         : 0.5em !default;
+$headings-margin-bottom         : 0 0 0.5em 0 !default;
 $headings-font-family           : inherit !default;
 $headings-font-weight           : 500 !default;
 $headings-line-height           : 1.1 !default;
@@ -13,7 +13,7 @@ $heading-font-size--fifth-level : 20px !default;
 $heading-font-size--sixth-level : 16px !default;
 
 .heading {
-    margin-bottom: $headings-margin-bottom;
+    margin: $headings-margin;
     font-family: $headings-font-family;
     font-weight: $headings-font-weight;
     line-height: $headings-line-height;
