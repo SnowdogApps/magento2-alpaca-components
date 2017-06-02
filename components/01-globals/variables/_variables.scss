@@ -1,6 +1,4 @@
 // Colors
-
-// Start with assigning color names to specific hex values.
 $white                 : #fff !default;
 $black                 : #000 !default;
 $red                   : #d9534f !default;
@@ -12,14 +10,14 @@ $teal                  : #5bc0de !default;
 $pink                  : #ff5b77 !default;
 $purple                : #613d7c !default;
 
-// Create grayscale
+// Grayscale colors
 $gray-dark             : #292b2c !default;
 $gray                  : #464a4c !default;
 $gray-light            : #636c72 !default;
 $gray-lighter          : #eceeef !default;
 $gray-lightest         : #f7f7f9 !default;
 
-// Reassign color vars to semantic color scheme
+// Smantic color scheme
 $color-primary         : $blue !default;
 $color-success         : $green !default;
 $color-info            : $teal !default;
@@ -28,19 +26,16 @@ $color-danger          : $red !default;
 $color-inverse         : $gray-dark !default;
 
 // Body
-
 $body-bg               : $white !default;
 $body-color            : $gray-dark !default;
 
 // Links
-
 $link-color            : $color-primary !default;
 $link-decoration       : none !default;
 $link-hover-color      : darken($link-color, 15%) !default;
 $link-hover-decoration : underline !default;
 
 // Typography
-
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $font-family-monospace : Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base      : $font-family-sans-serif !default;
@@ -56,11 +51,9 @@ $font-size-small       : 14px !default;
 $font-size-extra-small : 12px !default;
 
 // Layout
-
 $max-content-width     : 1180px;
 
 // Layout - breakpoints
-
 $screen-xs             : 320px;
 $screen-s              : 480px;
 $screen-m              : 768px;
@@ -69,9 +62,6 @@ $screen-xl             : 1200px;
 $screen-xxl            : 1600px;
 
 // Components
-
-// Define common padding and border radius sizes and more.
-
 $border-radius         : 4px !default;
 
 $transition-base       : all 0.2s ease-in-out !default;
