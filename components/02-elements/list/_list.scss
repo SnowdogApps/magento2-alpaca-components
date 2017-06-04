@@ -1,8 +1,20 @@
 $list-style: none !default;
 $list-margin: 10px 0 !default;
 $list-padding: 0 !default;
+$list-item-padding: 5px 0 !default;
+$list-content-padding: 10px !default;
 
+// Horizontal
 $list-padding--horizontal: 10px !default;
+
+// With icon
+$list-icon-size: 16px !default;
+
+// With image
+$list-image-width: 16px !default;
+
+// Divided
+$list-divider: 1px solid $gray-dark !default;
 
 .list {
     margin: $list-margin;
@@ -11,7 +23,7 @@ $list-padding--horizontal: 10px !default;
 
     &__item {
         display: list-item;
-        padding: 5px 0;
+        padding: $list-item-padding;
         &:first-child {
             padding-top: 0;
         }
@@ -20,7 +32,7 @@ $list-padding--horizontal: 10px !default;
         }
     }
     .list__content {
-        padding-left: 10px;
+        padding-left: $list-content-padding;
     }
 
     &--horizontal {
@@ -37,8 +49,8 @@ $list-padding--horizontal: 10px !default;
             align-items: center;
         }
         .list__icon {
-            width: 16px;
-            height: 16px;
+            width: $list-icon-size;
+            height: $list-icon-size;
         }
     }
     &--with-image {
@@ -46,13 +58,13 @@ $list-padding--horizontal: 10px !default;
             display: flex;
         }
         .list__image {
-            width: 100px;
+            width: $list-image-width;
             height: auto;
         }
     }
     &--divided {
         .list__item {
-            border-bottom: 1px solid $gray-dark;
+            border-bottom: $list-divider;
             &:last-child {
                 border-bottom: none;
             }
@@ -60,7 +72,7 @@ $list-padding--horizontal: 10px !default;
         &.list--horizontal {
             .list__item {
                 border-bottom: none;
-                border-right: 1px solid $gray-dark;
+                border-right: $list-divider;
                 &:last-child {
                     border-right: none;
                 }
