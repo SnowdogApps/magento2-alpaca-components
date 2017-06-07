@@ -3,9 +3,10 @@
 }
 
 body {
+    min-width: 320px;
+    margin: 20px;
     font-family: $font-family-base;
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     color: $font-color-base;
-    margin: 20px;
 }
