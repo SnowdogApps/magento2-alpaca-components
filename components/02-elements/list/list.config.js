@@ -3,11 +3,21 @@ module.exports = {
     listTag: 'ul',
     elementTag: 'li',
     elements: [
-      'Lorem ipsum',
-      'Lorem ipsum',
-      'Lorem ipsum',
-      'Lorem ipsum',
-      'Lorem ipsum'
+      {
+        text: 'Lorem ipsum'
+      },
+      {
+        text: 'Lorem ipsum'
+      },
+      {
+        text: 'Lorem ipsum'
+      },
+      {
+        text: 'Lorem ipsum'
+      },
+      {
+        text: 'Lorem ipsum'
+      }
     ]
   },
   variants: [
