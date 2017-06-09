@@ -1,10 +1,12 @@
-$grid-breakpoint-two-cols         : $screen-m;
-$grid-breakpoint-three-cols       : $screen-m;
-$grid-breakpoint-four-cols-first  : $screen-m;
-$grid-breakpoint-four-cols-second : $screen-l;
-$grid-breakpoint-five-cols        : $screen-m;
-$grid-breakpoint-six-cols-first   : $screen-m;
-$grid-breakpoint-six-cols-second  : $screen-xl;
+$grid-breakpoint-two-cols         : $screen-m !default;
+$grid-breakpoint-three-cols       : $screen-m !default;
+$grid-breakpoint-four-cols-first  : $screen-m !default;
+$grid-breakpoint-four-cols-second : $screen-l !default;
+$grid-breakpoint-five-cols        : $screen-m !default;
+$grid-breakpoint-six-cols-first   : $screen-m !default;
+$grid-breakpoint-six-cols-second  : $screen-xl !default;
+
+$grid-column-padding: 10px !default;
 
 .grid {
     $gutter: 1%;
@@ -19,7 +21,7 @@ $grid-breakpoint-six-cols-second  : $screen-xl;
 
     &__column {
         flex-basis: 100%;
-        padding: 10px;
+        padding: $grid-column-padding;
     }
 
     &--two-cols {
