@@ -1,3 +1,11 @@
+$grid-breakpoint-two-cols         : $screen-m;
+$grid-breakpoint-three-cols       : $screen-m;
+$grid-breakpoint-four-cols-first  : $screen-m;
+$grid-breakpoint-four-cols-second : $screen-l;
+$grid-breakpoint-five-cols        : $screen-m;
+$grid-breakpoint-six-cols-first   : $screen-m;
+$grid-breakpoint-six-cols-second  : $screen-xl;
+
 .grid {
     $gutter: 1%;
 
@@ -15,39 +23,39 @@
     }
 
     &--two-cols {
-        @include mq($screen-m) {
+        @include mq($grid-breakpoint-two-cols) {
             flex-basis: column-width(2);
         }
     }
 
     &--three-cols {
-        @include mq($screen-m) {
+        @include mq($grid-breakpoint-three-cols) {
             flex-basis: column-width(3);
         }
     }
 
     &--four-cols {
-        @include mq($screen-m) {
+        @include mq($grid-breakpoint-four-cols-first) {
             flex-basis: column-width(2);
         }
 
-        @include mq($screen-l) {
+        @include mq($grid-breakpoint-four-cols-second) {
             flex-basis: column-width(4);
         }
     }
 
     &--five-cols {
-        @include mq($screen-m) {
+        @include mq($grid-breakpoint-five-cols) {
             flex-basis: column-width(5);
         }
     }
 
     &--six-cols {
-        @include mq($screen-m) {
+        @include mq($grid-breakpoint-six-cols-first) {
             flex-basis: column-width(3);
         }
 
-        @include mq($screen-xl) {
+        @include mq($grid-breakpoint-six-cols-second) {
             flex-basis: column-width(6);
         }
     }
