@@ -3,13 +3,11 @@ $select-padding          : 10px 15px !default;
 $select-border-radius    : $border-radius !default;
 
 .select {
-    &__field {
-        width: 100%;
-        border: 1px solid $select-border-color;
-        border-radius: $select-border-radius;
-        position: relative;
-        background: $white;
-    }
+    width: 100%;
+    border: 1px solid $select-border-color;
+    border-radius: $select-border-radius;
+    position: relative;
+    background: $white;
 
     &__item {
         position: relative;

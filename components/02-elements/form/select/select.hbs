@@ -1,11 +1,9 @@
-<div class="select">
-<select class="select__field" name="select">
+<select class="select" name="select">
     {{#each options}}
-        <option data-value="{{ value }}">
+        <option value="{{ value }}" {{ attributes }}>
             {{text}}
         </option>
     {{/each}}
 </select>
-</div>
 
-<script src="{{static '../select/select.js' }}"></script>
+<script src="{{ static 'select.js' }}"></script>
