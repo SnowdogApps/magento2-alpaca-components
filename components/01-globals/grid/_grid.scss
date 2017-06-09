@@ -1,54 +1,144 @@
+$grid-gutter          : 10px !default;
+$grid-small-breakpoint: $screen-s !default;
+$grid-large-breakpoint: $screen-m !default;
+
 .grid {
-    $gutter: 1%;
-
-    @function column-width($quantity) {
-        @return 100% / $quantity - ($quantity - 1) * $gutter / $quantity;
-    }
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: stretch;
 
     &__column {
-        flex-basis: 100%;
-        padding: 10px;
-    }
+        padding: $grid-gutter / 2;
+        flex: 1 0 100%;
 
-    &--two-cols {
-        @include mq($screen-m) {
-            flex-basis: column-width(2);
-        }
-    }
-
-    &--three-cols {
-        @include mq($screen-m) {
-            flex-basis: column-width(3);
-        }
-    }
-
-    &--four-cols {
-        @include mq($screen-m) {
-            flex-basis: column-width(2);
+        @mixin column-width($witdh, $count) {
+            flex-basis: calc(#{100% / $count * $witdh} - #{($count - $witdh) * $grid-gutter / $count});
         }
 
-        @include mq($screen-l) {
-            flex-basis: column-width(4);
-        }
-    }
-
-    &--five-cols {
-        @include mq($screen-m) {
-            flex-basis: column-width(5);
-        }
-    }
-
-    &--six-cols {
-        @include mq($screen-m) {
-            flex-basis: column-width(3);
+        // 2 cols
+        &--1-2 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(1, 2);
+            }
         }
 
-        @include mq($screen-xl) {
-            flex-basis: column-width(6);
+        // 3 cols
+        &--1-3 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(1, 2);
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(1, 3);
+            }
+        }
+
+        &--2-3 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(2, 3);
+            }
+        }
+
+        // 4 cols
+        &--1-4 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(2, 4);
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(1, 4);
+            }
+        }
+
+        &--2-4 {
+            @include mq($grid-large-breakpoint) {
+                @include column-width(2, 4);
+            }
+        }
+
+        &--3-4 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(3, 4);
+            }
+        }
+
+        // 5 cols
+        &--1-5 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(1, 5);
+            }
+        }
+
+        &--2-5 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(2, 5);
+            }
+        }
+
+        &--3-5 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(3, 5);
+            }
+        }
+
+        &--4-5 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(4, 5);
+            }
+        }
+
+        // 6 cols
+        &--1-6 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(2, 6);
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(1, 6);
+            }
+        }
+
+        &--2-6 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(2, 6);
+            }
+        }
+
+        &--3-6 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(3, 6);
+            }
+        }
+
+        &--4-6 {
+            @include mq($grid-small-breakpoint) {
+                @include column-width(4, 6);
+            }
+        }
+
+        &--5-6 {
+            @include mq($grid-small-breakpoint) {
+                flex-basis: 100%;
+            }
+            @include mq($grid-large-breakpoint) {
+                @include column-width(5, 6);
+            }
         }
     }
 }
