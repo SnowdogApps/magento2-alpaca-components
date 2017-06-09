@@ -1,7 +1,12 @@
-.grid {
-    &__column {
+.grid--preview {
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    .grid__content {
         background: #eee;
-        min-height: 200px;
-        margin-bottom: 20px;
+        border: 1px solid #000;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
     }
 }
