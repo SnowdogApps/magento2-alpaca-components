@@ -5,6 +5,10 @@
         @return 100% / $quantity - ($quantity - 1) * $gutter / $quantity;
     }
 
+    @function column-merged-width($columnsQty, $columnsMerged) {
+        @return ((100% / $columnsQty) * $columnsMerged) - ($columnsQty - $columnsMerged) * $gutter / $columnsQty;
+    }
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -14,19 +18,25 @@
         padding: 10px;
     }
 
-    &--two-cols {
+    &--2-cols {
         @include mq($screen-m) {
             flex-basis: column-width(2);
         }
     }
 
-    &--three-cols {
+    &--3-cols {
         @include mq($screen-m) {
             flex-basis: column-width(3);
         }
     }
 
-    &--four-cols {
+    &--3-2-cols {
+        @include mq($screen-m) {
+            flex-basis: column-merged-width(3, 2);
+        }
+    }
+
+    &--4-cols {
         @include mq($screen-m) {
             flex-basis: column-width(2);
         }
@@ -36,19 +46,57 @@
         }
     }
 
-    &--five-cols {
+    &--4-3-cols {
+        @include mq($screen-m) {
+            flex-basis: column-width(2);
+        }
+
+        @include mq($screen-l) {
+            flex-basis: column-merged-width(4, 3);
+        }
+    }
+
+    &--5-cols {
         @include mq($screen-m) {
             flex-basis: column-width(5);
         }
     }
 
-    &--six-cols {
+    &--5-2-cols {
+        @include mq($screen-m) {
+            flex-basis: column-merged-width(5, 2);
+        }
+    }
+
+    &--5-3-cols {
+        @include mq($screen-m) {
+            flex-basis: column-merged-width(5, 3);
+        }
+    }
+
+    &--5-4-cols {
+        @include mq($screen-m) {
+            flex-basis: column-merged-width(5, 4);
+        }
+    }
+
+    &--6-cols {
         @include mq($screen-m) {
             flex-basis: column-width(3);
         }
 
         @include mq($screen-xl) {
             flex-basis: column-width(6);
+        }
+    }
+
+    &--6-5-cols {
+        @include mq($screen-m) {
+            flex-basis: column-merged-width(3, 2);
+        }
+
+        @include mq($screen-xl) {
+            flex-basis: column-merged-width(6, 5);
         }
     }
 }

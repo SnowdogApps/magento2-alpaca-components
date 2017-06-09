@@ -2,11 +2,16 @@ module.exports = {
   name: 'Grid',
   context: {
     grids: [
-      ['two-cols', 'two-cols'],
-      ['three-cols', 'three-cols', 'three-cols'],
-      ['four-cols', 'four-cols', 'four-cols', 'four-cols'],
-      ['five-cols', 'five-cols', 'five-cols', 'five-cols', 'five-cols'],
-      ['six-cols', 'six-cols', 'six-cols', 'six-cols', 'six-cols', 'six-cols']
+      ['2-cols', '2-cols'],
+      ['3-cols', '3-cols', '3-cols'],
+      ['4-cols', '4-cols', '4-cols', '4-cols'],
+      ['5-cols', '5-cols', '5-cols', '5-cols', '5-cols'],
+      ['6-cols', '6-cols', '6-cols', '6-cols', '6-cols', '6-cols'],
+      ['3-cols', '3-2-cols'],
+      ['4-cols', '4-3-cols'],
+      ['5-cols', '5-4-cols'],
+      ['5-2-cols', '5-3-cols'],
+      ['6-cols', '6-5-cols']
     ]
   }
 }
