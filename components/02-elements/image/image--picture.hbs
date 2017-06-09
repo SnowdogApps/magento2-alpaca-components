@@ -1,0 +1,12 @@
+<picture class="image {{ additionalClasses }}" {{ attributes }}>
+    {{#each sources}}
+        <source data-srcset="{{ url }}" media="{{ mediaQuery }}" />
+    {{/each}}
+
+    <img class="lazyload {{ imgAdditionalClasses }}"
+         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+         data-src="{{ defaultSrc }}"
+         alt="responsive pictures"
+         {{ imgAttributes }}
+    />
+</picture>
