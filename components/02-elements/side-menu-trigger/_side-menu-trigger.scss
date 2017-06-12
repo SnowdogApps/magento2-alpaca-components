@@ -20,11 +20,18 @@
         opacity: 0.6;
     }
 
-    &__handler {
+    &__handler,
+    &__icon {
         width: 30px;
         height: 30px;
         position: relative;
         overflow: hidden;
+    }
+
+    &__icon {
+        &--hide {
+            display: none;
+        }
     }
 
     &__text {

@@ -1,6 +1,14 @@
 module.exports = {
-  collated: true,
   context: {
-    text: 'menu'
-  }
+    text: 'menu',
+    svgIcon: true
+  },
+  variants: [
+    {
+      name: 'Span way',
+      context: {
+        svgIcon: false
+      }
+    }
+  ]
 };
