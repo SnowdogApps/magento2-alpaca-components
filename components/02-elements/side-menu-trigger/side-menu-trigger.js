@@ -9,7 +9,7 @@ const sideMenuTrigger   = document.querySelector('.side-menu-trigger'),
 sideMenuTrigger.addEventListener('click', () => {
   if (triggerIcon) {
     const childrens = triggerIcon.childNodes;
-    
+
     childrens.forEach(children => {
       if (children.nodeName === 'use') {
         children.classList.toggle('side-menu-trigger__icon--hide');
