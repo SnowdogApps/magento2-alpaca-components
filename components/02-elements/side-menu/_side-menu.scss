@@ -1,0 +1,35 @@
+.side-menu {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 100%;
+    width: 300px;
+    padding: 30px;
+    z-index: 50;
+    background: $white;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
+    font-family: $font-family-base;
+    text-transform: uppercase;
+    line-height: 3;
+    opacity: 0;
+    transition: $transition-base;
+
+    @include mq($screen-m) {
+        display: none;
+    }
+
+    &--is-open {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+
+    &__link {
+        display: block;
+        line-height: 3;
+        color: $gray-dark;
+        
+        &:hover {
+            text-decoration: none;
+            color: $gray;
+        }
+    }
+}
