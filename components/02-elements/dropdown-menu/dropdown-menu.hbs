@@ -1,0 +1,37 @@
+<div class="dropdown-menu">
+    <ul class="dropdown-menu__list container">
+        {{#each list}}
+            <li class="dropdown-menu__list-firts-level">
+                <a href="#" class="dropdown-menu__link">
+                    {{text}}
+                </a>
+
+                {{#if nestedList}}
+                    <ul class="dropdown-menu__nested">
+                        {{#each nestedList}}
+                            <li class="dropdown-menu__list-second-level
+                                    {{#if modifier}}
+                                        {{modifier}}
+                                    {{/if}}
+                                "
+                            >
+                                {{> '@heading'
+                                    tag="h1"
+                                    class="heading heading--third-level dropdown-menu__nested-heading"
+                                    text=heading
+                                }}
+                                {{> '@list'
+                                    listTag="ul"
+                                    elementTag="li"
+                                }}
+                            </li>
+                        {{/each}}
+                        <li class="dropdown-menu__list-second-level">
+                            {{> '@image' url="/images/banner/banner-480_480.png" }}
+                        </li>
+                    </ul>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
