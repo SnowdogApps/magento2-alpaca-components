@@ -1,40 +1,37 @@
-{{#each types as |type|}}
-    {{ text }}
-    <div class="pager">
-        <ul class="pager__list">
-            {{#if arrowLeftVisible}}
-                <li class="pager__item pager__item--prev">
-                    <a href="#" class="pager__link">
-                        <svg class="pager__icon">
-                            <use xlink:href="{{ svg 'arrow-right' }}"></use>
-                        </svg>
-                    </a>
-                </li>
-            {{/if}}
+<div class="pager">
+    <ul class="pager__list">
+        {{#if arrowLeftVisible}}
+            <li class="pager__item pager__item--prev">
+                <a href="#" class="pager__link">
+                    <svg class="pager__icon">
+                        <use xlink:href="{{ svg 'arrow-right' }}"></use>
+                    </svg>
+                </a>
+            </li>
+        {{/if}}
 
-            {{#each pages as |page|}}
-                {{#if this.active}}
-                    <li class="pager__item pager__item--current">
+        {{#each pages as |page|}}
+            {{#if this.active}}
+                <li class="pager__item pager__item--current">
+                    {{ pageNo }}
+                </li>
+            {{else}}
+                <li class="pager__item">
+                    <a href="#" class="pager__link">
                         {{ pageNo }}
-                    </li>
-                {{else}}
-                    <li class="pager__item">
-                        <a href="#" class="pager__link">
-                            {{ pageNo }}
-                        </a>
-                    </li>
-                {{/if}}
-            {{/each}}
-
-            {{#if arrowRightVisible}}
-                <li class="pager__item pager__item--next">
-                    <a href="#" class="pager__link">
-                        <svg class="pager__icon">
-                            <use xlink:href="{{ svg 'arrow-right' }}"></use>
-                        </svg>
                     </a>
                 </li>
             {{/if}}
-        </ul>
-    </div>
-{{/each}}
+        {{/each}}
+
+        {{#if arrowRightVisible}}
+            <li class="pager__item pager__item--next">
+                <a href="#" class="pager__link">
+                    <svg class="pager__icon">
+                        <use xlink:href="{{ svg 'arrow-right' }}"></use>
+                    </svg>
+                </a>
+            </li>
+        {{/if}}
+    </ul>
+</div>
