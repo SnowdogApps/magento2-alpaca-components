@@ -1,0 +1,18 @@
+<table class="table {{ additionalClasses }}" {{{ additionalAttributes }}}>
+    {{#each mainTags }}
+        <{{{ mainTag }}}>
+            {{#each rowTags}}
+                <{{{ rowTag }}} {{ rowTagAttributes }}>
+                    {{#each childTags}}
+                        <{{{ childTag }}} 
+                             class="{{childTagClasses}}" 
+                             {{{ childTabAttributes }}}
+                        >
+                            {{ content }}
+                        </{{{ childTag }}}>
+                    {{/each}}
+                </{{{ rowTag }}}>
+            {{/each}}
+        </{{{ mainTag }}}>
+    {{/each}}
+</table>

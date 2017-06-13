@@ -1,0 +1,87 @@
+$table-padding: 15px;
+
+.table {
+    width: 100%;
+    background: $white;
+    margin: 1em 0;
+    border: 1px solid $gray-light;
+    border-radius: $border-radius;
+    color: $black;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: $font-size-small;
+
+    &__odd {
+        tbody {  
+            tr:nth-child(odd) {
+                td {
+                    background: $white;
+                }
+            }
+
+            tr:nth-child(even) {
+                td {
+                    background: $gray-lightest;
+                }
+            }
+        }
+    }
+
+    th {
+        padding: $table-padding;
+        background: $gray-lightest;
+        border-bottom: 1px solid $gray-lighter;
+        border-right: 1px solid $gray-lighter;
+        text-align: left;
+
+        &:first-child {
+            border-top-left-radius: $border-radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $border-radius;
+            border-right: 0;
+        }
+    }
+
+    td {
+        padding: $table-padding;
+        background: $white;
+        border-bottom: 1px solid $gray-lighter;
+        border-right: 1px solid $gray-lighter;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    tr:last-child {
+        td {
+            &:first-child {
+                border-bottom-left-radius: $border-radius;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: $border-radius;
+            }
+        }
+    }
+
+    tfoot {
+        td { 
+            padding: $table-padding;
+            background: $gray-lightest;
+            border-right: 1px solid $gray-lighter;
+            text-align: left;
+
+            &:first-child {
+                border-bottom-left-radius: $border-radius;
+            }
+
+            &:last-child {
+                border-bottom-right-radius: $border-radius;
+                border-right: 0;
+            }
+        }
+    }
+}
