@@ -1,3 +1,5 @@
+$pager-padding: 10px;
+
 .pager {
     width: 100%;
     text-align: center;
@@ -19,19 +21,19 @@
         &--current {
             background-color: $color-primary;
             color: $white;
-            padding: 10px;
+            padding: $pager-padding;
 
             @include mq($screen-m) {
-                padding: 10px 16px;
+                padding: $pager-padding 16px;
             }
         }
 
         &--next {
-            padding: 10px 10px 10px 0;
+            padding: $pager-padding $pager-padding $pager-padding 0;
         }
 
         &--prev {
-            padding: 10px 0 10px 10px;
+            padding: $pager-padding 0 $pager-padding $pager-padding;
 
             .pager__icon {
                 transform: rotate(180deg);
@@ -42,11 +44,11 @@
     &__link {
         @include links(active) {
             color: $gray;
-            padding: 10px;
+            padding: $pager-padding;
             text-decoration: none;
 
             @include mq($screen-m) {
-                padding: 10px 16px;
+                padding: $pager-padding 16px;
             }
         }
 
