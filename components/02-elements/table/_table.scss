@@ -11,7 +11,7 @@ $table-padding: 15px;
     border-spacing: 0;
     font-size: $font-size-small;
 
-    &__odd {
+    &__odd-even {
         tbody {  
             tr:nth-child(odd) {
                 td {
