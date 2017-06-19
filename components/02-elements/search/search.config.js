@@ -3,6 +3,6 @@ module.exports = {
     name: 'seach',
     value: '',
     placeholder: 'Search entire store here...',
-    maxlength: "200"
+    maxlength: '200'
   }
 }
