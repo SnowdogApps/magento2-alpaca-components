@@ -1,0 +1,24 @@
+.header {
+    position: relative;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: $white;
+
+    &__right-panel {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: 15px;
+        align-items: center;
+
+        > * {
+            margin-right: 15px;
+            line-height: 1;
+        }
+
+        > *:last-child {
+            margin-right: 0;
+        }
+    }
+}
