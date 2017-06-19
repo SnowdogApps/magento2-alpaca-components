@@ -28,9 +28,9 @@ module.exports = {
       }
     },
     {
-      name: 'desktop-hotizontal',
+      name: 'min-medium-horizontal',
       context: {
-        modificators: 'list--desktop-hotizontal'
+        modificators: 'list--min-medium-horizontal'
       }
     },
     {
@@ -68,7 +68,25 @@ module.exports = {
     {
       name: 'center',
       context: {
-        modificators: 'list--desktop-hotizontal list--center'
+        modificators: 'list--center'
+      }
+    },
+    {
+      name: 'center-horizontal',
+      context: {
+        modificators: 'list--center list--horizontal'
+      }
+    },
+    {
+      name: 'divided-horizontal',
+      context: {
+        modificators: 'list--divided list--horizontal'
+      }
+    },
+    {
+      name: 'divided-min-medium-horizontal',
+      context: {
+        modificators: 'list--divided list--min-medium-horizontal'
       }
     }
   ]
