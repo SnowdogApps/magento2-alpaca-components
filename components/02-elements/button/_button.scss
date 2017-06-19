@@ -99,8 +99,4 @@ $button-icon-hover-color          : $color-primary !default;
             margin: $button-icon-content-margin;
         }
     }
-
-    &--compact {
-        margin: 0 0 0 (-$button-icon-border-width);
-    }
 }

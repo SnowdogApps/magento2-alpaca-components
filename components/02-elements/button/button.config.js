@@ -21,13 +21,6 @@ module.exports = {
       context: {
         class: 'button--secondary'
       }
-    },
-    {
-      name: 'compact',
-      context: {
-        text: 'Inline with input',
-        class: 'button--compact'
-      }
     }
   ]
 };

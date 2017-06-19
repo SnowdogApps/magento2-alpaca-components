@@ -9,29 +9,6 @@ $textarea-min-height    : 100px !default;
 .input {
     margin-bottom: 10px;
 
-    &--compact {
-        margin-bottom: 0;
-        width: 100%;
-        @include mq($screen-s) {
-            display: flex;
-            justify-content: center;
-        }
-        .input__field {
-            width: 100%;
-            border: $button-icon-border;
-            line-height: $button-height;
-            height: $button-height;
-            border-radius: 0;
-            @include mq($screen-s) {
-                width: 290px;
-            }
-        }
-        .input__label {
-            margin: 0 10px 0 0;
-            line-height: $button-height;
-        }
-    }
-
     &__label {
         display: block;
         margin-bottom: 8px;
