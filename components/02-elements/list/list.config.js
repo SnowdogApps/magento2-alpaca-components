@@ -28,6 +28,12 @@ module.exports = {
       }
     },
     {
+      name: 'desktop-hotizontal',
+      context: {
+        modificators: 'list--desktop-hotizontal'
+      }
+    },
+    {
       name: 'icon',
       context: {
         modificators: 'list--with-icon',
@@ -57,6 +63,12 @@ module.exports = {
       name: 'divided',
       context: {
         modificators: 'list--divided'
+      }
+    },
+    {
+      name: 'center',
+      context: {
+        modificators: 'list--desktop-hotizontal list--center'
       }
     }
   ]

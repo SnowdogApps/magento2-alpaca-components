@@ -1,7 +1,7 @@
-$list-style: none !default;
-$list-margin: 10px 0 !default;
-$list-padding: 0 !default;
-$list-item-padding: 5px 0 !default;
+$list-style          : none !default;
+$list-margin         : 10px 0 !default;
+$list-padding        : 0 !default;
+$list-item-padding   : 5px 0 !default;
 $list-content-padding: 10px !default;
 
 // Horizontal
@@ -34,13 +34,41 @@ $list-divider: 1px solid $gray-dark !default;
     .list__content {
         padding-left: $list-content-padding;
     }
-
+    &--center {
+        justify-content: center;
+        text-align: center;
+    }
     &--horizontal {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         .list__item {
             padding: $list-padding--horizontal;
+        }
+    }
+    &--desktop-hotizontal {
+        @include mq($screen-m) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .list__item {
+            border-bottom: $list-divider;
+            padding: $list-padding--horizontal;
+            &:first-child {
+                @include mq($screen-m) {
+                    border-top: 0;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            @include mq($screen-m) {
+                border-bottom: 0;
+            }
+        }
+        .list__link {
+            display: block;
         }
     }
     &--with-icon {
