@@ -13,7 +13,7 @@
     opacity: 0;
     transition: $transition-base;
 
-    @include mq($screen-m) {
+    @include mq($screen-l) {
         display: none;
     }
 
@@ -26,7 +26,7 @@
         display: block;
         line-height: 3;
         color: $gray-dark;
-        
+
         &:hover {
             text-decoration: none;
             color: $gray;

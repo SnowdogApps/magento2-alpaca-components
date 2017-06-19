@@ -43,6 +43,31 @@ $list-divider: 1px solid $gray-dark !default;
             padding: $list-padding--horizontal;
         }
     }
+    &--desktop-hotizontal {
+        @include mq($screen-m) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .list__item {
+            border-bottom: $list-divider;
+            padding: $list-padding--horizontal;
+            &:first-child {
+                @include mq($screen-m) {
+                    border-top: 0;
+                }
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            @include mq($screen-m) {
+                border-bottom: 0;
+            }
+        }
+        .list__link {
+            display: block;
+        }
+    }
     &--with-icon {
         .list__item {
             display: flex;

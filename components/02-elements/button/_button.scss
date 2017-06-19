@@ -49,6 +49,7 @@ $button-icon-hover-color          : $color-primary !default;
     font-size: $button-font-size;
     color: $button-font-color;
     transition: $transition-base;
+    align-items: center;
 
     &:hover {
         background: $button-hover-background;
@@ -97,5 +98,9 @@ $button-icon-hover-color          : $color-primary !default;
         .button__content {
             margin: $button-icon-content-margin;
         }
+    }
+
+    &--wide {
+        width: 100%;
     }
 }

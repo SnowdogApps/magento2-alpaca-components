@@ -1,0 +1,13 @@
+<div class="wrapper-collapsible {{#if modifier}}wrapper-collapsible--{{modifier}}{{/if}}">
+    <div class="wrapper-collapsible__mobile wrapper-collapsible__mobile--{{ icon }}"
+         data-mage-init='{"linksWrapper": {}}'
+    >
+        <svg class="wrapper-collapsible__mobile-icon ">
+            <use xlink:href="/images/icons-sprite.svg#{{icon}}"></use>
+        </svg>
+    </div>
+    <div class="wrapper-collapsible__container">
+        {{ content }}
+    </div>
+</div>
+<script src="{{static 'wrapper-collapsible.js'}}" defer></script>

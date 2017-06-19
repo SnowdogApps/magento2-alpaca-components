@@ -30,6 +30,13 @@ module.exports = {
         attributes: 'href="#"',
         text: 'I am a link button',
       }
-    }
+    },
+    {
+      name: 'wide',
+      context: {
+        class: 'button--wide'
+      }
+    },
+
   ]
 };
