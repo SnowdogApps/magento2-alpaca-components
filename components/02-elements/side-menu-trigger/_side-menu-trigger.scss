@@ -1,0 +1,96 @@
+.side-menu-trigger {
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    @include mq($screen-m) {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover .side-menu-trigger__line {
+        background: $gray-dark;
+    }
+
+    &:hover .side-menu-trigger__text {
+        opacity: 0.6;
+    }
+
+    &__handler,
+    &__icon {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__icon {
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__text {
+        color: $gray;
+        transition: $transition-base;
+        font-size: 12px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+
+        &--close {
+            bottom: -10px;
+            opacity: 0;
+        }
+    }
+
+    &__line {
+        width: 100%;
+        position: absolute;
+        height: 3px;
+        border-radius: 3px;
+        background: $gray-dark;
+        transition: $transition-base;
+        left: 0;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            top: 6px;
+        }
+
+        &:nth-child(4) {
+            top: 12px;
+        }
+
+        &--close {
+            &:nth-child(1),
+            &:nth-child(4) {
+                opacity: 0;
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 13px;
+                background: $gray-dark;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

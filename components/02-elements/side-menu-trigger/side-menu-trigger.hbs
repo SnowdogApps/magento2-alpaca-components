@@ -1,0 +1,24 @@
+<button class="side-menu-trigger" type="button">
+    {{#if svgIcon}}
+        <svg class="side-menu-trigger__icon">
+            <use xlink:href="{{ svg 'mobile-menu' }}"></use>
+
+            <use xlink:href="{{ svg 'close' }}" 
+                       class="side-menu-trigger__icon--hide"
+            >
+            </use>
+        </svg>
+    {{else}}
+        <div class="side-menu-trigger__handler">
+            <span class="side-menu-trigger__line"></span>
+            <span class="side-menu-trigger__line"></span>
+            <span class="side-menu-trigger__line"></span>
+            <span class="side-menu-trigger__line"></span>
+            <span class="side-menu-trigger__text">
+                {{ text }}
+            </span>
+        </div>
+    {{/if}}
+</button>
+
+<script src="{{static 'side-menu-trigger.js'}}" defer></script>
