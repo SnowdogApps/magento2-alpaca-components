@@ -28,6 +28,12 @@ module.exports = {
       }
     },
     {
+      name: 'min-medium-horizontal',
+      context: {
+        modificators: 'list--min-medium-horizontal'
+      }
+    },
+    {
       name: 'icon',
       context: {
         modificators: 'list--with-icon',
@@ -57,6 +63,18 @@ module.exports = {
       name: 'divided',
       context: {
         modificators: 'list--divided'
+      }
+    },
+    {
+      name: 'divided-horizontal',
+      context: {
+        modificators: 'list--divided list--horizontal'
+      }
+    },
+    {
+      name: 'divided-min-medium-horizontal',
+      context: {
+        modificators: 'list--divided list--min-medium-horizontal'
       }
     }
   ]
