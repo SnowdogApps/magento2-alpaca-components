@@ -23,12 +23,10 @@ module.exports = {
       }
     },
     {
-      name: 'link',
+      name: 'compact',
       context: {
-        tag: 'a',
-        class: 'button--link',
-        attributes: 'href="#"',
-        text: 'I am a link button',
+        text: 'Inline with input',
+        class: 'button--compact'
       }
     }
   ]
