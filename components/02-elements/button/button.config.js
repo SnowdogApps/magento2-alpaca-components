@@ -32,9 +32,9 @@ module.exports = {
       }
     },
     {
-      name: 'wide',
+      name: 'fluid',
       context: {
-        class: 'button--wide'
+        class: 'button--fluid'
       }
     },
 

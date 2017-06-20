@@ -22,7 +22,7 @@
         }
     }
 
-    &__mobile {
+    &__trigger {
         display: block;
         position: absolute;
         top: 10px;
@@ -43,14 +43,14 @@
         }
     }
 
-    &__mobile-icon {
+    &__trigger-icon {
         display: block;
         width: 30px;
         height: 30px;
         fill: $black;
     }
 
-    &--mobile {
+    &--min-medium-horizontal {
         .wrapper-collapsible__container {
             @include mq($screen-l) {
                 display: block;
@@ -61,7 +61,7 @@
             }
         }
 
-        .wrapper-collapsible__mobile {
+        .wrapper-collapsible__trigger {
             @include mq($screen-l) {
                 display: none;
             }

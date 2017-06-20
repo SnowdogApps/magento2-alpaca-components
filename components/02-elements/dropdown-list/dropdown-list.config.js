@@ -165,7 +165,7 @@ module.exports = {
     {
       name: 'item-wide',
       context: {
-        modifier: 'dropdown-list--item-wide'
+        class: 'dropdown-list--item-wide'
       }
     }
   ]

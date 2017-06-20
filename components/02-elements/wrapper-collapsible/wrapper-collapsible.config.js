@@ -5,9 +5,9 @@ module.exports = {
   },
   variants: [
     {
-      name: 'mobile',
+      name: 'min-medium-horizontal',
       context: {
-        modifier: 'mobile'
+        class: 'wrapper-collapsible--min-medium-horizontal'
       }
     }
   ]

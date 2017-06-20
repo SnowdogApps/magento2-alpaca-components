@@ -36,11 +36,14 @@ $textarea-min-height    : 100px !default;
         }
     }
 
-    &--small {
+    &--inline-small-right {
         text-align: right;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
 
         .input__label {
-            display: inline-block;
             margin-right: 20px;
         }
         .input__field {

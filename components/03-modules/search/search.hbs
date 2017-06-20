@@ -1,20 +1,16 @@
-<div class="search-block">
-    <div class="search-block__toggle-btn">
-        <svg class="search__icon ">
-            <use xlink:href="/images/icons-sprite.svg#search"></use>
-        </svg>
-    </div>
-    <form class="search-block__form"
+{{> '@search-trigger' }}
+<div class="container">
+    <form class="search search--visible"
           id="search_mini_form"
           action="#"
           method="get"
     >
-        <div class="search">
+        <div class="search__wrapper">
             <div class="input search__input">
                 <label class="input__label"
                        for="search"
                 >
-                    Search
+                    {{ searchLabel }}
                 </label>
                 <input class="input__field"
                        id="search"
@@ -33,10 +29,9 @@
                     type="submit"
                     title="Search"
             >
-                Search
+                {{ searchLabel }}
             </button>
         </div>
         <div class="search-autocomplete" id="search_autocomplete"></div>
     </form>
 </div>
-<script src="{{static 'search.js'}}" defer></script>

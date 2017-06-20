@@ -11,9 +11,9 @@ module.exports = {
       }
     },
     {
-      name: 'small',
+      name: 'inline-small-right',
       context: {
-        modifier: 'small'
+        class: 'input--inline-small-right'
       }
     }
   ]
