@@ -24,19 +24,19 @@ module.exports = {
     {
       name: 'horizontal',
       context: {
-        modificators: 'list--horizontal'
+        class: 'list--horizontal'
       }
     },
     {
       name: 'min-medium-horizontal',
       context: {
-        modificators: 'list--min-medium-horizontal'
+        class: 'list--min-medium-horizontal'
       }
     },
     {
       name: 'icon',
       context: {
-        modificators: 'list--with-icon',
+        class: 'list--with-icon',
         elements: [
           {
             icon: 'facebook',
@@ -56,37 +56,37 @@ module.exports = {
     {
       name: 'image',
       context: {
-        modificators: 'list--with-image'
+        class: 'list--with-image'
       }
     },
     {
       name: 'divided',
       context: {
-        modificators: 'list--divided'
+        class: 'list--divided'
       }
     },
     {
       name: 'center',
       context: {
-        modificators: 'list--center'
+        class: 'list--center'
       }
     },
     {
       name: 'center-horizontal',
       context: {
-        modificators: 'list--center list--horizontal'
+        class: 'list--center list--horizontal'
       }
     },
     {
       name: 'divided-horizontal',
       context: {
-        modificators: 'list--divided list--horizontal'
+        class: 'list--divided list--horizontal'
       }
     },
     {
       name: 'divided-min-medium-horizontal',
       context: {
-        modificators: 'list--divided list--min-medium-horizontal'
+        class: 'list--divided list--min-medium-horizontal'
       }
     }
   ]
