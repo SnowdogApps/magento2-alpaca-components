@@ -21,7 +21,7 @@
             flex-wrap: nowrap;
             align-items: center;
             justify-content: center;
-            
+
             &__field {
                 width: 100%;
                 border: $button-icon-border;
@@ -41,11 +41,5 @@
         .button {
             margin: 0 0 0 (-$button-icon-border-width);
         }
-    }
-
-    div.mage-error[generated] {
-        margin-top: 7px;
-        color: $color-danger;
-        font-size: $font-size-extra-small;
     }
 }
