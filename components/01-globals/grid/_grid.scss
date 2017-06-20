@@ -12,8 +12,8 @@ $grid-large-breakpoint: $screen-m !default;
         padding: $grid-gutter / 2;
         flex: 1 0 100%;
 
-        @mixin column-width($witdh, $count) {
-            flex-basis: calc(#{100% / $count * $witdh} - #{($count - $witdh) * $grid-gutter / $count});
+        @mixin column-width($width, $count) {
+            flex-basis: calc(#{100% / $count * $width} - #{($count - $width) * $grid-gutter / $count});
         }
 
         // 2 cols
