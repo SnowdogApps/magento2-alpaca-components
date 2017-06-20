@@ -16,12 +16,12 @@
                 >
                     Search
                 </label>
-                <input id="search"
+                <input class="input__field"
+                       id="search"
                        type="text"
                        name="{{ name }}"
                        value="{{ value }}"
                        placeholder="{{ placeholder }}"
-                       class="input__field"
                        maxlength="{{ maxlength }}"
                        role="combobox"
                        aria-haspopup="false"
@@ -29,14 +29,14 @@
                        autocomplete="off"
                 />
             </div>
-            <button type="submit"
+            <button class="button search__button"
+                    type="submit"
                     title="Search"
-                    class="button search__button"
             >
                 Search
             </button>
         </div>
-        <div id="search_autocomplete" class="search-autocomplete"></div>
+        <div class="search-autocomplete" id="search_autocomplete"></div>
     </form>
 </div>
 <script src="{{static 'search.js'}}" defer></script>
