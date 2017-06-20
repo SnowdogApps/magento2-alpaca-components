@@ -18,7 +18,7 @@
         align-items: center;
         padding-bottom: 10px;
         text-align: center;
-        min-height: 160px;
+        min-height: 310px;
 
         @include mq($screen-s) {
             min-height: 200px;
@@ -29,15 +29,16 @@
         max-width: 100%;
         width: auto;
         height: auto;
+        margin: 0 auto;
     }
 
     &__name {
         font-weight: 700;
         color: $font-color-base;
-        font-size: 12px;
+        font-size: 16px;
 
         @include mq($screen-m) {
-            font-size: 14px;
+            font-size: 18px;
         }
     }
 
@@ -49,5 +50,49 @@
 
     &__button {
         width: 100%;
+    }
+
+    &__price {
+        text-align: right;
+        font-weight: 600;
+        padding: 10px 0;
+    }
+
+    &__details {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        width: 100%;
+        min-height: 260px;
+    }
+
+    &__details-list {
+        font-size: $font-size-small;
+    }
+
+    &__details-list-item {
+        padding: 0;
+        margin-bottom: 7px;
+
+        &:nth-child(even) {
+            text-align: right;
+        }
+    }
+
+    &__actions-secondary {
+        text-align: right;
+    }
+
+    &--img-thumb {
+        .product__img-box {
+            min-height: 0;
+        }
+
+        .product__name {
+            display: inline-flex;
+            align-items: center;
+            font-size: 18px;
+            min-height: 0;
+        }
     }
 }
