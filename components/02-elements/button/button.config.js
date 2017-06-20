@@ -21,6 +21,15 @@ module.exports = {
       context: {
         class: 'button--secondary'
       }
+    },
+    {
+      name: 'link',
+      context: {
+        tag: 'a',
+        class: 'button--link',
+        attributes: 'href="#"',
+        text: 'I am a link button',
+      }
     }
   ]
 };
