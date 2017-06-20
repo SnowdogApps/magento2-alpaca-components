@@ -12,7 +12,7 @@ $table-radius: $border-radius;
     border-spacing: 0;
     font-size: $font-size-small;
 
-    &__odd-even {
+    &--odd-even {
         tbody {  
             tr:nth-child(odd) {
                 td {
