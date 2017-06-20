@@ -21,21 +21,21 @@
             flex-wrap: nowrap;
             align-items: center;
             justify-content: center;
-        }
-
-        .input__field {
-            width: 100%;
-            border: $button-icon-border;
-            line-height: $button-height;
-            height: $button-height;
-            border-radius: 0;
-            @include mq($screen-s) {
-                width: 290px;
+            
+            &__field {
+                width: 100%;
+                border: $button-icon-border;
+                line-height: $button-height;
+                height: $button-height;
+                border-radius: 0;
+                @include mq($screen-s) {
+                    width: 290px;
+                }
             }
-        }
 
-        .input__label {
-            margin: 0 10px 0 0;
+            &__label {
+                margin: 0 10px 0 0;
+            }
         }
 
         .button {
