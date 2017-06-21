@@ -1,7 +1,9 @@
 <div class="minicart">
     <div class="minicart__wrapper">
         <h3 class="heading">
-            <span class="text">{{ headingText }}</span>
+            <span class="text">
+                {{ headingText }}
+            </span>
         </h3>
 
     <div class="minicart__content">
@@ -9,11 +11,13 @@
                 class="action close minicart__btn-close"
         >
             <svg class="minicart__btn-close-icon">
-                <use xlink:href="/images/icons-sprite.svg#close"></use>
+                <use xlink:href="{{ svg 'close' }}"></use>
             </svg>
         </button>
         <div class="items-total">
-            <span class="count">{{itemsTotal}}</span>
+            <span class="count">
+                {{ itemsTotal }}
+            </span>
         </div>
         <div class="grid minicart__subtotal">
             <span class="label grid--two-cols">
@@ -49,7 +53,9 @@
                             </h2>
                         </div>
                         <div>
-                            <h5 class="headoing">Product's details</h5>
+                            <h5 class="headoing">
+                                Product's details
+                            </h5>
                             <dl class="product__details-list grid">
                                 {{#each options }}
                                     <dt class="product__details-list-item grid__column grid__column--1-2">
@@ -64,18 +70,20 @@
                                 {{ price }}
                             </div>
                             <div class="input input--inline-small-right">
-                                <label for="cart" class="input__label">Qty</label>
+                                <label for="cart" class="input__label">
+                                    Qty
+                                </label>
                                 <input type="number" class="inout__field">
                             </div>
                             <div class="minicart__action">
                                 <a href="{{cartEditUrl}}" class="button button--icon">
                                     <svg class="button__icon">
-                                        <use xlink:href="/images/icons-sprite.svg#{{../editIcon}}"></use>
+                                        <use xlink:href="{{ svg ../editIcon }}"></use>
                                     </svg>
                                 </a>
                                 <button class="button button--icon">
                                    <svg class="button__icon">
-                                       <use xlink:href="/images/icons-sprite.svg#{{../removeIcon}}"></use>
+                                       <use xlink:href="{{ svg ../removeIcon }}"></use>
                                    </svg>
                                </button>
                             </div>
@@ -85,7 +93,9 @@
             </ul>
         </div>
         <a class="action viewcart button button--fluid" href="#">
-            <span> {{ buttonView }} </span>
+            <span>
+                {{ buttonView }}
+            </span>
         </a>
     </div>
     </div>
