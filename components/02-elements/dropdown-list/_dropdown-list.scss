@@ -204,6 +204,17 @@
             font-weight: 400;
             color: $font-color-base;
         }
+    }
 
+    &--item-wide {
+        .dropdown-list__list {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                flex-flow: row wrap;
+            }
+        }
+
+        .dropdown-list__item {
+            flex-basis: 100%;
+        }
     }
 }

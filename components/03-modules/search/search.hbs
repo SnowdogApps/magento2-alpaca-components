@@ -1,0 +1,37 @@
+{{> '@search-trigger' }}
+<div class="container">
+    <form class="search search--visible"
+          id="search_mini_form"
+          action="#"
+          method="get"
+    >
+        <div class="search__wrapper">
+            <div class="input search__input">
+                <label class="input__label"
+                       for="search"
+                >
+                    {{ searchLabel }}
+                </label>
+                <input class="input__field"
+                       id="search"
+                       type="text"
+                       name="{{ name }}"
+                       value="{{ value }}"
+                       placeholder="{{ placeholder }}"
+                       maxlength="{{ maxlength }}"
+                       role="combobox"
+                       aria-haspopup="false"
+                       aria-autocomplete="both"
+                       autocomplete="off"
+                />
+            </div>
+            <button class="button search__button"
+                    type="submit"
+                    title="Search"
+            >
+                {{ searchLabel }}
+            </button>
+        </div>
+        <div class="search-autocomplete" id="search_autocomplete"></div>
+    </form>
+</div>

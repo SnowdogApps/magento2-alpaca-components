@@ -9,6 +9,12 @@ module.exports = {
       context: {
         textarea: true
       }
+    },
+    {
+      name: 'inline-small-right',
+      context: {
+        class: 'input--inline-small-right'
+      }
     }
   ]
 };
