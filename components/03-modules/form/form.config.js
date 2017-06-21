@@ -16,9 +16,7 @@ module.exports = {
       name: 'compact',
       context: {
         heading: 'Newsletter',
-        form: {
-          class: 'form--compact'
-        }
+        class: 'form--compact'
       }
     }
   ]
