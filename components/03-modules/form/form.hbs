@@ -1,9 +1,9 @@
-<form class="form  {{ formClass }}">
+<form class="form  {{ class }}">
     <div class="form__heading">
         {{ heading }}
     </div>
     <div class="form__content">
-        {{> '@input' }}
-        {{ render '@button--icon' }}
+        {{> '@input' class=inputClass}}
+        {{> '@button--icon' class=buttonClass}}
     </div>
 </form>
