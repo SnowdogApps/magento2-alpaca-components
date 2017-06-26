@@ -1,4 +1,4 @@
-$pager-padding: 10px;
+$pager-item-size: 48px !default;
 
 .pager {
     width: 100%;
@@ -6,6 +6,9 @@ $pager-padding: 10px;
     margin-bottom: 30px;
 
     &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         list-style-type: none;
         padding: 0 15px;
         margin: 10px 0;
@@ -16,51 +19,41 @@ $pager-padding: 10px;
     }
 
     &__item {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $pager-item-size;
+        min-width: $pager-item-size;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         &--current {
-            background-color: $color-primary;
             color: $white;
-            padding: $pager-padding;
-
-            @include mq($screen-m) {
-                padding: $pager-padding 16px;
-            }
-        }
-
-        &--next {
-            padding: $pager-padding $pager-padding $pager-padding 0;
-        }
-
-        &--prev {
-            padding: $pager-padding 0 $pager-padding $pager-padding;
-
-            .pager__icon {
-                transform: rotate(180deg);
-            }
+            background-color: $color-primary;
         }
     }
 
     &__link {
-        @include links(active) {
-            color: $gray;
-            padding: $pager-padding;
-            text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: $pager-item-size;
+        padding: 0 5px;
+        line-height: $pager-item-size;
+        color: $gray;
+        text-align: center;
 
-            @include mq($screen-m) {
-                padding: $pager-padding 16px;
-            }
-        }
-
-        @include links(hover) {
+        &:hover {
             color: $color-primary;
             text-decoration: none;
         }
     }
 
     &__icon {
-        position: relative;
-        top: 2px;
         width: 12px;
         height: 12px;
     }
