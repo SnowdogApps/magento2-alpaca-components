@@ -1,40 +1,40 @@
 module.exports = {
   status: 'wip',
+  collated: true,
   context: {
-    types: [
+    arrowLeftVisible: false,
+    arrowRightVisible: true,
+    pages: [
       {
-        text: 'Pager type with arrow in right',
-        arrowLeftVisible: false,
-        arrowRightVisible: true,
-        pages: [
-          {
-            pageNo: '1',
-            active: true
-          },
-          {
-            pageNo: 2,
-            active: false
-          },
-          {
-            pageNo: 3,
-            active: false
-          },
-          {
-            pageNo: 4,
-            active: false
-          },
-          {
-            pageNo: 5,
-            active: false
-          },
-          {
-            pageNo: 6,
-            active: false
-          }
-        ]
+        pageNo: '1',
+        active: true
       },
       {
-        text: 'Pager type with arrow in right and left',
+        pageNo: 2,
+        active: false
+      },
+      {
+        pageNo: 3,
+        active: false
+      },
+      {
+        pageNo: 4,
+        active: false
+      },
+      {
+        pageNo: 5,
+        active: false
+      },
+      {
+        pageNo: 6,
+        active: false
+      }
+    ]
+  },
+  variants: [
+    {
+      name: 'Pager type with arrow in right and left',
+      context: {
         arrowLeftVisible: true,
         arrowRightVisible: true,
         pages: [
@@ -63,9 +63,11 @@ module.exports = {
             active: false
           }
         ]
-      },
-      {
-        text: 'Pager type with arrow in left',
+      }
+    },
+    {
+      name: 'Pager type with arrow in left',
+      context: {
         arrowLeftVisible: true,
         arrowRightVisible: false,
         pages: [
@@ -94,9 +96,11 @@ module.exports = {
             active: true
           }
         ]
-      },
-      {
-        text: 'Pager type with arrow in left and right with more sites',
+      }
+    },
+    {
+      name: 'Pager type with arrow in left and right with more sites',
+      context: {
         arrowLeftVisible: true,
         arrowRightVisible: true,
         pages: [
@@ -125,9 +129,11 @@ module.exports = {
             active: false
           }
         ]
-      },
-      {
-        text: 'Pager type with arrow in right',
+      }
+    },
+    {
+      name: 'Pager type with arrow in right',
+      context: {
         arrowLeftVisible: true,
         arrowRightVisible: true,
         pages: [
@@ -153,6 +159,6 @@ module.exports = {
           }
         ]
       }
-    ]
-  }
+    }
+  ]
 };
