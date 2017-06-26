@@ -160,5 +160,13 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  variants: [
+    {
+      name: 'item-wide',
+      context: {
+        class: 'dropdown-list--item-wide'
+      }
+    }
+  ]
 };

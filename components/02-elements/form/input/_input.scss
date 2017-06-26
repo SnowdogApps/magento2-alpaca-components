@@ -9,7 +9,6 @@ $textarea-min-height    : 100px !default;
 .input {
     margin-bottom: 10px;
 
-
     &__label {
         display: block;
         margin-bottom: 8px;
@@ -34,6 +33,17 @@ $textarea-min-height    : 100px !default;
             min-width: 100%;
             max-width: 100%;
             min-height: $textarea-min-height;
+        }
+    }
+
+    &--inline {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        .input__label {
+            margin-bottom: 0;
+            margin-right: 20px;
         }
     }
 }

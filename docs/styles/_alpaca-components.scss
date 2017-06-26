@@ -26,6 +26,7 @@
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
 @import '../../components/02-elements/button/button';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
+@import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
 @import '../../components/02-elements/form/input/input';
 @import '../../components/02-elements/form/select/select';
@@ -33,13 +34,23 @@
 @import '../../components/02-elements/list/list';
 @import '../../components/02-elements/logo/logo';
 @import '../../components/02-elements/message/message';
+@import '../../components/02-elements/minicart-trigger/minicart-trigger';
 @import '../../components/02-elements/pager/pager';
 @import '../../components/02-elements/product/product';
+@import '../../components/02-elements/search-trigger/search-trigger';
+@import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
+@import '../../components/02-elements/side-menu/side-menu';
 @import '../../components/02-elements/tab/tab';
+@import '../../components/02-elements/table/table';
+@import '../../components/02-elements/wrapper-collapsible/wrapper-collapsible';
 
 // -----
 // Modules
 // -----
 
+@import '../../components/03-modules/header/header';
+@import '../../components/03-modules/minicart/minicart';
 @import '../../components/03-modules/products-grid/products-grid';
 @import '../../components/03-modules/products-list/products-list';
+@import '../../components/03-modules/form/form';
+@import '../../components/03-modules/search/search';
