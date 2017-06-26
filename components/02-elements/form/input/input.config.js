@@ -11,5 +11,13 @@ module.exports = {
       class: '',
       placeholder: 'First and last name'
     }
+  },
+  variants: [
+    {
+      name: 'inline-small-right',
+      context: {
+        class: 'input--inline-small-right'
+      }
+    }
   }
 };

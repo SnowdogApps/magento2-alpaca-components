@@ -1,0 +1,71 @@
+.wrapper-collapsible {
+    display: block;
+    overflow: hidden;
+
+    &__container {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: auto;
+        min-width: 260px;
+        background-color: $white;
+        z-index: 10;
+        overflow: hidden;
+
+        @include mq($screen-l) {
+            top: 95px;
+        }
+
+        &.open {
+            display: block;
+        }
+    }
+
+    &__trigger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 55px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+
+        @include mq($screen-l) {
+            top: 70px;
+        }
+
+        &--settings {
+            right: 105px;
+            @include mq($screen-l) {
+                right: 5px;
+            }
+        }
+    }
+
+    &__trigger-icon {
+        display: block;
+        width: 30px;
+        height: 30px;
+        fill: $black;
+    }
+
+    &--min-medium-horizontal {
+        .wrapper-collapsible__container {
+            @include mq($screen-l) {
+                display: block;
+                position: relative;
+                transform: scaleX(1) translateX(0);
+                top: auto;
+                right: auto;
+            }
+        }
+
+        .wrapper-collapsible__trigger {
+            @include mq($screen-l) {
+                display: none;
+            }
+        }
+
+    }
+}

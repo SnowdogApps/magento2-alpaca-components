@@ -35,4 +35,20 @@ $textarea-min-height    : 100px !default;
             min-height: $textarea-min-height;
         }
     }
+
+    &--inline-small-right {
+        text-align: right;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        .input__label {
+            margin-right: 20px;
+        }
+        .input__field {
+            width: 20%;
+            text-align: center;
+        }
+    }
 }
