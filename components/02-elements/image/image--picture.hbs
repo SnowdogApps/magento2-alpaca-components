@@ -1,6 +1,6 @@
 <picture class="image {{ additionalClasses }}" {{ attributes }}>
     {{#each sources}}
-        <source data-srcset="{{ url }}" media="{{ mediaQuery }}" />
+        <source data-srcset="{{ src }}" media="{{ mediaQuery }}" />
     {{/each}}
 
     <img class="lazyload {{ imgAdditionalClasses }}"

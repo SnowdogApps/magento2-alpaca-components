@@ -1,30 +1,31 @@
 module.exports = {
   title: 'Product grid item',
   context: {
-    link: '#somelink',
+    tag: 'div',
+    class: '',
     name: 'Some product name',
     price: '210$',
     type: 'some attribute text',
-    imagesrc: '/images/product/product-img-230_180.png',
-    alttext: 'some alt text',
-    additionalClass: false,
-    modifier: false
+    image: {
+      src: '/images/product/product-img-230_180.png'
+    }
   },
   variants: [
     {
       name: 'with-badge',
       context: {
-        newflag: true
+        badge: {
+          text: 'New'
+        }
       }
     },
     {
       name: 'with-add-to-cart-button',
       context: {
-        buttonAddToCart: true,
         button: {
+          tag: 'a',
           text: 'Add to Cart',
-          modifier: 'dark',
-          additionalClass: 'product-item__button'
+          class: 'product-item__button'
         }
       }
     }
