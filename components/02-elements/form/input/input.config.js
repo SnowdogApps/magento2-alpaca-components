@@ -14,10 +14,10 @@ module.exports = {
   },
   variants: [
     {
-      name: 'inline-small-right',
+      name: 'inline',
       context: {
-        class: 'input--inline-small-right'
+        class: 'input--inline'
       }
     }
-  }
+  ]
 };

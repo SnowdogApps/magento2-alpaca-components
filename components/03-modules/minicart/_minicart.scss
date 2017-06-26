@@ -45,4 +45,12 @@ $minicart-box-shadow: -5px 5px 7px 0 rgba(0, 0, 0, 0.2);
     &__price {
         text-align: right;
     }
+    &__input {
+        text-align: right;
+        justify-content: flex-end;
+        .input__field {
+            width: 30%;
+            text-align: center;
+        }
+    }
 }
