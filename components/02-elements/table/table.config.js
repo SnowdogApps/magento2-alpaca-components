@@ -95,5 +95,13 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  variants: [
+    {
+      name: 'odd-even',
+      context: {
+        class: 'table--odd-even'
+      }
+    }
+  ]
 };
