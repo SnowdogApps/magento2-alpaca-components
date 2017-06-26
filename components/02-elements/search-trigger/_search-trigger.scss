@@ -1,0 +1,23 @@
+.search-trigger {
+    position: absolute;
+    top: 0;
+    right: 145px;
+    width: 60px;
+    height: 60px;
+    padding: 20px 13px 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: $white;
+    border: none;
+
+    @include mq($screen-l) {
+        right: 50px;
+        top: 60px;
+        z-index: 10;
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+    }
+}
