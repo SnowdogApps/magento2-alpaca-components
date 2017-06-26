@@ -1,10 +1,12 @@
+$dropdown-menu-box-shadow: -5px 5px 7px 0 rgba(0, 0, 0, 0.2);
+
 .dropdown-menu {
     display: none;
     background: $gray-dark;
     color: $white;
     position: relative;
 
-    @include mq($screen-m) {
+    @include mq($screen-l) {
         display: block;
     }
 
@@ -16,31 +18,36 @@
         justify-content: center;
     }
 
-    &__list-firts-level {
+    &__item {
         cursor: pointer;
-        padding: 15px;
+        padding: 0;
+
+        &--parent {
+            &:hover > .dropdown-menu__inner-list,
+            &:focus > .dropdown-menu__inner-list {
+                display: flex;
+            }
+
+            .dropdown-menu__link {
+                position: relative;
+                padding-right: 45px;
+            }
+        }
 
         & > .dropdown-menu__link {
             text-transform: uppercase;
         }
-
-        &:hover .dropdown-menu__nested {
-            display: flex;
-        }
     }
 
     &__link {
+        display: block;
         color: $white;
         padding: 15px;
         transition: $transition-base;
-
-        &--second {
-            color: $gray-dark;
-            transition: $transition-base;
-        }
+        position: relative;
     }
 
-    &__nested {
+    &__inner-list {
         display: none;
         flex-wrap: nowrap;
         justify-content: flex-start;
@@ -49,7 +56,7 @@
         top: 100%;
         left: 0;
         margin: 0;
-        padding: 30px;
+        padding: 0;
         list-style: none;
         line-height: 1.5;
         color: $gray-dark;
@@ -61,13 +68,44 @@
             right: 0;
             margin: auto;
         }
+
+        &--level1 {
+            box-shadow: $dropdown-menu-box-shadow;
+        }
+
+        &--level2 {
+            display: block;
+            position: relative;
+            top: 0;
+            padding: 10px 0 0 15px;
+        }
     }
 
-    &__list-second-level {
+    &__inner-item {
         flex: 1;
+
+        &--all {
+            display: none;
+        }
+
+        &--level1 {
+            position: relative;
+            padding: 30px 30px 15px;
+        }
     }
 
-    &__nested-heading {
-        margin-bottom: 10px;
+    &__inner-link {
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 20px;
+        height: 20px;
+        fill: $white;
+        position: absolute;
     }
 }

@@ -24,7 +24,8 @@ $button-secondary-hover-font-color: $color-primary !default;
 $button-icon-padding              : 0 !default;
 $button-icon-size                 : 20px !default;
 $button-icon-content-margin       : 0 15px 0 0 !default;
-$button-icon-border               : 3px solid $gray-light !default;
+$button-icon-border-width         : 3px !default;
+$button-icon-border               : $button-icon-border-width solid $gray-light !default;
 $button-icon-hover-border         : $color-primary !default;
 $button-icon-fill                 : $gray-light !default;
 $button-icon-hover-fill           : $color-primary !default;
@@ -49,6 +50,7 @@ $button-icon-hover-color          : $color-primary !default;
     font-size: $button-font-size;
     color: $button-font-color;
     transition: $transition-base;
+    align-items: center;
 
     &:hover {
         background: $button-hover-background;
@@ -97,5 +99,9 @@ $button-icon-hover-color          : $color-primary !default;
         .button__content {
             margin: $button-icon-content-margin;
         }
+    }
+
+    &--fluid {
+        width: 100%;
     }
 }

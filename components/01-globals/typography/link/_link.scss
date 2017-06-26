@@ -10,6 +10,14 @@ $link-hover-decoration : underline !default;
         color: $link-hover-color;
         text-decoration: $link-hover-decoration;
     }
+
+    &--hidden {
+        position: absolute;
+        text-indent: 200%;
+        height: 0.008em;
+        width: 0.008em;
+        overflow: hidden;
+    }
 }
 
 a {
