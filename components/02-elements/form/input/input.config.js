@@ -1,19 +1,22 @@
 module.exports = {
   context: {
-    label: 'Label text',
-    placeholder: 'First and last name'
+    attribute: '',
+    class: '',
+    label: {
+      attribute: '',
+      text: 'Label text',
+    },
+    input: {
+      attribute: '',
+      class: '',
+      placeholder: 'First and last name'
+    }
   },
   variants: [
     {
-      name: 'textarea',
+      name: 'inline',
       context: {
-        textarea: true
-      }
-    },
-    {
-      name: 'inline-small-right',
-      context: {
-        class: 'input--inline-small-right'
+        class: 'input--inline'
       }
     }
   ]
