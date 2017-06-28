@@ -6,7 +6,7 @@ module.exports = {
       attribute: '',
       text: 'Label text',
     },
-    input: {
+    field: {
       attribute: '',
       class: '',
       placeholder: 'First and last name'

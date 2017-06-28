@@ -1,7 +1,9 @@
 module.exports = {
   context: {
     input: {
-      placeholder: 'This is placeholder',
+      field: {
+        placeholder: 'This is placeholder'
+      }
     },
     button: {
       tag: 'a',
