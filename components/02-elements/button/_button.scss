@@ -51,15 +51,18 @@ $button-icon-hover-color          : $color-primary !default;
     color: $button-font-color;
     transition: $transition-base;
     align-items: center;
+    text-align: center;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background: $button-hover-background;
         border-color: $button-hover-border;
     }
 
     &--link {
         align-items: center;
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: none;
             color: $button-hover-font-color;
         }
@@ -70,7 +73,8 @@ $button-icon-hover-color          : $color-primary !default;
         color: $button-secondary-font-color;
         background: $button-secondary-background;
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-color: $button-secondary-hover-border;
             color: $button-secondary-hover-font-color;
             background: $button-secondary-hover-background;
@@ -82,7 +86,8 @@ $button-icon-hover-color          : $color-primary !default;
         border: $button-icon-border;
         background: $button-icon-background;
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-color: $button-icon-hover-border;
             background: $button-icon-hover-background;
             .button__icon {

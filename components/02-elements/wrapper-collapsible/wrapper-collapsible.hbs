@@ -1,11 +1,11 @@
 <div class="wrapper-collapsible {{ class }}">
-    <div class="wrapper-collapsible__trigger wrapper-collapsible__trigger--{{ icon }}"
-         data-mage-init='{"linksWrapper": {}}'
+    <button class="wrapper-collapsible__trigger wrapper-collapsible__trigger--{{ icon }}"
+            aria-label="{{ someLable }}"
     >
         <svg class="wrapper-collapsible__trigger-icon ">
             <use xlink:href="/images/icons-sprite.svg#{{icon}}"></use>
         </svg>
-    </div>
+    </button>
     <div class="wrapper-collapsible__container">
         {{ content }}
     </div>
