@@ -44,6 +44,7 @@ $select-border-radius    : $border-radius !default;
         border-bottom-right-radius: $select-border-radius;
     }
 
+    // Choices.js lib styles overwrites
     .choices {
         &.is-open {
             .select__field {
