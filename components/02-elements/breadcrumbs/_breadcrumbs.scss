@@ -1,38 +1,29 @@
-.breadcrumbs {
-    display: block;
-    position: relative;
-    width: 100%;
-    padding-top: 10px;
-    padding-left: 20px;
-    max-width: $max-content-width;
-    margin: 0 auto;
+$breadcrumbs-padding        : 10px;
+$breadcrumbs-margin         : 10px;
+$breadcrumbs-color          : $font-color-base; 
+$breadcrumbs-color-second   : $gray;
+$breadcrumbs-clickable-area : 48px;
 
-    @include mq($screen-xl) {
-        padding-left: 0;
-    }
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $breadcrumbs-padding 0;
 
     &__item {
-        @include links(active) {
-            color: $gray;
-            display: inline-block;
-            padding-bottom: 10px;
-            text-decoration: none;
-        }
-
-        @include links(hover) {
-            color: $font-color-base;
-            text-decoration: none;
-        }
+        color: $breadcrumbs-color;
+        display: flex;
+        min-width: $breadcrumbs-clickable-area;
+        padding: ($breadcrumbs-padding + 5) 0;
+        align-items: center;
 
         &:after {
             content: '/';
-            display: inline-block;
-            margin: 0 10px;
-            color: $gray;
+            margin: 0 $breadcrumbs-margin;
+            color: $breadcrumbs-color-second;
         }
 
         &:last-child {
-            color: $gray;
+            color: $breadcrumbs-color-second;
 
             &:after {
                 display: none;
