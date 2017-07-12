@@ -21,10 +21,12 @@
 // Elements
 // -----
 
+@import '../../components/02-elements/account-navigation/account-navigation';
 @import '../../components/02-elements/badge/badge';
 @import '../../components/02-elements/banner/banner';
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
 @import '../../components/02-elements/button/button';
+@import '../../components/02-elements/dropdown-container/dropdown-container';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
@@ -47,6 +49,7 @@
 // Modules
 // -----
 
+@import '../../components/03-modules/flex-column/flex-column';
 @import '../../components/03-modules/header/header';
 @import '../../components/03-modules/minicart/minicart';
 @import '../../components/03-modules/product/product';

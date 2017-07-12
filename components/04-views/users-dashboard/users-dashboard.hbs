@@ -1,0 +1,91 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--1-4 grid__column--last sidebar">
+            Last column width compare block etc
+        </div>
+        <div class="grid__column grid__column--3-4">
+            {{> '@heading'
+                tag='h2'
+                class=''
+                text='Account Information'
+            }}
+            <div class="grid">
+                <div class="grid__column grid__column--1-2 flex-column">
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading heading--fourth-level'
+                        text='Contact Information'
+                    }}
+                    <div>
+                        {{#each contactInfoText}}
+                            <p>{{ this }}</p>
+                        {{/each}}
+                    </div>
+                    <div>
+                        {{ render '@button' buttonEdit }}
+                        {{ render '@button' buttonChangePassword }}
+                    </div>
+                </div>
+                <div class="grid__column grid__column--1-2 flex-column">
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading heading--fourth-level'
+                        text='Newsletters'
+                    }}
+                    <div>
+                        You don't subscribe for newsletter
+                    </div>
+                    <div>
+                        {{ render '@button' buttonEdit }}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>
+                    {{ addressBookHeading }}
+                    <a href="#" class="inner-heading-link">{{ innerHeadingLink }}</a>
+                </h2>
+                <div class="grid">
+                    <div class="grid__column grid__column--1-2 flex-column">
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading heading--fourth-level'
+                            text='Deafult Billing Address'
+                        }}
+                        <div>
+                            <address>
+                                Your address
+                            </address>
+                        </div>
+                        <div>
+                            {{ render '@button' buttonEdit }}
+                        </div>
+                    </div>
+                    <div class="grid__column grid__column--1-2 flex-column">
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading heading--fourth-level'
+                            text='Deafult Shipping Address'
+                        }}
+                        <div>
+                            <address>
+                                Your address
+                            </address>
+                        </div>
+                        <div>
+                            {{ render '@button' buttonEdit }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
