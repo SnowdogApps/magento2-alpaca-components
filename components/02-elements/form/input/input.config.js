@@ -3,6 +3,7 @@ module.exports = {
     attribute: '',
     class: '',
     label: {
+      visibility: false,
       attribute: '',
       text: 'Label text',
     },

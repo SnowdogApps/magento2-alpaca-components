@@ -88,6 +88,33 @@ module.exports = {
       context: {
         class: 'list--divided list--min-medium-horizontal'
       }
-    }
+    },
+    {
+      name: 'description',
+      context: {
+        elements: [
+          {
+            label: 'Lorem ipsum',
+            value: 'Lorem ipsum Value'
+          },
+          {
+            label: 'Lorem ipsum',
+            value: 'Lorem ipsum Value'
+          },
+          {
+            label: 'Lorem ipsum',
+            value: 'Lorem ipsum Value'
+          },
+          {
+            label: 'Lorem ipsum',
+            value: 'Lorem ipsum Value'
+          },
+          {
+            label: 'Lorem ipsum',
+            value: 'Lorem ipsum Value'
+          }
+        ]
+      }
+    },
   ]
 };

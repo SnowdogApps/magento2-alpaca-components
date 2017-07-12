@@ -1,0 +1,54 @@
+.products-list {
+    padding: 10px;
+    font-size: 12px;
+    &__row {
+        display: flex;
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray-lighter;
+        list-style-type: none;
+    }
+    &__image {
+        flex: 0 0 100px;
+        padding-right: 10px;
+        @include mq($screen-s) {
+            flex: 0 0 120px;
+        }
+    }
+    &__details {
+        flex: 1;
+        color: $gray;
+        @include mq($screen-s) {
+            display: flex;
+        }
+        &-name {
+            margin-bottom: 3px;
+            font-size: 16px;
+            color: $gray-dark;
+        }
+        &-price {
+            margin-bottom: 3px;
+            font-size: 16px;
+            color: $blue;
+        }
+        &-qty {
+            flex: 0 0 45px;
+            float: left;
+            margin-bottom: 0;
+        }
+        &-subtotal {
+            flex: 1;
+            line-height: 35px;
+            margin-left: 10px;
+            text-align: center;
+        }
+    }
+    &__grid {
+        width: 100%;
+        &-item {
+            display: flex;
+            padding: 0 5px;
+        }
+    }
+}
