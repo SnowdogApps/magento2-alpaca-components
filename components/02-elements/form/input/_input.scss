@@ -13,6 +13,9 @@ $textarea-min-height    : 100px !default;
         display: block;
         margin-bottom: 8px;
         font-size: $input-label-font-size;
+        &--hidden {
+            display: none;
+        }
     }
 
     &__field {

@@ -1,6 +1,7 @@
 .products-list {
     padding: 10px;
     font-size: 12px;
+
     &__row {
         display: flex;
         width: 100%;
@@ -9,46 +10,95 @@
         border-bottom: 1px solid $gray-lighter;
         list-style-type: none;
     }
+
     &__image {
         flex: 0 0 100px;
         padding-right: 10px;
-        @include mq($screen-s) {
-            flex: 0 0 120px;
-        }
     }
+
     &__details {
+        position: relative;
         flex: 1;
         color: $gray;
         @include mq($screen-s) {
             display: flex;
         }
+
         &-name {
             margin-bottom: 3px;
             font-size: 16px;
             color: $gray-dark;
         }
+
         &-price {
             margin-bottom: 3px;
             font-size: 16px;
             color: $blue;
         }
-        &-qty {
-            flex: 0 0 45px;
+
+        &-qty-wrapper {
+            flex: 0;
             float: left;
+            width: 45px;
             margin-bottom: 0;
+            @include mq($screen-s) {
+                flex: 0 0 45px;
+            }
         }
+
+        &-qty-input {
+            text-align: center;
+        }
+
         &-subtotal {
             flex: 1;
             line-height: 35px;
-            margin-left: 10px;
-            text-align: center;
+            @include mq($screen-s) {
+                margin-left: 10px;
+            }
+            @include mq($screen-m) {
+                text-align: right;
+            }
         }
     }
+
+    &__attributes {
+        @include mq($screen-m) {
+            margin-bottom: 0;
+        }
+    }
+
     &__grid {
         width: 100%;
+
         &-item {
             display: flex;
             padding: 0 5px;
+            flex-direction: column;
+            @include mq($screen-s) {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__actions {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        @include mq($screen-s) {
+            bottom: 0;
+        }
+
+        &-button {
+            width: 35px;
+            min-width: 35px;
+            height: 35px;
+            border: none;
+            margin-bottom: 0;
+            margin-left: 10px;
+            @include mq($screen-m) {
+                margin-left: 0;
+            }
         }
     }
 }

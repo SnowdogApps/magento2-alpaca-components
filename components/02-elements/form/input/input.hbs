@@ -1,12 +1,10 @@
 <div class="input {{ class }}" {{{ attribute }}}>
-    {{#if label.visibility}}
-        <label class="input__label {{ label.class }}"
-               for="input"
-               {{{ label.attribute }}}
-        >
-            {{ label.text }}
-        </label>
-    {{/if}}
+    <label class="input__label {{ label.class }}"
+           for="input"
+           {{{ label.attribute }}}
+    >
+        {{ label.text }}
+    </label>
     <input class="input__field {{ field.class }}"
            id="input"
            type="text"

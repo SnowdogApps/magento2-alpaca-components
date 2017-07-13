@@ -9,7 +9,11 @@
                         </div>
                         <div class="products-list__details">
                             <div class="grid products-list__grid">
-                                <div class="grid__column grid__column--3-4 products-list__grid-item">
+                                <div class="
+                                        grid__column grid__column--3-4
+                                        products-list__grid-item
+                                     "
+                                >
                                     <div class="products-list__data">
                                         <div class="products-list__details-name">
                                             {{ name }}
@@ -25,13 +29,15 @@
                                         products-list__grid-item
                                      "
                                 >
-                                    <div class="input products-list__details-qty">
-                                        {{ render '@input' }}
-                                    </div>
+                                    {{ render '@input' input }}
                                     <div class="products-list__details-subtotal">
-                                        123.32 zł
+                                        {{ subtotal }}
                                     </div>
                                 </div>
+                            </div>
+                            <div class="products-list__actions">
+                                {{ render '@button--icon' ../buttonEdit }}
+                                {{ render '@button--icon' ../buttonRemove }}
                             </div>
                         </div>
                     </div>
