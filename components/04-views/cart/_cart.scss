@@ -1,5 +1,4 @@
 .products-list {
-    padding: 10px;
     font-size: 12px;
 
     &__row {
@@ -9,6 +8,10 @@
         padding-bottom: 10px;
         border-bottom: 1px solid $gray-lighter;
         list-style-type: none;
+        &:first-child {
+            padding-top: 10px;
+            border-top: 1px solid $gray-lighter;
+        }
     }
 
     &__image {
@@ -95,10 +98,19 @@
             height: 35px;
             border: none;
             margin-bottom: 0;
-            margin-left: 10px;
-            @include mq($screen-m) {
-                margin-left: 0;
-            }
+            margin-left: 5px;
+        }
+    }
+}
+
+.cart {
+    &__discount {
+        justify-content: flex-start;
+        &-heading {
+            display: none;
+        }
+        &-label {
+            display: none;
         }
     }
 }

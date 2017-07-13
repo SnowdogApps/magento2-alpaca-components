@@ -1,5 +1,34 @@
 module.exports = {
   context: {
+    mainHeading: {
+      tag: 'h1',
+      text: 'Shopping Cart'
+    },
+    discountForm: {
+      class: 'form--compact cart__discount',
+      input: {
+        label: {
+          class: 'cart__discount-label'
+        },
+        field: {
+          placeholder: 'Enter discount code'
+        }
+      },
+      button: {
+        tag: 'button',
+        text: '',
+        class: 'button--icon',
+        iconId: 'arrow-right',
+        iconClass: 'button__icon'
+      },
+      heading: {
+        class: 'cart__discount-heading'
+      }
+    },
+    submit: {
+      tag: 'button',
+      text: 'Update shopping cart'
+    },
     buttonEdit: {
       tag: 'a',
       text: '',
@@ -20,8 +49,8 @@ module.exports = {
         image: {
           src: 'http://m2.dev/media/catalog/product/cache/2f58bf1051a2f0ceba166b720ec0a490/l/t/lt02.jpg'
         },
-        price: '223.00 zł',
-        subtotal: '1 343.00 zł',
+        price: '223.00 USD',
+        subtotal: '1 343.00 USD',
         attributes: {
           listTag: 'dl',
           elementTag: 'dt',
@@ -54,8 +83,8 @@ module.exports = {
         image: {
           src: 'http://m2.dev/media/catalog/product/cache/2f58bf1051a2f0ceba166b720ec0a490/m/h/mh07-gray_main.jpg'
         },
-        price: '23.43 zł',
-        subtotal: '1 343.00 zł',
+        price: '23.43 USD',
+        subtotal: '1 343.00 USD',
         attributes: {
           listTag: 'dl',
           elementTag: 'dt',

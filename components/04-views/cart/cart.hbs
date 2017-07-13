@@ -1,7 +1,10 @@
-<div class="grid">
+<div class="grid cart">
+    <div class="grid__column grid__column--4-4">
+        {{render '@heading' mainHeading}}
+    </div>
     <div class="grid__column grid__column--3-4">
         <div class="grid__content">
-            <div class="products-list">
+            <form class="products-list">
                 {{#each productlist as |item| }}
                     <div class="products-list__row">
                         <div class="products-list__image">
@@ -42,7 +45,11 @@
                         </div>
                     </div>
                 {{/each}}
-            </div>
+                <div style="display: flex; justify-content: flex-end;">
+                    {{ render '@button' submit }}
+                </div>
+            </form>
+            {{ render '@form' discountForm }}
         </div>
     </div>
     <div class="grid__column grid__column--1-4">
