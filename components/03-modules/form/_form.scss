@@ -1,4 +1,10 @@
 .form {
+    &__field {
+        @include mq($screen-m) {
+            max-width: 320px;
+        }
+    }
+
     &--compact {
         @include mq($screen-s) {
             display: flex;

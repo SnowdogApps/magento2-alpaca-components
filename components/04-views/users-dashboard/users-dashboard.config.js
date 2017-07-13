@@ -16,13 +16,13 @@ module.exports = {
     ],
     buttonEdit: {
       tag: 'a',
-      class: 'flex-column__button',
+      class: 'users-account__button',
       attributes: 'href="#"',
       text: 'Edit'
     },
     buttonChangePassword: {
       tag: 'a',
-      class: 'flex-column__button',
+      class: 'users-account__button-primary',
       attributes: 'href="#"',
       text: 'Change password'
     },

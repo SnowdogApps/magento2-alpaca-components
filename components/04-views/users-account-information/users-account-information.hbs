@@ -1,0 +1,240 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--1-4 grid__column--last sidebar">
+            Last column width compare block etc
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Account Information'
+                }}
+                <form action="#"
+                      method="post"
+                      id="form-validate"
+                      enctype="multipart/form-data"
+                      data-hasrequired="#"
+                      autocomplete="off"
+                      class="form form-edit-account"
+                      aria-labelledby="form-label"
+                >
+                    <h3 id="form-label" class="heading heading--fifth-level">
+                        Edit Account Information
+                    </h3>
+                    <fieldset class="fieldset info users-account__fieldset"
+                              aria-labelledby="personal-info"
+                    >
+                        <h4 id="personal-info"
+                            class="heading heading--sixth-level"
+                        >
+                            Personal informations
+                        </h4>
+                        <div class="field required fullname customer-name-prefix">
+                            <fieldset class="fieldset fieldset-fullname">
+                                <div class="form__field field-name-prefix users-account__field-short input">
+                                    <label for="prefix"
+                                           class="label input__label"
+                                    >
+                                        Prefix
+                                    </label>
+                                    <input type="text"
+                                           id="prefix"
+                                           name="prefix"
+                                           value=""
+                                           title="Prefix"
+                                           class="input__field "
+                                    >
+                                </div>
+                                <div class="form__field field-name-firstname required input">
+                                    <label for="firstname" class="label input__label">
+                                        First Name
+                                    </label>
+                                    <input type="text" id="firstname" name="firstname" value="Anka" title="First Name" class="input__field required-entry" data-validate="{required:true}">
+                                </div>
+                                <div class="form__field field-name-lastname required input">
+                                    <label for="lastname" class="label input__label">
+                                        Last Name
+                                    </label>
+                                    <input id="lastname" type="text" name="lastname" value="Ka" title="Last Name" class="input__field required-entry" data-validate="{required:true}">
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="input form__field date field-dob">
+                            <label class="label input__label" for="dob">
+                                Date of Birth
+                            </label>
+                            <input type="text"
+                                   name="dob"
+                                   id="dob"
+                                   value=""
+                                   class="input__field _has-datepicker"
+                            >
+                            <button type="button"
+                                    class="ui-datepicker-trigger v-middle users-account__button users-account__input-button">
+                                Select Date
+                            </button>
+                        </div>
+
+                        <div class="form__field gender">
+                            <label class="label input__label" for="gender">
+                                Gender
+                            </label>
+                            {{ render '@select' select }}
+                        </div>
+
+                        <div class="form__field taxvat input">
+                            <label class="input__label" for="taxvat">
+                                Tax/VAT number
+                            </label>
+                            <input type="text"
+                                   id="taxvat"
+                                   name="taxvat"
+                                   value=""
+                                   title="Tax/VAT number"
+                                   class="input__field"
+                            >
+                        </div>
+
+                        <div class="field choice checkbox">
+                            <input id="change-email"
+                                   type="checkbox"
+                                   name="change_email"
+                                   data-role="change-email"
+                                   value="1"
+                                   title="Change Email"
+                                   class="checkbox checkbox__field"
+                            />
+                            <svg class="checkbox__icon">
+                                <use xlink:href="{{ svg 'checked' }}"></use>
+                            </svg>
+                            <label for="change-email"
+                                   class="label checkbox__label"
+                            >
+                                Change Email
+                            </label>
+                        </div>
+                        <div class="field choice checkbox">
+                            <input id="change-password"
+                                   type="checkbox"
+                                   name="change_password"
+                                   data-role="change-password"
+                                   value="1"
+                                   title="Change Password"
+                                   checked="checked"
+                                   class="checkbox checkbox__field"
+                            />
+                            <svg class="checkbox__icon">
+                                <use xlink:href="{{ svg 'checked' }}"></use>
+                            </svg>
+                            <label for="change-password"
+                                   class="label checkbox__label"
+                            >
+                                Change Password
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset password"
+                              data-container="change-email-password"
+                              aria-labelledby="change-info-fieldset"
+                    >
+                        <h4 id="change-info-fieldset"
+                            class="heading heading--sixth-level"
+                        >
+                            Change Email and Password
+                        </h4>
+
+                        <div class="form__field email required input" data-container="change-email">
+                            <label class="label input__label" for="email">
+                                Email
+                            </label>
+                            <input id="email"
+                                   type="email"
+                                   name="email"
+                                   autocomplete="email"
+                                   data-input="change-email"
+                                   value="<email-addess>"
+                                   title="Email"
+                                   class="input__field"
+                                   data-validate="{required:true, 'validate-email':true}"
+                             />
+                        </div>
+                        <div class="form__field password current required input">
+                            <label for="current-password"
+                                   class="label input__label"
+                            >
+                                Current Password
+                            </label>
+                            <input id="current-password"
+                                   type="password"
+                                   class="input__field"
+                                   name="current_password"
+                                   data-input="current-password"
+                                   autocomplete="off"
+                            />
+                        </div>
+                        <div class="form__field new password required input"
+                             data-container="new-password"
+                        >
+                            <label for="password"
+                                   class="label input__label"
+                            >
+                                New Password
+                            </label>
+                            <input id="password"
+                                   type="password"
+                                   class="input__field"
+                                   name="password"
+                                   data-password-min-length="someValue"
+                                   data-password-min-character-sets="someValue"
+                                   data-input="new-password"
+                                   autocomplete="off"
+                            />
+                            {{ render '@password-field-strength--no-password' }}
+                        </div>
+                        <div class="form__field confirm password required input"
+                             data-container="confirm-password"
+                        >
+                            <label for="password-confirmation"
+                                   class="input__label"
+                            >
+                                Confirm New Password
+                            </label>
+                            <input id="password-confirmation"
+                                   type="password"
+                                   class="input__field"
+                                   name="password_confirmation"
+                                   data-input="confirm-password"
+                                   autocomplete="off"
+                             />
+                        </div>
+                    </fieldset>
+                    <div class="users-account__actions actions-toolbar">
+                        <a href="#"
+                           class="action back users-account__button"
+                        >
+                            Go back
+                        </a>
+                        <button type="submit"
+                                class="action save primary users-account__button-primary"
+                                title="Save"
+                                aria-label="Save button"
+                        >
+                                Save
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

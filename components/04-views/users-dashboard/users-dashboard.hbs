@@ -12,47 +12,51 @@
             Last column width compare block etc
         </div>
         <div class="grid__column grid__column--3-4">
-            {{> '@heading'
-                tag='h2'
-                class=''
-                text='Account Information'
-            }}
-            <div class="grid">
-                <div class="grid__column grid__column--1-2 flex-column">
-                    {{> '@heading'
-                        tag='h3'
-                        class='heading heading--fourth-level'
-                        text='Contact Information'
-                    }}
-                    <div>
-                        {{#each contactInfoText}}
-                            <p>{{ this }}</p>
-                        {{/each}}
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Account Information'
+                }}
+                <div class="grid">
+                    <div class="grid__column grid__column--1-2 flex-column">
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading heading--fourth-level'
+                            text='Contact Information'
+                        }}
+                        <div>
+                            {{#each contactInfoText}}
+                                <p>{{ this }}</p>
+                            {{/each}}
+                        </div>
+                        <div>
+                            {{ render '@button' buttonEdit }}
+                            {{ render '@button' buttonChangePassword }}
+                        </div>
                     </div>
-                    <div>
-                        {{ render '@button' buttonEdit }}
-                        {{ render '@button' buttonChangePassword }}
-                    </div>
-                </div>
-                <div class="grid__column grid__column--1-2 flex-column">
-                    {{> '@heading'
-                        tag='h3'
-                        class='heading heading--fourth-level'
-                        text='Newsletters'
-                    }}
-                    <div>
-                        You don't subscribe for newsletter
-                    </div>
-                    <div>
-                        {{ render '@button' buttonEdit }}
+                    <div class="grid__column grid__column--1-2 flex-column">
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading heading--fourth-level'
+                            text='Newsletters'
+                        }}
+                        <div>
+                            You don't subscribe for newsletter
+                        </div>
+                        <div>
+                            {{ render '@button' buttonEdit }}
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
+
+            <div class="users-account">
                 <h2>
                     {{ addressBookHeading }}
-                    <a href="#" class="inner-heading-link">{{ innerHeadingLink }}</a>
+
                 </h2>
+                <a href="#" class="inner-heading-link">{{ innerHeadingLink }}</a>
                 <div class="grid">
                     <div class="grid__column grid__column--1-2 flex-column">
                         {{> '@heading'

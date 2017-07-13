@@ -3,16 +3,4 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     margin: 30px 0;
-
-    &__button {
-        @extend .button;
-        @extend .button--link;
-        @extend .button--secondary;
-        margin-top: 15px;
-        width: 100%;
-
-        @include mq($screen-s) {
-            width: auto;
-        }
-    }
 }
