@@ -1,0 +1,38 @@
+<div class="products-list-item">
+    <div class="products-list-item__image">
+        {{ render '@image' image }}
+    </div>
+    <div class="products-list-item__details">
+        <div class="grid products-list-item__grid">
+            <div class="
+                    grid__column grid__column--3-4
+                    products-list-item__grid-item
+                 "
+            >
+                <div class="products-list-item__data">
+                    <div class="products-list-item__details-name">
+                        {{ name }}
+                    </div>
+                    <div class="products-list-item__details-price">
+                        {{ price }}
+                    </div>
+                    {{ render '@list--description' attributes }}
+                </div>
+            </div>
+            <div class="
+                    grid__column grid__column--1-4
+                    products-list-item__grid-item
+                 "
+            >
+                {{ render '@input' input }}
+                <div class="products-list-item__details-subtotal">
+                    {{ subtotal }}
+                </div>
+            </div>
+        </div>
+        <div class="products-list-item__actions">
+            {{ render '@button--icon' buttonEdit }}
+            {{ render '@button--icon' buttonRemove }}
+        </div>
+    </div>
+</div>

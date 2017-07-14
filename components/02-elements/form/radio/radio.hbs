@@ -1,0 +1,12 @@
+{{#each elements}}
+    <div class="radio">
+        <div style="margin-bottom: 5px; font-weight: bold;">
+            Heading
+        </div>
+        <input type="radio" id="{{ id }}" name="radio" class="radio__field">
+        <label for="{{ id }}" class="radio__label">
+            <span class="radio__icon"></span>
+            {{ label }}
+        </label>
+    </div>
+{{/each}}

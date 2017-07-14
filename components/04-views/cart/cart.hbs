@@ -1,59 +1,43 @@
-<div class="grid cart">
+<div class="grid cart" style="padding: 10px;">
     <div class="grid__column grid__column--4-4">
         {{render '@heading' mainHeading}}
     </div>
-    <div class="grid__column grid__column--3-4">
+    <div class="grid__column grid__column--4-6">
         <div class="grid__content">
-            <form class="products-list">
+            <form class="cart__products-list">
                 {{#each productlist as |item| }}
-                    <div class="products-list__row">
-                        <div class="products-list__image">
-                            {{ render '@image' image }}
-                        </div>
-                        <div class="products-list__details">
-                            <div class="grid products-list__grid">
-                                <div class="
-                                        grid__column grid__column--3-4
-                                        products-list__grid-item
-                                     "
-                                >
-                                    <div class="products-list__data">
-                                        <div class="products-list__details-name">
-                                            {{ name }}
-                                        </div>
-                                        <div class="products-list__details-price">
-                                            {{ price }}
-                                        </div>
-                                        {{ render '@list--description' item.attributes }}
-                                    </div>
-                                </div>
-                                <div class="
-                                        grid__column grid__column--1-4
-                                        products-list__grid-item
-                                     "
-                                >
-                                    {{ render '@input' input }}
-                                    <div class="products-list__details-subtotal">
-                                        {{ subtotal }}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="products-list__actions">
-                                {{ render '@button--icon' ../buttonEdit }}
-                                {{ render '@button--icon' ../buttonRemove }}
-                            </div>
-                        </div>
-                    </div>
+                    {{ render '@listitem' item }}
                 {{/each}}
-                <div style="display: flex; justify-content: flex-end;">
-                    {{ render '@button' submit }}
+                <div class="cart__update">
+                    {{ render '@button' buttonUpdateCart }}
                 </div>
             </form>
             {{ render '@form' discountForm }}
         </div>
     </div>
-    <div class="grid__column grid__column--1-4">
-        <div class="grid__content" style="background: #f1f1f1; height: 400px;">
+    <div class="grid__column grid__column--2-6">
+        <div class="cart-summary">
+            <div class="cart-summary__item">
+                <h2>Summary</h2>
+            </div>
+            <div class="grid__column grid__column--4-4">
+                {{ render '@select' }}
+            </div>
+            <div class="cart-summary__item">
+                {{ render '@select' }}
+            </div>
+            <div class="cart-summary__item">
+                {{ render '@input' }}
+            </div>
+            <div class="cart-summary__item">
+                {{ render '@input' }}
+            </div>
+            <div class="cart-summary__item cart-summary__shipping-methods">
+                {{ render '@radio' }}
+            </div>
+            <div class="cart-summary__item">
+                {{ render '@button--fluid' buttonCheckout }}
+            </div>
         </div>
     </div>
 </div>

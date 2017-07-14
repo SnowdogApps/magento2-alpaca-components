@@ -1,9 +1,17 @@
-<select class="select" name="select">
-    {{#each options}}
-        <option value="{{ value }}" {{ attributes }}>
-            {{text}}
-        </option>
-    {{/each}}
-</select>
+<div class="select {{ class }}" {{{ attribute }}}>
+    <label class="select__label {{ label.class }}"
+           for="input"
+           {{{ label.attribute }}}
+    >
+        {{ label.text }}
+    </label>
+    <select class="select__field" name="select">
+        {{#each options}}
+            <option value="{{ value }}" {{ attributes }}>
+                {{text}}
+            </option>
+        {{/each}}
+    </select>
+</div>
 
 <script src="{{ static 'select.js' }}"></script>

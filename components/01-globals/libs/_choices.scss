@@ -24,7 +24,6 @@ $choices-button-offset: 8px !default;
 
 .#{$choices-selector} {
   position: relative;
-  margin-bottom: $choices-guttering;
   font-size: $choices-font-size-lg;
   &:focus { outline: none; }
   &:last-child { margin-bottom: 0; }

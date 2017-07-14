@@ -1,19 +1,18 @@
-'use strict'
-
-/*global Choices */
-
-const selects = [...document.querySelectorAll('.select')];
-
-selects.forEach(select => {
-  new Choices(select, {
-    placeholder: true,
-    placeholderValue: 'Search item',
-    classNames: {
-      containerInner: 'select',
-      list: 'select__list',
-      input: 'select__input',
-      item: 'select__item',
-      listSingle: 'select__list--single',
-    }
+(function() {
+  'use strict'
+  const selects = [...document.querySelectorAll('.select__field')];
+  selects.forEach(select => {
+    new Choices(select, {
+      placeholder: true,
+      placeholderValue: 'Search item',
+      searchEnabled: false,
+      classNames: {
+        containerInner: 'select__field',
+        list: 'select__field-list',
+        input: 'select__field-input',
+        item: 'select__field-item',
+        listSingle: 'select__field-list--single'
+      }
+    });
   });
-});
+})();
