@@ -1,6 +1,6 @@
 .cart {
     &__main-col,
-    &__right-col {
+    &__summary-col {
         @include mq($screen-s, '1024px') {
             flex-basis: 100%;
         }
