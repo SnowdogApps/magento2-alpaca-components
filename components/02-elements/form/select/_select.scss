@@ -51,13 +51,6 @@ $select-border-radius: $border-radius !default;
             }
         }
 
-        &-list {
-            margin: 0;
-            padding-left: 0;
-            list-style: none;
-            border-bottom-left-radius: $select-border-radius;
-            border-bottom-right-radius: $select-border-radius;
-        }
         // Choices.js lib styles overwrites
         .choices {
             &.is-open {
