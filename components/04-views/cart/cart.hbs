@@ -32,8 +32,13 @@
             <div class="cart-summary__item">
                 {{ render '@input' }}
             </div>
-            <div class="cart-summary__item cart-summary__item--shipping-methods">
-                {{ render '@radio' }}
+            <div class="cart-summary__item cart-summary__shipping-methods">
+                {{#each shippingMethods as |shippingMethod| }}
+                    <div class="cart-summary__shipping-methods-heading">
+                        Flat Rate
+                    </div>
+                    {{ render '@radio' shippingMethod }}
+                {{/each}}
             </div>
             <div class="cart-summary__item cart-totals">
                 <div class="cart-totals__row">

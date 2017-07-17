@@ -41,7 +41,7 @@ $radio-label-active-color: $color-primary;
     &__icon {
         position: relative;
         display: inline-block;
-        border: 1px solid $gray;
+        border: 1px solid $black;
         border-radius: $radio-size;
         width: $radio-size;
         height: $radio-size;
@@ -61,7 +61,7 @@ $radio-label-active-color: $color-primary;
             margin: auto;
             opacity: 0;
             transform: scale(0);
-            background-color: $gray;
+            background-color: $color-primary;
             transition: all 0.5s ease;
         }
     }

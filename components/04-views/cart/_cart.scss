@@ -65,9 +65,14 @@
         display: block;
         flex: 1 0 100%;
         padding: 5px;
+    }
 
-        &--shipping-methods {
-            margin: 15px 0 25px;
+    &__shipping-methods {
+        margin: 15px 0 25px;
+        &-heading {
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 14px;
         }
     }
 

@@ -129,6 +129,18 @@ module.exports = {
         class: 'cart__discount-heading'
       }
     },
+    shippingMethods: [
+      {
+        id: 'id',
+        label: 'Fixed $5.00',
+        name: 'radio'
+      },
+      {
+        id: 'id1',
+        label: 'Table Rate $15.00',
+        name: 'radio'
+      }
+    ],
     buttonCheckout: {
       tag: 'button',
       text: 'Proceed to Checkout',
