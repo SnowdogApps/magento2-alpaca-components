@@ -31,8 +31,8 @@
 
         &-price {
             margin-bottom: 3px;
-            font-size: 16px;
-            color: $blue;
+            font-size: 14px;
+            color: $color-primary;
         }
 
         &-qty-wrapper {
@@ -52,6 +52,8 @@
         &-subtotal {
             flex: 1;
             line-height: 35px;
+            font-weight: 600;
+            font-size: 14px;
             @include mq($screen-s) {
                 margin-left: 10px;
             }

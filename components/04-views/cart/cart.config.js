@@ -10,8 +10,8 @@ module.exports = {
         image: {
           src: '/images/product/product-img-230_180.png'
         },
-        price: '223.00 USD',
-        subtotal: '1 115.00 USD',
+        price: '$223.00',
+        subtotal: '$1 115.00',
         attributes: {
           listTag: 'dl',
           elementTag: 'dt',
@@ -58,8 +58,8 @@ module.exports = {
         image: {
           src: '/images/product/product-img-230_180.png'
         },
-        price: '223.00 USD',
-        subtotal: '1 115.00 USD',
+        price: '$195.00',
+        subtotal: '$715.00',
         attributes: {
           listTag: 'dl',
           elementTag: 'dt',
@@ -114,14 +114,14 @@ module.exports = {
           class: 'cart__discount-label'
         },
         field: {
-          class: 'cart__discount-input',
+          class: 'cart__discount-field',
           placeholder: 'Enter discount code'
         }
       },
       button: {
         tag: 'button',
         text: '',
-        class: 'button--icon',
+        class: 'button--icon cart__discount-button',
         iconId: 'arrow-right',
         iconClass: 'button__icon'
       },

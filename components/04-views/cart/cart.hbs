@@ -1,8 +1,8 @@
-<div class="grid cart" style="padding: 10px;">
+<div class="grid cart" style="padding: 20px;">
     <div class="grid__column grid__column--4-4">
         {{render '@heading' mainHeading}}
     </div>
-    <div class="grid__column grid__column--4-6">
+    <div class="grid__column grid__column--4-6 cart__main-col">
         <div class="grid__content">
             <form class="cart__products-list">
                 {{#each productlist as |item| }}
@@ -15,7 +15,7 @@
             {{ render '@form' discountForm }}
         </div>
     </div>
-    <div class="grid__column grid__column--2-6">
+    <div class="grid__column grid__column--2-6 cart__summary-col">
         <div class="cart-summary">
             <div class="cart-summary__item">
                 <h2>Summary</h2>
@@ -32,11 +32,58 @@
             <div class="cart-summary__item">
                 {{ render '@input' }}
             </div>
-            <div class="cart-summary__item cart-summary__shipping-methods">
+            <div class="cart-summary__item cart-summary__item--shipping-methods">
                 {{ render '@radio' }}
+            </div>
+            <div class="cart-summary__item cart-totals">
+                <div class="cart-totals__row">
+                    <div class="cart-totals__row-label">
+                        Subtotal
+                    </div>
+                    <div class="cart-totals__row-value">
+                        $34.00
+                    </div>
+                </div>
+                <div class="cart-totals__row">
+                    <div class="cart-totals__row-label">
+                        Tax
+                    </div>
+                    <div class="cart-totals__row-value">
+                        $00.00
+                    </div>
+                </div>
+                <div class="cart-totals__row">
+                    <div class="cart-totals__row-label">
+                        Next long row here
+                    </div>
+                    <div class="cart-totals__row-value">
+                        $00.00
+                    </div>
+                </div>
+                <div class="cart-totals__row cart-totals__row--summary">
+                    <div class="
+                            cart-totals__row-label
+                            cart-totals__row-label--total
+                        "
+                    >
+                        Order Total
+                    </div>
+                    <div class="
+                        cart-totals__row-value
+                        cart-totals__row-value--total
+                        "
+                    >
+                        $34.00
+                    </div>
+                </div>
             </div>
             <div class="cart-summary__item">
                 {{ render '@button--fluid' buttonCheckout }}
+            </div>
+            <div class="cart-summary__item">
+                <a class="cart-summary__multiple-addresses" href="#">
+                    Check Out with Multiple Addresses
+                </a>
             </div>
         </div>
     </div>
