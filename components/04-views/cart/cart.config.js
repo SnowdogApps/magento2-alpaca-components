@@ -131,11 +131,13 @@ module.exports = {
     },
     shippingMethods: [
       {
+        heading: 'Flat Rate',
         id: 'id',
         label: 'Fixed $5.00',
         name: 'radio'
       },
       {
+        heading: 'Best Way',
         id: 'id1',
         label: 'Table Rate $15.00',
         name: 'radio'

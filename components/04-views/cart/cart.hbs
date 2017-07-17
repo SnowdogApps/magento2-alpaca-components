@@ -35,7 +35,7 @@
             <div class="cart-summary__item cart-summary__shipping-methods">
                 {{#each shippingMethods as |shippingMethod| }}
                     <div class="cart-summary__shipping-methods-heading">
-                        Flat Rate
+                        {{ shippingMethod.heading }}
                     </div>
                     {{ render '@radio' shippingMethod }}
                 {{/each}}
