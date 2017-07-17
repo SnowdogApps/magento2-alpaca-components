@@ -3,6 +3,7 @@ module.exports = {
   context: {
     id: 'id',
     label: 'Radio Label',
-    name: 'radio'
+    name: 'radio',
+    class: ''
   }
 };
