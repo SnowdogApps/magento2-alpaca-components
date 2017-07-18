@@ -1,5 +1,6 @@
 .form {
     &__field {
+        margin-bottom: 15px;
         @include mq($screen-m) {
             max-width: 320px;
         }

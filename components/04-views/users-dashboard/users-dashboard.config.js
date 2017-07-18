@@ -22,7 +22,7 @@ module.exports = {
     },
     buttonChangePassword: {
       tag: 'a',
-      class: 'users-account__button-primary',
+      class: 'users-account__button',
       attributes: 'href="#"',
       text: 'Change password'
     },
