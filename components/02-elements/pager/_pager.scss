@@ -1,22 +1,17 @@
-$pager-item-size: 48px !default;
+$pager-item-size          : 30px;
+$pager-padding            : 15px;
+
+$pager-color-base         : $font-color-base;
+$pager-color-hover        : $black;
+
+$pager-current-background : lighten($gray-light, 20%);
+$pager-current-font-color : $white;
+$pager-font-size          : 14px;
 
 .pager {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 30px;
-
-    &__list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style-type: none;
-        padding: 0 15px;
-        margin: 10px 0;
-
-        @include mq($screen-m) {
-            padding: 0 30px;
-        }
-    }
+    display: flex;
+    padding: $pager-padding 0;
+    margin: 0 15px;
 
     &__item {
         display: flex;
@@ -24,15 +19,16 @@ $pager-item-size: 48px !default;
         justify-content: center;
         height: $pager-item-size;
         min-width: $pager-item-size;
-        margin-right: 5px;
+        font-size: $pager-font-size;
 
         &:last-child {
             margin-right: 0;
         }
 
         &--current {
-            color: $white;
-            background-color: $color-primary;
+            background-color: $pager-current-background;
+            color: $pager-current-font-color;
+            margin-right: 5px;
         }
     }
 
@@ -42,19 +38,19 @@ $pager-item-size: 48px !default;
         justify-content: center;
         width: 100%;
         height: $pager-item-size;
-        padding: 0 5px;
         line-height: $pager-item-size;
-        color: $gray;
-        text-align: center;
+        color: $pager-color-base;
 
         &:hover {
-            color: $color-primary;
+            color: $pager-color-hover;
             text-decoration: none;
         }
     }
 
-    &__icon {
-        width: 12px;
-        height: 12px;
+    &__nav-icon {
+        width: 23px;
+        height: 23px;
+        padding: 5px;
+        fill: $black;
     }
 }

@@ -1,0 +1,23 @@
+<div class="limiter {{ class }}">
+    <span class="limiter__label">
+        {{ labelText}}
+    </span>
+    <div class="limiter__content">
+        {{#each limits}}
+            {{#if current}}
+                <span class="limiter__option limiter__option--current">
+                    {{ number }}
+                </span>
+            {{else}}
+            <a href="{{ urlKey }}"
+               class="limiter__option"
+            >
+                {{ number }}
+            </a>
+            {{/if}}
+        {{/each}}
+        <span class="limiter__text">
+            {{ additionalText }}
+        </span>
+    </div>
+</div>

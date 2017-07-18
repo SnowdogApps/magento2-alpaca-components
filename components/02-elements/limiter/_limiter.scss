@@ -1,0 +1,33 @@
+$limiter-link-color: $black;
+
+.limiter {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5px 15px;
+    align-items: center;
+    justify-content: center;
+
+    &__label {
+        font-weight: bold;
+        padding: 15px;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    &__option {
+        display: inline-block;
+        padding: 5px;
+        color: $limiter-link-color;
+
+        &--current {
+            color: $white;
+            background-color: lighten($gray-light, 20%);
+            padding: 7px;
+            margin: 0 5px;
+        }
+    }
+}

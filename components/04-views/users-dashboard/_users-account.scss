@@ -1,5 +1,9 @@
 .users-account {
-    padding: 0 30px 30px 30px;
+    padding: 0 10px 30px 10px;
+
+    @include mq($screen-m) {
+        padding: 0 30px 30px 30px;
+    }
 
     &__field-short {
         width: 100px;
