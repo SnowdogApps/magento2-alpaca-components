@@ -108,20 +108,21 @@ module.exports = {
       class: 'cart__update-button'
     },
     discountForm: {
-      class: 'form--compact cart__discount',
+      class: 'cart__discount',
       input: {
+        class: 'form-compact__input',
         label: {
-          class: 'cart__discount-label'
+          class: 'form-compact__input-label cart__discount-label'
         },
         field: {
-          class: 'cart__discount-field',
+          class: 'form-compact__input-field cart__discount-field',
           placeholder: 'Enter discount code'
         }
       },
       button: {
         tag: 'button',
         text: '',
-        class: 'button--icon cart__discount-button',
+        class: 'button--icon form-compact__button cart__discount-button',
         iconId: 'arrow-right',
         iconClass: 'button__icon'
       },

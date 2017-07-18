@@ -1,45 +1,43 @@
-.form {
-    &--compact {
-        @include mq($screen-m) {
-            display: flex;
-            justify-content: center;
-        }
+.form-compact {
+    @include mq($screen-m) {
+        display: flex;
+        justify-content: center;
+    }
 
-        .form__heading {
-            line-height: $button-height;
-            margin-right: 20px;
-        }
+    &__heading {
+        line-height: $button-height;
+        margin-right: 20px;
+    }
 
-        .form__content {
-            display: flex;
-        }
+    &__content {
+        display: flex;
+    }
 
-        .input {
-            margin-bottom: 0;
+    &__input {
+        margin-bottom: 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        &-field {
             width: 100%;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: center;
-
-            &__field {
-                width: 100%;
-                line-height: $button-height;
-                height: $button-height;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                @include mq($screen-m) {
-                    width: 290px;
-                }
-            }
-
-            &__label {
-                margin: 0 10px 0 0;
+            line-height: $button-height;
+            height: $button-height;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            @include mq($screen-m) {
+                width: 290px;
             }
         }
 
-        .button {
-            margin: 0 0 0 (-$button-icon-border-width);
+        &-label {
+            margin-bottom: 0;
         }
+    }
+
+    &__button {
+        margin: 0 0 0 (-$button-icon-border-width);
     }
 }
