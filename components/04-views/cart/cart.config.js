@@ -121,10 +121,8 @@ module.exports = {
       },
       button: {
         tag: 'button',
-        text: '',
-        class: 'button--icon form-compact__button cart__discount-button',
-        iconId: 'arrow-right',
-        iconClass: 'button__icon'
+        text: 'Apply Discount',
+        class: 'form-compact__button cart__discount-button',
       },
       heading: {
         class: 'cart__discount-heading'
