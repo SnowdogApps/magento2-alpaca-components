@@ -17,7 +17,7 @@
         justify-content: flex-start;
         @include mq($screen-m) {
             position: relative;
-            top: -63px;
+            top: -58px;
             width: 290px;
         }
 
@@ -50,6 +50,7 @@
 
         &-button {
             width: 100%;
+            margin-bottom: 0;
             @include mq($screen-m) {
                 width: auto;
             }
