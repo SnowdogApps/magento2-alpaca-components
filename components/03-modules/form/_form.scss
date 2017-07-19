@@ -6,7 +6,10 @@
 
     &__heading {
         line-height: $button-height;
-        margin-right: 20px;
+        text-align: center;
+        @include mq($screen-m) {
+            margin-right: 20px;
+        }
     }
 
     &__content {
