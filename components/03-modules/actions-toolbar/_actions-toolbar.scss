@@ -1,4 +1,4 @@
-.action-toolbar {
+.actions-toolbar {
     width: 100%;
     padding: 10px 0;
 
@@ -41,11 +41,30 @@
         height: 38px;
     }
 
+    &__button-primary {
+        @extend .button;
+        @extend .button--link;
+        height: 38px;
+    }
+
     &--secondary {
         padding-bottom: 30px;
 
         @include mq($screen-m) {
             padding: 0 30px 30px;
+        }
+    }
+
+    &--right {
+        justify-content: flex-end;
+        margin: 0;
+
+        .actions-toolbar__button {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }

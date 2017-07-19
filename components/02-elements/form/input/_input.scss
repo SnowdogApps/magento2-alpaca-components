@@ -46,4 +46,10 @@ $textarea-min-height    : 100px !default;
             margin-right: 20px;
         }
     }
+
+    div.mage-error {
+        margin-top: 5px;
+        color: $color-danger;
+        font-size: 13px;
+    }
 }
