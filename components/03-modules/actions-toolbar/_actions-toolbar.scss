@@ -2,7 +2,7 @@
     width: 100%;
     padding: 10px 0;
 
-    @include mq($screen-m) {
+    @include mq($screen-s) {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -39,12 +39,22 @@
         @extend .button--secondary;
         @extend .button--link;
         height: 38px;
+        width: 100%;
+
+        @include mq($screen-s) {
+            width: auto;
+        }
     }
 
     &__button-primary {
         @extend .button;
         @extend .button--link;
         height: 38px;
+        width: 100%;
+
+        @include mq($screen-s) {
+            width: auto;
+        }
     }
 
     &--secondary {

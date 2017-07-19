@@ -47,6 +47,13 @@ $textarea-min-height    : 100px !default;
         }
     }
 
+    &--small {
+        justify-content: space-between;
+        .input__field {
+            width: 80px;
+        }
+    }
+
     div.mage-error {
         margin-top: 5px;
         color: $color-danger;
