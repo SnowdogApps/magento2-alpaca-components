@@ -7,13 +7,9 @@ $radio-label-active-color: $color-primary;
     margin-bottom: 10px;
 
     &__field {
-        position: absolute;
-        left: 0;
-        top: 0;
+        display: none;
         height: $radio-size;
         width: $radio-size;
-        opacity: 0;
-        appearance: none;
 
         &:checked + .radio__label {
             color: $radio-label-active-color;
@@ -28,7 +24,7 @@ $radio-label-active-color: $color-primary;
 
     &__label {
         position: relative;
-        display: inline-block;
+        display: flex;
         height: $radio-size;
         width: 100%;
         vertical-align: top;
@@ -62,7 +58,7 @@ $radio-label-active-color: $color-primary;
             opacity: 0;
             transform: scale(0);
             background-color: $color-primary;
-            transition: all 0.5s ease;
+            transition: $transition-base;
         }
     }
 }
