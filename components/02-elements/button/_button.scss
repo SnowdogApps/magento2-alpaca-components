@@ -108,6 +108,8 @@ $button-icon-hover-color          : $color-primary !default;
     }
 
     &--fluid {
-        width: 100%;
+        @include mq($screen-s) {
+            width: 100%;
+        }
     }
 }

@@ -77,4 +77,23 @@
             }
         }
     }
+
+    &--more-btns {
+        @include mq($screen-l) {
+            flex-wrap: nowrap;
+        }
+        .actions-toolbar__button {
+            padding: 0 20px;
+
+            @include mq($screen-s) {
+                flex-basis: 48%;
+            }
+            @include mq($screen-l) {
+                flex-basis: auto;
+            }
+            @include mq($screen-xl) {
+                padding: 0 30px;
+            }
+        }
+    }
 }
