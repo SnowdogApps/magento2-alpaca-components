@@ -1,0 +1,120 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account users-account--right">
+                <p>{{> '@badge' text='Complete' }}</p>
+                <div class="order-date">
+                    <span class="label">
+                        Order Date:
+                    </span>
+                    <date>July 18, 2017</date>
+                </div>
+                {{ render '@actions-toolbar' actionToolbarTop}}
+
+            </div>
+            <div class="users-account users-account--right">
+                {{> '@heading'
+                    tag='h2'
+                    class='heading heading--fifth-level'
+                    text='About Your order'
+                }}
+                {{ render '@definition-list' orderComment }}
+            </div>
+            <div class="order-links-list users-account">
+                <li class="nav item current">
+                    <strong>Items Ordered</strong>
+                </li>
+                <li class="nav item">
+                    <a href="#">Invoices</a>
+                </li>
+                <li class="nav item">
+                    <a href="#">Order Shipments</a>
+                </li>
+            </div>
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Items Ordered'
+                }}
+                {{ render '@table' orderedItemsTable}}
+                {{ render '@actions-toolbar' actionToolbar }}
+            </div>
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Order Information'
+                }}
+
+
+                <div class="grid">
+                    <div class="grid__column grid__column--1-2">
+                        <div class="flex-column">
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading heading--fourth-level'
+                            text='Shipping address'
+                        }}
+                        <div>
+                            <address>
+                                {{#each address}}
+                                    {{ this }}<br>
+                                {{/each}}
+                            </address>
+                        </div>
+                    </div>
+                        <div class="flex-column">
+                            {{> '@heading'
+                                tag='h3'
+                                class='heading heading--fourth-level'
+                                text='Shipping Method'
+                            }}
+                            <div>
+                                Flat Rate - Fixed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column grid__column--1-2">
+                        <div class="flex-column">
+                            {{> '@heading'
+                                tag='h3'
+                                class='heading heading--fourth-level'
+                                text='Billing address'
+                            }}
+                            <div>
+                                <address>
+                                    {{#each address}}
+                                        {{ this }}<br>
+                                    {{/each}}
+                                </address>
+                            </div>
+                        </div>
+                        <div class="flex-column">
+                            {{> '@heading'
+                                tag='h3'
+                                class='heading heading--fourth-level'
+                                text='Payment Method'
+                            }}
+                            <div>
+                                Check / Money order
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

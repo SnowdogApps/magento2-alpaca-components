@@ -1,5 +1,5 @@
-<div class="action-toolbar">
-    {{ render '@amount-counter' amountCounter merge=true }}
-    {{ render '@limiter' limiter merge=true }}
-    {{ render '@pager' pager merge=true }}
+<div class="actions-toolbar {{ class }}">
+    {{#each buttons as |button|}}
+        {{ render '@button' button }}
+    {{/each}}
 </div>

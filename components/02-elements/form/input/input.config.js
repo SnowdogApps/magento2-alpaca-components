@@ -2,6 +2,7 @@ module.exports = {
   context: {
     attribute: '',
     class: '',
+    inputId: 'input',
     label: {
       attribute: '',
       text: 'Label text',
@@ -17,6 +18,15 @@ module.exports = {
       name: 'inline',
       context: {
         class: 'input--inline'
+      }
+    },
+    {
+      name: 'small',
+      context: {
+        class: 'input--small',
+        field: {
+          placeholder: 'short'
+        }
       }
     }
   ]

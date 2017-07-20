@@ -8,6 +8,7 @@ selects.forEach(select => {
   new Choices(select, {
     placeholder: true,
     placeholderValue: 'Search item',
+    searchEnabled: false,
     classNames: {
       containerInner: 'select',
       list: 'select__list',
