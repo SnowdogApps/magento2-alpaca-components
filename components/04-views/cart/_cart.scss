@@ -8,7 +8,7 @@
 
     &__products-list {
         margin-bottom: 10px;
-        @include mq($screen-m) {
+        @include mq('1024px') {
             padding-right: 10px;
         }
     }

@@ -3,17 +3,15 @@
         {{render '@heading' mainHeading}}
     </div>
     <div class="grid__column grid__column--4-6 cart__main-col">
-        <div class="grid__content">
-            <form class="cart__products-list">
-                {{#each productlist as |item| }}
-                    {{ render '@products-list-item' item }}
-                {{/each}}
-                <div class="cart__update">
-                    {{ render '@button' buttonUpdateCart }}
-                </div>
-            </form>
-            {{ render '@form--compact' discountForm }}
-        </div>
+        <form class="cart__products-list">
+            {{#each productlist as |item| }}
+                {{ render '@products-list-item' item }}
+            {{/each}}
+            <div class="cart__update">
+                {{ render '@button' buttonUpdateCart }}
+            </div>
+        </form>
+        {{ render '@form--compact' discountForm }}
     </div>
     <div class="grid__column grid__column--2-6 cart__summary-col">
         <div class="cart-summary">
