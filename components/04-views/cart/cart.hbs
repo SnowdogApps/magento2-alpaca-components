@@ -6,7 +6,7 @@
         <div class="grid__content">
             <form class="cart__products-list">
                 {{#each productlist as |item| }}
-                    {{ render '@listitem' item }}
+                    {{ render '@products-list-item' item }}
                 {{/each}}
                 <div class="cart__update">
                     {{ render '@button' buttonUpdateCart }}
