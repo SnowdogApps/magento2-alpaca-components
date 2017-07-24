@@ -20,7 +20,6 @@
 // Elements
 // -----
 
-@import '../../components/02-elements/account-navigation/account-navigation';
 @import '../../components/02-elements/amount-counter/amount-counter';
 @import '../../components/02-elements/badge/badge';
 @import '../../components/02-elements/banner/banner';
@@ -40,6 +39,7 @@
 @import '../../components/02-elements/message/message';
 @import '../../components/02-elements/minicart-trigger/minicart-trigger';
 @import '../../components/02-elements/pager/pager';
+@import '../../components/02-elements/rating/rating';
 @import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/side-menu/side-menu';
@@ -50,7 +50,7 @@
 // -----
 // Modules
 // -----
-
+@import '../../components/03-modules/account-navigation/account-navigation';
 @import '../../components/03-modules/actions-toolbar/actions-toolbar';
 @import '../../components/03-modules/flex-column/flex-column';
 @import '../../components/03-modules/password-field-strength/password-field-strength';
@@ -67,3 +67,4 @@
 
 @import '../../components/04-views/catalog/catalog';
 @import '../../components/04-views/users-dashboard/users-account';
+@import '../../components/04-views/users-wishlist/wishlist-button';

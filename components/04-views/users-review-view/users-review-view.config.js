@@ -15,17 +15,17 @@ module.exports = {
             item: 'Account information'
           },
           {
-            item: 'Address book',
+            item: 'Address book'
           },
           {
             item: 'My orders'
           },
           {
-            item: 'Newsletter Subscriptions',
-            current: 'current'
+            item: 'Newsletter Subscriptions'
           },
           {
-            item: 'My Product Reviews'
+            item: 'My Product Reviews',
+            current: 'current'
           },
           {
             item: 'My Wish List'
@@ -35,24 +35,36 @@ module.exports = {
       class: 'dropdown-container--open-wide',
       additionalClass: 'account-nav'
     },
-    checkboxNewsletter: {
-      id: 'subscription',
-      label: 'General Subscription'
+    productImage: {
+      src: '/images/product/product-img-285_285.png',
+      additionalClasses: 'product__img'
     },
-    actionToolbar: {
+    ratingTitle1: 'Rating',
+    actionToolbarReview: {
       class: '',
       buttons: [
         {
           tag: 'a',
           class: 'actions-toolbar__button',
           attributes: 'href="#"',
-          text: 'Back'
+          text: '3 Reviews'
         },
         {
-          tag: 'a',
+          tag: 'button',
           class: 'actions-toolbar__button-primary',
+          attributes: '',
+          text: 'Add Your Review'
+        }
+      ]
+    },
+    actionToolbarBottom: {
+      class: 'actions-toolbar--secondary',
+      buttons: [
+        {
+          tag: 'a',
+          class: 'actions-toolbar__button',
           attributes: 'href="#"',
-          text: 'Save'
+          text: 'Back to My Reviews'
         }
       ]
     }

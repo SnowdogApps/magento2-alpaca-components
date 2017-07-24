@@ -7,6 +7,32 @@ module.exports = {
       labelIcon: 'arrow-down',
       additionalLabelClass: 'heading heading--fourth-level',
       content: 'account-navigation',
+      contentContext: {
+        navItems: [
+          {
+            item: 'Account dashboard',
+            current: 'current'
+          },
+          {
+            item: 'Account information'
+          },
+          {
+            item: 'Address book'
+          },
+          {
+            item: 'My orders'
+          },
+          {
+            item: 'Newsletter Subscriptions'
+          },
+          {
+            item: 'My Product Reviews'
+          },
+          {
+            item: 'My Wish List'
+          }
+        ]
+      },
       class: 'dropdown-container--open-wide',
       additionalClass: 'account-nav'
     },

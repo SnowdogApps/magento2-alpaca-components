@@ -1,0 +1,48 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='Review Details'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Product Name'
+                }}
+                <div>
+                    {{ render '@image' productImage }}
+                </div>
+                <div class="flex-column">
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading heading--fifth-level'
+                        text='Average Customer Rating:'
+                    }}
+                    <div class="rating">
+                        <div class="rating__title">
+                            {{ ratingTitle1 }}
+                        </div>
+                        {{ render '@rating' }}
+                    </div>
+                    {{ render '@actions-toolbar' actionToolbarReview }}
+                </div>
+                <div class="flex-column">
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading heading--fifth-level'
+                        text='Your Review:'
+                    }}
+                    {{ render '@rating-view' }}
+                </div>
+
+            </div>
+            {{ render '@actions-toolbar' actionToolbarBottom }}
+        </div>
+    </div>
+</div>

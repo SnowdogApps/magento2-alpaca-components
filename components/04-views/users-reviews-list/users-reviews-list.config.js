@@ -15,17 +15,17 @@ module.exports = {
             item: 'Account information'
           },
           {
-            item: 'Address book',
+            item: 'Address book'
           },
           {
-            item: 'My orders',
-            current: 'current'
+            item: 'My orders'
           },
           {
             item: 'Newsletter Subscriptions'
           },
           {
-            item: 'My Product Reviews'
+            item: 'My Product Reviews',
+            current: 'current'
           },
           {
             item: 'My Wish List'
@@ -35,7 +35,7 @@ module.exports = {
       class: 'dropdown-container--open-wide',
       additionalClass: 'account-nav'
     },
-    ordersTable: {
+    reviewsTable: {
       mainTags: [
         {
           mainTag: 'thead',
@@ -45,29 +45,24 @@ module.exports = {
               childTags: [
                 {
                   childTag: 'th',
-                  content: 'Order#'
+                  content: 'Created'
                 },
                 {
                   childTag: 'th',
-                  content: 'Date'
+                  content: 'Product name'
                 },
                 {
                   childTag: 'th',
-                  content: 'Ship to'
+                  content: 'Rating'
                 },
                 {
                   childTag: 'th',
-                  content: 'Order total'
+                  content: 'Review'
                 },
                 {
                   childTag: 'th',
-                  content: 'Status'
-                },
-                {
-                  childTag: 'th',
-                  content: 'Actions'
-                },
-
+                  content: ' '
+                }
               ]
             },
           ]
@@ -80,27 +75,23 @@ module.exports = {
               childTags: [
                 {
                   childTag: 'td',
-                  content: '000000013'
+                  content: '7/19/17'
                 },
                 {
                   childTag: 'td',
-                  content: '7/18/17'
+                  content: 'Gabrielle Micro Sleeve Top'
                 },
                 {
                   childTag: 'td',
-                  content: 'client name'
+                  content: 'rating component'
                 },
                 {
                   childTag: 'td',
-                  content: '$88.00'
+                  content: 'Lorem ipsum dolor sit amet, consectetur adipisc...'
                 },
                 {
                   childTag: 'td',
-                  content: 'Complete'
-                },
-                {
-                  childTag: 'td',
-                  content: 'link view detail'
+                  content: 'See details'
                 }
               ]
             },
@@ -109,56 +100,23 @@ module.exports = {
               childTags: [
                 {
                   childTag: 'td',
-                  content: '000000013'
+                  content: '7/21/17'
                 },
                 {
                   childTag: 'td',
-                  content: '7/18/17'
+                  content: 'Stellar Solar Jacket'
                 },
                 {
                   childTag: 'td',
-                  content: 'client name'
+                  content: 'rating component'
                 },
                 {
                   childTag: 'td',
-                  content: '$88.00'
+                  content: 'Lorem ipsum dolor sit amet, consectetur adipisc...'
                 },
                 {
                   childTag: 'td',
-                  content: 'Complete'
-                },
-                {
-                  childTag: 'td',
-                  content: 'link view detail'
-                }
-              ]
-            },
-            {
-              rowTag: 'tr',
-              childTags: [
-                {
-                  childTag: 'td',
-                  content: '000000013'
-                },
-                {
-                  childTag: 'td',
-                  content: '7/18/17'
-                },
-                {
-                  childTag: 'td',
-                  content: 'client name'
-                },
-                {
-                  childTag: 'td',
-                  content: '$88.00'
-                },
-                {
-                  childTag: 'td',
-                  content: 'Complete'
-                },
-                {
-                  childTag: 'td',
-                  content: 'link view detail'
+                  content: 'See details'
                 }
               ]
             }

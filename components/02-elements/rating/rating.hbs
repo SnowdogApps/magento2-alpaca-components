@@ -1,0 +1,15 @@
+<div class="rating">
+    <div class="rating__summary">
+        <svg title="rating icon" class="rating__icon">
+            <use xlink:href="{{ svg iconId }}"></use>
+        </svg>
+        <div class="rating__results"
+             title="{{ ratingValue }}"
+             style="width: {{ ratingValue }}"
+        >
+            <svg title="rating value icon" class="rating__icon rating__icon--results">
+                <use xlink:href="{{ svg iconId }}"></use>
+            </svg>
+        </div>
+    </div>
+</div>

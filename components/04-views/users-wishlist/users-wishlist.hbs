@@ -1,0 +1,50 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My Wish List'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                <form action="#">
+                    <div>
+                        <ul class="products-grid">
+                            {{# each products}}
+                                <li class="products-grid__item product">
+                                    <div class="product__details">
+                                        <a href="#">
+                                            {{ render '@image' ../productImage}}
+                                        </a>
+                                        <h2 class="product__name">
+                                            {{ productName }}
+                                        </h2>
+                                        <div class="product__price">
+                                            {{ productPrice }}
+                                        </div>
+                                        <div>
+                                            {{ render '@input' ../textareaComment }}
+                                        </div>
+                                        <fieldset>
+                                            {{ render '@input' ../inputQty }}
+                                            {{ render '@button' ../btnAddToCart }}
+                                        </fieldset>
+                                    </div>
+                                    <div class="product-item-actions">
+                                        {{ render '@button' ../btnEditProduct }}
+                                        {{ render '@button' ../btnRemoveProduct }}
+                                    </div>
+                                </li>
+                             {{/ each}}
+                        </ul>
+                    </div>
+                    {{ render '@actions-toolbar' actionToolbarBottom }}
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
