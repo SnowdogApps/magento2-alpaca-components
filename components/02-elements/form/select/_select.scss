@@ -6,8 +6,11 @@ $select-border-radius: $border-radius !default;
     margin-bottom: 10px;
 
     &__field {
-        width: 100%;
         position: relative;
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid #d9d9d9;
+        appearance: none;
         background: $white;
 
         &-item {
