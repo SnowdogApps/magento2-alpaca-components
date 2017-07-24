@@ -140,5 +140,10 @@ $grid-large-breakpoint: $screen-m !default;
                 @include column-width(5, 6);
             }
         }
+
+        &--last {
+            order: 3;
+            flex-grow: 0;
+        }
     }
 }

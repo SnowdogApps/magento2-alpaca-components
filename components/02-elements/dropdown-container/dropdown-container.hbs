@@ -1,0 +1,12 @@
+<div class="dropdown-container {{ class }} {{ additionalClass }}">
+    <{{ labelTag }} class="dropdown-container__label {{ additionalLabelClass }}">
+        {{ labelText }}
+        <svg title="icon title" class="dropdown-container__icon">
+            <use xlink:href="{{ svg labelIcon }}"></use>
+        </svg>
+    </{{ labelTag }}>
+    <div class="dropdown-container__content">
+        {{ render (component content) contentContext }}
+    </div>
+</div>
+<script src="{{static 'dropdown-container.js' }}" defer></script>

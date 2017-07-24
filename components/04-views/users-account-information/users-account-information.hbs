@@ -1,0 +1,145 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Account Information'
+                }}
+                <form action="#"
+                      method="post"
+                      id="form-validate"
+                      enctype="multipart/form-data"
+                      data-hasrequired="#"
+                      autocomplete="off"
+                      class="form form-edit-account"
+                      aria-labelledby="form-label"
+                >
+
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading heading--fifth-level'
+                        text='Edit Account Information'
+                        id='id="form-label"'
+                    }}
+
+                    <fieldset class="fieldset info users-account__fieldset"
+                              aria-labelledby="personal-info"
+                    >
+
+                        {{> '@heading'
+                            tag='h4'
+                            class='heading heading--sixth-level'
+                            text='Personal informations'
+                        }}
+                        <div class="field required fullname customer-name-prefix">
+                            <fieldset class="fieldset fieldset-fullname">
+                                {{ render '@input' inputPrefix }}
+
+                                {{ render '@input' inputFirstName }}
+
+                                {{ render '@input' inputLastName }}
+
+                            </fieldset>
+                        </div>
+                        <!-- showing not with render function because of the button inside -->
+                        <div class="input form__field date field-dob">
+                            <label class="label input__label" for="dob">
+                                Date of Birth
+                            </label>
+                            <input type="text"
+                                   name="dob"
+                                   id="dob"
+                                   value=""
+                                   class="input__field _has-datepicker"
+                            >
+                            <button type="button"
+                                    class="ui-datepicker-trigger v-middle users-account__button users-account__input-button">
+                                Select Date
+                            </button>
+                        </div>
+
+                        <div class="form__field gender">
+                            <label class="label input__label" for="gender">
+                                Gender
+                            </label>
+                            {{ render '@select' select }}
+                        </div>
+
+                        {{ render '@input' inputVatNumber }}
+
+                        {{ render '@checkbox' checkboxMail }}
+
+                        {{ render '@checkbox' checkboxPassword }}
+
+                    </fieldset>
+
+                    <fieldset class="fieldset password"
+                              data-container="change-email-password"
+                              aria-labelledby="change-info-fieldset"
+                    >
+
+                        {{> '@heading'
+                            tag='h4'
+                            class='heading heading--sixth-level'
+                            text='Change Email and Password'
+                            id='id="change-info-fieldset"'
+                        }}
+
+                        {{ render '@input' inputEmail }}
+
+                        <div class="form__field password current required input">
+                            <label for="current-password"
+                                   class="label input__label"
+                            >
+                                Current Password
+                            </label>
+                            <input id="current-password"
+                                   type="password"
+                                   class="input__field"
+                                   name="current_password"
+                                   data-input="current-password"
+                                   autocomplete="off"
+                            />
+                        </div>
+
+                        <!-- showing not with render function because of the password-field-strength component inside -->
+                        <div class="form__field new password required input"
+                             data-container="new-password"
+                        >
+                            <label for="password"
+                                   class="label input__label"
+                            >
+                                New Password
+                            </label>
+                            <input id="password"
+                                   type="password"
+                                   class="input__field"
+                                   name="password"
+                                   data-password-min-length="someValue"
+                                   data-password-min-character-sets="someValue"
+                                   data-input="new-password"
+                                   autocomplete="off"
+                            />
+                            {{ render '@password-field-strength--no-password' }}
+                        </div>
+
+                        {{ render '@input' inputPasswordConfirmation }}
+
+                    </fieldset>
+                    {{ render '@actions-toolbar' actionToolbar merge='true' }}
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

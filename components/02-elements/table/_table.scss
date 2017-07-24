@@ -5,7 +5,7 @@ $table-radius: $border-radius;
     width: 100%;
     background: $white;
     margin: 1em 0;
-    border: 1px solid $gray-light;
+    border: 1px solid $gray-lighter;
     border-radius: $table-radius;
     color: $black;
     border-collapse: separate;
@@ -13,7 +13,7 @@ $table-radius: $border-radius;
     font-size: $font-size-small;
 
     &--odd-even {
-        tbody {  
+        tbody {
             tr:nth-child(odd) {
                 td {
                     background: $white;
@@ -27,7 +27,13 @@ $table-radius: $border-radius;
             }
         }
     }
-        
+
+    caption {
+        @extend .heading;
+        @extend .heading--sixth-level;
+        text-align: left;
+    }
+
     tr {
         display: block;
         padding: $table-padding 0;
@@ -109,7 +115,7 @@ $table-radius: $border-radius;
     }
 
     tfoot {
-        td { 
+        td {
             padding: 5px $table-padding;
             background: $white;
             display: block;

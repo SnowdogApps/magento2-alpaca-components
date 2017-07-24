@@ -1,0 +1,22 @@
+.account-nav {
+    background-color: $gray-lightest;
+    overflow: hidden;
+    transition: height 0.4s;
+    // margin-bottom: 20px;
+
+    &__list {
+        @extend .list;
+        margin: 0;
+    }
+    &__link,
+    .current {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid $white;
+    }
+
+    .current {
+        background-color: $white;
+        border-left: 5px solid $color-primary;
+    }
+}

@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    selectId: 'someId',
     options: [
       {
         value: 'option1',

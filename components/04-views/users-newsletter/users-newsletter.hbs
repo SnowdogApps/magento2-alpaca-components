@@ -1,0 +1,28 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Newsletter Subscription'
+                }}
+                <form action="#" class="form">
+                    <fieldset>
+                        {{ render '@checkbox' checkboxNewsletter }}
+                    </fieldset>
+                </form>
+                {{ render '@actions-toolbar' actionToolbar }}
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Address Book'
+                }}
+
+                <form class="form-address-edit"
+                      action="#"
+                      method="post"
+                      id="form-validate"
+                      enctype="multipart/form-data"
+                      data-hasrequired="* Required Fields"
+                      aria-label="edit or add address"
+                      novalidate="novalidate"
+                >
+                    <fieldset class="fieldset users-account__fieldset"
+                              aria-labelledby="address-book-contact"
+                    >
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading--fifth-level'
+                            text='Contact Information'
+                            id='id="address-book-contact"'
+                        }}
+
+                        <div class="fomr__field required fullname customer-name-prefix">
+                            <fieldset class="fieldset-fullname">
+
+                                {{ render '@input' inputPrefix }}
+
+                                {{ render '@input' inputFirstName }}
+
+                                {{ render '@input' inputLastName }}
+                            </fieldset>
+                        </div>
+                        {{ render '@input' inputCompany }}
+
+                        {{ render '@input' inputPhone }}
+
+                        {{ render '@input' inputFax }}
+
+                    </fieldset>
+                    <fieldset class="fieldset" aria-labelledby="address-book-address">
+                        {{> '@heading'
+                            tag='h3'
+                            class='heading--fifth-level'
+                            text='Address Information'
+                            id='id="address-book-address"'
+                        }}
+                        {{ render '@input' inputStreet }}
+
+                        {{ render '@input' inputStreet2 }}
+
+                        {{ render '@input' inputVatNumber }}
+
+                        {{ render '@input' inputCity }}
+
+                        <div class="form__field input region required">
+                            <label class="input__label" for="region_id">
+                                State/Province
+                            </label>
+                            {{ render '@select' selectRegion }}
+                        </div>
+                        <div class="form__field input zip required">
+                            <label class="input__label" for="zip">
+                                Zip/Postal Code
+                            </label>
+                            <input type="text"
+                                   name="postcode"
+                                   value=""
+                                   title="Zip/Postal Code"
+                                   id="zip"
+                                   class="input__field validate-zip-international required-entry"
+                            >
+                        </div>
+                        <div class="form__field country required">
+                            <label class="input__label" for="country">
+                                Country
+                            </label>
+                            {{ render '@select' selectCountry }}
+                       </div>
+
+                       <input type="hidden" name="default_billing" value="1">
+                       <input type="hidden" name="default_shipping" value="1">
+                    </fieldset>
+                    {{ render '@actions-toolbar' actionsToolbar merge=true }}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+.users-account {
+    padding: 0 10px 15px 10px;
+
+    @include mq($screen-m) {
+        padding: 0 30px 15px 30px;
+    }
+
+    &__field-short {
+        width: 100px;
+    }
+
+    &__fieldset {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    &__button {
+        @extend .button;
+        @extend .button--link;
+        @extend .button--secondary;
+        height: 38px;
+        padding: 0 20px;
+        white-space: nowrap;
+        margin-top: 15px;
+        width: 100%;
+
+        @include mq($screen-s) {
+            width: auto;
+        }
+    }
+
+    &__button-primary {
+        @extend .button;
+        @extend .button--link;
+        height: 38px;
+        padding: 0 30px;
+        white-space: nowrap;
+        margin-top: 15px;
+        width: 100%;
+
+        @include mq($screen-s) {
+            width: auto;
+        }
+    }
+
+    &__input-button {
+        margin-top: 10px;
+        padding: 0 20px;
+    }
+
+    &__actions {
+        @include mq($screen-s) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+    }
+
+    &.order-links-list {
+        @extend .list;
+        @extend .list--horizontal;
+        padding: 0 30px 30px;
+        margin: 0;
+        justify-content: flex-end;
+
+        .item {
+            padding: 10px 10px 10px 0;
+        }
+    }
+
+    address {
+        line-height: 1.5;
+        font-style: normal;
+    }
+
+    &--right {
+        text-align: right;
+    }
+}

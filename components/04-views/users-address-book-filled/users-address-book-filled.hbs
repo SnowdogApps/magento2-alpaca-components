@@ -1,0 +1,70 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='Address Book'
+                }}
+                <div>
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading--fifth-level'
+                        text='Default Billing Address'
+                    }}
+                    <p>{{ noDefaultAddress }}</p>
+                </div>
+                <div>
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading--fifth-level'
+                        text='Default Shipping Address'
+                    }}
+                    <div>
+                        <address>
+                            {{#each address}}
+                                {{ this }}<br>
+                            {{/each}}
+                        </address>
+                    </div>
+                    <div>
+                        {{ render '@button' buttonChangeShipAddress }}
+                    </div>
+                </div
+                >
+            </div>
+            <div class="users-account">
+                <div>
+                    {{> '@heading'
+                        tag='h3'
+                        class='heading--fifth-level'
+                        text='Additional Address Entries'
+                    }}
+                </div>
+                <div>
+                    <address>
+                        {{#each address}}
+                            {{ this }}<br>
+                        {{/each}}
+                    </address>
+                </div>
+                <div>
+                    {{#each additionalAddressButtons as |item| }}
+                        {{ render '@button' item }}
+                    {{/each}}
+                </div>
+
+            </div>
+            {{ render '@actions-toolbar' actionsToolbar merge=true }}
+        </div>
+    </div>
+</div>

@@ -43,6 +43,18 @@ $heading-font-size--sixth-level : 16px !default;
     &--sixth-level {
         font-size: $heading-font-size--sixth-level;
     }
+
+    &--with-item {
+        display: flex;
+        flex-flow: row nowrap;
+        flex-grow: 1;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .heading__item {
+            font-size: 16px;
+        }
+    }
 }
 
 h1,

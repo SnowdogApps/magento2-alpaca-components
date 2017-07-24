@@ -1,0 +1,26 @@
+<div class="container">
+    {{> '@heading'
+        tag='h1'
+        class=''
+        text='My dashboard'
+    }}
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 sidebar">
+            {{render '@dropdown-container--open-wide' wrapper }}
+        </div>
+        <div class="grid__column grid__column--3-4">
+            <div class="users-account">
+                {{> '@heading'
+                    tag='h2'
+                    class=''
+                    text='My Orders'
+                }}
+                <div class="orders-history">
+                    {{ render '@table' ordersTable}}
+                </div>
+                {{ render '@actions-toolbar--pager' }}
+            </div>
+            {{ render '@actions-toolbar' actionToolbarBottom }}
+        </div>
+    </div>
+</div>

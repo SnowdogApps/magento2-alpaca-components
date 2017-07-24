@@ -54,4 +54,9 @@ $select-border-radius    : $border-radius !default;
             }
         }
     }
+
+    div.mage-error {
+        margin-top: 5px 0 10px;;
+        color: $color-danger;
+    }
 }

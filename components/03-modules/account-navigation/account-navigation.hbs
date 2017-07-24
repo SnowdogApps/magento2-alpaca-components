@@ -1,0 +1,17 @@
+<nav class="account-nav" aria-label="account navigation">
+    <ul class="account-nav__list">
+        {{#each navItems}}
+            <li class="nav item {{ current }}">
+                {{#if current }}
+                    <strong aria-label="{{ item }}">
+                        {{ item }}
+                    </strong>
+                {{else}}
+                    <a href="#" class="account-nav__link" aria-label="{{ item }}">
+                        {{ item }}
+                    </a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</nav>

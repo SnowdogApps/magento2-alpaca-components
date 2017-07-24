@@ -1,37 +1,33 @@
-<div class="pager">
-    <ul class="pager__list">
-        {{#if arrowLeftVisible}}
-            <li class="pager__item pager__item--prev">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="{{ svg 'arrow-left' }}"></use>
-                    </svg>
-                </a>
+<ul class="pager {{ class }}" {{{ attribute }}}>
+    {{#if controls}}
+        <li class="pager__item">
+            <a href="#" class="pager__link link">
+                <svg title="previous item" class="pager__nav-icon prev">
+                    <use xlink:href="{{ svg iconPrevId }}"></use>
+                </svg>
+            </a>
+        </li>
+    {{/if}}
+    {{#each pages as |page|}}
+        {{#if this.active}}
+            <li class="pager__item pager__item--current">
+                {{ pageNo }}
             </li>
-        {{/if}}
-
-        {{#each pages as |page|}}
-            {{#if this.active}}
-                <li class="pager__item pager__item--current">
+        {{else}}
+            <li class="pager__item">
+                <a href="#" class="pager__link link">
                     {{ pageNo }}
-                </li>
-            {{else}}
-                <li class="pager__item">
-                    <a href="#" class="pager__link link">
-                        {{ pageNo }}
-                    </a>
-                </li>
-            {{/if}}
-        {{/each}}
-
-        {{#if arrowRightVisible}}
-            <li class="pager__item pager__item--next">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="{{ svg 'arrow-right' }}"></use>
-                    </svg>
                 </a>
             </li>
         {{/if}}
-    </ul>
-</div>
+    {{/each}}
+    {{#if controls}}
+        <li class="pager__item">
+            <a href="#" class="pager__link link">
+                <svg title="previous item" class="pager__nav-icon next">
+                    <use xlink:href="{{ svg iconNextId }}"></use>
+                </svg>
+            </a>
+        </li>
+    {{/if}}
+</ul>

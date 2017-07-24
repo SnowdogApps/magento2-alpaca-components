@@ -51,6 +51,11 @@ $button-icon-hover-color          : $color-primary !default;
     color: $button-font-color;
     transition: $transition-base;
     align-items: center;
+    width: 100%;
+
+    @include mq($screen-s) {
+        width: auto;
+    }
 
     &:hover {
         background: $button-hover-background;
@@ -81,6 +86,7 @@ $button-icon-hover-color          : $color-primary !default;
         padding: $button-icon-padding;
         border: $button-icon-border;
         background: $button-icon-background;
+        width: auto;
 
         &:hover {
             border-color: $button-icon-hover-border;
@@ -102,6 +108,8 @@ $button-icon-hover-color          : $color-primary !default;
     }
 
     &--fluid {
-        width: 100%;
+        @include mq($screen-s) {
+            width: 100%;
+        }
     }
 }

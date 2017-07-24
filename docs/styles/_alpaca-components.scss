@@ -13,7 +13,6 @@
 @import '../../components/01-globals/typography/link/link';
 @import '../../components/01-globals/typography/paragraph/paragraph';
 @import '../../components/01-globals/typography/preformatted/preformatted';
-
 // Grid
 @import '../../components/01-globals/grid/grid';
 
@@ -21,21 +20,26 @@
 // Elements
 // -----
 
+@import '../../components/02-elements/amount-counter/amount-counter';
 @import '../../components/02-elements/badge/badge';
 @import '../../components/02-elements/banner/banner';
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
 @import '../../components/02-elements/button/button';
+@import '../../components/02-elements/definition-list/definition-list';
+@import '../../components/02-elements/dropdown-container/dropdown-container';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
 @import '../../components/02-elements/form/input/input';
 @import '../../components/02-elements/form/select/select';
 @import '../../components/02-elements/image/image';
+@import '../../components/02-elements/limiter/limiter';
 @import '../../components/02-elements/list/list';
 @import '../../components/02-elements/logo/logo';
 @import '../../components/02-elements/message/message';
 @import '../../components/02-elements/minicart-trigger/minicart-trigger';
 @import '../../components/02-elements/pager/pager';
+@import '../../components/02-elements/rating/rating';
 @import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/side-menu/side-menu';
@@ -46,7 +50,10 @@
 // -----
 // Modules
 // -----
-
+@import '../../components/03-modules/account-navigation/account-navigation';
+@import '../../components/03-modules/actions-toolbar/actions-toolbar';
+@import '../../components/03-modules/flex-column/flex-column';
+@import '../../components/03-modules/password-field-strength/password-field-strength';
 @import '../../components/03-modules/header/header';
 @import '../../components/03-modules/minicart/minicart';
 @import '../../components/03-modules/product/product';
@@ -59,3 +66,5 @@
 // -----
 
 @import '../../components/04-views/catalog/catalog';
+@import '../../components/04-views/users-dashboard/users-account';
+@import '../../components/04-views/users-wishlist/wishlist-button';
