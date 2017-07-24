@@ -4,14 +4,7 @@ $select-border-radius: $border-radius !default;
 
 .select {
     margin-bottom: 10px;
-    &__label {
-        display: block;
-        margin-bottom: 8px;
-        font-size: $input-label-font-size;
-        &--hidden {
-            display: none;
-        }
-    }
+
     &__field {
         width: 100%;
         position: relative;
@@ -50,7 +43,6 @@ $select-border-radius: $border-radius !default;
                 outline: none;
             }
         }
-
         // Choices.js lib styles overwrites
         .choices {
             &.is-open {

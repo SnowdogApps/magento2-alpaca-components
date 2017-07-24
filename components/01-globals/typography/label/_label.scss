@@ -1,0 +1,13 @@
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: $font-size-small;
+
+    &--hidden {
+        display: none;
+    }
+}
+
+label {
+    @extend .label;
+}
