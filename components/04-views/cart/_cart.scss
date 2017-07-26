@@ -7,18 +7,18 @@
     }
 
     &__products-list {
-        margin-bottom: 10px;
-        @include mq('1024px') {
+        margin: 0;
+
+        @include mq ('1024px') {
             padding-right: 10px;
         }
     }
 
     &__discount {
         justify-content: flex-start;
+        margin: 0 0 15px 0;
         @include mq($screen-m) {
-            position: relative;
-            top: -58px;
-            width: 290px;
+            margin: 15px 0;
         }
 
         &-heading {
@@ -41,20 +41,26 @@
             white-space: nowrap;
         }
     }
+}
 
-    &__update {
-        padding-top: 10px;
-        margin-bottom: 5px;
+.cart-actions {
+    @include clearfix;
+    margin-top: 15px;
+
+    &__button {
+        width: 100%;
+        float: right;
+        margin-bottom: 15px;
         @include mq($screen-m) {
-            display: flex;
-            justify-content: flex-end;
+            width: 210px;
+            margin-left: 15px;
+            padding: 0 10px;
         }
 
-        &-button {
-            width: 100%;
-            margin-bottom: 0;
+        &--continue {
             @include mq($screen-m) {
-                width: auto;
+                float: left;
+                margin-left: 0;
             }
         }
     }
@@ -72,6 +78,7 @@
 
     &__shipping-methods {
         margin: 15px 0 25px;
+
         &-heading {
             margin-bottom: 5px;
             font-weight: 600;

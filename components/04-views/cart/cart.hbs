@@ -7,8 +7,10 @@
             {{#each productlist as |item| }}
                 {{ render '@products-list-item' item }}
             {{/each}}
-            <div class="cart__update">
+            <div class="cart-actions">
                 {{ render '@button' buttonUpdateCart }}
+                {{ render '@button' buttonClearCart }}
+                {{ render '@button--link' buttonContinueShipping }}
             </div>
         </form>
         {{ render '@form--compact' discountForm }}

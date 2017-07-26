@@ -16,6 +16,13 @@ $select-border-radius: $border-radius !default;
             appearance: none;
         }
 
+        &--native {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #d9d9d9;
+            appearance: none;
+        }
+
         &-item {
             position: relative;
             padding: $select-padding;

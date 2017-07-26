@@ -105,7 +105,17 @@ module.exports = {
     buttonUpdateCart: {
       tag: 'button',
       text: 'Update shopping cart',
-      class: 'cart__update-button'
+      class: 'cart-actions__button'
+    },
+    buttonClearCart: {
+      tag: 'button',
+      text: 'Clear shopping cart',
+      class: 'cart-actions__button'
+    },
+    buttonContinueShipping: {
+      tag: 'a',
+      text: 'Continue Shipping',
+      class: 'cart-actions__button cart-actions__button--continue'
     },
     discountForm: {
       class: 'cart__discount',
