@@ -5,25 +5,18 @@
     <div class="products-list-item__details">
         <div class="grid products-list-item__grid">
             <div class="
-                    grid__column grid__column--3-4
-                    products-list-item__grid-item
-                 "
+                     products-list-item__grid-item
+                     products-list-item__grid-item--data"
             >
-                <div class="products-list-item__data">
-                    <a href="#" class="products-list-item__details-name">
-                        {{ name }}
-                    </a>
-                    <div class="products-list-item__details-price">
-                        {{ price }}
-                    </div>
-                    {{ render '@list--description' attributes }}
+                <a href="#" class="products-list-item__details-name">
+                    {{ name }}
+                </a>
+                <div class="products-list-item__details-price">
+                    {{ price }}
                 </div>
+                {{ render '@list--description' attributes }}
             </div>
-            <div class="
-                    grid__column grid__column--1-4
-                    products-list-item__grid-item
-                 "
-            >
+            <div class="products-list-item__grid-item">
                 {{ render '@input' input }}
                 <div class="products-list-item__details-subtotal">
                     {{ subtotal }}
