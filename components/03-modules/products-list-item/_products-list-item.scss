@@ -38,7 +38,6 @@
                 flex: 0 0 45px;
             }
             @include mq($screen-m) {
-                flex: 0 0 45px;
                 margin: 0;
             }
         }
