@@ -15,9 +15,6 @@
         position: relative;
         flex: 1;
         color: $gray;
-        @include mq($screen-s) {
-            display: flex;
-        }
 
         &-name {
             display: block;
