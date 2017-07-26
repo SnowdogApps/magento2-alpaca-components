@@ -8,9 +8,11 @@
 
     &__products-list {
         margin: 0;
+        padding-top: 10px;
+        border-top: 1px solid $gray-lighter;
 
         @include mq ('1024px') {
-            padding-right: 10px;
+            margin-right: 10px;
         }
     }
 
@@ -52,7 +54,7 @@
         float: right;
         margin-bottom: 15px;
         @include mq($screen-m) {
-            width: 210px;
+            width: 200px;
             margin-left: 15px;
             padding: 0 10px;
         }
