@@ -29,7 +29,7 @@ module.exports = {
     input: {
       class: 'products-list-item__details-qty-wrapper',
       label: {
-        class: 'input__label--hidden'
+        class: 'label--hidden'
       },
       field: {
         attribute: 'value="5"',
