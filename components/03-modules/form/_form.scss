@@ -1,5 +1,9 @@
 .form {
+    max-width: 850px;
+
     &--compact {
+        max-width: none; 
+
         @include mq($screen-s) {
             display: flex;
             justify-content: center;
