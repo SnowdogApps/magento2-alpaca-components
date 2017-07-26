@@ -21,13 +21,13 @@
 
         &-name {
             display: block;
-            margin-bottom: 3px;
+            margin-bottom: 5px;
             font-size: 16px;
             color: $gray-dark;
         }
 
         &-price {
-            margin-bottom: 3px;
+            margin-bottom: 5px;
             font-size: 14px;
             color: $color-primary;
         }
@@ -36,9 +36,13 @@
             flex: 0;
             float: left;
             width: 45px;
-            margin-bottom: 0;
+            margin: 10px 0 0 0;
             @include mq($screen-s) {
                 flex: 0 0 45px;
+            }
+            @include mq($screen-m) {
+                flex: 0 0 45px;
+                margin: 0;
             }
         }
 
@@ -52,15 +56,17 @@
             font-weight: 600;
             font-size: 14px;
             @include mq($screen-s) {
-                margin-left: 10px;
+                margin: 10px 0 0 10px;
             }
             @include mq($screen-m) {
+                margin: 0;
                 text-align: right;
             }
         }
     }
 
     &__attributes {
+        margin-bottom: 0;
         @include mq($screen-m) {
             margin-bottom: 0;
         }
