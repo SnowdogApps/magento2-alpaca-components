@@ -67,9 +67,6 @@
 
     &__attributes {
         margin-bottom: 0;
-        @include mq($screen-m) {
-            margin-bottom: 0;
-        }
     }
 
     &__grid {
