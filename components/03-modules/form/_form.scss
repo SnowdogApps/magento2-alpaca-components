@@ -1,46 +1,39 @@
-.form-compact {
-    @include mq($screen-m) {
-        display: flex;
-        justify-content: center;
-    }
-
-    &__heading {
-        line-height: $button-height;
-        text-align: center;
+.form {
+    &--compact {
         @include mq($screen-m) {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form__heading {
+            display: none;
+            line-height: $button-height;
             margin-right: 20px;
         }
-    }
 
-    &__content {
-        display: flex;
-    }
+        .form__content {
+            display: flex;
+        }
 
-    &__input {
-        margin-bottom: 0;
-        width: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-
-        &-field {
+        .input {
+            margin-bottom: 0;
             width: 100%;
-            line-height: $button-height;
-            height: $button-height;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            @include mq($screen-m) {
-                width: 220px;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+
+            &__field {
+                width: 100%;
+                line-height: $button-height;
+                height: $button-height;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
-        &-label {
-            margin-bottom: 0;
+        .button {
+            margin: 0 0 0 (-$button-icon-border-width);
         }
-    }
-
-    &__button {
-        margin: 0 0 0 (-$button-icon-border-width);
     }
 }

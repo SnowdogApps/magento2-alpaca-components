@@ -118,12 +118,9 @@ module.exports = {
       class: 'button--secondary cart-actions__button cart-actions__button--continue'
     },
     discountForm: {
-      class: 'cart__discount',
+      class: 'form--compact cart__discount',
       input: {
-        class: 'form-compact__input',
-        label: {
-          class: 'form-compact__input-label cart__discount-label'
-        },
+        class: '',
         field: {
           class: 'form-compact__input-field cart__discount-field',
           placeholder: 'Enter discount code'
@@ -132,10 +129,10 @@ module.exports = {
       button: {
         tag: 'button',
         text: 'Apply Discount',
-        class: 'form-compact__button cart__discount-button',
+        class: '',
       },
       heading: {
-        class: 'cart__discount-heading'
+        class: ''
       }
     },
     shippingMethods: [

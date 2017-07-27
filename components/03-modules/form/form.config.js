@@ -1,5 +1,8 @@
 module.exports = {
   context: {
+    heading: {
+      text: 'Newsletter'
+    },
     input: {
       field: {
         placeholder: 'This is placeholder'
@@ -7,7 +10,6 @@ module.exports = {
     },
     button: {
       tag: 'a',
-      text: '',
       class: 'button--icon',
       iconId: 'arrow-right',
       iconClass: 'button__icon'
@@ -17,28 +19,7 @@ module.exports = {
     {
       name: 'compact',
       context: {
-        heading: {
-          text: 'Newsletter',
-          class: ''
-        },
-        input: {
-          class: 'form-compact__input',
-          label: {
-            class: 'form-compact__input-label'
-          },
-          field: {
-            class: 'form-compact__input-field',
-            placeholder: 'Enter discount code'
-          }
-        },
-        button: {
-          tag: 'button',
-          text: '',
-          class: 'button--icon form-compact__button',
-          iconId: 'arrow-right',
-          iconClass: 'button__icon form-compact__button'
-        },
-        class: ''
+        class: 'form--compact'
       }
     }
   ]
