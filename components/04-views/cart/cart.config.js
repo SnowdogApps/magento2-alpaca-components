@@ -122,7 +122,7 @@ module.exports = {
       input: {
         class: '',
         field: {
-          class: 'form-compact__input-field cart__discount-field',
+          class: 'form-compact__input-field',
           placeholder: 'Enter discount code'
         }
       },
