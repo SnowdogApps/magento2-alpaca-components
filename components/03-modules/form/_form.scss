@@ -33,6 +33,7 @@
         }
 
         .button {
+            white-space: nowrap;
             margin: 0 0 0 (-$button-icon-border-width);
         }
     }
