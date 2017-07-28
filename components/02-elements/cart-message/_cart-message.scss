@@ -10,15 +10,17 @@ $cart-message-padding-base      : 15px;
 $cart-message-margin-base       : 15px;
 
 .cart-message {
-    background: $cart-message-background;
+    background-color: $cart-message-background;
     color: $cart-message-color;
     position: relative;
     padding: 5px ($cart-message-padding-base * 2);
     margin-bottom: $cart-message-margin-base;
     font-size: $font-size-small;
+    width: 100%;
+    transition: $transition-base;
 
     &--success {
-        background: $cart-message-background-success;
+        background-color: $cart-message-background-success;
         color: rgba($cart-message-color, 0.9);
 
         &:after {
@@ -27,7 +29,7 @@ $cart-message-margin-base       : 15px;
     }
 
     &--error {
-        background: $cart-message-background-error;
+        background-color: $cart-message-background-error;
         color: rgba($cart-message-color, 0.9);
 
         &:after {
