@@ -1,7 +1,10 @@
+$label-margin-bottom : 8px !default;
+$label-font-size     : $font-size-small !default;
+
 .label {
     display: block;
-    margin-bottom: 8px;
-    font-size: $font-size-small;
+    margin-bottom: $label-margin-bottom;
+    font-size: $label-font-size;
 
     &--hidden {
         display: none;
