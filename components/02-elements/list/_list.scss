@@ -33,7 +33,6 @@ $list-divider            : 1px solid $gray-dark !default;
     }
 
     &__label {
-        display: inline-block;
         clear: left;
         float: left;
         padding: 0 5px 5px 0;
@@ -43,7 +42,6 @@ $list-divider            : 1px solid $gray-dark !default;
     }
 
     &__value {
-        display: inline-block;
         float: left;
         padding: 0 5px 5px 0;
     }
