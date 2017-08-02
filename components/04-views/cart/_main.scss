@@ -1,0 +1,26 @@
+.cart {
+    &__main-col,
+    &__summary-col {
+        @include mq($screen-s, '1024px') {
+            flex-basis: 100%;
+        }
+    }
+
+    &__products-list {
+        margin: 0;
+        padding-top: 10px;
+        border-top: 1px solid $gray-lighter;
+
+        @include mq('1024px') {
+            margin-right: 10px;
+        }
+    }
+
+    &__discount {
+        justify-content: flex-start;
+        margin: 0 0 15px 0;
+        @include mq($screen-m) {
+            margin: 15px 0;
+        }
+    }
+}

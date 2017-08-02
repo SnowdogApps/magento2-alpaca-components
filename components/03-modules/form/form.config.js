@@ -1,5 +1,8 @@
 module.exports = {
   context: {
+    heading: {
+      text: 'Newsletter'
+    },
     input: {
       field: {
         placeholder: 'This is placeholder'
@@ -7,7 +10,6 @@ module.exports = {
     },
     button: {
       tag: 'a',
-      text: '',
       class: 'button--icon',
       iconId: 'arrow-right',
       iconClass: 'button__icon'
@@ -17,7 +19,6 @@ module.exports = {
     {
       name: 'compact',
       context: {
-        heading: 'Newsletter',
         class: 'form--compact'
       }
     }

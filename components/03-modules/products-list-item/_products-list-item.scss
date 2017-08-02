@@ -1,0 +1,105 @@
+.products-list-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $gray-lighter;
+    font-size: 12px;
+
+    &__image {
+        flex: 0 0 100px;
+        padding-right: 10px;
+    }
+
+    &__details {
+        position: relative;
+        flex: 1;
+        color: $gray;
+
+        &-name {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: $gray-dark;
+        }
+
+        &-price {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: $color-primary;
+        }
+
+        &-qty-wrapper {
+            flex: 0;
+            float: left;
+            width: 45px;
+            margin: 10px 0 0;
+            @include mq($screen-s) {
+                flex: 0 0 45px;
+            }
+            @include mq($screen-m) {
+                margin: 0;
+            }
+        }
+
+        &-qty-input {
+            text-align: center;
+        }
+
+        &-subtotal {
+            flex: 1;
+            line-height: 35px;
+            font-weight: 600;
+            font-size: 14px;
+            @include mq($screen-s) {
+                margin: 10px 0 0 10px;
+            }
+            @include mq($screen-m) {
+                margin: 0;
+                text-align: right;
+            }
+        }
+    }
+
+    &__attributes {
+        margin-bottom: 0;
+    }
+
+    &__grid {
+        width: 100%;
+
+        &-item {
+            display: flex;
+            flex-basis: 100%;
+            flex-direction: column;
+            @include mq($screen-s) {
+                flex-direction: row;
+            }
+            @include mq($screen-m ) {
+                flex-basis: 30%;
+            }
+
+            &--data {
+                display: block;
+            }
+        }
+    }
+
+    &__actions {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+        @include mq($screen-s) {
+            bottom: 0;
+        }
+
+        &-button {
+            width: 35px;
+            min-width: 35px;
+            height: 35px;
+            border: none;
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
+    }
+}

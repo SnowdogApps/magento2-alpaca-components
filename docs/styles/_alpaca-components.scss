@@ -10,6 +10,7 @@
 @import '../../components/01-globals/_container/container';
 @import '../../components/01-globals/typography/blockquote/blockquote';
 @import '../../components/01-globals/typography/heading/heading';
+@import '../../components/01-globals/typography/label/label';
 @import '../../components/01-globals/typography/link/link';
 @import '../../components/01-globals/typography/paragraph/paragraph';
 @import '../../components/01-globals/typography/preformatted/preformatted';
@@ -28,6 +29,7 @@
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
+@import '../../components/02-elements/form/radio/radio';
 @import '../../components/02-elements/form/input/input';
 @import '../../components/02-elements/form/select/select';
 @import '../../components/02-elements/image/image';
@@ -48,6 +50,7 @@
 // -----
 
 @import '../../components/03-modules/header/header';
+@import '../../components/03-modules/products-list-item/products-list-item';
 @import '../../components/03-modules/minicart/minicart';
 @import '../../components/03-modules/product/product';
 @import '../../components/03-modules/form/form';
@@ -59,3 +62,7 @@
 // -----
 
 @import '../../components/04-views/catalog/catalog';
+@import '../../components/04-views/cart/main';
+@import '../../components/04-views/cart/actions';
+@import '../../components/04-views/cart/summary';
+@import '../../components/04-views/cart/totals';
