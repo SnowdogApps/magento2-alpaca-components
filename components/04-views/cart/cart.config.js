@@ -115,7 +115,7 @@ module.exports = {
     buttonContinueShipping: {
       tag: 'a',
       text: 'Continue Shipping',
-      class: 'button--secondary cart-actions__button cart-actions__button--continue'
+      class: 'button--secondary button--link cart-actions__button cart-actions__button--continue'
     },
     discountForm: {
       class: 'form--compact cart__discount',
