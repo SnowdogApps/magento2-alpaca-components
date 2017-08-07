@@ -3,6 +3,6 @@
         flex-basis: calc(#{100% / $count * $width} - #{($count - $width) * $grid-gutter / $count});
     }
     @else {
-        flex-basis: #{100% / $count * $width} - #{($count - $width)};
+        flex-basis: 100% / $count * $width - ($count - $width);
     }
 }
