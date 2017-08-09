@@ -9,7 +9,8 @@ $cart-message-color-green       : $green;
 $cart-message-padding-base      : 15px;
 $cart-message-margin-base       : 15px;
 
-.cart-message {
+.cart-message,
+.message {
     background-color: $cart-message-background;
     color: $cart-message-color;
     position: relative;
