@@ -1,0 +1,17 @@
+{{ render '@header' }}
+
+<div class="dashboard grid">
+    <div class="grid__column grid__column--1-4 dashboard__sidebar">
+        {{ render '@dashboard-nav' }}
+
+        {{> '@dashboard-items' wishlist }}
+
+        {{render '@dashboard-items' }}        
+    </div>
+
+    <div class="grid__column grid__column--3-4 dashboard__content">
+        {{> '@dashboard-items' address }}
+    </div>
+</div>
+
+{{ render '@footer' }}
