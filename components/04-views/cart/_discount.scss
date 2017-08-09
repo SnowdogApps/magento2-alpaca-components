@@ -1,0 +1,38 @@
+.discount {
+    margin-bottom: 15px;
+    @include mq($screen-m) {
+        padding-right: 15px;
+    }
+
+    &.active {
+        .discount__title-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        cursor: pointer;
+
+        &-text {
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        &-icon {
+            width: 14px;
+            height: 14px;
+            transition: $transition-base;
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    &__form {
+        padding-top: 10px;
+    }
+}

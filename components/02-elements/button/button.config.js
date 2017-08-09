@@ -32,6 +32,15 @@ module.exports = {
       }
     },
     {
+      name: 'native link',
+      context: {
+        tag: 'a',
+        class: 'button--native-link',
+        attributes: 'href="#"',
+        text: 'I am a native link button',
+      }
+    },
+    {
       name: 'fluid',
       context: {
         class: 'button--fluid'

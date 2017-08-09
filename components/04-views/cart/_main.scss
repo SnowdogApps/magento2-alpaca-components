@@ -1,4 +1,5 @@
 .cart {
+    margin-bottom: 30px;
     &__main-col,
     &__summary-col {
         @include mq($screen-s, '1024px') {
@@ -6,21 +7,19 @@
         }
     }
 
+    &__bottom {
+        padding-top: 15px;
+        border-top: 1px solid $gray-lighter;
+        margin-right: 15px;
+    }
+
     &__products-list {
         margin: 0;
-        padding-top: 10px;
+        padding-top: 15px;
         border-top: 1px solid $gray-lighter;
 
         @include mq('1024px') {
-            margin-right: 10px;
-        }
-    }
-
-    &__discount {
-        justify-content: flex-start;
-        margin: 0 0 15px 0;
-        @include mq($screen-m) {
-            margin: 15px 0;
+            margin-right: 15px;
         }
     }
 }
