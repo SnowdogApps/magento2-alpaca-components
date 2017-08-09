@@ -1,0 +1,28 @@
+$dashboard-nav-padding: 15px !default;
+$dashboard-nav-margin : 15px !default;
+
+.dashboard-nav {
+    display: flex;
+    flex-direction: column;
+    background: $gray-lighter;
+    padding: $dashboard-nav-padding;
+
+    &__content {
+        padding: $dashboard-nav-padding 0;
+        border-top: 1px solid $gray;
+    }
+
+    &__item {
+        padding: 10px 0;
+
+        &:hover {
+            background: $white;
+        }
+    }
+
+    &__current {
+        border-left: 2px solid $red;
+        color: $red;
+        padding-left: 15px;
+    }
+}
