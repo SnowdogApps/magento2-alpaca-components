@@ -1,7 +1,16 @@
 .cart {
     margin-bottom: 30px;
-    &__main-col,
+    margin-left: -15px;
+    margin-right: -15px;
+    &__main-col {
+        padding: 0 15px;
+        @include mq($screen-s, '1024px') {
+            flex-basis: 100%;
+        }
+    }
+
     &__summary-col {
+        padding: 0 15px;
         @include mq($screen-s, '1024px') {
             flex-basis: 100%;
         }
@@ -10,16 +19,11 @@
     &__bottom {
         padding-top: 15px;
         border-top: 1px solid $gray-lighter;
-        margin-right: 15px;
     }
 
     &__products-list {
         margin: 0;
         padding-top: 15px;
         border-top: 1px solid $gray-lighter;
-
-        @include mq('1024px') {
-            margin-right: 15px;
-        }
     }
 }
