@@ -1,6 +1,7 @@
 .discount {
     flex-basis: 100%;
     margin-bottom: 15px;
+    padding: 0 15px;
     @include mq($screen-m) {
         padding-right: 15px;
         @include grid-column-width(1, 2);
