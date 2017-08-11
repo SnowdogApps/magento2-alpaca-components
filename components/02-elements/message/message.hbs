@@ -1,26 +1,3 @@
-<div class="message{{#if modifier}} message--{{ modifier }}{{/if}}">
-    <div class="message__container">
-        <p class="message__message">
-            <span class="message__text">
-                {{ text }}
-            </span>
-            {{#if link}}
-                <a href="#" class="message__link">
-                    {{ linkAnchor }}
-                </a>
-            {{/if}}
-        </p>
-
-        <button class="message__close" type="button">
-            {{#if closeLabel}}
-                {{ closeLabel }}
-            {{/if}}
-            {{#if closeIcon}}
-                <svg class="message__close--icon">
-                    <use xlink:href="{{ svg closeIcon }}"></use>
-                </svg>
-            {{/if}}
-        </button>
-    </div>
+<div class="message {{ class }}" {{{ attributes }}} >
+    {{ text }}
 </div>
-<script src="{{static 'message.js' }}"></script>
