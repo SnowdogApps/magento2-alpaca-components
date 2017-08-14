@@ -1,0 +1,21 @@
+.cart-actions {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+    &__button {
+        width: 100%;
+        margin-bottom: 15px;
+        @include mq($screen-m) {
+            width: 190px;
+            margin: 0 0 15px 15px;
+            padding: 0 10px;
+        }
+
+        &--continue {
+            @include mq($screen-m) {
+                margin: 0 auto 0 0;
+            }
+        }
+    }
+}

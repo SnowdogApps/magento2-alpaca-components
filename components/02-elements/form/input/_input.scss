@@ -1,4 +1,3 @@
-$input-label-font-size  : $font-size-small !default;
 $input-border-color     : #d9d9d9 !default;
 $input-padding          : 10px 15px !default;
 $input-border-radius    : $border-radius !default;
@@ -8,12 +7,6 @@ $textarea-min-height    : 100px !default;
 
 .input {
     margin-bottom: 10px;
-
-    &__label {
-        display: block;
-        margin-bottom: 8px;
-        font-size: $input-label-font-size;
-    }
 
     &__field {
         width: 100%;

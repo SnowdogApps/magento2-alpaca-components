@@ -1,11 +1,12 @@
 .form {
     &--compact {
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             display: flex;
             justify-content: center;
         }
 
         .form__heading {
+            display: none;
             line-height: $button-height;
             margin-right: 20px;
         }
@@ -24,17 +25,10 @@
 
             &__field {
                 width: 100%;
-                border: $button-icon-border;
                 line-height: $button-height;
                 height: $button-height;
-                border-radius: 0;
-                @include mq($screen-s) {
-                    width: 290px;
-                }
-            }
-
-            &__label {
-                margin: 0 10px 0 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
