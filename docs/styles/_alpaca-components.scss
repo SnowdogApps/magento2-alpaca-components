@@ -26,11 +26,12 @@
 @import '../../components/02-elements/banner/banner';
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
 @import '../../components/02-elements/button/button';
+@import '../../components/02-elements/cookie-message/cookie-message';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
-@import '../../components/02-elements/form/radio/radio';
 @import '../../components/02-elements/form/input/input';
+@import '../../components/02-elements/form/radio/radio';
 @import '../../components/02-elements/form/select/select';
 @import '../../components/02-elements/image/image';
 @import '../../components/02-elements/list/list';
@@ -38,6 +39,7 @@
 @import '../../components/02-elements/message/message';
 @import '../../components/02-elements/minicart-trigger/minicart-trigger';
 @import '../../components/02-elements/pager/pager';
+@import '../../components/02-elements/password-strength/password-strength';
 @import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/side-menu/side-menu';
@@ -49,11 +51,11 @@
 // Modules
 // -----
 
+@import '../../components/03-modules/form/form';
 @import '../../components/03-modules/header/header';
-@import '../../components/03-modules/products-list-item/products-list-item';
 @import '../../components/03-modules/minicart/minicart';
 @import '../../components/03-modules/product/product';
-@import '../../components/03-modules/form/form';
+@import '../../components/03-modules/products-list-item/products-list-item';
 @import '../../components/03-modules/search/search';
 
 
@@ -61,9 +63,10 @@
 // Views
 // -----
 
-@import '../../components/04-views/catalog/catalog';
-@import '../../components/04-views/cart/main';
 @import '../../components/04-views/cart/actions';
+@import '../../components/04-views/cart/discount';
+@import '../../components/04-views/cart/main';
 @import '../../components/04-views/cart/summary';
 @import '../../components/04-views/cart/totals';
-@import '../../components/04-views/cart/discount';
+@import '../../components/04-views/catalog/catalog';
+
