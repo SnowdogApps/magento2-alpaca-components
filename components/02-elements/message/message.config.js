@@ -1,21 +1,23 @@
 module.exports = {
-  title: 'Message',
+  collated: true,
   context: {
-    linkAnchor: 'Action\'s details',
-    closeIcon: 'close',
-    text: 'Some action / promotion text',
-    modifier: 'top'
+    class: '',
+    attributes: '',
+    text: 'You added Jacket to your shopping cart.',
   },
   variants: [
     {
-      name: 'With button',
+      name: 'success',
       context: {
-        linkAnchor: 'Details',
-        closeIcon: false,
-        closeLabel: 'OK, close',
-        text: 'This website uses cookies. For information on cookies and how you can disable them see our',
-        modifier: 'with-button'
+        class: 'message--success',
+      }
+    },
+    {
+      name: 'error',
+      context: {
+        class: 'message--error',
+        text: 'Please specify product\'s required options(s).'
       }
     }
   ]
-};
+}
