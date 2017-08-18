@@ -1,20 +1,20 @@
-$dashboard-toolbar-padding: 15px !default;
+$dashboard-actions-padding: 15px !default;
 
-.dashboard-toolbar {
+.dashboard-actions {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
 
     &__link {
-        padding: $dashboard-toolbar-padding;
-
+        padding: $dashboard-actions-padding 0;
+    
         &:first-child {
-            padding-left: 0;
+            margin-right: 15px;
         }
 
         &:last-child {
-            padding-right: 0;
+            margin-right: 0;
         }
     }
 }
