@@ -1,0 +1,18 @@
+.dashboard-form {
+    &--hidden {
+        display: none;
+    }
+
+    &__input {
+        margin-bottom: 15px;
+    }
+
+    &__fields {
+        margin-bottom: 15px;
+    }
+
+    &__handler {
+        display: flex;
+        justify-content: space-around;
+    }
+}
