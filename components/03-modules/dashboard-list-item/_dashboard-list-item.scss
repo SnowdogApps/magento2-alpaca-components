@@ -1,0 +1,18 @@
+.dashboard-list-item {
+    margin-bottom: 10px;
+    padding: 10px;
+
+    &__list {
+        list-style: decimal;
+        padding-left: 20px;
+
+        .list__image {
+            max-width: 64px;
+            margin-bottom: 10px;
+        }
+
+        .list__content {
+            padding-left: 0;
+        }
+    }
+}

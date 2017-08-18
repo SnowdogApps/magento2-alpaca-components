@@ -28,7 +28,7 @@
 @import '../../components/02-elements/button/button';
 @import '../../components/02-elements/cookie-message/cookie-message';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
-@import '../../components/02-elements/dashboard-toolbar/dashboard-toolbar';
+@import '../../components/02-elements/dashboard-actions/dashboard-actions';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
 @import '../../components/02-elements/form/input/input';
@@ -54,8 +54,10 @@
 
 @import '../../components/03-modules/dashboard-form/dashboard-form';
 @import '../../components/03-modules/dashboard-items/dashboard-items';
+@import '../../components/03-modules/dashboard-list-item/dashboard-list-item';
 @import '../../components/03-modules/dashboard-order/dashboard-order';
 @import '../../components/03-modules/dashboard-nav/dashboard-nav';
+@import '../../components/03-modules/dashboard-toolbar/dashboard-toolbar';
 @import '../../components/03-modules/form/form';
 @import '../../components/03-modules/header/header';
 @import '../../components/03-modules/minicart/minicart';
