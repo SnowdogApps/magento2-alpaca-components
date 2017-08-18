@@ -6,6 +6,7 @@ $dashboard-nav-margin : 10px !default;
     flex-direction: column;
     background-color: $gray-lighter;
     padding: $dashboard-nav-padding;
+    margin-bottom: $dashboard-nav-margin;
 
     &__content {
         padding: $dashboard-nav-padding 0;

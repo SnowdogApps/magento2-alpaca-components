@@ -10,6 +10,10 @@ $dashboard-items-margin : 10px !default;
         margin: 0;        
     }
 
+    &__address {
+        margin-bottom: 10px;
+    }
+
     &__item {
         padding: $dashboard-items-padding 0;
         margin-bottom: $dashboard-items-margin;

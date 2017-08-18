@@ -1,20 +1,22 @@
 {{ render '@header' }}
 
-<div class="dashboard container grid">
-    <div class="grid__column grid__column--1-4 dashboard__sidebar">
-        {{ render '@dashboard-nav' }}
+<div class="dashboard container">
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 dashboard__sidebar">
+            {{ render '@dashboard-nav' }}
 
-        {{> '@dashboard-items' wishlist }}
+            {{> '@dashboard-list-item' wishlist }}
 
-        {{> '@dashboard-items' recentlyOrdered }}
-    </div>
+            {{> '@dashboard-list-item' recentlyOrdered }}
+        </div>
 
-    <div class="grid__column grid__column--3-4 dashboard__content">
-        {{render '@dashboard-order' }}
+        <div class="grid__column grid__column--3-4 dashboard__content">
+            {{ render '@dashboard-order' }}
 
-        {{> '@dashboard-items' account }}
+            {{> '@dashboard-items' account }}
 
-        {{> '@dashboard-items' addreses }}
+            {{> '@dashboard-items' addreses }}
+        </div>
     </div>
 </div>
 
