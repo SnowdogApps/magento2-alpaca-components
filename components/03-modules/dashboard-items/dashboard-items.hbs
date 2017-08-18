@@ -1,9 +1,21 @@
-<div class="dashboard-items">
-    <h3 class="heading heading--fifth-level">
+<div class="dashboard-items {{ class }}">
+    <h3 class="heading heading--fifth-level {{ titleClass }}">
         {{ title }}
     </h3>
 
-    {{> '@list' items }}
+    <div class="grid dashboard-items__content {{ contentClass }}">
+        {{#each informations }}
+            <div class="dashboard-items__item {{ this.class }}">
+                <h5 class="heading heading--sixth-level">
+                    {{ this.title }}
+                </h5>
 
-    {{> '@dashboard-toolbar' toolbar }}
+                <div class="dashboard-items__address">
+                    {{ information }}
+                </div>
+
+                {{> '@dashboard-toolbar' toolbar }}
+            </div>
+        {{/each}}
+    </div>
 </div>

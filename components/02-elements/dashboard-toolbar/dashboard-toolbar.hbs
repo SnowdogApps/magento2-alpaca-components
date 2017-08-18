@@ -1,5 +1,7 @@
 <div class="dashboard-toolbar {{ class }}">
-    <a href="#" class="link dashboard-toolbar__link">
-        {{ title }}
-    </a>
+    {{#each links }}
+        <a href="#" class="link dashboard-toolbar__link {{ this.class }}">
+            {{ title }}
+        </a>
+    {{/each}}
 </div>

@@ -1,10 +1,10 @@
-$dashboard-nav-padding: 15px !default;
-$dashboard-nav-margin : 15px !default;
+$dashboard-nav-padding: 10px !default;
+$dashboard-nav-margin : 10px !default;
 
 .dashboard-nav {
     display: flex;
     flex-direction: column;
-    background: $gray-lighter;
+    background-color: $gray-lighter;
     padding: $dashboard-nav-padding;
 
     &__content {
@@ -13,16 +13,31 @@ $dashboard-nav-margin : 15px !default;
     }
 
     &__item {
-        padding: 10px 0;
+        padding: 10px;
+        transition: $transition-base;
 
         &:hover {
-            background: $white;
+            background-color: $white;
+        }
+
+        &:first-child {
+            padding-top: 10px;
+        }
+
+        &:last-child {
+            padding-bottom: 10px;
         }
     }
 
-    &__current {
+    .current {
         border-left: 2px solid $red;
         color: $red;
-        padding-left: 15px;
+        padding-left: 18px;
+        position: relative;
+        margin-left: -10px;
+
+        &:hover {
+            background-color: inherit;
+        }
     }
 }

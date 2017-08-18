@@ -7,19 +7,24 @@ module.exports = {
       elementTag: 'li',
       elements: [
         {
-          text: 'Account Dashboard'
+          text: 'Account Dashboard',
+          class: 'dashboard-nav__item current'
         },
         {
-          text: 'Account Information'
+          text: 'Account Information',
+          class: 'dashboard-nav__item'
         },
         {
-          text: 'Address Book'
+          text: 'Address Book',
+          class: 'dashboard-nav__item'
         },
         {
-          text: 'Store Credit'
+          text: 'Store Credit',
+          class: 'dashboard-nav__item'
         },
         {
-          text: 'My Downloadable Products'
+          text: 'My Downloadable Products',
+          class: 'dashboard-nav__item'
         }
       ]
     }

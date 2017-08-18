@@ -1,24 +1,35 @@
 module.exports = {
   context: {
-    title: 'Compare products',
-    items: {
-      class: 'dashboard-items__list',
-      elementTag: 'li',
-      listTag: 'ol',
-      elements: [
-        {
-          text: 'Produkt numer 1'
-        },
-        {
-          text: 'Produkt numer 2'
-        },
-        {
-          text: 'Produkt numer 3'
+    title: 'Addresses',
+    contentClass: 'dashboard-items__content',
+    informations: [
+      {
+        title: 'Contact information',
+        class: 'grid__column grid__column--1-4',
+        information: 'qweqwe qwe qwe@qwe.com',
+        toolbar: {
+          links: [
+            {
+              title: 'Edit'
+            },
+            {
+              title: 'Change password'
+            }
+          ]
         }
-      ]
-    },
-    toolbar: {
-      title: 'Remove all'
-    }
+      },
+      {
+        title: 'Address second',
+        class: 'grid__column grid__column--1-4',
+        information: 'Second address qwe@qwe.com',
+        toolbar: {
+          links: [
+            {
+              title: 'Edit'
+            }
+          ]
+        }
+      }
+    ]
   }
 }
