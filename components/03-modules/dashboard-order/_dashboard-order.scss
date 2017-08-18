@@ -1,0 +1,13 @@
+.dashboard-order {
+    &__header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+}
