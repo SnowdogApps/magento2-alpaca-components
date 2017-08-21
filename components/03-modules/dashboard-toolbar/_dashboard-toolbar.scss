@@ -1,3 +1,40 @@
 .dashboard-toolbar {
+    &__amount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
 
+        @include mq($screen-m) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__limiter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        @include mq($screen-m) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__pager {
+        margin-bottom: 0;
+    }
+
+    &__information {
+        margin: 0 10px;
+    }
+
+    .select {
+        width: 100px;
+        margin-bottom: 0;
+
+        .label {
+            margin-bottom: 0;
+        }
+    }
 }

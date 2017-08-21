@@ -1,3 +1,21 @@
-<div class="dashboard-toolbar">
-    {{ render '@pager--pager-type-with-arrow-in-right-and-left' }}
+<div class="dashboard-toolbar grid">
+    <div class="dashboard-toolbar__amount grid__column grid__column--1-2">
+        <span clss="dashboard-toolbar__information">
+            {{ leftItems }}
+        </span>
+    </div>
+
+    <div class="dashboard-toolbar__limiter grid__column grid__column--1-2">
+        <span class="dashboard-toolbar__information">
+            Show
+        </span>
+
+        {{> '@select' limiter }}
+
+        <span class="dashboard-toolbar__information">
+            per page
+        </span>
+    </div>
+
+    {{> '@pager' pager }}
 </div>
