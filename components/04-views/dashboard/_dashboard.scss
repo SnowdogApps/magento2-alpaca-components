@@ -2,4 +2,16 @@
     &__actions {
         justify-content: space-between;
     }
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__product {
+        border: 0;
+    }
+
+    &__label {
+        margin: 0 20px 0 0;
+    }
 }

@@ -3,12 +3,21 @@ $dashboard-actions-padding: 15px !default;
 .dashboard-actions {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    flex-basis: 100%;
+
+    &__handler {
+        flex-basis: 100%;
+
+        @include mq($screen-m) {
+            flex-basis: auto;
+        }
+    }
 
     &__button {
-        margin: 0 15px 0 0;
+        margin-right: 15px;
         height: 30px;
         padding: 0 20px;
         font-size: 14px;

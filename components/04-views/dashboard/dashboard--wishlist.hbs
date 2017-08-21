@@ -1,0 +1,29 @@
+{{ render '@header' }}
+
+<div class="dashboard container">
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 dashboard__sidebar">
+            {{> '@dashboard-nav' nav }}
+        </div>
+
+        <div class="grid__column grid__column--3-4 dashboard__content">
+            <div class="grid">
+                {{#each wishlistItems}}
+                    <div class="dashboard__item grid__column grid__column--1-2">
+                        {{> '@product--with-add-to-cart-button' item }}
+
+                        {{render '@input--textarea'}}
+
+                        {{> '@input--inline' qty }}
+
+                        {{> '@dashboard-actions' itemAction }}
+                    </div>
+                {{/each}}
+
+                {{> '@dashboard-actions' actions }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ render '@footer' }}
