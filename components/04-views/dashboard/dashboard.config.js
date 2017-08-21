@@ -14,9 +14,13 @@ module.exports = {
         ]
       },
       buttons: {
-        links: [
+        sides: [
           {
-            title: 'Remove All'
+            action: [
+              {
+                title: 'Remove All'
+              }
+            ]
           }
         ]
       }
@@ -34,12 +38,21 @@ module.exports = {
         ],
       },
       buttons: {
-        links: [
+        sides: [
           {
-            title: 'Add to Cart'
+            action: [
+              {
+                button: true,
+                title: 'Add to Cart'
+              }
+            ]
           },
           {
-            title: 'View All'
+            action: [
+              {
+                title: 'View All'
+              }
+            ]
           }
         ]
       }
@@ -52,12 +65,16 @@ module.exports = {
           class: 'grid__column grid__column--1-2',
           information: 'qweqwe qwe qwe@qwe.com',
           actions: {
-            links: [
+            sides: [
               {
-                title: 'Edit'
-              },
-              {
-                title: 'Change password'
+                action: [
+                  {
+                    title: 'Edit'
+                  },
+                  {
+                    title: 'Change password'
+                  }
+                ]
               }
             ]
           }
@@ -67,9 +84,13 @@ module.exports = {
           class: 'grid__column grid__column--1-2',
           information: 'You don\'t subscribe to our newsletter.',
           actions: {
-            links: [
+            sides: [
               {
-                title: 'Edit'
+                action: [
+                  {
+                    title: 'Edit'
+                  }
+                ]
               }
             ]
           }
@@ -84,9 +105,13 @@ module.exports = {
           class: 'grid__column grid__column--1-2',
           information: 'qweqwe qwe 136 N. Bay Road',
           actions: {
-            links: [
+            sides: [
               {
-                title: 'Edit Address'
+                action: [
+                  {
+                    title: 'Edit Address'
+                  }
+                ]
               }
             ]
           }
@@ -96,9 +121,13 @@ module.exports = {
           class: 'grid__column grid__column--1-2',
           information: '11233 Easer 53rd Ave, Suite 600 US',
           actions: {
-            links: [
+            sides: [
               {
-                title: 'Edit Address'
+                action: [
+                  {
+                    title: 'Edit Address'
+                  }
+                ]
               }
             ]
           }
@@ -142,14 +171,23 @@ module.exports = {
         },
         buttons: {
           class: 'dashboard__actions',
-          links: [
+          sides: [
             {
-              title: 'Save'
+              action: [
+                {
+                  button: true,
+                  title: 'Save'
+                }
+              ]
             },
             {
-              title: 'Go Back'
+              action: [
+                {
+                  title: 'Go Back'
+                }
+              ]
             }
-          ]
+          ],
         }
       }
     },
@@ -188,12 +226,21 @@ module.exports = {
         },
         buttons: {
           class: 'dashboard__actions',
-          links: [
+          sides: [
             {
-              title: 'Add New Address'
+              action: [
+                {
+                  button: true,
+                  title: 'Add New Address'
+                }
+              ]
             },
             {
-              title: 'Go Back'
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
             }
           ]
         },
@@ -205,9 +252,13 @@ module.exports = {
               class: 'grid__column grid__column--1-2',
               information: 'qweqwe qwe 136 N. Bay Road',
               actions: {
-                links: [
+                sides: [
                   {
-                    title: 'Change Billing Address'
+                    action: [
+                      {
+                        title: 'Change Billing Address'
+                      }
+                    ]
                   }
                 ]
               }
@@ -217,9 +268,13 @@ module.exports = {
               class: 'grid__column grid__column--1-2',
               information: '11233 Easer 53rd Ave, Suite 600 US',
               actions: {
-                links: [
+                sides: [
                   {
-                    title: 'Change Shipping Address'
+                    action: [
+                      {
+                        title: 'Change Shipping Address'
+                      }
+                    ]
                   }
                 ]
               }
@@ -233,12 +288,16 @@ module.exports = {
               class: 'grid__column grid__column--1-2',
               information: 'qweqwe qwe 601 s Galves St New Orlean',
               actions: {
-                links: [
+                sides: [
                   {
-                    title: 'Edit Address'
-                  },
-                  {
-                    title: 'Delete Address'
+                    action: [
+                      {
+                        title: 'Edit Address'
+                      },
+                      {
+                        title: 'Delete Address'
+                      }
+                    ]
                   }
                 ]
               }
@@ -247,12 +306,16 @@ module.exports = {
               class: 'grid__column grid__column--1-2',
               information: 'Delray Beach, Florida, 33444-1250',
               actions: {
-                links: [
+                sides: [
                   {
-                    title: 'Edit Address'
-                  },
-                  {
-                    title: 'Delete Address'
+                    action: [
+                      {
+                        title: 'Edit Address'
+                      },
+                      {
+                        title: 'Delete Address'
+                      }
+                    ]
                   }
                 ]
               }
@@ -261,12 +324,16 @@ module.exports = {
               class: 'grid__column grid__column--1-2',
               information: 'San Antonio, Texas, 78215-1298 US',
               actions: {
-                links: [
+                sides: [
                   {
-                    title: 'Edit Address'
-                  },
-                  {
-                    title: 'Delete Address'
+                    action: [
+                      {
+                        title: 'Edit Address'
+                      },
+                      {
+                        title: 'Delete Address'
+                      }
+                    ]
                   }
                 ]
               }
@@ -275,12 +342,16 @@ module.exports = {
               class: 'grid__column grid__column--1-2',
               information: '3848 Bryn Marw Drive University Park, Texas',
               actions: {
-                links: [
+                sides: [
                   {
-                    title: 'Edit Address'
-                  },
-                  {
-                    title: 'Delete Address'
+                    action: [
+                      {
+                        title: 'Edit Address'
+                      },
+                      {
+                        title: 'Delete Address'
+                      }
+                    ]
                   }
                 ]
               }
@@ -313,7 +384,7 @@ module.exports = {
               },
               {
                 text: 'My Orders',
-                class: 'dashboard-nam__item current'
+                class: 'dashboard-nav__item current'
               },
               {
                 text: 'Store Credit',
@@ -326,6 +397,17 @@ module.exports = {
             ]
           }
         },
+        action: {
+          sides: [
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        }
       }
     },
     {
@@ -352,7 +434,7 @@ module.exports = {
               },
               {
                 text: 'My Orders',
-                class: 'dashboard-nam__item '
+                class: 'dashboard-nav__item '
               },
               {
                 text: 'Store Credit',
@@ -364,7 +446,96 @@ module.exports = {
               }
             ]
           }
+        }
+      }
+    },
+    {
+      name: 'wishlist',
+      context: {
+        nav: {
+          title: 'My Account',
+          list: {
+            class: 'dashboard-nav__content',
+            listTag: 'ul',
+            elementTag: 'li',
+            elements: [
+              {
+                text: 'Account Dashboard',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Account Information',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Address Book',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Orders',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Store Credit',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Downloadable Products',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Wishlist',
+                class: 'dashboard-nav__item current'
+              }
+            ]
+          }
         },
+        emptyWishlistMessage: {
+          text: 'You have no items in your wish list'
+        },
+        action: {
+          sides: [
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        },
+        actions: {
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Update Wish List'
+                },
+                {
+                  button: true,
+                  title: 'Share Wish List'
+                },
+                {
+                  button: true,
+                  title: 'Add All to Cart'
+                }
+              ]
+            },
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        },
+        wishlistItems: [
+          {
+
+          }
+        ]
       }
     }
   ]

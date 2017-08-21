@@ -15,12 +15,21 @@ module.exports = {
       ]
     },
     buttons: {
-      links: [
+      sides: [
         {
-          title: 'Add to Cart'
+          action: [
+            {
+              button: true,
+              title: 'Example button'
+            }
+          ]
         },
         {
-          title: 'View All'
+          action: [
+            {
+              title: 'Link this title'
+            }
+          ]
         }
       ]
     }

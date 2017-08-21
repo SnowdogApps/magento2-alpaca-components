@@ -1,8 +1,20 @@
 module.exports = {
   context: {
-    links: [
+    sides: [
       {
-        title: 'Link this title'
+        action: [
+          {
+            button: true,
+            title: 'Example button'
+          }
+        ]
+      },
+      {
+        action: [
+          {
+            title: 'Link this title'
+          }
+        ]
       }
     ]
   }
