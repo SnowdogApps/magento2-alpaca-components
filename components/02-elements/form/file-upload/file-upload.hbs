@@ -1,0 +1,24 @@
+<div class="file-upload {{ class }}">
+    <label class="file-upload__label" for="{{ name }}">
+        {{ labelText }}
+    </label>
+
+    <div class="file-upload__handler">
+        <input id="{{fileId}}"
+               class="file-upload__field"
+               title="title"
+               type="{{ type }}"
+               name="{{ name }}"
+               accept=".pdf,.doc,.png"
+               data-size="1024"
+        />
+
+        {{ render '@button' }}
+
+        <span class="file-upload__name">
+            {{ fileName }}
+        </span>
+    </div>
+</div>
+
+<script src="{{ static 'file-upload.js' }}"></script>

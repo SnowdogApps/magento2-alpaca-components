@@ -1,0 +1,52 @@
+$file-upload-margin : 15px;
+$file-upload-padding: 15px;
+$file-upload-font-size: 14px;
+
+.file-upload {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $file-upload-margin;
+
+    &__handler {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    &__field {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+
+        &:hover + .file-upload__button {
+            background: $gray-dark;
+            color: $white;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-basis: 100%;
+        margin-bottom: 5px;
+        font-size: $file-upload-font-size;
+    }
+
+    &__name {
+        font-size: $file-upload-font-size;
+        margin-left: $file-upload-margin;
+        color: $gray;
+    }
+
+    &__button {
+        margin-bottom: 0;
+        padding: 10px 35px;
+        border: 1px solid $gray-dark;
+    }
+}
