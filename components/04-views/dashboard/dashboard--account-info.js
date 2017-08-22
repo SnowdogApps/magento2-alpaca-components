@@ -9,7 +9,6 @@ const checkboxPassword = document.querySelector('input#changePassword'),
       password         = document.querySelector('.password'),
       title            = document.querySelector('.dashboard-form__title-form');
 
-
 checkboxEmail.addEventListener('change', () => {
   if (checkboxPassword.checked && checkboxEmail.checked) {
     title.innerHTML = 'Change Email and Password';

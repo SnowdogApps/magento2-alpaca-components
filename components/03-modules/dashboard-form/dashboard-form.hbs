@@ -8,7 +8,15 @@
             {{> '@input' input }}
         {{/each}}
 
-        <div class="dashboard-form__handler">        
+        {{#each textareas }}
+            {{> '@input--textarea' textarea }}
+        {{/each}}
+
+        {{#each selects }}
+            {{> '@select' select }}
+        {{/each}}
+
+        <div class="dashboard-form__handler">
             {{#each checkboxes }}
                 {{> '@checkbox' checkbox}}
             {{/each}}
@@ -25,5 +33,3 @@
         </div>
     </div>
 </div>
-
-<script src="{{ static '../dashboard-form/dashboard-form.js' }}"></script>

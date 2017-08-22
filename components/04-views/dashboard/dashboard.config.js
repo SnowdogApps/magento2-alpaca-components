@@ -686,6 +686,833 @@ module.exports = {
       }
     },
     {
+      name: 'Order by SKU',
+      context: {
+        nav: {
+          title: 'My Account',
+          list: {
+            class: 'dashboard-nav__content',
+            listTag: 'ul',
+            elementTag: 'li',
+            elements: [
+              {
+                text: 'Account Dashboard',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Account Information',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Address Book',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Orders',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Store Credit',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Downloadable Products',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Wishlist',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Gift Card',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Order by SKU',
+                class: 'dashboard-nav__item current'
+              }
+            ]
+          }
+        },
+        form: {
+          title: 'Order by SKU',
+          fields: [
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'SKU'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Qty'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'SKU'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Qty'
+                }
+              }
+            }
+          ]
+        },
+        addRow: {
+          class: 'dashboard__item',
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Add Row'
+                }
+              ]
+            }
+          ]
+        },
+        uploadInfo: {
+          informations: [
+            {
+              title: 'Attention',
+              text: 'File extension allowed: *.csv. Your CSV file must include "sku" and "qty" columns.'
+            }
+          ]
+        },
+        fileUpload: {
+          class: 'dashboard__item',
+          fileId: 'file',
+          labelText: 'Your file (csv max 1 MB)',
+          labelTextSecond: 'Choose a file',
+          type: 'file',
+          name: 'uploadCSV',
+          fileName: 'File not choosen',
+          text: 'Choose a file'
+        },
+        buttons: {
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Add to Cart'
+                }
+              ]
+            },
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Reset'
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      name: 'newsletter sub',
+      context: {
+        nav: {
+          title: 'My Account',
+          list: {
+            class: 'dashboard-nav__content',
+            listTag: 'ul',
+            elementTag: 'li',
+            elements: [
+              {
+                text: 'Account Dashboard',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Account Information',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Address Book',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Orders',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Store Credit',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Downloadable Products',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Wishlist',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Gift Card',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Order by SKU',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Newsletter Subscriptions',
+                class: 'dashboard-nav__item current'
+              }
+            ]
+          }
+        },
+        form: {
+          title: 'Subscription option',
+          checkboxes: [
+            {
+              checkbox: {
+                id: 'subscription',
+                label: 'General Subscription'
+              }
+            }
+          ]
+        },
+        buttons: {
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Save'
+                }
+              ]
+            },
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      name: 'gift registry',
+      context: {
+        nav: {
+          title: 'My Account',
+          list: {
+            class: 'dashboard-nav__content',
+            listTag: 'ul',
+            elementTag: 'li',
+            elements: [
+              {
+                text: 'Account Dashboard',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Account Information',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Address Book',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Orders',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Store Credit',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Downloadable Products',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Wishlist',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Gift Card',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Order by SKU',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Newsletter Subscriptions',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Gift Registry',
+                class: 'dashboard-nav__item current'
+              }
+            ]
+          }
+        },
+        giftRegistry: {
+          title: 'Gift Registry',
+          table: {
+            mainTags: [
+              {
+                mainTag: 'thead',
+                rowTags: [
+                  {
+                    rowTag: 'tr',
+                    childTags: [
+                      {
+                        childTag: 'th',
+                        content: 'Event'
+                      },
+                      {
+                        childTag: 'th',
+                        content: 'Created on'
+                      },
+                      {
+                        childTag: 'th',
+                        content: 'Message'
+                      },
+                      {
+                        childTag: 'th',
+                        content: 'Actions'
+                      }
+                    ]
+                  },
+                ]
+              },
+              {
+                mainTag: 'tbody',
+                rowTags: [
+                  {
+                    rowTag: 'tr',
+                    childTags: [
+                      {
+                        childTag: 'td',
+                        content: 'TEST EVENT'
+                      },
+                      {
+                        childTag: 'td',
+                        content: 'Aug 22, 2017'
+                      },
+                      {
+                        childTag: 'td',
+                        content: 'Store Alpaca'
+                      },
+                      {
+                        childTag: 'td',
+                        content: 'Manage Items Share Edit Delete'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        buttons: {
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Add New'
+                }
+              ]
+            },
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      name: 'gift registry general information',
+      context: {
+        nav: {
+          title: 'My Account',
+          list: {
+            class: 'dashboard-nav__content',
+            listTag: 'ul',
+            elementTag: 'li',
+            elements: [
+              {
+                text: 'Account Dashboard',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Account Information',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Address Book',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Orders',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Store Credit',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Downloadable Products',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Wishlist',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Gift Card',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Order by SKU',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Newsletter Subscriptions',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Gift Registry',
+                class: 'dashboard-nav__item current'
+              }
+            ]
+          }
+        },
+        form: {
+          title: 'General Information',
+          selects: [
+            {
+              select: {
+                label: {
+                  text: 'Gift Registry Type*',
+                },
+                options: [
+                  {
+                    value: 'birthday',
+                    text: 'Birthday'
+                  },
+                  {
+                    value: 'babyregistry',
+                    text: 'Baby Registry'
+                  },
+                  {
+                    value: 'weeding',
+                    text: 'Weeding'
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        buttons: {
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Next'
+                }
+              ]
+            },
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      name: 'gift registry form',
+      context: {
+        nav: {
+          title: 'My Account',
+          list: {
+            class: 'dashboard-nav__content',
+            listTag: 'ul',
+            elementTag: 'li',
+            elements: [
+              {
+                text: 'Account Dashboard',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Account Information',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Address Book',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Orders',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Store Credit',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Downloadable Products',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'My Wishlist',
+                class: 'dashboard-nav__item '
+              },
+              {
+                text: 'Gift Card',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Order by SKU',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Newsletter Subscriptions',
+                class: 'dashboard-nav__item'
+              },
+              {
+                text: 'Gift Registry',
+                class: 'dashboard-nav__item current'
+              }
+            ]
+          }
+        },
+        generalInformation: {
+          class: 'dashboard__item',
+          title: 'General Information',
+          fields: [
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Event'
+                }
+              }
+            }
+          ],
+          textareas: [
+            {
+              textarea: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Message'
+                }
+              }
+            }
+          ],
+          selects: [
+            {
+              select: {
+                label: {
+                  text: 'Privacy Settings',
+                },
+                options: [
+                  {
+                    value: 'public',
+                    text: 'Public'
+                  },
+                  {
+                    value: 'private',
+                    text: 'Privete'
+                  }
+                ]
+              }
+            },
+            {
+              select: {
+                label: {
+                  text: 'Status',
+                },
+                options: [
+                  {
+                    value: 'active',
+                    text: 'Active'
+                  },
+                  {
+                    value: 'inactive',
+                    text: 'Inactive'
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        eventInformation: {
+          title: 'Event Information',
+          selects: [
+            {
+              select: {
+                label: {
+                  text: 'Country'
+                },
+                options: [
+                  {
+                    value: 'example',
+                    text: 'Example country'
+                  },
+                  {
+                    value: 'example2',
+                    text: 'Example country 2'
+                  },
+                  {
+                    value: 'example3',
+                    text: 'Example country 3'
+                  }
+                ]
+              }
+            },
+            {
+              select: {
+                label: {
+                  text: 'State/Province'
+                },
+                options: [
+                  {
+                    value: 'example',
+                    text: 'Example state'
+                  },
+                  {
+                    value: 'example2',
+                    text: 'Example state 2'
+                  },
+                  {
+                    value: 'example3',
+                    text: 'Example state 3'
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        eventInformationSecondPart: {
+          class: 'dashboard__item',
+          fields: [
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'State/Province'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Event Date'
+                }
+              }
+            }
+          ]
+        },
+        registrantInformation: {
+          title: 'Registrant Information',
+          fields: [
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Firist name'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Last name'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Email'
+                }
+              }
+            }
+          ]
+        },
+        addRegistrant: {
+          class: 'dashboard__item',
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Add registrant'
+                }
+              ]
+            }
+          ]
+        },
+        shippingAddress: {
+          class: 'dashboard__item',
+          title: 'Shipping Address',
+          selects: [
+            {
+              select: {
+                class: 'dashboard__address',
+                label: {
+                  text: 'Select a shipping addres from your address book or enter a new address',
+                },
+                options: [
+                  {
+                    value: 'address1',
+                    text: 'Address'
+                  },
+                  {
+                    value: 'address2',
+                    text: 'Address 2'
+                  },
+                  {
+                    value: 'address3',
+                    text: 'Address 3'
+                  },
+                  {
+                    value: 'newAddress',
+                    text: 'New Address'
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        hiddenNewAddressForm: {
+          class: 'dashboard__item dashboard__form dashboard__form--hidden',
+          fields: [
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'First Name'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Last Name'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Company'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Address'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'State/Province'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Zip/Posta Code'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Country'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Phone Number'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard-form__input',
+                field: {
+                  placeholder: 'Fax'
+                }
+              }
+            },
+          ]
+        },
+        buttons: {
+          sides: [
+            {
+              action: [
+                {
+                  button: true,
+                  title: 'Save'
+                }
+              ]
+            },
+            {
+              action: [
+                {
+                  title: 'Back'
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       name: 'empty',
       context: {
         message: {

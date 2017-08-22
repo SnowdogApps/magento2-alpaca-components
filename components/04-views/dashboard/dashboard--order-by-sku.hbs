@@ -7,7 +7,13 @@
         </div>
 
         <div class="grid__column grid__column--3-4 dashboard__content">
-            {{ render '@dashboard-form' }}
+            {{> '@dashboard-form' form }}
+
+            {{> '@dashboard-actions' addRow }}
+
+            {{> '@dashboard-information' uploadInfo }}
+
+            {{> '@file-upload' fileUpload }}
 
             {{> '@dashboard-actions' buttons }}
         </div>
@@ -15,5 +21,3 @@
 </div>
 
 {{ render '@footer' }}
-
-<script src="{{ static '../dashboard/dashboard--account-info.js' }}"></script>

@@ -11,6 +11,12 @@
         border: 0;
     }
 
+    &__form {
+        &--hidden {
+            display: none;
+        }
+    }
+
     &__label {
         margin: 0 20px 0 0;
     }
