@@ -29,7 +29,7 @@ module.exports = {
           },
           {
             text: 'My Downloadable Products',
-            class: 'dashboard-nav__item'
+            class: 'dashboard-nav__item current'
           },
           {
             text: 'My Wishlist',
@@ -52,26 +52,18 @@ module.exports = {
             class: 'dashboard-nav__item'
           },
           {
+            text: 'My Product Reviews',
+            class: 'dashboard-nav__item'
+          },
+          {
             text: 'Reward Points',
-            class: 'dashboard-nav__item current'
+            class: 'dashboard-nav__item'
           }
         ]
       }
     },
-    info: {
-      informations: [
-        {
-          title: 'Reward points balance Information',
-          text: 'Your balance is 0 Reward points.'
-        },
-        {
-          class: 'dashboard__item',
-          text: 'Current exchange rates: None'
-        }
-      ]
-    },
-    points: {
-      title: 'Balance history',
+    products: {
+      title: 'My Downloadable Products',
       class: 'dashboard__item',
       table: {
         mainTags: [
@@ -83,23 +75,23 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'th',
-                    content: 'Balance'
-                  },
-                  {
-                    childTag: 'th',
-                    content: 'Amount'
-                  },
-                  {
-                    childTag: 'th',
-                    content: 'Points'
-                  },
-                  {
-                    childTag: 'th',
-                    content: 'Reason'
+                    content: 'Order #'
                   },
                   {
                     childTag: 'th',
                     content: 'Date'
+                  },
+                  {
+                    childTag: 'th',
+                    content: 'Title'
+                  },
+                  {
+                    childTag: 'th',
+                    content: 'Status'
+                  },
+                  {
+                    childTag: 'th',
+                    content: 'Remaining Downloads'
                   }
                 ]
               },
@@ -113,23 +105,23 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
-                    content: '50'
+                    content: '000000003'
                   },
                   {
                     childTag: 'td',
-                    content: '$0.00'
+                    content: '4/11/17'
                   },
                   {
                     childTag: 'td',
-                    content: '30'
+                    content: 'Lorem Ipsum 2'
                   },
                   {
                     childTag: 'td',
-                    content: 'Updated by moderator'
+                    content: 'Done'
                   },
                   {
                     childTag: 'td',
-                    content: '8/23/17, 9:28 AM'
+                    content: 'Unlimited'
                   }
                 ]
               },
@@ -138,23 +130,23 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
-                    content: '20'
+                    content: '000000001'
                   },
                   {
                     childTag: 'td',
-                    content: '$10.00'
+                    content: '1/1/17'
                   },
                   {
                     childTag: 'td',
-                    content: '20'
+                    content: 'Lorem Ipsum'
                   },
                   {
                     childTag: 'td',
-                    content: 'Updated by moderator'
+                    content: 'Done'
                   },
                   {
                     childTag: 'td',
-                    content: '8/23/17, 9:27 AM'
+                    content: 'Unlimited'
                   }
                 ]
               }
@@ -163,38 +155,12 @@ module.exports = {
         ]
       }
     },
-    form: {
-      title: 'Email Notification Settings',
-      class: 'dashboard__item',
-      checkboxes: [
-        {
-          checkbox: {
-            id: 'subBalanceUpdates',
-            label: 'Subscribe for Balance Updates'
-          }
-        },
-        {
-          checkbox: {
-            id: 'subExpirationPoints',
-            label: 'Subscripte for Points Expiration Notification'
-          }
-        }
-      ]
-    },
-    buttons: {
+    button: {
       sides: [
         {
           action: [
             {
-              button: true,
-              title: 'Save Subscription Settings'
-            }
-          ]
-        },
-        {
-          action: [
-            {
-              title: 'back'
+              title: 'Back'
             }
           ]
         }

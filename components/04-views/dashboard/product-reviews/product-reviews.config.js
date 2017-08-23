@@ -52,26 +52,18 @@ module.exports = {
             class: 'dashboard-nav__item'
           },
           {
-            text: 'Reward Points',
+            text: 'My Product Reviews',
             class: 'dashboard-nav__item current'
+          },
+          {
+            text: 'Reward Points',
+            class: 'dashboard-nav__item'
           }
         ]
       }
     },
-    info: {
-      informations: [
-        {
-          title: 'Reward points balance Information',
-          text: 'Your balance is 0 Reward points.'
-        },
-        {
-          class: 'dashboard__item',
-          text: 'Current exchange rates: None'
-        }
-      ]
-    },
-    points: {
-      title: 'Balance history',
+    reviews: {
+      title: 'My Product Reviews',
       class: 'dashboard__item',
       table: {
         mainTags: [
@@ -83,23 +75,23 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'th',
-                    content: 'Balance'
+                    content: 'Created'
                   },
                   {
                     childTag: 'th',
-                    content: 'Amount'
+                    content: 'Product Name'
                   },
                   {
                     childTag: 'th',
-                    content: 'Points'
+                    content: 'Rating'
                   },
                   {
                     childTag: 'th',
-                    content: 'Reason'
+                    content: 'Review'
                   },
                   {
                     childTag: 'th',
-                    content: 'Date'
+                    content: ''
                   }
                 ]
               },
@@ -113,23 +105,23 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
-                    content: '50'
+                    content: '8/23/17'
                   },
                   {
                     childTag: 'td',
-                    content: '$0.00'
+                    content: 'Lorem Ipsum'
                   },
                   {
                     childTag: 'td',
-                    content: '30'
+                    content: '4/5'
                   },
                   {
                     childTag: 'td',
-                    content: 'Updated by moderator'
+                    content: 'Lorem ipsum'
                   },
                   {
                     childTag: 'td',
-                    content: '8/23/17, 9:28 AM'
+                    content: 'See Details'
                   }
                 ]
               },
@@ -138,23 +130,23 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
-                    content: '20'
+                    content: '1/2/17'
                   },
                   {
                     childTag: 'td',
-                    content: '$10.00'
+                    content: 'Lorem Ipsum2'
                   },
                   {
                     childTag: 'td',
-                    content: '20'
+                    content: '2/5'
                   },
                   {
                     childTag: 'td',
-                    content: 'Updated by moderator'
+                    content: 'Lorem ipsum'
                   },
                   {
                     childTag: 'td',
-                    content: '8/23/17, 9:27 AM'
+                    content: 'See details'
                   }
                 ]
               }
@@ -163,38 +155,12 @@ module.exports = {
         ]
       }
     },
-    form: {
-      title: 'Email Notification Settings',
-      class: 'dashboard__item',
-      checkboxes: [
-        {
-          checkbox: {
-            id: 'subBalanceUpdates',
-            label: 'Subscribe for Balance Updates'
-          }
-        },
-        {
-          checkbox: {
-            id: 'subExpirationPoints',
-            label: 'Subscripte for Points Expiration Notification'
-          }
-        }
-      ]
-    },
-    buttons: {
+    button: {
       sides: [
         {
           action: [
             {
-              button: true,
-              title: 'Save Subscription Settings'
-            }
-          ]
-        },
-        {
-          action: [
-            {
-              title: 'back'
+              title: 'Back'
             }
           ]
         }
