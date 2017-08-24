@@ -1,17 +1,23 @@
-$dashboard-items-padding: 10px !default;
-$dashboard-items-margin : 10px !default;
+$dashboard-items-padding: 15px !default;
+$dashboard-items-margin : 15px !default;
 
 .dashboard-items {
     display: flex;
     flex-direction: column;
     padding: $dashboard-items-padding;
 
+    &__title {
+        margin-bottom: $dashboard-items-margin;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray;
+    }
+
     &__content {
-        margin: 0;        
+        margin: 0;
     }
 
     &__address {
-        margin-bottom: 10px;
+        margin-bottom: $dashboard-items-margin;
     }
 
     &__item {

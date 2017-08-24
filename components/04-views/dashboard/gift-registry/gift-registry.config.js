@@ -337,6 +337,7 @@ module.exports = {
         },
         hiddenNewAddressForm: {
           class: 'dashboard__item dashboard__form dashboard__form--hidden',
+          title: 'Add new address',
           fields: [
             {
               input: {

@@ -44,8 +44,14 @@ module.exports = {
             class: 'product-item__button dashboard-actions__button'
           }
         },
+        textarea: {
+          class: 'dashboard__input',
+          field: {
+            placeholder: 'Comment'
+          }
+        },
         qty: {
-          class: 'input--inline',
+          class: 'input--inline dashboard__input',
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
@@ -86,8 +92,14 @@ module.exports = {
             class: 'product-item__button dashboard-actions__button'
           }
         },
+        textarea: {
+          class: 'dashboard__input',
+          field: {
+            placeholder: 'Comment'
+          }
+        },
         qty: {
-          class: 'input--inline',
+          class: 'input--inline dashboard__input',
           label: {
             text: 'Qty:',
             class: 'dashboard__label'

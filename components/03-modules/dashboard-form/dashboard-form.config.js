@@ -23,12 +23,14 @@ module.exports = {
     checkboxes: [
       {
         checkbox: {
+          class: 'dashboard-form__checkbox',
           id: 'changeEmail',
           label: 'Change Email'
         }
       },
       {
         checkbox: {
+          class: 'dashboard-form__checkbox',
           id: 'changePassword',
           label: 'Change Password'
         }

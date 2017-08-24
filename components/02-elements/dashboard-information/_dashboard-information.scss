@@ -1,3 +1,9 @@
+$dashboard-information-margin: 15px !default;
+
 .dashboard-information {
-    margin-bottom: 30px;
+    margin-bottom: $dashboard-information-margin * 2;
+
+    &__title {
+        margin-bottom: $dashboard-information-margin;
+    }
 }

@@ -3,7 +3,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
 
         @include mq($screen-m) {
             justify-content: flex-start;
@@ -14,7 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
 
         @include mq($screen-m) {
             justify-content: flex-end;
@@ -26,7 +26,7 @@
     }
 
     &__information {
-        margin: 0 10px;
+        margin: 0 15px;
     }
 
     .select {

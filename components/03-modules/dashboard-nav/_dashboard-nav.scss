@@ -1,5 +1,5 @@
-$dashboard-nav-padding: 10px !default;
-$dashboard-nav-margin : 10px !default;
+$dashboard-nav-padding: 15px !default;
+$dashboard-nav-margin : 15px !default;
 
 .dashboard-nav {
     display: flex;
@@ -14,7 +14,7 @@ $dashboard-nav-margin : 10px !default;
     }
 
     &__item {
-        padding: 10px;
+        padding: 15px;
         transition: $transition-base;
 
         &:hover {
@@ -22,20 +22,26 @@ $dashboard-nav-margin : 10px !default;
         }
 
         &:first-child {
-            padding-top: 10px;
+            padding-top: 15px;
         }
 
         &:last-child {
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
+    }
+
+    &__title {
+        margin-bottom: $dashboard-nav-margin;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray;
     }
 
     .current {
         border-left: 2px solid $red;
         color: $red;
-        padding-left: 18px;
+        padding-left: 23px;
         position: relative;
-        margin-left: -10px;
+        margin-left: -15px;
 
         &:hover {
             background-color: inherit;

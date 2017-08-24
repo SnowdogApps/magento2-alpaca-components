@@ -89,7 +89,7 @@ module.exports = {
               input: {
                 class: 'dashboard-form__input',
                 field: {
-                  placeholder: 'Enter Email'
+                  placeholder: 'Email'
                 }
               }
             },

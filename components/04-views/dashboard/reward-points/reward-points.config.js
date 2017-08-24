@@ -111,12 +111,14 @@ module.exports = {
       checkboxes: [
         {
           checkbox: {
+            class: 'dashboard-form__checkbox',
             id: 'subBalanceUpdates',
             label: 'Subscribe for Balance Updates'
           }
         },
         {
           checkbox: {
+            class: 'dashboard-form__checkbox',
             id: 'subExpirationPoints',
             label: 'Subscripte for Points Expiration Notification'
           }

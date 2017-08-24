@@ -1,10 +1,37 @@
+$dashboard-margin: 30px !default;
+
 .dashboard {
     &__actions {
         justify-content: space-between;
     }
 
+    &__handler {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: $dashboard-margin;
+    }
+
+    &__title {
+        margin-bottom: $dashboard-margin;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray;
+
+        &--wrapped {
+            margin-bottom: 0;
+            margin-right: $dashboard-margin;
+        }
+    }
+
+    &__status {
+        border: 1px solid $gray;
+        border-radius: $border-radius;
+        padding: 5px 15px;
+        font-size: $font-size-small;
+    }
+
     &__item {
-        margin-bottom: 30px;
+        margin-bottom: $dashboard-margin;
     }
 
     &__product {
@@ -15,6 +42,10 @@
         &--hidden {
             display: none;
         }
+    }
+
+    &__input {
+        margin-bottom: $dashboard-margin;
     }
 
     &__label {
