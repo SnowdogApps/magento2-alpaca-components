@@ -444,7 +444,7 @@ module.exports = {
       name: 'return',
       context: {
         title: 'New Return for Order #0000003',
-        returnInfo: {
+        info: {
           informations: [
             {
               class: 'grid__column grid__column--1-2',
@@ -474,7 +474,7 @@ module.exports = {
             placeholder: 'Contact Email Address'
           }
         },
-        returnForm: {
+        form: {
           title: 'Return Items Information',
           contentClass: 'grid',
           fields: [
