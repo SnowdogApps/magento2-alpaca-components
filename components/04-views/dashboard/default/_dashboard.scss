@@ -1,6 +1,12 @@
 $dashboard-margin: 30px !default;
 
 .dashboard {
+
+    &__sidebar,
+    &__content {
+        margin: $dashboard-margin 0;
+    }
+
     &__actions {
         justify-content: space-between;
     }

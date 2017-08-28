@@ -138,6 +138,7 @@ module.exports = {
   variants: [
     {
       name: 'edit',
+      title: 'Add/Edit',
       context: {
         contactInfo: {
           title: 'Contact Information',
@@ -276,13 +277,15 @@ module.exports = {
             }
           ]
         },
-        buttons:{
+        buttons: {
           sides: [
             {
-              action: {
-                button: true,
-                title: 'Save Address'
-              }
+              action: [
+                {
+                  button: true,
+                  title: 'Save Address'
+                }
+              ]
             }
           ]
         }
