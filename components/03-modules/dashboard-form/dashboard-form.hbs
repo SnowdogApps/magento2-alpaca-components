@@ -3,7 +3,7 @@
         {{ title }}
     </h5>
 
-    <div class="dashboard-form__content {{ contentClass }}">
+    <div class="dashboard-form__divider {{ contentClass }}">
         {{#each fields }}
             {{> '@input' input }}
         {{/each}}
@@ -20,8 +20,19 @@
             {{> '@checkbox' checkbox}}
         {{/each}}
 
-        <div class="dashboard-form__fields dashboard-form--hidden">
-            <h5 class="heading heading--sixth-level dashboard-form__title-form">
+        <div class="
+                dashboard-form__divider
+                dashboard-form__fields
+                dashboard-form--hidden
+             "
+        >
+            <h5 class="
+                    heading
+                    heading--sixth-level
+                    dashboard-form__title-form
+                    dashboard-form__divider
+                "
+            >
                 {{ formTitle }}
             </h5>
 

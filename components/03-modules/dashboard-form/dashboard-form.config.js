@@ -4,7 +4,7 @@ module.exports = {
     fields: [
       {
         input: {
-          class: 'dashboard-form__input',
+          class: 'dashboard-form__divider',
           field: {
             placeholder: 'Firist name'
           }
@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         input: {
-          class: 'dashboard-form__input',
+          class: 'dashboard-form__divider',
           field: {
             placeholder: 'Second name'
           }
@@ -23,14 +23,14 @@ module.exports = {
     checkboxes: [
       {
         checkbox: {
-          class: 'dashboard-form__checkbox',
+          class: 'dashboard-form__divider',
           id: 'changeEmail',
           label: 'Change Email'
         }
       },
       {
         checkbox: {
-          class: 'dashboard-form__checkbox',
+          class: 'dashboard-form__divider',
           id: 'changePassword',
           label: 'Change Password'
         }
@@ -39,7 +39,7 @@ module.exports = {
     hiddenFields: [
       {
         hiddenField: {
-          class: 'dashboard-form__input dashboard-form--hidden email',
+          class: 'dashboard-form__divider dashboard-form--hidden email',
           label: {
             text: 'Email',
           }
@@ -47,7 +47,7 @@ module.exports = {
       },
       {
         hiddenField: {
-          class: 'dashboard-form__input dashboard-form--hidden password',
+          class: 'dashboard-form__divider dashboard-form--hidden password',
           label: {
             text: 'Current Passwords',
           }
@@ -55,7 +55,7 @@ module.exports = {
       },
       {
         hiddenField: {
-          class: 'dashboard-form__input dashboard-form--hidden newPassword',
+          class: 'dashboard-form__divider dashboard-form--hidden newPassword',
           label: {
             text: 'New Password'
           }
@@ -63,7 +63,7 @@ module.exports = {
       },
       {
         hiddenField: {
-          class: 'dashboard-form__input dashboard-form--hidden confirmPassword',
+          class: 'dashboard-form__divider dashboard-form--hidden confirmPassword',
           label: {
             text: 'Confirm New Password'
           }

@@ -1,6 +1,6 @@
 module.exports = {
   context: {
-    return: {
+    returns: {
       title: 'Items Return Requested For',
       class: 'dashboard__item',
       table: {
@@ -84,18 +84,6 @@ module.exports = {
         ]
       }
     },
-    comments: {
-      title: 'Comments',
-      textareas: [
-        {
-          textarea: {
-            label: {
-              text: 'Leave Comment'
-            }
-          }
-        }
-      ]
-    },
     buttons: {
       sides: [
         {
@@ -125,6 +113,18 @@ module.exports = {
               title: 'Shipping Address',
               class: 'grid__column grid__column--1-2',
               information: 'This is example shipping address T: 123 213 123',
+            }
+          ]
+        },
+        comments: {
+          title: 'Comments',
+          textareas: [
+            {
+              textarea: {
+                label: {
+                  text: 'Leave Comment'
+                }
+              }
             }
           ]
         },

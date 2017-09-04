@@ -5,7 +5,7 @@ module.exports = {
       fields: [
         {
           input: {
-            class: 'dashboard-form__input',
+            class: 'dashboard-form__divider',
             field: {
               placeholder: 'Enter gitf card code'
             }

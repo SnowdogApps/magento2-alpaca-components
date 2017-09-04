@@ -5,7 +5,7 @@ module.exports = {
       checkboxes: [
         {
           checkbox: {
-            class: 'dashboard-form__checkbox',
+            class: 'dashboard-form__divider',
             id: 'subscription',
             label: 'General Subscription'
           }

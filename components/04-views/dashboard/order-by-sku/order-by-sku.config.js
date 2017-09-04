@@ -5,7 +5,7 @@ module.exports = {
       fields: [
         {
           input: {
-            class: 'dashboard-form__input',
+            class: 'dashboard-form__divider',
             field: {
               placeholder: 'SKU'
             }
@@ -13,7 +13,7 @@ module.exports = {
         },
         {
           input: {
-            class: 'dashboard-form__input',
+            class: 'dashboard-form__divider',
             field: {
               placeholder: 'Qty'
             }
@@ -21,7 +21,7 @@ module.exports = {
         },
         {
           input: {
-            class: 'dashboard-form__input',
+            class: 'dashboard-form__divider',
             field: {
               placeholder: 'SKU'
             }
@@ -29,7 +29,7 @@ module.exports = {
         },
         {
           input: {
-            class: 'dashboard-form__input',
+            class: 'dashboard-form__divider',
             field: {
               placeholder: 'Qty'
             }

@@ -87,7 +87,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Email'
                 }
@@ -97,7 +97,7 @@ module.exports = {
           textareas: [
             {
               textarea: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Message'
                 }

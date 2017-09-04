@@ -2,10 +2,6 @@ $dashboard-items-padding: 15px !default;
 $dashboard-items-margin : 15px !default;
 
 .dashboard-items {
-    display: flex;
-    flex-direction: column;
-    padding: $dashboard-items-padding;
-
     &__title {
         margin-bottom: $dashboard-items-margin;
         padding-bottom: 10px;

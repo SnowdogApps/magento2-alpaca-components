@@ -11,23 +11,7 @@ $dashborad-form-margin: 30px !default;
         border-bottom: 1px solid $gray;
     }
 
-    &__input {
-        margin-bottom: $dashborad-form-margin;
-    }
-
-    &__fields {
-        margin-bottom: $dashborad-form-margin;
-    }
-
-    &__checkbox {
-        margin-bottom: $dashborad-form-margin;
-    }
-
-    &__content {
-        margin-bottom: $dashborad-form-margin;
-    }
-
-    &__title-form {
+    &__divider {
         margin-bottom: $dashborad-form-margin;
     }
 

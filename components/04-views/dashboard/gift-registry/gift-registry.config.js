@@ -139,7 +139,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Event'
                 }
@@ -149,7 +149,7 @@ module.exports = {
           textareas: [
             {
               textarea: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Message'
                 }
@@ -245,7 +245,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'State/Province'
                 }
@@ -253,7 +253,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Event Date'
                 }
@@ -266,7 +266,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Firist name'
                 }
@@ -274,7 +274,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Last name'
                 }
@@ -282,7 +282,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Email'
                 }
@@ -341,7 +341,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'First Name'
                 }
@@ -349,7 +349,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Last Name'
                 }
@@ -357,7 +357,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Company'
                 }
@@ -365,7 +365,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Address'
                 }
@@ -373,12 +373,12 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
               }
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'State/Province'
                 }
@@ -386,7 +386,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Zip/Posta Code'
                 }
@@ -394,7 +394,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Country'
                 }
@@ -402,7 +402,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Phone Number'
                 }
@@ -410,7 +410,7 @@ module.exports = {
             },
             {
               input: {
-                class: 'dashboard-form__input',
+                class: 'dashboard-form__divider',
                 field: {
                   placeholder: 'Fax'
                 }

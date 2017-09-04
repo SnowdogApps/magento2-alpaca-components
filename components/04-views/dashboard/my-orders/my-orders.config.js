@@ -480,7 +480,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__input grid__column grid__column--1-2',
+                class: 'dashboard-form__divider grid__column grid__column--1-2',
                 label: {
                   text: 'Quantity to Return'
                 },
