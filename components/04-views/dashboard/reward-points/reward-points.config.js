@@ -55,22 +55,27 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Balance:"',
                     content: '50'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Amount:"',
                     content: '$0.00'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Points:"',
                     content: '30'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Reason:"',
                     content: 'Updated by moderator'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Date:"',
                     content: '8/23/17, 9:28 AM'
                   }
                 ]
@@ -80,22 +85,27 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Balance:"',
                     content: '20'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Amount:"',
                     content: '$10.00'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Points:"',
                     content: '20'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Reason:"',
                     content: 'Updated by moderator'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Date:"',
                     content: '8/23/17, 9:27 AM'
                   }
                 ]

@@ -142,7 +142,7 @@ module.exports = {
       context: {
         contactInfo: {
           title: 'Contact Information',
-          class: 'grid__column grid__column--1-2',
+          class: 'grid__column grid__column--1-2 dashboard__form',
           fields: [
             {
               input: {
@@ -183,7 +183,7 @@ module.exports = {
         },
         address: {
           title: 'Address',
-          class: 'grid__column grid__column--1-2',
+          class: 'grid__column grid__column--1-2 dashboard__form',
           fields: [
             {
               input: {

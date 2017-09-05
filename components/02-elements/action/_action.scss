@@ -1,6 +1,6 @@
-$dashboard-actions-padding: 15px !default;
+$action-padding: 15px !default;
 
-.dashboard-actions {
+.action {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -28,7 +28,7 @@ $dashboard-actions-padding: 15px !default;
     }
 
     &__link {
-        padding: $dashboard-actions-padding 0;
+        padding: $action-padding 0;
         margin-right: 15px;
 
         &:last-child {

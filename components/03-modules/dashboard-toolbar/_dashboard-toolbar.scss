@@ -1,9 +1,11 @@
+$dashboard-toolbar-margin: 15px !default;
+
 .dashboard-toolbar {
     &__amount {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: $dashboard-toolbar-margin;
 
         @include mq($screen-m) {
             justify-content: flex-start;
@@ -14,7 +16,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: $dashboard-toolbar-margin;
 
         @include mq($screen-m) {
             justify-content: flex-end;
@@ -25,11 +27,11 @@
         margin-bottom: 0;
     }
 
-    &__information {
-        margin: 0 15px;
+    &__amount-info {
+        margin: 0 $dashboard-toolbar-margin;
     }
 
-    .select {
+    &__select {
         width: 100px;
         margin-bottom: 0;
 

@@ -82,22 +82,27 @@ module.exports = {
                     childTags: [
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Product Name:"',
                         content: 'Stellar Solar Jacket, Color RED, Size L'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="SKU:"',
                         content: 'WJ01-L-RED'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Price:"',
                         content: '$ 55.00'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Qty:"',
                         content: 'Ordered: 1, Shipped: 1'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Subtotal:"',
                         content: 'Subtotal: $ 55.00'
                       }
                     ]
@@ -107,22 +112,27 @@ module.exports = {
                     childTags: [
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Prroduct Name:"',
                         content: 'Example product'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="SKU:"',
                         content: '233-LV04'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Price:"',
                         content: '$ 5.00'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Qty:"',
                         content: 'Ordered: 1'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Subtotal:"',
                         content: '$ 5.00'
                       }
                     ]
@@ -138,7 +148,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Subtotal',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -152,7 +162,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Shipping & Handling',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -166,7 +176,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Discount',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -180,7 +190,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Grand Total',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -236,22 +246,27 @@ module.exports = {
                     childTags: [
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Product Name:"',
                         content: 'Stellar Solar Jacket, Color RED, Size L'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="SKU:"',
                         content: 'WJ01-L-RED'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Price:"',
                         content: '$ 55.00'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Qty Invoiced:"',
                         content: '1'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Subtotal:"',
                         content: '$ 55.00'
                       }
                     ]
@@ -261,22 +276,27 @@ module.exports = {
                     childTags: [
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Product Name:"',
                         content: 'Example product'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="SKU:"',
                         content: '233-LV04'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Price:"',
                         content: '$ 5.00'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Qty Invoiced:"',
                         content: '1'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Subtotal:"',
                         content: '$ 5.00'
                       }
                     ]
@@ -292,7 +312,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Subtotal',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -306,7 +326,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Discount',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -320,7 +340,7 @@ module.exports = {
                       {
                         childTag: 'td',
                         content: 'Grand Total',
-                        childTabAttributes: 'colspan=\'4\''
+                        childTagAttributes: 'colspan="4"'
                       },
                       {
                         childTag: 'td',
@@ -368,14 +388,17 @@ module.exports = {
                     childTags: [
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Product Name:"',
                         content: 'Stellar Solar Jacket, Color RED, Size L'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="SKU:"',
                         content: 'WJ01-L-RED'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Qty Invoiced:"',
                         content: '1'
                       }
                     ]
@@ -385,14 +408,17 @@ module.exports = {
                     childTags: [
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Product Name:"',
                         content: 'Example product'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="SKU:"',
                         content: '233-LV04'
                       },
                       {
                         childTag: 'td',
+                        childTagAttributes: 'data-th="Qty Invoiced:"',
                         content: '1'
                       }
                     ]

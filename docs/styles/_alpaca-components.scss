@@ -22,14 +22,13 @@
 // Elements
 // -----
 
+@import '../../components/02-elements/action/action';
 @import '../../components/02-elements/badge/badge';
 @import '../../components/02-elements/banner/banner';
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
 @import '../../components/02-elements/button/button';
 @import '../../components/02-elements/cookie-message/cookie-message';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
-@import '../../components/02-elements/dashboard-actions/dashboard-actions';
-@import '../../components/02-elements/dashboard-information/dashboard-information';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
 @import '../../components/02-elements/form/file-upload/file-upload';
@@ -37,6 +36,7 @@
 @import '../../components/02-elements/form/radio/radio';
 @import '../../components/02-elements/form/select/select';
 @import '../../components/02-elements/image/image';
+@import '../../components/02-elements/information/information';
 @import '../../components/02-elements/list/list';
 @import '../../components/02-elements/logo/logo';
 @import '../../components/02-elements/message/message';
@@ -56,7 +56,6 @@
 
 @import '../../components/03-modules/dashboard-form/dashboard-form';
 @import '../../components/03-modules/dashboard-items/dashboard-items';
-@import '../../components/03-modules/dashboard-list-item/dashboard-list-item';
 @import '../../components/03-modules/dashboard-table/dashboard-table';
 @import '../../components/03-modules/dashboard-nav/dashboard-nav';
 @import '../../components/03-modules/dashboard-toolbar/dashboard-toolbar';
@@ -66,7 +65,7 @@
 @import '../../components/03-modules/product/product';
 @import '../../components/03-modules/products-list-item/products-list-item';
 @import '../../components/03-modules/search/search';
-
+@import '../../components/03-modules/sidebar-nav-list/sidebar-nav-list';
 
 // -----
 // Views

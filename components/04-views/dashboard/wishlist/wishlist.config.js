@@ -41,7 +41,7 @@ module.exports = {
           button: {
             tag: 'a',
             text: 'Add to Cart',
-            class: 'product-item__button dashboard-actions__button'
+            class: 'product-item__button action__button'
           }
         },
         textarea: {
@@ -89,7 +89,7 @@ module.exports = {
           button: {
             tag: 'a',
             text: 'Add to Cart',
-            class: 'product-item__button dashboard-actions__button'
+            class: 'product-item__button action__button'
           }
         },
         textarea: {

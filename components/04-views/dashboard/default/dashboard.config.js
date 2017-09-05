@@ -4,7 +4,7 @@ module.exports = {
     wishlist: {
       title: 'My Wish List',
       items: {
-        class: 'dashboard-list-item__list',
+        class: 'sidebar-nav-list__list',
         elementTag: 'li',
         listTag: 'ol',
         elements: [
@@ -28,7 +28,7 @@ module.exports = {
     recentlyOrdered: {
       title: 'Recently Ordered',
       items: {
-        class: 'dashboard-list-item__list',
+        class: 'sidebar-nav-list__list',
         listTag: 'ol',
         elementTag: 'li',
         elements: [
@@ -43,6 +43,7 @@ module.exports = {
             action: [
               {
                 button: true,
+                class: 'sidebar-nav-list__button',
                 title: 'Add to Cart'
               }
             ]

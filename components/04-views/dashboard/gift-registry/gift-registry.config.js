@@ -38,18 +38,22 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Event:"',
                     content: 'TEST EVENT'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Created on:"',
                     content: 'Aug 22, 2017'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Message:"',
                     content: 'Store Alpaca'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Actions:"',
                     content: 'Manage Items Share Edit Delete'
                   }
                 ]

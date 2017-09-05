@@ -1,8 +1,9 @@
 module.exports = {
   context: {
     title: 'My Account',
+    actualPage: 'Account Dashboard',
     list: {
-      class: 'dashboard-nav__content',
+      class: 'dashboard-nav__list',
       listTag: 'ul',
       elementTag: 'li',
       elements: [

@@ -21,6 +21,7 @@ module.exports = {
       ]
     },
     limiter: {
+      class: 'dashboard-toolbar__select',
       options: [
         {
           value: '10',

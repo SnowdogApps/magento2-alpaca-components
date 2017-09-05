@@ -31,10 +31,12 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Email:"',
                     content: 'test@test.com'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Status:"',
                     content: 'Sent'
                   }
                 ]
@@ -44,10 +46,12 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Email:"',
                     content: 'qwe@qwe.com'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Status:"',
                     content: 'Sent'
                   }
                 ]

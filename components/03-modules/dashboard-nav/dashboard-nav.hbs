@@ -1,7 +1,15 @@
 <div class="dashboard-nav">
-    <h1 class="heading heading--fourth-level dashobard-nav__title">
-        {{ title }}
-    </h1>
+    <div class="dashboard-nav__mobile">
+        {{ actualPage }}
+    </div>
 
-    {{> '@list' list }}
+    <div class="dashboard-nav__content">
+        <h1 class="heading heading--fourth-level dashobard-nav__title">
+            {{ title }}
+        </h1>
+
+        {{> '@list' list }}
+    </div>
 </div>
+
+<script src="{{ static '../dashboard-nav/dashboard-nav.js' }}"></script>

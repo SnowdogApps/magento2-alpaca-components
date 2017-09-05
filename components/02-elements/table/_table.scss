@@ -13,7 +13,7 @@ $table-radius: $border-radius;
     font-size: $font-size-small;
 
     &--odd-even {
-        tbody {  
+        tbody {
             tr:nth-child(odd) {
                 td {
                     background: $white;
@@ -27,34 +27,47 @@ $table-radius: $border-radius;
             }
         }
     }
-        
+
+    thead {
+        tr {
+            padding: 0;
+            border-bottom: 0;
+
+            @include mq($screen-m) {
+                border-top-left-radius: $table-radius;
+                border-top-right-radius: $table-radius;
+            }
+        }
+
+        th {
+            &:first-child {
+                @include mq($screen-m) {
+                    border-top-left-radius: $table-radius;
+                }
+            }
+
+            &:last-child {
+                @include mq($screen-m) {
+                    border-top-right-radius: $table-radius;
+                }
+            }
+        }
+    }
+
     tr {
         display: block;
-        padding: $table-padding 0;
         border-bottom: 1px solid $gray-lighter;
+        padding: 10px 0;
 
         @include mq($screen-m) {
             padding: 0;
             border-bottom: 0;
             display: table-row;
         }
-
-        &:first-child {
-            border-top-left-radius: $table-radius;
-            border-top-right-radius: $table-radius;
-        }
-
-        &:last-child {
-            border-bottom-right-radius: $table-radius;
-            border-bottom-left-radius: $table-radius;
-        }
     }
 
     th {
-        padding: 5px $table-padding;
-        background: $white;
-        display: block;
-        text-align: left;
+        display: none;
 
         @include mq($screen-m) {
             padding: $table-padding;
@@ -62,33 +75,38 @@ $table-radius: $border-radius;
             border-bottom: 1px solid $gray-lighter;
             border-right: 1px solid $gray-lighter;
             display: table-cell;
-
-            &:first-child {
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-            }
-
-            &:last-child {
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-        }
-
-        &:first-child {
-            border-top-left-radius: $table-radius;
         }
 
         &:last-child {
-            border-top-right-radius: $table-radius;
-            border-right: 0;
+            @include mq($screen-m) {
+                border-right: 0;
+            }
         }
     }
 
     td {
         padding: 5px $table-padding;
         background: $white;
-        display: block;
+        display: flex;
         text-align: left;
+
+        &:before {
+            content: attr(data-th);
+            font-weight: bold;
+            margin-right: 10px;
+            max-width: 25%;
+            display: inline-block;
+
+            @include mq($screen-m) {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            @include mq($screen-m) {
+                border-right: 0;
+            }
+        }
 
         @include mq($screen-m) {
             display: table-cell;
@@ -96,20 +114,22 @@ $table-radius: $border-radius;
             background: $white;
             border-bottom: 1px solid $gray-lighter;
             border-right: 1px solid $gray-lighter;
-
-            &:first-child {
-                border-bottom-left-radius: $table-radius;
-            }
-
-            &:last-child {
-                border-bottom-right-radius: $table-radius;
-                border-right: 0;
-            }
         }
     }
 
     tfoot {
-        td { 
+        tr {
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            @include mq($screen-m) {
+                border-bottom-left-radius: $table-radius;
+                border-bottom-right-radius: $table-radius;
+            }
+        }
+
+        td {
             padding: 5px $table-padding;
             background: $white;
             display: block;
@@ -121,6 +141,19 @@ $table-radius: $border-radius;
                 border-right: 1px solid $gray-lighter;
                 text-align: left;
                 display: table-cell;
+            }
+
+            &:first-child {
+                @include mq($screen-m) {
+                    border-bottom-left-radius: $table-radius;
+                }
+            }
+
+            &:last-child {
+                @include mq($screen-m) {
+                    border-bottom: 0;
+                    border-bottom-right-radius: $table-radius;
+                }
             }
         }
     }

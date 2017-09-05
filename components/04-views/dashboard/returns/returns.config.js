@@ -51,30 +51,37 @@ module.exports = {
                 childTags: [
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Product Name:"',
                     content: 'Test Jacket'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="SKU:"',
                     content: 'WJ01-L-Red'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Condition:"',
                     content: 'Unopened'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Resolution:"',
                     content: 'Refund'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Request Qty:"',
                     content: '1'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Qty:"',
                     content: '1'
                   },
                   {
                     childTag: 'td',
+                    childTagAttributes: 'data-th="Status:"',
                     content: 'Pending'
                   }
                 ]

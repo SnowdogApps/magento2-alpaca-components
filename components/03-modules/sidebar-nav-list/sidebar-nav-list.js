@@ -2,7 +2,7 @@ module.exports = {
   context: {
     title: 'Recently Ordered',
     items: {
-      class: 'dashboard-list-item__list',
+      class: 'sidebar-nav-list__list',
       listTag: 'ol',
       elementTag: 'li',
       elements: [
@@ -20,6 +20,7 @@ module.exports = {
           action: [
             {
               button: true,
+              class: 'sidebar-nav-list__button',
               title: 'Example button'
             }
           ]
