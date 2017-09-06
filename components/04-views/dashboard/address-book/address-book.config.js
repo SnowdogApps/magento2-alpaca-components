@@ -146,6 +146,7 @@ module.exports = {
           fields: [
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'First Name'
                 }
@@ -153,6 +154,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Last Name'
                 }
@@ -160,6 +162,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Company'
                 }
@@ -167,6 +170,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Phone Number'
                 }
@@ -174,6 +178,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Fax'
                 }
@@ -187,6 +192,7 @@ module.exports = {
           fields: [
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Street Address'
                 }
@@ -194,6 +200,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Street Address vol.2'
                 }
@@ -201,6 +208,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'City'
                 }
@@ -208,6 +216,7 @@ module.exports = {
             },
             {
               input: {
+                class: 'dashboard__input',
                 field: {
                   placeholder: 'Zip/Postal Code'
                 }

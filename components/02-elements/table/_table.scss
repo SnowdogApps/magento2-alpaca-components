@@ -14,16 +14,28 @@ $table-radius: $border-radius;
 
     &--odd-even {
         tbody {
-            tr:nth-child(odd) {
-                td {
+            tr {
+                &:nth-child(odd) {
                     background: $white;
+                }
+
+                &:nth-child(even) {
+                    background: $gray-lightest;
+                }
+
+                &:first-child {
+                    border-top-left-radius: $table-radius;
+                    border-top-right-radius: $table-radius;
+
+                    @include mq($screen-m) {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
                 }
             }
 
-            tr:nth-child(even) {
-                td {
-                    background: $gray-lightest;
-                }
+            td {
+                background-color: transparent;
             }
         }
     }

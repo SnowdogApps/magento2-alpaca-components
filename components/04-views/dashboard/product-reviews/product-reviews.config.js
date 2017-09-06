@@ -54,7 +54,7 @@ module.exports = {
                   {
                     childTag: 'td',
                     childTagAttributes: 'data-th="Rating:"',
-                    content: '4/5'
+                    content: '<div class="rating--static"><span class="rating--static__fill" style="width: 80%;"><span>80%</span></span></div>'
                   },
                   {
                     childTag: 'td',
@@ -83,7 +83,7 @@ module.exports = {
                   {
                     childTag: 'td',
                     childTagAttributes: 'data-th="Rating:"',
-                    content: '2/5'
+                    content: '<div class="rating--static"><span class="rating--static__fill" style="width: 40%;"><span>40%</span></span></div>'
                   },
                   {
                     childTag: 'td',
@@ -112,5 +112,29 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  variants: [
+    {
+      name: 'details',
+      context: {
+        title: 'Review Details',
+        product: {
+          tag: 'div',
+          class: 'dashboard__product',
+          name: 'Some product name',
+          image: {
+            src: '/images/product/product-img-230_180.png'
+          }
+        },
+        review: {
+          class: 'dashboard__item',
+          reviewAmountLink: '#',
+          reviewAmount: '2 Reviews',
+          addYourLink: '#',
+          addYour: 'Add Your Review'
+        },
+        yourReview: 'Your review',
+      }
+    }
+  ]
 }

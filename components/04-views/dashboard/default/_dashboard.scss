@@ -41,6 +41,26 @@ $dashboard-padding: 15px !default;
         margin-bottom: $dashboard-margin;
     }
 
+    &__wishlist-item {
+        margin-bottom: $dashboard-margin;
+
+        @include mq($screen-s) {
+            padding: 30px;
+        }
+
+        &:nth-child(odd) {
+            @include mq($screen-s) {
+                padding-left: 5px;
+            }
+        }
+
+        &:nth-child(even) {
+            @include mq($screen-s) {
+                padding-right: 5px;
+            }
+        }
+    }
+
     &__form {
         padding: 0 15px;
 
@@ -55,12 +75,18 @@ $dashboard-padding: 15px !default;
 
     &__product {
         border: 0;
+        padding: 0;
     }
 
     &__form {
         &--hidden {
             display: none;
         }
+    }
+
+    &__field-qty {
+        max-width: 100px;
+        text-align: right;
     }
 
     &__input {

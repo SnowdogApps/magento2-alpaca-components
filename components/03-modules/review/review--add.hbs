@@ -1,0 +1,17 @@
+<div class="review--add {{ class }}" {{{ attributes }}}>
+    <div class="review__divider">
+        {{ render '@rating--static' rating }}
+    </div>
+
+    <div class="review__divider">
+        <a href="{{ reviewAmountLink }}" class="link review__link {{ reviewAmountClass }}">
+            {{ reviewAmount }}
+        </a>
+    </div>
+
+    <div class="review__divider">
+        <a href="{{ addYourLink }}" class="link review__link {{ addYourClass }}">
+            {{ addYour }}
+        </a>
+    </div>
+</div>

@@ -55,6 +55,9 @@ module.exports = {
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
+          },
+          field: {
+            class: 'dashboard__field-qty'
           }
         },
         itemAction: {
@@ -103,6 +106,9 @@ module.exports = {
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
+          },
+          field: {
+            class: 'dashboard__field-qty'
           }
         },
         itemAction: {
