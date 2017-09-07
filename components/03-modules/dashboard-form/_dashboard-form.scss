@@ -11,11 +11,8 @@ $dashborad-form-margin: 30px !default;
         border-bottom: 1px solid $gray;
     }
 
-    &__divider {
-        margin-bottom: $dashborad-form-margin;
-    }
-
-    .select {
+    &__divider,
+    &__select {
         margin-bottom: $dashborad-form-margin;
     }
 }

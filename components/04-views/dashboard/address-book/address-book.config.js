@@ -226,7 +226,7 @@ module.exports = {
           selects: [
             {
               select: {
-                class: 'dashboard__address',
+                class: 'dashboard__address dashboard-form__select',
                 label: {
                   text: 'State/Province',
                 },
@@ -248,7 +248,7 @@ module.exports = {
             },
             {
               select: {
-                class: 'dashboard__address',
+                class: 'dashboard__address dashboard-form__select',
                 label: {
                   text: 'Country'
                 },

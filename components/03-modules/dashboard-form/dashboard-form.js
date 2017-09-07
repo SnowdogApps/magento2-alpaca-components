@@ -10,43 +10,47 @@ const checkboxPassword = document.querySelector('input#changePassword'),
       title            = document.querySelector('.dashboard-form__title-form'),
       toggledClass     = 'dashboard-form--hidden';
 
-checkboxEmail.addEventListener('change', () => {
-  if (checkboxPassword.checked && checkboxEmail.checked) {
-    title.innerHTML = 'Change Email and Password';
+if (checkboxEmail) {
+  checkboxEmail.addEventListener('change', () => {
+    if (checkboxPassword.checked && checkboxEmail.checked) {
+      title.innerHTML = 'Change Email and Password';
 
-    toggleElements(4);
-  }
-  else if (checkboxPassword.checked && !checkboxEmail.checked) {
-    title.innerHTML = 'Change Password';
+      toggleElements(4);
+    }
+    else if (checkboxPassword.checked && !checkboxEmail.checked) {
+      title.innerHTML = 'Change Password';
 
-    toggleElements(1);
-  }
-  else {
-    fields.classList.toggle(toggledClass);
-    title.innerHTML = 'Change Email';
+      toggleElements(1);
+    }
+    else {
+      fields.classList.toggle(toggledClass);
+      title.innerHTML = 'Change Email';
 
-    toggleElements(2);
-  }
-});
+      toggleElements(2);
+    }
+  });
+}
 
-checkboxPassword.addEventListener('change', () => {
-  if (checkboxEmail.checked && checkboxPassword.checked) {
-    title.innerHTML = 'Change Email and Password';
+if (checkboxPassword) {
+  checkboxPassword.addEventListener('change', () => {
+    if (checkboxEmail.checked && checkboxPassword.checked) {
+      title.innerHTML = 'Change Email and Password';
 
-    toggleElements(4);
-  }
-  else if (checkboxEmail.checked && !checkboxPassword.checked) {
-    title.innerHTML = 'Change Email';
+      toggleElements(4);
+    }
+    else if (checkboxEmail.checked && !checkboxPassword.checked) {
+      title.innerHTML = 'Change Email';
 
-    toggleElements(2);
-  }
-  else {
-    fields.classList.toggle(toggledClass);
-    title.innerHTML = 'Change Password';
+      toggleElements(2);
+    }
+    else {
+      fields.classList.toggle(toggledClass);
+      title.innerHTML = 'Change Password';
 
-    toggleElements(1);
-  }
-});
+      toggleElements(1);
+    }
+  });
+}
 
 function toggleElements(elements) {
   if (elements === 4) {

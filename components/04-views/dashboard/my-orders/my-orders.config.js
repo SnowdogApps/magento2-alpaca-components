@@ -519,7 +519,7 @@ module.exports = {
           selects: [
             {
               select: {
-                class: 'dashboard__address grid__column grid__column--1-2',
+                class: 'dashboard__address grid__column grid__column--1-2 dashboard-form__select',
                 label: {
                   text: 'Item',
                 },
@@ -533,7 +533,7 @@ module.exports = {
             },
             {
               select: {
-                class: 'dashboard__address grid__column grid__column--1-2',
+                class: 'dashboard__address grid__column grid__column--1-2 dashboard-form__select',
                 label: {
                   text: 'Resolution'
                 },
@@ -555,7 +555,7 @@ module.exports = {
             },
             {
               select: {
-                class: 'dashboard__adddress grid__column grid__column--1-2',
+                class: 'dashboard__adddress grid__column grid__column--1-2 dashboard-form__select',
                 label: {
                   text: 'Item Condition'
                 },

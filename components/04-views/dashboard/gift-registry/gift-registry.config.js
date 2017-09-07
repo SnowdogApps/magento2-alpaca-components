@@ -92,6 +92,7 @@ module.exports = {
           selects: [
             {
               select: {
+                class: 'dashboard-form__select',
                 label: {
                   text: 'Gift Registry Type*',
                 },
@@ -163,6 +164,7 @@ module.exports = {
           selects: [
             {
               select: {
+                class: 'dashboard-form__select',
                 label: {
                   text: 'Privacy Settings',
                 },
@@ -180,6 +182,7 @@ module.exports = {
             },
             {
               select: {
+                class: 'dashboard-form__select',
                 label: {
                   text: 'Status',
                 },
@@ -202,6 +205,7 @@ module.exports = {
           selects: [
             {
               select: {
+                class: 'dashboard-form__select',
                 label: {
                   text: 'Country'
                 },
@@ -223,6 +227,7 @@ module.exports = {
             },
             {
               select: {
+                class: 'dashboard-form__select',
                 label: {
                   text: 'State/Province'
                 },
@@ -313,7 +318,7 @@ module.exports = {
           selects: [
             {
               select: {
-                class: 'dashboard__address',
+                class: 'dashboard__address dashboard-form__select',
                 label: {
                   text: 'Select a shipping addres from your address book or enter a new address',
                 },

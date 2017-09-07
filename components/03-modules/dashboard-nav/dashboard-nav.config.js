@@ -9,59 +9,87 @@ module.exports = {
       elements: [
         {
           text: 'Account Dashboard',
-          class: 'dashboard-nav__item current'
+          class: 'dashboard-nav__item current',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Account Information',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Address Book',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'My Orders',
-          class: 'dashboard-nav__item '
+          class: 'dashboard-nav__item ',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'My Downloadable Products',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Order by SKU',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'My Wishlist',
-          class: 'dashboard-nav__item '
+          class: 'dashboard-nav__item ',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Store Credit',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Gift Card',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Gift Registry',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Newsletter Subscriptions',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'My Product Reviews',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'Reward Points',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         },
         {
           text: 'My Invations',
-          class: 'dashboard-nav__item'
+          class: 'dashboard-nav__item',
+          linkClass: 'dashboard-nav__link',
+          link: '#'
         }
       ]
     }

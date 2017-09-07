@@ -5,7 +5,9 @@ $dashboard-padding: 15px !default;
 
     &__sidebar,
     &__content {
-        margin: $dashboard-margin 0;
+        @include mq($screen-m) {
+            margin: $dashboard-margin 0;
+        }
     }
 
     &__actions {
