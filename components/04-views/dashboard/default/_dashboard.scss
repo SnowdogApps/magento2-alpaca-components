@@ -2,11 +2,30 @@ $dashboard-margin : 30px !default;
 $dashboard-padding: 15px !default;
 
 .dashboard {
-
     &__sidebar,
     &__content {
         @include mq($screen-m) {
             margin: $dashboard-margin 0;
+            padding: 0 $dashboard-padding;
+        }
+
+        &:first-child {
+            @include mq($screen-m) {
+                padding-left: 5px;
+            }
+        }
+
+        &:last-child {
+            @include mq($screen-m) {
+                padding-right: 5px;
+            }
+        }
+
+    }
+
+    &__content {
+        @include mq($screen-m) {
+            padding-top: $dashboard-padding;
         }
     }
 

@@ -66,7 +66,13 @@ module.exports = {
       type: 'file',
       name: 'uploadCSV',
       fileName: 'File not choosen',
-      text: 'Choose a file'
+      text: 'Choose a file',
+      button: {
+        tag: 'button',
+        class: 'file-upload__button',
+        attributes: 'type="button"',
+        text: 'Upload a file'
+      }
     },
     buttons: {
       sides: [

@@ -1,3 +1,4 @@
+$action-margin : 15px !default;
 $action-padding: 15px !default;
 
 .action {
@@ -10,17 +11,26 @@ $action-padding: 15px !default;
 
     &__handler {
         flex-basis: 100%;
+        margin-bottom: $action-margin;
 
         @include mq($screen-m) {
             flex-basis: auto;
+            margin-bottom: 0;
         }
     }
 
     &__button {
-        margin-right: 15px;
+        margin-right: $action-margin;
         height: 30px;
         padding: 0 20px;
         font-size: 14px;
+        width: 100%;
+        margin-bottom: $action-margin;
+
+        @include mq($screen-m) {
+            width: auto;
+            margin-bottom: auto;
+        }
 
         &:last-child {
             margin-right: 0;

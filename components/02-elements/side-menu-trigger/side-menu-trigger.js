@@ -1,10 +1,11 @@
 'use static'
 
-const sideMenuTrigger   = document.querySelector('.side-menu-trigger'),
-      sideMenuContainer = document.querySelector('.side-menu'),
-      triggerIcon       = document.querySelector('.side-menu-trigger__icon'),
-      triggerText       = document.querySelector('.side-menu-trigger__text'),
-      triggerLines      = document.querySelectorAll('.side-menu-trigger__line');
+const header            = document.querySelector('header.header'),
+      sideMenuTrigger   = header.querySelector('.side-menu-trigger'),
+      sideMenuContainer = header.querySelector('.side-menu'),
+      triggerIcon       = header.querySelector('.side-menu-trigger__icon'),
+      triggerText       = header.querySelector('.side-menu-trigger__text'),
+      triggerLines      = header.querySelectorAll('.side-menu-trigger__line');
 
 sideMenuTrigger.addEventListener('click', () => {
   if (triggerIcon) {
@@ -27,5 +28,6 @@ sideMenuTrigger.addEventListener('click', () => {
 });
 
 sideMenuTrigger.addEventListener('click', () => {
+  header.classList.toggle('header--menu-open');
   sideMenuContainer.classList.toggle('side-menu--is-open');
 });

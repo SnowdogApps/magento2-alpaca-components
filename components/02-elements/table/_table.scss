@@ -107,7 +107,8 @@ $table-radius: $border-radius;
             font-weight: bold;
             margin-right: 10px;
             max-width: 25%;
-            display: inline-block;
+            width: 25%;
+            display: block;
 
             @include mq($screen-m) {
                 display: none;

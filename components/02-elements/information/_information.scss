@@ -6,4 +6,8 @@ $information-margin: 15px !default;
     &__title {
         margin-bottom: $information-margin;
     }
+
+    &__text {
+        margin-bottom: 0;
+    }
 }

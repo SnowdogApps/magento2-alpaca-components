@@ -51,8 +51,7 @@ $dashboard-nav-margin : 15px !default;
     }
 
     &__list {
-        padding: $dashboard-nav-padding 0;
-        border-top: 1px solid $gray;
+        margin: 0;
     }
 
     &__item {
