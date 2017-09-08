@@ -1,10 +1,6 @@
 $dashborad-form-margin: 30px !default;
 
 .dashboard-form {
-    &--hidden {
-        display: none;
-    }
-
     &__title {
         margin-bottom: $dashborad-form-margin;
         padding-bottom: 10px;
@@ -14,5 +10,9 @@ $dashborad-form-margin: 30px !default;
     &__divider,
     &__select {
         margin-bottom: $dashborad-form-margin;
+    }
+
+    &--hidden {
+        display: none;
     }
 }

@@ -19,12 +19,24 @@ $message-margin-base       : 15px;
     width: 100%;
     transition: $transition-base;
 
+    &:after {
+        color: $message-color;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     &--success {
         background-color: $message-background-success;
         color: rgba($message-color, 0.9);
 
         &:after {
-            content: "\2713";   
+            content: "\2713";
         }
     }
 
@@ -35,17 +47,5 @@ $message-margin-base       : 15px;
         &:after {
             content: "\2715";
         }
-    }
-
-    &:after {
-        color: $message-color;
-        position: absolute;
-        left: 0;
-        top: 0;            
-        height: 100%;
-        width: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }

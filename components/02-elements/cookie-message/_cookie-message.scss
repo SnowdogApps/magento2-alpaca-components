@@ -4,63 +4,6 @@
     transition: height 0.3s;
     box-sizing: border-box;
 
-    &--with-button {
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 6;
-
-        .cookie-message__message {
-            display: block;
-            margin-bottom: 10px;
-
-            @include mq($screen-m) {
-                display: inline-block;
-                margin-bottom: 0;
-                margin-right: 35px;
-            }
-        }
-
-        .cookie-message__text {
-            text-transform: none;
-            display: inline;
-            font-weight: 400;
-            margin: 0;
-        }
-
-        .cookie-message__link {
-            text-transform: none;
-            display: inline;
-            border: none;
-            padding: 0;
-            margin: 0;
-            text-decoration: underline;
-
-            @include links(hover) {
-                color: $black;
-            }
-        }
-
-        .cookie-message__close {
-            display: inline-block;
-            position: relative;
-            top: auto;
-            right: auto;
-            width: auto;
-            height: auto;
-            font-weight: 400;
-            font-size: 12px;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &--closed {
-        overflow: hidden;
-    }
-
     &__container {
         display: block;
         margin: 0 auto;
@@ -122,5 +65,62 @@
             bottom: 0;
             position: absolute;
         }
+    }
+
+    &--with-button {
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 6;
+
+        .cookie-message__message {
+            display: block;
+            margin-bottom: 10px;
+
+            @include mq($screen-m) {
+                display: inline-block;
+                margin-bottom: 0;
+                margin-right: 35px;
+            }
+        }
+
+        .cookie-message__text {
+            text-transform: none;
+            display: inline;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .cookie-message__link {
+            text-transform: none;
+            display: inline;
+            border: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: underline;
+
+            @include links(hover) {
+                color: $black;
+            }
+        }
+
+        .cookie-message__close {
+            display: inline-block;
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
+            height: auto;
+            font-weight: 400;
+            font-size: 12px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &--closed {
+        overflow: hidden;
     }
 }

@@ -11,14 +11,6 @@
         padding: 10px 0 10px 20px;
     }
 
-    &--4-in-row {
-        .products-grid__item {
-            @include mq($screen-l) {
-                flex-basis: calc(25% - 20px);
-            }
-        }
-    }
-
     &__item {
         flex-basis: 100%;
         margin-bottom: 15px;
@@ -32,6 +24,14 @@
             flex-basis: calc(33.33% - 20px);
             margin-bottom: 20px;
             margin-right: 20px;
+        }
+    }
+
+    &--4-in-row {
+        .products-grid__item {
+            @include mq($screen-l) {
+                flex-basis: calc(25% - 20px);
+            }
         }
     }
 }

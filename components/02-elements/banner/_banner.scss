@@ -17,16 +17,6 @@ $banner-right-value           : $banner-default-position-value;
         outline: none;
     }
 
-    &--full-height {
-        display: flex;
-        flex-wrap: wrap;
-        min-height: 250px;
-
-        @include mq($screen-xl) {
-            min-height: auto;
-        }
-    }
-
     &__image {
         width: 100%;
     }
@@ -112,5 +102,15 @@ $banner-right-value           : $banner-default-position-value;
 
     &__headings {
         margin: 15px 0;
+    }
+
+    &--full-height {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 250px;
+
+        @include mq($screen-xl) {
+            min-height: auto;
+        }
     }
 }

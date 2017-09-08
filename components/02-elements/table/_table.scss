@@ -12,34 +12,6 @@ $table-radius: $border-radius;
     border-spacing: 0;
     font-size: $font-size-small;
 
-    &--odd-even {
-        tbody {
-            tr {
-                &:nth-child(odd) {
-                    background: $white;
-                }
-
-                &:nth-child(even) {
-                    background: $gray-lightest;
-                }
-
-                &:first-child {
-                    border-top-left-radius: $table-radius;
-                    border-top-right-radius: $table-radius;
-
-                    @include mq($screen-m) {
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                    }
-                }
-            }
-
-            td {
-                background-color: transparent;
-            }
-        }
-    }
-
     thead {
         tr {
             padding: 0;
@@ -167,6 +139,34 @@ $table-radius: $border-radius;
                     border-bottom: 0;
                     border-bottom-right-radius: $table-radius;
                 }
+            }
+        }
+    }
+
+    &--odd-even {
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background: $white;
+                }
+
+                &:nth-child(even) {
+                    background: $gray-lightest;
+                }
+
+                &:first-child {
+                    border-top-left-radius: $table-radius;
+                    border-top-right-radius: $table-radius;
+
+                    @include mq($screen-m) {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+            }
+
+            td {
+                background-color: transparent;
             }
         }
     }

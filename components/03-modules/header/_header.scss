@@ -7,10 +7,6 @@
     background: $white;
     overflow: hidden;
 
-    &--menu-open {
-        overflow: visible;
-    }
-
     &__right-panel {
         display: flex;
         flex-wrap: nowrap;
@@ -25,5 +21,9 @@
         > *:last-child {
             margin-right: 0;
         }
+    }
+
+    &--menu-open {
+        overflow: visible;
     }
 }

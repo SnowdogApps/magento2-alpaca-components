@@ -160,6 +160,16 @@
         position: relative;
         display: block;
 
+        &.open {
+            .dropdown-list__inner-link {
+                text-decoration: none;
+
+                & > .dropdown-list__icon {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
         &--level1 {
             .dropdown-list__inner-link {
                 text-decoration: none;
@@ -179,16 +189,6 @@
                     font-weight: 400;
                     color: $color-primary;
                     text-decoration: underline;
-                }
-            }
-        }
-
-        &.open {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                & > .dropdown-list__icon {
-                    transform: rotate(45deg);
                 }
             }
         }
