@@ -1,26 +1,31 @@
 .cart {
-    &__main-col,
-    &__summary-col {
+    margin-bottom: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+    &__main-col {
+        padding: 0 15px;
         @include mq($screen-s, '1024px') {
             flex-basis: 100%;
         }
     }
 
-    &__products-list {
-        margin: 0;
-        padding-top: 10px;
-        border-top: 1px solid $gray-lighter;
-
-        @include mq('1024px') {
-            margin-right: 10px;
+    &__summary-col {
+        padding: 0 15px;
+        @include mq($screen-s, '1024px') {
+            flex-basis: 100%;
         }
     }
 
-    &__discount {
-        justify-content: flex-start;
-        margin: 0 0 15px 0;
-        @include mq($screen-m) {
-            margin: 15px 0;
-        }
+    &__bottom {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-top: 15px;
+        border-top: 1px solid $gray-lighter;
+    }
+
+    &__products-list {
+        margin: 0;
+        padding-top: 15px;
+        border-top: 1px solid $gray-lighter;
     }
 }

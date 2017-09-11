@@ -64,6 +64,20 @@ $button-icon-hover-color          : $color-primary !default;
         }
     }
 
+    &--native-link {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        color: $link-color;
+        &:hover {
+            background: none;
+            color: $link-hover-color;
+            text-decoration: $link-hover-decoration;
+        }
+    }
+
     &--secondary {
         border: $button-secondary-border;
         color: $button-secondary-font-color;
