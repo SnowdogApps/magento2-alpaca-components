@@ -1,7 +1,7 @@
 module.exports = {
   variants: [
     {
-      name: 'static',
+      name: 'summary',
       context: {
         percentFilled: 'style="width: 80%;"',
         percent: '<span>80%</span>',

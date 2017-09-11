@@ -1,6 +1,8 @@
 $dashboard-table-margin: 30px !default;
 
 .dashboard-table {
+    overflow: hidden;
+
     &__header {
         display: flex;
         flex-wrap: nowrap;
@@ -12,6 +14,11 @@ $dashboard-table-margin: 30px !default;
 
     &__content {
         margin-bottom: $dashboard-table-margin;
+        overflow-x: auto;
+    }
+
+    &__table {
+        margin: 0;
     }
 
     &__title {

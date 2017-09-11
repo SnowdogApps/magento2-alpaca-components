@@ -29,7 +29,7 @@ $rating-active   : $orange;
         }
     }
 
-    &--static {
+    &__summary {
         position: relative;
         display: inline-block;
         width: 92px;
@@ -49,30 +49,30 @@ $rating-active   : $orange;
             z-index: 1;
             color: $gray;
         }
+    }
 
-        &__fill {
+    &__fill {
+        display: block;
+        overflow: hidden;
+
+        &:before {
+            content: '\2605' '\2605' '\2605' '\2605' '\2605';
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
             display: block;
-            overflow: hidden;
+            z-index: 2;
+            color: $rating-active;
+        }
 
-            &:before {
-                content: '\2605' '\2605' '\2605' '\2605' '\2605';
-                position: relative;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                display: block;
-                z-index: 2;
-                color: $rating-active;
-            }
-
-            & * {
-                position: absolute;
-                opacity: 0;
-                top: 0;
-                width: 0;
-                height: 0;
-            }
+        & * {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            width: 0;
+            height: 0;
         }
     }
 }

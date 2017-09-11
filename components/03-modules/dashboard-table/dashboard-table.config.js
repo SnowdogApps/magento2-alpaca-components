@@ -3,6 +3,7 @@ module.exports = {
     title: 'Recent Orders',
     link: 'View All',
     table: {
+      class: 'dashboard-table__table',
       mainTags: [
         {
           mainTag: 'thead',
