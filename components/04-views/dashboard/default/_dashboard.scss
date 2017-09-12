@@ -26,7 +26,7 @@ $dashboard-padding: 15px !default;
     &__content {
         @include mq($screen-m) {
             padding-top: $dashboard-padding;
-            overflow: hidden;
+            overflow-x: hidden;
         }
     }
 

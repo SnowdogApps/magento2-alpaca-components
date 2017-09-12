@@ -16,7 +16,10 @@ $select-border-radius: $border-radius !default;
         }
 
         &-list {
-            border-radius: $select-border-radius;
+            &.choices__list--dropdown {
+                max-height: 300px;
+                overflow-y: auto;
+            }
 
             &--single {
                 display: inline-block;
@@ -42,6 +45,7 @@ $select-border-radius: $border-radius !default;
                 outline: none;
             }
         }
+
         // Choices.js lib styles overwrites
         .choices {
             &.is-open {

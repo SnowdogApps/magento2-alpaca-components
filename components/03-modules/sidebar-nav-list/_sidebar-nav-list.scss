@@ -32,6 +32,11 @@ $sidebar-nav-list-padding: 15px !default;
         }
     }
 
+    &__link {
+        margin-bottom: $sidebar-nav-list-margin;
+        display: block;
+    }
+
     &__title {
         margin-bottom: $sidebar-nav-list-margin;
         padding-bottom: 10px;
@@ -44,5 +49,10 @@ $sidebar-nav-list-padding: 15px !default;
         @include mq($screen-s) {
             width: auto;
         }
+    }
+
+    // Class added b/c Magento need it to hiding empty elements
+    .no-display {
+        display: none;
     }
 }
