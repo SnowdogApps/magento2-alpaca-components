@@ -127,6 +127,7 @@ $table-radius: $border-radius;
             &:last-child {
                 border-bottom: 0;
 
+                th,
                 td {
                     border-bottom: 0;
 
@@ -145,11 +146,13 @@ $table-radius: $border-radius;
             }
         }
 
+        th,
         td {
             padding: 5px $table-padding;
             background: $white;
             display: block;
             text-align: left;
+            font-weight: normal;
 
             @include mq($screen-m) {
                 padding: $table-padding;
