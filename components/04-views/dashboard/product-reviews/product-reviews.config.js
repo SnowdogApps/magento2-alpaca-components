@@ -54,7 +54,7 @@ module.exports = {
                   {
                     childTag: 'td',
                     childTagAttributes: 'data-th="Rating:"',
-                    content: '<div class="rating--static"><span class="rating--static__fill" style="width: 80%;"><span>80%</span></span></div>'
+                    content: '<div class="rating__summary"><span class="rating__fill" style="width: 80%;"><span>80%</span></span></div>'
                   },
                   {
                     childTag: 'td',
@@ -83,7 +83,7 @@ module.exports = {
                   {
                     childTag: 'td',
                     childTagAttributes: 'data-th="Rating:"',
-                    content: '<div class="rating--static"><span class="rating--static__fill" style="width: 40%;"><span>40%</span></span></div>'
+                    content: '<div class="rating__summary"><span class="rating__fill" style="width: 40%;"><span>40%</span></span></div>'
                   },
                   {
                     childTag: 'td',
