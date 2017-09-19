@@ -100,7 +100,7 @@ $dashboard-nav-margin : 15px !default;
         }
     }
 
-    // This clases to non enable links module
+    // This clases to disabled links module
     .nav.item {
         @extend .list__item;
         @extend .dashboard-nav__item;
