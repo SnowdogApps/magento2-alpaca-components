@@ -99,4 +99,14 @@ $dashboard-nav-margin : 15px !default;
             background-color: inherit;
         }
     }
+
+    // This clases to non enable links module
+    .nav.item {
+        @extend .list__item;
+        @extend .dashboard-nav__item;
+    }
+
+    .nav.item > a {
+        @extend .dashboard-nav__link;
+    }
 }
