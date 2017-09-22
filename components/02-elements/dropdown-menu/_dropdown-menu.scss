@@ -61,7 +61,7 @@ $dropdown-menu-box-shadow: -5px 5px 7px 0 rgba(0, 0, 0, 0.2);
         line-height: 1.5;
         color: $gray-dark;
         background: $white;
-        z-index: 2;
+        z-index: 9;
 
         @include mq($screen-l) {
             max-width: 850px;
