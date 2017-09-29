@@ -1,0 +1,11 @@
+{{#each grids as |grid|}}
+    <div class="grid grid--preview">
+        {{#each grid}}
+            <div class="grid__column grid__column--{{this}}">
+                <div class="grid__content">
+                    {{this}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/each}}

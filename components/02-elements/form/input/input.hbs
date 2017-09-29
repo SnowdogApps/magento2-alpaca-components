@@ -1,0 +1,14 @@
+<div class="input {{ class }}" {{{ attribute }}}>
+    <label class="label {{ label.class }}"
+           for="input"
+           {{{ label.attribute }}}
+    >
+        {{ label.text }}
+    </label>
+    <input class="input__field {{ field.class }}"
+           id="input"
+           type="text"
+           placeholder="{{ field.placeholder }}"
+           {{{ field.attribute }}}
+    >
+</div>

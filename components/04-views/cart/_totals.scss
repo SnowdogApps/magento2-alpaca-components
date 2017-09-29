@@ -1,0 +1,19 @@
+.cart-totals {
+    padding-top: 15px;
+    border-top: 1px solid #d9d9d9;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        font-size: $font-size-small;
+
+        &--summary {
+            margin-bottom: 15px;
+            padding-top: 10px;
+            border-top: 1px solid #d9d9d9;
+            font-weight: 600;
+            font-size: $font-size-base;
+        }
+    }
+}

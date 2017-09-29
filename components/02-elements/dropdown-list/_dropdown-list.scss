@@ -1,0 +1,220 @@
+.dropdown-list {
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    background-color: $white;
+
+    @include mq($screen-l) {
+        max-width: 320px;
+    }
+
+    @include mq($screen-xl) {
+        padding-left: 0;
+    }
+
+    &__list {
+        display: block;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        width: 10px;
+        height: 6px;
+        color: $gray;
+        transition: transform 0.3s, opacity 0.3s;
+
+        @include mq($screen-m) {
+            right: 10px;
+        }
+
+        &--inner {
+            width: 8px;
+            height: 8px;
+            top: 15px;
+            opacity: 0.7;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        position: relative;
+        display: block;
+        padding: 0;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: box-shadow 0.5s;
+
+        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            flex-basis: 24%;
+
+            &:hover {
+                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+            }
+        }
+
+        &.open {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+            }
+
+            .filter__list {
+                margin-top: 10px;
+            }
+
+            .dropdown-list__link {
+                text-decoration: none;
+
+                & > .dropdown-list__icon {
+                    transform: rotate(180deg);
+                }
+                @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                    &:after {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+
+        @include links(active) {
+            display: block;
+            padding: 15px;
+            font-weight: 700;
+            color: $font-color-base;
+            transition: box-shadow 0.5s;
+
+            @include mq($screen-m) {
+                padding: 15px 22px 15px 15px;
+            }
+        }
+
+        @include links(hover) {
+            color: $font-color-base;
+            text-decoration: none;
+            box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                box-shadow: none;
+            }
+        }
+
+        // hack to set box-shadow on opening absolute list and title element
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 10px;
+            background-color: $white;
+            width: 100%;
+            z-index: 109;
+            visibility: hidden;
+            transition: visibility 0.5s;
+        }
+    }
+
+    &__inner-list {
+        list-style-type: none;
+        display: block;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        transition: margin 0.3s, height 0.5s;
+        font-size: 12px;
+
+        &--level1 {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                position: absolute;
+                width: 100%;
+                background-color: $white;
+                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+                z-index: 99;
+            }
+        }
+
+        &--level2 {
+            padding-left: 20px;
+        }
+    }
+
+    &__inner-item {
+        position: relative;
+        display: block;
+
+        &--level1 {
+            .dropdown-list__inner-link {
+                text-decoration: none;
+
+                @include links(hover) {
+                    font-weight: 700;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &--level2 {
+            .dropdown-list__inner-link {
+                text-decoration: none;
+
+                @include links(hover) {
+                    font-weight: 400;
+                    color: $color-primary;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &.open {
+            .dropdown-list__inner-link {
+                text-decoration: none;
+
+                & > .dropdown-list__icon {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__inner-link {
+        text-decoration: none;
+
+        @include links(active) {
+            display: block;
+            padding: 15px 20px;
+            text-transform: none;
+            font-weight: 400;
+            color: $font-color-base;
+        }
+    }
+
+    &--item-wide {
+        .dropdown-list__list {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                flex-flow: row wrap;
+            }
+        }
+
+        .dropdown-list__item {
+            flex-basis: 100%;
+        }
+    }
+}

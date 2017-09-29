@@ -1,0 +1,127 @@
+$grid-gutter          : 10px !default;
+$grid-small-breakpoint: $screen-s !default;
+$grid-large-breakpoint: $screen-m !default;
+$grid-side-gutter     : false !default;
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    @if ($grid-gutter > 0 and $grid-side-gutter == false) {
+        margin-left: -($grid-gutter / 2);
+        margin-right: -($grid-gutter / 2);
+    }
+
+    &__column {
+        flex: 1 0 100%;
+        @if ($grid-gutter > 0) {
+            padding-left: ($grid-gutter / 2);
+            padding-right: ($grid-gutter / 2);
+        }
+
+        // 2 cols
+        &--1-2 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(1, 2);
+            }
+        }
+
+        // 3 cols
+        &--1-3 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(1, 2);
+            }
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(1, 3);
+            }
+        }
+
+        &--2-3 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(2, 3);
+            }
+        }
+
+        // 4 cols
+        &--1-4 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(2, 4);
+            }
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(1, 4);
+            }
+        }
+
+        &--2-4 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(2, 4);
+            }
+        }
+
+        &--3-4 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(3, 4);
+            }
+        }
+
+        // 5 cols
+        &--1-5 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(1, 5);
+            }
+        }
+
+        &--2-5 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(2, 5);
+            }
+        }
+
+        &--3-5 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(3, 5);
+            }
+        }
+
+        &--4-5 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(4, 5);
+            }
+        }
+
+        // 6 cols
+        &--1-6 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(2, 6);
+            }
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(1, 6);
+            }
+        }
+
+        &--2-6 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(2, 6);
+            }
+        }
+
+        &--3-6 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(3, 6);
+            }
+        }
+
+        &--4-6 {
+            @include mq($grid-small-breakpoint) {
+                @include grid-column-width(4, 6);
+            }
+        }
+
+        &--5-6 {
+            @include mq($grid-large-breakpoint) {
+                @include grid-column-width(5, 6);
+            }
+        }
+    }
+}

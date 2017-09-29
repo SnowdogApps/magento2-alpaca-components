@@ -1,0 +1,33 @@
+$breadcrumbs-padding        : 10px;
+$breadcrumbs-margin         : 10px;
+$breadcrumbs-color          : $font-color-base; 
+$breadcrumbs-color-second   : $gray;
+$breadcrumbs-clickable-area : 48px;
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $breadcrumbs-padding 0;
+
+    &__item {
+        color: $breadcrumbs-color;
+        display: flex;
+        min-width: $breadcrumbs-clickable-area;
+        padding: ($breadcrumbs-padding + 5) 0;
+        align-items: center;
+
+        &:after {
+            content: '/';
+            margin: 0 $breadcrumbs-margin;
+            color: $breadcrumbs-color-second;
+        }
+
+        &:last-child {
+            color: $breadcrumbs-color-second;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

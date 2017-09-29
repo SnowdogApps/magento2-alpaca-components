@@ -1,0 +1,121 @@
+$button-height                    : 48px !default;
+$button-width                     : 48px !default;
+$button-padding                   : 0 35px !default;
+$button-margin                    : 0 0 5px 0 !default;
+$button-border                    : none !default;
+$button-hover-border              : none !default;
+$button-background                : $color-primary !default;
+$button-hover-background          : darken($color-primary, 20%) !default;
+$button-outline                   : none !default;
+$button-font-family               : $font-family-sans-serif !default;
+$button-font-size                 : $font-size-base !default;
+$button-font-color                : $white !default;
+$button-hover-font-color          : $white !default;
+
+// Secondary
+$button-secondary-border          : 3px solid $gray-light !default;
+$button-secondary-hover-border    : $color-primary !default;
+$button-secondary-background      : $white !default;
+$button-secondary-hover-background: $white !default;
+$button-secondary-font-color      : $gray-light !default;
+$button-secondary-hover-font-color: $color-primary !default;
+
+// Icon
+$button-icon-padding              : 0 !default;
+$button-icon-size                 : 20px !default;
+$button-icon-content-margin       : 0 15px 0 0 !default;
+$button-icon-border-width         : 3px !default;
+$button-icon-border               : $button-icon-border-width solid $gray-light !default;
+$button-icon-hover-border         : $color-primary !default;
+$button-icon-fill                 : $gray-light !default;
+$button-icon-hover-fill           : $color-primary !default;
+$button-icon-background           : $white !default;
+$button-icon-hover-background     : $white !default;
+$button-icon-color                : $gray-light !default;
+$button-icon-hover-color          : $color-primary !default;
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    vertical-align: top;
+    cursor: pointer;
+    height: $button-height;
+    min-width: $button-width;
+    margin: $button-margin;
+    padding: $button-padding;
+    border: $button-border;
+    outline: $button-outline;
+    background: $button-background;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    color: $button-font-color;
+    transition: $transition-base;
+    align-items: center;
+
+    &:hover {
+        background: $button-hover-background;
+        border-color: $button-hover-border;
+    }
+
+    &--link {
+        align-items: center;
+        &:hover {
+            text-decoration: none;
+            color: $button-hover-font-color;
+        }
+    }
+
+    &--native-link {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background: none;
+        border: none;
+        color: $link-color;
+        &:hover {
+            background: none;
+            color: $link-hover-color;
+            text-decoration: $link-hover-decoration;
+        }
+    }
+
+    &--secondary {
+        border: $button-secondary-border;
+        color: $button-secondary-font-color;
+        background: $button-secondary-background;
+
+        &:hover {
+            border-color: $button-secondary-hover-border;
+            color: $button-secondary-hover-font-color;
+            background: $button-secondary-hover-background;
+        }
+    }
+
+    &--icon {
+        padding: $button-icon-padding;
+        border: $button-icon-border;
+        background: $button-icon-background;
+
+        &:hover {
+            border-color: $button-icon-hover-border;
+            background: $button-icon-hover-background;
+            .button__icon {
+                fill:  $button-icon-hover-fill;
+            }
+        }
+
+        .button__icon {
+            width: $button-icon-size;
+            height: $button-icon-size;
+            fill:  $button-icon-fill;
+        }
+
+        .button__content {
+            margin: $button-icon-content-margin;
+        }
+    }
+
+    &--fluid {
+        width: 100%;
+    }
+}

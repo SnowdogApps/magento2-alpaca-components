@@ -1,0 +1,16 @@
+@mixin links($links: active) {
+    @if ($links == active) {
+        &,
+        &:link,
+        &:active,
+        &:visited {
+            @content;
+        }
+    }
+    @else {
+        &:hover,
+        &:focus {
+            @content;
+        }
+    }
+}

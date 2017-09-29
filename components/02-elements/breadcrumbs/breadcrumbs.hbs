@@ -1,0 +1,13 @@
+<div class="breadcrumbs">
+    {{#each categories}}
+        {{#if @last}}
+            <span class="breadcrumbs__item">
+                {{ this }}
+            </span>
+        {{else}}
+            <a href="#" class="breadcrumbs__item">
+                {{ this }}
+            </a>
+        {{/if}}
+    {{/each}}
+</div>

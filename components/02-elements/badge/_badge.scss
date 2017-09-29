@@ -1,0 +1,24 @@
+.badge {
+    display: inline-flex;
+    padding: 7px 10px;
+    font-size: $font-size-extra-small;
+    color: $white;
+    background: $color-primary;
+    border-radius: $border-radius;
+
+    &--success {
+        background: $color-success;
+    }
+
+    &--info {
+        background: $color-info;
+    }
+
+    &--warning {
+        background: $color-warning;
+    }
+
+    &--danger {
+        background: $color-danger;
+    }
+}

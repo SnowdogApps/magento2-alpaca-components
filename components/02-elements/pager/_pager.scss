@@ -1,0 +1,60 @@
+$pager-item-size: 48px !default;
+
+.pager {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        padding: 0 15px;
+        margin: 10px 0;
+
+        @include mq($screen-m) {
+            padding: 0 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $pager-item-size;
+        min-width: $pager-item-size;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--current {
+            color: $white;
+            background-color: $color-primary;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: $pager-item-size;
+        padding: 0 5px;
+        line-height: $pager-item-size;
+        color: $gray;
+        text-align: center;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: none;
+        }
+    }
+
+    &__icon {
+        width: 12px;
+        height: 12px;
+    }
+}

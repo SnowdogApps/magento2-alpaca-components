@@ -1,0 +1,31 @@
+<div class="products-list-item">
+    <a class="products-list-item__image" href="#">
+        {{ render '@image' image }}
+    </a>
+    <div class="products-list-item__details">
+        <div class="grid products-list-item__grid">
+            <div class="
+                     products-list-item__grid-item
+                     products-list-item__grid-item--data"
+            >
+                <a href="#" class="products-list-item__details-name">
+                    {{ name }}
+                </a>
+                <div class="products-list-item__details-price">
+                    {{ price }}
+                </div>
+                {{ render '@list--description' attributes }}
+            </div>
+            <div class="products-list-item__grid-item">
+                {{ render '@input' input }}
+                <div class="products-list-item__details-subtotal">
+                    {{ subtotal }}
+                </div>
+            </div>
+        </div>
+        <div class="products-list-item__actions">
+            {{ render '@button--icon' buttonEdit }}
+            {{ render '@button--icon' buttonRemove }}
+        </div>
+    </div>
+</div>
