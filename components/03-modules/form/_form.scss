@@ -36,6 +36,7 @@ $form-legend-line-height: 1.2 !default;
         }
 
         .button {
+            display: block;
             margin: 0 0 0 (-$button-icon-border-width);
             &--native-link {
                 margin: 0;
