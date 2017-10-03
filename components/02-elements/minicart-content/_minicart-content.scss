@@ -1,0 +1,117 @@
+$minicart-content-margin      : 15px !default;
+$minicart-content-padding     : 15px !default;
+
+$minicart-content-product-font: $font-family-sans-serif !default;
+$minicart-content-font-size   : $font-size-small !default;
+
+$minicart-content-border-color: $gray !default;
+$minicart-content-border      : 3px solid $minicart-content-border-color !default;
+
+.minicart-content {
+    font-size: $font-size-small;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+
+    @include mq($screen-l) {
+        max-height: calc(100vh - 120px);
+    }
+
+    &__title {
+        font-family: $minicart-content-product-font;
+        text-align: center;
+        padding: $minicart-content-padding;
+        margin-bottom: 0;
+    }
+
+    &__list {
+        margin: 0;
+    }
+
+    &__list-clear {
+        height: auto !important;
+    }
+
+    &__item {
+        position: relative;
+        border-bottom: $minicart-content-border;
+        padding: $minicart-content-padding 0;
+    }
+
+    &__image {
+        margin: 10px auto;
+    }
+
+    &__name {
+        font-family: $minicart-content-product-font;
+        margin-bottom: $minicart-content-margin;
+        text-transform: none;
+    }
+
+    &__empty {
+        text-align: center;
+    }
+
+    &__price {
+        margin-bottom: $minicart-content-margin;
+    }
+
+    &__cart {
+        font-family: $minicart-content-product-font;
+        text-transform: none;
+        margin-bottom: 0;
+    }
+
+    &__summary {
+        font-size: 18px;
+    }
+
+    &__icons {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    &__total {
+        margin-bottom: $minicart-content-margin;
+        padding: ($minicart-content-padding) 0;
+        border-bottom: $minicart-content-border;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    &__button {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: $minicart-content-margin;
+
+        &--icon {
+            margin: 0 $minicart-content-margin 0 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        width: 20px;
+        height: 20px;
+        fill: $gray;
+        transition: $transition-base;
+
+        &:hover {
+            fill: $gray-dark;
+        }
+    }
+}

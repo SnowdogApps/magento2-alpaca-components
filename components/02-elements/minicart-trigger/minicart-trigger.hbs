@@ -1,15 +1,9 @@
-<a class="action showcart minicart-trigger"
-   href="{{cartUrl}}"
->
+<button class="minicart-trigger {{ class }}" {{{ attributes }}}>
     <svg class="minicart-trigger__icon">
-        <use xlink:href="/images/icons-sprite.svg#{{minicartIcon}}"></use>
+         <use xlink:href="{{ svg 'shopping-cart' }}"></use>
     </svg>
-    <span class="counter qty empty minicart-trigger__counter">
-        <span class="counter-number minicart-trigger__counter-qty">
-            {{ counterQty }}
-        </span>
-        <span class="counter-label minicart-trigger__counter-label">
-            {{ counterLabel }}
-        </span>
+
+    <span class="minicart-trigger__counter">
+        {{ counter }}
     </span>
-</a>
+</button>

@@ -2,6 +2,12 @@
     {{ render '@logo' }}
 
     <div class="header__right-panel">
+        <div class="header__minicart">
+            {{ render '@minicart-trigger' trigger }}
+
+            {{ render '@popup' minicartPopup }}
+        </div>
+
         {{ render '@side-menu-trigger' }}
     </div>
 
