@@ -1,0 +1,86 @@
+$swatch-font-size        : $font-size-small !default;
+$swatch-margin           : 15px !default;
+$swatch-width            : 48px !default;
+$swatch-transition       : $transition-base !default;
+
+$swatch-background       : $white !default;
+$swatch-color            : $gray-light !default;
+$swatch-border-color     : $swatch-color !default;
+
+$swatch-color-hover      : $color-primary !default;
+
+$swatch-background-active: $color-primary !default;
+$swatch-border-active    : $color-primary !default;
+$swatch-color-active     : $white !default;
+
+$swatch-border           : 3px solid $swatch-border-color !default;
+$swatch-outline          : 3px solid $swatch-border-color !default;
+
+.swatch {
+    &__title {
+        font-size: $font-size-small;
+        margin-bottom: $swatch-margin;
+    }
+
+    &__handler {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: $swatch-width;
+        min-width: $swatch-width;
+        border: $swatch-border;
+        background: $swatch-background;
+        margin-right: $swatch-margin;
+        margin-bottom: $swatch-margin;
+        transition: $swatch-transition;
+        color: $swatch-color;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $swatch-color-hover;
+            color: $swatch-color-hover;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &--active {
+        background: $swatch-background-active;
+        border-color: $swatch-border-active;
+        color: $swatch-color-active;
+
+        &:hover {
+            color: $swatch-color-active;
+        }
+    }
+
+    &--color {
+        padding: 0 3px;
+
+        .swatch__option {
+            border-color: $swatch-background;
+
+            &:hover {
+                outline: $swatch-outline;
+                border-color: $swatch-background;
+            }
+        }
+
+        .swatch--active {
+            border-color: $swatch-color-active;
+            outline: 3px solid $swatch-background-active;
+
+            &:hover {
+                border-color: $swatch-color-active;
+                outline-color: $swatch-background-active;
+            }
+        }
+    }
+}
