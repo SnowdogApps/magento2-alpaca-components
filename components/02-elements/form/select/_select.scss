@@ -62,6 +62,24 @@ $select-border-radius: $border-radius !default;
             padding: 10px 15px;
             border: 1px solid #d9d9d9;
             appearance: none;
+            margin-bottom: 0;
+        }
+    }
+
+    &--native {
+        position: relative;
+
+        &:before {
+            content: url("../images/icons/arrow-down.svg");
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 15px;
+            margin: auto;
+            width: 15px;
+            height: 15px;
+            z-index: 1;
+            text-align: center;
         }
     }
 }
