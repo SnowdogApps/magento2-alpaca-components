@@ -1,5 +1,4 @@
-$minicart-content-margin      : 15px !default;
-$minicart-content-padding     : 15px !default;
+$minicart-content-spacing     : 15px !default;
 
 $minicart-content-product-font: $font-family-sans-serif !default;
 $minicart-content-font-size   : $font-size-small !default;
@@ -19,7 +18,7 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     &__title {
         font-family: $minicart-content-product-font;
         text-align: center;
-        padding: $minicart-content-padding;
+        padding: $minicart-content-spacing;
         margin-bottom: 0;
     }
 
@@ -34,7 +33,7 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     &__item {
         position: relative;
         border-bottom: $minicart-content-border;
-        padding: $minicart-content-padding 0;
+        padding: $minicart-content-spacing 0;
     }
 
     &__image {
@@ -43,7 +42,7 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
 
     &__name {
         font-family: $minicart-content-product-font;
-        margin-bottom: $minicart-content-margin;
+        margin-bottom: $minicart-content-spacing;
         text-transform: none;
     }
 
@@ -52,7 +51,7 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     }
 
     &__price {
-        margin-bottom: $minicart-content-margin;
+        margin-bottom: $minicart-content-spacing;
     }
 
     &__cart {
@@ -72,8 +71,8 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     }
 
     &__total {
-        margin-bottom: $minicart-content-margin;
-        padding: ($minicart-content-padding) 0;
+        margin-bottom: $minicart-content-spacing;
+        padding: ($minicart-content-spacing) 0;
         border-bottom: $minicart-content-border;
         display: flex;
         justify-content: space-between;
@@ -85,10 +84,10 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
         width: 100%;
         display: block;
         text-align: center;
-        margin-bottom: $minicart-content-margin;
+        margin-bottom: $minicart-content-spacing;
 
         &--icon {
-            margin: 0 $minicart-content-margin 0 0;
+            margin: 0 $minicart-content-spacing 0 0;
 
             &:last-child {
                 margin: 0;
