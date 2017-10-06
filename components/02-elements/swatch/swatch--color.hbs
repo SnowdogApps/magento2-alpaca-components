@@ -3,7 +3,7 @@
         {{ title }}
     </h5>
 
-    <div class="swatch__handler">
+    <div class="swatch__wrapper">
         {{#each options }}
             <div class="swatch__option {{ this.class }}" {{{ this.attributes }}}>
                 {{ this.text }}
@@ -11,5 +11,3 @@
         {{/each }}
     </div>
 </div>
-
-<script src="{{ static 'swatch.js' }}"></script>

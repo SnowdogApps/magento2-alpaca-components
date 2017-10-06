@@ -11,7 +11,7 @@ module.exports = {
         text: 'XS'
       },
       {
-        class: '',
+        class: 'swatch__option--active',
         attributes: '',
         text: 'S'
       },
@@ -36,7 +36,7 @@ module.exports = {
     {
       name: 'color',
       context: {
-        class: 'swatch--color',
+        class: '',
         title: 'Choose color',
         options: [
           {
@@ -50,7 +50,7 @@ module.exports = {
             text: ''
           },
           {
-            class: 'swatch__option--color',
+            class: 'swatch__option--color swatch__option--active',
             attributes: 'style="background: #5cb85c"',
             text: ''
           },
