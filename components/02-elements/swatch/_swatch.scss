@@ -2,18 +2,14 @@ $swatch-font-size          : $font-size-small !default;
 $swatch-margin             : 15px !default;
 $swatch-width              : 48px !default;
 $swatch-transition         : $transition-base !default;
-
 $swatch-background         : $white !default;
-$swatch-color              : $gray-light !default;
+$swatch-label-color         : $gray-light !default;
 $swatch-border-color       : $gray-light !default;
 $swatch-outline-color      : $gray-light !default;
-
 $swatch-color-hover        : $color-primary !default;
-
 $swatch-background-active  : $color-primary !default;
 $swatch-border-color-active: $color-primary !default;
 $swatch-color-active       : $white !default;
-
 $swatch-border             : 3px solid $swatch-border-color !default;
 $swatch-outline            : 3px solid $swatch-outline-color !default;
 
@@ -39,7 +35,7 @@ $swatch-outline            : 3px solid $swatch-outline-color !default;
         margin-right: $swatch-margin;
         margin-bottom: $swatch-margin;
         transition: $swatch-transition;
-        color: $swatch-color;
+        color: $swatch-label-color;
         cursor: pointer;
 
         &:hover {
