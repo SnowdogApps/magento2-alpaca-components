@@ -26,6 +26,7 @@ $select-border-radius: $border-radius !default;
                 padding: 0;
                 width: 100%;
                 border: 1px solid $select-border-color;
+                border-radius: $select-border-radius;
             }
 
             &--dropdown {
