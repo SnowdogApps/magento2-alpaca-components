@@ -1,20 +1,21 @@
-$swatch-font-size        : $font-size-small !default;
-$swatch-margin           : 15px !default;
-$swatch-width            : 48px !default;
-$swatch-transition       : $transition-base !default;
+$swatch-font-size          : $font-size-small !default;
+$swatch-margin             : 15px !default;
+$swatch-width              : 48px !default;
+$swatch-transition         : $transition-base !default;
 
-$swatch-background       : $white !default;
-$swatch-color            : $gray-light !default;
-$swatch-border-color     : $swatch-color !default;
+$swatch-background         : $white !default;
+$swatch-color              : $gray-light !default;
+$swatch-border-color       : $gray-light !default;
+$swatch-outline-color      : $gray-light !default;
 
-$swatch-color-hover      : $color-primary !default;
+$swatch-color-hover        : $color-primary !default;
 
-$swatch-background-active: $color-primary !default;
-$swatch-border-active    : $color-primary !default;
-$swatch-color-active     : $white !default;
+$swatch-background-active  : $color-primary !default;
+$swatch-border-color-active: $color-primary !default;
+$swatch-color-active       : $white !default;
 
-$swatch-border           : 3px solid $swatch-border-color !default;
-$swatch-outline          : 3px solid $swatch-border-color !default;
+$swatch-border             : 3px solid $swatch-border-color !default;
+$swatch-outline            : 3px solid $swatch-outline-color !default;
 
 .swatch {
     &__title {
@@ -22,7 +23,7 @@ $swatch-outline          : 3px solid $swatch-border-color !default;
         margin-bottom: $swatch-margin;
     }
 
-    &__handler {
+    &__wrapper {
         display: flex;
         flex-wrap: wrap;
     }
@@ -31,8 +32,8 @@ $swatch-outline          : 3px solid $swatch-border-color !default;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: $swatch-width;
-        min-width: $swatch-width;
+        height: $swatch-width;
+        width: $swatch-width;
         border: $swatch-border;
         background: $swatch-background;
         margin-right: $swatch-margin;
@@ -49,37 +50,33 @@ $swatch-outline          : 3px solid $swatch-border-color !default;
         &:last-child {
             margin-right: 0;
         }
-    }
 
-    &--active {
-        background: $swatch-background-active;
-        border-color: $swatch-border-active;
-        color: $swatch-color-active;
-
-        &:hover {
+        &--active {
+            background: $swatch-background-active;
+            border-color: $swatch-border-color-active;
             color: $swatch-color-active;
+
+            &:hover {
+                color: $swatch-color-active;
+            }
         }
-    }
 
-    &--color {
-        padding: 0 3px;
-
-        .swatch__option {
+        &--color {
             border-color: $swatch-background;
 
             &:hover {
                 outline: $swatch-outline;
                 border-color: $swatch-background;
             }
-        }
 
-        .swatch--active {
-            border-color: $swatch-color-active;
-            outline: 3px solid $swatch-background-active;
-
-            &:hover {
+            &.swatch__option--active {
                 border-color: $swatch-color-active;
-                outline-color: $swatch-background-active;
+                outline: 3px solid $swatch-background-active;
+
+                &:hover {
+                    border-color: $swatch-color-active;
+                    outline-color: $swatch-background-active;
+                }
             }
         }
     }
