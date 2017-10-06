@@ -1,13 +1,15 @@
-$minicart-content-spacing     : 15px !default;
-
-$minicart-content-product-font: $font-family-sans-serif !default;
-$minicart-content-font-size   : $font-size-small !default;
-
-$minicart-content-border-color: $gray !default;
-$minicart-content-border      : 3px solid $minicart-content-border-color !default;
+$minicart-content-spacing        : 15px !default;
+$minicart-content-font-size      : $font-size-small !default;
+$minicart-content-font-size-big  : $font-size-large !default;
+$minicart-content-border-color   : $gray !default;
+$minicart-content-icon-width     : 20px !default;
+$minicart-content-icon-fill      : $gray !default;
+$minicart-content-icon-fill-hover: $gray-dark !default;
+$mincart-content-transition      : $transition-base !default;
+$minicart-content-border         : 3px solid $minicart-content-border-color !default;
 
 .minicart-content {
-    font-size: $font-size-small;
+    font-size: $minicart-content-font-size;
     max-height: calc(100vh - 90px);
     overflow-y: auto;
 
@@ -16,7 +18,6 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     }
 
     &__title {
-        font-family: $minicart-content-product-font;
         text-align: center;
         padding: $minicart-content-spacing;
         margin-bottom: 0;
@@ -41,7 +42,6 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     }
 
     &__name {
-        font-family: $minicart-content-product-font;
         margin-bottom: $minicart-content-spacing;
         text-transform: none;
     }
@@ -55,13 +55,12 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     }
 
     &__cart {
-        font-family: $minicart-content-product-font;
         text-transform: none;
         margin-bottom: 0;
     }
 
     &__summary {
-        font-size: 18px;
+        font-size: $minicart-content-font-size-big;
     }
 
     &__icons {
@@ -72,7 +71,7 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
 
     &__total {
         margin-bottom: $minicart-content-spacing;
-        padding: ($minicart-content-spacing) 0;
+        padding: $minicart-content-spacing 0;
         border-bottom: $minicart-content-border;
         display: flex;
         justify-content: space-between;
@@ -104,13 +103,13 @@ $minicart-content-border      : 3px solid $minicart-content-border-color !defaul
     }
 
     &__icon {
-        width: 20px;
-        height: 20px;
-        fill: $gray;
-        transition: $transition-base;
+        width: $minicart-content-icon-width;
+        height: $minicart-content-icon-width;
+        fill: $minicart-content-icon-fill;
+        transition: $mincart-content-transition;
 
         &:hover {
-            fill: $gray-dark;
+            fill: $minicart-content-icon-fill-hover;
         }
     }
 }
