@@ -1,0 +1,11 @@
+$paragraph-margin     : 0 0 15px 0 !default;
+$paragraph-line-height: $font-line-height !default;
+
+.paragraph {
+    margin: $paragraph-margin;
+    line-height: $paragraph-line-height;
+}
+
+p {
+    @extend .paragraph;
+}

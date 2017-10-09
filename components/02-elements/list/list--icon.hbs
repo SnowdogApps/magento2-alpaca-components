@@ -1,0 +1,12 @@
+<{{{ listTag }}} class="list {{ class }}">
+    {{# each elements }}
+        <{{{ ../elementTag }}} class="list__item">
+            <svg class="list__icon">
+                <use xlink:href="{{ svg icon }}"></use>
+            </svg>
+            <div class="list__content">
+                {{ text }}
+            </div>
+        </{{{ ../elementTag }}}>
+    {{/ each }}
+</{{{ listTag }}}>

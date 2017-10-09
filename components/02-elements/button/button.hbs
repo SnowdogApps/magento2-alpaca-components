@@ -1,0 +1,8 @@
+<{{{ tag }}} class="button {{ class }}" {{{ attributes }}}>
+    {{ text }}
+    {{#if iconId }}
+        <svg title="{{ iconId }}" class="{{ iconClass }}">
+            <use xlink:href="{{ svg iconId }}"></use>
+        </svg>
+    {{/if}}
+</{{{ tag }}}>

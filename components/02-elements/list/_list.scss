@@ -1,0 +1,136 @@
+$list-style              : none !default;
+$list-margin             : 10px 0 !default;
+$list-padding            : 0 !default;
+$list-item-padding       : 5px 0 !default;
+$list-content-padding    : 10px !default;
+
+// Horizontal
+$list-padding--horizontal: 10px !default;
+
+// With icon
+$list-icon-size          : 16px !default;
+
+// With image
+$list-image-width        : 16px !default;
+
+// Divided
+$list-divider            : 1px solid $gray-dark !default;
+
+.list {
+    margin: $list-margin;
+    padding: $list-padding;
+    list-style: $list-style;
+
+    &__item {
+        display: list-item;
+        padding: $list-item-padding;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__label {
+        clear: left;
+        float: left;
+        padding: 0 5px 5px 0;
+        &:after {
+            content: ': ';
+        }
+    }
+
+    &__value {
+        float: left;
+        padding: 0 5px 5px 0;
+    }
+
+    .list__content {
+        padding-left: $list-content-padding;
+    }
+
+    &--center {
+        justify-content: center;
+        text-align: center;
+    }
+
+    &--horizontal {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .list__item {
+            padding: $list-padding--horizontal;
+        }
+    }
+
+    &--min-medium-horizontal {
+        @include mq($screen-m) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .list__item {
+            @include mq($screen-m) {
+                padding: $list-padding--horizontal;
+            }
+        }
+    }
+
+    &--with-icon {
+        .list__item {
+            display: flex;
+            align-items: center;
+        }
+        .list__icon {
+            width: $list-icon-size;
+            height: $list-icon-size;
+        }
+    }
+
+    &--with-image {
+        .list__item {
+            display: flex;
+        }
+        .list__image {
+            width: $list-image-width;
+            height: auto;
+        }
+    }
+
+    &--divided {
+        .list__item {
+            border-bottom: $list-divider;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &.list--horizontal {
+            .list__item {
+                border-bottom: none;
+                border-right: $list-divider;
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+
+        &.list--min-medium-horizontal {
+            .list__item {
+                @include mq($screen-m) {
+                    border-bottom: none;
+                    border-right: $list-divider;
+                }
+                &:last-child {
+                    @include mq($screen-m) {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+    &--description {
+        display: inline-block;
+    }
+}

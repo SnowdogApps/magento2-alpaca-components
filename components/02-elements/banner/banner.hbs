@@ -1,0 +1,31 @@
+<a href="#" class="banner {{ bannerModifier }}">
+    {{#if image}}
+        {{> '@image--picture' image additionalClasses="banner__image" }}
+    {{/if}}
+
+    <div class="
+            banner__content
+            {{#if headingModifier }}
+                {{ headingModifier }}
+            {{/if}}
+         "
+    >
+        <div class="banner__headings">
+            {{> '@heading'
+                tag="h1"
+                class="heading heading--first-level"
+                text=heading
+            }}
+
+            {{> '@heading'
+                tag="h2"
+                class="heading heading--third-level"
+                text=heading
+            }}
+        </div>
+
+        {{#if button}}
+            {{> '@button' button }}
+        {{/if}}
+    </div>
+</a>

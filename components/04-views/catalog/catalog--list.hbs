@@ -1,0 +1,24 @@
+<ul class="products-list">
+    {{#each productlist }}
+        <li class="products-list__item">
+            <a href="#" class="products-list__item-link">
+                <div class="products-list__img-box">
+                    <img src="{{ image }}"
+                         alt="product-image"
+                         class="products-list__img"
+                    />
+                </div>
+
+                <div class="products-list__info">
+                    <h4 class="products-list__name">
+                        {{ name }}
+                    </h4>
+
+                    <span class="products-list__details">
+                        {{ details }}
+                    </span>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,51 @@
+$message-background        : $gray;
+$message-background-success: $green;
+$message-background-error  : $red;
+
+$message-color             : $white;
+$message-color-red         : $red;
+$message-color-green       : $green;
+
+$message-padding-base      : 15px;
+$message-margin-base       : 15px;
+
+.message {
+    background-color: $message-background;
+    color: $message-color;
+    position: relative;
+    padding: 5px ($message-padding-base * 2);
+    margin-bottom: $message-margin-base;
+    font-size: $font-size-small;
+    width: 100%;
+    transition: $transition-base;
+
+    &--success {
+        background-color: $message-background-success;
+        color: rgba($message-color, 0.9);
+
+        &:after {
+            content: "\2713";   
+        }
+    }
+
+    &--error {
+        background-color: $message-background-error;
+        color: rgba($message-color, 0.9);
+
+        &:after {
+            content: "\2715";
+        }
+    }
+
+    &:after {
+        color: $message-color;
+        position: absolute;
+        left: 0;
+        top: 0;            
+        height: 100%;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

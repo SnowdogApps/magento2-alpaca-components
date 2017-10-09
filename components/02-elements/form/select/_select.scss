@@ -1,0 +1,63 @@
+$select-border-color: #d9d9d9 !default;
+$select-padding: 10px 15px !default;
+$select-border-radius: $border-radius !default;
+
+.select {
+    margin-bottom: 10px;
+
+    &__field {
+        position: relative;
+        background: $white;
+
+        &--native {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #d9d9d9;
+            appearance: none;
+        }
+
+        &-item {
+            position: relative;
+            padding: $select-padding;
+            cursor: pointer;
+        }
+
+        &-list {
+            border-radius: $select-border-radius;
+
+            &--single {
+                display: inline-block;
+                padding: 0;
+                width: 100%;
+                border: 1px solid $select-border-color;
+            }
+
+            &--dropdown {
+                border: 1px solid $select-border-color;
+            }
+        }
+
+        &-input {
+            width: 100%;
+            display: block;
+            padding: $select-padding;
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: $select-border-color;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        // Choices.js lib styles overwrites
+        .choices {
+            &.is-open {
+                .select__field {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

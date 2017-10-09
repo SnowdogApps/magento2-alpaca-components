@@ -1,0 +1,79 @@
+$headings-margin                : 0 0 0.5em 0 !default;
+$headings-font-family           : inherit !default;
+$headings-font-weight           : 500 !default;
+$headings-line-height           : 1.1 !default;
+$headings-color                 : inherit !default;
+$headings-text-transform        : none !default;
+
+$heading-font-size--first-level : 40px !default;
+$heading-font-size--second-level: 32px !default;
+$heading-font-size--third-level : 28px !default;
+$heading-font-size--fourth-level: 24px !default;
+$heading-font-size--fifth-level : 20px !default;
+$heading-font-size--sixth-level : 16px !default;
+
+.heading {
+    margin: $headings-margin;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+    text-transform: $headings-text-transform;
+
+    &--first-level {
+        font-size: $heading-font-size--first-level;
+    }
+
+    &--second-level {
+        font-size: $heading-font-size--second-level;
+    }
+
+    &--third-level {
+        font-size: $heading-font-size--third-level;
+    }
+
+    &--fourth-level {
+        font-size: $heading-font-size--fourth-level;
+    }
+
+    &--fifth-level {
+        font-size: $heading-font-size--fifth-level;
+    }
+
+    &--sixth-level {
+        font-size: $heading-font-size--sixth-level;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .heading;
+}
+
+h1 {
+    @extend .heading--first-level;
+}
+
+h2 {
+    @extend .heading--second-level;
+}
+
+h3 {
+    @extend .heading--third-level;
+}
+
+h4 {
+    @extend .heading--fourth-level;
+}
+
+h5 {
+    @extend .heading--fifth-level;
+}
+
+h6 {
+    @extend .heading--sixth-level;
+}
