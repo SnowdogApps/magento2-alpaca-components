@@ -1,5 +1,8 @@
 # magento2-ui-components
-Version 0.1.0
+Version 0.1.1
+
+## ver 0.1.1
+change composer project name to snowdog/module-alpaca-components
 
 ## Installation
 - `yarn` - to install dependecies
