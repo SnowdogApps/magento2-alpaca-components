@@ -1,8 +1,8 @@
 # Alpaca Components
 
 ## Installation
-- `yarn` - to install dependecies
-- `gulp fractal:start` - to start files watching and run local developmentserver
+- `yarn` - to install dependencies
+- `gulp fractal:start` - to start files watching and run local development server
 
 ## Deployment
 * `gulp fractal:build`
