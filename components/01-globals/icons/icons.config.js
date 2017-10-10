@@ -16,7 +16,9 @@ module.exports = {
       'mobile-menu',
       'plus',
       'search',
-      'twitter'
+      'twitter',
+      'grid',
+      'list'
     ]
   }
 };
