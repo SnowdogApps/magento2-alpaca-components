@@ -46,6 +46,10 @@ hbsEngine.handlebars.registerHelper('svg', icon => {
   return '/images/icons-sprite.svg#' + icon;
 });
 
+hbsEngine.handlebars.registerHelper('component', name => {
+  return '@' + name;
+});
+
 // Fractal gulp tasks
 gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () => {
   const server = fractal.web.server({

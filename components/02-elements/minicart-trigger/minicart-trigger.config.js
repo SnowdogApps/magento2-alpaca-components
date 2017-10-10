@@ -1,10 +1,7 @@
 module.exports = {
   context: {
-    cartUrl: 'someCartUrl',
-    minicartIcon: 'shopping-cart',
-    counterQty: '2',
-    counterLabel: 'items 2',
-    titalPrice: '$120',
-    productPrice: '$60'
+    class: 'button',
+    attributes: 'type="button"',
+    counter: '2'
   }
 }
