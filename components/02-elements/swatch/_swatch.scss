@@ -1,17 +1,22 @@
-$swatch-font-size          : $font-size-small !default;
-$swatch-margin             : 15px !default;
-$swatch-width              : 48px !default;
-$swatch-transition         : $transition-base !default;
-$swatch-background         : $white !default;
-$swatch-label-color        : $gray-light !default;
-$swatch-border-color       : $gray-light !default;
-$swatch-outline-color      : $gray-light !default;
-$swatch-color-hover        : $color-primary !default;
-$swatch-background-active  : $color-primary !default;
-$swatch-border-color-active: $color-primary !default;
-$swatch-color-active       : $white !default;
-$swatch-border             : 3px solid $swatch-border-color !default;
-$swatch-outline            : 3px solid $swatch-outline-color !default;
+$swatch-font-size                  : $font-size-small !default;
+$swatch-margin                     : 15px !default;
+$swatch-width                      : 48px !default;
+$swatch-transition                 : $transition-base !default;
+$swatch-background                 : $white !default;
+$swatch-label-color                : $gray-light !default;
+$swatch-border-color               : $gray-light !default;
+$swatch-border                     : 3px solid $swatch-border-color !default;
+$swatch-label-color-hover          : $color-primary !default;
+$swatch-border-color-hover         : $color-primary !default;
+$swatch-background-active          : $color-primary !default;
+$swatch-label-color-active         : $white !default;
+$swatch-border-color-active        : $color-primary !default;
+$swatch--color-outline-color       : $gray-light !default;
+$swatch--color-border-color        : $white !default;
+$swatch--color-outline-hover       : 3px solid $swatch--color-outline-color !default;
+$swatch--color-border-color-hover  : $white !default;
+$swatch--color-outline-color-active: $color-primary !default;
+$swatch--color-border-color-active : $white !default;
 
 .swatch {
     &__title {
@@ -39,8 +44,8 @@ $swatch-outline            : 3px solid $swatch-outline-color !default;
         cursor: pointer;
 
         &:hover {
-            border-color: $swatch-color-hover;
-            color: $swatch-color-hover;
+            border-color: $swatch-border-color-hover;
+            color: $swatch-label-color-hover;
         }
 
         &:last-child {
@@ -50,28 +55,28 @@ $swatch-outline            : 3px solid $swatch-outline-color !default;
         &--active {
             background: $swatch-background-active;
             border-color: $swatch-border-color-active;
-            color: $swatch-color-active;
+            color: $swatch-label-color-active;
 
             &:hover {
-                color: $swatch-color-active;
+                color: $swatch-label-color-active;
             }
         }
 
         &--color {
-            border-color: $swatch-background;
+            border-color: $swatch--color-border-color;
 
             &:hover {
-                outline: $swatch-outline;
-                border-color: $swatch-background;
+                outline: $swatch--color-outline-hover;
+                border-color: $swatch--color-border-color-hover;
             }
 
             &.swatch__option--active {
-                border-color: $swatch-color-active;
-                outline: 3px solid $swatch-background-active;
+                border-color: $swatch--color-border-color-active;
+                outline: 3px solid $swatch--color-outline-color-active;
 
                 &:hover {
-                    border-color: $swatch-color-active;
-                    outline-color: $swatch-background-active;
+                    border-color: $swatch--color-border-color-active;
+                    outline-color: $swatch--color-outline-color-active;
                 }
             }
         }
