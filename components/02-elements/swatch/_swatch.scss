@@ -16,6 +16,7 @@ $swatch--color-border-color        : $white !default;
 $swatch--color-outline-hover       : 3px solid $swatch--color-outline-color !default;
 $swatch--color-border-color-hover  : $white !default;
 $swatch--color-outline-color-active: $color-primary !default;
+$swatch--color-outline-active      : 3px solid $swatch--color-outline-color-active !default;
 $swatch--color-border-color-active : $white !default;
 
 .swatch {
@@ -72,7 +73,7 @@ $swatch--color-border-color-active : $white !default;
 
             &.swatch__option--active {
                 border-color: $swatch--color-border-color-active;
-                outline: 3px solid $swatch--color-outline-color-active;
+                outline: $swatch--color-outline-active;
 
                 &:hover {
                     border-color: $swatch--color-border-color-active;
