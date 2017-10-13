@@ -1,20 +1,28 @@
+$cart-summary-padding                   : 15px !default;
+$cart-summary-margin                    : 15px !default;
+$cart-summary-background                : $gray-lightest !default;
+$cart-summary-shipping-methods-margin   : 25px 0 !default;
+$cart-summary-shipping-methods-font-size: $font-size-small !default;
+$cart-summary-item-padding              : 5px !default;
+$cart-summart-multiple-addresses-margin : $cart-summary-margin 0 ($cart-summary-margin - 5) !default;
+
 .cart-summary {
-    padding: 15px;
-    background-color: $gray-lightest;
+    padding: $cart-summary-padding;
+    background-color: $cart-summary-background;
 
     &__item {
         display: block;
         flex: 1 0 100%;
-        padding: 5px;
+        padding: $cart-summary-item-padding;
     }
 
     &__shipping-methods {
-        margin: 25px 0;
+        margin: $cart-summary-shipping-methods-margin;
 
         &-heading {
             margin-bottom: 5px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: $cart-summary-shipping-methods-font-size;
         }
     }
 
@@ -24,9 +32,9 @@
     }
 
     &__multiple-addresses {
-        width: 100%;
         display: block;
-        margin: 15px 0 10px;
+        width: 100%;
+        margin: $cart-summart-multiple-addresses-margin;
         text-align: center;
     }
 }

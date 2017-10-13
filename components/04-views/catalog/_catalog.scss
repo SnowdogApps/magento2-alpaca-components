@@ -1,19 +1,37 @@
+//product-grid
+$product-grid-padding             : 10px !default;
+$product-grid-margin              : 15px !default;
+$product-grid-breakpoint-medium   : $screen-m !default;
+$product-grid-breakpoint-large    : $screen-l !default;
+
+//product-list
+$product-list-padding             : 10px !default;
+$product-list-margin              : 10px !default;
+$product-list-border-color        : $gray-light !default;
+$product-list-border              : 1px solid $product-list-border-color !default;
+$product-list-name-font-size      : $font-size-small !default;
+$product-list-details-color       : $gray-lighter !default;
+$product-list-details-font-size   : $font-size-extra-small !default;
+$product-list-img-box-padding     : 0 $product-grid-padding 0 0 !default;
+$product-list-img-box-border-color: $gray-light !default;
+$product-list-img-box-border      : 1px solid $product-list-img-box-border-color !default;
+
 .products-grid {
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
     width: 100%;
     margin: 0;
     padding: 0;
-    justify-content: flex-start;
     list-style-type: none;
 
-    @include mq($screen-m) {
-        padding: 10px 0 10px 20px;
+    @include mq($product-grid-breakpoint-medium) {
+        padding: $product-grid-padding 0 $product-grid-padding ($product-grid-padding * 2);
     }
 
     &--4-in-row {
         .products-grid__item {
-            @include mq($screen-l) {
+            @include mq($product-grid-breakpoint-large) {
                 flex-basis: calc(25% - 20px);
             }
         }
@@ -21,17 +39,17 @@
 
     &__item {
         flex-basis: 100%;
-        margin-bottom: 15px;
+        margin-bottom: $product-grid-margin;
 
         @include mq($screen-s) {
             flex-basis: calc(50% - 15px);
-            margin-right: 15px;
+            margin-right: $product-grid-margin;
         }
 
-        @include mq($screen-m) {
+        @include mq($product-grid-breakpoint-medium) {
             flex-basis: calc(33.33% - 20px);
-            margin-bottom: 20px;
-            margin-right: 20px;
+            margin-bottom: ($product-grid-margin + 5);
+            margin-right: ($product-grid-margin + 5);
         }
     }
 }
@@ -43,16 +61,15 @@
     padding: 0;
 
     &__item {
-        border: 1px solid $gray-light;
-        padding: 10px;
-        margin-bottom: 10px;
+        border: $product-list-border;
+        padding: $product-list-padding;
+        margin-bottom: $product-list-margin;
     }
 
     &__item-link {
-        display: block;
-        width: 100%;
         display: flex;
         flex-flow: row nowrap;
+        width: 100%;
         text-decoration: none;
 
         @include links(hover) {
@@ -62,8 +79,8 @@
 
     &__img-box {
         flex-basis: 70px;
-        padding: 0 10px 0 0;
-        border-right: 1px solid $gray-light;
+        padding: $product-list-img-box-padding;
+        border-right: $product-list-img-box-border;
     }
 
     &__img {
@@ -75,14 +92,14 @@
     }
 
     &__name {
-        font-size: 14px;
+        font-size: $product-list-name-font-size;
         margin-bottom: 5px;
         font-weight: 700;
     }
 
     &__details {
-        color: $gray-lighter;
-        font-size: 12px;
+        color: $product-list-details-color;
+        font-size: $product-list-details-font-size;
     }
 }
 

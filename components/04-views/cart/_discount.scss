@@ -1,32 +1,41 @@
+$discount-padding             : 15px !default;
+$discount-margin              : 15px !default;
+$discount-icon-width          : 14px !default;
+$discount-icon-height         : 14px !default;
+$discount-title-icon-transform: rotate(180deg) !default;
+$discount-transition          : $transition-base !default;
+$discount-breakpoint-medium   : $screen-m !default;
+
 .discount {
     flex-basis: 100%;
-    margin-bottom: 15px;
-    padding: 0 15px;
-    @include mq($screen-m) {
+    margin-bottom: $discount-margin;
+    padding: 0 $discount-padding;
+
+    @include mq($discount-breakpoint-medium) {
         @include grid-column-width(1, 2);
     }
 
     &.active {
         .discount__title-icon {
-            transform: rotate(180deg);
+            transform: $discount-title-icon-transform;
         }
     }
 
     &__title {
         display: flex;
         align-items: center;
-        padding: 10px 0;
+        padding: ($discount-padding - 5) 0;
         cursor: pointer;
 
         &-text {
-            margin-right: 15px;
+            margin-right: $discount-margin;
             font-weight: 500;
         }
 
         &-icon {
-            width: 14px;
-            height: 14px;
-            transition: $transition-base;
+            width: $discount-icon-width;
+            height: $discount-icon-height;
+            transition: $discount-transition;
         }
     }
 

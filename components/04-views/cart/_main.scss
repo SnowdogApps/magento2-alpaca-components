@@ -1,31 +1,34 @@
+$cart-margin           : 15px !default;
+$cart-padding          : 15px !default;
+$cart-border-color     : $gray-lighter !default;
+$cart-border           : 1px solid $cart-border-color !default;
+$cart-breakpoint-small : $screen-s !default;
+$cart-breakpoint-medium: 1024px !default;
+
 .cart {
-    margin-bottom: 30px;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-bottom: ($cart-margin * 2);
     &__main-col {
-        padding: 0 15px;
-        @include mq($screen-s, '1024px') {
+        padding: 0 $cart-padding;
+        @include mq($cart-breakpoint-small, $cart-breakpoint-medium) {
             flex-basis: 100%;
         }
     }
 
     &__summary-col {
         padding: 0 15px;
-        @include mq($screen-s, '1024px') {
+        @include mq($cart-breakpoint-small, $cart-breakpoint-medium) {
             flex-basis: 100%;
         }
     }
 
     &__bottom {
-        margin-left: -15px;
-        margin-right: -15px;
-        padding-top: 15px;
-        border-top: 1px solid $gray-lighter;
+        padding-top: $cart-padding;
+        border-top: $cart-border;
     }
 
     &__products-list {
         margin: 0;
-        padding-top: 15px;
-        border-top: 1px solid $gray-lighter;
+        padding-top: $cart-padding;
+        border-top: $cart-border;
     }
 }
