@@ -45,15 +45,15 @@ $font-size-small       : 14px !default;
 $font-size-extra-small : 12px !default;
 
 // Layout
-$max-content-width     : 1180px;
+$max-content-width     : 1180px !default;
 
 // Layout - breakpoints
-$screen-xs             : 320px;
-$screen-s              : 480px;
-$screen-m              : 768px;
-$screen-l              : 992px;
-$screen-xl             : 1200px;
-$screen-xxl            : 1600px;
+$screen-xs             : 320px !default;
+$screen-s              : 480px !default;
+$screen-m              : 768px !default;
+$screen-l              : 992px !default;
+$screen-xl             : 1200px !default;
+$screen-xxl            : 1600px !default;
 
 // Components
 $border-radius         : 4px !default;
