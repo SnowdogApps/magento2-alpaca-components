@@ -1,14 +1,32 @@
+$dropdown-list-padding              : 10px !default;
+$dropdown-list-background           : $white !default;
+$dropdown-list-font-size            : $font-size-extra-small !default;
+$dropdown-list-breakpoint-small     : $screen-m !default;
+$dropdown-list-breakpoint-medium    : $screen-l !default;
+$dropdown-list-breakpoint-large     : $screen-xl !default;
+$dropdown-list-icon-transition      : transform 0.3s, opacity 0.3s !default;
+$dropdown-list-icon-color           : $gray !default;
+$dropdown-list-icon-width           : 10px !default;
+$dropdown-list-icon-height          : 6px !default;
+$dropdown-list-icon-top             : 20px !default;
+$dropdown-list-icon-right           : 15px !default;
+$dropdown-list-icon-inner-base      : 8px !default;
+$dropdown-list-link-color           : $font-color-base !default;
+$dropdown-list-link-after-background: $white !default;
+$dropdown-list-inner-list-background: $white !default;
+$dropwodn-list-inner-item-color     : $color-primary !default;
+
 .dropdown-list {
     width: 100%;
     position: relative;
-    padding: 10px;
-    background-color: $white;
+    padding: $dropdown-list-padding;
+    background-color: $dropdown-list-background;
 
-    @include mq($screen-l) {
+    @include mq($dropdown-list-breakpoint-medium) {
         max-width: 320px;
     }
 
-    @include mq($screen-xl) {
+    @include mq($dropdown-list-breakpoint-large) {
         padding-left: 0;
     }
 
@@ -19,7 +37,7 @@
         padding: 0;
         margin: 0;
 
-        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+        @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-medium) {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
@@ -29,37 +47,37 @@
 
     &__icon {
         position: absolute;
-        right: 15px;
-        top: 20px;
-        width: 10px;
-        height: 6px;
-        color: $gray;
-        transition: transform 0.3s, opacity 0.3s;
+        top: $dropdown-list-icon-top;
+        right: $dropdown-list-icon-right;
+        width: $dropdown-list-icon-width;
+        height: $dropdown-list-icon-height;
+        color: $dropdown-list-icon-color;
+        transition: $dropdown-list-icon-transition;
 
-        @include mq($screen-m) {
+        @include mq($dropdown-list-breakpoint-small) {
             right: 10px;
         }
 
         &--inner {
-            width: 8px;
-            height: 8px;
+            width: $dropdown-list-icon-inner-base;
+            height: $dropdown-list-icon-inner-base;
             top: 15px;
             opacity: 0.7;
         }
     }
 
     &__item {
-        width: 100%;
         position: relative;
         display: block;
+        width: 100%;
         padding: 0;
         font-weight: 700;
-        font-size: 12px;
+        font-size: $dropdown-list-font-size;
         text-transform: uppercase;
         cursor: pointer;
         transition: box-shadow 0.5s;
 
-        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+        @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
             flex-basis: 24%;
 
             &:hover {
@@ -68,7 +86,7 @@
         }
 
         &.open {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
             }
 
@@ -82,7 +100,7 @@
                 & > .dropdown-list__icon {
                     transform: rotate(180deg);
                 }
-                @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
                     &:after {
                         visibility: visible;
                     }
@@ -98,20 +116,20 @@
             display: block;
             padding: 15px;
             font-weight: 700;
-            color: $font-color-base;
+            color: $dropdown-list-link-color;
             transition: box-shadow 0.5s;
 
-            @include mq($screen-m) {
+            @include mq($dropdown-list-breakpoint-small) {
                 padding: 15px 22px 15px 15px;
             }
         }
 
         @include links(hover) {
-            color: $font-color-base;
+            color: $dropdown-list-link-color;
             text-decoration: none;
             box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
 
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
                 box-shadow: none;
             }
         }
@@ -123,7 +141,7 @@
             left: 0;
             bottom: 0;
             height: 10px;
-            background-color: $white;
+            background-color: $dropdown-list-link-after-background;
             width: 100%;
             z-index: 109;
             visibility: hidden;
@@ -139,13 +157,13 @@
         margin: 0;
         overflow: hidden;
         transition: margin 0.3s, height 0.5s;
-        font-size: 12px;
+        font-size: $dropdown-list-font-size;
 
         &--level1 {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
                 position: absolute;
                 width: 100%;
-                background-color: $white;
+                background-color: $dropdown-list-inner-list-background;
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
                 z-index: 99;
             }
@@ -177,7 +195,7 @@
 
                 @include links(hover) {
                     font-weight: 400;
-                    color: $color-primary;
+                    color: $dropwodn-list-inner-item-color;
                     text-decoration: underline;
                 }
             }
@@ -202,13 +220,13 @@
             padding: 15px 20px;
             text-transform: none;
             font-weight: 400;
-            color: $font-color-base;
+            color: $dropdown-list-link-color;
         }
     }
 
     &--item-wide {
         .dropdown-list__list {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
                 flex-flow: row wrap;
             }
         }

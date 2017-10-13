@@ -1,35 +1,45 @@
+$side-menu-padding         : 15px !default;
+$side-menu-top             : calc(100% + 1px) !default;
+$side-menu-left            : 100% !default;
+$side-menu-width           : 300px !default;
+$side-menu-background      : $white !default;
+$side-menu-box-shadow      : 0 3px 7px 0 rgba(0, 0, 0, 0.35) !default;
+$side-menu-transition      : $transition-base !default;
+$side-menu-open-transform  : translateX(-100%) !default;
+$side-menu-link-color      : $gray-dark !default;
+$side-menu-link-hover-color: $gray !default;
+$side-menu-breakpoint-large: $screen-l !default;
+
 .side-menu {
     position: absolute;
-    top: calc(100% + 1px);
-    left: 100%;
-    width: 300px;
-    padding: 30px;
+    top: $side-menu-top;
+    left: $side-menu-left;
+    width: $side-menu-width;
+    padding: ($side-menu-padding * 2);
     z-index: 50;
-    background: $white;
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
-    font-family: $font-family-base;
+    background: $side-menu-background;
+    box-shadow: $side-menu-box-shadow;
     text-transform: uppercase;
-    line-height: 3;
     opacity: 0;
-    transition: $transition-base;
+    transition: $side-menu-transition;
 
-    @include mq($screen-l) {
+    @include mq($side-menu-breakpoint-large) {
         display: none;
     }
 
     &--is-open {
         opacity: 1;
-        transform: translateX(-100%);
+        transform: $side-menu-open-transform;
     }
 
     &__link {
         display: block;
         line-height: 3;
-        color: $gray-dark;
+        color: $side-menu-link-color;
 
         &:hover {
             text-decoration: none;
-            color: $gray;
+            color: $side-menu-link-hover-color;
         }
     }
 }

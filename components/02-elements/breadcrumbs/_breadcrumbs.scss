@@ -1,8 +1,9 @@
-$breadcrumbs-padding        : 10px;
-$breadcrumbs-margin         : 10px;
-$breadcrumbs-color          : $font-color-base; 
-$breadcrumbs-color-second   : $gray;
-$breadcrumbs-clickable-area : 48px;
+$breadcrumbs-padding       : 10px !default;
+$breadcrumbs-margin        : 10px !default;
+$breadcrumbs-color         : $font-color-base !default;
+$breadcrumbs-color-second  : $gray !default;
+$breadcrumbs-clickable-area: 48px !default;
+$breadcrumbs-divider       : '/' !default;
 
 .breadcrumbs {
     display: flex;
@@ -17,7 +18,7 @@ $breadcrumbs-clickable-area : 48px;
         align-items: center;
 
         &:after {
-            content: '/';
+            content: $breadcrumbs-divider;
             margin: 0 $breadcrumbs-margin;
             color: $breadcrumbs-color-second;
         }

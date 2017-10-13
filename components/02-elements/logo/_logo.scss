@@ -1,13 +1,17 @@
+$logo-padding         : 10px 20px !default;
+$logo-breakpoint-small: $screen-s !default;
+$logo-breakpoint-large: $screen-l !default;
+
 .logo {
     display: block;
-    padding: 10px 20px;
+    padding: $logo-padding;
 
-    @include mq($screen-s) {
+    @include mq($logo-breakpoint-small) {
         display: inline-block;
         width: 50%;
     }
 
-    @include mq($screen-l) {
+    @include mq($logo-breakpoint-large) {
         width: 260px;
     }
 
@@ -15,7 +19,7 @@
         max-width: 200px;
         margin: 0 auto;
 
-        @include mq($screen-s) {
+        @include mq($logo-breakpoint-small) {
             margin: 0;
         }
     }

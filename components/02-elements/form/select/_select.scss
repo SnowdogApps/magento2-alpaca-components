@@ -1,9 +1,15 @@
-$select-border-color: #d9d9d9 !default;
-$select-padding: 10px 15px !default;
-$select-border-radius: $border-radius !default;
+$select-margin              : 10px !default;
+$select-padding             : 10px 15px !default;
+$select-border-color        : #d9d9d9 !default;
+$select-border-radius       : $border-radius !default;
+$select-list-single-border  : 1px solid $select-border-color !default;
+$select-list-dropdown-border: 1px solid $select-border-color !default;
+$select-input-border-width  : 0 0 1px 0 !default;
+$select-input-boredr-style  : solid !default;
+$select-input-border-color  : $select-border-color !default;
 
 .select {
-    margin-bottom: 10px;
+    margin-bottom: $select-margin;
 
     &__field {
         position: relative;
@@ -11,7 +17,7 @@ $select-border-radius: $border-radius !default;
 
         &--native {
             width: 100%;
-            padding: 10px 15px;
+            padding: $select-padding;
             border: 1px solid #d9d9d9;
             appearance: none;
         }
@@ -29,11 +35,11 @@ $select-border-radius: $border-radius !default;
                 display: inline-block;
                 padding: 0;
                 width: 100%;
-                border: 1px solid $select-border-color;
+                border: $select-list-single-border;
             }
 
             &--dropdown {
-                border: 1px solid $select-border-color;
+                border: $select-list-dropdown-border;
             }
         }
 
@@ -41,9 +47,9 @@ $select-border-radius: $border-radius !default;
             width: 100%;
             display: block;
             padding: $select-padding;
-            border-width: 0 0 1px 0;
-            border-style: solid;
-            border-color: $select-border-color;
+            border-width: $select-input-border-width;
+            border-style: $select-input-boredr-style;
+            border-color: $select-input-border-color;
 
             &:focus {
                 outline: none;

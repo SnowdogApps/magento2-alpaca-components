@@ -1,39 +1,49 @@
-$table-padding: 15px;
-$table-radius: $border-radius;
+$table-padding                    : 15px !default;
+$table-color                      : $black !default;
+$table-font-size                  : $font-size-small !default;
+$table-radius                     : $border-radius !default;
+
+//borders
+$table-border-color               : $gray-light !default;
+$table-border                     : 1px solid $table-border-color !default;
+$table-border-color-inside        : $gray-lighter !default;
+$table-border-inside              : 1px solid $table-border-color-inside !default;
+
+//th
+$table-th-background              : $white !default;
+$table-th-breakpoint-background   : $gray-lightest !default;
+
+//td
+$table-td-background              : $white !default;
+$table-td-breakpoint-background   : $white !default;
+
+//tfoot
+$table-tfoot-background           : $white !default;
+$table-tfoot-breakpoint-background: $gray-lightest !default;
+
+//even-odd
+$table-even-background            : $gray-lightest !default;
+$table-odd-background             : $white !default;
+
+$table-breakpoint-medium          : $screen-m !default;
 
 .table {
     width: 100%;
     background: $white;
     margin: 1em 0;
-    border: 1px solid $gray-light;
+    border: $table-border;
     border-radius: $table-radius;
-    color: $black;
+    color: $table-color;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: $font-size-small;
+    font-size: $table-font-size;
 
-    &--odd-even {
-        tbody {  
-            tr:nth-child(odd) {
-                td {
-                    background: $white;
-                }
-            }
-
-            tr:nth-child(even) {
-                td {
-                    background: $gray-lightest;
-                }
-            }
-        }
-    }
-        
     tr {
         display: block;
         padding: $table-padding 0;
-        border-bottom: 1px solid $gray-lighter;
+        border-bottom: $table-border-inside;
 
-        @include mq($screen-m) {
+        @include mq($table-breakpoint-medium) {
             padding: 0;
             border-bottom: 0;
             display: table-row;
@@ -51,17 +61,17 @@ $table-radius: $border-radius;
     }
 
     th {
-        padding: 5px $table-padding;
-        background: $white;
         display: block;
+        padding: 5px $table-padding;
+        background: $table-th-background;
         text-align: left;
 
-        @include mq($screen-m) {
-            padding: $table-padding;
-            background: $gray-lightest;
-            border-bottom: 1px solid $gray-lighter;
-            border-right: 1px solid $gray-lighter;
+        @include mq($table-breakpoint-medium) {
             display: table-cell;
+            padding: $table-padding;
+            background: $table-th-breakpoint-background;
+            border-bottom: $table-border-inside;
+            border-right: $table-border-inside;
 
             &:first-child {
                 border-top-left-radius: 0;
@@ -85,17 +95,17 @@ $table-radius: $border-radius;
     }
 
     td {
-        padding: 5px $table-padding;
-        background: $white;
         display: block;
+        padding: 5px $table-padding;
+        background: $table-td-background;
         text-align: left;
 
-        @include mq($screen-m) {
+        @include mq($table-breakpoint-medium) {
             display: table-cell;
             padding: $table-padding;
-            background: $white;
-            border-bottom: 1px solid $gray-lighter;
-            border-right: 1px solid $gray-lighter;
+            background: $table-td-breakpoint-background;
+            border-bottom: $table-border-inside;
+            border-right: $table-border-inside;
 
             &:first-child {
                 border-bottom-left-radius: $table-radius;
@@ -109,18 +119,34 @@ $table-radius: $border-radius;
     }
 
     tfoot {
-        td { 
-            padding: 5px $table-padding;
-            background: $white;
+        td {
             display: block;
+            padding: 5px $table-padding;
+            background: $table-tfoot-background;
             text-align: left;
 
-            @include mq($screen-m) {
-                padding: $table-padding;
-                background: $gray-lightest;
-                border-right: 1px solid $gray-lighter;
-                text-align: left;
+            @include mq($table-breakpoint-medium) {
                 display: table-cell;
+                padding: $table-padding;
+                background: $table-tfoot-breakpoint-background;
+                border-right: $table-border-inside;
+                text-align: left;
+            }
+        }
+    }
+
+    &--odd-even {
+        tbody {
+            tr:nth-child(odd) {
+                td {
+                    background: $table-odd-background;
+                }
+            }
+
+            tr:nth-child(even) {
+                td {
+                    background: $table-even-background;
+                }
             }
         }
     }

@@ -3,6 +3,8 @@ $list-margin             : 10px 0 !default;
 $list-padding            : 0 !default;
 $list-item-padding       : 5px 0 !default;
 $list-content-padding    : 10px !default;
+$list-label-padding      : 0 5px 5px 0 !default;
+$list-value-padding      : 0 5px 5px 0 !default;
 
 // Horizontal
 $list-padding--horizontal: 10px !default;
@@ -14,7 +16,10 @@ $list-icon-size          : 16px !default;
 $list-image-width        : 16px !default;
 
 // Divided
-$list-divider            : 1px solid $gray-dark !default;
+$list-divider-color      : $gray-dark !default;
+$list-divider            : 1px solid $list-divider-color !default;
+
+$list-breakpoint-small   : $screen-m !default;
 
 .list {
     margin: $list-margin;
@@ -35,7 +40,7 @@ $list-divider            : 1px solid $gray-dark !default;
     &__label {
         clear: left;
         float: left;
-        padding: 0 5px 5px 0;
+        padding: $list-label-padding;
         &:after {
             content: ': ';
         }
@@ -43,7 +48,7 @@ $list-divider            : 1px solid $gray-dark !default;
 
     &__value {
         float: left;
-        padding: 0 5px 5px 0;
+        padding: $list-value-padding;
     }
 
     .list__content {
@@ -65,13 +70,13 @@ $list-divider            : 1px solid $gray-dark !default;
     }
 
     &--min-medium-horizontal {
-        @include mq($screen-m) {
+        @include mq($list-breakpoint-small) {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
         }
         .list__item {
-            @include mq($screen-m) {
+            @include mq($list-breakpoint-small) {
                 padding: $list-padding--horizontal;
             }
         }
@@ -118,12 +123,12 @@ $list-divider            : 1px solid $gray-dark !default;
 
         &.list--min-medium-horizontal {
             .list__item {
-                @include mq($screen-m) {
+                @include mq($list-breakpoint-small) {
                     border-bottom: none;
                     border-right: $list-divider;
                 }
                 &:last-child {
-                    @include mq($screen-m) {
+                    @include mq($list-breakpoint-small) {
                         border-right: none;
                     }
                 }

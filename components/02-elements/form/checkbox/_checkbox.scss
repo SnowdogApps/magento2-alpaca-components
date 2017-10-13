@@ -1,12 +1,17 @@
-$checkbox-line-height       : $font-line-height !default;
-$checkbox-border-color      : #d9d9d9 !default;
-$checkbox-icon-size         : 15px !default;
-$checkbox-icon-border-size  : 23px !default;
-$checkbox-icon-border-radius: 2px !default;
+$checkbox-margin             : 10px !default;
+$checkbox-line-height        : $font-line-height !default;
+$checkbox-border-color       : #d9d9d9 !default;
+$checkbox-label-padding      : 33px !default;
+$checkbox-label-before-width : 23px !default;
+$checkbox-label-before-height: 23px !default;
+$checkbox-label-before-border: 1px solid $checkbox-border-color !default;
+$checkbox-icon-size          : 15px !default;
+$checkbox-icon-border-radius : 2px !default;
+$checkbox-icon-transition    : $transition-base !default;
 
 .checkbox {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: $checkbox-margin;
 
     &__field {
         position: absolute;
@@ -21,7 +26,7 @@ $checkbox-icon-border-radius: 2px !default;
 
     &__label {
         display: block;
-        padding-left: $checkbox-icon-border-size + 10px;
+        padding-left: $checkbox-label-padding;
         line-height: $checkbox-line-height;
         cursor: pointer;
         &:before {
@@ -29,9 +34,9 @@ $checkbox-icon-border-radius: 2px !default;
             position: absolute;
             top: 0;
             left: 0;
-            width: $checkbox-icon-border-size;
-            height: $checkbox-icon-border-size;
-            border: 1px solid $checkbox-border-color;
+            width: $checkbox-label-before-width;
+            height: $checkbox-label-before-height;
+            border: $checkbox-label-before-border;
             border-radius: $checkbox-icon-border-radius;
         }
     }
@@ -45,6 +50,6 @@ $checkbox-icon-border-radius: 2px !default;
         fill: $color-primary;
         cursor: pointer;
         opacity: 0;
-        transition: $transition-base;
+        transition: $checkbox-icon-transition;
     }
 }
