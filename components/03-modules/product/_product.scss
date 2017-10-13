@@ -1,7 +1,20 @@
+$product-padding                  : 15px !default;
+$product-border-color             : $gray-lightest !default;
+$product-border                   : 1px solid $product-border-color !default;
+$product-name-color               : $font-color-base !default;
+$product-name-font-size           : $font-size-base !default;
+$product-name-brekapoint-font-size: 18px !default;
+$product-type-font-size           : $font-size-small !default;
+$product-type-color               : $gray-light !default;
+$product-details-list-font-size   : $font-size-small !default;
+$product-img-name-font-size       : 18px !default;
+$product-brekapoint-small         : $screen-s !default;
+$procuct-breakpoint-medium        : $screen-m !default;
+
 .product {
     display: block;
-    padding: 15px;
-    border: 1px solid $gray-lightest;
+    padding: $product-padding;
+    border: $product-border;
 
     &__link {
         @include links(active) {
@@ -11,16 +24,16 @@
     }
 
     &__img-box {
-        width: 100%;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-        padding-bottom: 10px;
+        width: 100%;
+        padding-bottom: ($product-padding - 5);
         text-align: center;
         min-height: 310px;
 
-        @include mq($screen-s) {
+        @include mq($product-brekapoint-small) {
             min-height: 200px;
         }
     }
@@ -34,18 +47,18 @@
 
     &__name {
         font-weight: 700;
-        color: $font-color-base;
-        font-size: 16px;
+        color: $product-name-color;
+        font-size: $product-name-font-size;
 
-        @include mq($screen-m) {
-            font-size: 18px;
+        @include mq($procuct-breakpoint-medium) {
+            font-size: $product-name-brekapoint-font-size;
         }
     }
 
     &__type {
-        padding: 15px 0;
-        font-size: 14px;
-        color: $gray-light;
+        padding: $product-padding 0;
+        font-size: $product-type-font-size;
+        color: $product-type-color;
     }
 
     &__button {
@@ -55,7 +68,7 @@
     &__price {
         text-align: right;
         font-weight: 600;
-        padding: 10px 0;
+        padding: ($product-padding - 5) 0;
     }
 
     &__details {
@@ -67,7 +80,7 @@
     }
 
     &__details-list {
-        font-size: $font-size-small;
+        font-size: $product-details-list-font-size;
     }
 
     &__details-list-item {
@@ -91,7 +104,7 @@
         .product__name {
             display: inline-flex;
             align-items: center;
-            font-size: 18px;
+            font-size: $product-img-name-font-size;
             min-height: 0;
         }
     }

@@ -9,8 +9,8 @@ $mincart-content-transition      : $transition-base !default;
 $minicart-content-border         : 3px solid $minicart-content-border-color !default;
 
 .minicart-content {
-    font-size: $minicart-content-font-size;
     max-height: calc(100vh - 90px);
+    font-size: $minicart-content-font-size;
     overflow-y: auto;
 
     @include mq($screen-l) {
@@ -70,18 +70,18 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
     }
 
     &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
         margin-bottom: $minicart-content-spacing;
         padding: $minicart-content-spacing 0;
         border-bottom: $minicart-content-border;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        align-items: center;
     }
 
     &__button {
-        width: 100%;
         display: block;
+        width: 100%;
         text-align: center;
         margin-bottom: $minicart-content-spacing;
 

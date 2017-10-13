@@ -1,38 +1,44 @@
+$search-padding          : 15px !default;
+$search-background       : $white !default;
+$search-transition       : max-height 0.5s !default;
+$search-button-margin    : 10px !default;
+$search-breakpoint-medium: $screen-m !default;
+
 .search {
     padding: 0;
     margin: 0;
     height: auto;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s;
+    transition: $search-transition;
 
     &__wrapper {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: flex-end;
-        width: 100%;
         position: relative;
-        padding: 15px 0 0 0;
-        background-color: $white;
+        width: 100%;
+        padding: $search-padding 0 0 0;
+        background-color: $search-background;
     }
 
     &__input {
         display: block;
         flex-basis: 100%;
 
-        @include mq($screen-m) {
+        @include mq($search-breakpoint-medium) {
             flex-basis: 75%;
             margin-right: 5%;
         }
     }
 
     &__button {
-        padding: 10px 15px;
+        padding: ($search-padding - 5) $search-padding;
         flex-basis: 100%;
-        margin-bottom: 10px;
+        margin-bottom: $search-button-margin;
 
-        @include mq($screen-m) {
+        @include mq($search-breakpoint-medium) {
             flex-basis: 20%;
         }
     }
@@ -45,7 +51,7 @@
         height: auto;
         max-height: 170px;
 
-        @include mq($screen-m) {
+        @include mq($search-breakpoint-medium) {
             max-height: 110px;
         }
     }
