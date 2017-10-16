@@ -1,7 +1,16 @@
 <div class="radio">
-    <input type="radio" id="{{ id }}" name="{{ name }}" class="radio__field">
-    <label for="{{ id }}" class="radio__label">
-        <span class="radio__icon"></span>
-        {{ label }}
-    </label>
+    <fieldset class="radio__fieldset" aria-labelledby="{{ legendId }}">
+        <legend class="radio__legend" id="{{ legendId }}">
+            {{ legend }}
+        </legend>
+        {{#each options}}
+            <div class="radio__handler">
+                <input type="radio" id="{{ id }}" name="{{ ../name }}" class="radio__field">
+                <label for="{{ id }}" class="radio__label">
+                    <span class="radio__icon"></span>
+                    {{ label }}
+                </label>
+            </div>
+        {{/each}}
+    </fieldset>
 </div>

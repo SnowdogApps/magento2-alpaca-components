@@ -1,4 +1,5 @@
 $radio-size: 18px;
+$radio-vertical-padding: 10px;
 $radio-dot-size: 6px;
 $radio-label-active-color: $color-primary;
 
@@ -6,10 +7,28 @@ $radio-label-active-color: $color-primary;
     position: relative;
     margin-bottom: 10px;
 
+    &__fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__legend {
+        padding-bottom: $radio-vertical-padding;
+    }
+
+    &__handler {
+        position: relative;
+    }
+
     &__field {
-        display: none;
+        position: absolute;
+        left: 0;
+        top: $radio-vertical-padding;
         height: $radio-size;
         width: $radio-size;
+        opacity: 0;
+        z-index: -1;
 
         &:checked + .radio__label {
             color: $radio-label-active-color;
@@ -31,6 +50,7 @@ $radio-label-active-color: $color-primary;
         cursor: pointer;
         font-size: $font-size-small;
         color: #000;
+        padding: $radio-vertical-padding 0;
     }
 
     &__icon {
