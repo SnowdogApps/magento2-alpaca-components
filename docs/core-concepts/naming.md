@@ -9,6 +9,7 @@
 * Avoid using `box`, `block`, `item`, `info`, `text`, `cms` in component names
 * Avoid generous names like `info-box`, `new-label`
 * Avoid naming two components in similar way i.e. `cms-subcategories` and `cms-subcategory`
+* By default alpaca components uses up to 7 step grayscale
 
 
 If you need some inspiration how to name your component check one of these lib:
