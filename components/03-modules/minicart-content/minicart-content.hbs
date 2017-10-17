@@ -1,0 +1,47 @@
+<div class="minicart-content {{ class }}" {{{ attributes }}}>
+    <h2 class="heading heading--fourth-level minicart-content__title">
+        {{ title }}
+    </h2>
+
+    <ul class="list minicart-content__list">
+        {{#each elements}}
+            <li class="minicart-content__item">
+                {{> '@image' image }}
+
+                <div class="minicart-content__description">
+                    <h5 class="minicart-content__name">
+                        {{ name }}
+                    </h5>
+
+                    <div class="minicart-content__price">
+                        {{ price }}
+                    </div>
+
+                    <div class="minicart-content__quantity">
+                        Qty: {{ quantity }}
+                    </div>
+                </div>
+
+                <div class="minicart-content__icons">
+                    {{> '@button--icon' button iconId="edit" }}
+
+                    {{> '@button--icon' button iconId="remove" }}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+
+    <div class="minicart-content__total">
+        <div class="minicart-content__cart">
+            {{ total }}
+        </div>
+
+        <div class="minicart-content__summary">
+            {{ price }}
+        </div>
+    </div>
+
+    {{> '@button' checkout }}
+
+    {{> '@button--secondary' editCart }}
+</div>

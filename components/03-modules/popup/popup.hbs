@@ -1,0 +1,7 @@
+<div class="popup {{ class }}">
+    {{ render (component content) contentContext }}
+</div>
+
+{{#if script }}
+    <script src="{{static 'popup.js' }}"></script>
+{{/if}}
