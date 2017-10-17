@@ -3,11 +3,11 @@ node_js: 6
 cache:
   yarn: true
   directories:
-  - node_modules
+    - node_modules
 script:
-- gulp js-lint --ci
-- gulp sass-lint --ci
-- gulp sass --ci
-- gulp css-lint --ci
-- gulp svg-sprite
-- gulp fractal:build
+  - gulp js-lint --ci
+  - gulp sass-lint --ci
+  - gulp sass --ci
+  - gulp css-lint --ci
+  - gulp svg-sprite
+  - gulp fractal:build
