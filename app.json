@@ -2,5 +2,13 @@
     "name": "magento2-alpaca-components",
     "scripts": {
         "postdeploy": "npm install -g gulp-cli && gulp fractal:build"
-    }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      },
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-static.git"
+      }
+    ]
   }
