@@ -30,10 +30,10 @@ $color-inverse         : $gray-darker !default;
 $body-bg               : $white !default;
 
 // Typography
-$font-family-sans-serif: "Montserrat", sans-serif !default;
-$font-family-sans-serif-bold: "Montserrat Bold", sans-serif !default;
+$font-family-sans-serif      : "Montserrat", sans-serif !default;
+$font-family-sans-serif-bold : "Montserrat Bold", sans-serif !default;
 $font-family-sans-serif-black: "Montserrat Black", sans-serif !default;
-$font-family-monospace : Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace       :  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-family-base      : $font-family-sans-serif !default;
 
@@ -50,15 +50,15 @@ $font-size-small       : 12px !default;
 $font-size-extra-small : 10px !default;
 
 // Layout
-$max-content-width     : 1330px;
+$max-content-width     : 1330px !default;
 
 // Layout - breakpoints
-$screen-xs             : 320px;
-$screen-s              : 480px;
-$screen-m              : 768px;
-$screen-l              : 992px;
-$screen-xl             : 1200px;
-$screen-xxl            : 1600px;
+$screen-xs             : 320px !default;
+$screen-s              : 480px !default;
+$screen-m              : 768px !default;
+$screen-l              : 992px !default;
+$screen-xl             : 1200px !default;
+$screen-xxl            : 1600px !default;
 
 // Components
 $border-radius         : 4px !default;
