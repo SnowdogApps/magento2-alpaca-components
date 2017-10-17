@@ -11,7 +11,8 @@ $pink                  : #ff5b77 !default;
 $purple                : #613d7c !default;
 
 // Grayscale colors
-$gray-dark             : #292b2c !default;
+$gray-darker           : #292b2c !default;
+$gray-dark             : #333333 !default;
 $gray                  : #d1d0d4 !default;
 $gray-light            : #f5f5f6 !default;
 $gray-lighter          : #eceeef !default;
@@ -23,7 +24,7 @@ $color-success         : $green !default;
 $color-info            : $teal !default;
 $color-warning         : $orange !default;
 $color-danger          : $red !default;
-$color-inverse         : $gray-dark !default;
+$color-inverse         : $gray-darker !default;
 
 // Body
 $body-bg               : $white !default;
@@ -36,7 +37,7 @@ $font-family-monospace : Menlo, Monaco, Consolas, "Liberation Mono", "Courier Ne
 
 $font-family-base      : $font-family-sans-serif !default;
 
-$font-color-base       : $gray-dark !default;
+$font-color-base       : $gray-darker !default;
 $font-weight-normal    : normal !default;
 $font-weight-bold      : bold !default;
 $font-weight-base      : $font-weight-normal !default;
