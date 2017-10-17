@@ -28,6 +28,16 @@ $color-inverse         : $gray-darker !default;
 
 // Body
 $body-bg               : $white !default;
+// Border
+$border-color-base     : $gray-dark !default;
+$border-width-base     : 1px !default;
+$border-style-base     : solid !default;
+
+// Margin
+$margin-base           : 16px !default;
+
+// Padding
+$padding-base          : 16px !default;
 
 // Typography
 $font-family-sans-serif      : "Montserrat", sans-serif !default;
