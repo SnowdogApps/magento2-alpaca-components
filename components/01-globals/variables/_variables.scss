@@ -35,6 +35,7 @@ $border-color-base     : $gray-dark !default;
 $border-width-base     : 1px !default;
 $border-style-base     : solid !default;
 
+$border-base           : $border-width-base $border-style-base $border-color-base !default;
 // Margin
 $margin-base           : 16px !default;
 
