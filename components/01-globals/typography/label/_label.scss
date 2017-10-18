@@ -1,10 +1,24 @@
-$label-margin-bottom : 8px !default;
-$label-font-size     : $font-size-small !default;
+$label-margin-top   : 0 !default;
+$label-margin-right : 0 !default;
+$label-margin-bottom: 8px !default;
+$label-margin-left  : 0 !default;
+$label-font-size    : $font-size-small !default;
+$label-color        : $color-secondary !default;
+$label-font-family  : $font-family-base !default;
+$label-font-weight  : $font-weight-normal !default;
+$label-line-height  : $font-line-height !default;
+$label-font-size    : $font-size-small !default;
+$label-transition   : none !default;
 
 .label {
     display: block;
-    margin-bottom: $label-margin-bottom;
+    margin: $label-margin-top $label-margin-right $label-margin-bottom $label-margin-left;
     font-size: $label-font-size;
+    color : $label-color;
+    font-family: $label-font-family;
+    font-weight: $label-font-weight;
+    line-height: $label-line-height;
+    transition: $label-transition;
 
     &--hidden {
         display: none;

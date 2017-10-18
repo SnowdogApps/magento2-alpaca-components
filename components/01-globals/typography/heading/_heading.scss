@@ -1,16 +1,16 @@
-$headings-margin                : 0 0 0.5em 0 !default;
-$headings-font-family           : inherit !default;
-$headings-font-weight           : 500 !default;
-$headings-line-height           : 1.1 !default;
-$headings-color                 : inherit !default;
-$headings-text-transform        : none !default;
+$headings-margin        : 0 0 0.5em 0 !default;
+$headings-font-family   : $font-family-base-bold !default;
+$headings-font-weight   : 900 !default;
+$headings-line-height   : 1.1 !default;
+$headings-color         : $color-secondary !default;
+$headings-text-transform: none !default;
 
-$heading-font-size--first-level : 40px !default;
-$heading-font-size--second-level: 32px !default;
-$heading-font-size--third-level : 28px !default;
-$heading-font-size--fourth-level: 24px !default;
-$heading-font-size--fifth-level : 20px !default;
-$heading-font-size--sixth-level : 16px !default;
+$heading-font-size--first-level : 18px !default;
+$heading-font-size--second-level: 18px !default;
+$heading-font-size--third-level : 14px !default;
+$heading-font-size--fourth-level: 14px !default;
+$heading-font-size--fifth-level : 12px !default;
+$heading-font-size--sixth-level : 12px !default;
 
 .heading {
     margin: $headings-margin;
