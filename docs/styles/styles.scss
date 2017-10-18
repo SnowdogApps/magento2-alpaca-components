@@ -2,17 +2,14 @@
 // Components
 // -----
 
-// Variables
-@import '../../components/01-globals/variables/variables';
+// Custom variables import
+// @import ...
 
-// Mixins
-@import '../../components/01-globals/mixins/clearfix';
-@import '../../components/01-globals/mixins/grid-column-width';
-@import '../../components/01-globals/mixins/links';
-@import '../../components/01-globals/mixins/mq';
-
-// Components
+// Alpaca core-components
 @import 'alpaca-components';
+
+// Custom components import
+// @import ...
 
 // -----
 // Documentation
