@@ -1,6 +1,8 @@
 module.exports = {
   context: {
-    src: '/images/banner/banner-480_480.png'
+    src: '/images/banner/banner-480_480.png',
+    dataSrc: '/images/banner/banner-480_480.png',
+    alt: 'image'
   },
   variants: [
     {
