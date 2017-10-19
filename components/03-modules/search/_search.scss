@@ -1,8 +1,7 @@
-$search-padding          : 15px !default;
-$search-background       : $white !default;
-$search-transition       : max-height 0.5s !default;
-$search-button-margin    : 10px !default;
-$search-breakpoint-medium: $screen-m !default;
+$search-padding      : 15px !default;
+$search-background   : $white !default;
+$search-transition   : max-height 0.5s !default;
+$search-button-margin: 10px !default;
 
 .search {
     padding: 0;
@@ -27,7 +26,7 @@ $search-breakpoint-medium: $screen-m !default;
         display: block;
         flex-basis: 100%;
 
-        @include mq($search-breakpoint-medium) {
+        @include mq($screen-m) {
             flex-basis: 75%;
             margin-right: 5%;
         }
@@ -38,7 +37,7 @@ $search-breakpoint-medium: $screen-m !default;
         flex-basis: 100%;
         margin-bottom: $search-button-margin;
 
-        @include mq($search-breakpoint-medium) {
+        @include mq($screen-m) {
             flex-basis: 20%;
         }
     }
@@ -51,7 +50,7 @@ $search-breakpoint-medium: $screen-m !default;
         height: auto;
         max-height: 170px;
 
-        @include mq($search-breakpoint-medium) {
+        @include mq($screen-m) {
             max-height: 110px;
         }
     }

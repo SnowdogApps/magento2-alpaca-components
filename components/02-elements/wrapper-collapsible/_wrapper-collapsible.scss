@@ -4,7 +4,6 @@ $wrapper-collapsible-icon-width          : 30px !default;
 $wrapper-collapsible-icon-height         : 30px !default;
 $wrapper-collapsible-icon-fill           : $black !default;
 $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
-$wrapper-collapsible-breakpoint-large    : $screen-l !default;
 
 .wrapper-collapsible {
     display: block;
@@ -21,7 +20,7 @@ $wrapper-collapsible-breakpoint-large    : $screen-l !default;
         z-index: 10;
         overflow: hidden;
 
-        @include mq($wrapper-collapsible-breakpoint-large) {
+        @include mq($screen-l) {
             top: 95px;
         }
 
@@ -39,13 +38,13 @@ $wrapper-collapsible-breakpoint-large    : $screen-l !default;
         cursor: pointer;
         z-index: 10;
 
-        @include mq($wrapper-collapsible-breakpoint-large) {
+        @include mq($screen-l) {
             top: 70px;
         }
 
         &--settings {
             right: 105px;
-            @include mq($wrapper-collapsible-breakpoint-large) {
+            @include mq($screen-l) {
                 right: 5px;
             }
         }
@@ -60,7 +59,7 @@ $wrapper-collapsible-breakpoint-large    : $screen-l !default;
 
     &--min-medium-horizontal {
         .wrapper-collapsible__container {
-            @include mq($wrapper-collapsible-breakpoint-large) {
+            @include mq($screen-l) {
                 position: relative;
                 display: block;
                 top: auto;
@@ -70,7 +69,7 @@ $wrapper-collapsible-breakpoint-large    : $screen-l !default;
         }
 
         .wrapper-collapsible__trigger {
-            @include mq($wrapper-collapsible-breakpoint-large) {
+            @include mq($screen-l) {
                 display: none;
             }
         }

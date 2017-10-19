@@ -3,7 +3,6 @@ $tab-margin                     : 15px !default;
 $tab-title-border-color         : $gray-light !default;
 $tab-title-border               : 1px solid $tab-title-border-color !default;
 $tab-title-background           : $gray-lightest !default;
-$tab-breakpoint-large           : $screen-l !default;
 $tab-title-active-border-color  : $gray-light !default;
 $tab-title-active-border-width  : 1px 1px 0 1px !default;
 $tab-title-active-border-style  : solid !default;
@@ -19,7 +18,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
 .tab {
     position: relative;
 
-    @include mq($tab-breakpoint-large) {
+    @include mq($screen-l) {
         display: flex;
         flex-flow: row wrap;
     }
@@ -32,7 +31,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
         cursor: pointer;
         text-align: left;
 
-        @include mq($tab-breakpoint-large) {
+        @include mq($screen-l) {
             flex-basis: 25%;
             order: -1;
             margin-right: ($tab-margin - 5);
@@ -42,7 +41,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
         }
 
         &--active {
-            @include mq($tab-breakpoint-large) {
+            @include mq($screen-l) {
                 border-color: $tab-title-active-border-color;
                 border-width: $tab-title-active-border-width;
                 border-style: $tab-title-active-border-style;
@@ -53,7 +52,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
             .tabs__icon {
                 transform: rotate(45deg);
 
-                @include mq($tab-breakpoint-large) {
+                @include mq($screen-l) {
                     display: none;
                 }
             }
@@ -69,7 +68,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
         fill: $tab-icon-fill;
         transition: $tab-icon-transition;
 
-        @include mq($tab-breakpoint-large) {
+        @include mq($screen-l) {
             display: none;
         }
     }
@@ -85,7 +84,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
         transition: $tab-content-transition;
         overflow: hidden;
 
-        @include mq($tab-breakpoint-large) {
+        @include mq($screen-l) {
             flex-basis: 100%;
             z-index: 1;
         }
@@ -94,7 +93,7 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
             display: block;
             opacity: 1;
             border-bottom: $tab-content-active-border;
-            @include mq($tab-breakpoint-large) {
+            @include mq($screen-l) {
                 border-bottom: 0 none;
                 border-top: $tab-content-active-border;
             }

@@ -19,8 +19,6 @@ $list-image-width        : 16px !default;
 $list-divider-color      : $gray-dark !default;
 $list-divider            : 1px solid $list-divider-color !default;
 
-$list-breakpoint-small   : $screen-m !default;
-
 .list {
     margin: $list-margin;
     padding: $list-padding;
@@ -70,13 +68,13 @@ $list-breakpoint-small   : $screen-m !default;
     }
 
     &--min-medium-horizontal {
-        @include mq($list-breakpoint-small) {
+        @include mq($screen-m) {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
         }
         .list__item {
-            @include mq($list-breakpoint-small) {
+            @include mq($screen-m) {
                 padding: $list-padding--horizontal;
             }
         }
@@ -123,12 +121,12 @@ $list-breakpoint-small   : $screen-m !default;
 
         &.list--min-medium-horizontal {
             .list__item {
-                @include mq($list-breakpoint-small) {
+                @include mq($screen-m) {
                     border-bottom: none;
                     border-right: $list-divider;
                 }
                 &:last-child {
-                    @include mq($list-breakpoint-small) {
+                    @include mq($screen-m) {
                         border-right: none;
                     }
                 }

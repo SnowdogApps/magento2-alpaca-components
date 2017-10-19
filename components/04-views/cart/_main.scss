@@ -1,22 +1,20 @@
-$cart-margin           : 15px !default;
-$cart-padding          : 15px !default;
-$cart-border-color     : $gray-lighter !default;
-$cart-border           : 1px solid $cart-border-color !default;
-$cart-breakpoint-small : $screen-s !default;
-$cart-breakpoint-medium: 1024px !default;
+$cart-margin      : 15px !default;
+$cart-padding     : 15px !default;
+$cart-border-color: $gray-lighter !default;
+$cart-border      : 1px solid $cart-border-color !default;
 
 .cart {
     margin-bottom: ($cart-margin * 2);
     &__main-col {
         padding: 0 $cart-padding;
-        @include mq($cart-breakpoint-small, $cart-breakpoint-medium) {
+        @include mq($screen-s, 1024px) {
             flex-basis: 100%;
         }
     }
 
     &__summary-col {
         padding: 0 15px;
-        @include mq($cart-breakpoint-small, $cart-breakpoint-medium) {
+        @include mq($screen-s, 1024px) {
             flex-basis: 100%;
         }
     }

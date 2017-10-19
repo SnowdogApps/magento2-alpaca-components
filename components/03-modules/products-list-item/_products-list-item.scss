@@ -10,8 +10,6 @@ $product-list-item-price-color          : $color-primary !default;
 $product-list-item-subtotal-font-size   : $font-size-small !default;
 $product-list-item-actions-button-width : 35px !default;
 $product-list-item-actions-button-height: 35px !default;
-$product-list-item-brekapoint-small     : $screen-s !default;
-$product-list-item-brekapoint-medium    : $screen-m !default;
 
 .products-list-item {
     display: flex;
@@ -48,10 +46,10 @@ $product-list-item-brekapoint-medium    : $screen-m !default;
             float: left;
             width: 45px;
             margin: ($product-list-item-margin - 5) 0 0;
-            @include mq($product-list-item-brekapoint-small) {
+            @include mq($screen-s) {
                 flex: 0 0 45px;
             }
-            @include mq($product-list-item-brekapoint-medium) {
+            @include mq($screen-m) {
                 margin: 0;
             }
         }
@@ -65,10 +63,10 @@ $product-list-item-brekapoint-medium    : $screen-m !default;
             line-height: 35px;
             font-weight: 600;
             font-size: $product-list-item-subtotal-font-size;
-            @include mq($product-list-item-brekapoint-small) {
+            @include mq($screen-s) {
                 margin: 10px 0 0 10px;
             }
-            @include mq($product-list-item-brekapoint-medium) {
+            @include mq($screen-m) {
                 margin: 0;
                 text-align: right;
             }
@@ -86,10 +84,10 @@ $product-list-item-brekapoint-medium    : $screen-m !default;
             display: flex;
             flex-basis: 100%;
             flex-direction: column;
-            @include mq($product-list-item-brekapoint-small) {
+            @include mq($screen-s) {
                 flex-direction: row;
             }
-            @include mq($product-list-item-brekapoint-medium) {
+            @include mq($screen-m) {
                 flex-basis: 30%;
             }
 
@@ -103,7 +101,7 @@ $product-list-item-brekapoint-medium    : $screen-m !default;
         position: absolute;
         bottom: 5px;
         right: 0;
-        @include mq($product-list-item-brekapoint-small) {
+        @include mq($screen-s) {
             bottom: 0;
         }
 

@@ -8,8 +8,6 @@ $product-type-font-size           : $font-size-small !default;
 $product-type-color               : $gray-light !default;
 $product-details-list-font-size   : $font-size-small !default;
 $product-img-name-font-size       : 18px !default;
-$product-brekapoint-small         : $screen-s !default;
-$procuct-breakpoint-medium        : $screen-m !default;
 
 .product {
     display: block;
@@ -33,7 +31,7 @@ $procuct-breakpoint-medium        : $screen-m !default;
         text-align: center;
         min-height: 310px;
 
-        @include mq($product-brekapoint-small) {
+        @include mq($screen-s) {
             min-height: 200px;
         }
     }
@@ -50,7 +48,7 @@ $procuct-breakpoint-medium        : $screen-m !default;
         color: $product-name-color;
         font-size: $product-name-font-size;
 
-        @include mq($procuct-breakpoint-medium) {
+        @include mq($screen-m) {
             font-size: $product-name-brekapoint-font-size;
         }
     }

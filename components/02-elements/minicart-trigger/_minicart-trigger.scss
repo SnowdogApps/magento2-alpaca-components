@@ -1,13 +1,9 @@
 $minicart-trigger-padding           : 10px !default;
-
 $minicart-trigger-background        : $white !default;
 $minicart-trigger-icon-width        : 30px !default;
-
 $minicart-trigger-counter-font-size : $font-size-extra-small !default;
 $minicart-trigger-counter-background: $purple !default;
 $minicart-trigger-counter-color     : $white !default;
-
-$minicart-trigger-breakpoint-large  : $screen-l !default;
 
 .minicart-trigger {
     background: $minicart-trigger-background;
@@ -38,7 +34,7 @@ $minicart-trigger-breakpoint-large  : $screen-l !default;
         color: $minicart-trigger-counter-color;
         font-size: $minicart-trigger-counter-font-size;
 
-        @include mq($minicart-trigger-breakpoint-large) {
+        @include mq($screen-l) {
             top: 2px;
         }
     }

@@ -8,12 +8,6 @@ $banner-content-background-breakpoint-small: rgba($white, 0.6) !default;
 $banner-content-width-breakpoint-small     : 60% !default;
 $banner-content-height-breakpoint-small    : 80% !default;
 
-//content place
-$banner-top-value                          : $banner-default-position-value !default;
-$banner-bottom-value                       : $banner-default-position-value !default;
-$banner-left-value                         : $banner-default-position-value !default;
-$banner-right-value                        : $banner-default-position-value !default;
-
 //content-below-image
 $banner-content-below-background           : $white !default;
 
@@ -21,11 +15,6 @@ $banner-content-below-background           : $white !default;
 $banner-without-image-background           : $white !default;
 $banner-without-image-height               : 50vh !default;
 $banner-without-image-width                : 100% !default;
-
-//breakpoints
-$banner-breakpoint-large                   : $screen-xl !default;
-$banner-breakpoint-medium                  : $screen-l !default;
-$banner-breakpoint-small                   : $screen-m !default;
 
 .banner {
     display: block;
@@ -45,7 +34,7 @@ $banner-breakpoint-small                   : $screen-m !default;
         flex-wrap: wrap;
         min-height: $banner-min-hegight;
 
-        @include mq($banner-breakpoint-large) {
+        @include mq($screen-xl) {
             min-height: auto;
         }
     }
@@ -64,7 +53,7 @@ $banner-breakpoint-small                   : $screen-m !default;
         color: $banner-content-color;
         background: $banner-content-background;
 
-        @include mq($banner-breakpoint-small) {
+        @include mq($screen-m) {
             position: absolute;
             background: $banner-content-background-breakpoint-small;
             left: 0;
@@ -78,30 +67,30 @@ $banner-breakpoint-small                   : $screen-m !default;
         }
 
         &--top {
-            @include mq($banner-breakpoint-small) {
+            @include mq($screen-m) {
                 bottom: auto;
-                top: $banner-top-value;
+                top: $banner-default-position-value;
             }
         }
 
         &--bottom {
-            @include mq($banner-breakpoint-small) {
+            @include mq($screen-m) {
                 top: auto;
-                bottom: $banner-bottom-value;
+                bottom: $banner-default-position-value;
             }
         }
 
         &--left {
-            @include mq($banner-breakpoint-small) {
+            @include mq($screen-m) {
                 right: auto;
-                left: $banner-left-value;
+                left: $banner-default-position-value;
             }
         }
 
         &--right {
-            @include mq($banner-breakpoint-small) {
+            @include mq($screen-m) {
                 left: auto;
-                right: $banner-right-value;
+                right: $banner-default-position-value;
             }
         }
 
@@ -127,7 +116,7 @@ $banner-breakpoint-small                   : $screen-m !default;
             justify-content: center;
             flex-direction: column;
 
-            @include mq($banner-breakpoint-medium) {
+            @include mq($screen-l) {
                 height: auto;
             }
         }

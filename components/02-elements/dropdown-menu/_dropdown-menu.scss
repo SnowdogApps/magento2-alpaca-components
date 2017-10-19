@@ -1,21 +1,20 @@
-$dropdown-menu-padding : 15px !default;
-$dropdown-menu-background : $gray-dark !default;
-$dropdown-menu-color: $white !default;
-$dropdown-menu-breakpoint-large: $screen-l !default;
-$dropdown-menu-box-shadow: -5px 5px 7px 0 rgba(0, 0, 0, 0.2) !default;
-$dropdown-menu-transition: $transition-base !default;
-$dropdown-menu-link-color: $white !default;
+$dropdown-menu-padding              : 15px !default;
+$dropdown-menu-background           : $gray-dark !default;
+$dropdown-menu-color                : $white !default;
+$dropdown-menu-box-shadow           : -5px 5px 7px 0 rgba(0, 0, 0, 0.2) !default;
+$dropdown-menu-transition           : $transition-base !default;
+$dropdown-menu-link-color           : $white !default;
 
 //inner-list
-$dropdown-menu-inner-list-color: $gray-dark !default;
+$dropdown-menu-inner-list-color     : $gray-dark !default;
 $dropdown-menu-inner-list-background: $white !default;
 
 //icon
-$dropdown-menu-icon-top: 15px !default;
-$dropdown-menu-icon-right: 15px !default;
-$dropdown-menu-icon-width: 20px !default;
-$dropdown-menu-icon-height: 20px !default;
-$dropdown-menu-icon-fill : $white !default;
+$dropdown-menu-icon-top             : 15px !default;
+$dropdown-menu-icon-right           : 15px !default;
+$dropdown-menu-icon-width           : 20px !default;
+$dropdown-menu-icon-height          : 20px !default;
+$dropdown-menu-icon-fill            : $white !default;
 
 .dropdown-menu {
     display: none;
@@ -23,7 +22,7 @@ $dropdown-menu-icon-fill : $white !default;
     background: $dropdown-menu-background;
     color: $dropdown-menu-color;
 
-    @include mq($dropdown-menu-breakpoint-large) {
+    @include mq($screen-l) {
         display: block;
     }
 
@@ -80,7 +79,7 @@ $dropdown-menu-icon-fill : $white !default;
         background: $dropdown-menu-inner-list-background;
         z-index: 2;
 
-        @include mq($dropdown-menu-breakpoint-large) {
+        @include mq($screen-l) {
             max-width: 850px;
             right: 0;
             margin: auto;

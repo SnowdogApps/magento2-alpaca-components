@@ -25,8 +25,6 @@ $table-tfoot-breakpoint-background: $gray-lightest !default;
 $table-even-background            : $gray-lightest !default;
 $table-odd-background             : $white !default;
 
-$table-breakpoint-medium          : $screen-m !default;
-
 .table {
     width: 100%;
     background: $white;
@@ -43,7 +41,7 @@ $table-breakpoint-medium          : $screen-m !default;
         padding: $table-padding 0;
         border-bottom: $table-border-inside;
 
-        @include mq($table-breakpoint-medium) {
+        @include mq($screen-m) {
             padding: 0;
             border-bottom: 0;
             display: table-row;
@@ -66,7 +64,7 @@ $table-breakpoint-medium          : $screen-m !default;
         background: $table-th-background;
         text-align: left;
 
-        @include mq($table-breakpoint-medium) {
+        @include mq($screen-m) {
             display: table-cell;
             padding: $table-padding;
             background: $table-th-breakpoint-background;
@@ -100,7 +98,7 @@ $table-breakpoint-medium          : $screen-m !default;
         background: $table-td-background;
         text-align: left;
 
-        @include mq($table-breakpoint-medium) {
+        @include mq($screen-m) {
             display: table-cell;
             padding: $table-padding;
             background: $table-td-breakpoint-background;
@@ -125,7 +123,7 @@ $table-breakpoint-medium          : $screen-m !default;
             background: $table-tfoot-background;
             text-align: left;
 
-            @include mq($table-breakpoint-medium) {
+            @include mq($screen-m) {
                 display: table-cell;
                 padding: $table-padding;
                 background: $table-tfoot-breakpoint-background;

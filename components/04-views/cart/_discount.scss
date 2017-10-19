@@ -4,14 +4,13 @@ $discount-icon-width          : 14px !default;
 $discount-icon-height         : 14px !default;
 $discount-title-icon-transform: rotate(180deg) !default;
 $discount-transition          : $transition-base !default;
-$discount-breakpoint-medium   : $screen-m !default;
 
 .discount {
     flex-basis: 100%;
     margin-bottom: $discount-margin;
     padding: 0 $discount-padding;
 
-    @include mq($discount-breakpoint-medium) {
+    @include mq($screen-m) {
         @include grid-column-width(1, 2);
     }
 

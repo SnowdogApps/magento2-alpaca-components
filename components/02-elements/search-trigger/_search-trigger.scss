@@ -1,10 +1,9 @@
-$search-trigger-width           : 60px !default;
-$search-trigger-height          : 60px !default;
-$search-trigger-padding         : 20px 13px 10px !default;
-$search-trigger-backgrond       : $white !default;
-$search-trigger-breakpoint-large: $screen-l !default;
-$search-trigger-icon-width      : 25px !default;
-$search-trigger-icon-height     : 25px !default;
+$search-trigger-width      : 60px !default;
+$search-trigger-height     : 60px !default;
+$search-trigger-padding    : 20px 13px 10px !default;
+$search-trigger-backgrond  : $white !default;
+$search-trigger-icon-width : 25px !default;
+$search-trigger-icon-height: 25px !default;
 
 .search-trigger {
     position: absolute;
@@ -18,7 +17,7 @@ $search-trigger-icon-height     : 25px !default;
     background-color: $search-trigger-backgrond;
     border: none;
 
-    @include mq($search-trigger-breakpoint-large) {
+    @include mq($screen-l) {
         right: 50px;
         top: 60px;
         z-index: 10;

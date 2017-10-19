@@ -6,7 +6,6 @@ $side-menu-trigger-line-background   : $gray-dark !default;
 $side-menu-trigger-line-height       : 3px !default;
 $side-menu-trigger-line-border-radius: 3px !default;
 $side-menu-trigger-transition        : $transition-base !default;
-$side-menu-trigger-breakpoint-large  : $screen-l !default;
 
 .side-menu-trigger {
     padding: 0;
@@ -14,7 +13,7 @@ $side-menu-trigger-breakpoint-large  : $screen-l !default;
     background: none;
     cursor: pointer;
 
-    @include mq($side-menu-trigger-breakpoint-large) {
+    @include mq($screen-l) {
         display: none;
     }
 

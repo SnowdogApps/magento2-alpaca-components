@@ -1,9 +1,6 @@
 $dropdown-list-padding              : 10px !default;
 $dropdown-list-background           : $white !default;
 $dropdown-list-font-size            : $font-size-extra-small !default;
-$dropdown-list-breakpoint-small     : $screen-m !default;
-$dropdown-list-breakpoint-medium    : $screen-l !default;
-$dropdown-list-breakpoint-large     : $screen-xl !default;
 $dropdown-list-icon-transition      : transform 0.3s, opacity 0.3s !default;
 $dropdown-list-icon-color           : $gray !default;
 $dropdown-list-icon-width           : 10px !default;
@@ -22,11 +19,11 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
     padding: $dropdown-list-padding;
     background-color: $dropdown-list-background;
 
-    @include mq($dropdown-list-breakpoint-medium) {
+    @include mq($screen-l) {
         max-width: 320px;
     }
 
-    @include mq($dropdown-list-breakpoint-large) {
+    @include mq($screen-xl) {
         padding-left: 0;
     }
 
@@ -37,7 +34,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
         padding: 0;
         margin: 0;
 
-        @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-medium) {
+        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-between;
@@ -54,7 +51,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
         color: $dropdown-list-icon-color;
         transition: $dropdown-list-icon-transition;
 
-        @include mq($dropdown-list-breakpoint-small) {
+        @include mq($screen-m) {
             right: 10px;
         }
 
@@ -77,7 +74,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
         cursor: pointer;
         transition: box-shadow 0.5s;
 
-        @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
+        @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
             flex-basis: 24%;
 
             &:hover {
@@ -86,7 +83,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
         }
 
         &.open {
-            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
             }
 
@@ -100,7 +97,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
                 & > .dropdown-list__icon {
                     transform: rotate(180deg);
                 }
-                @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
+                @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                     &:after {
                         visibility: visible;
                     }
@@ -119,7 +116,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
             color: $dropdown-list-link-color;
             transition: box-shadow 0.5s;
 
-            @include mq($dropdown-list-breakpoint-small) {
+            @include mq($screen-m) {
                 padding: 15px 22px 15px 15px;
             }
         }
@@ -129,7 +126,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
             text-decoration: none;
             box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
 
-            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 box-shadow: none;
             }
         }
@@ -160,7 +157,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
         font-size: $dropdown-list-font-size;
 
         &--level1 {
-            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 position: absolute;
                 width: 100%;
                 background-color: $dropdown-list-inner-list-background;
@@ -226,7 +223,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
 
     &--item-wide {
         .dropdown-list__list {
-            @include mq($min-screen: $dropdown-list-breakpoint-small, $max-screen: $dropdown-list-breakpoint-large) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 flex-flow: row wrap;
             }
         }

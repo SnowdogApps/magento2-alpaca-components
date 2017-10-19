@@ -1,8 +1,6 @@
 //product-grid
 $product-grid-padding             : 10px !default;
 $product-grid-margin              : 15px !default;
-$product-grid-breakpoint-medium   : $screen-m !default;
-$product-grid-breakpoint-large    : $screen-l !default;
 
 //product-list
 $product-list-padding             : 10px !default;
@@ -25,13 +23,13 @@ $product-list-img-box-border      : 1px solid $product-list-img-box-border-color
     padding: 0;
     list-style-type: none;
 
-    @include mq($product-grid-breakpoint-medium) {
+    @include mq($screen-m) {
         padding: $product-grid-padding 0 $product-grid-padding ($product-grid-padding * 2);
     }
 
     &--4-in-row {
         .products-grid__item {
-            @include mq($product-grid-breakpoint-large) {
+            @include mq($screen-l) {
                 flex-basis: calc(25% - 20px);
             }
         }
@@ -46,7 +44,7 @@ $product-list-img-box-border      : 1px solid $product-list-img-box-border-color
             margin-right: $product-grid-margin;
         }
 
-        @include mq($product-grid-breakpoint-medium) {
+        @include mq($screen-m) {
             flex-basis: calc(33.33% - 20px);
             margin-bottom: ($product-grid-margin + 5);
             margin-right: ($product-grid-margin + 5);
