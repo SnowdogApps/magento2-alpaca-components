@@ -31,7 +31,8 @@ $link-line-height     : $font-line-height !default;
         border: 0;
 
         &:focus,
-        &:active {
+        &:active,
+        &:focus {
             clip: auto;
             height: auto;
             margin: 0;
