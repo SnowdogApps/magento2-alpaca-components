@@ -1,5 +1,5 @@
 $banner-default-position-value             : 10% !default;
-$banner-min-hegight                        : 250px !default;
+$banner-min-height                         : 250px !default;
 $banner-margin                             : 15px !default;
 $banner-padding                            : 15px !default;
 $banner-content-color                      : $gray-dark !default;
@@ -8,10 +8,10 @@ $banner-content-background-breakpoint-small: rgba($white, 0.6) !default;
 $banner-content-width-breakpoint-small     : 60% !default;
 $banner-content-height-breakpoint-small    : 80% !default;
 
-//content-below-image
+// Content below image
 $banner-content-below-background           : $white !default;
 
-//without-image
+// Without image
 $banner-without-image-background           : $white !default;
 $banner-without-image-height               : 50vh !default;
 $banner-without-image-width                : 100% !default;
@@ -32,7 +32,7 @@ $banner-without-image-width                : 100% !default;
     &--full-height {
         display: flex;
         flex-wrap: wrap;
-        min-height: $banner-min-hegight;
+        min-height: $banner-min-height;
 
         @include mq($screen-xl) {
             min-height: auto;

@@ -3,25 +3,25 @@ $table-color                      : $black !default;
 $table-font-size                  : $font-size-small !default;
 $table-radius                     : $border-radius !default;
 
-//borders
+// Borders
 $table-border-color               : $gray-light !default;
 $table-border                     : 1px solid $table-border-color !default;
 $table-border-color-inside        : $gray-lighter !default;
 $table-border-inside              : 1px solid $table-border-color-inside !default;
 
-//th
+// Th
 $table-th-background              : $white !default;
 $table-th-breakpoint-background   : $gray-lightest !default;
 
-//td
+// Td
 $table-td-background              : $white !default;
 $table-td-breakpoint-background   : $white !default;
 
-//tfoot
+// Tfoot
 $table-tfoot-background           : $white !default;
 $table-tfoot-breakpoint-background: $gray-lightest !default;
 
-//even-odd
+// Even odd
 $table-even-background            : $gray-lightest !default;
 $table-odd-background             : $white !default;
 
