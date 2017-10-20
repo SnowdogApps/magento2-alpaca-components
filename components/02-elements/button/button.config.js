@@ -19,7 +19,8 @@ module.exports = {
     {
       name: 'secondary',
       context: {
-        class: 'button--secondary'
+        class: 'button--secondary',
+        text: 'I am button secondary'
       }
     },
     {
