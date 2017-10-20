@@ -1,7 +1,7 @@
 $breadcrumbs-padding       : 10px !default;
 $breadcrumbs-margin        : 10px !default;
-$breadcrumbs-color         : $font-color-base !default;
-$breadcrumbs-color-second  : $gray !default;
+$breadcrumbs-color         : $gray !default;
+$breadcrumbs-item-color    : $font-color-base !default;
 $breadcrumbs-clickable-area: 48px !default;
 $breadcrumbs-divider       : '/' !default;
 
@@ -11,7 +11,7 @@ $breadcrumbs-divider       : '/' !default;
     padding: $breadcrumbs-padding 0;
 
     &__item {
-        color: $breadcrumbs-color;
+        color: $breadcrumbs-item-color;
         display: flex;
         min-width: $breadcrumbs-clickable-area;
         padding: ($breadcrumbs-padding + 5) 0;
@@ -20,11 +20,11 @@ $breadcrumbs-divider       : '/' !default;
         &:after {
             content: $breadcrumbs-divider;
             margin: 0 $breadcrumbs-margin;
-            color: $breadcrumbs-color-second;
+            color: $breadcrumbs-color;
         }
 
         &:last-child {
-            color: $breadcrumbs-color-second;
+            color: $breadcrumbs-color;
 
             &:after {
                 display: none;

@@ -10,9 +10,8 @@ $message-padding-base      : 15px !default;
 $message-margin-base       : 15px !default;
 $message-after-height      : 100% !default;
 $message-after-width       : 30px !default;
-$message-success-content   : "\2713" !default;
-$mssage-error-content      : "\2715" !default;
-
+$message-success-icon      : "\2713" !default;
+$message-error-icon        : "\2715" !default;
 
 .message {
     background-color: $message-background;
@@ -29,7 +28,7 @@ $mssage-error-content      : "\2715" !default;
         color: rgba($message-color, 0.9);
 
         &:after {
-            content: $message-success-content;
+            content: $message-success-icon;
         }
     }
 
@@ -38,7 +37,7 @@ $mssage-error-content      : "\2715" !default;
         color: rgba($message-color, 0.9);
 
         &:after {
-            content: $mssage-error-content;
+            content: $message-error-icon;
         }
     }
 
