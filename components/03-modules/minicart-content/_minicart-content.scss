@@ -1,12 +1,11 @@
 $minicart-content-spacing        : 15px !default;
 $minicart-content-font-size      : $font-size-small !default;
 $minicart-content-font-size-big  : $font-size-large !default;
-$minicart-content-border-color   : $gray !default;
 $minicart-content-icon-width     : 20px !default;
 $minicart-content-icon-fill      : $gray !default;
 $minicart-content-icon-fill-hover: $gray-darker !default;
-$mincart-content-transition      : $transition-base !default;
-$minicart-content-border         : 3px solid $minicart-content-border-color !default;
+$minicart-content-transition     : $transition-base !default;
+$minicart-content-border         : 3px solid $gray !default;
 
 .minicart-content {
     max-height: calc(100vh - 90px);
@@ -106,7 +105,7 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
         width: $minicart-content-icon-width;
         height: $minicart-content-icon-width;
         fill: $minicart-content-icon-fill;
-        transition: $mincart-content-transition;
+        transition: $minicart-content-transition;
 
         &:hover {
             fill: $minicart-content-icon-fill-hover;

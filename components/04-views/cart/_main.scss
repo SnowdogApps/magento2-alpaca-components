@@ -1,7 +1,6 @@
-$cart-margin      : 15px !default;
-$cart-padding     : 15px !default;
-$cart-border-color: $gray-lighter !default;
-$cart-border      : 1px solid $cart-border-color !default;
+$cart-margin : 15px !default;
+$cart-padding: 15px !default;
+$cart-border : 1px solid $gray-lighter !default;
 
 .cart {
     margin-bottom: ($cart-margin * 2);

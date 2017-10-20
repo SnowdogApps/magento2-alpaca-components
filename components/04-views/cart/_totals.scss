@@ -1,7 +1,6 @@
 $cart-totals-padding          : 15px !default;
 $cart-totals-margin           : 15px !default;
-$cart-totals-border-color     : #d9d9d9 !default;
-$cart-totals-border           : 1px solid $cart-totals-border-color !default;
+$cart-totals-border           : 1px solid #d9d9d9 !default;
 $cart-totals-font-size        : $font-size-small !default;
 $cart-totals-summary-padding  : ($cart-totals-padding - 5) !default;
 $cart-totals-summary-font-size: $font-size-base !default;

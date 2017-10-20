@@ -16,8 +16,7 @@ $list-icon-size          : 16px !default;
 $list-image-width        : 16px !default;
 
 // Divided
-$list-divider-color      : $gray-dark !default;
-$list-divider            : 1px solid $list-divider-color !default;
+$list-divider-border     : 1px solid $gray-dark !default;
 
 .list {
     margin: $list-margin;
@@ -103,7 +102,7 @@ $list-divider            : 1px solid $list-divider-color !default;
 
     &--divided {
         .list__item {
-            border-bottom: $list-divider;
+            border-bottom: $list-divider-border;
             &:last-child {
                 border-bottom: none;
             }
@@ -112,7 +111,7 @@ $list-divider            : 1px solid $list-divider-color !default;
         &.list--horizontal {
             .list__item {
                 border-bottom: none;
-                border-right: $list-divider;
+                border-right: $list-divider-border;
                 &:last-child {
                     border-right: none;
                 }
@@ -123,7 +122,7 @@ $list-divider            : 1px solid $list-divider-color !default;
             .list__item {
                 @include mq($screen-m) {
                     border-bottom: none;
-                    border-right: $list-divider;
+                    border-right: $list-divider-border;
                 }
                 &:last-child {
                     @include mq($screen-m) {

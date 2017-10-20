@@ -2,25 +2,12 @@ $table-padding                    : 15px !default;
 $table-color                      : $black !default;
 $table-font-size                  : $font-size-small !default;
 $table-radius                     : $border-radius !default;
-
-// Borders
-$table-border-color               : $gray-light !default;
-$table-border                     : 1px solid $table-border-color !default;
-$table-border-color-inside        : $gray-lighter !default;
-$table-border-inside              : 1px solid $table-border-color-inside !default;
-
-// Th
+$table-border                     : 1px solid $gray-light !default;
 $table-th-background              : $white !default;
 $table-th-breakpoint-background   : $gray-lightest !default;
-
-// Td
 $table-td-background              : $white !default;
-
-// Tfoot
 $table-tfoot-background           : $white !default;
 $table-tfoot-breakpoint-background: $gray-lightest !default;
-
-// Even odd
 $table-even-background            : $gray-lightest !default;
 $table-odd-background             : $white !default;
 
@@ -38,7 +25,7 @@ $table-odd-background             : $white !default;
     tr {
         display: block;
         padding: $table-padding 0;
-        border-bottom: $table-border-inside;
+        border-bottom: $table-border;
 
         @include mq($screen-m) {
             padding: 0;
@@ -67,8 +54,8 @@ $table-odd-background             : $white !default;
             display: table-cell;
             padding: $table-padding;
             background: $table-th-breakpoint-background;
-            border-bottom: $table-border-inside;
-            border-right: $table-border-inside;
+            border-bottom: $table-border;
+            border-right: $table-border;
 
             &:first-child {
                 border-top-left-radius: 0;
@@ -101,8 +88,8 @@ $table-odd-background             : $white !default;
             display: table-cell;
             padding: $table-padding;
             background: $table-td-background;
-            border-bottom: $table-border-inside;
-            border-right: $table-border-inside;
+            border-bottom: $table-border;
+            border-right: $table-border;
 
             &:first-child {
                 border-bottom-left-radius: $table-radius;
@@ -126,7 +113,7 @@ $table-odd-background             : $white !default;
                 display: table-cell;
                 padding: $table-padding;
                 background: $table-tfoot-breakpoint-background;
-                border-right: $table-border-inside;
+                border-right: $table-border;
                 text-align: left;
             }
         }

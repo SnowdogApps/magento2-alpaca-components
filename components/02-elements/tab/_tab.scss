@@ -1,7 +1,6 @@
 $tab-padding                    : 15px !default;
 $tab-margin                     : 15px !default;
-$tab-title-border-color         : $gray-light !default;
-$tab-title-border               : 1px solid $tab-title-border-color !default;
+$tab-title-border               : 1px solid $gray-light !default;
 $tab-title-background           : $gray-lightest !default;
 $tab-title-active-border-color  : $gray-light !default;
 $tab-title-active-border-width  : 1px 1px 0 1px !default;
@@ -12,8 +11,6 @@ $tab-icon-height                : 13px !default;
 $tab-icon-fill                  : $gray !default;
 $tab-icon-transition            : transform 0.3s !default;
 $tab-content-transition         : opacity 0.5s !default;
-$tab-content-active-border-color: $gray-light !default;
-$tab-content-active-border      : 1px solid $tab-content-active-border-color !default;
 
 .tab {
     position: relative;
@@ -92,10 +89,10 @@ $tab-content-active-border      : 1px solid $tab-content-active-border-color !de
         &--active {
             display: block;
             opacity: 1;
-            border-bottom: $tab-content-active-border;
+            border-bottom: $tab-title-border;
             @include mq($screen-l) {
                 border-bottom: 0 none;
-                border-top: $tab-content-active-border;
+                border-top: $tab-title-border;
             }
         }
     }

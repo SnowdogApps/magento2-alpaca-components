@@ -1,18 +1,15 @@
 // Product grid
-$product-grid-padding             : 10px !default;
-$product-grid-margin              : 15px !default;
+$product-grid-padding          : 10px !default;
+$product-grid-margin           : 15px !default;
 
 // Product list
-$product-list-padding             : 10px !default;
-$product-list-margin              : 10px !default;
-$product-list-border-color        : $gray-light !default;
-$product-list-border              : 1px solid $product-list-border-color !default;
-$product-list-name-font-size      : $font-size-small !default;
-$product-list-details-color       : $gray-lighter !default;
-$product-list-details-font-size   : $font-size-extra-small !default;
-$product-list-img-box-padding     : 0 $product-grid-padding 0 0 !default;
-$product-list-img-box-border-color: $gray-light !default;
-$product-list-img-box-border      : 1px solid $product-list-img-box-border-color !default;
+$product-list-padding          : 10px !default;
+$product-list-margin           : 10px !default;
+$product-list-border           : 1px solid $gray-light !default;
+$product-list-name-font-size   : $font-size-small !default;
+$product-list-details-color    : $gray-lighter !default;
+$product-list-details-font-size: $font-size-extra-small !default;
+$product-list-img-box-padding  : 0 $product-grid-padding 0 0 !default;
 
 .products-grid {
     display: flex;
@@ -78,7 +75,7 @@ $product-list-img-box-border      : 1px solid $product-list-img-box-border-color
     &__img-box {
         flex-basis: 70px;
         padding: $product-list-img-box-padding;
-        border-right: $product-list-img-box-border;
+        border-right: $product-list-border;
     }
 
     &__img {

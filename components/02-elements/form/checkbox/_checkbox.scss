@@ -1,10 +1,9 @@
 $checkbox-margin             : 10px !default;
 $checkbox-line-height        : $font-line-height !default;
-$checkbox-border-color       : #d9d9d9 !default;
 $checkbox-label-padding      : 33px !default;
 $checkbox-label-before-width : 23px !default;
 $checkbox-label-before-height: 23px !default;
-$checkbox-label-before-border: 1px solid $checkbox-border-color !default;
+$checkbox-label-before-border: 1px solid #d9d9d9 !default;
 $checkbox-icon-size          : 15px !default;
 $checkbox-icon-border-radius : 2px !default;
 $checkbox-icon-transition    : $transition-base !default;
