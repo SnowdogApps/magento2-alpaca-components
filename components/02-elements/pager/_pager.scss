@@ -19,7 +19,7 @@ $pager-icon-height            : 12px !default;
         justify-content: center;
         list-style-type: none;
         padding: 0 $pager-padding;
-        margin: ($pager-margin - 5) 0;
+        margin: 10px 0;
 
         @include mq($screen-m) {
             padding: 0 ($pager-padding * 2);

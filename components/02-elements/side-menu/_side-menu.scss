@@ -1,4 +1,4 @@
-$side-menu-padding         : 15px !default;
+$side-menu-padding         : 30px !default;
 $side-menu-top             : calc(100% + 1px) !default;
 $side-menu-left            : 100% !default;
 $side-menu-width           : 300px !default;
@@ -14,7 +14,7 @@ $side-menu-link-hover-color: $gray !default;
     top: $side-menu-top;
     left: $side-menu-left;
     width: $side-menu-width;
-    padding: ($side-menu-padding * 2);
+    padding: $side-menu-padding;
     z-index: 50;
     background: $side-menu-background;
     box-shadow: $side-menu-box-shadow;

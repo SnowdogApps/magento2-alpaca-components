@@ -20,10 +20,6 @@ $product-list-img-box-padding  : 0 $product-grid-padding 0 0 !default;
     padding: 0;
     list-style-type: none;
 
-    @include mq($screen-m) {
-        padding: $product-grid-padding 0 $product-grid-padding ($product-grid-padding * 2);
-    }
-
     &--4-in-row {
         .products-grid__item {
             @include mq($screen-l) {
@@ -37,14 +33,30 @@ $product-list-img-box-padding  : 0 $product-grid-padding 0 0 !default;
         margin-bottom: $product-grid-margin;
 
         @include mq($screen-s) {
-            flex-basis: calc(50% - 15px);
+            flex-basis: calc(50% - 8px);
             margin-right: $product-grid-margin;
         }
 
         @include mq($screen-m) {
-            flex-basis: calc(33.33% - 20px);
-            margin-bottom: ($product-grid-margin + 5);
-            margin-right: ($product-grid-margin + 5);
+            flex-basis: calc(33.33% - 14px);
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        &:nth-child(2n) {
+            @include mq($screen-s) {
+                margin-right: 0;
+            }
+
+            @include mq($screen-m) {
+                margin-right: 20px;
+            }
+        }
+
+        &:nth-child(3n) {
+            @include mq($screen-m) {
+                margin-right: 0;
+            }
         }
     }
 }

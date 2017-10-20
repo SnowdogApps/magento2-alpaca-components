@@ -43,7 +43,7 @@ $product-list-item-actions-button-height: 35px !default;
             flex: 0;
             float: left;
             width: 45px;
-            margin: ($product-list-item-margin - 5) 0 0;
+            margin: 10px 0 0;
             @include mq($screen-s) {
                 flex: 0 0 45px;
             }

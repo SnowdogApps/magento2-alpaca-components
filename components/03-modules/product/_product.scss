@@ -63,7 +63,7 @@ $product-type-color      : $gray-light !default;
     &__price {
         text-align: right;
         font-weight: 600;
-        padding: ($product-padding - 5) 0;
+        padding: 10px 0;
     }
 
     &__details {

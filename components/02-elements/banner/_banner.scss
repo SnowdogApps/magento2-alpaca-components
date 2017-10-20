@@ -1,7 +1,7 @@
 $banner-default-position-value             : 10% !default;
 $banner-min-height                         : 250px !default;
 $banner-margin                             : 15px !default;
-$banner-padding                            : 15px !default;
+$banner-padding                            : 30px !default;
 $banner-content-color                      : $gray-dark !default;
 $banner-content-background                 : $white !default;
 $banner-content-background-breakpoint-small: rgba($white, 0.6) !default;
@@ -59,7 +59,7 @@ $banner-without-image-width                : 100% !default;
             margin: auto;
             max-width: $banner-content-width-breakpoint-small;
             max-height: $banner-content-height-breakpoint-small;
-            padding: ($banner-padding * 2);
+            padding: $banner-padding;
         }
 
         &--top {

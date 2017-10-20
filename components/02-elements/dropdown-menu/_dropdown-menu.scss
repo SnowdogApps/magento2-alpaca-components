@@ -46,7 +46,7 @@ $dropdown-menu-icon-fill            : $white !default;
 
             .dropdown-menu__link {
                 position: relative;
-                padding-right: ($dropdown-menu-padding * 3);
+                padding-right: 45px;
             }
         }
 
@@ -93,7 +93,7 @@ $dropdown-menu-icon-fill            : $white !default;
             position: relative;
             display: block;
             top: 0;
-            padding: ($dropdown-menu-padding - 5) 0 0 $dropdown-menu-padding;
+            padding: 10px 0 0 $dropdown-menu-padding;
         }
     }
 

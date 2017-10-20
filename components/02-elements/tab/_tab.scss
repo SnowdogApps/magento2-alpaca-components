@@ -1,5 +1,5 @@
 $tab-padding                    : 15px !default;
-$tab-margin                     : 15px !default;
+$tab-margin                     : 10px !default;
 $tab-title-border               : 1px solid $gray-light !default;
 $tab-title-background           : $gray-lightest !default;
 $tab-title-active-border-color  : $gray-light !default;
@@ -31,7 +31,7 @@ $tab-content-transition         : opacity 0.5s !default;
         @include mq($screen-l) {
             flex-basis: 25%;
             order: -1;
-            margin-right: ($tab-margin - 5);
+            margin-right: $tab-margin;
             background-color: $tab-title-background;
             border-bottom: 0 none;
             bottom: -1px;
@@ -74,7 +74,7 @@ $tab-content-transition         : opacity 0.5s !default;
         position: relative;
         display: none;
         width: 100%;
-        padding: ($tab-padding - 5);
+        padding: 10px;
         z-index: -1;
         opacity: 0;
         overflow-y: hidden;

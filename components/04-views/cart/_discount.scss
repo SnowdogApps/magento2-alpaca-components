@@ -23,7 +23,7 @@ $discount-transition          : $transition-base !default;
     &__title {
         display: flex;
         align-items: center;
-        padding: ($discount-padding - 5) 0;
+        padding: 10px 0;
         cursor: pointer;
 
         &-text {

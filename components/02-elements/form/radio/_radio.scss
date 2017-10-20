@@ -46,7 +46,7 @@ $radio-icon-before-transition: $transition-base !default;
         border-radius: $radio-size;
         width: $radio-size;
         height: $radio-size;
-        margin-right: ($radio-margin / 2);
+        margin-right: 5px;
         vertical-align: top;
 
         &::before {

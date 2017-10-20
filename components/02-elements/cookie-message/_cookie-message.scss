@@ -21,7 +21,7 @@ $cookie-message-icon-width : 10px !default;
         margin: 0 auto;
         max-width: $max-content-width;
         text-align: center;
-        padding: $cookie-message-padding ($cookie-message-padding * 3 + 5);
+        padding: $cookie-message-padding 35px;
     }
 
     &__message {
@@ -40,7 +40,7 @@ $cookie-message-icon-width : 10px !default;
         @include mq($screen-m) {
             display: inline-block;
             margin-bottom: 0;
-            margin-right: ($cookie-message-margin * 3 + 5);
+            margin-right: 35px;
         }
     }
 
@@ -50,7 +50,7 @@ $cookie-message-icon-width : 10px !default;
             font-weight: 400;
             font-size: $cookie-message-font-size;
             border: $cookie-message-link-border;
-            padding: ($cookie-message-padding / 2);
+            padding: 5px;
         }
     }
 
@@ -92,7 +92,7 @@ $cookie-message-icon-width : 10px !default;
             @include mq($screen-m) {
                 display: inline-block;
                 margin-bottom: 0;
-                margin-right: ($cookie-message-margin * 3 + 5);
+                margin-right: 35px;
             }
         }
 
