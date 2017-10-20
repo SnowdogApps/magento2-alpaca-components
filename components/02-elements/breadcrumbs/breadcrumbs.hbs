@@ -5,9 +5,11 @@
                 {{ this }}
             </span>
         {{else}}
-            <a href="#" class="breadcrumbs__item">
-                {{ this }}
-            </a>
+            <span class="breadcrumbs__item">
+                <a href="#" class="breadcrumbs__link">
+                    {{ this }}
+                </a>
+            </span>
         {{/if}}
     {{/each}}
 </div>
