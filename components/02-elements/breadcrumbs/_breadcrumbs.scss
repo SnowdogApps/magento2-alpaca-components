@@ -1,4 +1,5 @@
-$breadcrumbs-margin         : $margin-base !default;
+$breadcrumbs-margin         : 8px !default;
+$breadcrumbs-padding        : 8px !default;
 $breadcrumbs-clickable-area : 48px !default;
 $breadcrumbs-color          : $gray-dark !default;
 $breadcrumbs-font-family    : $font-family-base !default;
@@ -28,6 +29,7 @@ $breadcrumbs-font-family-active: $font-family-base-bold !default;
 
         &:last-child {
             align-items: center;
+            padding: 0 $breadcrumbs-padding;
             font-family: $breadcrumbs-font-family-active;
             color: $breadcrumbs-color-active;
 
@@ -39,8 +41,10 @@ $breadcrumbs-font-family-active: $font-family-base-bold !default;
     &__link {
         display: flex;
         align-items: center;
+        padding: 0 $breadcrumbs-padding;
         font-family: $breadcrumbs-font-family;
         color: $breadcrumbs-color;
+
         &:hover {
             color: $breadcrumbs-color-active;
         }
