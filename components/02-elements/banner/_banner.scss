@@ -38,7 +38,7 @@ $banner-right-value           : $banner-default-position-value;
         flex-direction: column;
         margin-top: 15px;
         text-align: center;
-        color: $gray-dark;
+        color: $gray-darker;
         background: $white;
 
         @include mq($screen-m) {

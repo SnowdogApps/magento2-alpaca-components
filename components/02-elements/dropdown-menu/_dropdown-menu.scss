@@ -2,7 +2,7 @@ $dropdown-menu-box-shadow: -5px 5px 7px 0 rgba(0, 0, 0, 0.2);
 
 .dropdown-menu {
     display: none;
-    background: $gray-dark;
+    background: $gray-darker;
     color: $white;
     position: relative;
 
@@ -59,7 +59,7 @@ $dropdown-menu-box-shadow: -5px 5px 7px 0 rgba(0, 0, 0, 0.2);
         padding: 0;
         list-style: none;
         line-height: 1.5;
-        color: $gray-dark;
+        color: $gray-darker;
         background: $white;
         z-index: 2;
 
