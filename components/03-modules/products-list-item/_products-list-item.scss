@@ -1,13 +1,12 @@
 $product-list-item-margin               : 15px !default;
-$prodct-list-item-padding               : 15px !default;
+$product-list-item-padding              : 15px !default;
+$product-list-item-font-size            : $font-size-small !default;
+$product-list-item-font-size-small      : $font-size-extra-small !default;
 $product-list-item-border-color         : $gray-lighter !default;
 $product-list-item-border               : 1px solid $product-list-item-border-color !default;
-$product-list-item-font-size            : $font-size-extra-small !default;
 $product-list-item-details-color        : $gray !default;
 $product-list-item-name-color           : $gray-dark !default;
-$product-list-item-price-font-size      : $font-size-small !default;
 $product-list-item-price-color          : $color-primary !default;
-$product-list-item-subtotal-font-size   : $font-size-small !default;
 $product-list-item-actions-button-width : 35px !default;
 $product-list-item-actions-button-height: 35px !default;
 
@@ -15,9 +14,9 @@ $product-list-item-actions-button-height: 35px !default;
     display: flex;
     width: 100%;
     margin-bottom: $product-list-item-margin;
-    padding-bottom: $prodct-list-item-padding;
+    padding-bottom: $product-list-item-padding;
     border-bottom: $product-list-item-border;
-    font-size: $product-list-item-font-size;
+    font-size: $product-list-item-font-size-small;
 
     &__image {
         flex: 0 0 100px;
@@ -37,7 +36,7 @@ $product-list-item-actions-button-height: 35px !default;
 
         &-price {
             margin-bottom: 5px;
-            font-size: $product-list-item-price-font-size;
+            font-size: $product-list-item-font-size;
             color: $product-list-item-price-color;
         }
 
@@ -62,7 +61,7 @@ $product-list-item-actions-button-height: 35px !default;
             flex: 1;
             line-height: 35px;
             font-weight: 600;
-            font-size: $product-list-item-subtotal-font-size;
+            font-size: $product-list-item-font-size;
             @include mq($screen-s) {
                 margin: 10px 0 0 10px;
             }

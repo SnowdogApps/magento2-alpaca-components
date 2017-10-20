@@ -1,17 +1,15 @@
-$popup-padding               : 10px !default;
-$popup-width                 : 400px !default;
-$popup-background            : $white !default;
-$popup-z-index               : 50 !default;
-$popup-box-shadow-color      : $black !default;
-$popup-box-shadow            : 0 0 8px 0 rgba($popup-box-shadow-color, 0.2) !default;
+$popup-padding         : 10px !default;
+$popup-width           : 400px !default;
+$popup-background      : $white !default;
+$popup-z-index         : 50 !default;
+$popup-box-shadow-color: $black !default;
+$popup-box-shadow      : 0 0 8px 0 rgba($popup-box-shadow-color, 0.2) !default;
 
 // Arrow
-$popup-arrow-size            : 21px !default;
-$popup-arrow-top             : -10px !default;
-$popup-arrow-background      : $white !default;
-$popup-arrow-transform       : rotate(45deg) !default;
-$popup-arrow-box-shadow-color: $black !default;
-$popup-arrow-box-shadow      : 2px -2px 4px 0 rgba($popup-arrow-box-shadow-color, 0.1) !default;
+$popup-arrow-size      : 21px !default;
+$popup-arrow-top       : -10px !default;
+$popup-arrow-transform : rotate(45deg) !default;
+$popup-arrow-box-shadow: 2px -2px 4px 0 rgba($popup-box-shadow-color, 0.1) !default;
 
 .popup {
     display: none;
@@ -35,7 +33,7 @@ $popup-arrow-box-shadow      : 2px -2px 4px 0 rgba($popup-arrow-box-shadow-color
         top: $popup-arrow-top;
         width: $popup-arrow-size;
         height: $popup-arrow-size;
-        background: $popup-arrow-background;
+        background: $popup-background;
         transform: $popup-arrow-transform;
         box-shadow: $popup-arrow-box-shadow;
         z-index: -1;

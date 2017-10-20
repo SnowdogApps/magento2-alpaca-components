@@ -1,17 +1,15 @@
-$dropdown-list-padding              : 10px !default;
-$dropdown-list-background           : $white !default;
-$dropdown-list-font-size            : $font-size-extra-small !default;
-$dropdown-list-icon-transition      : transform 0.3s, opacity 0.3s !default;
-$dropdown-list-icon-color           : $gray !default;
-$dropdown-list-icon-width           : 10px !default;
-$dropdown-list-icon-height          : 6px !default;
-$dropdown-list-icon-top             : 20px !default;
-$dropdown-list-icon-right           : 15px !default;
-$dropdown-list-icon-inner-base      : 8px !default;
-$dropdown-list-link-color           : $font-color-base !default;
-$dropdown-list-link-after-background: $white !default;
-$dropdown-list-inner-list-background: $white !default;
-$dropwodn-list-inner-item-color     : $color-primary !default;
+$dropdown-list-padding         : 10px !default;
+$dropdown-list-background      : $white !default;
+$dropdown-list-font-size       : $font-size-extra-small !default;
+$dropdown-list-icon-transition : transform 0.3s, opacity 0.3s !default;
+$dropdown-list-icon-color      : $gray !default;
+$dropdown-list-icon-width      : 10px !default;
+$dropdown-list-icon-height     : 6px !default;
+$dropdown-list-icon-top        : 20px !default;
+$dropdown-list-icon-right      : 15px !default;
+$dropdown-list-icon-inner-base : 8px !default;
+$dropdown-list-link-color      : $font-color-base !default;
+$dropwodn-list-inner-item-color: $color-primary !default;
 
 .dropdown-list {
     width: 100%;
@@ -138,7 +136,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
             left: 0;
             bottom: 0;
             height: 10px;
-            background-color: $dropdown-list-link-after-background;
+            background-color: $dropdown-list-background;
             width: 100%;
             z-index: 109;
             visibility: hidden;
@@ -160,7 +158,7 @@ $dropwodn-list-inner-item-color     : $color-primary !default;
             @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 position: absolute;
                 width: 100%;
-                background-color: $dropdown-list-inner-list-background;
+                background-color: $dropdown-list-background;
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
                 z-index: 99;
             }

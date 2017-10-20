@@ -8,11 +8,7 @@ $banner-content-background-breakpoint-small: rgba($white, 0.6) !default;
 $banner-content-width-breakpoint-small     : 60% !default;
 $banner-content-height-breakpoint-small    : 80% !default;
 
-// Content below image
-$banner-content-below-background           : $white !default;
-
 // Without image
-$banner-without-image-background           : $white !default;
 $banner-without-image-height               : 50vh !default;
 $banner-without-image-width                : 100% !default;
 
@@ -98,14 +94,14 @@ $banner-without-image-width                : 100% !default;
             position: relative;
             max-width: 100%;
             display: block;
-            background: $banner-content-below-background;
+            background: $banner-content-background;
             padding: 0;
             margin-top: $banner-margin;
         }
 
         &--without-image {
             position: relative;
-            background: $banner-without-image-background;
+            background: $banner-content-background;
             height: $banner-without-image-height;
             width: $banner-without-image-width;
             max-width: none;

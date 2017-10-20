@@ -15,7 +15,6 @@ $table-th-breakpoint-background   : $gray-lightest !default;
 
 // Td
 $table-td-background              : $white !default;
-$table-td-breakpoint-background   : $white !default;
 
 // Tfoot
 $table-tfoot-background           : $white !default;
@@ -101,7 +100,7 @@ $table-odd-background             : $white !default;
         @include mq($screen-m) {
             display: table-cell;
             padding: $table-padding;
-            background: $table-td-breakpoint-background;
+            background: $table-td-background;
             border-bottom: $table-border-inside;
             border-right: $table-border-inside;
 

@@ -1,13 +1,11 @@
-$product-padding                  : 15px !default;
-$product-border-color             : $gray-lightest !default;
-$product-border                   : 1px solid $product-border-color !default;
-$product-name-color               : $font-color-base !default;
-$product-name-font-size           : $font-size-base !default;
-$product-name-brekapoint-font-size: 18px !default;
-$product-type-font-size           : $font-size-small !default;
-$product-type-color               : $gray-light !default;
-$product-details-list-font-size   : $font-size-small !default;
-$product-img-name-font-size       : 18px !default;
+$product-padding         : 15px !default;
+$product-border-color    : $gray-lightest !default;
+$product-border          : 1px solid $product-border-color !default;
+$product-font-size-small : $font-size-small !default;
+$product-font-size-medium: $font-size-base !default;
+$product-font-size-large : 18px !default;
+$product-name-color      : $font-color-base !default;
+$product-type-color      : $gray-light !default;
 
 .product {
     display: block;
@@ -46,16 +44,16 @@ $product-img-name-font-size       : 18px !default;
     &__name {
         font-weight: 700;
         color: $product-name-color;
-        font-size: $product-name-font-size;
+        font-size: $product-font-size-medium;
 
         @include mq($screen-m) {
-            font-size: $product-name-brekapoint-font-size;
+            font-size: $product-font-size-large;
         }
     }
 
     &__type {
         padding: $product-padding 0;
-        font-size: $product-type-font-size;
+        font-size: $product-font-size-small;
         color: $product-type-color;
     }
 
@@ -78,7 +76,7 @@ $product-img-name-font-size       : 18px !default;
     }
 
     &__details-list {
-        font-size: $product-details-list-font-size;
+        font-size: $product-font-size-small;
     }
 
     &__details-list-item {
@@ -102,7 +100,7 @@ $product-img-name-font-size       : 18px !default;
         .product__name {
             display: inline-flex;
             align-items: center;
-            font-size: $product-img-name-font-size;
+            font-size: $product-font-size-large;
             min-height: 0;
         }
     }
