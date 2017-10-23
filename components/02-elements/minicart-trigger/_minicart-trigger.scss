@@ -1,21 +1,20 @@
 $minicart-trigger-background        : $white !default;
-$minicart-trigger-icon-width        : 30px !default;
-
+$minicart-trigger-icon-width        : 18px !default;
 $minicart-trigger-counter-font-size : $font-size-extra-small !default;
-$minicart-trigger-counter-background: $purple !default;
+$minicart-trigger-counter-background: $color-primary !default;
 $minicart-trigger-counter-color     : $white !default;
 
 .minicart-trigger {
-    background: $minicart-trigger-background;
     position: relative;
+    display: block;
+    padding: 15px;
     margin: 0;
     border: 0;
-    display: block;
-    padding: 10px;
+    background-color: $minicart-trigger-background;
 
     &:hover,
     &:focus {
-        background: $minicart-trigger-background;
+        background-color: $minicart-trigger-background;
     }
 
     &__icon {
@@ -26,16 +25,15 @@ $minicart-trigger-counter-color     : $white !default;
 
     &__counter {
         position: absolute;
-        top: -5px;
-        right: -5px;
+        top: 3px;
+        right: 3px;
         display: block;
-        padding: 5px;
-        background-color: $minicart-trigger-counter-background;
-        color: $minicart-trigger-counter-color;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        line-height: 20px;
         font-size: $minicart-trigger-counter-font-size;
-
-        @include mq($screen-l) {
-            top: 2px;
-        }
+        color: $minicart-trigger-counter-color;
+        background-color: $minicart-trigger-counter-background;
     }
 }

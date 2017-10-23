@@ -1,17 +1,27 @@
-<header class="header container">
-    {{ render '@logo' }}
-
-    <div class="header__right-panel">
-        <div class="header__minicart">
-            {{ render '@minicart-trigger' trigger }}
-
-            {{ render '@popup' minicartPopup }}
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            {{ render '@logo' logo }}
+            <div class="header__icons">
+                <div class="header__search-wrapper" style="display: none;">
+                    {{ render '@form--compact' form }}
+                    {{ render '@button--icon' button }}
+                </div>
+                <a class="header__icons-item" href="#">
+                    <svg class="header__icon">
+                        <use xlink:href="{{ svg 'phone' }}"></use>
+                    </svg>
+                </a>
+                <a class="header__icons-item" href="#">
+                    <svg class="header__icon">
+                        <use xlink:href="{{ svg 'account' }}"></use>
+                    </svg>
+                </a>
+                <div class="header__minicart">
+                    {{ render '@minicart-trigger' trigger }}
+                    {{ render '@popup' minicartPopup }}
+                </div>
+            </div>
         </div>
-
-        {{ render '@side-menu-trigger' }}
     </div>
-
-    {{ render '@side-menu' }}
 </header>
-
-{{ render '@dropdown-menu' }}
