@@ -1,0 +1,13 @@
+<div class="swatch {{ class }}" {{{ attributes }}}>
+    <h5 class="swatch__title {{ titleClass }}">
+        {{ title }}
+    </h5>
+
+    <div class="swatch__wrapper">
+        {{#each options }}
+            <div class="swatch__option {{ this.class }}" {{{ this.attributes }}}>
+                {{ this.text }}
+            </div>
+        {{/each }}
+    </div>
+</div>
