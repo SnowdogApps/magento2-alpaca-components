@@ -55,19 +55,11 @@ $dashboard-nav-margin : 15px !default;
     }
 
     &__item {
-        padding: 15px;
+        padding: 0;
         transition: $transition-base;
 
         &:hover {
             background-color: $white;
-        }
-
-        &:first-child {
-            padding-top: 15px;
-        }
-
-        &:last-child {
-            padding-bottom: 15px;
         }
     }
 
@@ -79,6 +71,8 @@ $dashboard-nav-margin : 15px !default;
 
     &__item > a,
     &__link {
+        display: block;
+        padding: 15px;
         color: $gray-dark;
 
         &:hover {
@@ -91,9 +85,7 @@ $dashboard-nav-margin : 15px !default;
     .current {
         border-left: 2px solid $red;
         color: $red;
-        padding-left: 23px;
         position: relative;
-        margin-left: -15px;
 
         &:hover {
             background-color: initial;

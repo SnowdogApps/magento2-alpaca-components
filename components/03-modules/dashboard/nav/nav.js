@@ -1,7 +1,7 @@
 'use strict'
 
 const content     = document.querySelector('.dashboard-nav__content'),
-      currentItem = content.querySelector('.dashboard-nav__list .item.current'),
+      currentItem = content.querySelector('.dashboard-nav__item.current'),
       mobileNav   = document.querySelector('.dashboard-nav__mobile');
 
 mobileNav.innerHTML = currentItem.textContent;
