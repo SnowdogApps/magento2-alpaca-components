@@ -13,7 +13,7 @@
     }
 
     &:hover .side-menu-trigger__line {
-        background: $gray-dark;
+        background: $gray-darker;
     }
 
     &:hover .side-menu-trigger__text {
@@ -55,7 +55,7 @@
         position: absolute;
         height: 3px;
         border-radius: 3px;
-        background: $gray-dark;
+        background: $gray-darker;
         transition: $transition-base;
         left: 0;
 
@@ -81,7 +81,7 @@
             &:nth-child(2),
             &:nth-child(3) {
                 top: 13px;
-                background: $gray-dark;
+                background: $gray-darker;
             }
 
             &:nth-child(2) {

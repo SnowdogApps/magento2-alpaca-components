@@ -1,12 +1,21 @@
 // -----
-// GLobals
+// Globals
 // -----
 
+// Variables
+@import '../../components/01-globals/variables/variables';
+
+// Mixins
+@import '../../components/01-globals/mixins/clearfix';
+@import '../../components/01-globals/mixins/grid-column-width';
+@import '../../components/01-globals/mixins/links';
+@import '../../components/01-globals/mixins/mq';
 // Libs
 @import '../../components/01-globals/libs/normalize';
 @import '../../components/01-globals/libs/choices';
 
 // Typography
+@import '../../components/01-globals/_fonts/fonts';
 @import '../../components/01-globals/_container/container';
 @import '../../components/01-globals/typography/blockquote/blockquote';
 @import '../../components/01-globals/typography/heading/heading';
@@ -42,6 +51,7 @@
 @import '../../components/02-elements/password-strength/password-strength';
 @import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
+@import '../../components/02-elements/swatch/swatch';
 @import '../../components/02-elements/side-menu/side-menu';
 @import '../../components/02-elements/tab/tab';
 @import '../../components/02-elements/table/table';
