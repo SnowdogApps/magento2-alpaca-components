@@ -9,6 +9,24 @@ $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
     display: block;
     overflow: hidden;
 
+    &--min-medium-horizontal {
+        .wrapper-collapsible__container {
+            @include mq($screen-l) {
+                position: relative;
+                display: block;
+                top: auto;
+                right: auto;
+                transform: $wrapper-collapsible-horizontal-transform;
+            }
+        }
+
+        .wrapper-collapsible__trigger {
+            @include mq($screen-l) {
+                display: none;
+            }
+        }
+    }
+
     &__container {
         position: absolute;
         display: none;
@@ -55,24 +73,5 @@ $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
         width: $wrapper-collapsible-icon-width;
         height: $wrapper-collapsible-icon-height;
         fill: $wrapper-collapsible-icon-fill;
-    }
-
-    &--min-medium-horizontal {
-        .wrapper-collapsible__container {
-            @include mq($screen-l) {
-                position: relative;
-                display: block;
-                top: auto;
-                right: auto;
-                transform: $wrapper-collapsible-horizontal-transform;
-            }
-        }
-
-        .wrapper-collapsible__trigger {
-            @include mq($screen-l) {
-                display: none;
-            }
-        }
-
     }
 }

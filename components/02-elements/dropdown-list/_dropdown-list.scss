@@ -25,6 +25,18 @@ $dropwodn-list-inner-item-color: $color-primary !default;
         padding-left: 0;
     }
 
+    &--item-wide {
+        .dropdown-list__list {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
+                flex-flow: row wrap;
+            }
+        }
+
+        .dropdown-list__item {
+            flex-basis: 100%;
+        }
+    }
+
     &__list {
         display: block;
         width: 100%;
@@ -216,18 +228,6 @@ $dropwodn-list-inner-item-color: $color-primary !default;
             text-transform: none;
             font-weight: 400;
             color: $dropdown-list-link-color;
-        }
-    }
-
-    &--item-wide {
-        .dropdown-list__list {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-                flex-flow: row wrap;
-            }
-        }
-
-        .dropdown-list__item {
-            flex-basis: 100%;
         }
     }
 }

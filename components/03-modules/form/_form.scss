@@ -8,21 +8,6 @@ $form-compact-margin     : 20px !default;
 $form-button-margin      : 0 0 0 (-$button-icon-border-width) !default;
 
 .form {
-    &__fieldset,
-    .fieldset {
-        border: 0;
-        padding: 0;
-        margin: $form-fieldset-margin;
-    }
-
-    &__legend,
-    .legend {
-        padding: 0;
-        margin: $form-legend-margin;
-        font-size: $form-legend-font-size;
-        line-height: $form-legend-line-height;
-    }
-
     &--compact {
         @include mq($screen-m) {
             display: flex;
@@ -63,5 +48,20 @@ $form-button-margin      : 0 0 0 (-$button-icon-border-width) !default;
                 margin: 0;
             }
         }
+    }
+
+    &__fieldset,
+    .fieldset {
+        border: 0;
+        padding: 0;
+        margin: $form-fieldset-margin;
+    }
+
+    &__legend,
+    .legend {
+        padding: 0;
+        margin: $form-legend-margin;
+        font-size: $form-legend-font-size;
+        line-height: $form-legend-line-height;
     }
 }

@@ -11,6 +11,15 @@ $search-button-margin: 10px !default;
     overflow: hidden;
     transition: $search-transition;
 
+    &--visible {
+        height: auto;
+        max-height: 170px;
+
+        @include mq($screen-m) {
+            max-height: 110px;
+        }
+    }
+
     &__wrapper {
         display: flex;
         flex-flow: row wrap;
@@ -44,14 +53,5 @@ $search-button-margin: 10px !default;
 
     &__advanced {
         text-align: right;
-    }
-
-    &--visible {
-        height: auto;
-        max-height: 170px;
-
-        @include mq($screen-m) {
-            max-height: 110px;
-        }
     }
 }

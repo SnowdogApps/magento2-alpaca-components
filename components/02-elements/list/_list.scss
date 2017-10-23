@@ -4,7 +4,6 @@ $list-padding            : 0 !default;
 $list-item-padding       : 5px 0 !default;
 $list-content-padding    : 10px !default;
 $list-label-padding      : 0 5px 5px 0 !default;
-$list-value-padding      : 0 5px 5px 0 !default;
 
 // Horizontal
 $list-padding--horizontal: 10px !default;
@@ -23,35 +22,6 @@ $list-divider-border     : 1px solid $gray-dark !default;
     padding: $list-padding;
     list-style: $list-style;
 
-    &__item {
-        display: list-item;
-        padding: $list-item-padding;
-        &:first-child {
-            padding-top: 0;
-        }
-        &:last-child {
-            padding-bottom: 0;
-        }
-    }
-
-    &__label {
-        clear: left;
-        float: left;
-        padding: $list-label-padding;
-        &:after {
-            content: ': ';
-        }
-    }
-
-    &__value {
-        float: left;
-        padding: $list-value-padding;
-    }
-
-    .list__content {
-        padding-left: $list-content-padding;
-    }
-
     &--center {
         justify-content: center;
         text-align: center;
@@ -63,6 +33,13 @@ $list-divider-border     : 1px solid $gray-dark !default;
         flex-wrap: wrap;
         .list__item {
             padding: $list-padding--horizontal;
+
+            &:first-child {
+                padding-top: $list-padding--horizontal;
+            }
+            &:last-child {
+                padding-bottom: $list-padding--horizontal;
+            }
         }
     }
 
@@ -75,6 +52,13 @@ $list-divider-border     : 1px solid $gray-dark !default;
         .list__item {
             @include mq($screen-m) {
                 padding: $list-padding--horizontal;
+
+                &:first-child {
+                    padding-top: $list-padding--horizontal;
+                }
+                &:last-child {
+                    padding-bottom: $list-padding--horizontal;
+                }
             }
         }
     }
@@ -132,7 +116,37 @@ $list-divider-border     : 1px solid $gray-dark !default;
             }
         }
     }
+
     &--description {
         display: inline-block;
+    }
+
+    &__item {
+        display: list-item;
+        padding: $list-item-padding;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__label {
+        clear: left;
+        float: left;
+        padding: $list-label-padding;
+        &:after {
+            content: ': ';
+        }
+    }
+
+    &__value {
+        float: left;
+        padding: $list-label-padding;
+    }
+
+    .list__content {
+        padding-left: $list-content-padding;
     }
 }

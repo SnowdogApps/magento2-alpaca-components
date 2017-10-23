@@ -11,6 +11,19 @@ $product-type-color      : $gray-light !default;
     padding: $product-padding;
     border: $product-border;
 
+    &--img-thumb {
+        .product__img-box {
+            min-height: 0;
+        }
+
+        .product__name {
+            display: inline-flex;
+            align-items: center;
+            font-size: $product-font-size-large;
+            min-height: 0;
+        }
+    }
+
     &__link {
         @include links(active) {
             display: block;
@@ -89,18 +102,5 @@ $product-type-color      : $gray-light !default;
 
     &__actions-secondary {
         text-align: right;
-    }
-
-    &--img-thumb {
-        .product__img-box {
-            min-height: 0;
-        }
-
-        .product__name {
-            display: inline-flex;
-            align-items: center;
-            font-size: $product-font-size-large;
-            min-height: 0;
-        }
     }
 }
