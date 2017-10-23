@@ -1,3 +1,10 @@
 {
-    "name": "magento2-alpaca-components"
-  }
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/hone/heroku-buildpack-static"
+    }
+  ]
+}
