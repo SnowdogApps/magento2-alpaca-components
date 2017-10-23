@@ -1,7 +1,6 @@
 {
   "name": "snowdog-frontend-components",
   "scripts": {
-    "gulp": "gulp",
     "postinstall": "gulp fractal:build"
   },
   "dependencies": {
