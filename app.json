@@ -1,6 +1,3 @@
 {
-    "name": "magento2-alpaca-components",
-    "scripts": {
-        "postdeploy": "npm install -g gulp-cli && gulp fractal:build"
-    }
+    "name": "magento2-alpaca-components"
   }
