@@ -2,7 +2,7 @@
   "name": "snowdog-frontend-components",
   "scripts": {
     "gulp": "gulp",
-    "postinstall": "npm run gulp fractal:build"
+    "postinstall": "gulp fractal:build"
   },
   "dependencies": {
     "@frctl/fractal": "~1.1.1",
