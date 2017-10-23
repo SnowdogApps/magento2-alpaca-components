@@ -1,22 +1,42 @@
 $link-color            : $color-primary !default;
 $link-decoration       : none !default;
+$link-font-family      : $font-family-base !default;
+$link-font-weight      : $font-weight-normal !default;
 $link-hover-color      : darken($link-color, 15%) !default;
 $link-hover-decoration : underline !default;
+$link-transition       : $transition-base !default;
 
 .link {
     color: $link-color;
     text-decoration: $link-decoration;
+    transition: $link-transition;
+    font-family: $link-font-family;
+    font-weight: $link-font-weight;
+
     &:hover {
         color: $link-hover-color;
         text-decoration: $link-hover-decoration;
     }
-
-    &--hidden {
+    // visible only for screen readers and when focused
+    &--visually-hidden {
         position: absolute;
-        text-indent: 200%;
-        height: 0.008em;
-        width: 0.008em;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
         overflow: hidden;
+        border: 0;
+
+        &:focus,
+        &:active {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            position: static;
+            width: auto;
+        }
     }
 }
 

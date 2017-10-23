@@ -1,15 +1,14 @@
 <div class="input {{ class }}" {{{ attribute }}}>
-    <label class="input__label {{ label.class }}"
+    <label class="label {{ label.class }}"
            for="input"
            {{{ label.attribute }}}
     >
         {{ label.text }}
     </label>
-
-    <input class="input__field {{ input.class }}"
+    <input class="input__field {{ field.class }}"
            id="input"
            type="text"
-           placeholder="{{ input.placeholder }}"
-           {{{ input.attribute }}}
+           placeholder="{{ field.placeholder }}"
+           {{{ field.attribute }}}
     >
 </div>

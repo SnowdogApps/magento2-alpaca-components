@@ -1,0 +1,32 @@
+$popup-z-index   : 50;
+$popup-arrow-size: 21px;
+$popup-arrow-top : -10px;
+
+.popup {
+    display: none;
+    position: absolute;
+    width: 400px;
+    padding: 10px;
+    z-index: $popup-z-index;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: $white;
+
+    &--active {
+        display: block;
+    }
+
+    &--full-width {
+        width: 100vw;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: $popup-arrow-top;
+        width: $popup-arrow-size;
+        height: $popup-arrow-size;
+        background: $white;
+        transform: rotate(45deg);
+        box-shadow: -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
+        z-index: -1;
+    }
+}

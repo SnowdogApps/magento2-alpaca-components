@@ -1,19 +1,20 @@
-'use strict'
+/* global Choices */
 
-/*global Choices */
+(function() { // eslint-disable-line
+  'use strict'
 
-const selects = [...document.querySelectorAll('.select')];
+  const selects = [...document.querySelectorAll('.select__field')];
 
-selects.forEach(select => {
-  new Choices(select, {
-    placeholder: true,
-    placeholderValue: 'Search item',
-    classNames: {
-      containerInner: 'select',
-      list: 'select__list',
-      input: 'select__input',
-      item: 'select__item',
-      listSingle: 'select__list--single',
-    }
+  selects.forEach(select => {
+    new Choices(select, {
+      searchEnabled: false,
+      classNames: {
+        containerInner: 'select__field',
+        list: 'select__field-list',
+        input: 'select__field-input',
+        item: 'select__field-item',
+        listSingle: 'select__field-list--single'
+      }
+    });
   });
-});
+}());

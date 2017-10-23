@@ -1,14 +1,17 @@
-// Env
+# Jetbrains IDE
+.idea
+
+# Env
 .DS_Store
 
-// Dependencies
+# Dependencies
 node_modules/*
 
-// Build
+# Build
 build/*
 dest/*
 public/css/*
 public/images/icons-sprite.svg
 
-// Libs
+# Libs
 vendor/*

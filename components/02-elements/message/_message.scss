@@ -1,126 +1,51 @@
+$message-background        : $gray;
+$message-background-success: $green;
+$message-background-error  : $red;
+
+$message-color             : $white;
+$message-color-red         : $red;
+$message-color-green       : $green;
+
+$message-padding-base      : 15px;
+$message-margin-base       : 15px;
+
 .message {
+    background-color: $message-background;
+    color: $message-color;
+    position: relative;
+    padding: 5px ($message-padding-base * 2);
+    margin-bottom: $message-margin-base;
+    font-size: $font-size-small;
     width: 100%;
-    background-color: $gray-lightest;
-    transition: height 0.3s;
-    box-sizing: border-box;
+    transition: $transition-base;
 
-    &--with-button {
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 6;
+    &--success {
+        background-color: $message-background-success;
+        color: rgba($message-color, 0.9);
 
-        .message__message {
-            display: block;
-            margin-bottom: 10px;
-
-            @include mq($screen-m) {
-                display: inline-block;
-                margin-bottom: 0;
-                margin-right: 35px;
-            }
-        }
-
-        .message__text {
-            text-transform: none;
-            display: inline;
-            font-weight: 400;
-            margin: 0;
-        }
-
-        .message__link {
-            text-transform: none;
-            display: inline;
-            border: none;
-            padding: 0;
-            margin: 0;
-            text-decoration: underline;
-
-            @include links(hover) {
-                color: $black;
-            }
-        }
-
-        .message__close {
-            display: inline-block;
-            position: relative;
-            top: auto;
-            right: auto;
-            width: auto;
-            height: auto;
-            font-weight: 400;
-            font-size: 12px;
-            &:hover {
-                text-decoration: underline;
-            }
+        &:after {
+            content: "\2713";   
         }
     }
 
-    &--closed {
-        overflow: hidden;
-    }
+    &--error {
+        background-color: $message-background-error;
+        color: rgba($message-color, 0.9);
 
-    &__container {
-        display: block;
-        margin: 0 auto;
-        max-width: $max-content-width;
-        position: relative;
-        text-align: center;
-        padding: 10px 35px;
-    }
-
-    &__message {
-        display: block;
-        margin: 0;
-        text-align: center;
-    }
-
-    &__text {
-        font-size: 12px;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-
-        @include mq($screen-m) {
-            display: inline-block;
-            margin-bottom: 0;
-            margin-right: 35px;
+        &:after {
+            content: "\2715";
         }
     }
 
-    &__link {
-        @include links() {
-            display: inline-block;
-            font-weight: 400;
-            font-size: 12px;
-            border: 1px solid $white;
-            padding: 5px;
-        }
-    }
-
-    &__close {
+    &:after {
+        color: $message-color;
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 35px;
-        height: 35px;
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-
-        &--icon {
-            fill: $white;
-            width: 10px;
-            height: 10px;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            position: absolute;
-        }
+        left: 0;
+        top: 0;            
+        height: 100%;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

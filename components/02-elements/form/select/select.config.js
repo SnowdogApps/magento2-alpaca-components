@@ -1,5 +1,9 @@
 module.exports = {
   context: {
+    label: {
+      attribute: '',
+      text: 'Label text',
+    },
     options: [
       {
         value: 'option1',

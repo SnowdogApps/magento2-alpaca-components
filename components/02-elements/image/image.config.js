@@ -1,6 +1,8 @@
 module.exports = {
   context: {
-    src: '/images/banner/banner-480_480.png'
+    src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+    dataSrc: '/images/banner/banner-480_480.png',
+    alt: 'image alt text'
   },
   variants: [
     {

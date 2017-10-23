@@ -1,11 +1,15 @@
+$form-legend-font-size  : $font-size-large !default;
+$form-legend-line-height: 1.2 !default;
+
 .form {
     &--compact {
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             display: flex;
             justify-content: center;
         }
 
         .form__heading {
+            display: none;
             line-height: $button-height;
             margin-right: 20px;
         }
@@ -24,22 +28,39 @@
 
             &__field {
                 width: 100%;
-                border: $button-icon-border;
                 line-height: $button-height;
                 height: $button-height;
-                border-radius: 0;
-                @include mq($screen-s) {
-                    width: 290px;
-                }
-            }
-
-            &__label {
-                margin: 0 10px 0 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
         .button {
+            display: block;
             margin: 0 0 0 (-$button-icon-border-width);
+            &--native-link {
+                margin: 0;
+            }
         }
+
+    }
+
+    &__fieldset,
+    .fieldset {
+        border: 0;
+        margin: 0 0 40px;
+        padding: 0;
+    }
+
+    &__legend,
+    .legend {
+        margin: 0 0 25px;
+        padding: 0;
+        font-size: $form-legend-font-size;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: $form-legend-line-height;
+        font-style: inherit;
     }
 }

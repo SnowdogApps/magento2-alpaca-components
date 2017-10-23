@@ -14,7 +14,7 @@ $list-icon-size          : 16px !default;
 $list-image-width        : 16px !default;
 
 // Divided
-$list-divider            : 1px solid $gray-dark !default;
+$list-divider            : 1px solid $gray-darker !default;
 
 .list {
     margin: $list-margin;
@@ -30,6 +30,20 @@ $list-divider            : 1px solid $gray-dark !default;
         &:last-child {
             padding-bottom: 0;
         }
+    }
+
+    &__label {
+        clear: left;
+        float: left;
+        padding: 0 5px 5px 0;
+        &:after {
+            content: ': ';
+        }
+    }
+
+    &__value {
+        float: left;
+        padding: 0 5px 5px 0;
     }
 
     .list__content {
@@ -115,5 +129,8 @@ $list-divider            : 1px solid $gray-dark !default;
                 }
             }
         }
+    }
+    &--description {
+        display: inline-block;
     }
 }

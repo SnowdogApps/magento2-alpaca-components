@@ -1,55 +1,62 @@
-$select-border-color     : #b7b7b7 !default;
-$select-padding          : 10px 15px !default;
-$select-border-radius    : $border-radius !default;
+$select-border-color: #d9d9d9 !default;
+$select-padding: 10px 15px !default;
+$select-border-radius: $border-radius !default;
 
 .select {
-    width: 100%;
-    border: 1px solid $select-border-color;
-    border-radius: $select-border-radius;
-    position: relative;
-    background: $white;
+    margin-bottom: 10px;
 
-    &__item {
+    &__field {
         position: relative;
-        padding: $select-padding;
-        cursor: pointer;
-    }
+        background: $white;
 
-    &__list {
-        &--single {
-            display: inline-block;
-            padding: 0;
+        &--native {
             width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #d9d9d9;
+            appearance: none;
         }
-    }
 
-    &__input {
-        width: 100%;
-        display: block;
-        padding: $select-padding;
-        border-width: 0 0 1px 0;
-        border-style: solid;
-        border-color: $select-border-color;
-
-        &:focus {
-            outline: none;
+        &-item {
+            position: relative;
+            padding: $select-padding;
+            cursor: pointer;
         }
-    }
 
-    &__list {
-        margin: 0;
-        padding-left: 0;
-        list-style: none;
-        border-bottom-left-radius: $select-border-radius;
-        border-bottom-right-radius: $select-border-radius;
-    }
+        &-list {
+            border-radius: $select-border-radius;
 
-    .choices {
-        &.is-open {
-            .select__field {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                border-bottom: 0;
+            &--single {
+                display: inline-block;
+                padding: 0;
+                width: 100%;
+                border: 1px solid $select-border-color;
+            }
+
+            &--dropdown {
+                border: 1px solid $select-border-color;
+            }
+        }
+
+        &-input {
+            width: 100%;
+            display: block;
+            padding: $select-padding;
+            border-width: 0 0 1px 0;
+            border-style: solid;
+            border-color: $select-border-color;
+
+            &:focus {
+                outline: none;
+            }
+        }
+        // Choices.js lib styles overwrites
+        .choices {
+            &.is-open {
+                .select__field {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-bottom: 0;
+                }
             }
         }
     }
