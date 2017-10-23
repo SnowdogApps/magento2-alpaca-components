@@ -1,4 +1,6 @@
 module.exports = {
+  label: 'Form',
+  name: 'dashboard-form',
   context: {
     title: 'Account Information',
     fields: [

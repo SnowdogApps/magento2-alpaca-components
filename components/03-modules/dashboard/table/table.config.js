@@ -1,4 +1,6 @@
 module.exports = {
+  label: 'Table',
+  name: 'dashboard-table',
   context: {
     title: 'Recent Orders',
     link: 'View All',

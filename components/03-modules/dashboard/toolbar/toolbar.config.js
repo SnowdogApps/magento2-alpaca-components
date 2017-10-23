@@ -1,4 +1,6 @@
 module.exports = {
+  label: 'Toolbar',
+  name: 'dashboard-toolbar',
   context: {
     leftItems: 'Items 1 to 10 of XX total',
     pager: {

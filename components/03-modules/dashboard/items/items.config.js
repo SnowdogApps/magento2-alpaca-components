@@ -1,4 +1,6 @@
 module.exports = {
+  label: 'Items',
+  name: 'dashboard-items',
   context: {
     title: 'Addresses',
     informations: [
