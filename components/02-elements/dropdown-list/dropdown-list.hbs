@@ -22,7 +22,11 @@
                     {{/if}}
                 </{{ itemTag }}>
                 {{#if contentElement}}
-                    <div class="dropdown-list__content" data-content="{{ id }}">
+                    <div id="{{ id }}"
+                         class="dropdown-list__content"
+                         data-content="{{ id }}"
+                         aria-hidden="true"
+                    >
                         {{{ contentElement }}}
                     </div>
                 {{/if}}

@@ -8,6 +8,17 @@ function setListHeight(item) {
     .reduce((a, b) => a + b, 0);
 }
 
+function setAriaAttributes(label, content, expanded) {
+  if (expanded) {
+    label.setAttribute('aria-expanded', 'false');
+    content.setAttribute('aria-hidden', 'true');
+  }
+  else {
+    label.setAttribute('aria-expanded', 'true');
+    content.setAttribute('aria-hidden', 'false');
+  }
+}
+
 function toggleContent(item) {
   const dropdownId      = item.dataset.dropdown,
         dropdownItem    = item.parentNode,
@@ -16,10 +27,12 @@ function toggleContent(item) {
   if (dropdownContent.clientHeight > 0) {
     dropdownContent.style.height = 0;
     dropdownItem.classList.remove(openClass);
+    setAriaAttributes(item, dropdownContent, true);
   }
   else {
     dropdownContent.style.height = `${setListHeight(dropdownContent)}px`;
     dropdownItem.classList.add(openClass);
+    setAriaAttributes(item, dropdownContent, false);
   }
 }
 
