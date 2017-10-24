@@ -1,10 +1,21 @@
+$product-list-item-margin               : 15px !default;
+$product-list-item-padding              : 15px !default;
+$product-list-item-font-size            : $font-size-small !default;
+$product-list-item-font-size-small      : $font-size-extra-small !default;
+$product-list-item-border               : 1px solid $gray-lighter !default;
+$product-list-item-details-color        : $gray !default;
+$product-list-item-name-color           : $gray-dark !default;
+$product-list-item-price-color          : $color-primary !default;
+$product-list-item-actions-button-width : 35px !default;
+$product-list-item-actions-button-height: 35px !default;
+
 .products-list-item {
     display: flex;
     width: 100%;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid $gray-lighter;
-    font-size: 12px;
+    margin-bottom: $product-list-item-margin;
+    padding-bottom: $product-list-item-padding;
+    border-bottom: $product-list-item-border;
+    font-size: $product-list-item-font-size-small;
 
     &__image {
         flex: 0 0 100px;
@@ -14,19 +25,18 @@
     &__details {
         position: relative;
         flex: 1;
-        color: $gray;
+        color: $product-list-item-details-color;
 
         &-name {
             display: block;
             margin-bottom: 5px;
-            font-size: 16px;
-            color: $gray-darker;
+            color: $product-list-item-name-color;
         }
 
         &-price {
             margin-bottom: 5px;
-            font-size: 14px;
-            color: $color-primary;
+            font-size: $product-list-item-font-size;
+            color: $product-list-item-price-color;
         }
 
         &-qty-wrapper {
@@ -50,7 +60,7 @@
             flex: 1;
             line-height: 35px;
             font-weight: 600;
-            font-size: 14px;
+            font-size: $product-list-item-font-size;
             @include mq($screen-s) {
                 margin: 10px 0 0 10px;
             }
@@ -75,7 +85,7 @@
             @include mq($screen-s) {
                 flex-direction: row;
             }
-            @include mq($screen-m ) {
+            @include mq($screen-m) {
                 flex-basis: 30%;
             }
 
@@ -94,9 +104,9 @@
         }
 
         &-button {
-            width: 35px;
-            min-width: 35px;
-            height: 35px;
+            width: $product-list-item-actions-button-width;
+            min-width: $product-list-item-actions-button-width;
+            height: $product-list-item-actions-button-height;
             border: none;
             margin-bottom: 0;
             margin-left: 5px;
