@@ -1,24 +1,17 @@
 .logo {
     display: block;
     padding: 12px 8px;
-    // padding: 10px 20px;
-
-    // @include mq($screen-s) {
-    //     display: inline-block;
-    //     width: 50%;
-    // }
-
-    // @include mq($screen-l) {
-    //     width: 260px;
-    // }
+    @include mq($screen-m) {
+        padding: 8px;
+    }
+    @include mq($screen-xl) {
+        padding: 16px;
+    }
 
     &__image {
-        height: 24px;
-        // max-width: 200px;
-        // margin: 0 auto;
-        //
-        // @include mq($screen-s) {
-        //     margin: 0;
-        // }
+        width: 80px;
+        @include mq($screen-m) {
+            width: 112px;
+        }
     }
 }

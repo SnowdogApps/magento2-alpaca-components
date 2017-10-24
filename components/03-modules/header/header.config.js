@@ -5,29 +5,23 @@ module.exports = {
       class: 'header__logo',
       logoSVG: true
     },
-    button: {
+    searchInput: {
+      class: 'header__search-input-wrapper',
+      label: {
+        class: 'header__search-label',
+      },
+      field: {
+        class: 'header__search-input',
+        placeholder: 'Search entire store here...'
+      }
+    },
+    searchButton: {
       tag: 'button',
       text: '',
       class: 'button--icon header__search-button',
       iconId: 'search',
-      iconClass: 'button__icon',
+      iconClass: 'button__icon header__search-icon',
       attributes: 'type="button"',
-    },
-    form: {
-      class: 'form--compact header__search-form',
-      input: {
-        class: 'header__input',
-        field: {
-          class: 'header__field',
-          placeholder: 'Search'
-        }
-      },
-      button: {
-        class: 'button--icon',
-        tag: 'a',
-        iconId: 'search',
-        iconClass: 'button__icon'
-      },
     },
     likeButton: {
       tag: 'button',
