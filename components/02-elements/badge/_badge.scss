@@ -1,24 +1,33 @@
+$badge-padding      : 7px 10px !default;
+$badge-label-color  : $white !default;
+$badge-background   : $color-primary !default;
+$badge-border-radius: $border-radius !default;
+$badge-color-success: $color-success !default;
+$badge-color-info   : $color-info !default;
+$badge-color-warning: $color-warning !default;
+$badge-color-danger : $color-danger !default;
+
 .badge {
     display: inline-flex;
-    padding: 7px 10px;
+    padding: $badge-padding;
     font-size: $font-size-extra-small;
-    color: $white;
-    background: $color-primary;
-    border-radius: $border-radius;
+    color: $badge-label-color;
+    background: $badge-background;
+    border-radius: $badge-border-radius;
 
     &--success {
-        background: $color-success;
+        background: $badge-color-success;
     }
 
     &--info {
-        background: $color-info;
+        background: $badge-color-info;
     }
 
     &--warning {
-        background: $color-warning;
+        background: $badge-color-warning;
     }
 
     &--danger {
-        background: $color-danger;
+        background: $badge-color-danger;
     }
 }
