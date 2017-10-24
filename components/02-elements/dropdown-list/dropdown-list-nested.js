@@ -9,9 +9,21 @@ function setListHeight(item) {
     .reduce((a, b) => a + b, 0);
 }
 
+function setAriaAttributes(label, content, expanded) {
+  if (expanded) {
+    label.setAttribute('aria-expanded', 'false')
+    content.setAttribute('aria-hidden', 'true');
+  }
+  else {
+    label.setAttribute('aria-expanded', 'true');
+    content.setAttribute('aria-hidden', 'false');
+  }
+}
+
 function toggleSubmenu(item, inner) {
   const dropdownId = item.dataset.dropdown;
-  let dropdownList = document.querySelector(`.dropdown-list__inner-list--level1[data-dropdown="${dropdownId}"]`),
+  let dropdownList = document
+    .querySelector(`.dropdown-list__inner-list--level1[data-dropdown="${dropdownId}"]`),
       innerLists   = item.parentNode.querySelectorAll('.dropdown-list__inner-list--level2'),
       upperList    = null;
 
@@ -28,6 +40,8 @@ function toggleSubmenu(item, inner) {
       innerLists.forEach(key => {
         key.style.height = 0;
         key.parentNode.classList.remove(activeClass);
+        const innerListLabel = key.parentNode.querySelector(`[data-dropdown="${key.getAttribute('id')}"]`);
+        setAriaAttributes(innerListLabel, key, true);
       });
     }
     else if (upperList) {
@@ -35,10 +49,18 @@ function toggleSubmenu(item, inner) {
     }
 
     dropdownList.style.height = 0;
+    const  listLabel = dropdownList
+      .parentNode
+      .querySelector(`[data-dropdown="${dropdownList.getAttribute('id')}"]`);
+    setAriaAttributes(listLabel, dropdownList, true);
   }
-  else {
-    const listHeight = setListHeight(dropdownList);
+  else if (dropdownList) {
+    const listHeight = setListHeight(dropdownList),
+          listLabel = dropdownList
+            .parentNode
+            .querySelector(`[data-dropdown="${dropdownList.getAttribute('id')}"]`);
     dropdownList.style.height = listHeight + 'px';
+    setAriaAttributes(listLabel, dropdownList, false);
 
     if (upperList) {
       upperList.style.height = upperList.clientHeight + listHeight + 'px';

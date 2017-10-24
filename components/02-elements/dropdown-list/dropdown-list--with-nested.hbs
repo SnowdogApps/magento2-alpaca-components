@@ -13,6 +13,7 @@
                    aria-label="{{ title }}"
                    {{#if id }}
                         data-dropdown="{{ id }}"
+                        aria-controls="{{ id }}"
                    {{/if}}
                 >
                     {{ title }}
@@ -29,7 +30,9 @@
                             dropdown-list__inner-list--level1
                         "
                         {{#if id }}
+                            id="{{ id }}"
                             data-dropdown="{{ id }}"
+                            aria-hidden="true"
                         {{/if}}
                     >
                         {{#each listNested }}
@@ -41,7 +44,7 @@
                                     {{/if}}
                                 "
                             >
-                                <a href="#"
+                                <a {{{ itemAttributes }}}
                                    class="dropdown-list__inner-label"
                                    aria-label="{{ itemName }}"
                                    {{#if id }}
@@ -63,7 +66,9 @@
                                                dropdown-list__inner-list--level2
                                         "
                                         {{#if id }}
+                                            id="{{ id }}"
                                             data-dropdown="{{ id }}"
+                                            aria-hidden="true"
                                         {{/if}}
                                     >
                                         {{#each sublist}}
