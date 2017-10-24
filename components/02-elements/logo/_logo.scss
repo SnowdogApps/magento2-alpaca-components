@@ -4,21 +4,11 @@ $logo-padding: 10px 20px !default;
     display: block;
     padding: $logo-padding;
 
-    @include mq($screen-s) {
-        display: inline-block;
-        width: 50%;
-    }
-
-    @include mq($screen-l) {
-        width: 260px;
-    }
-
     &__image {
-        max-width: 200px;
-        margin: 0 auto;
+        width: 80px;
 
-        @include mq($screen-s) {
-            margin: 0;
+        @include mq($screen-m) {
+            width: 112px;
         }
     }
 }
