@@ -1,18 +1,30 @@
-$input-border-color     : #d9d9d9 !default;
-$input-padding          : 10px 15px !default;
-$input-border-radius    : $border-radius !default;
-$input-placeholder-color: $gray-light !default;
+$input-margin             : 10px !default;
+$input-padding            : 10px 15px !default;
+$input-field-border       : 1px solid #d9d9d9 !default;
+$input-field-border-radius: $border-radius !default;
+$input-placeholder-color  : $gray-light !default;
 
-$textarea-min-height    : 100px !default;
+$textarea-min-height      : 100px !default;
 
 .input {
-    margin-bottom: 10px;
+    margin-bottom: $input-margin;
+
+    &--inline {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        .input__label {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+    }
 
     &__field {
         width: 100%;
         padding: $input-padding;
-        border: 1px solid $input-border-color;
-        border-radius: $input-border-radius;
+        border: $input-field-border;
+        border-radius: $input-field-border-radius;
 
         @include links(active) {
             outline: none;
@@ -26,17 +38,6 @@ $textarea-min-height    : 100px !default;
             min-width: 100%;
             max-width: 100%;
             min-height: $textarea-min-height;
-        }
-    }
-
-    &--inline {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-
-        .input__label {
-            margin-bottom: 0;
-            margin-right: 20px;
         }
     }
 }

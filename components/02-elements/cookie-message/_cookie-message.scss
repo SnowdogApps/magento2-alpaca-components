@@ -1,8 +1,82 @@
+$cookie-message-width      : 100% !default;
+$cookie-message-color      : $gray-lightest !default;
+$cookie-message-transition : height 0.3s !default;
+$cookie-message-margin     : 10px !default;
+$cookie-message-padding    : 10px !default;
+$cookie-message-font-size  : $font-size-extra-small !default;
+$cookie-message-close-width: 35px !default;
+$cookie-message-link-border: 1px solid $white !default;
+$cookie-message-icon-fill  : $white !default;
+$cookie-message-icon-width : 10px !default;
+
 .cookie-message {
-    width: 100%;
-    background-color: $gray-lightest;
-    transition: height 0.3s;
+    width: $cookie-message-width;
+    background-color: $cookie-message-color;
+    transition: $cookie-message-transition;
     box-sizing: border-box;
+
+    &__container {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-width: $max-content-width;
+        text-align: center;
+        padding: $cookie-message-padding 35px;
+    }
+
+    &__message {
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: $cookie-message-font-size;
+        font-weight: 700;
+        display: block;
+        margin-bottom: $cookie-message-margin;
+        text-transform: uppercase;
+
+        @include mq($screen-m) {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: 35px;
+        }
+    }
+
+    &__link {
+        @include links() {
+            display: inline-block;
+            font-weight: 400;
+            font-size: $cookie-message-font-size;
+            border: $cookie-message-link-border;
+            padding: 5px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: $cookie-message-close-width;
+        height: $cookie-message-close-width;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+
+        &--icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            fill: $cookie-message-icon-fill;
+            width: $cookie-message-icon-width;
+            height: $cookie-message-icon-width;
+        }
+    }
 
     &--with-button {
         text-align: center;
@@ -13,7 +87,7 @@
 
         .cookie-message__message {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: $cookie-message-margin;
 
             @include mq($screen-m) {
                 display: inline-block;
@@ -50,7 +124,7 @@
             width: auto;
             height: auto;
             font-weight: 400;
-            font-size: 12px;
+            font-size: $cookie-message-font-size;
             &:hover {
                 text-decoration: underline;
             }
@@ -59,68 +133,5 @@
 
     &--closed {
         overflow: hidden;
-    }
-
-    &__container {
-        display: block;
-        margin: 0 auto;
-        max-width: $max-content-width;
-        position: relative;
-        text-align: center;
-        padding: 10px 35px;
-    }
-
-    &__message {
-        display: block;
-        margin: 0;
-        text-align: center;
-    }
-
-    &__text {
-        font-size: 12px;
-        font-weight: 700;
-        display: block;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-
-        @include mq($screen-m) {
-            display: inline-block;
-            margin-bottom: 0;
-            margin-right: 35px;
-        }
-    }
-
-    &__link {
-        @include links() {
-            display: inline-block;
-            font-weight: 400;
-            font-size: 12px;
-            border: 1px solid $white;
-            padding: 5px;
-        }
-    }
-
-    &__close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 35px;
-        height: 35px;
-        background: none;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-
-        &--icon {
-            fill: $white;
-            width: 10px;
-            height: 10px;
-            margin: auto;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            position: absolute;
-        }
     }
 }

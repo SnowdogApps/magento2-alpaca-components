@@ -1,3 +1,12 @@
+$side-menu-trigger-width             : 30px !default;
+$side-menu-trigger-height            : 30px !default;
+$side-menu-trigger-font-size         : $font-size-extra-small !default;
+$side-menu-trigger-text-color        : $gray !default;
+$side-menu-trigger-line-background   : $gray-dark !default;
+$side-menu-trigger-line-height       : 3px !default;
+$side-menu-trigger-line-border-radius: 3px !default;
+$side-menu-trigger-transition        : $transition-base !default;
+
 .side-menu-trigger {
     padding: 0;
     border: 0;
@@ -13,7 +22,7 @@
     }
 
     &:hover .side-menu-trigger__line {
-        background: $gray-darker;
+        background: $side-menu-trigger-line-background;
     }
 
     &:hover .side-menu-trigger__text {
@@ -22,10 +31,10 @@
 
     &__handler,
     &__icon {
-        width: 30px;
-        height: 30px;
         position: relative;
         overflow: hidden;
+        width: $side-menu-trigger-width;
+        height: $side-menu-trigger-height;
     }
 
     &__icon {
@@ -35,14 +44,14 @@
     }
 
     &__text {
-        color: $gray;
-        transition: $transition-base;
-        font-size: 12px;
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
+        color: $side-menu-trigger-text-color;
+        font-size: $side-menu-trigger-font-size;
         text-align: center;
+        transition: $side-menu-trigger-transition;
 
         &--close {
             bottom: -10px;
@@ -51,13 +60,13 @@
     }
 
     &__line {
-        width: 100%;
         position: absolute;
-        height: 3px;
-        border-radius: 3px;
-        background: $gray-darker;
-        transition: $transition-base;
         left: 0;
+        width: 100%;
+        height: $side-menu-trigger-line-height;
+        border-radius: $side-menu-trigger-line-border-radius;
+        background: $side-menu-trigger-line-background;
+        transition: $side-menu-trigger-transition;
 
         &:nth-child(1) {
             top: 0;
@@ -81,7 +90,7 @@
             &:nth-child(2),
             &:nth-child(3) {
                 top: 13px;
-                background: $gray-darker;
+                background: $side-menu-trigger-line-background;
             }
 
             &:nth-child(2) {

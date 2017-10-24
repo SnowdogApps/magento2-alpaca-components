@@ -3,6 +3,7 @@ $list-margin             : 10px 0 !default;
 $list-padding            : 0 !default;
 $list-item-padding       : 5px 0 !default;
 $list-content-padding    : 10px !default;
+$list-label-padding      : 0 5px 5px 0 !default;
 
 // Horizontal
 $list-padding--horizontal: 10px !default;
@@ -14,41 +15,12 @@ $list-icon-size          : 16px !default;
 $list-image-width        : 16px !default;
 
 // Divided
-$list-divider            : 1px solid $gray-darker !default;
+$list-divider-border     : 1px solid $gray-dark !default;
 
 .list {
     margin: $list-margin;
     padding: $list-padding;
     list-style: $list-style;
-
-    &__item {
-        display: list-item;
-        padding: $list-item-padding;
-        &:first-child {
-            padding-top: 0;
-        }
-        &:last-child {
-            padding-bottom: 0;
-        }
-    }
-
-    &__label {
-        clear: left;
-        float: left;
-        padding: 0 5px 5px 0;
-        &:after {
-            content: ': ';
-        }
-    }
-
-    &__value {
-        float: left;
-        padding: 0 5px 5px 0;
-    }
-
-    .list__content {
-        padding-left: $list-content-padding;
-    }
 
     &--center {
         justify-content: center;
@@ -61,6 +33,13 @@ $list-divider            : 1px solid $gray-darker !default;
         flex-wrap: wrap;
         .list__item {
             padding: $list-padding--horizontal;
+
+            &:first-child {
+                padding-top: $list-padding--horizontal;
+            }
+            &:last-child {
+                padding-bottom: $list-padding--horizontal;
+            }
         }
     }
 
@@ -73,6 +52,13 @@ $list-divider            : 1px solid $gray-darker !default;
         .list__item {
             @include mq($screen-m) {
                 padding: $list-padding--horizontal;
+
+                &:first-child {
+                    padding-top: $list-padding--horizontal;
+                }
+                &:last-child {
+                    padding-bottom: $list-padding--horizontal;
+                }
             }
         }
     }
@@ -100,7 +86,7 @@ $list-divider            : 1px solid $gray-darker !default;
 
     &--divided {
         .list__item {
-            border-bottom: $list-divider;
+            border-bottom: $list-divider-border;
             &:last-child {
                 border-bottom: none;
             }
@@ -109,7 +95,7 @@ $list-divider            : 1px solid $gray-darker !default;
         &.list--horizontal {
             .list__item {
                 border-bottom: none;
-                border-right: $list-divider;
+                border-right: $list-divider-border;
                 &:last-child {
                     border-right: none;
                 }
@@ -120,7 +106,7 @@ $list-divider            : 1px solid $gray-darker !default;
             .list__item {
                 @include mq($screen-m) {
                     border-bottom: none;
-                    border-right: $list-divider;
+                    border-right: $list-divider-border;
                 }
                 &:last-child {
                     @include mq($screen-m) {
@@ -130,7 +116,37 @@ $list-divider            : 1px solid $gray-darker !default;
             }
         }
     }
+
     &--description {
         display: inline-block;
+    }
+
+    &__item {
+        display: list-item;
+        padding: $list-item-padding;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__label {
+        clear: left;
+        float: left;
+        padding: $list-label-padding;
+        &:after {
+            content: ': ';
+        }
+    }
+
+    &__value {
+        float: left;
+        padding: $list-label-padding;
+    }
+
+    .list__content {
+        padding-left: $list-content-padding;
     }
 }
