@@ -9,8 +9,8 @@ function setListHeight(item) {
 }
 
 function toggleContent(item) {
-  const dropdownId = item.dataset.dropdown,
-        dropdownItem = item.parentNode,
+  const dropdownId      = item.dataset.dropdown,
+        dropdownItem    = item.parentNode,
         dropdownContent = dropdownItem.querySelector(`.dropdown-list__content[data-content="${dropdownId}"]`);
 
   if (dropdownContent.clientHeight > 0) {

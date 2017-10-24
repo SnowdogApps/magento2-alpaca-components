@@ -46,8 +46,8 @@ module.exports = {
       }
     },
     {
-    name: 'with-nested',
-    context: {
+      name: 'with-nested',
+      context: {
         class: 'dropdown-list--with-nested',
         dropdowns: [
           {
