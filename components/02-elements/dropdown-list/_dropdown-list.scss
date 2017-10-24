@@ -1,51 +1,47 @@
+$dropdown-list__width:                100% !default;
+$dropdown-list__max-fold-width:       320px !default;
+$dropdown-list__bg-color:             $white !default;
+$dropdown-list__item-color:           $font-color-base !default;
+$dropdown-list__item-color-active:    $color-primary !default;
+$dropdown-list__item-bg-color:        $white !default;
+$dropdown-list__item-bg-color-active: $black !default;
+$dropdown-list__icon-width:           16px !default;
+$dropdown-list__icon-height:          16px !default;
+$dropdown-list__icon-color:           $black !default;
+$dropdown-list__icon-color-active:    $color-primary !default;
+$dropdown-list__font-size:            $font-size-base !default;
+$dropdown-list__item-padding:         16px !default;
+$dropdown-list__content-padding:      16px !default;
+$dropdown-list__outline:              none !default;
+$dropdown-list__height-trasition:     height 0.3s !default;
+
 .dropdown-list {
-    width: 100%;
+    width: $dropdown-list__width;
     position: relative;
-    padding: 10px;
-    background-color: $white;
+    background-color: $dropdown-list__bg-color;
 
     @include mq($screen-l) {
-        max-width: 320px;
-    }
-
-    @include mq($screen-xl) {
-        padding-left: 0;
+        max-width: $dropdown-list__max-fold-width;
     }
 
     &__list {
         display: block;
-        width: 100%;
+        width: $dropdown-list__width;
         list-style-type: none;
         padding: 0;
         margin: 0;
-
-        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
     }
 
     &__icon {
         position: absolute;
-        right: 15px;
-        top: 20px;
-        width: 10px;
-        height: 6px;
-        color: $gray;
-        transition: transform 0.3s, opacity 0.3s;
-
-        @include mq($screen-m) {
-            right: 10px;
-        }
-
-        &--inner {
-            width: 8px;
-            height: 8px;
-            top: 15px;
-            opacity: 0.7;
-        }
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        width: $dropdown-list__icon-width;
+        height: $dropdown-list__icon-height;
+        margin: auto;
+        fill: $dropdown-list__icon-color;
+        transition: $transition-base;
     }
 
     &__item {
@@ -53,168 +49,84 @@
         position: relative;
         display: block;
         padding: 0;
-        font-weight: 700;
-        font-size: 12px;
-        text-transform: uppercase;
+        font-size: $dropdown-list__font-size;
         cursor: pointer;
-        transition: box-shadow 0.5s;
 
-        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-            flex-basis: 24%;
-
-            &:hover {
-                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+        &--open {
+            .dropdown-list__label {
+                color: $dropdown-list__item-color-active;
+                background-color: $dropdown-list__item-bg-color-active;
+            }
+            .dropdown-list__icon {
+                fill: $dropdown-list__icon-color-active;
+                transform: rotate(180deg);
             }
         }
 
-        &.open {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
-            }
-
-            .filter__list {
-                margin-top: 10px;
-            }
-
-            .dropdown-list__link {
-                text-decoration: none;
-
-                & > .dropdown-list__icon {
-                    transform: rotate(180deg);
-                }
-                @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                    &:after {
-                        visibility: visible;
-                    }
-                }
+        &--collapse {
+            .dropdown-list__label {
+                padding-right: 30px;
             }
         }
     }
 
-    &__link {
-        text-decoration: none;
-
-        @include links(active) {
-            display: block;
-            padding: 15px;
-            font-weight: 700;
-            color: $font-color-base;
-            transition: box-shadow 0.5s;
-
-            @include mq($screen-m) {
-                padding: 15px 22px 15px 15px;
-            }
-        }
-
-        @include links(hover) {
-            color: $font-color-base;
-            text-decoration: none;
-            box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
-
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                box-shadow: none;
-            }
-        }
-
-        // hack to set box-shadow on opening absolute list and title element
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 10px;
-            background-color: $white;
-            width: 100%;
-            z-index: 109;
-            visibility: hidden;
-            transition: visibility 0.5s;
-        }
-    }
-
-    &__inner-list {
-        list-style-type: none;
+    &__label {
         display: block;
-        height: 0;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-        transition: margin 0.3s, height 0.5s;
-        font-size: 12px;
-
-        &--level1 {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                position: absolute;
-                width: 100%;
-                background-color: $white;
-                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
-                z-index: 99;
-            }
-        }
-
-        &--level2 {
-            padding-left: 20px;
-        }
-    }
-
-    &__inner-item {
         position: relative;
-        display: block;
-
-        &--level1 {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                @include links(hover) {
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-            }
-        }
-
-        &--level2 {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                @include links(hover) {
-                    font-weight: 400;
-                    color: $color-primary;
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        &.open {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                & > .dropdown-list__icon {
-                    transform: rotate(45deg);
-                }
-            }
-        }
-    }
-
-    &__inner-link {
+        width: 100%;
+        color: $dropdown-list__item-color;
+        background-color: $dropdown-list__item-bg-color;
+        padding: $dropdown-list__item-padding;
+        margin: 0;
+        border: 0;
         text-decoration: none;
+        text-align: left;
+        cursor: pointer;
+        transition: $transition-base;
 
-        @include links(active) {
-            display: block;
-            padding: 15px 20px;
-            text-transform: none;
-            font-weight: 400;
-            color: $font-color-base;
+        &:hover,
+        &:focus {
+            color: $dropdown-list__item-color-active;
+            background-color: $dropdown-list__item-bg-color-active;
+            text-decoration: none;
+            outline: $dropdown-list__outline;
+
+            .dropdown-list__icon {
+                fill: $dropdown-list__icon-color-active;
+            }
         }
     }
 
-    &--item-wide {
+    &__content {
+        height: 0;
+        overflow: hidden;
+        padding: 0 $dropdown-list__content-padding;
+        transition: $dropdown-list__height-trasition;
+    }
+
+    &--middle-inline {
         .dropdown-list__list {
             @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                flex-flow: row wrap;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: flex-start;
             }
         }
 
         .dropdown-list__item {
-            flex-basis: 100%;
+            flex-basis: 24%;
+        }
+
+        .dropdown-list__icon {
+            right: 10px;
+        }
+
+        .dropdown-list__content {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                position: absolute;
+                background-color: $dropdown-list__bg-color;
+            }
         }
     }
 }
