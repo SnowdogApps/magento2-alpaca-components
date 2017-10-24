@@ -1,0 +1,89 @@
+<div class="dropdown-list {{ class }}" >
+    <ul class="dropdown-list__list">
+        {{#each dropdowns as |dropdown|}}
+            <li class="
+                    dropdown-list__item
+                    {{#if listNested }}
+                        dropdown-list__item--parent
+                    {{/if}}
+                "
+            >
+                <{{ itemTag }} {{{ itemAttributes }}}"
+                   class="dropdown-list__label"
+                   {{#if id }}
+                        data-dropdown="{{ id }}"
+                   {{/if}}
+                >
+                    {{ title }}
+                    {{#if collapse }}
+                        <svg class="dropdown-list__icon">
+                            <use xlink:href="{{ svg 'arrow-down' }}"></use>
+                        </svg>
+                    {{/if}}
+                </{{ itemTag }}>
+
+                {{#if listNested }}
+                    <ul class="
+                            dropdown-list__inner-list
+                            dropdown-list__inner-list--level1
+                        "
+                        {{#if id }}
+                            data-dropdown="{{ id }}"
+                        {{/if}}
+                    >
+                        {{#each listNested }}
+                            <li class="
+                                    dropdown-list__inner-item
+                                    dropdown-list__inner-item--level1
+                                    {{#if sublist}}
+                                        dropdown-list__inner-item--parent
+                                    {{/if}}
+                                "
+                            >
+                                <{{ itemTag }} {{{ itemAttributes }}}"
+                                   class="dropdown-list__inner-label"
+                                   {{#if id }}
+                                        data-dropdown="{{ id }}"
+                                   {{/if}}
+                                >
+
+                                    {{ itemName }}
+
+                                    {{#if sublist }}
+                                        <svg class="dropdown-list__icon dropdown-list__icon--inner">
+                                            <use xlink:href="{{ svg 'arrow-down' }}"></use>
+                                        </svg>
+                                    {{/if}}
+                                </{{ itemTag }}>
+
+                                {{#if sublist}}
+                                    <ul class="dropdown-list__inner-list
+                                               dropdown-list__inner-list--level2
+                                        "
+                                        {{#if id }}
+                                            data-dropdown="{{ id }}"
+                                        {{/if}}
+                                    >
+                                        {{#each sublist}}
+                                            <li class="dropdown-list__inner-item
+                                                       dropdown-list__inner-item--level2
+                                                "
+                                            >
+                                                <{{itemTag}} {{ itemAttributes }}"
+                                                   class="dropdown-list__inner-label"
+                                                >
+                                                    {{ itemName }}
+                                                </{{ itemTag }}>
+                                            </li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>
+<script src="{{static 'dropdown-list-nested.js' }}"></script>
