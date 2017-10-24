@@ -1,0 +1,14 @@
+<form class="newsletter {{class}}">
+    <div class="newsletter__heading {{heading.class}}">
+        {{ heading.text }}
+        <br>This above doesn't work :(
+        Sign up to our twisted newsletter
+    </div>
+    <div class="newsletter__content">
+        {{> '@input' input }}
+        here below I want have button with button.text defined in newsletter.config.js <br>
+        {{render '@button' button merge=true}}
+    </div>
+</form>
+
+// doesnt' generate other variations?
