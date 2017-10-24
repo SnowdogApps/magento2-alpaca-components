@@ -1,80 +1,80 @@
 // Colors
-$white                 : #fff !default;
-$black                 : #000 !default;
-$red                   : #e85b55 !default;
-$orange                : #fab216 !default;
-$yellow                : #ffd500 !default;
-$green                 : #00b840 !default;
-$blue                  : #0275d8 !default;
-$teal                  : #5bc0de !default;
-$pink                  : #ff5b77 !default;
-$purple                : #613d7c !default;
+$white                       : #fff !default;
+$black                       : #000 !default;
+$red                         : #e85b55 !default;
+$orange                      : #fab216 !default;
+$yellow                      : #ffd500 !default;
+$green                       : #00b840 !default;
+$blue                        : #0275d8 !default;
+$teal                        : #5bc0de !default;
+$pink                        : #ff5b77 !default;
+$purple                      : #613d7c !default;
 
 // Grayscale colors
-$gray-darker           : #292b2c !default;
-$gray-dark             : #333333 !default;
-$gray                  : #d1d0d4 !default;
-$gray-light            : #f5f5f6 !default;
-$gray-lighter          : #eceeef !default;
-$gray-lightest         : #f7f7f9 !default;
+$gray-darker                 : #292b2c !default;
+$gray-dark                   : #333333 !default;
+$gray                        : #d1d0d4 !default;
+$gray-light                  : #f5f5f6 !default;
+$gray-lighter                : #eceeef !default;
+$gray-lightest               : #f7f7f9 !default;
 
 // Semantic color scheme
-$color-primary         : $green !default;
-$color-success         : $green !default;
-$color-info            : $teal !default;
-$color-warning         : $orange !default;
-$color-danger          : $red !default;
-$color-inverse         : $gray-darker !default;
+$color-primary               : $green !default;
+$color-success               : $green !default;
+$color-info                  : $teal !default;
+$color-warning               : $orange !default;
+$color-danger                : $red !default;
+$color-inverse               : $gray-darker !default;
 
 // Background
-$bg-color-base         : $white !default;
-$bg-color-dark         : $black !default;
+$bg-color-base               : $white !default;
+$bg-color-dark               : $black !default;
 
 // Border
-$border-color-base     : $gray-dark !default;
-$border-width-base     : 1px !default;
-$border-style-base     : solid !default;
+$border-color-base           : $gray-dark !default;
+$border-width-base           : 1px !default;
+$border-style-base           : solid !default;
 
-$border-base           : $border-width-base $border-style-base $border-color-base !default;
+$border-base                 : $border-width-base $border-style-base $border-color-base !default;
 // Margin
-$margin-base           : 16px !default;
+$margin-base                 : 16px !default;
 
 // Padding
-$padding-base          : 16px !default;
+$padding-base                : 16px !default;
 
 // Typography
 $font-family-sans-serif      : "Montserrat", sans-serif !default;
 $font-family-sans-serif-bold : "Montserrat Bold", sans-serif !default;
 $font-family-sans-serif-black: "Montserrat Black", sans-serif !default;
-$font-family-monospace       :  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-monospace       : Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
-$font-family-base      : $font-family-sans-serif !default;
+$font-family-base            : $font-family-sans-serif !default;
 
-$font-color-base       : $gray-darker !default;
-$font-weight-normal    : normal !default;
-$font-weight-bold      : bold !default;
-$font-weight-base      : $font-weight-normal !default;
-$font-line-height      : 1.5 !default;
+$font-color-base             : $gray-darker !default;
+$font-weight-normal          : normal !default;
+$font-weight-bold            : bold !default;
+$font-weight-base            : $font-weight-normal !default;
+$font-line-height            : 1.5 !default;
 
-$font-size-extra-large : 22px !default;
-$font-size-large       : 18px !default;
-$font-size-base        : 14px !default;
-$font-size-small       : 12px !default;
-$font-size-extra-small : 10px !default;
+$font-size-extra-large       : 22px !default;
+$font-size-large             : 18px !default;
+$font-size-base              : 14px !default;
+$font-size-small             : 12px !default;
+$font-size-extra-small       : 10px !default;
 
 // Layout
-$max-content-width     : 1330px !default;
+$max-content-width           : 1330px !default;
 
 // Layout - breakpoints
-$screen-xs             : 320px !default;
-$screen-s              : 480px !default;
-$screen-m              : 768px !default;
-$screen-l              : 992px !default;
-$screen-xl             : 1200px !default;
-$screen-xxl            : 1600px !default;
+$screen-xs                   : 320px !default;
+$screen-s                    : 480px !default;
+$screen-m                    : 768px !default;
+$screen-l                    : 992px !default;
+$screen-xl                   : 1200px !default;
+$screen-xxl                  : 1600px !default;
 
 // Components
-$border-radius         : 4px !default;
+$border-radius               : 4px !default;
 
-$transition-base       : all 0.3s ease-in-out !default;
-$transition-fade       : opacity 0.25s linear !default;
+$transition-base             : all 0.3s ease-in-out !default;
+$transition-fade             : opacity 0.25s linear !default;

@@ -1,15 +1,18 @@
+$cart-actions-margin : 15px !default;
+$cart-actions-padding: 10px !default;
+
 .cart-actions {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: $cart-actions-margin;
 
     &__button {
         width: 100%;
-        margin-bottom: 15px;
+        margin-bottom: $cart-actions-margin;
         @include mq($screen-m) {
             width: 190px;
-            margin: 0 0 15px 15px;
-            padding: 0 10px;
+            margin: 0 0 $cart-actions-margin $cart-actions-margin;
+            padding: 0 $cart-actions-padding;
         }
 
         &--continue {

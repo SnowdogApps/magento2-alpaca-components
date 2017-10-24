@@ -61,9 +61,9 @@ $dropdown-list__inner-item-border--level2: 1px solid $black !default;
     }
 
     &__item {
-        width: 100%;
         position: relative;
         display: block;
+        width: 100%;
         padding: 0;
         font-size: $dropdown-list__font-size;
         cursor: pointer;
