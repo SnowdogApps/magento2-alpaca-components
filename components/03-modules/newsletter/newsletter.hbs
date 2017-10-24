@@ -1,0 +1,10 @@
+<form class="newsletter {{ class }}">
+    <div class="newsletter__heading {{ heading.class }}">
+        {{ heading.text }}
+    </div>
+
+    <div class="newsletter__content">
+        {{> '@input' input }}
+        {{render '@button' button}}
+    </div>
+</form>

@@ -1,6 +1,5 @@
 module.exports = {
   collated: true,
-  status: 'wip',
   context: {
     heading: {
       text: 'Newsletter'
@@ -17,7 +16,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'Short name button',
+      name: 'short name',
       context: {
         button: {
           text: 'Submit'
@@ -25,7 +24,7 @@ module.exports = {
       }
     },
     {
-      name: 'Long version',
+      name: 'logn name',
       context: {
         button: {
           text: 'Add my email to newsletter'
@@ -33,13 +32,13 @@ module.exports = {
       }
     },
     {
-      name: 'Polish version',
+      name: 'pl version',
       context: {
         button: {
           text: 'Zarejestruj się'
         }
       }
-    },
+    }
   ]
 };
 

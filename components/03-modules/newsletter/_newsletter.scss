@@ -2,8 +2,8 @@ $newsletter-legend-font-size  : $font-size-large !default;
 $newsletter-legend-line-height: 1.2 !default;
 
 .newsletter {
-    .newsletter__heading {
-        line-height: $button-height;
+    &__heading {
+        line-height: $newsletter-legend-line-height;
         margin-right: 20px;
     }
 }
