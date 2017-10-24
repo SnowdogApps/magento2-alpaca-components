@@ -8,8 +8,9 @@
                     {{/if}}
                 "
             >
-                <{{ itemTag }} {{{ itemAttributes }}}"
+                <a {{{ itemAttributes }}}
                    class="dropdown-list__label"
+                   aria-label="{{ title }}"
                    {{#if id }}
                         data-dropdown="{{ id }}"
                    {{/if}}
@@ -20,7 +21,7 @@
                             <use xlink:href="{{ svg 'arrow-down' }}"></use>
                         </svg>
                     {{/if}}
-                </{{ itemTag }}>
+                </a>
 
                 {{#if listNested }}
                     <ul class="
@@ -40,8 +41,9 @@
                                     {{/if}}
                                 "
                             >
-                                <{{ itemTag }} {{{ itemAttributes }}}"
+                                <a href="#"
                                    class="dropdown-list__inner-label"
+                                   aria-label="{{ itemName }}"
                                    {{#if id }}
                                         data-dropdown="{{ id }}"
                                    {{/if}}
@@ -49,12 +51,12 @@
 
                                     {{ itemName }}
 
-                                    {{#if sublist }}
+                                    {{#if collapse }}
                                         <svg class="dropdown-list__icon dropdown-list__icon--inner">
                                             <use xlink:href="{{ svg 'arrow-down' }}"></use>
                                         </svg>
                                     {{/if}}
-                                </{{ itemTag }}>
+                                </a>
 
                                 {{#if sublist}}
                                     <ul class="dropdown-list__inner-list
@@ -69,11 +71,11 @@
                                                        dropdown-list__inner-item--level2
                                                 "
                                             >
-                                                <{{itemTag}} {{ itemAttributes }}"
+                                                <a {{ itemAttributes }}
                                                    class="dropdown-list__inner-label"
                                                 >
                                                     {{ itemName }}
-                                                </{{ itemTag }}>
+                                                </a>
                                             </li>
                                         {{/each}}
                                     </ul>
