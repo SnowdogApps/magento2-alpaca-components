@@ -1,34 +1,27 @@
-// todo zrobic badge: domyslny, promka i nowy
-$badge-padding      : 7px 10px !default;
-$badge-label-color  : $white !default;
-$badge-background   : $color-primary !default;
-$badge-border-radius: $border-radius !default;
-$badge-color-success: $color-success !default;
-$badge-color-info   : $color-info !default;
-$badge-color-warning: $color-warning !default;
-$badge-color-danger : $color-danger !default;
-
+$badge__padding        : 7px 10px !default;
+$badge__background     : $color-primary !default;
+$badge__border-radius  : $border-radius !default;
+$badge__font-size      : $font-size-extra-small !default;
+$badge__font-family    : $font-family-base !default;
+$badge__font-weight    : $font-weight-bold !default;
+$badge__color          : $font-color-base !default;
+$badge__color--new     : $color-success !default;
+$badge__color--discount: $color-danger !default;
 .badge {
     display: inline-flex;
-    padding: $badge-padding;
-    font-size: $font-size-extra-small;
-    color: $badge-label-color;
-    background: $badge-background;
-    border-radius: $badge-border-radius;
+    padding: $badge__padding;
+    font-family: $badge__font-family;
+    font-size: $badge__font-size;
+    font-weight: $badge__font-weight;
+    color: $badge__color;
+    background: $badge__background;
+    border-radius: $badge__border-radius;
 
-    &--success {
-        background: $badge-color-success;
+    &--new {
+        background: $badge__color--new;
     }
 
-    &--info {
-        background: $badge-color-info;
-    }
-
-    &--warning {
-        background: $badge-color-warning;
-    }
-
-    &--danger {
-        background: $badge-color-danger;
+    &--discount {
+        background: $badge__color--discount;
     }
 }
