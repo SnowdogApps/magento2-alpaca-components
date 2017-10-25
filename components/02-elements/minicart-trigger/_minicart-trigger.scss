@@ -1,6 +1,7 @@
+$minicart-trigger-padding           : 10px !default;
 $minicart-trigger-background        : $white !default;
 $minicart-trigger-icon-width        : 30px !default;
-
+$minicart-trigger-spacing           : 5px !default;
 $minicart-trigger-counter-font-size : $font-size-extra-small !default;
 $minicart-trigger-counter-background: $purple !default;
 $minicart-trigger-counter-color     : $white !default;
@@ -10,8 +11,7 @@ $minicart-trigger-counter-color     : $white !default;
     position: relative;
     margin: 0;
     border: 0;
-    display: block;
-    padding: 10px;
+    padding: $minicart-trigger-padding;
 
     &:hover,
     &:focus {
@@ -26,10 +26,10 @@ $minicart-trigger-counter-color     : $white !default;
 
     &__counter {
         position: absolute;
-        top: -5px;
-        right: -5px;
         display: block;
-        padding: 5px;
+        top: -$minicart-trigger-spacing;
+        right: -$minicart-trigger-spacing;
+        padding: $minicart-trigger-spacing;
         background-color: $minicart-trigger-counter-background;
         color: $minicart-trigger-counter-color;
         font-size: $minicart-trigger-counter-font-size;

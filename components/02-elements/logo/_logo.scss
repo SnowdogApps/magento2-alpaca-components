@@ -1,6 +1,8 @@
+$logo-padding: 10px 20px !default;
+
 .logo {
     display: block;
-    padding: 10px 20px;
+    padding: $logo-padding;
 
     @include mq($screen-s) {
         display: inline-block;

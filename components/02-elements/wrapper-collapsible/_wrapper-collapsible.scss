@@ -1,15 +1,40 @@
+$wrapper-collapsible-padding             : 10px !default;
+$wrapper-collapsible-background          : $white !default;
+$wrapper-collapsible-icon-width          : 30px !default;
+$wrapper-collapsible-icon-height         : 30px !default;
+$wrapper-collapsible-icon-fill           : $black !default;
+$wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
+
 .wrapper-collapsible {
     display: block;
     overflow: hidden;
 
+    &--min-medium-horizontal {
+        .wrapper-collapsible__container {
+            @include mq($screen-l) {
+                position: relative;
+                display: block;
+                top: auto;
+                right: auto;
+                transform: $wrapper-collapsible-horizontal-transform;
+            }
+        }
+
+        .wrapper-collapsible__trigger {
+            @include mq($screen-l) {
+                display: none;
+            }
+        }
+    }
+
     &__container {
-        display: none;
         position: absolute;
+        display: none;
         top: 50px;
         right: 0;
         width: auto;
         min-width: 260px;
-        background-color: $white;
+        background-color: $wrapper-collapsible-background;
         z-index: 10;
         overflow: hidden;
 
@@ -23,11 +48,11 @@
     }
 
     &__trigger {
-        display: block;
         position: absolute;
+        display: block;
         top: 10px;
         right: 55px;
-        padding: 10px;
+        padding: $wrapper-collapsible-padding;
         cursor: pointer;
         z-index: 10;
 
@@ -45,27 +70,8 @@
 
     &__trigger-icon {
         display: block;
-        width: 30px;
-        height: 30px;
-        fill: $black;
-    }
-
-    &--min-medium-horizontal {
-        .wrapper-collapsible__container {
-            @include mq($screen-l) {
-                display: block;
-                position: relative;
-                transform: scaleX(1) translateX(0);
-                top: auto;
-                right: auto;
-            }
-        }
-
-        .wrapper-collapsible__trigger {
-            @include mq($screen-l) {
-                display: none;
-            }
-        }
-
+        width: $wrapper-collapsible-icon-width;
+        height: $wrapper-collapsible-icon-height;
+        fill: $wrapper-collapsible-icon-fill;
     }
 }
