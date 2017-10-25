@@ -1,5 +1,5 @@
 $minicart-trigger__background        : $white !default;
-$minicart-trigger__icon-size         : 18px !default;
+$minicart-trigger__icon-size         : 24px !default;
 $minicart-trigger__counter-spacing   : 3px !default;
 $minicart-trigger__counter-font-size : $font-size-extra-small !default;
 $minicart-trigger__counter-background: $color-primary !default;
@@ -9,16 +9,10 @@ $minicart-trigger__counter-size      : 20px !default;
 .minicart-trigger {
     position: relative;
     display: block;
-    padding: 15px;
-    margin: 0;
+    padding: 12px;
+    margin: 0 8px 0 0;
     border: 0;
     background-color: $minicart-trigger__background;
-    @include mq($screen-m) {
-        height: 34px;
-        min-width: 34px;
-        width: 34px;
-        padding: 8px;
-    }
 
     &:hover,
     &:focus {
@@ -29,6 +23,7 @@ $minicart-trigger__counter-size      : 20px !default;
         display: block;
         width: $minicart-trigger__icon-size;
         height: $minicart-trigger__icon-size;
+        padding: 2px;
         fill: $gray-dark;
     }
 
@@ -44,9 +39,5 @@ $minicart-trigger__counter-size      : 20px !default;
         font-size: $minicart-trigger__counter-font-size;
         color: $minicart-trigger__counter-color;
         background-color: $minicart-trigger__counter-background;
-        @include mq($screen-m) {
-            top: -$minicart-trigger__counter-spacing;
-            right: -$minicart-trigger__counter-spacing;
-        }
     }
 }

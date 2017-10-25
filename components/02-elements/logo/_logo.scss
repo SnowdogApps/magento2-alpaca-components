@@ -1,20 +1,11 @@
-$logo-padding: 10px 20px !default;
-
 .logo {
-    display: block;
-    padding: 12px 8px;
-    @include mq($screen-m) {
-        margin: 8px;
-        padding: 0;
-    }
-    @include mq($screen-xl) {
-        margin: 16px;
-    }
+    display: flex;
+    flex-direction: column;
+    flex: 1 84px;
+    justify-content: center;
+    max-width: 84px;
 
     &__image {
-        width: 80px;
-        @include mq($screen-m) {
-            width: 112px;
-        }
+        width: 84px;
     }
 }

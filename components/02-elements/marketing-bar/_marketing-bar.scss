@@ -1,12 +1,20 @@
+$marketing-bar__background-color : $color-primary !default;
+$marketing-bar__font-size        : $font-size-small !default;
+$marketing-bar__button-spacing   : 12px !default;
+$marketing-bar__button-icon-color: $white !default;
+
 .marketing-bar {
     position: relative;
-    padding: 16px 8px;
-    font-size: $font-size-small;
+    display: flex;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8px;
+    font-size: $marketing-bar__font-size;
     font-weight: bold;
-    background-color: $color-primary;
+    background-color: $marketing-bar__background-color;
     color: $white;
     @include mq($screen-m) {
-        padding: 8px;
         text-align: center;
         color: $black;
     }
@@ -14,24 +22,21 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        right: 8px;
-        height: 34px;
-        width: 34px;
+        right: 0;
         min-width: 34px;
         margin: auto;
-        padding: 8px;
+        padding: $marketing-bar__button-spacing;
         border: none;
         background-color: transparent;
         &:hover {
             background-color: transparent;
         }
         &-icon {
-            width: 18px;
-            height: 18px;
-            fill: $white;
+            width: 24px;
+            height: 24px;
+            padding: 2px;
+            fill: $marketing-bar__button-icon-color;
             @include mq($screen-m) {
-                width: 14px;
-                height: 14px;
                 fill: $gray-dark;
             }
         }

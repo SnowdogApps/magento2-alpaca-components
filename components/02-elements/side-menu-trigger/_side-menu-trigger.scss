@@ -2,7 +2,6 @@ $side-menu-trigger__width             : 32px !default;
 $side-menu-trigger__height            : 28px !default;
 $side-menu-trigger__font-size         : $font-size-extra-small !default;
 $side-menu-trigger__transition        : $transition-base !default;
-$side-menu-trigger__text-color        : $gray !default;
 $side-menu-trigger__line-background   : $gray-dark !default;
 $side-menu-trigger__line-height       : 2px !default;
 $side-menu-trigger__line-border-radius: 2px !default;
@@ -13,7 +12,7 @@ $side-menu-trigger__line-border-radius: 2px !default;
     background: none;
     cursor: pointer;
 
-    @include mq($screen-m) {
+    @include mq($screen-l) {
         display: none;
     }
 
@@ -48,7 +47,6 @@ $side-menu-trigger__line-border-radius: 2px !default;
         bottom: 0;
         left: 0;
         width: 100%;
-        color: $side-menu-trigger__text-color;
         font-size: $side-menu-trigger__font-size;
         font-weight: bold;
         text-align: center;
