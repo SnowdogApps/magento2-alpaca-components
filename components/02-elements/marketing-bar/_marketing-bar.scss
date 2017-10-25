@@ -1,0 +1,39 @@
+.marketing-bar {
+    position: relative;
+    padding: 16px 8px;
+    font-size: $font-size-small;
+    font-weight: bold;
+    background-color: $color-primary;
+    color: $white;
+    @include mq($screen-m) {
+        padding: 8px;
+        text-align: center;
+        color: $black;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 8px;
+        height: 34px;
+        width: 34px;
+        min-width: 34px;
+        margin: auto;
+        padding: 8px;
+        border: none;
+        background-color: transparent;
+        &:hover {
+            background-color: transparent;
+        }
+        &-icon {
+            width: 18px;
+            height: 18px;
+            fill: $white;
+            @include mq($screen-m) {
+                width: 14px;
+                height: 14px;
+                fill: $gray-dark;
+            }
+        }
+    }
+}

@@ -10,18 +10,6 @@ $header-font-family : $font-family-sans-serif !default;
 .header {
     border-bottom: 1px solid $header-main-color;
 
-    &__marketing-bar {
-        padding: 8px;
-        font-size: $font-size-small;
-        font-weight: bold;
-        background-color: $color-primary;
-        color: $white;
-        @include mq($screen-m) {
-            text-align: center;
-            color: $gray-dark;
-        }
-    }
-
     &__wrapper {
         justify-content: space-between;
         display: flex;
@@ -40,6 +28,9 @@ $header-font-family : $font-family-sans-serif !default;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: flex-end;
+        @include mq($screen-m) {
+            margin: 8px;
+        }
 
         &-item {
             margin-right: 8px;
@@ -53,13 +44,9 @@ $header-font-family : $font-family-sans-serif !default;
     &__icon {
         width: $header-basic-width;
         height: $header-basic-width;
-        fill: $header-main-color;
+        fill: $header-second-color;
         transition: $header-transition;
         cursor: pointer;
-    }
-
-    &__minicart {
-        margin-right: 8px;
     }
 
     &__link {

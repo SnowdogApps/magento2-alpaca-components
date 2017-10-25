@@ -4,10 +4,11 @@ $logo-padding: 10px 20px !default;
     display: block;
     padding: 12px 8px;
     @include mq($screen-m) {
-        padding: 8px;
+        margin: 8px;
+        padding: 0;
     }
     @include mq($screen-xl) {
-        padding: 16px;
+        margin: 16px;
     }
 
     &__image {

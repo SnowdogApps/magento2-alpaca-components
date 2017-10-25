@@ -1,6 +1,7 @@
 $minicart-trigger-padding           : 10px !default;
 $minicart-trigger-background        : $white !default;
 $minicart-trigger-icon-width        : 18px !default;
+$minicart-trigger-icon-color        : $gray-dark !default;
 $minicart-trigger-counter-font-size : $font-size-extra-small !default;
 $minicart-trigger-counter-background: $color-primary !default;
 $minicart-trigger-counter-color     : $white !default;
@@ -28,6 +29,7 @@ $minicart-trigger-counter-color     : $white !default;
         display: block;
         width: $minicart-trigger-icon-width;
         height: $minicart-trigger-icon-width;
+        fill: $minicart-trigger-icon-color;
     }
 
     &__counter {
