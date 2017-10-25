@@ -24,10 +24,13 @@ $header-font-family : $font-family-sans-serif !default;
     &__icons {
         display: flex;
         order: 3;
-        flex: 1 70%;
+        flex: 1 65%;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: flex-end;
+        @include mq($screen-s) {
+            flex: 1 70%;
+        }
         @include mq($screen-m) {
             order: 4;
             flex: 1 168px;
