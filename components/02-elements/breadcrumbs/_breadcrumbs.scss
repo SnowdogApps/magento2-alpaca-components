@@ -46,7 +46,8 @@ $breadcrumbs__font-family--active: $font-family-base-bold !default;
         color: $breadcrumbs__color;
         text-decoration: none;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $breadcrumbs__color--active;
         }
         &:active,
