@@ -1,7 +1,7 @@
-$search-padding      : 15px !default;
-$search-background   : $white !default;
-$search-transition   : max-height 0.5s !default;
-$search-button-margin: 10px !default;
+$search__padding      : 15px !default;
+$search__background   : $white !default;
+$search__transition   : max-height 0.5s !default;
+$search__button-margin: 10px !default;
 
 .search {
     padding: 0;
@@ -9,7 +9,7 @@ $search-button-margin: 10px !default;
     height: auto;
     max-height: 0;
     overflow: hidden;
-    transition: $search-transition;
+    transition: $search__transition;
 
     &--visible {
         height: auto;
@@ -27,8 +27,8 @@ $search-button-margin: 10px !default;
         align-items: flex-end;
         position: relative;
         width: 100%;
-        padding: $search-padding 0 0 0;
-        background-color: $search-background;
+        padding: $search__padding 0 0 0;
+        background-color: $search__background;
     }
 
     &__input {
@@ -42,9 +42,9 @@ $search-button-margin: 10px !default;
     }
 
     &__button {
-        padding: ($search-padding - 5) $search-padding;
+        padding: ($search__padding - 5) $search__padding;
         flex-basis: 100%;
-        margin-bottom: $search-button-margin;
+        margin-bottom: $search__button-margin;
 
         @include mq($screen-m) {
             flex-basis: 20%;
