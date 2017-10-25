@@ -2,12 +2,36 @@ module.exports = {
   status: 'wip',
   context: {
     categories: [
-      'Home',
-      'category2',
-      'category3',
-      'category4',
-      'category5',
-      'category6'
+      {
+        name: 'Home',
+        href: '#',
+        ariaLabel: 'Breadcrumb Home'
+      },
+      {
+        name: 'category2',
+        href: '#',
+        ariaLabel: 'Breadcrumb category2'
+      },
+      {
+        name: 'category3',
+        href: '#',
+        ariaLabel: 'Breadcrumb category3'
+      },
+      {
+        name: 'category4',
+        href: '#',
+        ariaLabel: 'Breadcrumb category4'
+      },
+      {
+        name: 'category5',
+        href: '#',
+        ariaLabel: 'Breadcrumb category5'
+      },
+      {
+        name: 'category6',
+        href: '#',
+        ariaLabel: 'Breadcrumb category6'
+      }
     ]
   }
 };
