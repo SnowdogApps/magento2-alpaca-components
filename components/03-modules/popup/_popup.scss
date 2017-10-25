@@ -1,15 +1,24 @@
-$popup-z-index   : 50;
-$popup-arrow-size: 21px;
-$popup-arrow-top : -10px;
+$popup-padding         : 10px !default;
+$popup-width           : 400px !default;
+$popup-background      : $white !default;
+$popup-z-index         : 50 !default;
+$popup-box-shadow-color: $black !default;
+$popup-box-shadow      : 0 0 8px 0 rgba($popup-box-shadow-color, 0.2) !default;
+
+// Arrow
+$popup-arrow-size      : 21px !default;
+$popup-arrow-top       : -10px !default;
+$popup-arrow-transform : rotate(45deg) !default;
+$popup-arrow-box-shadow: 2px -2px 4px 0 rgba($popup-box-shadow-color, 0.1) !default;
 
 .popup {
     display: none;
     position: absolute;
-    width: 400px;
-    padding: 10px;
+    width: $popup-width;
+    padding: $popup-padding;
     z-index: $popup-z-index;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: $white;
+    box-shadow: $popup-box-shadow;
+    background-color: $popup-background;
 
     &--active {
         display: block;
@@ -24,9 +33,9 @@ $popup-arrow-top : -10px;
         top: $popup-arrow-top;
         width: $popup-arrow-size;
         height: $popup-arrow-size;
-        background: $white;
-        transform: rotate(45deg);
-        box-shadow: -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
+        background: $popup-background;
+        transform: $popup-arrow-transform;
+        box-shadow: $popup-arrow-box-shadow;
         z-index: -1;
     }
 }

@@ -1,10 +1,16 @@
-$radio-size: 18px;
-$radio-dot-size: 6px;
-$radio-label-active-color: $color-primary;
+$radio-margin                : 10px !default;
+$radio-size                  : 18px !default;
+$radio-dot-size              : 6px !default;
+$radio-label-font-size       : $font-size-small !default;
+$radio-label-color           : $black !default;
+$radio-label-active-color    : $color-primary !default;
+$radio-icon-border           : 1px solid $black !default;
+$radio-icon-before-background: $color-primary !default;
+$radio-icon-before-transition: $transition-base !default;
 
 .radio {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: $radio-margin;
 
     &__field {
         display: none;
@@ -29,14 +35,14 @@ $radio-label-active-color: $color-primary;
         vertical-align: top;
         line-height: $radio-size;
         cursor: pointer;
-        font-size: $font-size-small;
-        color: #000;
+        font-size: $radio-label-font-size;
+        color: $radio-label-color;
     }
 
     &__icon {
         position: relative;
         display: inline-block;
-        border: 1px solid $black;
+        border: $radio-icon-border;
         border-radius: $radio-size;
         width: $radio-size;
         height: $radio-size;
@@ -56,8 +62,8 @@ $radio-label-active-color: $color-primary;
             margin: auto;
             opacity: 0;
             transform: scale(0);
-            background-color: $color-primary;
-            transition: $transition-base;
+            background-color: $radio-icon-before-background;
+            transition: $radio-icon-before-transition;
         }
     }
 }

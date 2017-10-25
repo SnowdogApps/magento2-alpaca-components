@@ -35,6 +35,9 @@ $button-icon-hover-background     : $gray-dark !default;
 $button-icon-color                : $gray-light !default;
 $button-icon-hover-color          : $color-primary !default;
 
+//fluid
+$button-fluid-width               : 100% !default;
+
 .button {
     display: inline-flex;
     justify-content: center;
@@ -119,6 +122,6 @@ $button-icon-hover-color          : $color-primary !default;
     }
 
     &--fluid {
-        width: 100%;
+        width: $button-fluid-width;
     }
 }

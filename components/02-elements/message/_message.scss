@@ -1,13 +1,17 @@
-$message-background        : $gray;
-$message-background-success: $green;
-$message-background-error  : $red;
-
-$message-color             : $white;
-$message-color-red         : $red;
-$message-color-green       : $green;
-
-$message-padding-base      : 15px;
-$message-margin-base       : 15px;
+$message-font-size         : $font-size-small !default;
+$message-transition        : $transition-base !default;
+$message-background        : $gray !default;
+$message-background-error  : $red !default;
+$message-background-success: $green !default;
+$message-color             : $white !default;
+$message-color-red         : $red !default;
+$message-color-green       : $green !default;
+$message-padding-base      : 15px !default;
+$message-margin-base       : 15px !default;
+$message-after-height      : 100% !default;
+$message-after-width       : 30px !default;
+$message-success-icon      : "\2713" !default;
+$message-error-icon        : "\2715" !default;
 
 .message {
     background-color: $message-background;
@@ -15,16 +19,16 @@ $message-margin-base       : 15px;
     position: relative;
     padding: 5px ($message-padding-base * 2);
     margin-bottom: $message-margin-base;
-    font-size: $font-size-small;
+    font-size: $message-font-size;
     width: 100%;
-    transition: $transition-base;
+    transition: $message-transition;
 
     &--success {
         background-color: $message-background-success;
         color: rgba($message-color, 0.9);
 
         &:after {
-            content: "\2713";   
+            content: $message-success-icon;
         }
     }
 
@@ -33,19 +37,19 @@ $message-margin-base       : 15px;
         color: rgba($message-color, 0.9);
 
         &:after {
-            content: "\2715";
+            content: $message-error-icon;
         }
     }
 
     &:after {
-        color: $message-color;
         position: absolute;
-        left: 0;
-        top: 0;            
-        height: 100%;
-        width: 30px;
         display: flex;
+        left: 0;
+        top: 0;
         align-items: center;
         justify-content: center;
+        height: $message-after-height;
+        width: $message-after-width;
+        color: $message-color;
     }
 }

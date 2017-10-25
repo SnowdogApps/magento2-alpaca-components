@@ -1,0 +1,85 @@
+$swatch__font-size                    : $font-size-small !default;
+$swatch__margin                       : 15px !default;
+$swatch__width                        : 48px !default;
+$swatch__transition                   : $transition-base !default;
+
+$swatch__background                   : $white !default;
+$swatch__background--active           : $color-primary !default;
+
+$swatch__label-color                  : $gray-light !default;
+$swatch__label-color-hover            : $color-primary !default;
+$swatch__label-color--active          : $white !default;
+
+$swatch__border                       : 3px solid $gray-light !default;
+$swatch__border-color-hover           : $color-primary !default;
+$swatch__border-color--active         : $color-primary !default;
+
+// Variables for color swatches
+$swatch__outline--color               : 3px solid $white !default;
+$swatch__outline-color-hover--color   : $color-primary !default;
+$swatch__outline-color--color--active : $color-primary !default;
+
+$swatch__border-color--color          : $white !default;
+$swatch__border-color-hover--color    : $white !default;
+$swatch__border-color--color--active  : $white !default;
+
+.swatch {
+    &__title {
+        font-size: $swatch__font-size;
+        margin-bottom: $swatch__margin;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__option {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: $swatch__width;
+        width: $swatch__width;
+        border: $swatch__border;
+        background: $swatch__background;
+        margin-right: $swatch__margin;
+        margin-bottom: $swatch__margin;
+        transition: $swatch__transition;
+        color: $swatch__label-color;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $swatch__border-color-hover;
+            color: $swatch__label-color-hover;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            background: $swatch__background--active;
+            border-color: $swatch__border-color--active;
+            color: $swatch__label-color--active;
+
+            &:hover {
+                color: $swatch__label-color--active;
+            }
+        }
+
+        &--color {
+            border-color: $swatch__border-color--color;
+            outline: $swatch__outline--color;
+
+            &:hover {
+                border-color: $swatch__border-color-hover--color;
+                outline-color: $swatch__outline-color-hover--color;
+            }
+
+            &.swatch__option--active {
+                border-color: $swatch__border-color--color--active;
+                outline-color: $swatch__outline-color--color--active;
+            }
+        }
+    }
+}

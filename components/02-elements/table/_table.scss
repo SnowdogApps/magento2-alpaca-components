@@ -1,37 +1,47 @@
-$table-padding: 15px;
-$table-radius: $border-radius;
+$table-padding                    : 15px !default;
+$table-color                      : $black !default;
+$table-font-size                  : $font-size-small !default;
+$table-border-radius              : $border-radius !default;
+$table-border                     : 1px solid $gray-light !default;
+$table-th-background              : $white !default;
+$table-th-breakpoint-background   : $gray-lightest !default;
+$table-td-background              : $white !default;
+$table-tfoot-background           : $white !default;
+$table-tfoot-breakpoint-background: $gray-lightest !default;
+$table-even-background            : $gray-lightest !default;
+$table-odd-background             : $white !default;
 
 .table {
     width: 100%;
     background: $white;
     margin: 1em 0;
-    border: 1px solid $gray-light;
-    border-radius: $table-radius;
-    color: $black;
+    border: $table-border;
+    border-radius: $table-border-radius;
+    color: $table-color;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: $font-size-small;
+    font-size: $table-font-size;
 
     &--odd-even {
-        tbody {  
+        tbody {
             tr:nth-child(odd) {
                 td {
-                    background: $white;
+                    background: $table-odd-background;
                 }
             }
 
             tr:nth-child(even) {
                 td {
-                    background: $gray-lightest;
+                    background: $table-even-background;
                 }
             }
         }
     }
-        
+
     tr {
         display: block;
         padding: $table-padding 0;
-        border-bottom: 1px solid $gray-lighter;
+        border-bottom: $table-border;
 
         @include mq($screen-m) {
             padding: 0;
@@ -40,28 +50,28 @@ $table-radius: $border-radius;
         }
 
         &:first-child {
-            border-top-left-radius: $table-radius;
-            border-top-right-radius: $table-radius;
+            border-top-left-radius: $table-border-radius;
+            border-top-right-radius: $table-border-radius;
         }
 
         &:last-child {
-            border-bottom-right-radius: $table-radius;
-            border-bottom-left-radius: $table-radius;
+            border-bottom-right-radius: $table-border-radius;
+            border-bottom-left-radius: $table-border-radius;
         }
     }
 
     th {
-        padding: 5px $table-padding;
-        background: $white;
         display: block;
+        padding: 5px $table-padding;
+        background: $table-th-background;
         text-align: left;
 
         @include mq($screen-m) {
-            padding: $table-padding;
-            background: $gray-lightest;
-            border-bottom: 1px solid $gray-lighter;
-            border-right: 1px solid $gray-lighter;
             display: table-cell;
+            padding: $table-padding;
+            background: $table-th-breakpoint-background;
+            border-bottom: $table-border;
+            border-right: $table-border;
 
             &:first-child {
                 border-top-left-radius: 0;
@@ -75,52 +85,52 @@ $table-radius: $border-radius;
         }
 
         &:first-child {
-            border-top-left-radius: $table-radius;
+            border-top-left-radius: $table-border-radius;
         }
 
         &:last-child {
-            border-top-right-radius: $table-radius;
+            border-top-right-radius: $table-border-radius;
             border-right: 0;
         }
     }
 
     td {
-        padding: 5px $table-padding;
-        background: $white;
         display: block;
+        padding: 5px $table-padding;
+        background: $table-td-background;
         text-align: left;
 
         @include mq($screen-m) {
             display: table-cell;
             padding: $table-padding;
-            background: $white;
-            border-bottom: 1px solid $gray-lighter;
-            border-right: 1px solid $gray-lighter;
+            background: $table-td-background;
+            border-bottom: $table-border;
+            border-right: $table-border;
 
             &:first-child {
-                border-bottom-left-radius: $table-radius;
+                border-bottom-left-radius: $table-border-radius;
             }
 
             &:last-child {
-                border-bottom-right-radius: $table-radius;
+                border-bottom-right-radius: $table-border-radius;
                 border-right: 0;
             }
         }
     }
 
     tfoot {
-        td { 
-            padding: 5px $table-padding;
-            background: $white;
+        td {
             display: block;
+            padding: 5px $table-padding;
+            background: $table-tfoot-background;
             text-align: left;
 
             @include mq($screen-m) {
-                padding: $table-padding;
-                background: $gray-lightest;
-                border-right: 1px solid $gray-lighter;
-                text-align: left;
                 display: table-cell;
+                padding: $table-padding;
+                background: $table-tfoot-breakpoint-background;
+                border-right: $table-border;
+                text-align: left;
             }
         }
     }
