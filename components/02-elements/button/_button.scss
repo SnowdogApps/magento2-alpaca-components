@@ -70,21 +70,6 @@ $button-fluid-width               : 100% !default;
         }
     }
 
-    &--native-link {
-        height: auto;
-        margin: 0;
-        padding: 0;
-        background: none;
-        border: none;
-        // TODO whaaaaaaa link-color ?
-        color: $link-color;
-        &:hover {
-            background: none;
-            color: $link-hover-color;
-            text-decoration: $link-hover-decoration;
-        }
-    }
-
     &--secondary {
         border: $button__border--secondary;
         color: $button__font-color--secondary;
