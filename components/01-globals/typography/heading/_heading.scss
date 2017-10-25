@@ -1,5 +1,6 @@
 $headings-margin        : 0 0 0.5em 0 !default;
-$headings-font-family   : $font-family-base-bold !default;
+$headings-font-family   : $font-family-base !default;
+$headings-font-weight   : 700 !default;
 $headings-line-height   : $font-line-height !default;
 $headings-color         : $color-secondary !default;
 $headings-text-transform: none !default;
@@ -13,6 +14,7 @@ $heading-font-size--sixth-level : 12px !default;
 .heading {
     margin: $headings-margin;
     font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
     line-height: $headings-line-height;
     color: $headings-color;
     text-transform: $headings-text-transform;
