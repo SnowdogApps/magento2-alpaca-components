@@ -1,73 +1,72 @@
-$button-height                    : 48px !default;
-$button-width                     : 48px !default;
-$button-padding                   : 0 $padding-base !default;
-$button-margin                    : 0 0 5px 0 !default;
-$button-border                    : none !default;
-$button-border-radius             : 100px !default;
-$button-hover-border              : none !default;
-$button-background                : $color-primary !default;
-$button-hover-background          : $gray-dark !default;
-$button-outline                   : none !default;
-$button-font-family               : $font-family-base-bold !default;
-$button-font-size                 : $font-size-base !default;
-$button-font-color                : $white !default;
-$button-hover-font-color          : $color-primary !default;
+$button__height           : 48px !default;
+$button__width            : 48px !default;
+$button__padding          : 0 $padding-base !default;
+$button__border           : none !default;
+$button__border-radius    : 100px !default;
+$button__border-hover     : none !default;
+$button__background       : $color-primary !default;
+$button__background-hover : $gray-dark !default;
+$button__outline          : none !default;
+$button__font-family      : $font-family-base-bold !default;
+$button__font-size        : $font-size-base !default;
+$button__font-color       : $white !default;
+$button__font-color-hover : $color-primary !default;
 
 // Secondary
-$button-secondary-border          : 1px solid $color-primary !default;
-$button-secondary-hover-border    : $color-primary !default;
-$button-secondary-background      : $white !default;
-$button-secondary-hover-background: $color-primary !default;
-$button-secondary-font-color      : $color-primary !default;
-$button-secondary-hover-font-color: $gray-dark !default;
+$button__border--secondary           : 1px solid $color-primary !default;
+$button__border-hover--secondary     : $color-primary !default;
+$button__background--secondary       : $white !default;
+$button__background-hover--secondary : $color-primary !default;
+$button__font-color--secondary       : $color-primary !default;
+$button__font-color-hover--secondary : $gray-dark !default;
 
 // Icon
-$button-icon-padding              : 0 !default;
-$button-icon-size                 : 20px !default;
-$button-icon-content-margin       : 0 $margin-base 0 0 !default;
-$button-icon-border-width         : 3px !default;
-$button-icon-border               : $button-icon-border-width solid $color-primary !default;
-$button-icon-hover-border         : $gray-dark !default;
-$button-icon-fill                 : $white !default;
-$button-icon-hover-fill           : $color-primary !default;
-$button-icon-background           : $color-primary !default;
-$button-icon-hover-background     : $gray-dark !default;
-$button-icon-color                : $gray-light !default;
-$button-icon-hover-color          : $color-primary !default;
+$button-icon__padding          : 0 !default;
+$button-icon__size             : 20px !default;
+$button-icon__content-margin   : 0 $margin-base 0 0 !default;
+$button-icon__border-width     : 3px !default;
+$button-icon__border           : $button-icon__border-width solid $color-primary !default;
+$button-icon__border-hover     : $gray-dark !default;
+$button-icon__fill             : $white !default;
+$button-icon__fill-hover       : $color-primary !default;
+$button-icon__background       : $color-primary !default;
+$button-icon__background-hover : $gray-dark !default;
+$button-icon__color            : $gray-light !default;
+$button-icon__color-hover      : $color-primary !default;
 
 //fluid
 $button-fluid-width               : 100% !default;
 
 .button {
-    display: inline-flex;
-    justify-content: center;
-    vertical-align: top;
+    display: inline-block;
     cursor: pointer;
-    height: $button-height;
-    min-width: $button-width;
-    margin: $button-margin;
-    padding: $button-padding;
-    border: $button-border;
-    border-radius: $button-border-radius;
-    outline: $button-outline;
-    background: $button-background;
-    font-family: $button-font-family;
-    font-size: $button-font-size;
-    color: $button-font-color;
+    height: $button__height;
+    min-width: $button__width;
+    padding: $button__padding;
+    border: $button__border;
+    border-radius: $button__border-radius;
+    outline: $button__outline;
+    background: $button__background;
+    font-family: $button__font-family;
+    font-size: $button__font-size;
+    color: $button__font-color;
     transition: $transition-base;
-    align-items: center;
 
     &:hover {
-        background: $button-hover-background;
-        border-color: $button-hover-border;
-        color: $button-hover-font-color;
+        background: $button__background-hover;
+        border-color: $button__border-hover;
+        color: $button__font-color-hover;
     }
 
     &--link {
+        display: inline-flex;
         align-items: center;
-        &:hover {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
             text-decoration: none;
-            color: $button-hover-font-color;
+            color: $button__font-color-hover;
         }
     }
 
@@ -77,6 +76,7 @@ $button-fluid-width               : 100% !default;
         padding: 0;
         background: none;
         border: none;
+        // TODO whaaaaaaa link-color ?
         color: $link-color;
         &:hover {
             background: none;
@@ -86,38 +86,38 @@ $button-fluid-width               : 100% !default;
     }
 
     &--secondary {
-        border: $button-secondary-border;
-        color: $button-secondary-font-color;
-        background: $button-secondary-background;
+        border: $button__border--secondary;
+        color: $button__font-color--secondary;
+        background: $button__background--secondary;
 
         &:hover {
-            border-color: $button-secondary-hover-border;
-            color: $button-secondary-hover-font-color;
-            background: $button-secondary-hover-background;
+            border-color: $button__border-hover--secondary;
+            color: $button__font-color-hover--secondary;
+            background: $button__background-hover--secondary;
         }
     }
 
     &--icon {
-        padding: $button-icon-padding;
-        border: $button-icon-border;
-        background: $button-icon-background;
+        padding: $button-icon__padding;
+        border: $button-icon__border;
+        background: $button-icon__background;
 
         &:hover {
-            border-color: $button-icon-hover-border;
-            background: $button-icon-hover-background;
+            border-color: $button-icon__border-hover;
+            background: $button-icon__background-hover;
             .button__icon {
-                fill:  $button-icon-hover-fill;
+                fill: $button-icon__fill-hover;
             }
         }
 
         .button__icon {
-            width: $button-icon-size;
-            height: $button-icon-size;
-            fill:  $button-icon-fill;
+            width: $button-icon__size;
+            height: $button-icon__size;
+            fill: $button-icon__fill;
         }
 
         .button__content {
-            margin: $button-icon-content-margin;
+            margin: $button-icon__content-margin;
         }
     }
 
@@ -125,3 +125,4 @@ $button-fluid-width               : 100% !default;
         width: $button-fluid-width;
     }
 }
+
