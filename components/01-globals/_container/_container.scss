@@ -1,5 +1,5 @@
-$container-max-width: $max-content-width !default;
-$container-margin   : 8px !default;
+$container__max-width: $max-content-width !default;
+$container__margin   : 8px !default;
 
 .container {
     max-width: $container__max-width;
