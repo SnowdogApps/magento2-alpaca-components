@@ -1,13 +1,12 @@
-$breadcrumbs-margin         : 8px !default;
-$breadcrumbs-padding        : 8px !default;
-$breadcrumbs-clickable-area : 48px !default;
-$breadcrumbs-color          : $gray-dark !default;
-$breadcrumbs-font-family    : $font-family-base !default;
-$breadcrumbs-font-size      : $font-size-small !default;
-$breadcrumbs-line-height    : $font-line-height !default;
-//Active
-$breadcrumbs-color-active   : $color-primary !default;
-$breadcrumbs-font-family-active: $font-family-base-bold !default;
+$breadcrumbs__margin             : 8px !default;
+$breadcrumbs__padding            : 8px !default;
+$breadcrumbs__clickable-area     : 48px !default;
+$breadcrumbs__color              : $gray-dark !default;
+$breadcrumbs__font-family        : $font-family-base !default;
+$breadcrumbs__font-size          : $font-size-small !default;
+$breadcrumbs__line-height        : $font-line-height !default;
+$breadcrumbs__color--active      : $color-primary !default;
+$breadcrumbs__font-family--active: $font-family-base-bold !default;
 
 .breadcrumbs {
     display: flex;
@@ -16,22 +15,22 @@ $breadcrumbs-font-family-active: $font-family-base-bold !default;
     &__item {
         display: flex;
         align-items: stretch;
-        min-height: $breadcrumbs-clickable-area;
-        color: $breadcrumbs-color;
+        min-height: $breadcrumbs__clickable-area;
+        color: $breadcrumbs__color;
 
         &:after {
             content: '/';
             display: flex;
             align-items: center;
-            margin: 0 $breadcrumbs-margin;
-            color: $breadcrumbs-color;
+            margin: 0 $breadcrumbs__margin;
+            color: $breadcrumbs__color;
         }
 
         &:last-child {
             align-items: center;
-            padding: 0 $breadcrumbs-padding;
-            font-family: $breadcrumbs-font-family-active;
-            color: $breadcrumbs-color-active;
+            padding: 0 $breadcrumbs__padding;
+            font-family: $breadcrumbs__font-family--active;
+            color: $breadcrumbs__color--active;
 
             &:after {
                 display: none;
@@ -41,12 +40,12 @@ $breadcrumbs-font-family-active: $font-family-base-bold !default;
     &__link {
         display: flex;
         align-items: center;
-        padding: 0 $breadcrumbs-padding;
-        font-family: $breadcrumbs-font-family;
-        color: $breadcrumbs-color;
+        padding: 0 $breadcrumbs__padding;
+        font-family: $breadcrumbs__font-family;
+        color: $breadcrumbs__color;
 
         &:hover {
-            color: $breadcrumbs-color-active;
+            color: $breadcrumbs__color--active;
         }
         &:active,
         &:focus {
