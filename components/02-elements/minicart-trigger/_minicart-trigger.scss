@@ -1,38 +1,38 @@
-$minicart-trigger-background        : $white !default;
-$minicart-trigger-icon-width        : 30px !default;
-
-$minicart-trigger-counter-font-size : $font-size-extra-small !default;
-$minicart-trigger-counter-background: $purple !default;
-$minicart-trigger-counter-color     : $white !default;
+$minicart-trigger__padding           : 10px !default;
+$minicart-trigger__background        : $white !default;
+$minicart-trigger__icon-spacing      : 30px !default;
+$minicart-trigger__counter-spacing   : 5px !default;
+$minicart-trigger__counter-font-size : $font-size-extra-small !default;
+$minicart-trigger__counter-background: $purple !default;
+$minicart-trigger__counter-color     : $white !default;
 
 .minicart-trigger {
-    background: $minicart-trigger-background;
+    background: $minicart-trigger__background;
     position: relative;
     margin: 0;
     border: 0;
-    display: block;
-    padding: 10px;
+    padding: $minicart-trigger__padding;
 
     &:hover,
     &:focus {
-        background: $minicart-trigger-background;
+        background: $minicart-trigger__background;
     }
 
     &__icon {
         display: block;
-        width: $minicart-trigger-icon-width;
-        height: $minicart-trigger-icon-width;
+        width: $minicart-trigger__icon-spacing;
+        height: $minicart-trigger__icon-spacing;
     }
 
     &__counter {
         position: absolute;
-        top: -5px;
-        right: -5px;
         display: block;
-        padding: 5px;
-        background-color: $minicart-trigger-counter-background;
-        color: $minicart-trigger-counter-color;
-        font-size: $minicart-trigger-counter-font-size;
+        top: -$minicart-trigger__counter-spacing;
+        right: -$minicart-trigger__counter-spacing;
+        padding: $minicart-trigger__counter-spacing;
+        background-color: $minicart-trigger__counter-background;
+        color: $minicart-trigger__counter-color;
+        font-size: $minicart-trigger__counter-font-size;
 
         @include mq($screen-l) {
             top: 2px;

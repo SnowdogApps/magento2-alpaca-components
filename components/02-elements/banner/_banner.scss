@@ -1,8 +1,16 @@
-$banner-default-position-value: 10%;
-$banner-top-value             : $banner-default-position-value;
-$banner-bottom-value          : $banner-default-position-value;
-$banner-left-value            : $banner-default-position-value;
-$banner-right-value           : $banner-default-position-value;
+$banner-default-position-value             : 10% !default;
+$banner-min-height                         : 250px !default;
+$banner-margin                             : 15px !default;
+$banner-padding                            : 30px !default;
+$banner-content-color                      : $gray-dark !default;
+$banner-content-background                 : $white !default;
+$banner-content-background-breakpoint-small: rgba($white, 0.6) !default;
+$banner-content-width-breakpoint-small     : 60% !default;
+$banner-content-height-breakpoint-small    : 80% !default;
+
+// Without image
+$banner-without-image-height               : 50vh !default;
+$banner-without-image-width                : 100% !default;
 
 .banner {
     display: block;
@@ -20,7 +28,7 @@ $banner-right-value           : $banner-default-position-value;
     &--full-height {
         display: flex;
         flex-wrap: wrap;
-        min-height: 250px;
+        min-height: $banner-min-height;
 
         @include mq($screen-xl) {
             min-height: auto;
@@ -36,49 +44,49 @@ $banner-right-value           : $banner-default-position-value;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 15px;
+        margin-top: $banner-margin;
         text-align: center;
-        color: $gray-darker;
-        background: $white;
+        color: $banner-content-color;
+        background: $banner-content-background;
 
         @include mq($screen-m) {
             position: absolute;
-            background: rgba($white, 0.6);
+            background: $banner-content-background-breakpoint-small;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
-            max-width: 60%;
-            max-height: 80%;
-            padding: 30px;
+            max-width: $banner-content-width-breakpoint-small;
+            max-height: $banner-content-height-breakpoint-small;
+            padding: $banner-padding;
         }
 
         &--top {
             @include mq($screen-m) {
                 bottom: auto;
-                top: $banner-top-value;
+                top: $banner-default-position-value;
             }
         }
 
         &--bottom {
             @include mq($screen-m) {
                 top: auto;
-                bottom: $banner-bottom-value;
+                bottom: $banner-default-position-value;
             }
         }
 
         &--left {
             @include mq($screen-m) {
                 right: auto;
-                left: $banner-left-value;
+                left: $banner-default-position-value;
             }
         }
 
         &--right {
             @include mq($screen-m) {
                 left: auto;
-                right: $banner-right-value;
+                right: $banner-default-position-value;
             }
         }
 
@@ -86,15 +94,16 @@ $banner-right-value           : $banner-default-position-value;
             position: relative;
             max-width: 100%;
             display: block;
-            background: $white;
+            background: $banner-content-background;
             padding: 0;
-            margin-top: 15px;
+            margin-top: $banner-margin;
         }
 
         &--without-image {
             position: relative;
-            height: 50vw;
-            width: 100%;
+            background: $banner-content-background;
+            height: $banner-without-image-height;
+            width: $banner-without-image-width;
             max-width: none;
             max-height: none;
             display: flex;
@@ -102,7 +111,6 @@ $banner-right-value           : $banner-default-position-value;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background: $white;
 
             @include mq($screen-l) {
                 height: auto;
@@ -111,6 +119,6 @@ $banner-right-value           : $banner-default-position-value;
     }
 
     &__headings {
-        margin: 15px 0;
+        margin: $banner-margin 0;
     }
 }

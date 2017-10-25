@@ -1,14 +1,22 @@
+$discount__padding             : 15px !default;
+$discount__margin              : 15px !default;
+$discount__transition          : $transition-base !default;
+$discount__icon-width          : 14px !default;
+$discount__icon-height         : 14px !default;
+$discount__title-icon-transform: rotate(180deg) !default;
+
 .discount {
     flex-basis: 100%;
-    margin-bottom: 15px;
-    padding: 0 15px;
+    margin-bottom: $discount__margin;
+    padding: 0 $discount__padding;
+
     @include mq($screen-m) {
         @include grid-column-width(1, 2);
     }
 
     &.active {
         .discount__title-icon {
-            transform: rotate(180deg);
+            transform: $discount__title-icon-transform;
         }
     }
 
@@ -19,14 +27,14 @@
         cursor: pointer;
 
         &-text {
-            margin-right: 15px;
+            margin-right: $discount__margin;
             font-weight: 500;
         }
 
         &-icon {
-            width: 14px;
-            height: 14px;
-            transition: $transition-base;
+            width: $discount__icon-width;
+            height: $discount__icon-height;
+            transition: $discount__transition;
         }
     }
 
