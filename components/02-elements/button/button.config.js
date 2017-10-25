@@ -3,7 +3,7 @@ module.exports = {
   context: {
     tag: 'button',
     class: '',
-    attributes: 'type="button"',
+    attributes: 'type="button" aria-label="button"',
     text: 'I am a button'
   },
   variants: [
@@ -13,7 +13,8 @@ module.exports = {
         text: '',
         class: 'button--icon',
         iconId: 'arrow-left',
-        iconClass: 'button__icon'
+        iconClass: 'button__icon',
+        attributes: 'type="button" aria-label="button arrow left"'
       }
     },
     {
@@ -28,8 +29,8 @@ module.exports = {
       context: {
         tag: 'a',
         class: 'button--link',
-        attributes: 'href="#"',
-        text: 'I am a link button',
+        attributes: 'href="#" aria-label="button"',
+        text: 'I am a link button'
       }
     },
     {
