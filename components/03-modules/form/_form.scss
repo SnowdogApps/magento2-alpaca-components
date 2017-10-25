@@ -2,10 +2,10 @@ $form-fieldset-margin    : 0 0 40px !default;
 $form-legend-margin      : 0 0 25px !default;
 $form-legend-font-size   : $font-size-large !default;
 $form-legend-line-height : 1.2 !default;
-$form-compact-line-height: $button-height !default;
-$form-compact-height     : $button-height !default;
+$form-compact-line-height: $button__height !default;
+$form-compact-height     : $button__height !default;
 $form-compact-margin     : 20px !default;
-$form-button-margin      : 0 0 0 (-$button-icon-border-width) !default;
+$form-button-margin      : 0 0 0 (-$button-icon__border-width) !default;
 
 .form {
     &--compact {
@@ -25,12 +25,12 @@ $form-button-margin      : 0 0 0 (-$button-icon-border-width) !default;
         }
 
         .input {
+            margin-bottom: 0;
+            width: 100%;
             display: flex;
             flex-wrap: nowrap;
             align-items: center;
             justify-content: center;
-            width: 100%;
-            margin-bottom: 0;
 
             &__field {
                 width: 100%;
