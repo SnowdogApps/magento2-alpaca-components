@@ -13,7 +13,7 @@ $side-menu-trigger-transition        : $transition-base !default;
     background: none;
     cursor: pointer;
 
-    @include mq($screen-l) {
+    @include mq($screen-m) {
         display: none;
     }
 

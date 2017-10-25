@@ -20,7 +20,7 @@ module.exports = {
       text: '',
       class: 'button--icon header__search-button',
       iconId: 'search',
-      iconClass: 'button__icon header__search-icon',
+      iconClass: 'button__icon',
       attributes: 'type="button"',
     },
     likeButton: {

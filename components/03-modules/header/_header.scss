@@ -10,6 +10,18 @@ $header-font-family : $font-family-sans-serif !default;
 .header {
     border-bottom: 1px solid $header-main-color;
 
+    &__marketing-bar {
+        padding: 8px;
+        font-size: $font-size-small;
+        font-weight: bold;
+        background-color: $color-primary;
+        color: $white;
+        @include mq($screen-m) {
+            text-align: center;
+            color: $gray-dark;
+        }
+    }
+
     &__wrapper {
         justify-content: space-between;
         display: flex;
@@ -75,6 +87,11 @@ $header-font-family : $font-family-sans-serif !default;
         justify-content: space-between;
         width: 100%;
         border-top: 1px solid $header-main-color;
+        @include mq($screen-m) {
+            order: 1;
+            flex: 1;
+            border-top: none;
+        }
     }
 
     &__menu-trigger {
@@ -88,6 +105,9 @@ $header-font-family : $font-family-sans-serif !default;
         border: 1px solid #333;
         border-radius: 34px;
         z-index: 1;
+        @include mq($screen-m) {
+            width: 300px;
+        }
 
         &-input-wrapper {
             margin-bottom: 0;
@@ -112,17 +132,16 @@ $header-font-family : $font-family-sans-serif !default;
             position: absolute;
             top: 0;
             right: 0;
-            width: 32px;
             height: 32px;
             margin-bottom: 0;
             border: none;
             border-radius: 34px;
         }
 
-        // &-icon {
-        //     width: 10px;
-        //     height: 10px;
-        // }
+        .button__icon {
+            width: 18px;
+            height: 18px;
+        }
     }
     // &__search-form {
     //     display: none;
