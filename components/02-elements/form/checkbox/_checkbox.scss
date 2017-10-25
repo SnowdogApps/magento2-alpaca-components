@@ -1,16 +1,16 @@
-$checkbox-margin            : 10px !default;
-$checkbox-line-height       : $font-line-height !default;
-$checkbox-label-padding     : 33px !default;
-$checkbox-label-width       : 23px !default;
-$checkbox-label-height      : 23px !default;
-$checkbox-label-border      : 1px solid #d9d9d9 !default;
-$checkbox-icon-size         : 15px !default;
-$checkbox-icon-border-radius: 2px !default;
-$checkbox-icon-transition   : $transition-base !default;
+$checkbox__margin            : 10px !default;
+$checkbox__line-height       : $font-line-height !default;
+$checkbox__label-padding     : 33px !default;
+$checkbox__label-width       : 23px !default;
+$checkbox__label-height      : 23px !default;
+$checkbox__label-border      : 1px solid #d9d9d9 !default;
+$checkbox__icon-size         : 15px !default;
+$checkbox__icon-border-radius: 2px !default;
+$checkbox__icon-transition   : $transition-base !default;
 
 .checkbox {
     position: relative;
-    margin-bottom: $checkbox-margin;
+    margin-bottom: $checkbox__margin;
 
     &__field {
         position: absolute;
@@ -25,18 +25,18 @@ $checkbox-icon-transition   : $transition-base !default;
 
     &__label {
         display: block;
-        padding-left: $checkbox-label-padding;
-        line-height: $checkbox-line-height;
+        padding-left: $checkbox__label-padding;
+        line-height: $checkbox__line-height;
         cursor: pointer;
         &:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: $checkbox-label-width;
-            height: $checkbox-label-height;
-            border: $checkbox-label-border;
-            border-radius: $checkbox-icon-border-radius;
+            width: $checkbox__label-width;
+            height: $checkbox__label-height;
+            border: $checkbox__label-border;
+            border-radius: $checkbox__icon-border-radius;
         }
     }
 
@@ -44,11 +44,11 @@ $checkbox-icon-transition   : $transition-base !default;
         position: absolute;
         top: 5px;
         left: 5px;
-        width: $checkbox-icon-size;
-        height: $checkbox-icon-size;
+        width: $checkbox__icon-size;
+        height: $checkbox__icon-size;
         fill: $color-primary;
         cursor: pointer;
         opacity: 0;
-        transition: $checkbox-icon-transition;
+        transition: $checkbox__icon-transition;
     }
 }

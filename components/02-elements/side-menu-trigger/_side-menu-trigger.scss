@@ -1,11 +1,11 @@
-$side-menu-trigger-width             : 32px !default;
-$side-menu-trigger-height            : 28px !default;
-$side-menu-trigger-font-size         : $font-size-extra-small !default;
-$side-menu-trigger-text-color        : $gray-dark !default;
-$side-menu-trigger-line-background   : $gray-dark !default;
-$side-menu-trigger-line-height       : 2px !default;
-$side-menu-trigger-line-border-radius: 2px !default;
-$side-menu-trigger-transition        : $transition-base !default;
+$side-menu-trigger__width             : 30px !default;
+$side-menu-trigger__height            : 30px !default;
+$side-menu-trigger__font-size         : $font-size-extra-small !default;
+$side-menu-trigger__transition        : $transition-base !default;
+$side-menu-trigger__text-color        : $gray !default;
+$side-menu-trigger__line-background   : $gray-dark !default;
+$side-menu-trigger__line-height       : 3px !default;
+$side-menu-trigger__line-border-radius: 3px !default;
 
 .side-menu-trigger {
     padding: 8px;
@@ -22,7 +22,7 @@ $side-menu-trigger-transition        : $transition-base !default;
     }
 
     &:hover .side-menu-trigger__line {
-        background: $side-menu-trigger-line-background;
+        background: $side-menu-trigger__line-background;
     }
 
     &:hover .side-menu-trigger__text {
@@ -33,8 +33,8 @@ $side-menu-trigger-transition        : $transition-base !default;
     &__icon {
         position: relative;
         overflow: hidden;
-        width: $side-menu-trigger-width;
-        height: $side-menu-trigger-height;
+        width: $side-menu-trigger__width;
+        height: $side-menu-trigger__height;
     }
 
     &__icon {
@@ -48,12 +48,10 @@ $side-menu-trigger-transition        : $transition-base !default;
         bottom: 0;
         left: 0;
         width: 100%;
-        color: $side-menu-trigger-text-color;
-        font-size: $side-menu-trigger-font-size;
-        font-weight: bold;
+        color: $side-menu-trigger__text-color;
+        font-size: $side-menu-trigger__font-size;
         text-align: center;
-        text-transform: uppercase;
-        transition: $side-menu-trigger-transition;
+        transition: $side-menu-trigger__transition;
 
         &--close {
             bottom: -15px;
@@ -64,13 +62,11 @@ $side-menu-trigger-transition        : $transition-base !default;
     &__line {
         position: absolute;
         left: 0;
-        right: 0;
-        width: 55%;
-        height: $side-menu-trigger-line-height;
-        margin: auto;
-        border-radius: $side-menu-trigger-line-border-radius;
-        background: $side-menu-trigger-line-background;
-        transition: $side-menu-trigger-transition;
+        width: 100%;
+        height: $side-menu-trigger__line-height;
+        border-radius: $side-menu-trigger__line-border-radius;
+        background: $side-menu-trigger__line-background;
+        transition: $side-menu-trigger__transition;
 
         &:nth-child(1) {
             top: 0;
@@ -94,7 +90,7 @@ $side-menu-trigger-transition        : $transition-base !default;
             &:nth-child(2),
             &:nth-child(3) {
                 top: 13px;
-                background: $side-menu-trigger-line-background;
+                background: $side-menu-trigger__line-background;
             }
 
             &:nth-child(2) {

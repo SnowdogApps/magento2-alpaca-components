@@ -1,13 +1,13 @@
-$input-margin             : 10px !default;
-$input-padding            : 10px 15px !default;
-$input-field-border       : 1px solid #d9d9d9 !default;
-$input-field-border-radius: $border-radius !default;
-$input-placeholder-color  : $gray-dark !default;
+$input__margin              : 10px !default;
+$input__padding             : 10px 15px !default;
+$input__field-border        : 1px solid #d9d9d9 !default;
+$input__field-border-radius : $border-radius !default;
+$input__placeholder-color   : $gray-light !default;
 
-$textarea-min-height      : 100px !default;
+$input__min-height--textarea: 100px !default;
 
 .input {
-    margin-bottom: $input-margin;
+    margin-bottom: $input__margin;
 
     &--inline {
         display: flex;
@@ -22,22 +22,22 @@ $textarea-min-height      : 100px !default;
 
     &__field {
         width: 100%;
-        padding: $input-padding;
-        border: $input-field-border;
-        border-radius: $input-field-border-radius;
+        padding: $input__padding;
+        border: $input__field-border;
+        border-radius: $input__field-border-radius;
 
         @include links(active) {
             outline: none;
         }
 
         &::placeholder {
-            color: $input-placeholder-color;
+            color: $input__placeholder-color;
         }
 
         &--textarea {
             min-width: 100%;
             max-width: 100%;
-            min-height: $textarea-min-height;
+            min-height: $input__min-height--textarea;
         }
     }
 }

@@ -1,18 +1,18 @@
-$cart-actions-margin : 15px !default;
-$cart-actions-padding: 10px !default;
+$cart-actions__margin : 15px !default;
+$cart-actions__padding: 10px !default;
 
 .cart-actions {
     display: flex;
     flex-wrap: wrap;
-    margin-top: $cart-actions-margin;
+    margin-top: $cart-actions__margin;
 
     &__button {
         width: 100%;
-        margin-bottom: $cart-actions-margin;
+        margin-bottom: $cart-actions__margin;
         @include mq($screen-m) {
             width: 190px;
-            margin: 0 0 $cart-actions-margin $cart-actions-margin;
-            padding: 0 $cart-actions-padding;
+            margin: 0 0 $cart-actions__margin $cart-actions__margin;
+            padding: 0 $cart-actions__padding;
         }
 
         &--continue {
