@@ -12,7 +12,7 @@ module.exports = {
       context: {
         text: '',
         class: 'button--icon',
-        iconId: 'arrow-right',
+        iconId: 'arrow-left',
         iconClass: 'button__icon'
       }
     },
