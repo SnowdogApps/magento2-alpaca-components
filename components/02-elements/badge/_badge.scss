@@ -1,5 +1,5 @@
 $badge__padding        : 7px 10px !default;
-$badge__background     : $color-primary !default;
+$badge__background     : $bg-color-base !default;
 $badge__border-radius  : $border-radius !default;
 $badge__font-size      : $font-size-extra-small !default;
 $badge__font-family    : $font-family-base !default;
@@ -18,10 +18,10 @@ $badge__color--discount: $color-danger !default;
     border-radius: $badge__border-radius;
 
     &--new {
-        background: $badge__color--new;
+        color: $badge__color--new;
     }
 
     &--discount {
-        background: $badge__color--discount;
+        color: $badge__color--discount;
     }
 }
