@@ -13,7 +13,7 @@ module.exports = {
     {
       name: 'class-1',
       context: {
-        tag: 'h1',
+        tag: 'div',
         class: 'heading heading--first-level',
         text: 'First level heading - only class'
       }
@@ -21,7 +21,7 @@ module.exports = {
     {
       name: 'tag-and-class-1',
       context: {
-        tag: 'div',
+        tag: 'h1',
         class: 'heading heading--first-level',
         text: 'First level heading - tag and class'
       }

@@ -2,27 +2,27 @@ module.exports = {
   title: 'Icons',
   context: {
     icons: [
-      'arrow-down',
+      'angle-down',
+      'arrow-circle-up',
       'arrow-left',
-      'arrow-right',
-      'arrow-up',
-      'carousel-left',
-      'carousel-right',
       'checked',
       'close',
-      'edit',
+      'youtube',
       'facebook',
+      'instagram',
       'google-plus',
+      'mobile-menu',
+      'search',
+      'phone',
+      'user',
+      'shopping-cart',
+      'settings',
+      'edit',
       'linkedin',
       'loader',
-      'mobile-menu',
       'plus',
       'remove',
-      'search',
-      'settings',
-      'shopping-cart',
-      'twitter',
-      'user'
+      'twitter'
     ]
   }
 };
