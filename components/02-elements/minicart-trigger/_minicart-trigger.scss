@@ -13,6 +13,9 @@ $minicart-trigger__counter-size      : 20px !default;
     margin: 0 8px 0 0;
     border: 0;
     background-color: $minicart-trigger__background;
+    @include mq($screen-xl) {
+        margin: 0;
+    }
 
     &:hover,
     &:focus {

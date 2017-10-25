@@ -10,15 +10,55 @@ $header-font-family : $font-family-sans-serif !default;
 .header {
     border-bottom: 1px solid $header-main-color;
 
+    &__top-bar {
+        display: none;
+        background-color: $gray-light;
+        @include mq($screen-xl) {
+            display: block;
+        }
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 30px;
+        }
+    }
+
+    &__contact-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: 0;
+        font-size: 12px;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        &-item {
+            margin-left: 16px;
+            text-decoration: none;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
     &__wrapper {
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
+        @include mq($screen-xl) {
+            margin: 2px 0;
+        }
     }
 
     &__logo {
         order: 2;
         margin-left: 8px;
+        @include mq($screen-xl) {
+            margin: 0 auto 0 0;
+        }
     }
 
     &__icons {
@@ -36,10 +76,17 @@ $header-font-family : $font-family-sans-serif !default;
             flex: 1 168px;
             max-width: 168px;
         }
+        @include mq($screen-xl) {
+            flex: 1 48px;
+            max-width: 48px;
+        }
 
         &-item {
             margin-right: 8px;
             padding: 12px;
+            @include mq($screen-xl) {
+                display: none;
+            }
         }
     }
 
@@ -50,23 +97,6 @@ $header-font-family : $font-family-sans-serif !default;
         fill: $header-second-color;
         transition: $header-transition;
         cursor: pointer;
-    }
-
-    &__link {
-        position: relative;
-        color: $header-main-color;
-        transition: $header-transition;
-        max-height: $header-basic-width;
-
-        &:hover {
-            color: $header-second-color;
-            text-decoration: none;
-        }
-
-        &--icon {
-            padding: 0;
-            max-height: none;
-        }
     }
 
     &__menu-trigger {
@@ -81,6 +111,9 @@ $header-font-family : $font-family-sans-serif !default;
             height: 48px;
             max-width: 48px;
             border-top: none;
+        }
+        @include mq($screen-xl) {
+            display: none;
         }
     }
 
@@ -98,8 +131,12 @@ $header-font-family : $font-family-sans-serif !default;
             flex: 1 300px;
             flex-direction: column;
             justify-content: center;
-            margin-left: 28px;
             border-top: none;
+        }
+        @include mq($screen-xl) {
+            max-width: 300px;
+            margin-right: 24px;
+            margin-left: auto;
         }
     }
 
@@ -115,6 +152,10 @@ $header-font-family : $font-family-sans-serif !default;
         @include mq($screen-m) {
             width: 70%;
         }
+        @include mq($screen-xl) {
+            width: 100%;
+            border: 1px solid $gray;
+        }
 
         &-input-wrapper {
             margin-bottom: 0;
@@ -129,9 +170,13 @@ $header-font-family : $font-family-sans-serif !default;
             height: 32px;
             border: none;
             border-radius: 34px;
+            font-size: 12px;
             &::placeholder {
                 color: $gray-dark;
                 font-size: 12px;
+                @include mq($screen-xl) {
+                    color: $gray;
+                }
             }
         }
 
@@ -150,107 +195,4 @@ $header-font-family : $font-family-sans-serif !default;
             height: 18px;
         }
     }
-    // &__search-form {
-    //     display: none;
-    //     position: absolute;
-    //     bottom: calc(-100% - 2px);
-    //     width: 100%;
-    //     left: 0;
-    //     padding: 15px;
-    //     background: $white;
-    //     border-bottom: 1px solid #b3b3b3;
-    //     margin-bottom: 0;
-    //
-    //     @include mq($screen-m) {
-    //         position: relative;
-    //         padding: 0;
-    //         border-bottom: 0;
-    //         bottom: 0;
-    //         width: auto;
-    //         display: block;
-    //     }
-    //
-    //     &--visible {
-    //         display: block;
-    //     }
-    //
-    //     .form__heading {
-    //         margin: 0;
-    //     }
-    //
-    //     .header__field {
-    //         width: 100%;
-    //         height: 30px;
-    //         border: 2px solid #b3b3b3;
-    //         padding: 0 15px;
-    //         line-height: 30px;
-    //         @include mq($screen-m) {
-    //             width: 290px;
-    //         }
-    //
-    //         &::placeholder {
-    //             color: $gray;
-    //         }
-    //     }
-    //
-    //     .button {
-    //         min-width: auto;
-    //     }
-    // }
-
-    // &__search-button {
-    //     margin-bottom: 0;
-    //
-    //     @include mq($screen-m) {
-    //         display: none;
-    //     }
-    // }
-    //
-    // &__button {
-    //     margin-bottom: 0;
-    //     height: 30px;
-    //     padding: 0;
-    //     display: none !important;
-    //
-    //     @include mq($screen-m) {
-    //         display: block !important;
-    //     }
-    //
-    //     &--small {
-    //         padding: 0 30px;
-    //         margin: 0;
-    //         height: 30px;
-    //
-    //         @include mq($screen-m) {
-    //             display: none !important;
-    //         }
-    //     }
-    // }
-    //
-    // &__button-popup {
-    //     position: relative;
-    //     padding: 0;
-    //     border: none;
-    //     background: $white;
-    //     color: $header-main-color;
-    //     transition: $header-transition;
-    //     height: $header-basic-width;
-    //     font-family: $font-family-sans-serif;
-    //     margin-bottom: 0;
-    //
-    //     &:hover {
-    //         background-color: $white;
-    //         color: $header-second-color;
-    //         text-decoration: none;
-    //     }
-    // }
-    //
-    // &__input {
-    //     .input__field {
-    //         @include mq($screen-m) {
-    //             max-width: 200px;
-    //         }
-    //     }
-    // }
-    //
 }

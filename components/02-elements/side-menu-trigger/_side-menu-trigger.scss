@@ -12,7 +12,7 @@ $side-menu-trigger__line-border-radius: 2px !default;
     background: none;
     cursor: pointer;
 
-    @include mq($screen-l) {
+    @include mq($screen-xl) {
         display: none;
     }
 
