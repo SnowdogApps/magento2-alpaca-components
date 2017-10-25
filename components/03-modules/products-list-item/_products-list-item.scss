@@ -1,21 +1,21 @@
-$product-list-item-margin               : 15px !default;
-$product-list-item-padding              : 15px !default;
-$product-list-item-font-size            : $font-size-small !default;
-$product-list-item-font-size-small      : $font-size-extra-small !default;
-$product-list-item-border               : 1px solid $gray-lighter !default;
-$product-list-item-details-color        : $gray !default;
-$product-list-item-name-color           : $gray-dark !default;
-$product-list-item-price-color          : $color-primary !default;
-$product-list-item-actions-button-width : 35px !default;
-$product-list-item-actions-button-height: 35px !default;
+$product-list-item__margin               : 15px !default;
+$product-list-item__padding              : 15px !default;
+$product-list-item__font-size            : $font-size-small !default;
+$product-list-item__font-size-small      : $font-size-extra-small !default;
+$product-list-item__border               : 1px solid $gray-lighter !default;
+$product-list-item__details-color        : $gray !default;
+$product-list-item__name-color           : $gray-dark !default;
+$product-list-item__price-color          : $color-primary !default;
+$product-list-item__actions-button-width : 35px !default;
+$product-list-item__actions-button-height: 35px !default;
 
 .products-list-item {
     display: flex;
     width: 100%;
-    margin-bottom: $product-list-item-margin;
-    padding-bottom: $product-list-item-padding;
-    border-bottom: $product-list-item-border;
-    font-size: $product-list-item-font-size-small;
+    margin-bottom: $product-list-item__margin;
+    padding-bottom: $product-list-item__padding;
+    border-bottom: $product-list-item__border;
+    font-size: $product-list-item__font-size-small;
 
     &__image {
         flex: 0 0 100px;
@@ -25,18 +25,18 @@ $product-list-item-actions-button-height: 35px !default;
     &__details {
         position: relative;
         flex: 1;
-        color: $product-list-item-details-color;
+        color: $product-list-item__details-color;
 
         &-name {
             display: block;
             margin-bottom: 5px;
-            color: $product-list-item-name-color;
+            color: $product-list-item__name-color;
         }
 
         &-price {
             margin-bottom: 5px;
-            font-size: $product-list-item-font-size;
-            color: $product-list-item-price-color;
+            font-size: $product-list-item__font-size;
+            color: $product-list-item__price-color;
         }
 
         &-qty-wrapper {
@@ -60,7 +60,7 @@ $product-list-item-actions-button-height: 35px !default;
             flex: 1;
             line-height: 35px;
             font-weight: 600;
-            font-size: $product-list-item-font-size;
+            font-size: $product-list-item__font-size;
             @include mq($screen-s) {
                 margin: 10px 0 0 10px;
             }
@@ -104,9 +104,9 @@ $product-list-item-actions-button-height: 35px !default;
         }
 
         &-button {
-            width: $product-list-item-actions-button-width;
-            min-width: $product-list-item-actions-button-width;
-            height: $product-list-item-actions-button-height;
+            width: $product-list-item__actions-button-width;
+            min-width: $product-list-item__actions-button-width;
+            height: $product-list-item__actions-button-height;
             border: none;
             margin-bottom: 0;
             margin-left: 5px;

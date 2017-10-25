@@ -1,24 +1,24 @@
-$popup-padding         : 10px !default;
-$popup-width           : 400px !default;
-$popup-background      : $white !default;
-$popup-z-index         : 50 !default;
-$popup-box-shadow-color: $black !default;
-$popup-box-shadow      : 0 0 8px 0 rgba($popup-box-shadow-color, 0.2) !default;
+$popup__padding         : 10px !default;
+$popup__width           : 400px !default;
+$popup__background      : $white !default;
+$popup__z-index         : 50 !default;
+$popup__box-shadow-color: $black !default;
+$popup__box-shadow      : 0 0 8px 0 rgba($popup__box-shadow-color, 0.2) !default;
 
 // Arrow
-$popup-arrow-size      : 21px !default;
-$popup-arrow-top       : -10px !default;
-$popup-arrow-transform : rotate(45deg) !default;
-$popup-arrow-box-shadow: 2px -2px 4px 0 rgba($popup-box-shadow-color, 0.1) !default;
+$popup__arrow-size      : 21px !default;
+$popup__arrow-top       : -10px !default;
+$popup__arrow-box-shadow: 2px -2px 4px 0 rgba($popup__box-shadow-color, 0.1) !default;
+$popup__arrow-transform : rotate(45deg) !default;
 
 .popup {
     display: none;
     position: absolute;
-    width: $popup-width;
-    padding: $popup-padding;
-    z-index: $popup-z-index;
-    box-shadow: $popup-box-shadow;
-    background-color: $popup-background;
+    width: $popup__width;
+    padding: $popup__padding;
+    z-index: $popup__z-index;
+    box-shadow: $popup__box-shadow;
+    background-color: $popup__background;
 
     &--active {
         display: block;
@@ -30,12 +30,12 @@ $popup-arrow-box-shadow: 2px -2px 4px 0 rgba($popup-box-shadow-color, 0.1) !defa
 
     &__arrow {
         position: absolute;
-        top: $popup-arrow-top;
-        width: $popup-arrow-size;
-        height: $popup-arrow-size;
-        background: $popup-background;
-        transform: $popup-arrow-transform;
-        box-shadow: $popup-arrow-box-shadow;
+        top: $popup__arrow-top;
+        width: $popup__arrow-size;
+        height: $popup__arrow-size;
+        background: $popup__background;
+        transform: $popup__arrow-transform;
+        box-shadow: $popup__arrow-box-shadow;
         z-index: -1;
     }
 }
