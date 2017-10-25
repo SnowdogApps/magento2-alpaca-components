@@ -1,3 +1,7 @@
-<div class="badge {{ class }}">
+{{#if modifier}}
+    <div class="badge badge--{{ modifier }}">
+{{else}}
+    <div class="badge">
+{{/if}}
     {{ text }}
 </div>
