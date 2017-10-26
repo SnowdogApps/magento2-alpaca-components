@@ -1,66 +1,25 @@
-$form-legend-font-size  : $font-size-large !default;
-$form-legend-line-height: 1.2 !default;
+$form__fieldset-margin       : 0 0 40px !default;
+$form__legend-margin         : 0 0 25px !default;
+$form__legend-font-size      : $font-size-large !default;
+$form__legend-line-height    : 1.2 !default;
+$form__line-height--compact  : $button-height !default;
+$form__height--compact       : $button-height !default;
+$form__margin--compact       : 20px !default;
+$form__button-margin--compact: 0 0 0 (-$button-icon-border-width) !default;
 
 .form {
     &__fieldset,
     .fieldset {
         border: 0;
-        margin: 0 0 40px;
         padding: 0;
+        margin: $form__fieldset-margin;
     }
 
     &__legend,
     .legend {
-        margin: 0 0 25px;
         padding: 0;
-        font-size: $form-legend-font-size;
-        color: inherit;
-        font-family: inherit;
-        font-weight: inherit;
-        line-height: $form-legend-line-height;
-        font-style: inherit;
-    }
-
-    &--compact {
-        @include mq($screen-m) {
-            display: flex;
-            justify-content: center;
-        }
-
-        .form__heading {
-            display: none;
-            line-height: $button-height;
-            margin-right: 20px;
-        }
-
-        .form__content {
-            display: flex;
-        }
-
-        .input {
-            margin-bottom: 0;
-            width: 100%;
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: center;
-
-            &__field {
-                width: 100%;
-                line-height: $button-height;
-                height: $button-height;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-        }
-
-        .button {
-            display: block;
-            margin: 0 0 0 (-$button-icon-border-width);
-            &--native-link {
-                margin: 0;
-            }
-        }
-
+        margin: $form__legend-margin;
+        font-size: $form__legend-font-size;
+        line-height: $form__legend-line-height;
     }
 }

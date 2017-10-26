@@ -1,16 +1,27 @@
+$cookie-message__margin     : 10px !default;
+$cookie-message__padding    : 10px !default;
+$cookie-message__width      : 100% !default;
+$cookie-message__color      : $gray-lightest !default;
+$cookie-message__font-size  : $font-size-extra-small !default;
+$cookie-message__transition : height 0.3s !default;
+$cookie-message__close-width: 35px !default;
+$cookie-message__link-border: 1px solid $white !default;
+$cookie-message__icon-fill  : $white !default;
+$cookie-message__icon-width : 10px !default;
+
 .cookie-message {
-    width: 100%;
-    background-color: $gray-lightest;
-    transition: height 0.3s;
+    width: $cookie-message__width;
+    background-color: $cookie-message__color;
+    transition: $cookie-message__transition;
     box-sizing: border-box;
 
     &__container {
+        position: relative;
         display: block;
         margin: 0 auto;
         max-width: $max-content-width;
-        position: relative;
         text-align: center;
-        padding: 10px 35px;
+        padding: $cookie-message__padding 35px;
     }
 
     &__message {
@@ -20,10 +31,10 @@
     }
 
     &__text {
-        font-size: 12px;
+        font-size: $cookie-message__font-size;
         font-weight: 700;
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: $cookie-message__margin;
         text-transform: uppercase;
 
         @include mq($screen-m) {
@@ -37,8 +48,8 @@
         @include links() {
             display: inline-block;
             font-weight: 400;
-            font-size: 12px;
-            border: 1px solid $white;
+            font-size: $cookie-message__font-size;
+            border: $cookie-message__link-border;
             padding: 5px;
         }
     }
@@ -47,23 +58,23 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 35px;
-        height: 35px;
+        width: $cookie-message__close-width;
+        height: $cookie-message__close-width;
         background: none;
         border: none;
         padding: 0;
         cursor: pointer;
 
         &--icon {
-            fill: $white;
-            width: 10px;
-            height: 10px;
-            margin: auto;
+            position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            position: absolute;
+            margin: auto;
+            fill: $cookie-message__icon-fill;
+            width: $cookie-message__icon-width;
+            height: $cookie-message__icon-width;
         }
     }
 
@@ -76,7 +87,7 @@
 
         .cookie-message__message {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: $cookie-message__margin;
 
             @include mq($screen-m) {
                 display: inline-block;
@@ -113,7 +124,7 @@
             width: auto;
             height: auto;
             font-weight: 400;
-            font-size: 12px;
+            font-size: $cookie-message__font-size;
             &:hover {
                 text-decoration: underline;
             }

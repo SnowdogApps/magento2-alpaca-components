@@ -1,51 +1,55 @@
-$message-background        : $gray;
-$message-background-success: $green;
-$message-background-error  : $red;
-
-$message-color             : $white;
-$message-color-red         : $red;
-$message-color-green       : $green;
-
-$message-padding-base      : 15px;
-$message-margin-base       : 15px;
+$message__font-size          : $font-size-small !default;
+$message__transition         : $transition-base !default;
+$message__background         : $gray !default;
+$message__background--success: $green !default;
+$message__background--error  : $red !default;
+$message__color              : $white !default;
+$message__color-red          : $red !default;
+$message__color-green        : $green !default;
+$message__padding-base       : 15px !default;
+$message__margin-base        : 15px !default;
+$message__after-height       : 100% !default;
+$message__after-width        : 30px !default;
+$message__icon--success      : "\2713" !default;
+$message__icon--error        : "\2715" !default;
 
 .message {
-    background-color: $message-background;
-    color: $message-color;
+    background-color: $message__background;
+    color: $message__color;
     position: relative;
-    padding: 5px ($message-padding-base * 2);
-    margin-bottom: $message-margin-base;
-    font-size: $font-size-small;
+    padding: 5px ($message__padding-base * 2);
+    margin-bottom: $message__margin-base;
+    font-size: $message__font-size;
     width: 100%;
-    transition: $transition-base;
+    transition: $message__transition;
 
     &:after {
-        color: $message-color;
         position: absolute;
+        display: flex;
         left: 0;
         top: 0;
-        height: 100%;
-        width: 30px;
-        display: flex;
         align-items: center;
         justify-content: center;
+        height: $message__after-height;
+        width: $message__after-width;
+        color: $message__color;
     }
 
     &--success {
-        background-color: $message-background-success;
-        color: rgba($message-color, 0.9);
+        background-color: $message__background--success;
+        color: rgba($message__color, 0.9);
 
         &:after {
-            content: "\2713";
+            content: $message__icon--success;
         }
     }
 
     &--error {
-        background-color: $message-background-error;
-        color: rgba($message-color, 0.9);
+        background-color: $message__background--error;
+        color: rgba($message__color, 0.9);
 
         &:after {
-            content: "\2715";
+            content: $message__icon--error;
         }
     }
 }

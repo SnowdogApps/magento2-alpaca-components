@@ -1,38 +1,37 @@
-$table-padding: 15px;
-$table-radius: $border-radius;
+$table__padding                  : 15px !default;
+$table__color                    : $black !default;
+$table__background               : $white !default;
+$table__font-size                : $font-size-small !default;
+$table__border-radius            : $border-radius !default;
+$table__border                   : 1px solid $gray-light !default;
+$table__th-background            : $gray-lightest !default;
+$table__td-background            : $white !default;
+$table__tfoot-background         : $gray-lightest !default;
+$table__background-odd--odd-even : $gray-lightest !default;
+$table__background-even--odd-even: $white !default;
 
 .table {
     width: 100%;
-    background: $white;
+    background: $table__background;
     margin: 1em 0;
-    border: 1px solid $gray-light;
-    border-radius: $table-radius;
-    color: $black;
+    border: $table__border;
+    border-radius: $table__border-radius;
+    color: $table__color;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: $font-size-small;
+    font-size: $table__font-size;
 
-    thead {
-        tr {
-            padding: 0;
-            border-bottom: 0;
-
-            @include mq($screen-m) {
-                border-top-left-radius: $table-radius;
-                border-top-right-radius: $table-radius;
-            }
-        }
-
-        th {
-            &:first-child {
-                @include mq($screen-m) {
-                    border-top-left-radius: $table-radius;
+    &--odd-even {
+        tbody {
+            tr:nth-child(odd) {
+                td {
+                    background: $table__background-odd--odd-even;
                 }
             }
 
-            &:last-child {
-                @include mq($screen-m) {
-                    border-top-right-radius: $table-radius;
+            tr:nth-child(even) {
+                td {
+                    background: $table__background-even--odd-even;
                 }
             }
         }
@@ -40,154 +39,97 @@ $table-radius: $border-radius;
 
     tr {
         display: block;
-        border-bottom: 1px solid $gray-lighter;
-        padding: 10px 0;
+        padding: $table__padding 0;
+        border-bottom: $table__border;
 
         @include mq($screen-m) {
             padding: 0;
             border-bottom: 0;
             display: table-row;
         }
-    }
 
-    th {
-        display: none;
-
-        @include mq($screen-m) {
-            padding: $table-padding;
-            background: $gray-lightest;
-            border-bottom: 1px solid $gray-lighter;
-            border-right: 1px solid $gray-lighter;
-            display: table-cell;
+        &:first-child {
+            border-top-left-radius: $table__border-radius;
+            border-top-right-radius: $table__border-radius;
         }
 
         &:last-child {
-            @include mq($screen-m) {
-                border-right: 0;
+            border-bottom-right-radius: $table__border-radius;
+            border-bottom-left-radius: $table__border-radius;
+        }
+    }
+
+    th {
+        display: block;
+        padding: 5px $table__padding;
+        background: $table__background;
+        text-align: left;
+
+        @include mq($screen-m) {
+            display: table-cell;
+            padding: $table__padding;
+            background: $table__th-background;
+            border-bottom: $table__border;
+            border-right: $table__border;
+
+            &:first-child {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
             }
+
+            &:last-child {
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        &:first-child {
+            border-top-left-radius: $table__border-radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $table__border-radius;
+            border-right: 0;
         }
     }
 
     td {
-        padding: 5px $table-padding;
-        background: $white;
-        display: flex;
+        display: block;
+        padding: 5px $table__padding;
+        background: $table__td-background;
         text-align: left;
-
-        &:before {
-            content: attr(data-th);
-            font-weight: bold;
-            margin-right: 10px;
-            max-width: 25%;
-            width: 25%;
-            display: block;
-
-            @include mq($screen-m) {
-                display: none;
-            }
-        }
-
-        &:last-child {
-            @include mq($screen-m) {
-                border-right: 0;
-            }
-        }
 
         @include mq($screen-m) {
             display: table-cell;
-            padding: $table-padding;
-            background: $white;
-            border-bottom: 1px solid $gray-lighter;
-            border-right: 1px solid $gray-lighter;
-        }
-    }
+            padding: $table__padding;
+            background: $table__td-background;
+            border-bottom: $table__border;
+            border-right: $table__border;
 
-    tbody {
-        tr {
+            &:first-child {
+                border-bottom-left-radius: $table__border-radius;
+            }
+
             &:last-child {
-                td {
-                    &:first-child {
-                        @include mq($screen-m) {
-                            border-bottom-left-radius: $table-radius;
-                        }
-                    }
-
-                    &:last-child {
-                        @include mq($screen-m) {
-                            border-bottom-right-radius: $table-radius;
-                        }
-                    }
-                }
+                border-bottom-right-radius: $table__border-radius;
+                border-right: 0;
             }
         }
     }
 
     tfoot {
-        tr {
-            &:last-child {
-                border-bottom: 0;
-
-                th,
-                td {
-                    border-bottom: 0;
-
-                    &:first-child {
-                        @include mq($screen-m) {
-                            border-bottom-left-radius: $table-radius;
-                        }
-                    }
-
-                    &:last-child {
-                        @include mq($screen-m) {
-                            border-bottom-right-radius: $table-radius;
-                        }
-                    }
-                }
-            }
-        }
-
-        th,
         td {
-            padding: 5px $table-padding;
-            background: $white;
             display: block;
+            padding: 5px $table__padding;
+            background: $table__background;
             text-align: left;
-            font-weight: normal;
 
             @include mq($screen-m) {
-                padding: $table-padding;
-                background: $gray-lightest;
-                border-right: 1px solid $gray-lighter;
-                text-align: left;
                 display: table-cell;
-            }
-        }
-    }
-
-    &--odd-even {
-        tbody {
-            tr {
-                &:nth-child(odd) {
-                    background: $white;
-                }
-
-                &:nth-child(even) {
-                    background: $gray-lightest;
-                }
-
-                &:first-child {
-                    border-top-left-radius: $table-radius;
-                    border-top-right-radius: $table-radius;
-
-                    @include mq($screen-m) {
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                    }
-                }
-            }
-
-            td {
-                background-color: transparent;
+                padding: $table__padding;
+                background: $table__tfoot-background;
+                border-right: $table__border;
+                text-align: left;
             }
         }
     }

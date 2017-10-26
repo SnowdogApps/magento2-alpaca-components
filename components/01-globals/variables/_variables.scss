@@ -20,6 +20,7 @@ $gray-lightest         : #f7f7f9 !default;
 
 // Semantic color scheme
 $color-primary         : $green !default;
+$color-secondary       : $gray-dark !default;
 $color-success         : $green !default;
 $color-info            : $teal !default;
 $color-warning         : $orange !default;
@@ -43,10 +44,8 @@ $margin-base           : 16px !default;
 $padding-base          : 16px !default;
 
 // Typography
-$font-family-sans-serif      : "Montserrat", sans-serif !default;
-$font-family-sans-serif-bold : "Montserrat Bold", sans-serif !default;
-$font-family-sans-serif-black: "Montserrat Black", sans-serif !default;
-$font-family-monospace       :  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-sans-serif: "Montserrat", sans-serif !default;
+$font-family-monospace : Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-family-base      : $font-family-sans-serif !default;
 

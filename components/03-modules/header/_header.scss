@@ -1,20 +1,23 @@
+$header-padding   : 15px !default;
+$header-margin    : 15px !default;
+$header-background: $white !default;
+
 .header {
     position: relative;
-    padding: 15px 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background: $white;
-    overflow: hidden;
+    padding: $header-padding 0;
+    background: $header-background;
 
     &__right-panel {
         display: flex;
         flex-wrap: nowrap;
-        margin-left: 15px;
+        margin-left: $header-margin;
         align-items: center;
 
         > * {
-            margin-right: 15px;
+            margin-right: $header-margin;
             line-height: 1;
         }
 
