@@ -102,10 +102,6 @@ $button__width--fluid               : 100% !default;
             height: $button-icon__size;
             fill: $button-icon__fill;
         }
-
-        .button__content {
-            margin: $button-icon__content-margin;
-        }
     }
 
     &--fluid {
