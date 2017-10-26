@@ -1,11 +1,11 @@
-$header-padding     : 15px !default;
-$header-margin      : 15px !default;
-$header-basic-width : 18px !default;
-$header-transition  : $transition-base !default;
-$header-main-color  : $gray !default;
+$header-padding: 15px !default;
+$header-margin: 15px !default;
+$header-basic-width: 18px !default;
+$header-transition: $transition-base !default;
+$header-main-color: $gray !default;
 $header-second-color: $gray-dark !default;
-$header-font-size   : $font-size-small !default;
-$header-font-family : $font-family-sans-serif !default;
+$header-font-size: $font-size-small !default;
+$header-font-family: $font-family-sans-serif !default;
 
 .header {
     border-bottom: 1px solid $header-main-color;
@@ -16,6 +16,7 @@ $header-font-family : $font-family-sans-serif !default;
         @include mq($screen-xl) {
             display: block;
         }
+
         &-wrapper {
             display: flex;
             justify-content: space-between;
@@ -26,6 +27,7 @@ $header-font-family : $font-family-sans-serif !default;
     &__contact-info {
         margin: 8px 0;
         font-size: 12px;
+
         &-link {
             display: inline-flex;
             margin-left: 8px;
@@ -33,8 +35,9 @@ $header-font-family : $font-family-sans-serif !default;
             border-left: 1px solid $gray-dark;
             line-height: 14px;
             text-decoration: none;
-            &:hover,
-            &:focus {
+
+            &:focus,
+            &:hover {
                 text-decoration: none;
             }
         }
@@ -43,18 +46,28 @@ $header-font-family : $font-family-sans-serif !default;
     &__links {
         margin: 8px 0;
         font-size: 12px;
+
         &-item {
-            padding: 0 8px;
+            padding: 0 16px;
             border-left: 1px solid $gray-dark;
             line-height: 14px;
             text-decoration: none;
-            &:hover,
-            &:focus {
+
+            &:focus,
+            &:hover {
                 text-decoration: none;
             }
+
             &:first-child {
                 border-left: none;
             }
+        }
+
+        &-icon {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            vertical-align: top;
         }
     }
 
@@ -72,6 +85,17 @@ $header-font-family : $font-family-sans-serif !default;
         margin-left: 8px;
         @include mq($screen-xl) {
             margin: 0 auto 0 0;
+        }
+    }
+
+    &__featured-info {
+        display: none;
+        flex-direction:row;
+        order: 3;
+        margin-right: 16px;
+        margin-left: auto;
+        @include mq($screen-xl) {
+            display: flex;
         }
     }
 
@@ -150,7 +174,6 @@ $header-font-family : $font-family-sans-serif !default;
         @include mq($screen-xl) {
             max-width: 300px;
             margin-right: 24px;
-            margin-left: auto;
         }
     }
 
@@ -185,6 +208,7 @@ $header-font-family : $font-family-sans-serif !default;
             border: none;
             border-radius: 34px;
             font-size: 12px;
+
             &::placeholder {
                 color: $gray-dark;
                 font-size: 12px;

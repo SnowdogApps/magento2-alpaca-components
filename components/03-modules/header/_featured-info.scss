@@ -1,0 +1,42 @@
+.featured-info {
+    display: flex;
+    margin: 8px 16px;
+    color: $font-color-base;
+    text-decoration: none;
+
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 8px;
+
+        &-svg {
+            width: 24px;
+            height: 24px;
+            fill: $color-primary;
+            &--delivery-truck {
+                width: 35px;
+                height: 20px;
+            }
+        }
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-title {
+            margin-bottom: 4px;
+            font-weight: $font-weight-bold;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        &-subtitle {
+            color: $gray;
+            font-size: 10px;
+            line-height: 10px;
+        }
+    }
+}
