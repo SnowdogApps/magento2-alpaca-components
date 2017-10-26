@@ -5,6 +5,9 @@
 // Variables
 @import '../../components/01-globals/variables/variables';
 
+// Base
+@import '../../components/01-globals/_base/base';
+
 // Mixins
 @import '../../components/01-globals/mixins/clearfix';
 @import '../../components/01-globals/mixins/grid-column-width';
