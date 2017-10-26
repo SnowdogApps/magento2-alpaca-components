@@ -8,15 +8,14 @@ module.exports = {
       name: 'new',
       context: {
         text: 'new',
-        modifier: 'new',
-        class: 'test'
+        class: 'badge--new'
       }
     },
     {
       name: 'discount',
       context: {
         text: 'discount',
-        modifier: 'discount'
+        class: 'badge--discount'
       }
     }
   ]
