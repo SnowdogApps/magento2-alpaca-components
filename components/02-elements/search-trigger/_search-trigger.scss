@@ -1,20 +1,20 @@
-$search-trigger-width      : 60px !default;
-$search-trigger-height     : 60px !default;
-$search-trigger-padding    : 20px 13px 10px !default;
-$search-trigger-backgrond  : $white !default;
-$search-trigger-icon-width : 25px !default;
-$search-trigger-icon-height: 25px !default;
+$search-trigger__width      : 60px !default;
+$search-trigger__height     : 60px !default;
+$search-trigger__padding    : 20px 13px 10px !default;
+$search-trigger__backgrond  : $white !default;
+$search-trigger__icon-width : 25px !default;
+$search-trigger__icon-height: 25px !default;
 
 .search-trigger {
     position: absolute;
     top: 0;
     right: 145px;
-    width: $search-trigger-width;
-    height: $search-trigger-height;
-    padding: $search-trigger-padding;
+    width: $search-trigger__width;
+    height: $search-trigger__height;
+    padding: $search-trigger__padding;
     cursor: pointer;
     text-align: center;
-    background-color: $search-trigger-backgrond;
+    background-color: $search-trigger__backgrond;
     border: none;
 
     @include mq($screen-l) {
@@ -24,7 +24,7 @@ $search-trigger-icon-height: 25px !default;
     }
 
     &__icon {
-        width: $search-trigger-icon-width;
-        height: $search-trigger-icon-height;
+        width: $search-trigger__icon-width;
+        height: $search-trigger__icon-height;
     }
 }

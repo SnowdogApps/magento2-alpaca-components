@@ -16,8 +16,8 @@ $form-button-margin      : 0 0 0 (-$button-icon__border-width) !default;
 
         .form__heading {
             display: none;
-            line-height: $form-compact-line-height;
-            margin-right: $form-compact-margin;
+            line-height: $form__line-height--compact;
+            margin-right: $form__margin--compact;
         }
 
         .form__content {
@@ -34,8 +34,8 @@ $form-button-margin      : 0 0 0 (-$button-icon__border-width) !default;
 
             &__field {
                 width: 100%;
-                line-height: $form-compact-line-height;
-                height: $form-compact-height;
+                line-height: $form__line-height--compact;
+                height: $form__height--compact;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
@@ -43,7 +43,7 @@ $form-button-margin      : 0 0 0 (-$button-icon__border-width) !default;
 
         .button {
             display: block;
-            margin: $form-button-margin;
+            margin: $form__button-margin--compact;
             &--native-link {
                 margin: 0;
             }
@@ -54,14 +54,14 @@ $form-button-margin      : 0 0 0 (-$button-icon__border-width) !default;
     .fieldset {
         border: 0;
         padding: 0;
-        margin: $form-fieldset-margin;
+        margin: $form__fieldset-margin;
     }
 
     &__legend,
     .legend {
         padding: 0;
-        margin: $form-legend-margin;
-        font-size: $form-legend-font-size;
-        line-height: $form-legend-line-height;
+        margin: $form__legend-margin;
+        font-size: $form__legend-font-size;
+        line-height: $form__legend-line-height;
     }
 }

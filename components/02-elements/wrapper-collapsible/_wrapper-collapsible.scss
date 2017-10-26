@@ -1,9 +1,9 @@
-$wrapper-collapsible-padding             : 10px !default;
-$wrapper-collapsible-background          : $white !default;
-$wrapper-collapsible-icon-width          : 30px !default;
-$wrapper-collapsible-icon-height         : 30px !default;
-$wrapper-collapsible-icon-fill           : $black !default;
-$wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
+$wrapper-collapsible__padding              : 10px !default;
+$wrapper-collapsible__background           : $white !default;
+$wrapper-collapsible__icon-width           : 30px !default;
+$wrapper-collapsible__icon-height          : 30px !default;
+$wrapper-collapsible__icon-fill            : $black !default;
+$wrapper-collapsible__transform--horizontal: scaleX(1) translateX(0) !default;
 
 .wrapper-collapsible {
     display: block;
@@ -16,7 +16,7 @@ $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
                 display: block;
                 top: auto;
                 right: auto;
-                transform: $wrapper-collapsible-horizontal-transform;
+                transform: $wrapper-collapsible__transform--horizontal;
             }
         }
 
@@ -34,7 +34,7 @@ $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
         right: 0;
         width: auto;
         min-width: 260px;
-        background-color: $wrapper-collapsible-background;
+        background-color: $wrapper-collapsible__background;
         z-index: 10;
         overflow: hidden;
 
@@ -52,7 +52,7 @@ $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
         display: block;
         top: 10px;
         right: 55px;
-        padding: $wrapper-collapsible-padding;
+        padding: $wrapper-collapsible__padding;
         cursor: pointer;
         z-index: 10;
 
@@ -70,8 +70,8 @@ $wrapper-collapsible-horizontal-transform: scaleX(1) translateX(0) !default;
 
     &__trigger-icon {
         display: block;
-        width: $wrapper-collapsible-icon-width;
-        height: $wrapper-collapsible-icon-height;
-        fill: $wrapper-collapsible-icon-fill;
+        width: $wrapper-collapsible__icon-width;
+        height: $wrapper-collapsible__icon-height;
+        fill: $wrapper-collapsible__icon-fill;
     }
 }

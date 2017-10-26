@@ -1,28 +1,28 @@
-$pager-item-size              : 48px !default;
-$pager-padding                : 15px !default;
-$pager-margin                 : 15px !default;
-$pager-item-current-color     : $white !default;
-$pager-item-current-background: $color-primary !default;
-$pager-link-color             : $gray !default;
-$pager-link-color-hover       : $color-primary !default;
-$pager-icon-width             : 12px !default;
-$pager-icon-height            : 12px !default;
+$pager__padding                 : 15px !default;
+$pager__margin                  : 15px !default;
+$pager__item-size               : 48px !default;
+$pager__item-color--current     : $white !default;
+$pager__item-background--current: $color-primary !default;
+$pager__link-color              : $gray !default;
+$pager__link-color-hover        : $color-primary !default;
+$pager__icon-width              : 12px !default;
+$pager__icon-height             : 12px !default;
 
 .pager {
     width: 100%;
     text-align: center;
-    margin-bottom: $pager-margin;
+    margin-bottom: $pager__margin;
 
     &__list {
         display: flex;
         align-items: center;
         justify-content: center;
         list-style-type: none;
-        padding: 0 $pager-padding;
+        padding: 0 $pager__padding;
         margin: 10px 0;
 
         @include mq($screen-m) {
-            padding: 0 ($pager-padding * 2);
+            padding: 0 ($pager__padding * 2);
         }
     }
 
@@ -30,8 +30,8 @@ $pager-icon-height            : 12px !default;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: $pager-item-size;
-        min-width: $pager-item-size;
+        height: $pager__item-size;
+        min-width: $pager__item-size;
         margin-right: 5px;
 
         &:last-child {
@@ -39,8 +39,8 @@ $pager-icon-height            : 12px !default;
         }
 
         &--current {
-            color: $pager-item-current-color;
-            background-color: $pager-item-current-background;
+            color: $pager__item-color--current;
+            background-color: $pager__item-background--current;
         }
     }
 
@@ -49,20 +49,20 @@ $pager-icon-height            : 12px !default;
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: $pager-item-size;
+        height: $pager__item-size;
         padding: 0 5px;
-        line-height: $pager-item-size;
-        color: $pager-link-color;
+        line-height: $pager__item-size;
+        color: $pager__link-color;
         text-align: center;
 
         &:hover {
-            color: $pager-link-color-hover;
+            color: $pager__link-color-hover;
             text-decoration: none;
         }
     }
 
     &__icon {
-        width: $pager-icon-width;
-        height: $pager-icon-height;
+        width: $pager__icon-width;
+        height: $pager__icon-height;
     }
 }
