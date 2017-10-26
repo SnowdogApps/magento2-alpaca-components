@@ -53,7 +53,8 @@ $button__width--fluid               : 100% !default;
     color: $button__font-color;
     transition: $button__transition;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background: $button__background-hover;
         border-color: $button__border-hover;
         color: $button__font-color-hover;
@@ -76,7 +77,8 @@ $button__width--fluid               : 100% !default;
         color: $button__font-color--secondary;
         background: $button__background--secondary;
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-color: $button__border-hover--secondary;
             color: $button__font-color-hover--secondary;
             background: $button__background-hover--secondary;
@@ -89,7 +91,8 @@ $button__width--fluid               : 100% !default;
         background: $button-icon__background;
         transition: $button__transition;
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-color: $button-icon__border-hover;
             background: $button-icon__background-hover;
             .button__icon {
