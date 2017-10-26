@@ -36,7 +36,7 @@ $button-icon__color            : $gray-light !default;
 $button-icon__color-hover      : $color-primary !default;
 
 //fluid
-$button-fluid-width               : 100% !default;
+$button__width--fluid               : 100% !default;
 
 .button {
     display: inline-block;
@@ -109,7 +109,7 @@ $button-fluid-width               : 100% !default;
     }
 
     &--fluid {
-        width: $button-fluid-width;
+        width: $button__width--fluid;
     }
 }
 
