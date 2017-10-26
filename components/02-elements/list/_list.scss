@@ -1,26 +1,26 @@
-$list-style              : none !default;
-$list-margin             : 10px 0 !default;
-$list-padding            : 0 !default;
-$list-item-padding       : 5px 0 !default;
-$list-content-padding    : 10px !default;
-$list-label-padding      : 0 5px 5px 0 !default;
+$list__style              : none !default;
+$list__margin             : 10px 0 !default;
+$list__padding            : 0 !default;
+$list__item-padding       : 5px 0 !default;
+$list__content-padding    : 10px !default;
+$list__label-padding      : 0 5px 5px 0 !default;
 
 // Horizontal
-$list-padding--horizontal: 10px !default;
+$list__padding--horizontal: 10px !default;
 
 // With icon
-$list-icon-size          : 16px !default;
+$list__icon-size--icon    : 16px !default;
 
 // With image
-$list-image-width        : 16px !default;
+$list__width--image       : 16px !default;
 
 // Divided
-$list-divider-border     : 1px solid $gray-dark !default;
+$list__border--divider    : 1px solid $gray-dark !default;
 
 .list {
-    margin: $list-margin;
-    padding: $list-padding;
-    list-style: $list-style;
+    margin: $list__margin;
+    padding: $list__padding;
+    list-style: $list__style;
 
     &--center {
         justify-content: center;
@@ -32,13 +32,13 @@ $list-divider-border     : 1px solid $gray-dark !default;
         flex-direction: row;
         flex-wrap: wrap;
         .list__item {
-            padding: $list-padding--horizontal;
+            padding: $list__padding--horizontal;
 
             &:first-child {
-                padding-top: $list-padding--horizontal;
+                padding-top: $list__padding--horizontal;
             }
             &:last-child {
-                padding-bottom: $list-padding--horizontal;
+                padding-bottom: $list__padding--horizontal;
             }
         }
     }
@@ -51,13 +51,13 @@ $list-divider-border     : 1px solid $gray-dark !default;
         }
         .list__item {
             @include mq($screen-m) {
-                padding: $list-padding--horizontal;
+                padding: $list__padding--horizontal;
 
                 &:first-child {
-                    padding-top: $list-padding--horizontal;
+                    padding-top: $list__padding--horizontal;
                 }
                 &:last-child {
-                    padding-bottom: $list-padding--horizontal;
+                    padding-bottom: $list__padding--horizontal;
                 }
             }
         }
@@ -69,8 +69,8 @@ $list-divider-border     : 1px solid $gray-dark !default;
             align-items: center;
         }
         .list__icon {
-            width: $list-icon-size;
-            height: $list-icon-size;
+            width: $list__icon-size--icon;
+            height: $list__icon-size--icon;
         }
     }
 
@@ -79,14 +79,14 @@ $list-divider-border     : 1px solid $gray-dark !default;
             display: flex;
         }
         .list__image {
-            width: $list-image-width;
+            width: $list__width--image;
             height: auto;
         }
     }
 
     &--divided {
         .list__item {
-            border-bottom: $list-divider-border;
+            border-bottom: $list__border--divider;
             &:last-child {
                 border-bottom: none;
             }
@@ -95,7 +95,7 @@ $list-divider-border     : 1px solid $gray-dark !default;
         &.list--horizontal {
             .list__item {
                 border-bottom: none;
-                border-right: $list-divider-border;
+                border-right: $list__border--divider;
                 &:last-child {
                     border-right: none;
                 }
@@ -106,7 +106,7 @@ $list-divider-border     : 1px solid $gray-dark !default;
             .list__item {
                 @include mq($screen-m) {
                     border-bottom: none;
-                    border-right: $list-divider-border;
+                    border-right: $list__border--divider;
                 }
                 &:last-child {
                     @include mq($screen-m) {
@@ -123,7 +123,7 @@ $list-divider-border     : 1px solid $gray-dark !default;
 
     &__item {
         display: list-item;
-        padding: $list-item-padding;
+        padding: $list__item-padding;
         &:first-child {
             padding-top: 0;
         }
@@ -135,7 +135,7 @@ $list-divider-border     : 1px solid $gray-dark !default;
     &__label {
         clear: left;
         float: left;
-        padding: $list-label-padding;
+        padding: $list__label-padding;
         &:after {
             content: ': ';
         }
@@ -143,10 +143,10 @@ $list-divider-border     : 1px solid $gray-dark !default;
 
     &__value {
         float: left;
-        padding: $list-label-padding;
+        padding: $list__label-padding;
     }
 
-    .list__content {
-        padding-left: $list-content-padding;
+    &__content {
+        padding-left: $list__content-padding;
     }
 }

@@ -1,13 +1,13 @@
-$preformatted-padding    : 20px !default;
-$preformatted-background : $gray-lightest !default;
-$preformatted-overflow   : scroll !default;
-$preformatted-font-family: $font-family-monospace !default;
+$preformatted__padding    : 20px !default;
+$preformatted__background : $gray-lightest !default;
+$preformatted__overflow   : scroll !default;
+$preformatted__font-family: $font-family-monospace !default;
 
 .preformatted {
-    padding: $preformatted-padding;
-    background: $preformatted-background;
-    overflow: $preformatted-overflow;
-    font-family: $preformatted-font-family;
+    padding: $preformatted__padding;
+    background: $preformatted__background;
+    overflow: $preformatted__overflow;
+    font-family: $preformatted__font-family;
 }
 
 pre {
