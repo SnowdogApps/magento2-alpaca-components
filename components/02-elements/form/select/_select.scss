@@ -1,11 +1,14 @@
-$select__margin            : 10px !default;
-$select__padding           : 10px 15px !default;
-$select__border-radius     : $border-radius !default;
-$select__field-background  : $white !default;
-$select__list-border       : 1px solid #d9d9d9 !default;
-$select__input-border-width: 0 0 1px 0 !default;
-$select__input-boredr-style: solid !default;
-$select__input-border-color: #d9d9d9 !default;
+$select__dropdown-gap          : 4px !default;
+$select__dropdown-margin       : 12px !default;
+$select__dropdown-padding      : $select__dropdown-margin * 2;
+$select__margin                : 10px !default;
+$select__padding               : 10px 15px !default;
+$select__field-background      : $white !default;
+$select__list-border           : 1px solid #d9d9d9 !default;
+$select__input-border-width    : 0 0 1px 0 !default;
+$select__input-boredr-style    : solid !default;
+$select__input-border-color    : #d9d9d9 !default;
+$select__label-font-size       : 14px !default;
 
 .select {
     margin-bottom: $select__margin;
@@ -28,17 +31,12 @@ $select__input-border-color: #d9d9d9 !default;
         }
 
         &-list {
-            border-radius: $select__border-radius;
-
             &--single {
+                border: $select__list-border;
                 display: inline-block;
                 padding: 0;
                 width: 100%;
-                border: $select__list-border;
-            }
-
-            &--dropdown {
-                border: $select__list-border;
+                border-radius: $form-elements-radius;
             }
         }
 
@@ -54,15 +52,24 @@ $select__input-border-color: #d9d9d9 !default;
                 outline: none;
             }
         }
-        // Choices.js lib styles overwrites
-        .choices {
-            &.is-open {
-                .select__field {
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;
-                    border-bottom: 0;
-                }
-            }
+    }
+}
+// Choices.js lib styles overwrites
+.choices {
+    &.is-open {
+        .select__field {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 0;
+        }
+    }
+    &__list--dropdown {
+        .is-open & {
+            margin-top: $select__dropdown-gap;
+            border-color: $select__input-border-color;
+            border-radius: 4px;
+            width: calc(100% - #{$select__dropdown-padding});
+            margin-left: $select__dropdown-margin;
         }
     }
 }
