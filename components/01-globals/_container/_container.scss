@@ -1,10 +1,10 @@
-$container-max-width: $max-content-width !default;
-$container-margin   : 15px !default;
+$container__margin   : 15px !default;
+$container__max-width: $max-content-width !default;
 
 .container {
-    max-width: $container-max-width;
-    margin: 0 $container-margin;
-    @include mq($container-max-width + 2 * $container-margin) {
+    max-width: $container__max-width;
+    margin: 0 $container__margin;
+    @include mq($container__max-width + 2 * $container__margin) {
         margin: 0 auto;
     }
 }

@@ -1,33 +1,13 @@
-$input-border-color     : #d9d9d9 !default;
-$input-padding          : 10px 15px !default;
-$input-border-radius    : $border-radius !default;
-$input-placeholder-color: $gray-light !default;
+$input__margin              : 10px !default;
+$input__padding             : 10px 15px !default;
+$input__field-border        : 1px solid #d9d9d9 !default;
+$input__field-border-radius : $border-radius !default;
+$input__placeholder-color   : $gray-light !default;
 
-$textarea-min-height    : 100px !default;
+$input__min-height--textarea: 100px !default;
 
 .input {
-    margin-bottom: 10px;
-
-    &__field {
-        width: 100%;
-        padding: $input-padding;
-        border: 1px solid $input-border-color;
-        border-radius: $input-border-radius;
-
-        @include links(active) {
-            outline: none;
-        }
-
-        &::placeholder {
-            color: $input-placeholder-color;
-        }
-
-        &--textarea {
-            min-width: 100%;
-            max-width: 100%;
-            min-height: $textarea-min-height;
-        }
-    }
+    margin-bottom: $input__margin;
 
     &--inline {
         display: flex;
@@ -37,6 +17,27 @@ $textarea-min-height    : 100px !default;
         .input__label {
             margin-bottom: 0;
             margin-right: 20px;
+        }
+    }
+
+    &__field {
+        width: 100%;
+        padding: $input__padding;
+        border: $input__field-border;
+        border-radius: $input__field-border-radius;
+
+        @include links(active) {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: $input__placeholder-color;
+        }
+
+        &--textarea {
+            min-width: 100%;
+            max-width: 100%;
+            min-height: $input__min-height--textarea;
         }
     }
 }

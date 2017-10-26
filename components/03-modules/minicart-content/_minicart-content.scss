@@ -1,16 +1,15 @@
-$minicart-content-spacing        : 15px !default;
-$minicart-content-font-size      : $font-size-small !default;
-$minicart-content-font-size-big  : $font-size-large !default;
-$minicart-content-border-color   : $gray !default;
-$minicart-content-icon-width     : 20px !default;
-$minicart-content-icon-fill      : $gray !default;
-$minicart-content-icon-fill-hover: $gray-darker !default;
-$mincart-content-transition      : $transition-base !default;
-$minicart-content-border         : 3px solid $minicart-content-border-color !default;
+$minicart-content__spacing        : 15px !default;
+$minicart-content__font-size      : $font-size-small !default;
+$minicart-content__font-size-big  : $font-size-large !default;
+$minicart-content__border         : 3px solid $gray !default;
+$minicart-content__transition     : $transition-base !default;
+$minicart-content__icon-width     : 20px !default;
+$minicart-content__icon-fill      : $gray !default;
+$minicart-content__icon-fill-hover: $gray-darker !default;
 
 .minicart-content {
-    font-size: $minicart-content-font-size;
     max-height: calc(100vh - 90px);
+    font-size: $minicart-content__font-size;
     overflow-y: auto;
 
     @include mq($screen-l) {
@@ -19,7 +18,7 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
 
     &__title {
         text-align: center;
-        padding: $minicart-content-spacing;
+        padding: $minicart-content__spacing;
         margin-bottom: 0;
     }
 
@@ -33,8 +32,8 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
 
     &__item {
         position: relative;
-        border-bottom: $minicart-content-border;
-        padding: $minicart-content-spacing 0;
+        border-bottom: $minicart-content__border;
+        padding: $minicart-content__spacing 0;
     }
 
     &__image {
@@ -42,7 +41,7 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
     }
 
     &__name {
-        margin-bottom: $minicart-content-spacing;
+        margin-bottom: $minicart-content__spacing;
         text-transform: none;
     }
 
@@ -51,7 +50,7 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
     }
 
     &__price {
-        margin-bottom: $minicart-content-spacing;
+        margin-bottom: $minicart-content__spacing;
     }
 
     &__cart {
@@ -60,7 +59,7 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
     }
 
     &__summary {
-        font-size: $minicart-content-font-size-big;
+        font-size: $minicart-content__font-size-big;
     }
 
     &__icons {
@@ -70,23 +69,23 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
     }
 
     &__total {
-        margin-bottom: $minicart-content-spacing;
-        padding: $minicart-content-spacing 0;
-        border-bottom: $minicart-content-border;
         display: flex;
         justify-content: space-between;
-        flex-wrap: nowrap;
         align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: $minicart-content__spacing;
+        padding: $minicart-content__spacing 0;
+        border-bottom: $minicart-content__border;
     }
 
     &__button {
-        width: 100%;
         display: block;
+        width: 100%;
         text-align: center;
-        margin-bottom: $minicart-content-spacing;
+        margin-bottom: $minicart-content__spacing;
 
         &--icon {
-            margin: 0 $minicart-content-spacing 0 0;
+            margin: 0 $minicart-content__spacing 0 0;
 
             &:last-child {
                 margin: 0;
@@ -103,13 +102,13 @@ $minicart-content-border         : 3px solid $minicart-content-border-color !def
     }
 
     &__icon {
-        width: $minicart-content-icon-width;
-        height: $minicart-content-icon-width;
-        fill: $minicart-content-icon-fill;
-        transition: $mincart-content-transition;
+        width: $minicart-content__icon-width;
+        height: $minicart-content__icon-width;
+        fill: $minicart-content__icon-fill;
+        transition: $minicart-content__transition;
 
         &:hover {
-            fill: $minicart-content-icon-fill-hover;
+            fill: $minicart-content__icon-fill-hover;
         }
     }
 }
