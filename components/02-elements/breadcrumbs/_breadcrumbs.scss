@@ -8,6 +8,7 @@ $breadcrumbs__line-height        : $font-line-height !default;
 $breadcrumbs__text-decoration    : none !default;
 $breadcrumbs__color--active      : $color-primary !default;
 $breadcrumbs__font-family--active: $font-family-base-bold !default;
+$breadcrumbs__outline            : $outline-base !default;
 
 .breadcrumbs {
     display: flex;
@@ -18,6 +19,7 @@ $breadcrumbs__font-family--active: $font-family-base-bold !default;
         align-items: stretch;
         min-height: $breadcrumbs__clickable-area;
         color: $breadcrumbs__color;
+        outline: $breadcrumbs__outline;
 
         &:after {
             content: '/';
@@ -52,7 +54,7 @@ $breadcrumbs__font-family--active: $font-family-base-bold !default;
         }
         &:active,
         &:focus {
-            outline: none;
+            outline: $breadcrumbs__outline;
         }
     }
 }
