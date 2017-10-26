@@ -16,7 +16,6 @@ $marketing-bar__button-icon-color: $white !default;
     color: $white;
     @include mq($screen-m) {
         text-align: center;
-        color: $black;
     }
     &__close {
         position: absolute;
@@ -28,7 +27,8 @@ $marketing-bar__button-icon-color: $white !default;
         padding: $marketing-bar__button-spacing;
         border: none;
         background-color: transparent;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: transparent;
         }
         &-icon {
@@ -36,9 +36,6 @@ $marketing-bar__button-icon-color: $white !default;
             height: 24px;
             padding: 2px;
             fill: $marketing-bar__button-icon-color;
-            @include mq($screen-m) {
-                fill: $gray-dark;
-            }
         }
     }
 }
