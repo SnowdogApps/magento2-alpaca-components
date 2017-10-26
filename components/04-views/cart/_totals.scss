@@ -1,19 +1,26 @@
+$cart-totals__padding           : 15px !default;
+$cart-totals__margin            : 15px !default;
+$cart-totals__border            : 1px solid #d9d9d9 !default;
+$cart-totals__font-size         : $font-size-small !default;
+$cart-totals__padding--summary  : ($cart-totals__padding - 5) !default;
+$cart-totals__font-size--summary: $font-size-base !default;
+
 .cart-totals {
-    padding-top: 15px;
-    border-top: 1px solid #d9d9d9;
+    padding-top: $cart-totals__padding;
+    border-top: $cart-totals__border;
 
     &__row {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 15px;
-        font-size: $font-size-small;
+        padding-bottom: $cart-totals__margin;
+        font-size: $cart-totals__font-size;
 
         &--summary {
-            margin-bottom: 15px;
-            padding-top: 10px;
-            border-top: 1px solid #d9d9d9;
+            margin-bottom: $cart-totals__margin;
+            padding-top: $cart-totals__padding--summary;
+            border-top: $cart-totals__border;
             font-weight: 600;
-            font-size: $font-size-base;
+            font-size: $cart-totals__font-size--summary;
         }
     }
 }
