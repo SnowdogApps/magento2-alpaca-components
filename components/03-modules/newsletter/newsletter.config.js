@@ -2,43 +2,28 @@ module.exports = {
   collated: true,
   context: {
     heading: {
-      text: 'Newsletter'
+      text: 'Sing up to our twisted newsletter'
     },
     input: {
+      class: 'newsletter__input',
       field: {
-        placeholder: 'This is placeholder'
+        placeholder: 'Enter your email address',
+        class: 'newsletter__field'
+      },
+      label: {
+        class: 'newsletter__label'
       }
     },
     button: {
       tag: 'button',
-      text: 'Zarejestruj sie'
-    }
-  },
-  variants: [
-    {
-      name: 'short name',
-      context: {
-        button: {
-          text: 'Submit'
-        }
-      }
+      text: 'Submit',
+      class: 'newsletter__button'
     },
-    {
-      name: 'logn name',
-      context: {
-        button: {
-          text: 'Add my email to newsletter'
-        }
-      }
-    },
-    {
-      name: 'pl version',
-      context: {
-        button: {
-          text: 'Zarejestruj się'
-        }
-      }
+    'checkbox': {
+      'class': 'newsletter__checkbox',
+      'id': 'newsletter',
+      'label': 'I hereby give my consent to Alpaca to send me sales information electronically. '
     }
-  ]
+  }
 };
 

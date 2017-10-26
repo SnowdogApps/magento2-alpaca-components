@@ -1,9 +1,90 @@
-$newsletter-legend-font-size  : $font-size-large !default;
-$newsletter-legend-line-height: 1.2 !default;
+$newsletter__font-size                : $font-size-base !default;
+$newsletter__font-size--agreements    : $font-size-extra-small !default;
+$newsletter__line-height              : 1.2 !default;
+$newsletter__input-background         : #717171 !default;
+$newsletter__input-placholder-opacity : 0.7 !default;
+$newsletter__heading-color            : #ffffff;
+$newsletter__controls-height          : 32px;
 
 .newsletter {
     &__heading {
-        line-height: $newsletter-legend-line-height;
+        line-height: $newsletter__line-height;
         margin-right: 20px;
+        color: $newsletter__heading-color;
+        font-family: $font-family-sans-serif;
+        height: 18px;
+        font-size: $newsletter__font-size;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 28px;
+    }
+    &__controls {
+        position: relative;
+        height: $newsletter__controls-height;
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: $newsletter__controls-height;
+        border-radius: 100px;
+        padding-left: 21px;
+        padding-right: 21px;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    &__input {
+        margin: 0;
+    }
+    &__label {
+        height: 0;
+    }
+    &__field {
+        background: $newsletter__input-background;
+        padding: 7px 16px;
+        margin: 0;
+        border: none;
+        border-radius: 100px;
+        height: 32px;
+        color: #ffffff;
+        &::placeholder {
+            opacity: $newsletter__input-placholder-opacity;
+        }
+    }
+    &__controls {
+        margin-bottom: 24px;
+    }
+    &__agreements {
+        margin-left: 8px;
+    }
+    // TODO: add {{class}} for checkbox html tags
+    .checkbox__icon {
+        top:0;
+        left: 0;
+        border-radius: 2px;
+    }
+    .checkbox__field {
+        &:checked ~ .checkbox__label:before {
+            background: none;
+        }
+    }
+    .checkbox__label {
+         width: 100%;
+         opacity: 1;
+         font-family: Montserrat;
+         font-size: $newsletter__font-size--agreements;
+         line-height: 1.6;
+         text-align: left;
+         padding-left: 24px;
+         color: rgba(201, 201, 201, 0.7);
+         &:before {
+            width: 15px;
+            height: 15px;
+            border: none;
+            background: #ffffff;
+        }
     }
 }

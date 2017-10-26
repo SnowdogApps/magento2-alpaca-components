@@ -3,8 +3,11 @@
         {{ heading.text }}
     </div>
 
-    <div class="newsletter__content">
+    <div class="newsletter__controls">
         {{> '@input' input }}
         {{render '@button' button}}
+    </div>
+    <div class="newsletter__agreements">
+         {{ render '@checkbox' checkbox }}
     </div>
 </form>
