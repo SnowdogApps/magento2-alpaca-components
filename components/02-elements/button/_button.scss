@@ -11,6 +11,7 @@ $button__font-family      : $font-family-base-bold !default;
 $button__font-size        : $font-size-base !default;
 $button__font-color       : $white !default;
 $button__font-color-hover : $color-primary !default;
+$button__transition       : $transition-base !default;
 
 // Secondary
 $button__border--secondary           : 1px solid $color-primary !default;
@@ -50,7 +51,7 @@ $button-fluid-width               : 100% !default;
     font-family: $button__font-family;
     font-size: $button__font-size;
     color: $button__font-color;
-    transition: $transition-base;
+    transition: $button__transition;
 
     &:hover {
         background: $button__background-hover;
@@ -86,6 +87,7 @@ $button-fluid-width               : 100% !default;
         padding: $button-icon__padding;
         border: $button-icon__border;
         background: $button-icon__background;
+        transition: $button__transition;
 
         &:hover {
             border-color: $button-icon__border-hover;
