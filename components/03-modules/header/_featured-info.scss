@@ -1,8 +1,15 @@
+$featured-info__title-fontsize   : 12px !default;
+$featured-info__subtitle-fontsize: 10px !default;
+
 .featured-info {
     display: flex;
     margin: 8px 16px;
     color: $font-color-base;
     text-decoration: none;
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
 
     &__icon {
         display: flex;
@@ -29,14 +36,14 @@
         &-title {
             margin-bottom: 4px;
             font-weight: $font-weight-bold;
-            font-size: 12px;
-            line-height: 12px;
+            font-size: $featured-info__title-fontsize;
+            line-height: $featured-info__title-fontsize;
         }
 
         &-subtitle {
             color: $gray;
-            font-size: 10px;
-            line-height: 10px;
+            font-size: $featured-info__subtitle-fontsize;
+            line-height: $featured-info__subtitle-fontsize;
         }
     }
 }

@@ -1,14 +1,10 @@
-$header-padding: 15px !default;
-$header-margin: 15px !default;
-$header-basic-width: 18px !default;
-$header-transition: $transition-base !default;
-$header-main-color: $gray !default;
-$header-second-color: $gray-dark !default;
-$header-font-size: $font-size-small !default;
-$header-font-family: $font-family-sans-serif !default;
+$header__text-border-color: $gray-dark !default;
+$header__border-color     : $gray !default;
+$header__font-size        : 12px !default;
+$header__text-decoration  : none !default;
 
 .header {
-    border-bottom: 1px solid $header-main-color;
+    border-bottom: 1px solid $header__border-color;
 
     &__top-bar {
         display: none;
@@ -26,36 +22,36 @@ $header-font-family: $font-family-sans-serif !default;
 
     &__contact-info {
         margin: 8px 0;
-        font-size: 12px;
+        font-size: $header__font-size;
 
         &-link {
             display: inline-flex;
             margin-left: 8px;
             padding-left: 8px;
-            border-left: 1px solid $gray-dark;
+            border-left: 1px solid $header__text-border-color;
             line-height: 14px;
-            text-decoration: none;
+            text-decoration: $header__text-decoration;
 
             &:focus,
             &:hover {
-                text-decoration: none;
+                text-decoration: $header__text-decoration;
             }
         }
     }
 
     &__links {
         margin: 8px 0;
-        font-size: 12px;
+        font-size: $header__font-size;
 
         &-item {
             padding: 0 16px;
-            border-left: 1px solid $gray-dark;
+            border-left: 1px solid $header__text-border-color;
             line-height: 14px;
-            text-decoration: none;
+            text-decoration: $header__text-decoration;
 
             &:focus,
             &:hover {
-                text-decoration: none;
+                text-decoration: $header__text-decoration;
             }
 
             &:first-child {
@@ -90,7 +86,7 @@ $header-font-family: $font-family-sans-serif !default;
 
     &__featured-info {
         display: none;
-        flex-direction:row;
+        flex-direction: row;
         order: 3;
         margin-right: 16px;
         margin-left: auto;
@@ -121,7 +117,7 @@ $header-font-family: $font-family-sans-serif !default;
 
         &-item {
             margin-right: 8px;
-            padding: 12px;
+            padding: $header__font-size;
             @include mq($screen-xl) {
                 display: none;
             }
@@ -132,8 +128,7 @@ $header-font-family: $font-family-sans-serif !default;
         width: 24px;
         height: 24px;
         padding: 2px;
-        fill: $header-second-color;
-        transition: $header-transition;
+        fill: $gray-dark;
         cursor: pointer;
     }
 
@@ -142,7 +137,7 @@ $header-font-family: $font-family-sans-serif !default;
         flex: 1 20%;
         order: 4;
         height: 49px;
-        border-top: 1px solid $header-main-color;
+        border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
             order: 1;
             flex: 1 48px;
@@ -163,7 +158,7 @@ $header-font-family: $font-family-sans-serif !default;
         order: 5;
         justify-content: center;
         width: 100%;
-        border-top: 1px solid $header-main-color;
+        border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
             order: 3;
             flex: 1 300px;
@@ -183,7 +178,7 @@ $header-font-family: $font-family-sans-serif !default;
         height: 34px;
         margin: 0;
         align-self: center;
-        border: 1px solid #333;
+        border: 1px solid $gray-dark;
         border-radius: 34px;
         z-index: 1;
         @include mq($screen-m) {
@@ -207,11 +202,11 @@ $header-font-family: $font-family-sans-serif !default;
             height: 32px;
             border: none;
             border-radius: 34px;
-            font-size: 12px;
+            font-size: $header__font-size;
 
             &::placeholder {
                 color: $gray-dark;
-                font-size: 12px;
+                font-size: $header__font-size;
                 @include mq($screen-xl) {
                     color: $gray;
                 }
