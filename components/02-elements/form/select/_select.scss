@@ -6,9 +6,8 @@ $select__padding               : 10px 15px !default;
 $select__field-background      : $white !default;
 $select__list-border           : 1px solid #d9d9d9 !default;
 $select__input-border-width    : 0 0 1px 0 !default;
-$select__input-boredr-style    : solid !default;
+$select__input-border-style    : solid !default;
 $select__input-border-color    : #d9d9d9 !default;
-$select__label-font-size       : 14px !default;
 
 .select {
     margin-bottom: $select__margin;
@@ -45,7 +44,7 @@ $select__label-font-size       : 14px !default;
             display: block;
             padding: $select__padding;
             border-width: $select__input-border-width;
-            border-style: $select__input-boredr-style;
+            border-style: $select__input-border-style;
             border-color: $select__input-border-color;
 
             &:focus {
