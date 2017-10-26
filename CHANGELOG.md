@@ -2,8 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-### Added
-- Breadcrumbs 
+### Changed
+- Breadcrumbs styling that fits alpaca design.
 
 ## [0.1.2] - 2017-10-10
 ### Changed
