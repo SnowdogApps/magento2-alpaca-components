@@ -30,7 +30,7 @@ module.exports = {
       {
         name: 'category6',
         href: '#',
-        ariaLabel: 'Breadcrumb category6'
+        ariaLabel: 'Breadcrumb category6, you\'re on the page: category6'
       }
     ]
   }
