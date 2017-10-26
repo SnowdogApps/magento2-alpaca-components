@@ -8,48 +8,6 @@ $form__margin--compact       : 20px !default;
 $form__button-margin--compact: 0 0 0 (-$button-icon-border-width) !default;
 
 .form {
-    &--compact {
-        @include mq($screen-m) {
-            display: flex;
-            justify-content: center;
-        }
-
-        .form__heading {
-            display: none;
-            line-height: $form__line-height--compact;
-            margin-right: $form__margin--compact;
-        }
-
-        .form__content {
-            display: flex;
-        }
-
-        .input {
-            display: flex;
-            flex-wrap: nowrap;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin-bottom: 0;
-
-            &__field {
-                width: 100%;
-                line-height: $form__line-height--compact;
-                height: $form__height--compact;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-        }
-
-        .button {
-            display: block;
-            margin: $form__button-margin--compact;
-            &--native-link {
-                margin: 0;
-            }
-        }
-    }
-
     &__fieldset,
     .fieldset {
         border: 0;

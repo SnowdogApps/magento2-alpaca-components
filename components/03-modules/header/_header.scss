@@ -29,4 +29,8 @@ $header-background: $white !default;
     &__minicart {
         position: relative;
     }
+
+    &--menu-open {
+        overflow: visible;
+    }
 }

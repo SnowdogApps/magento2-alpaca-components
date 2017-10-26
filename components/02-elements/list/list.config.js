@@ -116,5 +116,32 @@ module.exports = {
         ]
       }
     },
+    {
+      name: 'link',
+      context: {
+        elements: [
+          {
+            text: 'Lorem ipsum',
+            link: '#'
+          },
+          {
+            text: 'Lorem ipsum',
+            link: '#'
+          },
+          {
+            text: 'Lorem ipsum',
+            link: '#'
+          },
+          {
+            text: 'Lorem ipsum',
+            link: '#'
+          },
+          {
+            text: 'Lorem ipsum',
+            link: '#'
+          }
+        ]
+      }
+    }
   ]
 };

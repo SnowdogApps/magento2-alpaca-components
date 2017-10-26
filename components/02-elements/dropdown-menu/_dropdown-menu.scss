@@ -38,6 +38,10 @@ $dropdown-menu__icon-fill            : $white !default;
         cursor: pointer;
         padding: 0;
 
+        & > .dropdown-menu__link {
+            text-transform: uppercase;
+        }
+
         &--parent {
             &:hover > .dropdown-menu__inner-list,
             &:focus > .dropdown-menu__inner-list {
@@ -48,10 +52,6 @@ $dropdown-menu__icon-fill            : $white !default;
                 position: relative;
                 padding-right: 45px;
             }
-        }
-
-        & > .dropdown-menu__link {
-            text-transform: uppercase;
         }
     }
 
