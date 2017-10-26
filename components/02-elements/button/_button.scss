@@ -53,6 +53,7 @@ $button__width--fluid               : 100% !default;
     font-size: $button__font-size;
     color: $button__font-color;
     transition: $button__transition;
+    font-weight: $button__font-weight;
 
     &:hover,
     &:focus {
