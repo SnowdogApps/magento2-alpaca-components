@@ -105,11 +105,11 @@ $button__width--fluid               : 100% !default;
     &--fluid {
         width: $button__width--fluid;
     }
-    .button__icon {
+
+    &__icon {
         width: $button-icon__size;
         height: $button-icon__size;
         fill: $button-icon__fill;
         transition: $button__transition;
     }
 }
-
