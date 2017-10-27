@@ -5,7 +5,7 @@ $checkbox__width                 : 18px !default;
 $checkbox__height                : 18px !default;
 $checkbox__input-size            : 18px;
 $checkbox__icon-size             : 18px !default;
-$checkbox__gap: ($checkbox__input-size - $checkbox__icon-size) / 2;
+$checkbox__gap                   : ($checkbox__input-size - $checkbox__icon-size) / 2;
 @if $checkbox__input-size == $checkbox__icon-size {
     $checkbox__gap: 0;
 }
