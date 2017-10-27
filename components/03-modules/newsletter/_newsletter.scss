@@ -16,7 +16,7 @@ $newsletter__heading-gap--compact     : $spacer !default;
 $newsletter__heading-gap--horizontal  : 0 !default;
 
 .newsletter {
-   @include mq($screen-m, $screen-l - 1) {
+    @include mq($screen-m, $screen-l - 1) {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -44,7 +44,7 @@ $newsletter__heading-gap--horizontal  : 0 !default;
         position: relative;
         height: $newsletter__controls-height;
         margin-bottom: $spacer--large;
-       @include mq($screen-m, $screen-l - 1) {
+        @include mq($screen-m, $screen-l - 1) {
             width: 50%;
             text-align: right;
             line-height: $newsletter__controls-height;
@@ -89,7 +89,7 @@ $newsletter__heading-gap--horizontal  : 0 !default;
     }
     &__agreements {
         margin-left: $spacer;
-       @include mq($screen-m, $screen-l - 1) {
+        @include mq($screen-m, $screen-l - 1) {
             width: 100%;
             clear: both;
             margin-left: 0;
