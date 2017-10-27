@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
- - Add new banner images
+ - Banner images
+ - `marketing bar` element
+ - `docs-styles-only` preview layout
 
 ### Changed
  - Refactor banner styles
@@ -15,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Button styling that fits alpaca design.
  - Badges styling that fits alpaca design (default, new, discount).
  - Breadcrumbs styling that fits alpaca design.
+ - Header styling that fits alpaca design.
+ - Styles used only for previews (i.e. buttons)
  - Button icon variables to BEM
 
 ## [0.1.2] - 2017-10-10
@@ -22,11 +26,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - update README, correct typo
 
 ### Added
- - add CHANGELOG.md
+ - CHANGELOG.md
 
 ## [0.1.1] - 2017-10-09
 ### Changed
- - update project name to module-alpaca-components
+ - Project name to `module-alpaca-components`
 
 ## [0.1.0] - 2017-10-09
 ### Added

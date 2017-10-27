@@ -1,4 +1,5 @@
 module.exports = {
+  preview: '@docs-only-styles',
   collated: true,
   context: {
     tag: 'button',
