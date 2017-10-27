@@ -31,14 +31,17 @@ module.exports = {
             childTags: [
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               },
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               },
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               }
             ]
@@ -48,14 +51,17 @@ module.exports = {
             childTags: [
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               },
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               },
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               }
             ]
@@ -65,14 +71,17 @@ module.exports = {
             childTags: [
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               },
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               },
               {
                 childTag: 'td',
+                childTagAttributes: 'data-th="Example content:"',
                 content: 'Example content'
               }
             ]
@@ -88,7 +97,7 @@ module.exports = {
               {
                 childTag: 'td',
                 content: 'Footer content',
-                childTabAttributes: 'colspan=\'3\''
+                childTagAttributes: 'colspan=\'3\''
               }
             ]
           }
