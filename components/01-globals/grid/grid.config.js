@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'Grid',
+  preview: '@docs-only-styles',
   context: {
     grids: [
       ['1-2', '1-2'],

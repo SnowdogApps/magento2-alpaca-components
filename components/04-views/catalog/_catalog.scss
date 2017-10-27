@@ -59,6 +59,14 @@ $product-list__img-box-padding  : 0 $product-grid__padding 0 0 !default;
             }
         }
     }
+
+    &--4-in-row {
+        .products-grid__item {
+            @include mq($screen-l) {
+                flex-basis: calc(25% - 20px);
+            }
+        }
+    }
 }
 
 .products-list {
