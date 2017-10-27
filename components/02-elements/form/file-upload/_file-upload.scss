@@ -31,8 +31,8 @@ $file-upload-font-size: 14px !default;
         }
 
         &:hover + .file-upload__button {
-            background: $button-hover-background;
-            border-color: $button-hover-border;
+            background: $button__background-hover;
+            border-color: $button__border-hover;
         }
     }
 
