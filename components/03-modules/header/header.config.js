@@ -1,24 +1,43 @@
 module.exports = {
   title: 'Header module',
   context: {
+    phoneNumber: '+ 48 68 433 00 00',
+    topLinks: [
+      {
+        text: 'Wish List',
+        icon: 'heart'
+      },
+      {
+        text: 'Sign In',
+        icon: 'signin'
+      },
+      {
+        text: 'Create account',
+        icon: 'account-mini'
+      }
+    ],
+    icons: [
+      'phone',
+      'account'
+    ],
     logo: {
       class: 'header__logo',
       logoSVG: true
     },
     searchInput: {
-      class: 'header__search-input-wrapper',
+      class: 'search-form__input-wrapper',
       label: {
-        class: 'header__search-label',
+        class: 'search-form__label',
       },
       field: {
-        class: 'header__search-input',
+        class: 'search-form__input',
         placeholder: 'Search entire store here...'
       }
     },
     searchButton: {
       tag: 'button',
       text: '',
-      class: 'button--icon header__search-button',
+      class: 'button--icon search-form__button',
       iconId: 'search',
       iconClass: 'button__icon',
       attributes: 'type="button"',

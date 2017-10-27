@@ -1,30 +1,20 @@
 <header class="header">
     {{ render '@marketing-bar' }}
-    <div class="header__top-bar">
-        <div class="container header__top-bar-wrapper">
-            <div class="header__contact-info">
-                + 48 68 433 00 00
-                <a class="header__contact-info-link" href="#">Contact</a>
+    <div class="top-bar">
+        <div class="container top-bar__wrapper">
+            <div class="top-bar__contact-info">
+                {{ phoneNumber }}
+                <a class="top-bar__contact-info-link" href="#">Contact</a>
             </div>
-            <div class="header__links">
-                <a class="header__links-item" href="#">
-                    <svg class="header__links-icon">
-                        <use xlink:href="{{ svg 'heart' }}"></use>
-                    </svg>
-                    Wish List
-                </a>
-                <a class="header__links-item" href="#">
-                    <svg class="header__links-icon">
-                        <use xlink:href="{{ svg 'signin' }}"></use>
-                    </svg>
-                    Sign In
-                </a>
-                <a class="header__links-item" href="#">
-                    <svg class="header__links-icon">
-                        <use xlink:href="{{ svg 'account-mini' }}"></use>
-                    </svg>
-                    Create account
-                </a>
+            <div class="top-bar__links">
+                {{#each topLinks as |item| }}
+                    <a class="top-bar__links-item" href="#">
+                        <svg class="top-bar__links-icon">
+                            <use xlink:href="{{ svg item.icon }}"></use>
+                        </svg>
+                        {{ item.text }}
+                    </a>
+                {{/each}}
             </div>
         </div>
     </div>
@@ -32,16 +22,13 @@
         <div class="header__wrapper">
             {{ render '@logo' logo }}
             <div class="header__icons">
-                <a class="header__icons-item" href="#">
-                    <svg class="header__icon">
-                        <use xlink:href="{{ svg 'phone' }}"></use>
-                    </svg>
-                </a>
-                <a class="header__icons-item" href="#">
-                    <svg class="header__icon">
-                        <use xlink:href="{{ svg 'account' }}"></use>
-                    </svg>
-                </a>
+                {{#each icons as |item| }}
+                    <a class="header__icons-item" href="#">
+                        <svg class="header__icon">
+                            <use xlink:href="{{ svg item }}"></use>
+                        </svg>
+                    </a>
+                {{/each}}
                 <div class="header__minicart">
                     {{ render '@minicart-trigger' trigger }}
                     {{ render '@popup' minicartPopup }}
@@ -85,7 +72,7 @@
             </div>
 
             <div class="header__search-wrapper">
-                <form class="header__search">
+                <form class="search-form">
                     {{ render '@input' searchInput }}
                     {{ render '@button--icon' searchButton }}
                 </form>

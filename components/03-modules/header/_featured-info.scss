@@ -1,10 +1,14 @@
-$featured-info__title-fontsize   : 12px !default;
-$featured-info__subtitle-fontsize: 10px !default;
+$featured-info__margin            : 8px 16px !default;
+$featured-info__title-font-size   : $font-size-small !default;
+$featured-info__title-color       : $font-color-base !default;
+$featured-info__subtitle-font-size: 10px !default;
+$featured-info__subtitle-color    : $gray !default;
+$featured-info__icon-color        : $color-primary !default;
 
 .featured-info {
     display: flex;
-    margin: 8px 16px;
-    color: $font-color-base;
+    margin: $featured-info__margin;
+    color: $featured-info__title-color;
     text-decoration: none;
     &:focus,
     &:hover {
@@ -20,7 +24,7 @@ $featured-info__subtitle-fontsize: 10px !default;
         &-svg {
             width: 24px;
             height: 24px;
-            fill: $color-primary;
+            fill: $featured-info__icon-color;
             &--delivery-truck {
                 width: 35px;
                 height: 20px;
@@ -36,14 +40,14 @@ $featured-info__subtitle-fontsize: 10px !default;
         &-title {
             margin-bottom: 4px;
             font-weight: $font-weight-bold;
-            font-size: $featured-info__title-fontsize;
-            line-height: $featured-info__title-fontsize;
+            font-size: $featured-info__title-font-size;
+            line-height: $featured-info__title-font-size;
         }
 
         &-subtitle {
-            color: $gray;
-            font-size: $featured-info__subtitle-fontsize;
-            line-height: $featured-info__subtitle-fontsize;
+            color: $featured-info__subtitle-color;
+            font-size: $featured-info__subtitle-font-size;
+            line-height: $featured-info__subtitle-font-size;
         }
     }
 }

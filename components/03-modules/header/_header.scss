@@ -1,71 +1,12 @@
-$header__text-border-color: $gray-dark !default;
-$header__border-color     : $gray !default;
-$header__font-size        : 12px !default;
-$header__text-decoration  : none !default;
+$header__border-color          : $gray !default;
+$header__font-size             : $font-size-small !default;
+$header__button-size           : 48px !default;
+$header__icon-size             : 24px !default;
+$header__icon-padding          : 2px !default;
+$header__icon-color            : $gray-dark !default;
 
 .header {
     border-bottom: 1px solid $header__border-color;
-
-    &__top-bar {
-        display: none;
-        background-color: $gray-light;
-        @include mq($screen-xl) {
-            display: block;
-        }
-
-        &-wrapper {
-            display: flex;
-            justify-content: space-between;
-            height: 30px;
-        }
-    }
-
-    &__contact-info {
-        margin: 8px 0;
-        font-size: $header__font-size;
-
-        &-link {
-            display: inline-flex;
-            margin-left: 8px;
-            padding-left: 8px;
-            border-left: 1px solid $header__text-border-color;
-            line-height: 14px;
-            text-decoration: $header__text-decoration;
-
-            &:focus,
-            &:hover {
-                text-decoration: $header__text-decoration;
-            }
-        }
-    }
-
-    &__links {
-        margin: 8px 0;
-        font-size: $header__font-size;
-
-        &-item {
-            padding: 0 16px;
-            border-left: 1px solid $header__text-border-color;
-            line-height: 14px;
-            text-decoration: $header__text-decoration;
-
-            &:focus,
-            &:hover {
-                text-decoration: $header__text-decoration;
-            }
-
-            &:first-child {
-                border-left: none;
-            }
-        }
-
-        &-icon {
-            width: 14px;
-            height: 14px;
-            margin-right: 8px;
-            vertical-align: top;
-        }
-    }
 
     &__wrapper {
         justify-content: space-between;
@@ -125,10 +66,10 @@ $header__text-decoration  : none !default;
     }
 
     &__icon {
-        width: 24px;
-        height: 24px;
-        padding: 2px;
-        fill: $gray-dark;
+        width: $header__icon-size;
+        height: $header__icon-size;
+        padding: $header__icon-padding;
+        fill: $header__icon-color;
         cursor: pointer;
     }
 
@@ -140,9 +81,9 @@ $header__text-decoration  : none !default;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
             order: 1;
-            flex: 1 48px;
-            height: 48px;
-            max-width: 48px;
+            flex: 1 $header__button-size;
+            height: $header__button-size;
+            max-width: $header__button-size;
             border-top: none;
         }
         @include mq($screen-xl) {
@@ -169,63 +110,6 @@ $header__text-decoration  : none !default;
         @include mq($screen-xl) {
             max-width: 300px;
             margin-right: 24px;
-        }
-    }
-
-    &__search {
-        position: relative;
-        width: 100%;
-        height: 34px;
-        margin: 0;
-        align-self: center;
-        border: 1px solid $gray-dark;
-        border-radius: 34px;
-        z-index: 1;
-        @include mq($screen-m) {
-            width: 70%;
-        }
-        @include mq($screen-xl) {
-            width: 100%;
-            border: 1px solid $gray;
-        }
-
-        &-input-wrapper {
-            margin-bottom: 0;
-        }
-
-        &-label {
-            display: none;
-        }
-
-        &-input {
-            width: 100%;
-            height: 32px;
-            border: none;
-            border-radius: 34px;
-            font-size: $header__font-size;
-
-            &::placeholder {
-                color: $gray-dark;
-                font-size: $header__font-size;
-                @include mq($screen-xl) {
-                    color: $gray;
-                }
-            }
-        }
-
-        &-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 32px;
-            margin-bottom: 0;
-            border: none;
-            border-radius: 34px;
-        }
-
-        .button__icon {
-            width: 18px;
-            height: 18px;
         }
     }
 }
