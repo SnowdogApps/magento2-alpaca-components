@@ -1,5 +1,6 @@
 module.exports = {
   collated: true,
+  preview: '@docs-only-styles',
   context: {
     heading: {
       text: 'Sing up to our twisted newsletter'
