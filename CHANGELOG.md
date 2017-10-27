@@ -6,7 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
- - update dropdown-list component with a11y features
+ - update dropdown-list component
+
 ### Added
  - Banner images
  - `marketing bar` element
