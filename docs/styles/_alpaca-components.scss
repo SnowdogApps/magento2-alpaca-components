@@ -34,6 +34,7 @@
 // Elements
 // -----
 
+@import '../../components/02-elements/action/action';
 @import '../../components/02-elements/badge/badge';
 @import '../../components/02-elements/banner/banner';
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
@@ -42,16 +43,20 @@
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
+@import '../../components/02-elements/form/file-upload/file-upload';
 @import '../../components/02-elements/form/input/input';
 @import '../../components/02-elements/form/radio/radio';
 @import '../../components/02-elements/form/select/select';
 @import '../../components/02-elements/image/image';
+@import '../../components/02-elements/information/information';
 @import '../../components/02-elements/list/list';
 @import '../../components/02-elements/logo/logo';
+@import '../../components/02-elements/marketing-bar/marketing-bar';
 @import '../../components/02-elements/message/message';
 @import '../../components/02-elements/minicart-trigger/minicart-trigger';
 @import '../../components/02-elements/pager/pager';
 @import '../../components/02-elements/password-strength/password-strength';
+@import '../../components/02-elements/rating/rating';
 @import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/swatch/swatch';
@@ -64,14 +69,23 @@
 // Modules
 // -----
 
+@import '../../components/03-modules/dashboard/form/form';
+@import '../../components/03-modules/dashboard/items/items';
+@import '../../components/03-modules/dashboard/nav/nav';
+@import '../../components/03-modules/dashboard/table/table';
+@import '../../components/03-modules/dashboard/toolbar/toolbar';
 @import '../../components/03-modules/form/form';
 @import '../../components/03-modules/header/header';
+@import '../../components/03-modules/header/featured-info';
+@import '../../components/03-modules/header/top-bar';
+@import '../../components/03-modules/header/search-form';
 @import '../../components/03-modules/minicart-content/minicart-content';
 @import '../../components/03-modules/popup/popup';
 @import '../../components/03-modules/product/product';
 @import '../../components/03-modules/products-list-item/products-list-item';
+@import '../../components/03-modules/review/review';
 @import '../../components/03-modules/search/search';
-
+@import '../../components/03-modules/sidebar-nav-list/sidebar-nav-list';
 
 // -----
 // Views
@@ -83,4 +97,5 @@
 @import '../../components/04-views/cart/summary';
 @import '../../components/04-views/cart/totals';
 @import '../../components/04-views/catalog/catalog';
+@import '../../components/04-views/dashboard/default/dashboard';
 

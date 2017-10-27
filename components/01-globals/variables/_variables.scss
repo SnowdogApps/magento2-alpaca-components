@@ -36,6 +36,9 @@ $border-color-base     : $gray-dark !default;
 $border-width-base     : 1px !default;
 $border-style-base     : solid !default;
 
+// Outline
+$outline-base          : none !default;
+
 $border-base           : $border-width-base $border-style-base $border-color-base !default;
 // Margin
 $margin-base           : 16px !default;
@@ -62,7 +65,7 @@ $font-size-small       : 12px !default;
 $font-size-extra-small : 10px !default;
 
 // Layout
-$max-content-width     : 1330px !default;
+$max-content-width     : 1328px !default;
 
 // Layout - breakpoints
 $screen-xs             : 320px !default;

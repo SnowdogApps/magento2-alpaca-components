@@ -1,13 +1,21 @@
 <div class="breadcrumbs">
     {{#each categories}}
         {{#if @last}}
-            <span class="breadcrumbs__item">
-                {{ this }}
+            <span class="breadcrumbs__item"
+                  aria-label="{{ariaLabel}}"
+                  tabindex="0"
+            >
+                {{ name }}
             </span>
         {{else}}
-            <a href="#" class="breadcrumbs__item">
-                {{ this }}
-            </a>
+            <span class="breadcrumbs__item">
+                <a href="{{href}}"
+                   class="breadcrumbs__link"
+                   aria-label="{{ariaLabel}}"
+                >
+                    {{ name }}
+                </a>
+            </span>
         {{/if}}
     {{/each}}
 </div>
