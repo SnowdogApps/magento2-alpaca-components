@@ -23,6 +23,18 @@ $message__icon--error        : "\2715" !default;
     width: 100%;
     transition: $message__transition;
 
+    &:after {
+        position: absolute;
+        display: flex;
+        left: 0;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+        height: $message__after-height;
+        width: $message__after-width;
+        color: $message__color;
+    }
+
     &--success {
         background-color: $message__background--success;
         color: rgba($message__color, 0.9);
@@ -39,17 +51,5 @@ $message__icon--error        : "\2715" !default;
         &:after {
             content: $message__icon--error;
         }
-    }
-
-    &:after {
-        position: absolute;
-        display: flex;
-        left: 0;
-        top: 0;
-        align-items: center;
-        justify-content: center;
-        height: $message__after-height;
-        width: $message__after-width;
-        color: $message__color;
     }
 }

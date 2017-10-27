@@ -1,0 +1,23 @@
+<div class="dashboard-items {{ class }}">
+    {{#if title }}
+    <h3 class="heading heading--fifth-level dashboard-items__title {{ titleClass }}">
+        {{ title }}
+    </h3>
+    {{/if}}
+
+    <div class="grid dashboard-items__content {{ contentClass }}">
+        {{#each informations }}
+            <div class="dashboard-items__item {{ this.class }}">
+                <h5 class="heading heading--sixth-level">
+                    {{ this.title }}
+                </h5>
+
+                <div class="dashboard-items__address">
+                    {{ information }}
+                </div>
+
+                {{> '@action' actions }}
+            </div>
+        {{/each}}
+    </div>
+</div>

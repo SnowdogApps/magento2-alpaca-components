@@ -5,31 +5,17 @@ module.exports = {
   },
   variants: [
     {
-      name: 'success',
+      name: 'new',
       context: {
-        text: 'Success',
-        modifier: 'success'
+        text: 'new',
+        class: 'badge--new'
       }
     },
     {
-      name: 'info',
+      name: 'discount',
       context: {
-        text: 'Info',
-        modifier: 'info'
-      }
-    },
-    {
-      name: 'warning',
-      context: {
-        text: 'Warning',
-        modifier: 'warning'
-      }
-    },
-    {
-      name: 'danger',
-      context: {
-        text: 'Danger',
-        modifier: 'danger'
+        text: 'discount',
+        class: 'badge--discount'
       }
     }
   ]

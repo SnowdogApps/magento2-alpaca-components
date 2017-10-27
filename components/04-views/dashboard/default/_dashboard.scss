@@ -1,0 +1,121 @@
+$dashboard-margin : 30px !default;
+$dashboard-padding: 15px !default;
+
+.dashboard {
+    &__sidebar,
+    &__content {
+        @include mq($screen-m) {
+            margin: $dashboard-margin 0;
+            padding: 0 $dashboard-padding;
+        }
+
+        &:first-child {
+            @include mq($screen-m) {
+                padding-left: 5px;
+            }
+        }
+
+        &:last-child {
+            @include mq($screen-m) {
+                padding-right: 5px;
+            }
+        }
+
+    }
+
+    &__content {
+        @include mq($screen-m) {
+            padding-top: $dashboard-padding;
+            overflow-x: hidden;
+        }
+    }
+
+    &__actions {
+        justify-content: space-between;
+    }
+
+    &__handler {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        margin-bottom: $dashboard-margin;
+    }
+
+    &__title {
+        margin-bottom: $dashboard-margin;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray;
+
+        &--wrapped {
+            margin-bottom: 0;
+            margin-right: $dashboard-margin;
+        }
+    }
+
+    &__status {
+        border: 1px solid $gray;
+        border-radius: $border-radius;
+        padding: 5px 15px;
+        font-size: $font-size-small;
+    }
+
+    &__item {
+        margin-bottom: $dashboard-margin;
+    }
+
+    &__wishlist-item {
+        margin-bottom: $dashboard-margin;
+
+        @include mq($screen-s) {
+            padding: 30px;
+        }
+
+        &:nth-child(odd) {
+            @include mq($screen-s) {
+                padding-left: 5px;
+            }
+        }
+
+        &:nth-child(even) {
+            @include mq($screen-s) {
+                padding-right: 5px;
+            }
+        }
+    }
+
+    &__form {
+        padding: 0 15px;
+
+        &:first-child {
+            padding-left: 5px;
+        }
+
+        &:last-child {
+            padding-right: 5px;
+        }
+    }
+
+    &__product {
+        border: 0;
+        padding: 0;
+    }
+
+    &__form {
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__field-qty {
+        max-width: 100px;
+        text-align: right;
+    }
+
+    &__input {
+        margin-bottom: $dashboard-margin;
+    }
+
+    &__label {
+        margin: 0 20px 0 0;
+    }
+}

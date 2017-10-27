@@ -1,0 +1,19 @@
+<div class="action {{ class }}">
+    {{#each sides }}
+        <div class="action__handler">
+            {{#each action }}
+                {{#if button }}
+                    <button class="button action__button {{ this.class }}"
+                            type="button"
+                    >
+                        {{ title }}
+                    </button>
+                {{else}}
+                    <a href="#" class="link action__link {{ this.class }}">
+                        {{ title }}
+                    </a>
+                {{/if}}
+            {{/each }}
+        </div>
+    {{/each}}
+</div>

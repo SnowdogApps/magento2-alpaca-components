@@ -1,0 +1,22 @@
+$rating-base-margin: 15px !default;
+
+.review {
+    &__divider {
+        margin-bottom: $rating-base-margin;
+    }
+
+    &__title {
+        margin-bottom: $rating-base-margin;
+        font-size: 18px;
+    }
+
+    &__date {
+        color: $gray-light;
+        font-size: $font-size-small;
+    }
+
+    &__description {
+        vertical-align: middle;
+        margin-right: $rating-base-margin;
+    }
+}
