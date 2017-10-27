@@ -1,6 +1,15 @@
 module.exports = {
   context: {
-    class: 'popup--active popup--visible',
-    content: 'button'
+    class: '',
+    popupId: 'popup-1',
+    content: 'button',
+    buttonClose: {
+      tag: 'button',
+      text: '',
+      class: 'button--icon popup__close-btn',
+      iconId: 'close',
+      iconClass: 'button__icon',
+      attributes: 'type="button" aria-label="close popup button, click to close the popup"'
+    }
   }
 };

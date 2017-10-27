@@ -1,15 +1,12 @@
-$popup__padding         : 10px !default;
-$popup__width           : 400px !default;
-$popup__background      : $white !default;
-$popup__z-index         : 50 !default;
-$popup__box-shadow-color: $black !default;
-$popup__box-shadow      : 0 0 8px 0 rgba($popup__box-shadow-color, 0.2) !default;
-
-// Arrow
-$popup__arrow-size      : 21px !default;
-$popup__arrow-top       : -10px !default;
-$popup__arrow-box-shadow: 2px -2px 4px 0 rgba($popup__box-shadow-color, 0.1) !default;
-$popup__arrow-transform : rotate(45deg) !default;
+$popup__padding           : $padding-base !default;
+$popup__content-top-margin: $padding-base * 2 !default;
+$popup__width             : 80% !default;
+$popup__max-width         : 500px !default;
+$popup__background        : $white !default;
+$popup__z-index           : 50 !default;
+$popup__border            : 0 !default;
+$popup__box-shadow-color  : $black !default;
+$popup__box-shadow        : 0 4px 6px 0 rgba($popup__box-shadow-color, 0.3) !default;
 
 .popup {
     display: none;
@@ -19,6 +16,7 @@ $popup__arrow-transform : rotate(45deg) !default;
     z-index: $popup__z-index;
     box-shadow: $popup__box-shadow;
     background-color: $popup__background;
+    border: $popup__border;
 
     &--active {
         display: block;
@@ -28,14 +26,14 @@ $popup__arrow-transform : rotate(45deg) !default;
         width: 100vw;
     }
 
-    &__arrow {
+    &__content {
+        position: relative;
+        margin-top: $popup__content-top-margin;
+    }
+
+    &__close-btn {
         position: absolute;
-        top: $popup__arrow-top;
-        width: $popup__arrow-size;
-        height: $popup__arrow-size;
-        background: $popup__background;
-        transform: $popup__arrow-transform;
-        box-shadow: $popup__arrow-box-shadow;
-        z-index: -1;
+        top: -40px;
+        right: -8px;
     }
 }
