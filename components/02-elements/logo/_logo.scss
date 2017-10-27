@@ -1,24 +1,17 @@
-$logo-padding: 10px 20px !default;
-
 .logo {
-    display: block;
-    padding: $logo-padding;
-
-    @include mq($screen-s) {
-        display: inline-block;
-        width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 84px;
+    justify-content: center;
+    max-width: 84px;
+    @include mq($screen-m) {
+        flex: 1 112px;
+        max-width: 112px;
     }
-
-    @include mq($screen-l) {
-        width: 260px;
-    }
-
     &__image {
-        max-width: 200px;
-        margin: 0 auto;
-
-        @include mq($screen-s) {
-            margin: 0;
+        height: 25px;
+        @include mq($screen-m) {
+            height: 34px;
         }
     }
 }

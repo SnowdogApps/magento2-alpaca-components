@@ -1,17 +1,25 @@
-$minicart-trigger__padding           : 10px !default;
 $minicart-trigger__background        : $white !default;
-$minicart-trigger__icon-spacing      : 30px !default;
-$minicart-trigger__counter-spacing   : 5px !default;
+$minicart-trigger__margin            : 0 8px 0 0 !default;
+$minicart-trigger__padding           : 12px !default;
+$minicart-trigger__icon-size         : 24px !default;
+$minicart-trigger__icon-padding      : 2px !default;
+$minicart-trigger__icon-color        : $gray-dark !default;
+$minicart-trigger__counter-spacing   : 3px !default;
 $minicart-trigger__counter-font-size : $font-size-extra-small !default;
-$minicart-trigger__counter-background: $purple !default;
+$minicart-trigger__counter-background: $color-primary !default;
 $minicart-trigger__counter-color     : $white !default;
+$minicart-trigger__counter-size      : 20px !default;
 
 .minicart-trigger {
-    background: $minicart-trigger__background;
     position: relative;
-    margin: 0;
-    border: 0;
+    display: block;
     padding: $minicart-trigger__padding;
+    margin: $minicart-trigger__margin;
+    border: 0;
+    background-color: $minicart-trigger__background;
+    @include mq($screen-xl) {
+        margin: 0;
+    }
 
     &:hover,
     &:focus {
@@ -20,22 +28,23 @@ $minicart-trigger__counter-color     : $white !default;
 
     &__icon {
         display: block;
-        width: $minicart-trigger__icon-spacing;
-        height: $minicart-trigger__icon-spacing;
+        width: $minicart-trigger__icon-size;
+        height: $minicart-trigger__icon-size;
+        padding: $minicart-trigger__icon-padding;
+        fill: $minicart-trigger__icon-color;
     }
 
     &__counter {
         position: absolute;
+        top: $minicart-trigger__counter-spacing;
+        right: $minicart-trigger__counter-spacing;
         display: block;
-        top: -$minicart-trigger__counter-spacing;
-        right: -$minicart-trigger__counter-spacing;
-        padding: $minicart-trigger__counter-spacing;
-        background-color: $minicart-trigger__counter-background;
-        color: $minicart-trigger__counter-color;
+        width: $minicart-trigger__counter-size;
+        height: $minicart-trigger__counter-size;
+        border-radius: $minicart-trigger__counter-size;
+        line-height: $minicart-trigger__counter-size;
         font-size: $minicart-trigger__counter-font-size;
-
-        @include mq($screen-l) {
-            top: 2px;
-        }
+        color: $minicart-trigger__counter-color;
+        background-color: $minicart-trigger__counter-background;
     }
 }

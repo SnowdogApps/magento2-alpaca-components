@@ -1,3 +1,4 @@
 module.exports = {
-  title: 'Logo'
+  title: 'Logo',
+  class: ''
 };

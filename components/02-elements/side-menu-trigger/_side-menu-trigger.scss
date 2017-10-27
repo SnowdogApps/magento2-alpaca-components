@@ -1,19 +1,20 @@
-$side-menu-trigger__width             : 30px !default;
-$side-menu-trigger__height            : 30px !default;
+$side-menu-trigger__width             : 32px !default;
+$side-menu-trigger__height            : 28px !default;
+$side-menu-trigger__padding           : 8px !default;
 $side-menu-trigger__font-size         : $font-size-extra-small !default;
+$side-menu-trigger__font-weight       : $font-weight-bold !default;
 $side-menu-trigger__transition        : $transition-base !default;
-$side-menu-trigger__text-color        : $gray !default;
 $side-menu-trigger__line-background   : $gray-dark !default;
-$side-menu-trigger__line-height       : 3px !default;
-$side-menu-trigger__line-border-radius: 3px !default;
+$side-menu-trigger__line-height       : 2px !default;
+$side-menu-trigger__line-border-radius: 2px !default;
 
 .side-menu-trigger {
-    padding: 0;
+    padding: $side-menu-trigger__padding;
     border: 0;
     background: none;
     cursor: pointer;
 
-    @include mq($screen-l) {
+    @include mq($screen-xl) {
         display: none;
     }
 
@@ -48,13 +49,14 @@ $side-menu-trigger__line-border-radius: 3px !default;
         bottom: 0;
         left: 0;
         width: 100%;
-        color: $side-menu-trigger__text-color;
         font-size: $side-menu-trigger__font-size;
+        font-weight: $side-menu-trigger__font-weight;
         text-align: center;
+        text-transform: uppercase;
         transition: $side-menu-trigger__transition;
 
         &--close {
-            bottom: -10px;
+            bottom: -15px;
             opacity: 0;
         }
     }
@@ -62,8 +64,10 @@ $side-menu-trigger__line-border-radius: 3px !default;
     &__line {
         position: absolute;
         left: 0;
-        width: 100%;
+        right: 0;
+        width: 55%;
         height: $side-menu-trigger__line-height;
+        margin: auto;
         border-radius: $side-menu-trigger__line-border-radius;
         background: $side-menu-trigger__line-background;
         transition: $side-menu-trigger__transition;
@@ -74,11 +78,11 @@ $side-menu-trigger__line-border-radius: 3px !default;
 
         &:nth-child(2),
         &:nth-child(3) {
-            top: 6px;
+            top: 5px;
         }
 
         &:nth-child(4) {
-            top: 12px;
+            top: 10px;
         }
 
         &--close {

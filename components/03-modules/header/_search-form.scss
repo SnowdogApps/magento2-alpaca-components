@@ -1,0 +1,73 @@
+$search-form__height               : 34px !default;
+$search-form__input-height         : 32px !default;
+$search-form__border-color         : $gray-dark !default;
+$search-form__border-color--xl     : $gray !default;
+$search-form__font-size            : $font-size-small !default;
+$search-form__placeholder-color    : $gray-dark !default;
+$search-form__placeholder-color--xl: $gray !default;
+$search-form__button-size          : 18px !default;
+$search-form__button-background    : transparent !default;
+$search-form__button-icon-color    : $gray-dark !default;
+
+.search-form {
+    position: relative;
+    width: 100%;
+    height: $search-form__height;
+    margin: 0;
+    align-self: center;
+    border: 1px solid $search-form__placeholder-color;
+    border-radius: $search-form__height;
+    z-index: 1;
+    @include mq($screen-m) {
+        width: 70%;
+    }
+    @include mq($screen-xl) {
+        width: 100%;
+        border: 1px solid $search-form__border-color--xl;
+    }
+
+    &__label {
+        display: none;
+    }
+
+    &__input {
+        width: 100%;
+        height: $search-form__input-height;
+        border: none;
+        border-radius: $search-form__height;
+        font-size: $search-form__font-size;
+
+        &::placeholder {
+            color: $search-form__placeholder-color;
+            font-size: $search-form__font-size;
+            @include mq($screen-xl) {
+                color: $search-form__placeholder-color--xl;
+            }
+        }
+
+        &-wrapper {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: $search-form__input-height;
+        margin-bottom: 0;
+        border: none;
+        border-radius: $search-form__height;
+        background-color: $search-form__button-background;
+        &:focus,
+        &:hover {
+            background-color: $search-form__button-background;
+        }
+    }
+
+    .button__icon {
+        width: $search-form__button-size;
+        height: $search-form__button-size;
+        fill: $search-form__button-icon-color;
+    }
+}
