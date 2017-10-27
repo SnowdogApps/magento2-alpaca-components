@@ -1,28 +1,65 @@
+$spacer: 8px !default;
+$spacer--large: 16px !default;
+
 $newsletter__font-size                : $font-size-base !default;
-$newsletter__font-size--agreements    : $font-size-extra-small !default;
+$newsletter__font-size--agreements    : $font-size-small !default;
+$newsletter__checkbox-label-opacity   : 0.7;
 $newsletter__line-height              : 1.2 !default;
 $newsletter__input-background         : #717171 !default;
-$newsletter__input-color              : #white !default;
+$newsletter__input-color              : $white !default;
 $newsletter__input-placholder-opacity : 0.7 !default;
 $newsletter__heading-color            : $white !default;
 $newsletter__controls-height          : 32px !default;
 $newsletter__checkbox-bg-color        : $white !default;
+$newsletter__heading-gap              : 28px !default;
+$newsletter__heading-gap--compact     : $spacer !default;
+$newsletter__heading-gap--horizontal  : 0 !default;
+
+
+@mixin newsletter-medium() {
+     @include mq($screen-m, $screen-l - 1) {
+        @content;
+    }
+}
 
 .newsletter {
+    @include newsletter-medium() {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
     &__heading {
         line-height: $newsletter__line-height;
         margin-right: 20px;
         color: $newsletter__heading-color;
         font-family: $font-family-sans-serif;
-        height: 18px;
+        height: auto;
         font-size: $newsletter__font-size;
         font-weight: bold;
         text-align: left;
-        margin-bottom: 28px;
+        margin-bottom: $newsletter__heading-gap--compact;
+        @mixin newsletter-medium() {
+            margin-bottom: $newsletter__heading-gap--horizontal;
+            width: 50%;
+        }
+        @include mq($screen-l) {
+            margin-bottom: $newsletter__heading-gap;
+        }
     }
     &__controls {
         position: relative;
         height: $newsletter__controls-height;
+        margin-bottom: $spacer--large;
+        @include newsletter-medium() {
+            width: 50%;
+            text-align: right;
+            line-height: $newsletter__controls-height;
+            margin-bottom: $spacer;
+        }
+        @include mq($screen-l) {
+            margin-bottom: $spacer--large;
+        }
     }
     &__button {
         position: absolute;
@@ -42,11 +79,12 @@ $newsletter__checkbox-bg-color        : $white !default;
         margin: 0;
     }
     &__label {
-        height: 0;
+        @include visually-hidden;
+
     }
     &__field {
         background: $newsletter__input-background;
-        padding: 7px 16px;
+        padding: $spacer $spacer--large;
         margin: 0;
         border: none;
         border-radius: 100px;
@@ -56,11 +94,13 @@ $newsletter__checkbox-bg-color        : $white !default;
             opacity: $newsletter__input-placholder-opacity;
         }
     }
-    &__controls {
-        margin-bottom: 24px;
-    }
     &__agreements {
-        margin-left: 8px;
+        margin-left: $spacer;
+        @include newsletter-medium() {
+            width: 100%;
+            clear: both;
+            margin-left: 0;
+        }
     }
     // TODO: add {{class}} for checkbox html tags
     .checkbox__icon {
@@ -81,8 +121,9 @@ $newsletter__checkbox-bg-color        : $white !default;
         line-height: 1.6;
         text-align: left;
         padding-left: 24px;
-        color: rgba(201, 201, 201, 0.7);
+        color: rgba(201, 201, 201, $newsletter__checkbox-label-opacity);
         &:before {
+            top: 4px; // to align with label
             width: 15px;
             height: 15px;
             border: none;
