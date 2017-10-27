@@ -61,7 +61,6 @@ $search-form__button-icon-color    : $gray-dark !default;
         background-color: $search-form__button-background;
         &:focus,
         &:hover {
-            text-decoration: none;
             background-color: $search-form__button-background;
         }
     }
