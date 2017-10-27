@@ -7,7 +7,8 @@ $breadcrumbs__font-size          : $font-size-small !default;
 $breadcrumbs__line-height        : $font-line-height !default;
 $breadcrumbs__text-decoration    : none !default;
 $breadcrumbs__color--active      : $color-primary !default;
-$breadcrumbs__font-family--active: $font-family-base-bold !default;
+$breadcrumbs__font-family--active: $font-family-base !default;
+$breadcrumbs__font-weight--active: $font-weight-bold !default;
 $breadcrumbs__outline            : $outline-base !default;
 
 .breadcrumbs {
@@ -33,6 +34,7 @@ $breadcrumbs__outline            : $outline-base !default;
             align-items: center;
             padding: 0 $breadcrumbs__padding;
             font-family: $breadcrumbs__font-family--active;
+            font-weight: $breadcrumbs__font-weight--active;
             color: $breadcrumbs__color--active;
 
             &:after {
