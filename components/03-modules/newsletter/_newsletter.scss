@@ -123,7 +123,7 @@ $newsletter__heading-gap--horizontal  : 0 !default;
         padding-left: 24px;
         color: rgba(201, 201, 201, $newsletter__checkbox-label-opacity);
         &:before {
-            top: 4px; // to align with label
+            top: 4px; // to align with label, depends on line-height of label
             width: 15px;
             height: 15px;
             border: none;
