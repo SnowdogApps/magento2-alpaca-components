@@ -1,0 +1,78 @@
+$rating-font-size: $font-size-large;
+$rating-active   : $orange;
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    font-size: $rating-font-size;
+    cursor: pointer;
+    text-align: left;
+
+    span {
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+            &:before {
+                content: "\2605";
+                position: absolute;
+                color: $rating-active;
+            }
+
+            ~ span {
+                &:before {
+                    content: "\2605";
+                    position: absolute;
+                    color: $rating-active;
+                }
+            }
+        }
+    }
+
+    &__summary {
+        position: relative;
+        display: inline-block;
+        width: 92px;
+        letter-spacing: 1px;
+        height: $rating-font-size;
+        font-size: $rating-font-size;
+        line-height: $rating-font-size;
+        vertical-align: middle;
+
+        &:before {
+            content: '\2605' '\2605' '\2605' '\2605' '\2605';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 1;
+            color: $gray;
+        }
+    }
+
+    &__fill {
+        display: block;
+        overflow: hidden;
+
+        &:before {
+            content: '\2605' '\2605' '\2605' '\2605' '\2605';
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 2;
+            color: $rating-active;
+        }
+
+        & * {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+}

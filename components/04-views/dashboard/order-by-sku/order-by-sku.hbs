@@ -1,0 +1,23 @@
+{{ render '@header' }}
+
+<div class="dashboard container">
+    <div class="grid">
+        <div class="grid__column grid__column--1-4 dashboard__sidebar">
+            {{ render '@dashboard-nav' }}
+        </div>
+
+        <div class="grid__column grid__column--3-4 dashboard__content">
+            {{> '@dashboard-form' form }}
+
+            {{> '@action' addRow }}
+
+            {{> '@information' uploadInfo }}
+
+            {{> '@file-upload' fileUpload }}
+
+            {{> '@action' buttons }}
+        </div>
+    </div>
+</div>
+
+{{ render '@footer' }}
