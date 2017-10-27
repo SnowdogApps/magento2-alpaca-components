@@ -112,4 +112,8 @@ $header__icon-color            : $gray-dark !default;
             margin-right: 24px;
         }
     }
+
+    &--menu-open {
+        overflow: visible;
+    }
 }
