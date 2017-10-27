@@ -2,9 +2,11 @@ $newsletter__font-size                : $font-size-base !default;
 $newsletter__font-size--agreements    : $font-size-extra-small !default;
 $newsletter__line-height              : 1.2 !default;
 $newsletter__input-background         : #717171 !default;
+$newsletter__input-color              : #white !default;
 $newsletter__input-placholder-opacity : 0.7 !default;
-$newsletter__heading-color            : #ffffff;
-$newsletter__controls-height          : 32px;
+$newsletter__heading-color            : $white !default;
+$newsletter__controls-height          : 32px !default;
+$newsletter__checkbox-bg-color        : $white !default;
 
 .newsletter {
     &__heading {
@@ -49,7 +51,7 @@ $newsletter__controls-height          : 32px;
         border: none;
         border-radius: 100px;
         height: 32px;
-        color: #ffffff;
+        color: $newsletter__input-color;
         &::placeholder {
             opacity: $newsletter__input-placholder-opacity;
         }
@@ -74,7 +76,7 @@ $newsletter__controls-height          : 32px;
     .checkbox__label {
         width: 100%;
         opacity: 1;
-        font-family: Montserrat;
+        font-family: $font-family-sans-serif;
         font-size: $newsletter__font-size--agreements;
         line-height: 1.6;
         text-align: left;
@@ -84,7 +86,7 @@ $newsletter__controls-height          : 32px;
             width: 15px;
             height: 15px;
             border: none;
-            background: #ffffff;
+            background: $newsletter__checkbox-bg-color;
         }
     }
 }
