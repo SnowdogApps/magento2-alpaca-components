@@ -1,40 +1,37 @@
-$button__height           : 48px !default;
-$button__width            : 48px !default;
-$button__padding          : 0 $padding-base !default;
-$button__border           : none !default;
-$button__border-radius    : 100px !default;
-$button__border-hover     : none !default;
-$button__background       : $color-primary !default;
-$button__background-hover : $gray-dark !default;
-$button__outline          : none !default;
-$button__font-family      : $font-family-base !default;
-$button__font-weight      : $font-weight-bold !default;
-$button__font-size        : $font-size-base !default;
-$button__font-color       : $white !default;
-$button__font-color-hover : $color-primary !default;
-$button__transition       : $transition-base !default;
+$button__height                     : 48px !default;
+$button__width                      : 48px !default;
+$button__padding                    : 0 $padding-base !default;
+$button__border                     : none !default;
+$button__border-radius              : 100px !default;
+$button__border-hover               : none !default;
+$button__background                 : $color-primary !default;
+$button__background-hover           : $gray-dark !default;
+$button__outline                    : none !default;
+$button__font-family                : $font-family-base !default;
+$button__font-weight                : $font-weight-bold !default;
+$button__font-size                  : $font-size-base !default;
+$button__font-color                 : $white !default;
+$button__font-color-hover           : $color-primary !default;
+$button__transition                 : $transition-base !default;
 
 // Secondary
-$button__border--secondary           : 1px solid $color-primary !default;
-$button__border-hover--secondary     : $color-primary !default;
-$button__background--secondary       : $white !default;
-$button__background-hover--secondary : $color-primary !default;
-$button__font-color--secondary       : $color-primary !default;
-$button__font-color-hover--secondary : $gray-dark !default;
+$button__border--secondary          : 1px solid $color-primary !default;
+$button__border-hover--secondary    : $color-primary !default;
+$button__background--secondary      : $white !default;
+$button__background-hover--secondary: $color-primary !default;
+$button__font-color--secondary      : $color-primary !default;
+$button__font-color-hover--secondary: $gray-dark !default;
 
 // Icon
-$button-icon__padding          : 0 !default;
-$button-icon__size             : 20px !default;
-$button-icon__content-margin   : 0 $margin-base 0 0 !default;
-$button-icon__border-width     : 3px !default;
-$button-icon__border           : $button-icon__border-width solid $color-primary !default;
-$button-icon__border-hover     : $gray-dark !default;
-$button-icon__fill             : $white !default;
-$button-icon__fill-hover       : $color-primary !default;
-$button-icon__background       : $color-primary !default;
-$button-icon__background-hover : $gray-dark !default;
-$button-icon__color            : $gray-light !default;
-$button-icon__color-hover      : $color-primary !default;
+$button__padding--icon              : 0 !default;
+$button__size--icon                 : 20px !default;
+$button__border-width--icon         : 3px !default;
+$button__border--icon               : $button__border-width--icon solid $color-primary !default;
+$button__border-hover--icon         : $gray-dark !default;
+$button__fill--icon                 : $white !default;
+$button__fill-hover--icon           : $color-primary !default;
+$button__background--icon           : $color-primary !default;
+$button__background-hover--icon     : $gray-dark !default;
 
 //fluid
 $button__width--fluid               : 100% !default;
@@ -88,16 +85,16 @@ $button__width--fluid               : 100% !default;
     }
 
     &--icon {
-        padding: $button-icon__padding;
-        border: $button-icon__border;
-        background: $button-icon__background;
+        padding: $button__padding--icon;
+        border: $button__border--icon;
+        background: $button__background--icon;
 
         &:hover,
         &:focus {
-            border-color: $button-icon__border-hover;
-            background: $button-icon__background-hover;
+            border-color: $button__border-hover--icon;
+            background: $button__background-hover--icon;
             .button__icon {
-                fill: $button-icon__fill-hover;
+                fill: $button__fill-hover--icon;
             }
         }
     }
@@ -107,9 +104,9 @@ $button__width--fluid               : 100% !default;
     }
 
     &__icon {
-        width: $button-icon__size;
-        height: $button-icon__size;
-        fill: $button-icon__fill;
+        width: $button__size--icon;
+        height: $button__size--icon;
+        fill: $button__fill--icon;
         transition: $button__transition;
     }
 }

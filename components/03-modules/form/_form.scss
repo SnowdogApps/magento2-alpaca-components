@@ -5,7 +5,7 @@ $form__legend-line-height    : 1.2 !default;
 $form__line-height--compact  : $button__height !default;
 $form__height--compact       : $button__height !default;
 $form__margin--compact       : 20px !default;
-$form__button-margin--compact: 0 0 0 (-$button-icon__border-width) !default;
+$form__button-margin--compact: 0 0 0 (-$button__border-width--icon) !default;
 
 .form {
     &--compact {

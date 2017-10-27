@@ -15,7 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Button styling that fits alpaca design.
  - Badges styling that fits alpaca design (default, new, discount).
  - Breadcrumbs styling that fits alpaca design.
- 
+ - Button icon variables to BEM
+
 ## [0.1.2] - 2017-10-10
 ### Changed
  - update README, correct typo
