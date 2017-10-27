@@ -1,0 +1,47 @@
+$marketing-bar__height              : 48px !default;
+$marketing-bar__padding             : 0 8px !default;
+$marketing-bar__background-color    : $color-primary !default;
+$marketing-bar__font-size           : $font-size-small !default;
+$marketing-bar__font-color          : $white !default;
+$marketing-bar__font-weight         : $font-weight-bold !default;
+$marketing-bar__button-spacing      : 12px !default;
+$marketing-bar__button-icon-color   : $white !default;
+$marketing-bar__button-icon-size    : 24px !default;
+$marketing-bar__button-icon-padding : 2px !default;
+
+.marketing-bar {
+    position: relative;
+    display: flex;
+    height: $marketing-bar__height;
+    flex-direction: column;
+    justify-content: center;
+    padding: $marketing-bar__padding;
+    font-size: $marketing-bar__font-size;
+    font-weight: $marketing-bar__font-weight;
+    background-color: $marketing-bar__background-color;
+    color: $marketing-bar__font-color;
+    @include mq($screen-m) {
+        text-align: center;
+    }
+    &__close {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        min-width: 34px;
+        margin: auto;
+        padding: $marketing-bar__button-spacing;
+        border: none;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+        &-icon {
+            width: $marketing-bar__button-icon-size;
+            height: $marketing-bar__button-icon-size;
+            padding: $marketing-bar__button-icon-padding;
+            fill: $marketing-bar__button-icon-color;
+        }
+    }
+}

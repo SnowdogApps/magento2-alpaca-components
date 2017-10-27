@@ -1,0 +1,46 @@
+<div class="dashboard-form {{ class }}">
+    <h5 class="heading heading--fifth-level dashboard-form__title">
+        {{ title }}
+    </h5>
+
+    <div class="dashboard-form__divider {{ contentClass }}">
+        {{#each fields }}
+            {{> '@input' input }}
+        {{/each}}
+
+        {{#each textareas }}
+            {{> '@input--textarea' textarea }}
+        {{/each}}
+
+        {{#each selects }}
+            {{> '@select' select }}
+        {{/each}}
+
+        {{#each checkboxes }}
+            {{> '@checkbox' checkbox}}
+        {{/each}}
+
+        <div class="
+                dashboard-form__divider
+                dashboard-form__fields
+                dashboard-form--hidden
+             "
+        >
+            <h5 class="
+                    heading
+                    heading--sixth-level
+                    dashboard-form__title-form
+                    dashboard-form__divider
+                "
+            >
+                {{ formTitle }}
+            </h5>
+
+            {{#each hiddenFields}}
+                {{> '@input' hiddenField }}
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<script src="{{ static '../dashboard-form/form.js' }}"></script>

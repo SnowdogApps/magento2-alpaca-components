@@ -1,0 +1,28 @@
+$dashboard-table-margin: 30px !default;
+
+.dashboard-table {
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        margin-bottom: $dashboard-table-margin;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gray;
+    }
+
+    &__content {
+        margin-bottom: $dashboard-table-margin;
+        overflow-x: auto;
+    }
+
+    &__table {
+        margin: 0;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        margin-right: $dashboard-table-margin;
+    }
+}
