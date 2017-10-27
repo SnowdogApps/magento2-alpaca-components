@@ -1,16 +1,16 @@
-$tab-padding                    : 15px !default;
-$tab-margin                     : 10px !default;
-$tab-title-border               : 1px solid $gray-light !default;
-$tab-title-background           : $gray-lightest !default;
-$tab-title-active-border-color  : $gray-light !default;
-$tab-title-active-border-width  : 1px 1px 0 1px !default;
-$tab-title-active-border-style  : solid !default;
-$tab-title-active-background    : $white !default;
-$tab-icon-width                 : 13px !default;
-$tab-icon-height                : 13px !default;
-$tab-icon-fill                  : $gray !default;
-$tab-icon-transition            : transform 0.3s !default;
-$tab-content-transition         : opacity 0.5s !default;
+$tab__padding                   : 15px !default;
+$tab__margin                    : 10px !default;
+$tab__title-border              : 1px solid $gray-light !default;
+$tab__title-background          : $gray-lightest !default;
+$tab__title-border-color--active: $gray-light !default;
+$tab__title-border-width--active: 1px 1px 0 1px !default;
+$tab__title-border-style--active: solid !default;
+$tab__title-background--active  : $white !default;
+$tab__icon-width                : 13px !default;
+$tab__icon-height               : 13px !default;
+$tab__icon-fill                 : $gray !default;
+$tab__icon-transition           : transform 0.3s !default;
+$tab__content-transition        : opacity 0.5s !default;
 
 .tab {
     position: relative;
@@ -22,8 +22,8 @@ $tab-content-transition         : opacity 0.5s !default;
 
     &__title {
         position: relative;
-        padding: $tab-padding;
-        border-bottom: $tab-title-border;
+        padding: $tab__padding;
+        border-bottom: $tab__title-border;
         font-weight: 700;
         cursor: pointer;
         text-align: left;
@@ -31,18 +31,18 @@ $tab-content-transition         : opacity 0.5s !default;
         @include mq($screen-l) {
             flex-basis: 25%;
             order: -1;
-            margin-right: $tab-margin;
-            background-color: $tab-title-background;
+            margin-right: $tab__margin;
+            background-color: $tab__title-background;
             border-bottom: 0 none;
             bottom: -1px;
         }
 
         &--active {
             @include mq($screen-l) {
-                border-color: $tab-title-active-border-color;
-                border-width: $tab-title-active-border-width;
-                border-style: $tab-title-active-border-style;
-                background-color: $tab-title-active-background;
+                border-color: $tab__title-border-color--active;
+                border-width: $tab__title-border-width--active;
+                border-style: $tab__title-border-style--active;
+                background-color: $tab__title-background--active;
                 z-index: 2;
             }
 
@@ -60,10 +60,10 @@ $tab-content-transition         : opacity 0.5s !default;
         position: absolute;
         top: 17px;
         right: 10px;
-        width: $tab-icon-width;
-        height: $tab-icon-height;
-        fill: $tab-icon-fill;
-        transition: $tab-icon-transition;
+        width: $tab__icon-width;
+        height: $tab__icon-height;
+        fill: $tab__icon-fill;
+        transition: $tab__icon-transition;
 
         @include mq($screen-l) {
             display: none;
@@ -78,7 +78,7 @@ $tab-content-transition         : opacity 0.5s !default;
         z-index: -1;
         opacity: 0;
         overflow-y: hidden;
-        transition: $tab-content-transition;
+        transition: $tab__content-transition;
         overflow: hidden;
 
         @include mq($screen-l) {
@@ -89,10 +89,10 @@ $tab-content-transition         : opacity 0.5s !default;
         &--active {
             display: block;
             opacity: 1;
-            border-bottom: $tab-title-border;
+            border-bottom: $tab__title-border;
             @include mq($screen-l) {
                 border-bottom: 0 none;
-                border-top: $tab-title-border;
+                border-top: $tab__title-border;
             }
         }
     }

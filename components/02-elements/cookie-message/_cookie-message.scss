@@ -1,18 +1,18 @@
-$cookie-message-width      : 100% !default;
-$cookie-message-color      : $gray-lightest !default;
-$cookie-message-transition : height 0.3s !default;
-$cookie-message-margin     : 10px !default;
-$cookie-message-padding    : 10px !default;
-$cookie-message-font-size  : $font-size-extra-small !default;
-$cookie-message-close-width: 35px !default;
-$cookie-message-link-border: 1px solid $white !default;
-$cookie-message-icon-fill  : $white !default;
-$cookie-message-icon-width : 10px !default;
+$cookie-message__margin     : 10px !default;
+$cookie-message__padding    : 10px !default;
+$cookie-message__width      : 100% !default;
+$cookie-message__color      : $gray-lightest !default;
+$cookie-message__font-size  : $font-size-extra-small !default;
+$cookie-message__transition : height 0.3s !default;
+$cookie-message__close-width: 35px !default;
+$cookie-message__link-border: 1px solid $white !default;
+$cookie-message__icon-fill  : $white !default;
+$cookie-message__icon-width : 10px !default;
 
 .cookie-message {
-    width: $cookie-message-width;
-    background-color: $cookie-message-color;
-    transition: $cookie-message-transition;
+    width: $cookie-message__width;
+    background-color: $cookie-message__color;
+    transition: $cookie-message__transition;
     box-sizing: border-box;
 
     &__container {
@@ -21,7 +21,7 @@ $cookie-message-icon-width : 10px !default;
         margin: 0 auto;
         max-width: $max-content-width;
         text-align: center;
-        padding: $cookie-message-padding 35px;
+        padding: $cookie-message__padding 35px;
     }
 
     &__message {
@@ -31,10 +31,10 @@ $cookie-message-icon-width : 10px !default;
     }
 
     &__text {
-        font-size: $cookie-message-font-size;
+        font-size: $cookie-message__font-size;
         font-weight: 700;
         display: block;
-        margin-bottom: $cookie-message-margin;
+        margin-bottom: $cookie-message__margin;
         text-transform: uppercase;
 
         @include mq($screen-m) {
@@ -48,8 +48,8 @@ $cookie-message-icon-width : 10px !default;
         @include links() {
             display: inline-block;
             font-weight: 400;
-            font-size: $cookie-message-font-size;
-            border: $cookie-message-link-border;
+            font-size: $cookie-message__font-size;
+            border: $cookie-message__link-border;
             padding: 5px;
         }
     }
@@ -58,8 +58,8 @@ $cookie-message-icon-width : 10px !default;
         position: absolute;
         top: 0;
         right: 0;
-        width: $cookie-message-close-width;
-        height: $cookie-message-close-width;
+        width: $cookie-message__close-width;
+        height: $cookie-message__close-width;
         background: none;
         border: none;
         padding: 0;
@@ -72,9 +72,9 @@ $cookie-message-icon-width : 10px !default;
             right: 0;
             bottom: 0;
             margin: auto;
-            fill: $cookie-message-icon-fill;
-            width: $cookie-message-icon-width;
-            height: $cookie-message-icon-width;
+            fill: $cookie-message__icon-fill;
+            width: $cookie-message__icon-width;
+            height: $cookie-message__icon-width;
         }
     }
 
@@ -87,7 +87,7 @@ $cookie-message-icon-width : 10px !default;
 
         .cookie-message__message {
             display: block;
-            margin-bottom: $cookie-message-margin;
+            margin-bottom: $cookie-message__margin;
 
             @include mq($screen-m) {
                 display: inline-block;
@@ -124,7 +124,7 @@ $cookie-message-icon-width : 10px !default;
             width: auto;
             height: auto;
             font-weight: 400;
-            font-size: $cookie-message-font-size;
+            font-size: $cookie-message__font-size;
             &:hover {
                 text-decoration: underline;
             }
