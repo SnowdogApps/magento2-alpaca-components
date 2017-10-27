@@ -1,5 +1,6 @@
 $minicart-trigger__background        : $white !default;
 $minicart-trigger__margin            : 0 8px 0 0 !default;
+$minicart-trigger__padding           : 12px !default;
 $minicart-trigger__icon-size         : 24px !default;
 $minicart-trigger__icon-padding      : 2px !default;
 $minicart-trigger__icon-color        : $gray-dark !default;
@@ -12,7 +13,7 @@ $minicart-trigger__counter-size      : 20px !default;
 .minicart-trigger {
     position: relative;
     display: block;
-    padding: 12px;
+    padding: $minicart-trigger__padding;
     margin: $minicart-trigger__margin;
     border: 0;
     background-color: $minicart-trigger__background;
