@@ -1,10 +1,12 @@
-$input__margin              : 10px !default;
-$input__padding             : 10px 15px !default;
+$spacer                     : 8px !default;
+$spacer--large              : 16px !default;
+$input__margin              : $spacer !default;
+$input__padding             : $spacer $spacer--large !default;
 $input__field-border        : 1px solid #d9d9d9 !default;
 $input__field-border-radius : $form-elements-radius !default;
 $input__placeholder-color   : $gray-light !default;
 
-$input__min-height--textarea: 100px !default;
+$input__min-height--textarea: $form-elements-radius !default;
 
 .input {
     margin-bottom: $input__margin;
