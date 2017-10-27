@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Breadcrumbs styling that fits alpaca design.
  - Header styling that fits alpaca design.
  - Styles used only for previews (i.e. buttons)
+ - Button icon variables to BEM
 
 ## [0.1.2] - 2017-10-10
 ### Changed
