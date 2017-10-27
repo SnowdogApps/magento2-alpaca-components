@@ -1,20 +1,26 @@
-$tab__padding                   : 15px !default;
-$tab__margin                    : 10px !default;
-$tab__title-border              : 1px solid $gray-light !default;
-$tab__title-background          : $gray-lightest !default;
-$tab__title-border-color--active: $gray-light !default;
-$tab__title-border-width--active: 1px 1px 0 1px !default;
-$tab__title-border-style--active: solid !default;
-$tab__title-background--active  : $white !default;
-$tab__icon-width                : 13px !default;
-$tab__icon-height               : 13px !default;
-$tab__icon-fill                 : $gray !default;
-$tab__icon-transition           : transform 0.3s !default;
-$tab__content-transition        : opacity 0.5s !default;
+// todo od czego zaczac - paddingi w mobilnym widoku (paragraf)
+// todo na mobilnym wydaje sie ze title ma zly padding
+$tab__margin                         : 10px !default;
+$tab__border-width                   : 8px !default;
+// title
+$tab__title-padding                  : $padding-base !default;
+$tab__title-border-bottom            : $tab__border-width solid rgba(255,255,255,0) !default;
+$tab__title-border-bottom--active    : $tab__border-width solid $color-primary !default;
+$tab__title-color                    : $color-secondary!default;
+$tab__title-color-mobile             : $color-secondary !default;
+$tab__title-color-mobile-active      : $color-primary !default;
+$tab__title-font-weight              : $font-weight-normal !default;
+$tab__title-font-weight--mobile      : $font-weight-bold !default;
+$tab__title-font-weight--active      : $font-weight-bold !default;
+$tab__title-background               : $bg-color-base !default;
+$tab__title-background--active       : $gray-light !default;
+$tab__title-background--mobile-active: $bg-color-dark !default;
+// content
+$tab__content-padding                : 10px !default;
+$tab__content-border-top             : $tab__border-width solid $tab__title-background--active !default;
+$tab__content-transition             : opacity 0.5s !default;
 
 .tab {
-    position: relative;
-
     @include mq($screen-l) {
         display: flex;
         flex-flow: row wrap;
@@ -22,62 +28,42 @@ $tab__content-transition        : opacity 0.5s !default;
 
     &__title {
         position: relative;
-        padding: $tab__padding;
-        border-bottom: $tab__title-border;
-        font-weight: 700;
+        padding: $tab__title-padding;
+        border-bottom: $tab__title-border-bottom;
+        background: $tab__title-background;
+        font-weight: $tab__title-font-weight--mobile;
+        color: $tab__title-color-mobile;
         cursor: pointer;
-        text-align: left;
+        text-align: center;
 
         @include mq($screen-l) {
             flex-basis: 25%;
             order: -1;
-            margin-right: $tab__margin;
-            background-color: $tab__title-background;
-            border-bottom: 0 none;
-            bottom: -1px;
+            color: $tab__title-color;
+            font-weight: $tab__title-font-weight;
         }
 
         &--active {
+            background: $tab__title-background--mobile-active;
+            color: $tab__title-color-mobile-active;
             @include mq($screen-l) {
-                border-color: $tab__title-border-color--active;
-                border-width: $tab__title-border-width--active;
-                border-style: $tab__title-border-style--active;
                 background-color: $tab__title-background--active;
+                border-bottom: $tab__title-border-bottom--active;
+                font-weight: $tab__title-font-weight--active;
+                color: $tab__title-color;
                 z-index: 2;
             }
-
-            .tabs__icon {
-                transform: rotate(45deg);
-
-                @include mq($screen-l) {
-                    display: none;
-                }
-            }
         }
     }
 
-    &__icon {
-        position: absolute;
-        top: 17px;
-        right: 10px;
-        width: $tab__icon-width;
-        height: $tab__icon-height;
-        fill: $tab__icon-fill;
-        transition: $tab__icon-transition;
-
-        @include mq($screen-l) {
-            display: none;
-        }
-    }
 
     &__content {
         position: relative;
         display: none;
         width: 100%;
-        padding: 10px;
+        padding: $tab__content-padding;
         z-index: -1;
         opacity: 0;
-        overflow-y: hidden;
         transition: $tab__content-transition;
         overflow: hidden;
 
@@ -89,10 +75,13 @@ $tab__content-transition        : opacity 0.5s !default;
         &--active {
             display: block;
             opacity: 1;
-            border-bottom: $tab__title-border;
+            //border-bottom: $tab__title-border-bottom--active;
+            border-top: $tab__content-border-top;
+            border-bottom: $tab__content-border-top;
+            top: -$tab__border-width;
+
             @include mq($screen-l) {
                 border-bottom: 0 none;
-                border-top: $tab__title-border;
             }
         }
     }

@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const tab                = document.querySelectorAll('.tab__title'),
       content            = document.querySelectorAll('.tab__content'),
