@@ -1,3 +1,4 @@
+$marketing-bar__height              : 48px !default;
 $marketing-bar__padding             : 0 8px !default;
 $marketing-bar__background-color    : $color-primary !default;
 $marketing-bar__font-size           : $font-size-small !default;
@@ -11,7 +12,7 @@ $marketing-bar__button-icon-padding : 2px !default;
 .marketing-bar {
     position: relative;
     display: flex;
-    height: 48px;
+    height: $marketing-bar__height;
     flex-direction: column;
     justify-content: center;
     padding: $marketing-bar__padding;
