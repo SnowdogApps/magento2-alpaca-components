@@ -1,0 +1,66 @@
+$file-upload-margin   : 15px !default;
+$file-upload-padding  : 15px !default;
+$file-upload-font-size: 14px !default;
+
+.file-upload {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $file-upload-margin;
+
+    &__handler {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+
+    &__field {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        overflow: hidden;
+        height: 48px;
+        width: 100%;
+        cursor: pointer;
+        z-index: 2;
+
+        @include mq($screen-s) {
+            height: 100%;
+        }
+
+        &:hover + .file-upload__button {
+            background: $button__background-hover;
+            border-color: $button__border-hover;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-basis: 100%;
+        margin-bottom: 5px;
+        font-size: $file-upload-font-size;
+    }
+
+    &__name {
+        font-size: $file-upload-font-size;
+        margin-top: $file-upload-margin;
+
+        @include mq($screen-s) {
+            margin-left: $file-upload-margin;
+            margin-top: 0;
+        }
+    }
+
+    &__button {
+        margin-bottom: 0;
+        padding: 10px 35px;
+        z-index: 1;
+        width: 100%;
+
+        @include mq($screen-s) {
+            width: auto;
+        }
+    }
+}

@@ -1,21 +1,27 @@
 module.exports = {
-  title: 'Icons',
+  preview: '@docs-only-styles',
   context: {
     icons: [
-      'arrow-down',
-      'arrow-right',
-      'arrow-up',
-      'carousel-left',
-      'carousel-right',
+      'angle-down',
+      'arrow-circle-up',
+      'arrow-left',
       'checked',
       'close',
+      'youtube',
       'facebook',
+      'instagram',
       'google-plus',
+      'mobile-menu',
+      'search',
+      'phone',
+      'user',
+      'shopping-cart',
+      'settings',
+      'edit',
       'linkedin',
       'loader',
-      'mobile-menu',
       'plus',
-      'search',
+      'remove',
       'twitter'
     ]
   }

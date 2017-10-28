@@ -1,5 +1,11 @@
-$form-legend-font-size  : $font-size-large !default;
-$form-legend-line-height: 1.2 !default;
+$form__fieldset-margin       : 0 0 40px !default;
+$form__legend-margin         : 0 0 25px !default;
+$form__legend-font-size      : $font-size-large !default;
+$form__legend-line-height    : 1.2 !default;
+$form__line-height--compact  : $button__height !default;
+$form__height--compact       : $button__height !default;
+$form__margin--compact       : 20px !default;
+$form__button-margin--compact: 0 0 0 (-$button__border-width--icon) !default;
 
 .form {
     &--compact {
@@ -10,8 +16,8 @@ $form-legend-line-height: 1.2 !default;
 
         .form__heading {
             display: none;
-            line-height: $button-height;
-            margin-right: 20px;
+            line-height: $form__line-height--compact;
+            margin-right: $form__margin--compact;
         }
 
         .form__content {
@@ -28,8 +34,8 @@ $form-legend-line-height: 1.2 !default;
 
             &__field {
                 width: 100%;
-                line-height: $button-height;
-                height: $button-height;
+                line-height: $form__line-height--compact;
+                height: $form__height--compact;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
             }
@@ -37,30 +43,25 @@ $form-legend-line-height: 1.2 !default;
 
         .button {
             display: block;
-            margin: 0 0 0 (-$button-icon-border-width);
+            margin: $form__button-margin--compact;
             &--native-link {
                 margin: 0;
             }
         }
-
     }
 
     &__fieldset,
     .fieldset {
         border: 0;
-        margin: 0 0 40px;
         padding: 0;
+        margin: $form__fieldset-margin;
     }
 
     &__legend,
     .legend {
-        margin: 0 0 25px;
         padding: 0;
-        font-size: $form-legend-font-size;
-        color: inherit;
-        font-family: inherit;
-        font-weight: inherit;
-        line-height: $form-legend-line-height;
-        font-style: inherit;
+        margin: $form__legend-margin;
+        font-size: $form__legend-font-size;
+        line-height: $form__legend-line-height;
     }
 }

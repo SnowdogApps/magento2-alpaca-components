@@ -1,17 +1,26 @@
+$side-menu__padding         : 30px !default;
+$side-menu__top             : calc(100% + 1px) !default;
+$side-menu__left            : 100% !default;
+$side-menu__width           : 300px !default;
+$side-menu__background      : $white !default;
+$side-menu__box-shadow      : 0 3px 7px 0 rgba(0, 0, 0, 0.35) !default;
+$side-menu__transition      : $transition-base !default;
+$side-menu__transform--open : translateX(-100%) !default;
+$side-menu__link-color      : $gray-dark !default;
+$side-menu__link-color-hover: $gray !default;
+
 .side-menu {
     position: absolute;
-    top: calc(100% + 1px);
-    left: 100%;
-    width: 300px;
-    padding: 30px;
+    top: $side-menu__top;
+    left: $side-menu__left;
+    width: $side-menu__width;
+    padding: $side-menu__padding;
     z-index: 50;
-    background: $white;
-    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.35);
-    font-family: $font-family-base;
+    background: $side-menu__background;
+    box-shadow: $side-menu__box-shadow;
     text-transform: uppercase;
-    line-height: 3;
     opacity: 0;
-    transition: $transition-base;
+    transition: $side-menu__transition;
 
     @include mq($screen-l) {
         display: none;
@@ -19,17 +28,17 @@
 
     &--is-open {
         opacity: 1;
-        transform: translateX(-100%);
+        transform: $side-menu__transform--open;
     }
 
     &__link {
         display: block;
         line-height: 3;
-        color: $gray-dark;
+        color: $side-menu__link-color;
 
         &:hover {
             text-decoration: none;
-            color: $gray;
+            color: $side-menu__link-color-hover;
         }
     }
 }

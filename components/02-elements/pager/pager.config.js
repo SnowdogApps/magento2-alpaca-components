@@ -33,7 +33,7 @@ module.exports = {
   },
   variants: [
     {
-      name: 'Pager type with arrow in right and left',
+      name: 'both arrows',
       context: {
         arrowLeftVisible: true,
         arrowRightVisible: true,
@@ -66,7 +66,7 @@ module.exports = {
       }
     },
     {
-      name: 'Pager type with arrow in left',
+      name: 'arrow left',
       context: {
         arrowLeftVisible: true,
         arrowRightVisible: false,
@@ -99,7 +99,7 @@ module.exports = {
       }
     },
     {
-      name: 'Pager type with arrow in left and right with more sites',
+      name: 'more sites',
       context: {
         arrowLeftVisible: true,
         arrowRightVisible: true,
@@ -132,7 +132,7 @@ module.exports = {
       }
     },
     {
-      name: 'Pager type with arrow in right',
+      name: 'arrow right',
       context: {
         arrowLeftVisible: true,
         arrowRightVisible: true,

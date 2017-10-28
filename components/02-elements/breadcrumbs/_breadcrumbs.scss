@@ -1,33 +1,62 @@
-$breadcrumbs-padding        : 10px;
-$breadcrumbs-margin         : 10px;
-$breadcrumbs-color          : $font-color-base; 
-$breadcrumbs-color-second   : $gray;
-$breadcrumbs-clickable-area : 48px;
+$breadcrumbs__margin             : 8px !default;
+$breadcrumbs__padding            : 8px !default;
+$breadcrumbs__clickable-area     : 48px !default;
+$breadcrumbs__color              : $gray-dark !default;
+$breadcrumbs__font-family        : $font-family-base !default;
+$breadcrumbs__font-size          : $font-size-small !default;
+$breadcrumbs__line-height        : $font-line-height !default;
+$breadcrumbs__text-decoration    : none !default;
+$breadcrumbs__color--active      : $color-primary !default;
+$breadcrumbs__font-family--active: $font-family-base !default;
+$breadcrumbs__font-weight--active: $font-weight-bold !default;
+$breadcrumbs__outline            : $outline-base !default;
 
 .breadcrumbs {
     display: flex;
     flex-wrap: wrap;
-    padding: $breadcrumbs-padding 0;
 
     &__item {
-        color: $breadcrumbs-color;
         display: flex;
-        min-width: $breadcrumbs-clickable-area;
-        padding: ($breadcrumbs-padding + 5) 0;
-        align-items: center;
+        align-items: stretch;
+        min-height: $breadcrumbs__clickable-area;
+        color: $breadcrumbs__color;
+        outline: $breadcrumbs__outline;
 
         &:after {
             content: '/';
-            margin: 0 $breadcrumbs-margin;
-            color: $breadcrumbs-color-second;
+            display: flex;
+            align-items: center;
+            margin: 0 $breadcrumbs__margin;
+            color: $breadcrumbs__color;
         }
 
         &:last-child {
-            color: $breadcrumbs-color-second;
+            align-items: center;
+            padding: 0 $breadcrumbs__padding;
+            font-family: $breadcrumbs__font-family--active;
+            font-weight: $breadcrumbs__font-weight--active;
+            color: $breadcrumbs__color--active;
 
             &:after {
                 display: none;
             }
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        padding: 0 $breadcrumbs__padding;
+        font-family: $breadcrumbs__font-family;
+        color: $breadcrumbs__color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $breadcrumbs__color--active;
+        }
+        &:active,
+        &:focus {
+            outline: $breadcrumbs__outline;
         }
     }
 }

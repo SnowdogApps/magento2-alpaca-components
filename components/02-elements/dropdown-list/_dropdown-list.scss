@@ -1,8 +1,21 @@
+$dropdown-list-padding         : 10px !default;
+$dropdown-list-background      : $white !default;
+$dropdown-list-font-size       : $font-size-extra-small !default;
+$dropdown-list-icon-transition : transform 0.3s, opacity 0.3s !default;
+$dropdown-list-icon-color      : $gray !default;
+$dropdown-list-icon-width      : 10px !default;
+$dropdown-list-icon-height     : 6px !default;
+$dropdown-list-icon-top        : 20px !default;
+$dropdown-list-icon-right      : 15px !default;
+$dropdown-list-icon-inner-base : 8px !default;
+$dropdown-list-link-color      : $font-color-base !default;
+$dropwodn-list-inner-item-color: $color-primary !default;
+
 .dropdown-list {
     width: 100%;
     position: relative;
-    padding: 10px;
-    background-color: $white;
+    padding: $dropdown-list-padding;
+    background-color: $dropdown-list-background;
 
     @include mq($screen-l) {
         max-width: 320px;
@@ -10,6 +23,18 @@
 
     @include mq($screen-xl) {
         padding-left: 0;
+    }
+
+    &--item-wide {
+        .dropdown-list__list {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
+                flex-flow: row wrap;
+            }
+        }
+
+        .dropdown-list__item {
+            flex-basis: 100%;
+        }
     }
 
     &__list {
@@ -29,37 +54,37 @@
 
     &__icon {
         position: absolute;
-        right: 15px;
-        top: 20px;
-        width: 10px;
-        height: 6px;
-        color: $gray;
-        transition: transform 0.3s, opacity 0.3s;
+        top: $dropdown-list-icon-top;
+        right: $dropdown-list-icon-right;
+        width: $dropdown-list-icon-width;
+        height: $dropdown-list-icon-height;
+        color: $dropdown-list-icon-color;
+        transition: $dropdown-list-icon-transition;
 
         @include mq($screen-m) {
             right: 10px;
         }
 
         &--inner {
-            width: 8px;
-            height: 8px;
+            width: $dropdown-list-icon-inner-base;
+            height: $dropdown-list-icon-inner-base;
             top: 15px;
             opacity: 0.7;
         }
     }
 
     &__item {
-        width: 100%;
         position: relative;
         display: block;
+        width: 100%;
         padding: 0;
         font-weight: 700;
-        font-size: 12px;
+        font-size: $dropdown-list-font-size;
         text-transform: uppercase;
         cursor: pointer;
         transition: box-shadow 0.5s;
 
-        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+        @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
             flex-basis: 24%;
 
             &:hover {
@@ -68,7 +93,7 @@
         }
 
         &.open {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
             }
 
@@ -82,7 +107,7 @@
                 & > .dropdown-list__icon {
                     transform: rotate(180deg);
                 }
-                @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+                @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                     &:after {
                         visibility: visible;
                     }
@@ -98,7 +123,7 @@
             display: block;
             padding: 15px;
             font-weight: 700;
-            color: $font-color-base;
+            color: $dropdown-list-link-color;
             transition: box-shadow 0.5s;
 
             @include mq($screen-m) {
@@ -107,11 +132,11 @@
         }
 
         @include links(hover) {
-            color: $font-color-base;
+            color: $dropdown-list-link-color;
             text-decoration: none;
             box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
 
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 box-shadow: none;
             }
         }
@@ -123,7 +148,7 @@
             left: 0;
             bottom: 0;
             height: 10px;
-            background-color: $white;
+            background-color: $dropdown-list-background;
             width: 100%;
             z-index: 109;
             visibility: hidden;
@@ -139,13 +164,13 @@
         margin: 0;
         overflow: hidden;
         transition: margin 0.3s, height 0.5s;
-        font-size: 12px;
+        font-size: $dropdown-list-font-size;
 
         &--level1 {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
+            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
                 position: absolute;
                 width: 100%;
-                background-color: $white;
+                background-color: $dropdown-list-background;
                 box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
                 z-index: 99;
             }
@@ -159,6 +184,16 @@
     &__inner-item {
         position: relative;
         display: block;
+
+        &.open {
+            .dropdown-list__inner-link {
+                text-decoration: none;
+
+                & > .dropdown-list__icon {
+                    transform: rotate(45deg);
+                }
+            }
+        }
 
         &--level1 {
             .dropdown-list__inner-link {
@@ -177,18 +212,8 @@
 
                 @include links(hover) {
                     font-weight: 400;
-                    color: $color-primary;
+                    color: $dropwodn-list-inner-item-color;
                     text-decoration: underline;
-                }
-            }
-        }
-
-        &.open {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                & > .dropdown-list__icon {
-                    transform: rotate(45deg);
                 }
             }
         }
@@ -202,19 +227,7 @@
             padding: 15px 20px;
             text-transform: none;
             font-weight: 400;
-            color: $font-color-base;
-        }
-    }
-
-    &--item-wide {
-        .dropdown-list__list {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                flex-flow: row wrap;
-            }
-        }
-
-        .dropdown-list__item {
-            flex-basis: 100%;
+            color: $dropdown-list-link-color;
         }
     }
 }

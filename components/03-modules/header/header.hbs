@@ -1,11 +1,82 @@
-<header class="header container">
-    {{ render '@logo' }}
-
-    <div class="header__right-panel">
-        {{ render '@side-menu-trigger' }}
+<header class="header">
+    {{ render '@marketing-bar' }}
+    <div class="top-bar">
+        <div class="container top-bar__wrapper">
+            <div class="top-bar__contact-info">
+                {{ phoneNumber }}
+                <a class="top-bar__contact-info-link" href="#">Contact</a>
+            </div>
+            <div class="top-bar__links">
+                {{#each topLinks as |item| }}
+                    <a class="top-bar__links-item" href="#">
+                        <svg class="top-bar__links-icon">
+                            <use xlink:href="{{ svg item.icon }}"></use>
+                        </svg>
+                        {{ item.text }}
+                    </a>
+                {{/each}}
+            </div>
+        </div>
     </div>
+    <div class="container">
+        <div class="header__wrapper">
+            {{ render '@logo' logo }}
+            <div class="header__icons">
+                {{#each icons as |item| }}
+                    <a class="header__icons-item" href="#">
+                        <svg class="header__icon">
+                            <use xlink:href="{{ svg item }}"></use>
+                        </svg>
+                    </a>
+                {{/each}}
+                <div class="header__minicart">
+                    {{ render '@minicart-trigger' trigger }}
+                    {{ render '@popup' minicartPopup }}
+                </div>
+            </div>
+            <div class="header__menu-trigger">
+                {{ render '@side-menu-trigger--span-way' }}
+            </div>
 
-    {{ render '@side-menu' }}
+            <div class="header__featured-info">
+                <a href="#" class="featured-info">
+                    <div class="featured-info__icon">
+                        <svg class="featured-info__icon-svg">
+                            <use xlink:href="{{ svg 'curved-arrows' }}"></use>
+                        </svg>
+                    </div>
+                    <div class="featured-info__data">
+                        <div class="featured-info__data-title">
+                            30 days for return
+                        </div>
+                        <div class="featured-info__data-subtitle">
+                            see details
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="featured-info">
+                    <div class="featured-info__icon">
+                        <svg class="featured-info__icon-svg featured-info__icon-svg--delivery-truck">
+                            <use xlink:href="{{ svg 'delivery-truck' }}"></use>
+                        </svg>
+                    </div>
+                    <div class="featured-info__data">
+                        <div class="featured-info__data-title">
+                            Shipping in 24h
+                        </div>
+                        <div class="featured-info__data-subtitle">
+                            see details
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="header__search-wrapper">
+                <form class="search-form">
+                    {{ render '@input' searchInput }}
+                    {{ render '@button--icon' searchButton }}
+                </form>
+            </div>
+        </div>
+    </div>
 </header>
-
-{{ render '@dropdown-menu' }}

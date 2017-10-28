@@ -1,54 +1,50 @@
+$minicart-trigger__background        : $white !default;
+$minicart-trigger__margin            : 0 8px 0 0 !default;
+$minicart-trigger__padding           : 12px !default;
+$minicart-trigger__icon-size         : 24px !default;
+$minicart-trigger__icon-padding      : 2px !default;
+$minicart-trigger__icon-color        : $gray-dark !default;
+$minicart-trigger__counter-spacing   : 3px !default;
+$minicart-trigger__counter-font-size : $font-size-extra-small !default;
+$minicart-trigger__counter-background: $color-primary !default;
+$minicart-trigger__counter-color     : $white !default;
+$minicart-trigger__counter-size      : 20px !default;
+
 .minicart-trigger {
+    position: relative;
     display: block;
-    position: absolute;
-    top: -42px;
-    right: 200px;
-    padding: 10px;
-
-    @include mq($screen-s) {
-        top: 10px;
-    }
-
-    @include mq($screen-l) {
-        right: 110px;
-        z-index: 10;
+    padding: $minicart-trigger__padding;
+    margin: $minicart-trigger__margin;
+    border: 0;
+    background-color: $minicart-trigger__background;
+    @include mq($screen-xl) {
+        margin: 0;
     }
 
     &:hover,
     &:focus {
-        .minicart-link__counter-label {
-            visibility: visible;
-        }
+        background: $minicart-trigger__background;
     }
 
     &__icon {
         display: block;
-        width: 30px;
-        height: 30px;
+        width: $minicart-trigger__icon-size;
+        height: $minicart-trigger__icon-size;
+        padding: $minicart-trigger__icon-padding;
+        fill: $minicart-trigger__icon-color;
     }
 
-    &__counter-qty {
+    &__counter {
         position: absolute;
-        top: -5px;
-        right: -5px;
+        top: $minicart-trigger__counter-spacing;
+        right: $minicart-trigger__counter-spacing;
         display: block;
-        padding: 5px;
-        background-color: $purple;
-        color: $white;
-        font-size: $font-size-extra-small;
-
-        @include mq($screen-l) {
-            top: 2px;
-        }
-    }
-
-    &__counter-label {
-        position: absolute;
-        bottom: -5px;
-        right: 0;
-        visibility: hidden;
-        color: $purple;
-        white-space: nowrap;
-        transition: visibility 0.3s;
+        width: $minicart-trigger__counter-size;
+        height: $minicart-trigger__counter-size;
+        border-radius: $minicart-trigger__counter-size;
+        line-height: $minicart-trigger__counter-size;
+        font-size: $minicart-trigger__counter-font-size;
+        color: $minicart-trigger__counter-color;
+        background-color: $minicart-trigger__counter-background;
     }
 }
