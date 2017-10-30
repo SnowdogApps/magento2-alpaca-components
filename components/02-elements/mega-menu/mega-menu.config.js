@@ -1,6 +1,4 @@
 module.exports = {
-  title: 'Mega menu',
-  collated: true,
   context: {
     list: [
       {
