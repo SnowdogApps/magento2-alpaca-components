@@ -1,18 +1,25 @@
-$popup__padding           : $padding-base !default;
-$popup__content-top-margin: $padding-base * 2 !default;
-$popup__width             : 80% !default;
-$popup__max-width         : 500px !default;
-$popup__background        : $white !default;
-$popup__z-index           : 50 !default;
-$popup__border            : 0 !default;
-$popup__box-shadow-color  : $black !default;
-$popup__box-shadow        : 0 4px 6px 0 rgba($popup__box-shadow-color, 0.3) !default;
+$popup__padding                  : $padding-base !default;
+$popup__content-top-margin       : $padding-base * 2 !default;
+$popup__width                    : 80% !default;
+$popup__max-width                : 500px !default;
+$popup__background               : $white !default;
+$popup__z-index                  : 50 !default;
+$popup__border                   : 0 !default;
+$popup__box-shadow-color         : $black !default;
+$popup__box-shadow               : 0 4px 6px 0 rgba($popup__box-shadow-color, 0.3) !default;
+$popup__close-button-bg          : $white !default;
+$popup__close-button-border      : 0 !default;
+$popup__button-icon-fill         : $black !default;
+$popup__button-icon-fill--actiive: $color-primary !default;
+$popup__margin                   : 0 !default;
 
 .popup {
     display: none;
     position: absolute;
     width: $popup__width;
+    max-width: $popup__max-width;
     padding: $popup__padding;
+    margin: $popup__margin;
     z-index: $popup__z-index;
     box-shadow: $popup__box-shadow;
     background-color: $popup__background;
@@ -33,7 +40,23 @@ $popup__box-shadow        : 0 4px 6px 0 rgba($popup__box-shadow-color, 0.3) !def
 
     &__close-btn {
         position: absolute;
-        top: -40px;
-        right: -8px;
+        top: -48px;
+        right: -16px;
+        background-color: $popup__close-button-bg;
+        border: $popup__close-button-border;
+
+        &:hover,
+        &:focus {
+            background-color: $popup__close-button-bg;
+        }
+    }
+
+    &__close-btn-icon {
+        fill: $popup__button-icon-fill;
+
+        &:hover,
+        &:focus {
+            fill: $popup__button-icon-fill--actiive;
+        }
     }
 }
