@@ -13,20 +13,19 @@ $radio__icon-transition   : $transition-base !default;
     position: relative;
     margin-bottom: $radio__margin;
 
-     &__fieldset {
-         border: 0;
-         padding: 0;
-         margin: 0;
-     }
+    &__fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
 
-     &__legend {
-         padding-bottom: $radio__vertical-gap;
-     }
+    &__legend {
+        padding-bottom: $radio__vertical-gap;
+    }
 
-     &__handler {
-         position: relative;
-     }
-
+    &__handler {
+        position: relative;
+    }
 
     &__field {
         position: absolute;
