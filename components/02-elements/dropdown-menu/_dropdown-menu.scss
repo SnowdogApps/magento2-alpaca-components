@@ -1,126 +1,105 @@
-$dropdown-menu__padding              : 15px !default;
-$dropdown-menu__background           : $gray-dark !default;
-$dropdown-menu__color                : $white !default;
-$dropdown-menu__box-shadow           : -5px 5px 7px 0 rgba(0, 0, 0, 0.2) !default;
-$dropdown-menu__transition           : $transition-base !default;
-$dropdown-menu__link-color           : $white !default;
+$mega-menu__margin                    : 0 !default;
+$mega-menu__font-color                : $font-color-base !default;
+$mega-menu__font-weight               : $font-weight-bold !default;
+$mega-menu__font-size                 : $font-size-base !default;
+$mega-menu__font-size--large          : 16px !default;
+$mega-menu__text-decoration           : none !default;
+$mega-menu__background-color          : $white !default;
+$mega-menu__container-background-color: $white !default;
+$mega-menu__justify-content           : center !default;
+$mega-menu__link-padding              : 12px $spacer--medium !default;
+$mega-menu__link-margin               : 0 $spacer--medium !default;
 
-// Inner list
-$dropdown-menu__inner-list-color     : $gray-dark !default;
-$dropdown-menu__inner-list-background: $white !default;
+$mega-menu__dropdown-padding          : 0 0 0 112px !default;
+$mega-menu__dropdown-box-shadow       : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
+$mega-menu__dropdown-background-color : $white !default;
+$mega-menu__dropdown-item-padding     : 68px $spacer--large 0 0 !default;
 
-// Icon
-$dropdown-menu__icon-top             : 15px !default;
-$dropdown-menu__icon-right           : 15px !default;
-$dropdown-menu__icon-width           : 20px !default;
-$dropdown-menu__icon-height          : 20px !default;
-$dropdown-menu__icon-fill            : $white !default;
-
-.dropdown-menu {
+.mega-menu {
     display: none;
+    background: $mega-menu__background-color;
+    color: $mega-menu__font-color;
     position: relative;
-    background: $dropdown-menu__background;
-    color: $dropdown-menu__color;
-
-    @include mq($screen-l) {
+    margin-bottom: $mega-menu__margin;
+    // tmp
+    border-bottom: 1px solid $gray;
+    @include mq($screen-m) {
         display: block;
     }
 
-    &__list {
+    &__wrapper {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: $mega-menu__justify-content;
         padding: 0;
         list-style: none;
+        background-color: $mega-menu__container-background-color;
     }
 
     &__item {
-        cursor: pointer;
-        padding: 0;
-
-        & > .dropdown-menu__link {
-            text-transform: uppercase;
-        }
-
         &--parent {
-            &:hover > .dropdown-menu__inner-list,
-            &:focus > .dropdown-menu__inner-list {
+            &:hover .mega-menu__dropdown--level1 {
                 display: flex;
-            }
-
-            .dropdown-menu__link {
-                position: relative;
-                padding-right: 45px;
             }
         }
     }
 
     &__link {
-        position: relative;
         display: block;
-        color: $dropdown-menu__link-color;
-        padding: $dropdown-menu__padding;
-        transition: $dropdown-menu__transition;
+        margin: $mega-menu__link-margin;
+        padding: $mega-menu__link-padding;
+        font-size: $mega-menu__font-size--large;
+        font-weight: $mega-menu__font-weight;
+        color: $mega-menu__font-color;
+        text-decoration: $mega-menu__text-decoration;
+
+        &:focus,
+        &:hover {
+            text-decoration: $mega-menu__text-decoration;
+        }
+
+        &--inner {
+            margin: 0;
+            padding: 0;
+            font-size: $mega-menu__font-size;
+            font-weight: normal;
+            &:focus,
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        &--inner-heading {
+            margin: 0 0 $spacer--medium;
+            padding: 0;
+            font-size: $mega-menu__font-size;
+        }
     }
 
-    &__inner-list {
-        position: absolute;
+    &__dropdown {
         display: none;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        width: 100%;
+        padding: $mega-menu__dropdown-padding;
+        background-color: $mega-menu__dropdown-background-color;
+        box-shadow: $mega-menu__dropdown-box-shadow;
+        position: absolute;
         top: 100%;
         left: 0;
-        margin: 0;
-        padding: 0;
         list-style: none;
-        line-height: 1.5;
-        color: $dropdown-menu__inner-list-color;
-        background: $dropdown-menu__inner-list-background;
         z-index: 2;
-
         @include mq($screen-l) {
             max-width: 850px;
             right: 0;
             margin: auto;
         }
 
-        &--level1 {
-            box-shadow: $dropdown-menu__box-shadow;
+        &-item {
+            flex: 1;
+            padding: $mega-menu__dropdown-item-padding;
+
+            &--image {
+                flex: 3;
+                padding: $mega-menu__dropdown-padding;
+            }
         }
-
-        &--level2 {
-            position: relative;
-            display: block;
-            top: 0;
-            padding: 10px 0 0 $dropdown-menu__padding;
-        }
-    }
-
-    &__inner-item {
-        flex: 1;
-
-        &--all {
-            display: none;
-        }
-
-        &--level1 {
-            position: relative;
-            padding: ($dropdown-menu__padding * 2) ($dropdown-menu__padding * 2) $dropdown-menu__padding;
-        }
-    }
-
-    &__inner-link {
-        display: block;
-        padding-bottom: $dropdown-menu__padding;
-    }
-
-    &__icon {
-        position: absolute;
-        top: $dropdown-menu__icon-top;
-        right: $dropdown-menu__icon-right;
-        width: $dropdown-menu__icon-width;
-        height: $dropdown-menu__icon-height;
-        fill: $dropdown-menu__icon-fill;
     }
 }

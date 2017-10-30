@@ -4,103 +4,149 @@ module.exports = {
   context: {
     list: [
       {
-        text: 'Exapmple dropdown',
+        class: 'mega-menu__item--parent',
+        text: 'Furniture',
         nestedList: [
           {
+            class: 'mega-menu__inner-list mega-menu__inner-list--level2',
             heading: 'Example',
             elements: [
               {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
-              },
-              {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               }
             ]
           },
           {
+            class: 'mega-menu__inner-list mega-menu__inner-list--level2',
             heading: 'Example',
             elements: [
               {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
-              },
-              {
-                text: 'Lorem ipsum'
+                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               }
             ]
           }
-        ]
+        ],
+        imageTitle: 'Lorem Ipsum',
+        secondImageTitle: 'lorem ipsum'
       },
       {
-        text: 'Example'
+        text: 'Accessories'
       },
       {
-        text: 'Example dropdown',
+        class: 'mega-menu__item--parent',
+        text: 'TBD',
         nestedList: [
           {
+            class: '',
             heading: 'Example',
             elements: [
               {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
-              },
-              {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               }
             ]
           },
           {
-            heading: 'Example',
+            class: '',
+            heading: 'Example1',
             elements: [
               {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
-                text: 'Lorem ipsum'
-              },
-              {
-                text: 'Lorem ipsum'
+                class: '',
+                text: 'Lorem ipsum',
+                elementLink: '#',
+                linkClass: 'mega-menu__link mega-menu__link--inner'
               }
             ]
           }
-        ]
+        ],
+        imageTitle: 'Lorem Ipsum',
+        secondImageTitle: 'lorem ipsum'
       },
       {
-        text: 'Example'
+        text: 'Sale'
       },
       {
-        text: 'Example'
+        text: 'World of'
       }
     ]
   }

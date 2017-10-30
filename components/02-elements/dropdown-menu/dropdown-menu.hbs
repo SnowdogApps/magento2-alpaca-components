@@ -1,36 +1,51 @@
-<div class="dropdown-menu">
-    <ul class="dropdown-menu__list container">
+<div class="mega-menu">
+    <ul class="mega-menu__wrapper container">
         {{#each list}}
-            <li class="dropdown-menu__item {{#if nestedList}}dropdown-menu__item--parent{{/if}}">
-                <a href="#" class="dropdown-menu__link">
+            <li class="mega-menu__item {{ class }}">
+                <a href="#" class="mega-menu__link mega-menu__link">
                     {{text}}
                 </a>
 
                 {{#if nestedList}}
-                    <ul class="dropdown-menu__inner-list dropdown-menu__inner-list--level1">
+                    <ul class="
+                            mega-menu__dropdown
+                            mega-menu__dropdown--level1
+                        "
+                    >
                         {{#each nestedList}}
-                            <li class="dropdown-menu__inner-item dropdown-menu__inner-item--level1 dropdown-menu__inner-item--parent
+                            <li class="
+                                    mega-menu__dropdown-item
+                                    mega-menu__dropdown-item--level1
                                     {{#if modifier}}
                                         {{modifier}}
                                     {{/if}}
                                 "
                             >
-                                {{> '@heading'
-                                    tag="h1"
-                                    class="heading heading--third-level dropdown-menu__nested-heading"
-                                    text=heading
+                                <a href="#"
+                                   class="
+                                       mega-menu__link
+                                       mega-menu__link--inner-heading
+                                   "
+                                >
+                                    {{ heading }}
+                                </a>
+
+                                {{> '@list--link'
+                                    listTag="ul"
+                                    elementTag="li"
                                 }}
-                                <ul class="dropdown-menu__inner-list dropdown-menu__inner-list--level2">
-                                    {{#each elements}}
-                                    <li class="dropdown-menu__inner-item dropdown-menu__inner-item--level2">
-                                        {{ text }}
-                                    </li>
-                                    {{/each}}
-                                </ul>
                             </li>
                         {{/each}}
-                        <li class="dropdown-menu__inner-item dropdown-menu__inner-item--level1">
-                            {{> '@image' dataSrc="/images/banner/banner-480_480.png" }}
+
+                        <li class="
+                                mega-menu__dropdown-item
+                                mega-menu__dropdown-item--image
+                            "
+                        >
+                            {{> '@image'
+                                src="/images/banner/banner-480_480.png"
+                                additionalClasses="mega-menu__image"
+                            }}
                         </li>
                     </ul>
                 {{/if}}
