@@ -1,8 +1,8 @@
 $select__dropdown-gap          : 4px !default;
-$select__dropdown-margin       : 12px !default;
+$select__dropdown-margin       : $spacer !default;
 $select__dropdown-padding      : $select__dropdown-margin * 2;
-$select__margin                : 10px !default;
-$select__padding               : 10px 15px !default;
+$select__margin                : $spacer !default;
+$select__padding               : $spacer $spacer--medium !default;
 $select__field-background      : $white !default;
 $select__list-border           : 1px solid $form-elements-border-color !default;
 $select__input-border-width    : 0 0 1px 0 !default;
@@ -27,6 +27,7 @@ $select__input-border-color    : $form-elements-border-color !default;
         position: relative;
         padding: $select__padding;
         cursor: pointer;
+        font-size: $font-size-base;
     }
 
     &__field-list {
