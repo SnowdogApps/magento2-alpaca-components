@@ -47,7 +47,6 @@ $newsletter__heading-gap              : $spacer--medium !default;
     }
     &__label {
         @include visually-hidden;
-
     }
     &__field {
         background: $newsletter__input-background;
