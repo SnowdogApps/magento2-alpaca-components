@@ -2,7 +2,7 @@ $spacer                     : 8px !default;
 $spacer--large              : 16px !default;
 $input__margin              : $spacer !default;
 $input__padding             : $spacer $spacer--large !default;
-$input__field-border        : 1px solid #d9d9d9 !default;
+$input__field-border        : 1px solid $form-elements-border-color !default;
 $input__field-border-radius : $form-elements-radius !default;
 $input__placeholder-color   : $gray-light !default;
 

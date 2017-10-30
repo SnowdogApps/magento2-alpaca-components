@@ -4,10 +4,10 @@ $select__dropdown-padding      : $select__dropdown-margin * 2;
 $select__margin                : 10px !default;
 $select__padding               : 10px 15px !default;
 $select__field-background      : $white !default;
-$select__list-border           : 1px solid #d9d9d9 !default;
+$select__list-border           : 1px solid $form-elements-border-color !default;
 $select__input-border-width    : 0 0 1px 0 !default;
 $select__input-border-style    : solid !default;
-$select__input-border-color    : #d9d9d9 !default;
+$select__input-border-color    : $form-elements-border-color !default;
 
 .select {
     margin-bottom: $select__margin;
