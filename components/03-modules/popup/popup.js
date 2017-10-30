@@ -1,15 +1,16 @@
 (function() {
 
   'use strict';
-  console.log('siedem');
   const popupsButtons = [...document.querySelectorAll('.popup-trigger')],
-        popupSelector = '.popup';
+        popupSelector = '.popup',
+        popupContentSelector = '.popup__content';
 
   class Popup {
     constructor(button, popup = popupSelector) {
       this.button = button;
       this.buttonId = button.dataset.popuptrigger;
       this.popup = document.querySelector(`${popupSelector}[data-popup=${this.buttonId}]`);
+      this.popupContent = this.popup.querySelector(popupContentSelector);
       this.active = 'popup--active';
       this.body = document.querySelector('body');
       this.closeButton = this.popup.querySelector('.popup__close-btn');
@@ -40,7 +41,7 @@
     show() {
       this.popup.classList.add(this.active);
       this.popup.open = true;
-      this.popup.focus();
+      this.popupContent.focus();
       this.position();
     }
 
