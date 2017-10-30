@@ -22,26 +22,25 @@ $select__input-border-color    : $form-elements-border-color !default;
             border: $select__list-border;
             appearance: none;
         }
+    }
+    &__field-item {
+        position: relative;
+        padding: $select__padding;
+        cursor: pointer;
+    }
 
-        &-item {
-            position: relative;
-            padding: $select__padding;
-            cursor: pointer;
+    &__field-list {
+        &--single {
+            border: $select__list-border;
+            display: inline-block;
+            padding: 0;
+            width: 100%;
+            border-radius: $form-elements-radius;
         }
+    }
 
-        &-list {
-            &--single {
-                border: $select__list-border;
-                display: inline-block;
-                padding: 0;
-                width: 100%;
-                border-radius: $form-elements-radius;
-            }
-        }
-
-        &-input:focus {
-            outline: none;
-        }
+    &__field-input:focus {
+        outline: none;
     }
 }
 // Choices.js lib styles overwrites
