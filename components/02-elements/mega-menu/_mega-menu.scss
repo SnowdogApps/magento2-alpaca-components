@@ -23,6 +23,7 @@ $mega-menu__dropdown-item-padding     : 68px $spacer--large 0 0 !default;
     margin-bottom: $mega-menu__margin;
     // tmp
     border-bottom: 1px solid $gray;
+    // end of tmp
     @include mq($screen-m) {
         display: block;
     }

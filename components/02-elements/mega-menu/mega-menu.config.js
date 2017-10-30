@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Dropdown menu',
+  title: 'Mega menu',
   collated: true,
   context: {
     list: [
