@@ -39,17 +39,8 @@ $select__input-border-color    : $form-elements-border-color !default;
             }
         }
 
-        &-input {
-            width: 100%;
-            display: block;
-            padding: $select__padding;
-            border-width: $select__input-border-width;
-            border-style: $select__input-border-style;
-            border-color: $select__input-border-color;
-
-            &:focus {
-                outline: none;
-            }
+        &-input:focus {
+            outline: none;
         }
     }
 }
