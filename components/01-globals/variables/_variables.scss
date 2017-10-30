@@ -36,15 +36,16 @@ $border-color-base          : $gray-dark !default;
 $border-width-base          : 1px !default;
 $border-style-base          : solid !default;
 
+$border-base           : $border-width-base $border-style-base $border-color-base !default;
+
 // Outline
 $outline-base               : none !default;
 
-$border-base                : $border-width-base $border-style-base $border-color-base !default;
-// Margin
-$margin-base                : 16px !default;
-
-// Padding
-$padding-base               : 16px !default;
+// Spacers
+$spacer                : 8px !default;
+$spacer--medium        : 16px !default;
+$spacer--large         : 32px !default;
+$spacer--extra-large   : 48px !default;
 
 // Typography
 $font-family-sans-serif     : "Montserrat", sans-serif !default;
