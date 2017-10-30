@@ -32,9 +32,7 @@ $select__input-border-color    : $form-elements-border-color !default;
     &__field-list {
         &--single {
             border: $select__list-border;
-            display: inline-block;
             padding: 0;
-            width: 100%;
             border-radius: $form-elements-radius;
         }
     }
