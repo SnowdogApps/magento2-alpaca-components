@@ -1,8 +1,6 @@
-$spacer: 8px !default;
-$spacer--large: 16px !default;
-
 $newsletter__font-size                : $font-size-base !default;
 $newsletter__font-size--agreements    : $font-size-small !default;
+$newsletter__field-border-radius      : 100px !default;
 $newsletter__checkbox-label-opacity   : 0.7 !default;
 $newsletter__line-height              : 1.2 !default;
 $newsletter__input-background         : #717171 !default;
@@ -11,17 +9,9 @@ $newsletter__input-color--placeholder : rgba(255, 255, 255, 0.7) !default;
 $newsletter__heading-color            : $white !default;
 $newsletter__controls-height          : 32px !default;
 $newsletter__checkbox-bg-color        : $white !default;
-$newsletter__heading-gap              : 28px !default;
-$newsletter__heading-gap--compact     : $spacer !default;
-$newsletter__heading-gap--horizontal  : 0 !default;
+$newsletter__heading-gap              : $spacer--medium !default;
 
 .newsletter {
-    @include mq($screen-m, $screen-l - 1) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
     &__heading {
         line-height: $newsletter__line-height;
         margin-right: 20px;
@@ -31,28 +21,12 @@ $newsletter__heading-gap--horizontal  : 0 !default;
         font-size: $newsletter__font-size;
         font-weight: $font-weight-bold;
         text-align: left;
-        margin-bottom: $newsletter__heading-gap--compact;
-        @mixin newsletter-medium() {
-            margin-bottom: $newsletter__heading-gap--horizontal;
-            width: 50%;
-        }
-        @include mq($screen-l) {
-            margin-bottom: $newsletter__heading-gap;
-        }
+        margin-bottom: $newsletter__heading-gap;
     }
     &__controls {
         position: relative;
         height: $newsletter__controls-height;
-        margin-bottom: $spacer--large;
-        @include mq($screen-m, $screen-l - 1) {
-            width: 50%;
-            text-align: right;
-            line-height: $newsletter__controls-height;
-            margin-bottom: $spacer;
-        }
-        @include mq($screen-l) {
-            margin-bottom: $spacer--large;
-        }
+        margin-bottom: $spacer--medium;
     }
     &__button {
         position: absolute;
@@ -77,10 +51,10 @@ $newsletter__heading-gap--horizontal  : 0 !default;
     }
     &__field {
         background: $newsletter__input-background;
-        padding: $spacer $spacer--large;
+        padding: $spacer $spacer--medium;
         margin: 0;
         border: none;
-        border-radius: 100px;
+        border-radius: $newsletter__field-border-radius;
         height: 32px;
         color: $newsletter__input-color;
         &::placeholder {
@@ -89,11 +63,6 @@ $newsletter__heading-gap--horizontal  : 0 !default;
     }
     &__agreements {
         margin-left: $spacer;
-        @include mq($screen-m, $screen-l - 1) {
-            width: 100%;
-            clear: both;
-            margin-left: 0;
-        }
     }
     // TODO: add {{class}} for checkbox html tags
     .checkbox__icon {
