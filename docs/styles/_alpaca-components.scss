@@ -16,6 +16,7 @@
 // Libs
 @import '../../components/01-globals/libs/normalize';
 @import '../../components/01-globals/libs/choices';
+@import '../../components/01-globals/libs/nouislider';
 
 // Typography
 @import '../../components/01-globals/_fonts/fonts';
@@ -46,6 +47,7 @@
 @import '../../components/02-elements/form/file-upload/file-upload';
 @import '../../components/02-elements/form/input/input';
 @import '../../components/02-elements/form/radio/radio';
+@import '../../components/02-elements/form/range/range';
 @import '../../components/02-elements/form/select/select';
 @import '../../components/02-elements/image/image';
 @import '../../components/02-elements/information/information';

@@ -1,0 +1,30 @@
+<div class="range-filter {{ class }}">
+    <div class="range-filter__slider {{ slider.lass }}"></div>
+    <div class="range-filter__inputs-wrapper {{ filter.wrapperClass }}">
+        <input class="range-filter__lower {{ filter.input.lowerClass }}"
+               type="{{ filter.input.type }}"
+               data-min="{{ filter.input.minValue }}"
+               value="{{ filter.input.minValue }}"
+        />
+        <span class="range-filter__dash">-</span>
+        <input class="range-filter__upper {{ filter.input.upperClass  }}"
+               type="{{ filter.input.type }}"
+               data-max="{{ filter.input.maxValue }}"
+               value="{{ filter.input.maxValue }}"
+       />
+    </div>
+    <button class="range-filter__button {{button.class}}" data-url="">
+        {{ button.label }}
+    </button>
+</div>
+
+<div class="range-filter {{ class }}">
+    <div class="range-filter__slider {{ slider.lass }}"></div>
+    <div class="range-filter__inputs-wrapper {{ filter.wrapperClass }}">
+        {{ render '@input' rangeInputLower }}
+        <span class="range-filter__dash">-</span>
+        {{ render '@input' rangeInputUpper }}
+    </div>
+    {[ render '@button' button }}
+</div>
+<script src="{{ static 'range.js' }}"></script>
