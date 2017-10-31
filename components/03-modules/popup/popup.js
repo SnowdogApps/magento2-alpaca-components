@@ -12,6 +12,7 @@
       this.popup = document.querySelector(`${popup}[data-popup=${this.buttonId}]`);
       this.popupContent = this.popup.querySelector(popupContentSelector);
       this.active = 'popup--active';
+      this.fullWidth = 'popup--full-width';
       this.body = document.querySelector('body');
       this.closeButton = this.popup.querySelector('.popup__close-button');
 
@@ -71,11 +72,11 @@
       const popupContentCoords = this.popup.getBoundingClientRect();
 
       if (window.matchMedia('(max-width: 480px)').matches) {
-        this.popup.classList.add('popup--full-width');
+        this.popup.classList.add(this.fullWidth);
         this.popup.style.setProperty('left', 0);
       }
       else if (popupContentCoords.right >= this.body.clientWidth) {
-        this.popup.classList.remove('popup--full-width');
+        this.popup.classList.remove(this.fullWidth);
         this.popup.style.setProperty('right', 0);
         this.popup.style.setProperty('left', 'auto');
       }
