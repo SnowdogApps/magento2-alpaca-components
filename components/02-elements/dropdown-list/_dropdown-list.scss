@@ -1,20 +1,20 @@
-$dropdown-list__width               : 100% !default;
-$dropdown-list__bg-color            : $white !default;
-$dropdown-list__item-color          : $font-color-base !default;
-$dropdown-list__item-color-active   : $color-primary !default;
-$dropdown-list__item-bg-color       : $white !default;
-$dropdown-list__item-bg-color-active: $black !default;
-$dropdown-list__item-bg-color-level2: $gray !default;
-$dropdown-list__icon-width          : 16px !default;
-$dropdown-list__icon-height         : 16px !default;
-$dropdown-list__icon-color          : $black !default;
-$dropdown-list__icon-color-active   : $color-primary !default;
-$dropdown-list__font-size           : $font-size-base !default;
-$dropdown-list__item-padding        : 16px !default;
-$dropdown-list__content-padding     : 16px !default;
-$dropdown-list__outline             : none !default;
-$dropdown-list__height-trasition    : height 0.3s !default;
-$dropdown-list__border-radius       : 0 !default;
+$dropdown-list__width                    : 100% !default;
+$dropdown-list__bg-color                 : $white !default;
+$dropdown-list__item-color               : $font-color-base !default;
+$dropdown-list__item-color-active        : $color-primary !default;
+$dropdown-list__item-bg-color            : $white !default;
+$dropdown-list__item-bg-color-active     : $black !default;
+$dropdown-list__item-bg-color-level2     : $gray !default;
+$dropdown-list__icon-width               : 16px !default;
+$dropdown-list__icon-height              : 16px !default;
+$dropdown-list__icon-color               : $black !default;
+$dropdown-list__icon-color-active        : $color-primary !default;
+$dropdown-list__font-size                : $font-size-base !default;
+$dropdown-list__item-padding             : 16px !default;
+$dropdown-list__content-padding          : 16px !default;
+$dropdown-list__outline                  : none !default;
+$dropdown-list__height-trasition         : height 0.3s !default;
+$dropdown-list__border-radius            : 0 !default;
 
 // nested list variables
 $dropdown-list__inner-item-bg-color      : $gray-dark !default;
@@ -22,7 +22,7 @@ $dropdown-list__inner-item-color         : $white !default;
 $dropdown-list__icon-color--inner        : $white !default;
 $dropdown-list__icon-color-active--inner : $white !default;
 $dropdown-list__inner-item-border        : 1px solid $white !default;
-$dropdown-list__inner-item-border--level2: 1px solid $gray-dark  !default;
+$dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
 .dropdown-list {
     width: $dropdown-list__width;
