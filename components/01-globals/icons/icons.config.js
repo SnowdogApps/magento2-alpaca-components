@@ -20,6 +20,8 @@ module.exports = {
       'edit',
       'linkedin',
       'loader',
+      'slider-next',
+      'slider-prev',
       'plus',
       'remove',
       'twitter'
