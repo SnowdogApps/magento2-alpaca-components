@@ -1,4 +1,4 @@
-(function() {
+(function() { //eslint-disable-line func-names
 
   'use strict';
   const popupsButtons = [...document.querySelectorAll('.popup-trigger')],
