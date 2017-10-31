@@ -6,14 +6,14 @@
 
   class Popup {
     constructor(button, popup = popupSelector) {
-      this.button = button;
-      this.buttonId = button.dataset.popuptrigger;
-      this.popup = document.querySelector(`${popup}[data-popup=${this.buttonId}]`);
+      this.active       = 'popup--active';
+      this.body         = document.querySelector('body');
+      this.button       = button;
+      this.buttonId     = button.dataset.popuptrigger;
+      this.fullWidth    = 'popup--full-width';
+      this.popup        = document.querySelector(`${popup}[data-popup=${this.buttonId}]`);
       this.popupContent = this.popup.querySelector('.popup__content');
-      this.active = 'popup--active';
-      this.fullWidth = 'popup--full-width';
-      this.body = document.querySelector('body');
-      this.closeButton = this.popup.querySelector('.popup__close-button');
+      this.closeButton  = this.popup.querySelector('.popup__close-button');
 
       this.button.addEventListener('click', (e) => {
         e.preventDefault();
