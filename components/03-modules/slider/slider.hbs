@@ -1,0 +1,27 @@
+<div class="slider {{ class }}" {{{ attributes }}}>
+    <div class="slider__handler">
+        <div class="slider__frame">
+            <div class="slider__slides">
+                {{#each products }}
+                    {{ render '@product' product }}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="slider__navigation">
+        <div class="slider__navigation-icon slider__navigation-icon--left slider__prev">
+            <svg title="{{ iconPrev }}" class="{{ iconClass }}">
+                <use xlink:href="{{ svg iconPrev }}"></use>
+            </svg>
+        </div>
+
+        <div class="slider__navigation-icon slider__navigation-icon--right slider__next">
+            <svg title="{{ iconNext }}" class="{{ iconClass }}">
+                <use xlink:href="{{ svg iconNext }}"></use>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<script src="{{static 'slider.js' }}"></script>
