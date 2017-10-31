@@ -1,7 +1,10 @@
 'use-strict'
+
 const dropdownItem      = document.querySelectorAll('.dropdown-list__item--parent .dropdown-list__label'),
       dropdownInnerItem = document.querySelectorAll('.dropdown-list__inner-item--parent .dropdown-list__inner-label'),
-      activeClass       = 'open';
+      activeClass       = 'open',
+      innerListLevel1 = '.dropdown-list__inner-list--level1',
+      innerListLevel2 = '.dropdown-list__inner-list--level2';
 
 function setListHeight(item) {
   return Array.from(item.children)
@@ -23,17 +26,17 @@ function setAriaAttributes(label, content, expanded) {
 function toggleSubmenu(item, inner) {
   const dropdownId = item.dataset.dropdown;
   let dropdownList = document
-    .querySelector(`.dropdown-list__inner-list--level1[data-dropdown="${dropdownId}"]`),
-      innerLists   = item.parentNode.querySelectorAll('.dropdown-list__inner-list--level2'),
+    .querySelector(`${innerListLevel1}[data-dropdown="${dropdownId}"]`),
+      innerLists   = item.parentNode.querySelectorAll(innerListLevel2),
       upperList    = null;
 
   if (inner) {
-    dropdownList = item.parentNode.querySelector(`.dropdown-list__inner-list--level2[data-dropdown="${dropdownId}"]`);
+    dropdownList = item.parentNode.querySelector(`${innerListLevel2}[data-dropdown="${dropdownId}"]`);
     innerLists = null;
-    upperList  = item.closest('.dropdown-list__inner-list--level1');
+    upperList  = item.closest(innerListLevel1);
   }
 
-  item.parentNode.classList.toggle('open');
+  item.parentNode.classList.toggle(activeClass);
 
   if (dropdownList && dropdownList.clientHeight > 0) {
     if (innerLists) {

@@ -1,6 +1,8 @@
 'use-strict'
+
 const dropdownItem = [ ...document.querySelectorAll('.dropdown-list__item--collapse .dropdown-list__label') ],
-      openClass = 'dropdown-list__item--open';
+      openClass = 'dropdown-list__item--open',
+      contentClass = 'dropdown-list__content';
 
 function setListHeight(item) {
   return Array.from(item.children)
@@ -22,7 +24,7 @@ function setAriaAttributes(label, content, expanded) {
 function toggleContent(item) {
   const dropdownId      = item.dataset.dropdown,
         dropdownItem    = item.parentNode,
-        dropdownContent = dropdownItem.querySelector(`.dropdown-list__content[data-content="${dropdownId}"]`);
+        dropdownContent = dropdownItem.querySelector(`.${contentClass}[data-content="${dropdownId}"]`);
 
   if (dropdownContent.clientHeight > 0) {
     dropdownContent.style.height = 0;
