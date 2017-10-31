@@ -51,9 +51,10 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         &--inner {
             width: $dropdown-list__icon-width;
             height: $dropdown-list__icon-width;
-            top: 20px;
+            top: 0;
+            bottom: 0;
             fill: $dropdown-list__icon-color--inner;
-            margin: 0;
+            margin: auto 0;
         }
     }
 
@@ -155,6 +156,7 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
     &__inner-label {
         display: block;
+        position: relative;
         text-decoration: none;
         padding: $dropdown-list__item-padding;
         color: $dropdown-list__inner-item-color;
