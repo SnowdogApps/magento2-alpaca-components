@@ -2,15 +2,14 @@
 
   'use strict';
   const popupsButtons = [...document.querySelectorAll('.popup-trigger')],
-        popupSelector = '.popup',
-        popupContentSelector = '.popup__content';
+        popupSelector = '.popup';
 
   class Popup {
     constructor(button, popup = popupSelector) {
       this.button = button;
       this.buttonId = button.dataset.popuptrigger;
       this.popup = document.querySelector(`${popup}[data-popup=${this.buttonId}]`);
-      this.popupContent = this.popup.querySelector(popupContentSelector);
+      this.popupContent = this.popup.querySelector('.popup__content');
       this.active = 'popup--active';
       this.fullWidth = 'popup--full-width';
       this.body = document.querySelector('body');
