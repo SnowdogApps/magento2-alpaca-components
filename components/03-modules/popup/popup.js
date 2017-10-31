@@ -13,7 +13,7 @@
       this.popupContent = this.popup.querySelector(popupContentSelector);
       this.active = 'popup--active';
       this.body = document.querySelector('body');
-      this.closeButton = this.popup.querySelector('.popup__close-btn');
+      this.closeButton = this.popup.querySelector('.popup__close-button');
 
       this.button.addEventListener('click', (e) => {
         e.preventDefault();

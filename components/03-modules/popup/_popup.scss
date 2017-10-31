@@ -38,7 +38,7 @@ $popup__margin                   : 0 !default;
         margin-top: $popup__content-top-margin;
     }
 
-    &__close-btn {
+    &__close-button {
         position: absolute;
         top: -48px;
         right: -16px;
@@ -51,7 +51,7 @@ $popup__margin                   : 0 !default;
         }
     }
 
-    &__close-btn-icon {
+    &__close-button-icon {
         fill: $popup__button-icon-fill;
 
         &:hover,
