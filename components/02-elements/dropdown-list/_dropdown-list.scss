@@ -71,10 +71,11 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
             & > .dropdown-list__label {
                 color: $dropdown-list__item-color-active;
                 background-color: $dropdown-list__item-bg-color-active;
-            }
-            .dropdown-list__icon:not(.dropdown-list__icon--inner) {
-                fill: $dropdown-list__icon-color-active;
-                transform: rotate(180deg);
+
+                & > .dropdown-list__icon {
+                    fill: $dropdown-list__icon-color-active;
+                    transform: rotate(180deg);
+                }
             }
         }
 
