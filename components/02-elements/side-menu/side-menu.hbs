@@ -1,10 +1,23 @@
 <div class="side-menu {{ class }}">
-    {{> '@list' list }}
+    <ul>
+        {{#each list}}
+            <li>
+                <a href="#" class="side-menu__link link">
+                    {{ text }}
+                </a>
+                {{#if nestedList}}
+                    <ul>
+                        {{#each nestedList  as |item| }}
+                            <li>
+                                <a href="">
+                                    {{ item.text }}
+                                </a>
+                            </li>
+                        {{/each}}
+                    </ul>
 
-    <a href="#" class="side-menu__link link">
-        Example
-    </a>
-    <a href="#" class="side-menu__link link">
-        Sign in
-    </a>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
 </div>

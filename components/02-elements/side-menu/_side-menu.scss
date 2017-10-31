@@ -11,7 +11,8 @@ $side-menu__link-color-hover: $gray !default;
 
 .side-menu {
     position: absolute;
-    top: $side-menu__top;
+    // top: $side-menu__top;
+    top: 10px;
     left: $side-menu__left;
     width: $side-menu__width;
     padding: $side-menu__padding;
@@ -19,17 +20,21 @@ $side-menu__link-color-hover: $gray !default;
     background: $side-menu__background;
     box-shadow: $side-menu__box-shadow;
     text-transform: uppercase;
-    opacity: 0;
+    opacity: 1;
     transition: $side-menu__transition;
 
-    @include mq($screen-l) {
-        display: none;
-    }
+    // @include mq($screen-l) {
+    //     display: none;
+    // }
 
     &--is-open {
         opacity: 1;
         transform: $side-menu__transform--open;
     }
+
+    // tmp
+    opacity: 1;
+    transform: $side-menu__transform--open;
 
     &__link {
         display: block;
