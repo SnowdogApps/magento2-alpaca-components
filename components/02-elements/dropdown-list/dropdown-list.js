@@ -1,7 +1,7 @@
 'use-strict'
 
 const dropdownItem = [ ...document.querySelectorAll('.dropdown-list__item--collapse .dropdown-list__label') ],
-      openClass = 'dropdown-list__item--open',
+      openClass    = 'dropdown-list__item--open',
       contentClass = 'dropdown-list__content';
 
 function setListHeight(item) {

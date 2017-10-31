@@ -3,8 +3,8 @@
 const dropdownItem      = document.querySelectorAll('.dropdown-list__item--parent .dropdown-list__label'),
       dropdownInnerItem = document.querySelectorAll('.dropdown-list__inner-item--parent .dropdown-list__inner-label'),
       activeClass       = 'open',
-      innerListLevel1 = '.dropdown-list__inner-list--level1',
-      innerListLevel2 = '.dropdown-list__inner-list--level2';
+      innerListLevel1   = '.dropdown-list__inner-list--level1',
+      innerListLevel2   = '.dropdown-list__inner-list--level2';
 
 function setListHeight(item) {
   return Array.from(item.children)
