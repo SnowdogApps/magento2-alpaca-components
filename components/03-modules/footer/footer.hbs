@@ -1,5 +1,16 @@
 <footer class="footer">
     <div class="container">
-        Footer
+        <section class="footer__bottom-bar">
+            <div class="footer__social-handler">
+                <span class="footer__social-list-subtitle">
+                    {{ socialListSubtitle }}
+                </span>
+                {{ render '@list--icon' socialIconList }}
+            </div>
+            <small class="footer__copyright">
+                {{ copyrightText }}
+            </small>
+        </section>
+
     </div>
 </footer>
