@@ -16,7 +16,7 @@ $newsletter__heading-gap              : $spacer--medium !default;
         line-height: $newsletter__line-height;
         margin-right: 20px;
         color: $newsletter__heading-color;
-        font-family: $font-family-sans-serif;
+        font-family: $font-family-base;
         height: auto;
         font-size: $newsletter__font-size;
         font-weight: $font-weight-bold;
@@ -33,7 +33,7 @@ $newsletter__heading-gap              : $spacer--medium !default;
         top: 0;
         right: 0;
         height: $newsletter__controls-height;
-        border-radius: 100px;
+        border-radius: $newsletter__field-border-radius;
         padding-left: 21px;
         padding-right: 21px;
         &:hover,
