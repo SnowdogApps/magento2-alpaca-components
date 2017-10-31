@@ -61,9 +61,26 @@
     }
 
     position() {
-      const buttonCoords = this.button.getBoundingClientRect();
-      this.popup.style.setProperty('top', `${buttonCoords.height + buttonCoords.top}px`, '');
-      this.popup.style.setProperty('left', `${buttonCoords.left}px`);
+      const buttonCoords = this.button.getBoundingClientRect(),
+            buttonTop    = buttonCoords.height + buttonCoords.top,
+            popupHeight  = this.popup.offsetHeight;
+      if ((window.innerHeight - buttonTop) < popupHeight ) {
+        const popupTop = ((buttonCoords.top - popupHeight) > popupHeight) ? buttonCoords.top - popupHeight : 0;
+        this.popup.style.setProperty('top', `${popupTop}px`);
+      }
+      else {
+        this.popup.style.setProperty('top', `${buttonTop}px`);
+      }
+
+      if (buttonCoords.left > 0 && this.popup.offsetWidth > this.button.offsetWidth) {
+        let leftPos = buttonCoords.left - ((this.popup.offsetWidth - this.button.offsetWidth) / 2);
+        leftPos = (leftPos < 0) ? 0 : leftPos;
+        this.popup.style.setProperty('left', `${leftPos}px`);
+      }
+      else {
+        this.popup.style.setProperty('left', `${buttonCoords.left}px`);
+      }
+
       this.isOutOfscreen();
     }
 

@@ -15,7 +15,7 @@ $popup__margin                   : 0 !default;
 
 .popup {
     display: none;
-    position: absolute;
+    position: fixed;
     width: $popup__width;
     max-width: $popup__max-width;
     padding: $popup__padding;
