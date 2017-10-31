@@ -62,8 +62,8 @@
 
     position() {
       const buttonCoords = this.button.getBoundingClientRect();
-      this.popup.style.setProperty('top', `${buttonCoords.height}px`, '');
-      this.popup.style.setProperty('left', `${buttonCoords.left}px`, '');
+      this.popup.style.setProperty('top', `${buttonCoords.height + buttonCoords.top}px`, '');
+      this.popup.style.setProperty('left', `${buttonCoords.left}px`);
       this.isOutOfscreen();
     }
 
@@ -71,15 +71,13 @@
       const popupContentCoords = this.popup.getBoundingClientRect();
 
       if (window.matchMedia('(max-width: 480px)').matches) {
-        const calcLeft = this.button.getBoundingClientRect().left * -1;
-
         this.popup.classList.add('popup--full-width');
-        this.popup.style.setProperty('left', `${calcLeft}px`, '');
+        this.popup.style.setProperty('left', 0);
       }
       else if (popupContentCoords.right >= this.body.clientWidth) {
         this.popup.classList.remove('popup--full-width');
-        this.popup.style.setProperty('right', '0', '');
-        this.popup.style.setProperty('left', 'auto', '');
+        this.popup.style.setProperty('right', 0);
+        this.popup.style.setProperty('left', 'auto');
       }
     }
 
