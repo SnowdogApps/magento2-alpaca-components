@@ -1,5 +1,4 @@
 $dropdown-list__width               : 100% !default;
-$dropdown-list__max-fold-width      : 320px !default;
 $dropdown-list__bg-color            : $white !default;
 $dropdown-list__item-color          : $font-color-base !default;
 $dropdown-list__item-color-active   : $color-primary !default;
@@ -29,10 +28,6 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark  !default;
     width: $dropdown-list__width;
     position: relative;
     background-color: $dropdown-list__bg-color;
-
-    @include mq($screen-l) {
-        max-width: $dropdown-list__max-fold-width;
-    }
 
     &__list {
         display: block;
