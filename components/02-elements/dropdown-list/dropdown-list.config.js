@@ -44,12 +44,6 @@ module.exports = {
   },
   variants: [
     {
-      name: 'middle-screen-inline',
-      context: {
-        class: 'dropdown-list--middle-inline'
-      }
-    },
-    {
       name: 'with-nested',
       context: {
         class: 'dropdown-list--with-nested',

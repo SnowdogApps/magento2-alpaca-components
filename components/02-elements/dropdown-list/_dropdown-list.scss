@@ -167,26 +167,4 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
             text-decoration: none;
         }
     }
-
-    &--middle-inline {
-        .dropdown-list__list {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                align-items: flex-start;
-            }
-        }
-
-        .dropdown-list__item {
-            flex-basis: 24%;
-        }
-
-        .dropdown-list__content {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-                position: absolute;
-                background-color: $dropdown-list__bg-color;
-            }
-        }
-    }
 }
