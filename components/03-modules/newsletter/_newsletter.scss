@@ -1,21 +1,19 @@
-$newsletter__font-size                : $font-size-base !default;
-$newsletter__font-size--agreements    : $font-size-small !default;
-$newsletter__field-border-radius      : 32px !default;
-
-$newsletter__line-height              : 1.2 !default;
-$newsletter__input-background         : #717171 !default;
-$newsletter__input-color              : $white !default;
-$newsletter__input-color--placeholder : rgba(255, 255, 255, 0.7) !default;
-$newsletter__heading-color            : $white !default;
-$newsletter__controls-height          : 32px !default;
-$newsletter__heading-gap              : $spacer--medium !default;
-
-$newsletter__checkbox-bg-color        : $white !default;
-$newsletter__checkbox-label-opacity   : 0.7 !default;
+$newsletter__font-size                  : $font-size-base !default;
+$newsletter__font-size--agreements      : $font-size-small !default;
+$newsletter__field-border-radius        : 32px !default;
+$newsletter__line-height                : 1.2 !default;
+$newsletter__input-background           : #717171 !default;
+$newsletter__input-color                : $white !default;
+$newsletter__input-color--placeholder   : rgba(255, 255, 255, 0.7) !default;
+$newsletter__heading-color              : $white !default;
+$newsletter__controls-height            : 32px !default;
+$newsletter__heading-gap                : $spacer--medium !default;
+$newsletter__checkbox-bg-color          : $white !default;
+$newsletter__checkbox-label-opacity     : 0.7 !default;
 $newsletter__checkbox-label-padding-left: 24px !default;
-$newsletter__checkbox-label-line-height: $font-line-height !default;
+$newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
-$newsletter__checkbox-icon-size: 15px !default;
+$newsletter__checkbox-icon-size         : 15px !default;
 
 .newsletter {
     &__heading {
