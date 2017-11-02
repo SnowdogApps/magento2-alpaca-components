@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     linkList: {
-      class: 'footer__links-list',
+      class: 'dropdown-list--wide-open dropdown-list--dark',
       dropdowns: [
         {
           itemTag: 'button',

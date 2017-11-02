@@ -50,6 +50,12 @@ module.exports = {
       }
     },
     {
+      name: 'dark',
+      context: {
+        class: 'dropdown-list--dark'
+      }
+    },
+    {
       name: 'with-nested',
       context: {
         class: 'dropdown-list--with-nested',
