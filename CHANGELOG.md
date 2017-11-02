@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
+ - update dropdown-list component
  - Variables in password strength element
+ - Update popup component
 
 ## [0.2.0] - 28.10.2017
 ### Added
