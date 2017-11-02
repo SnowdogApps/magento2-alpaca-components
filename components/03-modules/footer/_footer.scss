@@ -18,38 +18,38 @@ $footer__bottom-bar-font-size: $font-size-small !default;
         margin: 0;
     }
 
-    &__list {
+    &__links-list {
         padding: 16px 0;
-    }
 
-    &__list-link {
-        position: relative;
-        color: $footer__font-color;
-        text-decoration: none;
-        display: inline-block;
-        transition: $transition-base;
-
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            height: $footer__link-hover-underline-height;
-            background-color: $footer__link-hover-underline-color;
-            opacity: $footer__link-hover-underline-opacity;
-            width: 100%;
-            transition: $transition-base;
-            transform: scale(0);
-            transform-origin: left center;
-        }
-
-        &:hover,
-        &:focus {
+        .link {
+            position: relative;
             color: $footer__font-color;
-            font-weight: $font-weight-bold;
             text-decoration: none;
+            display: inline-block;
+            transition: $transition-base;
 
             &:after {
-                transform: scale(1);
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                height: $footer__link-hover-underline-height;
+                background-color: $footer__link-hover-underline-color;
+                opacity: $footer__link-hover-underline-opacity;
+                width: 100%;
+                transition: $transition-base;
+                transform: scale(0);
+                transform-origin: left center;
+            }
+
+            &:hover,
+            &:focus {
+                color: $footer__font-color;
+                font-weight: $font-weight-bold;
+                text-decoration: none;
+
+                &:after {
+                    transform: scale(1);
+                }
             }
         }
     }
@@ -76,10 +76,6 @@ $footer__bottom-bar-font-size: $font-size-small !default;
         }
     }
 
-    &__social-list {
-        justify-content: center;
-    }
-
     &__social-list-subtitle {
         display: none;
         @include mq($screen-m) {
@@ -87,10 +83,6 @@ $footer__bottom-bar-font-size: $font-size-small !default;
             margin-right: $footer__padding;
             font-size: $footer__bottom-bar-font-size;
         }
-    }
-
-    &__social-icon {
-        fill: $footer__social-icon-color;
     }
 
     &__copyright {

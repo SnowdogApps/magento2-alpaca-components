@@ -4,6 +4,8 @@ $list__padding            : 0 !default;
 $list__item-padding       : 5px 0 !default;
 $list__content-padding    : 10px !default;
 $list__label-padding      : 0 5px 5px 0 !default;
+$list__icon-color: $white !default;
+$list__item-bg-color--with-icon: $gray-darker !default;
 
 // Horizontal
 $list__padding--horizontal: 10px !default;
@@ -64,10 +66,13 @@ $list__border--divider    : 1px solid $gray-dark !default;
     }
 
     &--with-icon {
+        justify-content: center;
+
         .list__item {
             display: flex;
             align-items: center;
             padding: 0;
+            background-color: $list__item-bg-color--with-icon;
 
             &:first-child {
                 padding-top: 0;
@@ -80,6 +85,7 @@ $list__border--divider    : 1px solid $gray-dark !default;
             padding: $list__padding--horizontal;
         }
         .list__icon {
+            fill: $list__icon-color;
             width: $list__icon-size--icon;
             height: $list__icon-size--icon;
         }

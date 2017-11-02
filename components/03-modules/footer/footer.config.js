@@ -13,32 +13,27 @@ module.exports = {
           contentContext: {
             listTag: 'ul',
             elementTag: 'li',
-            class: 'footer__list',
+            class: 'footer__links-list',
             elements: [
               {
                 text: 'Contact',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Frequently asked questions (FAQ)',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'How to buy',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Track your package',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Guides',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               }
             ]
           }
@@ -53,27 +48,23 @@ module.exports = {
           contentContext: {
             listTag: 'ul',
             elementTag: 'li',
-            class: 'footer__list',
+            class: 'footer__links-list',
             elements: [
               {
                 text: 'Delivery time',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Payments',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Delivery cost',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Returns and exchanges',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               }
             ]
           }
@@ -88,27 +79,23 @@ module.exports = {
           contentContext: {
             listTag: 'ul',
             elementTag: 'li',
-            class: 'footer__list',
+            class: 'footer__links-list',
             elements: [
               {
                 text: '30 days for return',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Guarantee',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: '454 Brands',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Discounts',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               }
             ]
           }
@@ -123,32 +110,27 @@ module.exports = {
           contentContext: {
             listTag: 'ul',
             elementTag: 'li',
-            class: 'footer__list',
+            class: 'footer__links-list',
             elements: [
               {
                 text: 'About us',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Certificates and safety',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Prizes and customer feedback',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Cookie policy',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               },
               {
                 text: 'Regulations',
-                link: '#',
-                linkClass: 'footer__list-link'
+                link: '#'
               }
             ]
           }
