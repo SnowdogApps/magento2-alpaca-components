@@ -1,4 +1,4 @@
-$table__padding                  : 15px !default;
+$table__padding                  : $spacer--medium !default;
 $table__color                    : $black !default;
 $table__background               : $white !default;
 $table__font-size                : $font-size-small !default;
@@ -8,7 +8,7 @@ $table__th-background            : $gray-lightest !default;
 $table__td-background            : $white !default;
 $table__tfoot-background         : $gray-lightest !default;
 $table__background-odd--odd-even : $white !default;
-$table__background-even--odd-even: $gray-lightest !default;
+$table__background-even--odd-even: #f9f9f9 !default;
 
 .table {
     width: 100%;
