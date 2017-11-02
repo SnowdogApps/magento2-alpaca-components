@@ -1,5 +1,6 @@
 $newsletter__font-size                  : $font-size-base !default;
 $newsletter__font-size--agreements      : $font-size-small !default;
+$newsletter__field-height               : 32px !default;
 $newsletter__field-border-radius        : 32px !default;
 $newsletter__line-height                : 1.2 !default;
 $newsletter__input-background           : #717171 !default;
@@ -14,6 +15,7 @@ $newsletter__checkbox-label-padding-left: 24px !default;
 $newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
 $newsletter__checkbox-icon-size         : 15px !default;
+$newsleetr__checkbox-icon-position-top  : 0 !default;
 
 .newsletter {
     &__heading {
@@ -57,7 +59,7 @@ $newsletter__checkbox-icon-size         : 15px !default;
         margin: 0;
         border: none;
         border-radius: $newsletter__field-border-radius;
-        height: 32px;
+        height: $newsletter__field-height;
         color: $newsletter__input-color;
         &::placeholder {
             color: $newsletter__input-color--placeholder;
@@ -67,7 +69,7 @@ $newsletter__checkbox-icon-size         : 15px !default;
         margin-left: $spacer;
     }
     .checkbox__icon {
-        top: 0;
+        top: $newsleetr__checkbox-icon-position-top;
         left: 0;
         border-radius: $newsletter__checkbox-icon-border-radius;
     }
@@ -85,7 +87,7 @@ $newsletter__checkbox-icon-size         : 15px !default;
         padding-left: $newsletter__checkbox-label-padding-left;
         color: rgba(201, 201, 201, $newsletter__checkbox-label-opacity);
         &:before {
-            top: 0; // to align with label, depends on line-height of label
+            top: $newsleetr__checkbox-icon-position-top; // to align with label, depends on line-height of label
             width: $newsletter__checkbox-icon-size;
             height: $newsletter__checkbox-icon-size;
             border: none;
