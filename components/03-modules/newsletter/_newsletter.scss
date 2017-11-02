@@ -1,22 +1,27 @@
 $newsletter__font-size                : $font-size-base !default;
 $newsletter__font-size--agreements    : $font-size-small !default;
-$newsletter__field-border-radius      : 100px !default;
-$newsletter__checkbox-label-opacity   : 0.7 !default;
+$newsletter__field-border-radius      : 32px !default;
+
 $newsletter__line-height              : 1.2 !default;
 $newsletter__input-background         : #717171 !default;
 $newsletter__input-color              : $white !default;
 $newsletter__input-color--placeholder : rgba(255, 255, 255, 0.7) !default;
 $newsletter__heading-color            : $white !default;
 $newsletter__controls-height          : 32px !default;
-$newsletter__checkbox-bg-color        : $white !default;
 $newsletter__heading-gap              : $spacer--medium !default;
+
+$newsletter__checkbox-bg-color        : $white !default;
+$newsletter__checkbox-label-opacity   : 0.7 !default;
+$newsletter__checkbox-label-padding-left: 24px !default;
+$newsletter__checkbox-label-line-height: $font-line-height !default;
+$newsletter__checkbox-icon-border-radius: 2px !default;
+$newsletter__checkbox-icon-size: 15px !default;
 
 .newsletter {
     &__heading {
         line-height: $newsletter__line-height;
         margin-right: 20px;
         color: $newsletter__heading-color;
-        font-family: $font-family-base;
         height: auto;
         font-size: $newsletter__font-size;
         font-weight: $font-weight-bold;
@@ -63,11 +68,10 @@ $newsletter__heading-gap              : $spacer--medium !default;
     &__agreements {
         margin-left: $spacer;
     }
-    // TODO: add {{class}} for checkbox html tags
     .checkbox__icon {
         top: 0;
         left: 0;
-        border-radius: 2px;
+        border-radius: $newsletter__checkbox-icon-border-radius;
     }
     .checkbox__field {
         &:checked ~ .checkbox__label:before {
@@ -77,16 +81,15 @@ $newsletter__heading-gap              : $spacer--medium !default;
     .checkbox__label {
         width: 100%;
         opacity: 1;
-        font-family: $font-family-sans-serif;
         font-size: $newsletter__font-size--agreements;
-        line-height: 1.6;
+        line-height: $newsletter__checkbox-label-line-height;
         text-align: left;
-        padding-left: 24px;
+        padding-left: $newsletter__checkbox-label-padding-left;
         color: rgba(201, 201, 201, $newsletter__checkbox-label-opacity);
         &:before {
-            top: 4px; // to align with label, depends on line-height of label
-            width: 15px;
-            height: 15px;
+            top: 0; // to align with label, depends on line-height of label
+            width: $newsletter__checkbox-icon-size;
+            height: $newsletter__checkbox-icon-size;
             border: none;
             background: $newsletter__checkbox-bg-color;
         }
