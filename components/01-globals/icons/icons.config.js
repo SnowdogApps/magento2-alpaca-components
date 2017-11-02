@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Icons',
+  preview: '@docs-only-styles',
   context: {
     icons: [
       'angle-down',

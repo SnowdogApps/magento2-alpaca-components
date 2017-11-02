@@ -1,5 +1,5 @@
 {
-  "name": "snowdog-frontend-components",
+  "name": "alpaca-components",
   "scripts": {
     "postinstall": "gulp fractal:build --ci"
   },
