@@ -14,7 +14,7 @@ module.exports = {
         title: 'dropdown title',
         id: 'dropdown-1',
         collapse: true,
-        contentElement: 'button'
+        contentElement: 'image'
       },
       {
         itemTag: 'button',
@@ -22,7 +22,7 @@ module.exports = {
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
         collapse: true,
-        contentElement: 'button'
+        contentElement: 'paragraph'
       },
       {
         itemTag: 'button',
@@ -30,7 +30,7 @@ module.exports = {
         title: 'dropdown title',
         id: 'dropdown-3',
         collapse: true,
-        contentElement: 'button'
+        contentElement: 'image'
       },
       {
         itemTag: 'button',
@@ -38,11 +38,17 @@ module.exports = {
         title: 'dropdown title',
         id: 'dropdown-4',
         collapse: true,
-        contentElement: 'button'
+        contentElement: 'paragraph'
       }
     ]
   },
   variants: [
+    {
+      name: 'wide-screen-open',
+      context: {
+        class: 'dropdown-list--wide-open',
+      }
+    },
     {
       name: 'with-nested',
       context: {

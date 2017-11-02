@@ -29,6 +29,36 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
     position: relative;
     background-color: $dropdown-list__bg-color;
 
+    &--wide-open {
+        @include mq($screen-m) {
+            .dropdown-list__list {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+
+            .dropdown-list__item {
+                width: auto;
+                min-width: 10%;
+                max-width: 30%;
+                cursor: default;
+            }
+
+            .dropdown-list__label {
+                cursor: default;
+            }
+
+            .dropdown-list__icon {
+                display: none;
+            }
+
+            .dropdown-list__content {
+                height: auto;
+            }
+        }
+
+
+    }
+
     &__list {
         display: block;
         width: $dropdown-list__width;
