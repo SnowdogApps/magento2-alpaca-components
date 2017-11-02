@@ -27,7 +27,7 @@
                          data-content="{{ id }}"
                          aria-hidden="true"
                     >
-                        {{{ contentElement }}}
+                        {{ render (component contentElement) contentContext }}
                     </div>
                 {{/if}}
             </li>
