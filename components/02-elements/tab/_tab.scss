@@ -5,7 +5,7 @@ $tab__title-padding                     : $spacer--medium !default;
 $tab__title-border                      : $tab__border-width solid $gray-light !default;
 $tab__title-border--active              : $tab__border-width solid $color-primary !default;
 $tab__title-border--mobile              : $tab__border-width--mobile solid $gray-light !default;
-$tab__title-color                       : $color-secondary!default;
+$tab__title-color                       : $color-secondary !default;
 $tab__title-color-mobile-active         : $color-primary !default;
 $tab__title-font-weight                 : $font-weight-normal !default;
 $tab__title-font-weight--mobile         : $font-weight-bold !default;
@@ -33,6 +33,7 @@ $tab__content-padding--mobile           : $spacer--medium $spacer--large !defaul
 
         &:nth-last-child(2) {
             border-bottom: $tab__title-border--mobile;
+
             @include mq($screen-l) {
                 border-bottom: $tab__title-border;
             }
@@ -54,6 +55,7 @@ $tab__content-padding--mobile           : $spacer--medium $spacer--large !defaul
 
             &:nth-last-child(2) {
                 border: none;
+
                 @include mq($screen-l) {
                     border-bottom: $tab__title-border--active;
                 }
@@ -67,6 +69,7 @@ $tab__content-padding--mobile           : $spacer--medium $spacer--large !defaul
             }
             .tab__icon {
                 transform: translateY(-50%)rotateX(180deg);
+
                 svg {
                     fill: $color-primary;
                 }
@@ -82,7 +85,6 @@ $tab__content-padding--mobile           : $spacer--medium $spacer--large !defaul
         z-index: -1;
         opacity: 0;
         overflow: hidden;
-
 
         @include mq($screen-l) {
             padding: $tab__content-padding;
@@ -115,6 +117,7 @@ $tab__content-padding--mobile           : $spacer--medium $spacer--large !defaul
         @include mq($screen-l) {
             display: none;
         }
+
         svg {
             width: 14px;
             height: 14px;
