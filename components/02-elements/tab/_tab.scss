@@ -1,54 +1,68 @@
-// todo od czego zaczac - paddingi w mobilnym widoku (paragraf)
-// todo na mobilnym wydaje sie ze title ma zly padding
-$tab__margin                         : 10px !default;
-$tab__border-width                   : 8px !default;
+$tab__border-width                      : 8px !default;
+$tab__border-width--mobile              : 1px !default;
 // title
-$tab__title-padding                  : $padding-base !default;
-$tab__title-border-bottom            : $tab__border-width solid rgba(255,255,255,0) !default;
-$tab__title-border-bottom--active    : $tab__border-width solid $color-primary !default;
-$tab__title-color                    : $color-secondary!default;
-$tab__title-color-mobile             : $color-secondary !default;
-$tab__title-color-mobile-active      : $color-primary !default;
-$tab__title-font-weight              : $font-weight-normal !default;
-$tab__title-font-weight--mobile      : $font-weight-bold !default;
-$tab__title-font-weight--active      : $font-weight-bold !default;
-$tab__title-background               : $bg-color-base !default;
-$tab__title-background--active       : $gray-light !default;
-$tab__title-background--mobile-active: $bg-color-dark !default;
+$tab__title-padding                     : $spacer--medium !default;
+$tab__title-border                      : $tab__border-width solid $gray-light !default;
+$tab__title-border--active              : $tab__border-width solid $color-primary !default;
+$tab__title-border--mobile              : $tab__border-width--mobile solid $gray-light !default;
+$tab__title-color                       : $color-secondary!default;
+$tab__title-color-mobile-active         : $color-primary !default;
+$tab__title-font-weight                 : $font-weight-normal !default;
+$tab__title-font-weight--mobile         : $font-weight-bold !default;
+$tab__title-font-weight--active         : $font-weight-bold !default;
+$tab__title-background                  : $bg-color-base !default;
+$tab__title-background--active          : $gray-light !default;
+$tab__title-background--mobile-active   : $color-secondary !default;
 // content
-$tab__content-padding                : 10px !default;
-$tab__content-border-top             : $tab__border-width solid $tab__title-background--active !default;
-$tab__content-transition             : opacity 0.5s !default;
+$tab__content-padding                   : $spacer--large $spacer--extra-large !default;
+$tab__content-padding--mobile           : $spacer--medium $spacer--large !default;
+$tab__content-transition                : opacity 0.5s !default;
 
 .tab {
     @include mq($screen-l) {
         display: flex;
         flex-flow: row wrap;
     }
-
     &__title {
         position: relative;
         padding: $tab__title-padding;
-        border-bottom: $tab__title-border-bottom;
+        border-top: $tab__title-border--mobile;
         background: $tab__title-background;
-        font-weight: $tab__title-font-weight--mobile;
-        color: $tab__title-color-mobile;
-        cursor: pointer;
         text-align: center;
+        font-weight: $tab__title-font-weight--mobile;
+        color: $tab__title-color;
+        cursor: pointer;
+
+        &:nth-last-child(2) {
+            border-bottom: $tab__title-border--mobile;
+            @include mq($screen-l) {
+                border-bottom: $tab__border-width solid transparent;
+            }
+        }
 
         @include mq($screen-l) {
-            flex-basis: 25%;
+            flex: 1;
             order: -1;
-            color: $tab__title-color;
+            border-top: none;
+            border-bottom : $tab__border-width solid transparent;
             font-weight: $tab__title-font-weight;
         }
 
         &--active {
+            border-top: none;
+            border-bottom: none;
             background: $tab__title-background--mobile-active;
             color: $tab__title-color-mobile-active;
+
+            &:nth-last-child(2) {
+                border: none;
+                @include mq($screen-l) {
+                    border-bottom: $tab__title-border--active;
+                }
+            }
             @include mq($screen-l) {
+                border-bottom: $tab__title-border--active;
                 background-color: $tab__title-background--active;
-                border-bottom: $tab__title-border-bottom--active;
                 font-weight: $tab__title-font-weight--active;
                 color: $tab__title-color;
                 z-index: 2;
@@ -61,13 +75,15 @@ $tab__content-transition             : opacity 0.5s !default;
         position: relative;
         display: none;
         width: 100%;
-        padding: $tab__content-padding;
+        padding: $tab__content-padding--mobile;
         z-index: -1;
         opacity: 0;
         transition: $tab__content-transition;
         overflow: hidden;
 
+
         @include mq($screen-l) {
+            padding: $tab__content-padding;
             flex-basis: 100%;
             z-index: 1;
         }
@@ -75,12 +91,18 @@ $tab__content-transition             : opacity 0.5s !default;
         &--active {
             display: block;
             opacity: 1;
-            //border-bottom: $tab__title-border-bottom--active;
-            border-top: $tab__content-border-top;
-            border-bottom: $tab__content-border-top;
-            top: -$tab__border-width;
+
+            &:nth-last-child(1) {
+                border-bottom: $tab__title-border--mobile;
+
+                @include mq($screen-l) {
+                    border-bottom: none;
+                }
+            }
 
             @include mq($screen-l) {
+                top: -$tab__border-width;
+                border-top: $tab__title-border;
                 border-bottom: 0 none;
             }
         }
