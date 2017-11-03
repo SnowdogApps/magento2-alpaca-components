@@ -35,33 +35,6 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
     position: relative;
     background-color: $dropdown-list__bg-color;
 
-    &--wide-open {
-        @include mq($screen-m) {
-            .dropdown-list__list {
-                display: flex;
-                flex-flow: row nowrap;
-            }
-
-            .dropdown-list__item {
-                width: auto;
-                flex-basis: 25%;
-                cursor: default;
-            }
-
-            .dropdown-list__label {
-                cursor: default;
-            }
-
-            .dropdown-list__icon {
-                display: none;
-            }
-
-            .dropdown-list__content {
-                height: auto;
-            }
-        }
-    }
-
     &--dark {
         background-color: $dropdown-list__bg-color--dark;
 
@@ -234,6 +207,34 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         &:focus {
             color: $dropdown-list__inner-item-color;
             text-decoration: none;
+        }
+    }
+}
+
+@include mq($screen-m) {
+    .u-dropdown-list-is-inline\@screen-m {
+        .dropdown-list__list {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .dropdown-list__item {
+            width: 25%;
+        }
+    }
+
+    .u-dropdown-list-is-open\@screen-m {
+        .dropdown-list__item {
+            cursor: default;
+        }
+        .dropdown-list__label {
+            cursor: default;
+        }
+        .dropdown-list__icon {
+            display: none;
+        }
+        .dropdown-list__content {
+            height: auto;
         }
     }
 }

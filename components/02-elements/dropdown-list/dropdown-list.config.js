@@ -44,9 +44,15 @@ module.exports = {
   },
   variants: [
     {
-      name: 'wide-screen-open',
+      name: 'inline-screen-m',
       context: {
-        class: 'dropdown-list--wide-open',
+        class: 'u-dropdown-list-is-inline@screen-m',
+      }
+    },
+    {
+      name: 'open-screen-m',
+      context: {
+        class: 'u-dropdown-list-is-open@screen-m is-open-screen-m',
       }
     },
     {
