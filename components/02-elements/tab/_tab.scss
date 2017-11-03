@@ -67,9 +67,14 @@ $tab__content-transition                : opacity 0.5s !default;
                 color: $tab__title-color;
                 z-index: 2;
             }
+            .tab__icon {
+                transform: translateY(-50%)rotate(180deg);
+                svg {
+                    fill: $color-primary;
+                }
+            }
         }
     }
-
 
     &__content {
         position: relative;
@@ -99,7 +104,23 @@ $tab__content-transition                : opacity 0.5s !default;
                     border-bottom: none;
                 }
             }
+        }
+    }
 
+    &__icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        padding: 17px;
+        @include mq($screen-l) {
+            display: none;
+        }
+        svg {
+            width: 14px;
+            height: 14px;
         }
     }
 }

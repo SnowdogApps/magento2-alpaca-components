@@ -5,10 +5,13 @@ const tab                = document.querySelectorAll('.tab__title'),
       activeTitleClass   = 'tab__title--active',
       activeContentClass = 'tab__content--active';
 
-
 tab.forEach(key => key.addEventListener('click', event => {
-  const self = event.target,
-        tabId = self.dataset.tab;
+  let self = event.target;
+
+  if (self.tagName === 'svg' || self.classList.contains('tab__icon')) {
+    self = self.closest('.tab__title');
+  }
+  const tabId = self.dataset.tab;
 
   if (self.classList.contains(activeTitleClass)) {
     self.classList.remove(activeTitleClass);

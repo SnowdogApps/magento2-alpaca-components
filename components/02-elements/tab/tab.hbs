@@ -4,6 +4,11 @@
              data-tab="{{ tabId }}"
         >
             {{ title }}
+            <div class="tab__icon">
+                <svg>
+                    <use xlink:href="{{ svg 'angle-down' }}"/>
+                </svg>
+            </div>
         </div>
 
         <div class="tab__content {{#if active}}tab__content--active{{/if}}"
