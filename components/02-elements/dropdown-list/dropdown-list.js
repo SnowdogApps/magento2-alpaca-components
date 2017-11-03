@@ -1,11 +1,11 @@
 'use-strict'
 
 const dropdownCollapsLabel = '.dropdown-list__item--collapse .dropdown-list__label',
-      dropdownItem = [ ...document.querySelectorAll(dropdownCollapsLabel) ],
-      openClass    = 'dropdown-list__item--open',
-      contentClass = 'dropdown-list__content',
-      mqClass = 'dropdown-list\\@screen-m',
-      mq = '(min-width: 768px)';
+      dropdownItem         = [ ...document.querySelectorAll(dropdownCollapsLabel) ],
+      openClass            = 'dropdown-list__item--open',
+      contentClass         = 'dropdown-list__content',
+      mqClass              = 'dropdown-list\\@screen-m',
+      mq                   = '(min-width: 768px)';
 
 function setListHeight(item) {
   return Array.from(item.children)
