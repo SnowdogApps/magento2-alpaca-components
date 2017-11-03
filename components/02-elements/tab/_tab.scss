@@ -16,8 +16,6 @@ $tab__title-background--mobile-active   : $color-secondary !default;
 // content
 $tab__content-padding                   : $spacer--large $spacer--extra-large !default;
 $tab__content-padding--mobile           : $spacer--medium $spacer--large !default;
-$tab__content-transition                : opacity 0.5s !default;
-
 .tab {
     @include mq($screen-l) {
         display: flex;
@@ -68,7 +66,7 @@ $tab__content-transition                : opacity 0.5s !default;
                 z-index: 2;
             }
             .tab__icon {
-                transform: translateY(-50%)rotate(180deg);
+                transform: translateY(-50%)rotateX(180deg);
                 svg {
                     fill: $color-primary;
                 }
@@ -83,7 +81,6 @@ $tab__content-transition                : opacity 0.5s !default;
         padding: $tab__content-padding--mobile;
         z-index: -1;
         opacity: 0;
-        transition: $tab__content-transition;
         overflow: hidden;
 
 
