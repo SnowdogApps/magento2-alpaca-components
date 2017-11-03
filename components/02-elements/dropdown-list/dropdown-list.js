@@ -4,8 +4,8 @@ const dropdownCollapsLabel = '.dropdown-list__item--collapse .dropdown-list__lab
       dropdownItem = [ ...document.querySelectorAll(dropdownCollapsLabel) ],
       openClass    = 'dropdown-list__item--open',
       contentClass = 'dropdown-list__content',
-      wideOpenClass = 'is-open-screen-m',
-      wideOpenMq = '(min-width: 768px)';
+      mqClass = 'dropdown-list\\@screen-m',
+      mq = '(min-width: 768px)';
 
 function setListHeight(item) {
   return Array.from(item.children)
@@ -24,15 +24,15 @@ function setAriaAttributes(label, content, expanded) {
   }
 }
 
-function isWideOpen(dropdownBlock) {
-  return (dropdownBlock.classList.contains(wideOpenClass)) && window.matchMedia(wideOpenMq).matches;
+function isMediumOpen(dropdownBlock) {
+  return (dropdownBlock.classList.contains(mqClass)) && window.matchMedia(mq).matches;
 }
 
-function resetMqWideOpen(item) {
+function resetMqMediumOpen(item) {
   const dropdownItem = item.parentNode,
         dropdownContent = dropdownItem.querySelector(`.${contentClass}`);
 
-  if (window.matchMedia(wideOpenMq).matches) {
+  if (window.matchMedia(mq).matches) {
     dropdownContent.style.height = 'auto';
     dropdownItem.classList.remove(openClass);
     setAriaAttributes(item, dropdownContent, true);
@@ -50,7 +50,7 @@ function toggleContent(item) {
         dropdownContent = dropdownItem.querySelector(`.${contentClass}[data-content="${dropdownId}"]`),
         dropdownBlock   = item.closest('.dropdown-list');
 
-  if (!isWideOpen(dropdownBlock)) {
+  if (!isMediumOpen(dropdownBlock)) {
     if (dropdownContent.clientHeight > 0) {
       dropdownContent.style.height = 0;
       dropdownItem.classList.remove(openClass);
@@ -77,9 +77,9 @@ dropdownItem.forEach(
 );
 
 window.addEventListener('resize', () => {
-  const dropdownWideOpen = document.querySelector(`.${wideOpenClass}`);
-  if (dropdownWideOpen) {
-    const dropdownItems =  [ ...dropdownWideOpen.querySelectorAll(dropdownCollapsLabel)];
-    dropdownItems.forEach(key => resetMqWideOpen(key));
+  const dropdownMediumOpen = document.querySelector(`.${mqClass}`);
+  if (dropdownMediumOpen) {
+    const dropdownItems =  [ ...dropdownMediumOpen.querySelectorAll(dropdownCollapsLabel)];
+    dropdownItems.forEach(key => resetMqMediumOpen(key));
   }
 });

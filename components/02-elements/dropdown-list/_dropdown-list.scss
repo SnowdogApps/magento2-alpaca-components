@@ -209,32 +209,29 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
             text-decoration: none;
         }
     }
-}
 
-@include mq($screen-m) {
-    .u-dropdown-list-is-inline\@screen-m {
-        .dropdown-list__list {
-            display: flex;
-            flex-flow: row nowrap;
-        }
+    @include mq($screen-m) {
+        // from $screen-m drpdown list displays inline and with opened list
+        &\@screen-m {
+            .dropdown-list__list {
+                display: flex;
+                flex-flow: row nowrap;
+            }
 
-        .dropdown-list__item {
-            width: 25%;
-        }
-    }
+            .dropdown-list__item {
+                width: 25%;
+                cursor: default;
+            }
 
-    .u-dropdown-list-is-open\@screen-m {
-        .dropdown-list__item {
-            cursor: default;
-        }
-        .dropdown-list__label {
-            cursor: default;
-        }
-        .dropdown-list__icon {
-            display: none;
-        }
-        .dropdown-list__content {
-            height: auto;
+            .dropdown-list__label {
+                cursor: default;
+            }
+            .dropdown-list__icon {
+                display: none;
+            }
+            .dropdown-list__content {
+                height: auto;
+            }
         }
     }
 }

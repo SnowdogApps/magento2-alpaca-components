@@ -44,15 +44,9 @@ module.exports = {
   },
   variants: [
     {
-      name: 'inline-screen-m',
+      name: 'screen-m',
       context: {
-        class: 'u-dropdown-list-is-inline@screen-m',
-      }
-    },
-    {
-      name: 'open-screen-m',
-      context: {
-        class: 'u-dropdown-list-is-open@screen-m is-open-screen-m',
+        class: 'dropdown-list@screen-m',
       }
     },
     {
