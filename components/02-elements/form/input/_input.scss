@@ -4,7 +4,7 @@ $input__field-border        : 1px solid $form-elements-border-color !default;
 $input__field-border-radius : $form-elements-radius !default;
 $input__placeholder-color   : $gray-light !default;
 
-$input__min-height--textarea: $form-elements-radius !default;
+$input__min-height--textarea: 100px !default;
 
 .input {
     margin-bottom: $input__margin;
