@@ -1,5 +1,8 @@
 <footer class="footer">
-    <div class="container">
+    <div class="container footer__handler">
+        <section class="footer__newsletter">
+            {{ render '@newsletter' }}
+        </section>
         <section class="footer__links">
             {{ render '@dropdown-list' linkList }}
         </section>

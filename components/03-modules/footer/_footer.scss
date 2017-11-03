@@ -1,7 +1,12 @@
 $footer__padding                     : $spacer--medium !default;
+$footer__padding-top                 : $spacer--large !default;
 $footer__bg-color                    : $gray-darker !default;
 $footer__font-color                  : $white !default;
 
+$footer__newsletter-max-width        : 400px !default;
+$footer__newsletter-width--screen-l  : 30% !default;
+
+$footer__links-width--screen-l       : 70% !default;
 $footer__link-hover-underline-color  : $color-primary !default;
 $footer__link-hover-underline-height : 8px !default;
 $footer__link-hover-underline-opacity: 0.7 !default;
@@ -13,8 +18,33 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
 .footer {
     background-color: $footer__bg-color;
 
-    & > .container {
-        margin: 0;
+    &__handler {
+        margin: 0 auto;
+        @include mq($screen-l) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+
+    &__newsletter {
+        margin: 0 auto;
+        padding: $footer__padding;
+        max-width: $footer__newsletter-max-width;
+
+        @include mq($screen-l) {
+            width: $footer__newsletter-width--screen-l;
+            order: 1;
+            padding-top: $footer__padding-top + $footer__padding;
+            background-color: $gray-dark;
+        }
+    }
+
+    &__links {
+        background-color: $gray-dark;
+        @include mq($screen-l) {
+            width: $footer__links-width--screen-l;
+            padding-top: $footer__padding-top;
+        }
     }
 
     &__links-list {
@@ -63,6 +93,11 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
             flex-flow: row nowrap;
             align-items: center;
             justify-content: space-between;
+        }
+
+        @include mq($screen-l) {
+            width: 100%;
+            order: 2;
         }
     }
 
