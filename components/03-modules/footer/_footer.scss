@@ -61,6 +61,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
                 content: '';
                 position: absolute;
                 bottom: -1px;
+                left: 0;
                 height: $footer__link-hover-underline-height;
                 background-color: $footer__link-hover-underline-color;
                 opacity: $footer__link-hover-underline-opacity;
