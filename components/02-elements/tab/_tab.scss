@@ -36,7 +36,7 @@ $tab__content-transition                : opacity 0.5s !default;
         &:nth-last-child(2) {
             border-bottom: $tab__title-border--mobile;
             @include mq($screen-l) {
-                border-bottom: $tab__border-width solid transparent;
+                border-bottom: $tab__title-border;
             }
         }
 
@@ -44,7 +44,7 @@ $tab__content-transition                : opacity 0.5s !default;
             flex: 1;
             order: -1;
             border-top: none;
-            border-bottom : $tab__border-width solid transparent;
+            border-bottom : $tab__title-border;
             font-weight: $tab__title-font-weight;
         }
 
@@ -100,11 +100,6 @@ $tab__content-transition                : opacity 0.5s !default;
                 }
             }
 
-            @include mq($screen-l) {
-                top: -$tab__border-width;
-                border-top: $tab__title-border;
-                border-bottom: 0 none;
-            }
         }
     }
 }
