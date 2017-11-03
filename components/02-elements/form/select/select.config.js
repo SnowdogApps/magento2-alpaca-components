@@ -5,6 +5,10 @@ module.exports = {
       text: 'Label text',
       class: 'select__label'
     },
+    field: {
+      id: 'field-id',
+      name: 'field-name'
+    },
     options: [
       {
         value: 'option1',
