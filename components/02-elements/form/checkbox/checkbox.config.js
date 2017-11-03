@@ -2,6 +2,7 @@ module.exports = {
   collated: true,
   context: {
     id: 'checkbox',
+    name: 'checkbox-name',
     label: {
       text: 'Checkbox field',
       class: ''
