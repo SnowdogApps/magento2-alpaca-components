@@ -57,7 +57,7 @@ module.exports = {
       iconClass: 'button__icon'
     },
     trigger: {
-      attributes: 'type="button"',
+      attributes: '',
       class: 'button popup__button',
       counter: '82'
     },
