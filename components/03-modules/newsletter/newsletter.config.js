@@ -23,8 +23,7 @@ module.exports = {
     'checkbox': {
       'class': 'newsletter__checkbox',
       'id': 'newsletter',
-      'label': 'I hereby give my consent to Alpaca to send me sales information electronically. '
+      'label': 'I agree to <a href="#">Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
     }
   }
 };
-

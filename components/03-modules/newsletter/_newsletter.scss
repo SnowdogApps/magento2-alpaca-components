@@ -6,17 +6,17 @@ $newsletter__line-height                : 1.2 !default;
 $newsletter__input-background           : #717171 !default;
 $newsletter__input-color                : $white !default;
 $newsletter__input-color--placeholder   : rgba(255, 255, 255, 0.7) !default;
+$newsletter__checkbox-label-color       : $white !default;
 $newsletter__heading-color              : $white !default;
 $newsletter__controls-height            : 32px !default;
 $newsletter__bottom-gap                 : $spacer--medium !default;
 $newsletter__button-padding             : 21px !default;
 $newsletter__checkbox-bg-color          : $white !default;
-$newsletter__checkbox-label-opacity     : 0.7 !default;
 $newsletter__checkbox-label-padding-left: 24px !default;
 $newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
 $newsletter__checkbox-icon-size         : 15px !default;
-$newsleter__checkbox-icon-position-top  : 0 !default;
+$newsletter__checkbox-icon-position-top : 0 !default;
 
 .newsletter {
     &__heading {
@@ -69,7 +69,7 @@ $newsleter__checkbox-icon-position-top  : 0 !default;
         margin-left: $spacer;
     }
     .checkbox__icon {
-        top: $newsleter__checkbox-icon-position-top;
+        top: $newsletter__checkbox-icon-position-top;
         left: 0;
         border-radius: $newsletter__checkbox-icon-border-radius;
     }
@@ -85,13 +85,20 @@ $newsleter__checkbox-icon-position-top  : 0 !default;
         line-height: $newsletter__checkbox-label-line-height;
         text-align: left;
         padding-left: $newsletter__checkbox-label-padding-left;
-        color: rgba(201, 201, 201, $newsletter__checkbox-label-opacity);
+        color: $newsletter__checkbox-label-color;
         &:before {
-            top: $newsleter__checkbox-icon-position-top; // to align with label, depends on line-height of label
+            top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label
             width: $newsletter__checkbox-icon-size;
             height: $newsletter__checkbox-icon-size;
             border: none;
             background: $newsletter__checkbox-bg-color;
+        }
+
+        & > a {
+            &:hover,
+            &:focus {
+                color: $newsletter__checkbox-label-color;
+            }
         }
     }
 }
