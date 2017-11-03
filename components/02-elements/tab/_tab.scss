@@ -16,6 +16,9 @@ $tab__title-background--mobile-active   : $color-secondary !default;
 // content
 $tab__content-padding                   : $spacer--large $spacer--extra-large !default;
 $tab__content-padding--mobile           : $spacer--medium $spacer--large !default;
+// icon
+$tab__icon-padding                      : $spacer--medium !default;
+$tab__icon-size                         : 48px !default;
 .tab {
     @include mq($screen-l) {
         display: flex;
@@ -111,9 +114,10 @@ $tab__content-padding--mobile           : $spacer--medium $spacer--large !defaul
         right: 15px;
         top: 50%;
         transform: translateY(-50%);
-        width: 48px;
-        height: 48px;
-        padding: 17px;
+        width: $tab__icon-size;
+        height: $tab__icon-size;
+        padding: $tab__icon-padding;
+
         @include mq($screen-l) {
             display: none;
         }
