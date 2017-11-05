@@ -225,12 +225,27 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
             .dropdown-list__label {
                 cursor: default;
+                &:hover,
+                &:focus {
+                    color: $dropdown-list__item-color;
+                    background-color: $dropdown-list__item-bg-color;
+                }
             }
             .dropdown-list__icon {
                 display: none;
             }
             .dropdown-list__content {
                 height: auto;
+            }
+
+            &.dropdown-list--dark {
+                .dropdown-list__label {
+                    &:hover,
+                    &:focus {
+                        color: $dropdown-list__item-color-active--dark;
+                        background-color: $dropdown-list__item-bg-color-active--dark;
+                    }
+                }
             }
         }
     }
