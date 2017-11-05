@@ -4,7 +4,7 @@ const dropdownCollapsLabel = '.dropdown-list__item--collapse .dropdown-list__lab
       dropdownItem         = [ ...document.querySelectorAll(dropdownCollapsLabel) ],
       openClass            = 'dropdown-list__item--open',
       contentClass         = 'dropdown-list__content',
-      mqClass              = 'dropdown-list\\@screen-m',
+      mqClass              = 'js-is-open-screen-m',
       mq                   = '(min-width: 768px)';
 
 function setListHeight(item) {

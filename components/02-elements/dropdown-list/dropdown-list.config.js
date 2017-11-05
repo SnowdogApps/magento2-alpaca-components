@@ -46,7 +46,7 @@ module.exports = {
     {
       name: 'screen-m',
       context: {
-        class: 'dropdown-list@screen-m',
+        class: 'dropdown-list@screen-m js-is-open-screen-m',
       }
     },
     {

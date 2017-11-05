@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     linkList: {
-      class: 'dropdown-list@screen-m is-open-screen-m dropdown-list--dark',
+      class: 'dropdown-list@screen-m js-is-open-screen-m dropdown-list--dark',
       dropdowns: [
         {
           itemTag: 'button',
