@@ -47,22 +47,22 @@ $dropdown-list__inner-item-border--level2 : 1px solid $gray-dark !default;
 
         .dropdown-list__item,
         .dropdown-list__item--open {
-            .dropdown-list__icon {
-                fill: $dropdown-list__icon-color--dark;
-            }
-        }
+            .dropdown-list__label {
+                background-color: $dropdown-list__bg-color--dark;
+                color: $dropdown-list__item-color--dark;
+                font-weight: $font-weight-bold;
 
-        .dropdown-list__label {
-            background-color: $dropdown-list__bg-color--dark;
-            color: $dropdown-list__item-color--dark;
-            font-weight: $font-weight-bold;
+                &:hover,
+                &:focus {
+                    color: $dropdown-list__item-color-active--dark;
+                    background-color: $dropdown-list__item-bg-color-active--dark;
 
-            &:hover,
-            &:focus {
-                color: $dropdown-list__item-color-active--dark;
-                background-color: $dropdown-list__item-bg-color-active--dark;
+                    & > .dropdown-list__icon {
+                        fill: $dropdown-list__icon-color--dark;
+                    }
+                }
 
-                .dropdown-list__icon {
+                & > .dropdown-list__icon {
                     fill: $dropdown-list__icon-color--dark;
                 }
             }
