@@ -1,16 +1,16 @@
-$link__color           : $color-primary !default;
-$link__decoration      : underline !default;
-$link__font-family     : $font-family-base !default;
-$link__font-weight     : $font-weight-normal !default;
-$link__hover-color     : $color-secondary !default;
-$link__hover-decoration: underline !default;
-$link__font-size       : $font-size-base !default;
-$link__line-height     : $font-line-height !default;
-$link__transition      : $transition-base !default;
-$link__color--secondary: $gray !default;
-$link__height-after--secondary: 8px !default;
-$link__background-after--secondary: $color-primary !default;
-$link__color-hover: $white !default;
+$link__color                       : $color-primary !default;
+$link__decoration                  : underline !default;
+$link__font-family                 : $font-family-base !default;
+$link__font-weight                 : $font-weight-normal !default;
+$link__hover-color                 : $color-secondary !default;
+$link__hover-decoration            : underline !default;
+$link__font-size                   : $font-size-base !default;
+$link__line-height                 : $font-line-height !default;
+$link__transition                  : $transition-base !default;
+$link__color--secondary            : $gray !default;
+$link__height-after--secondary     : 8px !default;
+$link__background-after--secondary : $color-primary !default;
+$link__color-hover                 : $white !default;
 $link__font-weight-hover--secondary: $font-weight-bold !default;
 
 .link {
