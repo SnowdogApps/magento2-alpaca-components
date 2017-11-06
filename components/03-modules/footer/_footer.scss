@@ -1,25 +1,39 @@
-$footer__padding                     : $spacer--medium !default;
-$footer__padding-top                 : $spacer--large !default;
-$footer__bg-color                    : $gray-darker !default;
-$footer__font-color                  : $white !default;
+$footer__bg-color                  : $gray-darker !default;
+$footer__bg-color--screen-l        : $gray-dark !default;
+$footer__font-color                : $white !default;
+$footer__transition                : $transition-base !default;
 
-$footer__newsletter-max-width        : 400px !default;
-$footer__newsletter-width--screen-l  : 30% !default;
+$footer__newsletter-max-width      : 400px !default;
+$footer__newsletter-width--screen-l: 30% !default;
 
-$footer__links-width--screen-l       : 70% !default;
-$footer__link-hover-underline-color  : $color-primary !default;
-$footer__link-hover-underline-height : 8px !default;
-$footer__link-hover-underline-opacity: 0.7 !default;
+$footer__links-width--screen-l     : 70% !default;
+$footer__link-after-hover-color    : $color-primary !default;
+$footer__link-after-hover-height   : 8px !default;
 
-$footer__bottom-bar-color            : $gray !default;
-$footer__bottom-bar-font-size        : $font-size-small !default;
+$footer__bottom-bar-background     : $gray-darker !default;
+$footer__bottom-bar-color          : $gray !default;
+$footer__bottom-bar-font-size      : $font-size-small !default;
 
 
 .footer {
     background-color: $footer__bg-color;
+    padding: $spacer--medium 0;
+
+    @include mq($screen-m) {
+        padding-bottom: 0;
+    }
+
+    @include mq($screen-l) {
+        background-color: $footer__bg-color--screen-l;
+    }
 
     &__handler {
-        margin: 0 auto;
+        margin: 0 auto $spacer--medium;
+
+        @include mq($screen-m) {
+            margin: 0 auto;
+        }
+
         @include mq($screen-l) {
             display: flex;
             flex-flow: row wrap;
@@ -27,48 +41,56 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     }
 
     &__newsletter {
-        margin: 0 auto;
-        padding: $footer__padding;
+        margin: 0 auto $spacer--medium;
         max-width: $footer__newsletter-max-width;
 
         @include mq($screen-l) {
             width: $footer__newsletter-width--screen-l;
             order: 1;
-            padding-top: $footer__padding-top + $footer__padding;
-            background-color: $gray-dark;
+            padding-top: $spacer--medium;
         }
     }
 
     &__links {
-        background-color: $gray-dark;
         @include mq($screen-l) {
             width: $footer__links-width--screen-l;
-            padding-top: $footer__padding-top;
+        }
+
+        .dropdown-list {
+            @include mq($screen-m) {
+                padding: 0;
+            }
+        }
+
+        .dropdown-list__item {
+            @include mq($screen-m) {
+                border-bottom: 0;
+            }
         }
     }
 
     &__links-list {
-        padding: 16px 0;
+        padding: $spacer--medium 0;
 
         .link {
+            display: inline-block;
             position: relative;
+            overflow: hidden;
+            z-index: 1;
             color: $footer__font-color;
             text-decoration: none;
-            display: inline-block;
-            transition: $transition-base;
+            transition: $footer__transition;
 
             &:after {
                 content: '';
                 position: absolute;
-                bottom: -1px;
-                left: 0;
-                height: $footer__link-hover-underline-height;
-                background-color: $footer__link-hover-underline-color;
-                opacity: $footer__link-hover-underline-opacity;
+                bottom: 1px;
+                left: -100%;
+                height: $footer__link-after-hover-height;
+                background-color: $footer__link-after-hover-color;
                 width: 100%;
-                transition: $transition-base;
-                transform: scale(0);
-                transform-origin: left center;
+                z-index: -1;
+                transition: $footer__transition;
             }
 
             &:hover,
@@ -78,36 +100,34 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
                 text-decoration: none;
 
                 &:after {
-                    transform: scale(1);
+                    left: 0;
                 }
             }
         }
     }
 
     &__bottom-bar {
-        padding-top: $footer__padding;
+        background: $footer__bottom-bar-background;
         color: $footer__bottom-bar-color;
+    }
 
+    &__bottom-bar-handler {
         @include mq($screen-m) {
-            padding-top: 0;
             display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
             justify-content: space-between;
-        }
-
-        @include mq($screen-l) {
-            width: 100%;
-            order: 2;
+            align-items: center;
         }
     }
 
     &__social-handler {
+        margin-bottom: $spacer--medium;
+
         @include mq($screen-m) {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
             order: 1;
+            margin: 0;
         }
     }
 
@@ -115,15 +135,35 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
         display: none;
         @include mq($screen-m) {
             display: block;
-            margin-right: $footer__padding;
+            margin-right: $spacer--medium;
             font-size: $footer__bottom-bar-font-size;
         }
     }
 
     &__copyright {
         display: block;
-        padding: $footer__padding;
         font-size: $footer__bottom-bar-font-size;
         text-align: center;
+
+        @include mq($screen-m) {
+            padding-left: $spacer;
+        }
+
+        @include mq($screen-l) {
+            padding-left: $spacer--medium;
+        }
+    }
+
+    // Can't add just &__social-list-item
+    .footer__social-list-item {
+        padding-right: $spacer--medium;
+
+        @include mq($screen-m) {
+            padding-right: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
     }
 }
