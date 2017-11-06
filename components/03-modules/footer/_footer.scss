@@ -1,18 +1,19 @@
-$footer__bg-color                  : $gray-darker !default;
-$footer__bg-color--screen-l        : $gray-dark !default;
-$footer__font-color                : $white !default;
-$footer__transition                : $transition-base !default;
+$footer__bg-color                    : $gray-darker !default;
+$footer__bg-color--screen-l          : $gray-dark !default;
+$footer__font-color                  : $white !default;
+$footer__transition                  : $transition-base !default;
 
-$footer__newsletter-max-width      : 400px !default;
-$footer__newsletter-width--screen-l: 30% !default;
+$footer__newsletter-max-width        : 400px !default;
+$footer__newsletter-width--screen-l  : 30% !default;
 
-$footer__links-width--screen-l     : 70% !default;
-$footer__link-after-hover-color    : $color-primary !default;
-$footer__link-after-hover-height   : 8px !default;
+$footer__links-width--screen-l       : 70% !default;
+$footer__link-color-after-hover      : $color-primary !default;
+$footer__link-height-after-hover     : 8px !default;
+$footer__link-font-weight-after-hover: $font-weight-bold !default;
 
-$footer__bottom-bar-background     : $gray-darker !default;
-$footer__bottom-bar-color          : $gray !default;
-$footer__bottom-bar-font-size      : $font-size-small !default;
+$footer__bottom-bar-background       : $gray-darker !default;
+$footer__bottom-bar-color            : $gray !default;
+$footer__bottom-bar-font-size        : $font-size-small !default;
 
 
 .footer {
@@ -85,22 +86,24 @@ $footer__bottom-bar-font-size      : $font-size-small !default;
                 content: '';
                 position: absolute;
                 bottom: 1px;
-                left: -100%;
-                height: $footer__link-after-hover-height;
-                background-color: $footer__link-after-hover-color;
+                left: 0%;
+                height: $footer__link-height-after-hover;
+                background-color: $footer__link-color-after-hover;
                 width: 100%;
                 z-index: -1;
+                transform: scaleX(0);
+                transform-origin: left;
                 transition: $footer__transition;
             }
 
             &:hover,
             &:focus {
                 color: $footer__font-color;
-                font-weight: $font-weight-bold;
+                font-weight: $footer__link-font-weight-after-hover;
                 text-decoration: none;
 
                 &:after {
-                    left: 0;
+                    transform: scaleX(1);
                 }
             }
         }
