@@ -13,6 +13,8 @@
 @import '../../components/01-globals/mixins/grid-column-width';
 @import '../../components/01-globals/mixins/links';
 @import '../../components/01-globals/mixins/mq';
+@import '../../components/01-globals/mixins/visually-hidden';
+
 // Libs
 @import '../../components/01-globals/libs/normalize';
 @import '../../components/01-globals/libs/choices';
@@ -43,6 +45,7 @@
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
+@import '../../components/02-elements/form/fieldset/fieldset';
 @import '../../components/02-elements/form/file-upload/file-upload';
 @import '../../components/02-elements/form/input/input';
 @import '../../components/02-elements/form/radio/radio';
@@ -74,12 +77,12 @@
 @import '../../components/03-modules/dashboard/nav/nav';
 @import '../../components/03-modules/dashboard/table/table';
 @import '../../components/03-modules/dashboard/toolbar/toolbar';
-@import '../../components/03-modules/form/form';
 @import '../../components/03-modules/header/header';
 @import '../../components/03-modules/header/featured-info';
 @import '../../components/03-modules/header/top-bar';
 @import '../../components/03-modules/header/search-form';
 @import '../../components/03-modules/minicart-content/minicart-content';
+@import '../../components/03-modules/newsletter/newsletter';
 @import '../../components/03-modules/popup/popup';
 @import '../../components/03-modules/product/product';
 @import '../../components/03-modules/products-list-item/products-list-item';

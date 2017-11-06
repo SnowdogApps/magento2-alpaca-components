@@ -66,6 +66,7 @@ $header__icon-color            : $gray-dark !default;
     }
 
     &__icon {
+        display: block;
         width: $header__icon-size;
         height: $header__icon-size;
         padding: $header__icon-padding;

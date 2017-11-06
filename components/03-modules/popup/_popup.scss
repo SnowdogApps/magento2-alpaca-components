@@ -1,24 +1,29 @@
-$popup__padding         : 10px !default;
-$popup__width           : 400px !default;
-$popup__background      : $white !default;
-$popup__z-index         : 50 !default;
-$popup__box-shadow-color: $black !default;
-$popup__box-shadow      : 0 0 8px 0 rgba($popup__box-shadow-color, 0.2) !default;
-
-// Arrow
-$popup__arrow-size      : 21px !default;
-$popup__arrow-top       : -10px !default;
-$popup__arrow-box-shadow: 2px -2px 4px 0 rgba($popup__box-shadow-color, 0.1) !default;
-$popup__arrow-transform : rotate(45deg) !default;
+$popup__padding                  : $spacer--medium !default;
+$popup__content-top-margin       : $spacer--large !default;
+$popup__width                    : 80% !default;
+$popup__max-width                : 500px !default;
+$popup__background               : $white !default;
+$popup__z-index                  : 50 !default;
+$popup__border                   : 0 !default;
+$popup__box-shadow-color         : $black !default;
+$popup__box-shadow               : 0 4px 6px 0 rgba($popup__box-shadow-color, 0.3) !default;
+$popup__close-button-bg          : $white !default;
+$popup__close-button-border      : 0 !default;
+$popup__button-icon-fill         : $black !default;
+$popup__button-icon-fill--actiive: $color-primary !default;
+$popup__margin                   : 0 !default;
 
 .popup {
     display: none;
-    position: absolute;
+    position: fixed;
     width: $popup__width;
+    max-width: $popup__max-width;
     padding: $popup__padding;
+    margin: $popup__margin;
     z-index: $popup__z-index;
     box-shadow: $popup__box-shadow;
     background-color: $popup__background;
+    border: $popup__border;
 
     &--active {
         display: block;
@@ -28,14 +33,30 @@ $popup__arrow-transform : rotate(45deg) !default;
         width: 100vw;
     }
 
-    &__arrow {
+    &__handler {
+        position: relative;
+        margin-top: $popup__content-top-margin;
+    }
+
+    &__close-button {
         position: absolute;
-        top: $popup__arrow-top;
-        width: $popup__arrow-size;
-        height: $popup__arrow-size;
-        background: $popup__background;
-        transform: $popup__arrow-transform;
-        box-shadow: $popup__arrow-box-shadow;
-        z-index: -1;
+        top: -48px;
+        right: -16px;
+        background-color: $popup__close-button-bg;
+        border: $popup__close-button-border;
+
+        &:hover,
+        &:focus {
+            background-color: $popup__close-button-bg;
+        }
+    }
+
+    &__close-button-icon {
+        fill: $popup__button-icon-fill;
+
+        &:hover,
+        &:focus {
+            fill: $popup__button-icon-fill--actiive;
+        }
     }
 }
