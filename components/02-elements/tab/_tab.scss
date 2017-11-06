@@ -71,7 +71,7 @@ $tab__icon-size                         : 48px !default;
                 z-index: 2;
             }
             .tab__icon {
-                transform: translateY(-50%) rotateX(180deg);
+                transform: rotateX(180deg);
 
                 svg {
                     fill: $color-primary;
@@ -112,8 +112,9 @@ $tab__icon-size                         : 48px !default;
     &__icon {
         position: absolute;
         right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
+        bottom: 0;
+        margin: auto;
         width: $tab__icon-size;
         height: $tab__icon-size;
         padding: $tab__icon-padding;
