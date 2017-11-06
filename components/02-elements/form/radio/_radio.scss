@@ -1,6 +1,4 @@
-$radio__vertical-gap      : 10px;
-$radio__margin            : 10px !default;
-$radio__size              : 18px !default;
+$radio__size              : $spacer--medium !default;
 $radio__dot-size          : 6px !default;
 $radio__label-font-size   : $font-size-small !default;
 $radio__label-color       : $black !default;
@@ -11,7 +9,7 @@ $radio__icon-transition   : $transition-base !default;
 
 .radio {
     position: relative;
-    margin-bottom: $radio__margin;
+    margin-bottom: $spacer--medium;
 
     &__fieldset {
         border: 0;
@@ -20,7 +18,7 @@ $radio__icon-transition   : $transition-base !default;
     }
 
     &__legend {
-        padding-bottom: $radio__vertical-gap;
+        padding-bottom: $spacer--medium;
     }
 
     &__handler {
@@ -30,7 +28,6 @@ $radio__icon-transition   : $transition-base !default;
     &__field {
         position: absolute;
         left: 0;
-        top: $radio__vertical-gap;
         height: $radio__size;
         width: $radio__size;
         opacity: 0;
@@ -56,7 +53,6 @@ $radio__icon-transition   : $transition-base !default;
         cursor: pointer;
         font-size: $radio__label-font-size;
         color: $radio__label-color;
-        margin-top: $radio__vertical-gap 0;
     }
 
     &__icon {
@@ -66,7 +62,7 @@ $radio__icon-transition   : $transition-base !default;
         border-radius: $radio__size;
         width: $radio__size;
         height: $radio__size;
-        margin-right: 5px;
+        margin-right: $spacer;
         vertical-align: top;
 
         &::before {

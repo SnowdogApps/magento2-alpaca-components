@@ -1,13 +1,12 @@
-$input__margin              : $spacer !default;
 $input__padding             : $spacer $spacer--medium !default;
 $input__field-border        : 1px solid $form-elements-border-color !default;
 $input__field-border-radius : $form-elements-radius !default;
-$input__placeholder-color   : $gray-light !default;
+$input__placeholder-color   : $gray !default;
 
 $input__min-height--textarea: 100px !default;
 
 .input {
-    margin-bottom: $input__margin;
+    margin-bottom: $spacer;
 
     &--inline {
         display: flex;
@@ -16,7 +15,7 @@ $input__min-height--textarea: 100px !default;
 
         .input__label {
             margin-bottom: 0;
-            margin-right: 20px;
+            margin-right: $spacer--medium;
         }
     }
 
