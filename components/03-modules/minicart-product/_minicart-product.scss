@@ -1,0 +1,70 @@
+$minicart-product__image-width           : 72px !default;
+$minicart-product__qty-width             : 50% !default;
+$minicart-product__details-label-color   : $color-primary !default;
+$minicart-product__details-label-bg-color: $white !default;
+$minicart-product__details-icon-size     : 14px !default;
+$minicart-product__action-width          : 50% !default;
+$minicart-product__action-button-bg      : transparent !default;
+$minicart-product__action-icon-color     : $color-secondary !default;
+
+.minicart-product {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    &__image {
+        width: $minicart-product__image-width;
+    }
+    &__info {
+        display: flex;
+        flex-flow: row wrap;
+        width: calc(100% - 72px);
+        padding-left: $spacer--medium;
+    }
+    &__name {
+        margin-bottom: $spacer;
+        font-weight: $font-weight-normal;
+    }
+    &__details {
+        margin-bottom: $spacer;
+        .dropdown-list__label {
+            color: $minicart-product__details-label-color;
+            padding: 0 $spacer--large 0 0;
+            width: auto;
+            &:hover,
+            &:focus {
+                background-color: $minicart-product__details-label-bg-color;
+            }
+
+            & > .dropdown-list__icon {
+                fill: $minicart-product__details-label-color;
+                width: $minicart-product__details-icon-size;
+                height: $minicart-product__details-icon-size;
+            }
+        }
+    }
+    &__price {
+        width: 100%;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacer;
+    }
+    &__qty {
+        width: $minicart-product__qty-width;
+        margin-bottom: $spacer;
+    }
+    &__action {
+        width: $minicart-product__action-width;
+        padding-right: $spacer--medium;
+    }
+    &__button {
+        background-color: $minicart-product__action-button-bg;
+        border: 0;
+        .button__icon {
+            fill: $minicart-product__action-icon-color;
+        }
+        &:hover,
+        &:focus {
+            background-color: $minicart-product__action-button-bg;
+            border: 0;
+        }
+    }
+}
