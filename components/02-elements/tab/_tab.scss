@@ -1,21 +1,21 @@
-$tab__border-width                      : 8px !default;
-$tab__border-width--mobile              : 1px !default;
+$tab__border-width                      : 1px !default;
+$tab__border-width--large               : 8px !default;
 // title
 $tab__title-padding                     : $spacer--medium !default;
 $tab__title-border                      : $tab__border-width solid $gray-light !default;
-$tab__title-border--active              : $tab__border-width solid $color-primary !default;
-$tab__title-border--mobile              : $tab__border-width--mobile solid $gray-light !default;
+$tab__title-border--large               : $tab__border-width--large solid $gray-light !default;
+$tab__title-border--large-active        : $tab__border-width--large solid $color-primary !default;
 $tab__title-color                       : $color-secondary !default;
-$tab__title-color-mobile-active         : $color-primary !default;
-$tab__title-font-weight                 : $font-weight-normal !default;
-$tab__title-font-weight--mobile         : $font-weight-bold !default;
-$tab__title-font-weight--active         : $font-weight-bold !default;
+$tab__title-color--active               : $color-primary !default;
+$tab__title-font-weight--large          : $font-weight-normal !default;
+$tab__title-font-weight--large-active   : $font-weight-bold !default;
+$tab__title-font-weight                 : $font-weight-bold !default;
 $tab__title-background                  : $bg-color-base !default;
-$tab__title-background--active          : $gray-light !default;
-$tab__title-background--mobile-active   : $color-secondary !default;
+$tab__title-background--active          : $color-secondary !default;
+$tab__title-background--large-active    : $gray-light !default;
 // content
-$tab__content-padding                   : $spacer--large $spacer--extra-large !default;
-$tab__content-padding--mobile           : $spacer--medium $spacer--large !default;
+$tab__content-padding                   : $spacer--medium $spacer--large !default;
+$tab__content-padding--large            : $spacer--large $spacer--extra-large !default;
 // icon
 $tab__icon-padding                      : $spacer--medium !default;
 $tab__icon-size                         : 48px !default;
@@ -27,18 +27,18 @@ $tab__icon-size                         : 48px !default;
     &__title {
         position: relative;
         padding: $tab__title-padding;
-        border-top: $tab__title-border--mobile;
+        border-top: $tab__title-border;
         background: $tab__title-background;
         text-align: center;
-        font-weight: $tab__title-font-weight--mobile;
+        font-weight: $tab__title-font-weight;
         color: $tab__title-color;
         cursor: pointer;
 
         &:nth-last-child(2) {
-            border-bottom: $tab__title-border--mobile;
+            border-bottom: $tab__title-border;
 
             @include mq($screen-l) {
-                border-bottom: $tab__title-border;
+                border-bottom: $tab__title-border--large;
             }
         }
 
@@ -46,32 +46,32 @@ $tab__icon-size                         : 48px !default;
             flex: 1;
             order: -1;
             border-top: none;
-            border-bottom : $tab__title-border;
-            font-weight: $tab__title-font-weight;
+            border-bottom : $tab__title-border--large;
+            font-weight: $tab__title-font-weight--large;
         }
 
         &--active {
             border-top: none;
             border-bottom: none;
-            background: $tab__title-background--mobile-active;
-            color: $tab__title-color-mobile-active;
+            background: $tab__title-background--active;
+            color: $tab__title-color--active;
 
             &:nth-last-child(2) {
                 border: none;
 
                 @include mq($screen-l) {
-                    border-bottom: $tab__title-border--active;
+                    border-bottom: $tab__title-border--large-active;
                 }
             }
             @include mq($screen-l) {
-                border-bottom: $tab__title-border--active;
-                background-color: $tab__title-background--active;
-                font-weight: $tab__title-font-weight--active;
+                border-bottom: $tab__title-border--large-active;
+                background-color: $tab__title-background--large-active;
+                font-weight: $tab__title-font-weight--large-active;
                 color: $tab__title-color;
                 z-index: 2;
             }
             .tab__icon {
-                transform: translateY(-50%)rotateX(180deg);
+                transform: translateY(-50%) rotateX(180deg);
 
                 svg {
                     fill: $color-primary;
@@ -84,13 +84,13 @@ $tab__icon-size                         : 48px !default;
         position: relative;
         display: none;
         width: 100%;
-        padding: $tab__content-padding--mobile;
+        padding: $tab__content-padding;
         z-index: -1;
         opacity: 0;
         overflow: hidden;
 
         @include mq($screen-l) {
-            padding: $tab__content-padding;
+            padding: $tab__content-padding--large;
             flex-basis: 100%;
             z-index: 1;
         }
@@ -100,7 +100,7 @@ $tab__icon-size                         : 48px !default;
             opacity: 1;
 
             &:nth-last-child(1) {
-                border-bottom: $tab__title-border--mobile;
+                border-bottom: $tab__title-border;
 
                 @include mq($screen-l) {
                     border-bottom: none;
