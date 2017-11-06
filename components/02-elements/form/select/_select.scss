@@ -53,10 +53,7 @@ $select__input-border-color: $form-elements-border-color !default;
     }
     &__list--dropdown {
         .is-open & {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: $select__border-radius;
-            border-bottom-right-radius: $select__border-radius;
+            border-radius: 0 0 $select__border-radius $select__border-radius;
             border-color: $select__input-border-color;
         }
     }
