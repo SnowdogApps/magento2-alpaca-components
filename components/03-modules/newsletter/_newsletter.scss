@@ -1,0 +1,104 @@
+$newsletter__font-size                  : $font-size-base !default;
+$newsletter__font-size--agreements      : $font-size-small !default;
+$newsletter__field-height               : 32px !default;
+$newsletter__field-border-radius        : 32px !default;
+$newsletter__line-height                : 1.2 !default;
+$newsletter__input-background           : #717171 !default;
+$newsletter__input-color                : $white !default;
+$newsletter__input-color--placeholder   : rgba(255, 255, 255, 0.7) !default;
+$newsletter__checkbox-label-color       : $white !default;
+$newsletter__heading-color              : $white !default;
+$newsletter__controls-height            : 32px !default;
+$newsletter__bottom-gap                 : $spacer--medium !default;
+$newsletter__button-padding             : 21px !default;
+$newsletter__checkbox-bg-color          : $white !default;
+$newsletter__checkbox-label-padding-left: 24px !default;
+$newsletter__checkbox-label-line-height : $font-line-height !default;
+$newsletter__checkbox-icon-border-radius: 2px !default;
+$newsletter__checkbox-icon-size         : 15px !default;
+$newsletter__checkbox-icon-position-top : 0 !default;
+
+.newsletter {
+    &__heading {
+        line-height: $newsletter__line-height;
+        margin-right: 20px;
+        color: $newsletter__heading-color;
+        height: auto;
+        font-size: $newsletter__font-size;
+        font-weight: $font-weight-bold;
+        text-align: left;
+        margin-bottom: $newsletter__bottom-gap;
+    }
+    &__controls {
+        position: relative;
+        height: $newsletter__controls-height;
+        margin-bottom: $newsletter__bottom-gap;
+    }
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: $newsletter__controls-height;
+        border-radius: $newsletter__field-border-radius;
+        padding: 0 $newsletter__button-padding;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    &__input {
+        margin: 0;
+    }
+    &__label {
+        @include visually-hidden;
+    }
+    &__field {
+        background: $newsletter__input-background;
+        padding: $spacer $spacer--medium;
+        margin: 0;
+        border: none;
+        border-radius: $newsletter__field-border-radius;
+        height: $newsletter__field-height;
+        color: $newsletter__input-color;
+        &::placeholder {
+            color: $newsletter__input-color--placeholder;
+        }
+    }
+    &__agreements {
+        margin-left: $spacer;
+    }
+    .checkbox__icon {
+        top: $newsletter__checkbox-icon-position-top;
+        left: 0;
+        border-radius: $newsletter__checkbox-icon-border-radius;
+    }
+    .checkbox__field {
+        &:checked ~ .checkbox__label:before {
+            background: none;
+        }
+    }
+    .checkbox__label {
+        width: 100%;
+        opacity: 1;
+        font-size: $newsletter__font-size--agreements;
+        line-height: $newsletter__checkbox-label-line-height;
+        text-align: left;
+        padding-left: $newsletter__checkbox-label-padding-left;
+        color: $newsletter__checkbox-label-color;
+        &:before {
+            top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label
+            width: $newsletter__checkbox-icon-size;
+            height: $newsletter__checkbox-icon-size;
+            border: none;
+            background: $newsletter__checkbox-bg-color;
+        }
+
+        & > a {
+            &:hover,
+            &:focus {
+                color: $newsletter__checkbox-label-color;
+            }
+        }
+    }
+}
