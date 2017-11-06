@@ -1,7 +1,7 @@
 {
     "name": "snowdog/module-alpaca-components",
     "description": "Components of the Alpaca theme for Magento 2",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "license": "MIT",
     "type": "magento2-module"
 }
