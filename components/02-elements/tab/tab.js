@@ -6,11 +6,8 @@ const tab                = document.querySelectorAll('.tab__title'),
       activeContentClass = 'tab__content--active';
 
 tab.forEach(key => key.addEventListener('click', event => {
-  let self = event.target;
+  let self = event.currentTarget;
 
-  if (self.tagName === 'svg' || self.classList.contains('tab__icon')) {
-    self = self.closest('.tab__title');
-  }
   const tabId = self.dataset.tab;
 
   if (self.classList.contains(activeTitleClass)) {
