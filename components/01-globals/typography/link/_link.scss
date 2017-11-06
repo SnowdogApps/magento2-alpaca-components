@@ -21,25 +21,7 @@ $link-line-height     : $font-line-height !default;
     }
     // visible only for screen readers and when focused
     &--visually-hidden {
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;
-
-        &:focus,
-        &:active,
-        &:focus {
-            clip: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            position: static;
-            width: auto;
-        }
+        @include visually-hidden;
     }
 }
 
