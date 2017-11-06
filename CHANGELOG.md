@@ -5,11 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.3.0] - 06.11.2017
+### Added
+- Spacer global variables
+
 ### Changed
- - update dropdown-list component
+ - Dropdown list component
  - Variables in password strength element
- - Update popup component
- - Update table styles
+ - Popup component
+ - Table styles
+ - Newsletter module
 
 ## [0.2.0] - 28.10.2017
 ### Added
