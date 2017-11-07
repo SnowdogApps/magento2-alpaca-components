@@ -8,6 +8,8 @@ module.exports = {
         input: {
           class: 'dashboard-form__divider',
           field: {
+            id: 'firstName',
+            name: 'firstName',
             placeholder: 'Firist name'
           }
         }
@@ -16,6 +18,8 @@ module.exports = {
         input: {
           class: 'dashboard-form__divider',
           field: {
+            id: 'secondName',
+            name: 'secondName',
             placeholder: 'Second name'
           }
         }
@@ -27,14 +31,18 @@ module.exports = {
         checkbox: {
           class: 'dashboard-form__divider',
           id: 'changeEmail',
-          label: 'Change Email'
+          label: {
+            text: 'Change Email'
+          }
         }
       },
       {
         checkbox: {
           class: 'dashboard-form__divider',
           id: 'changePassword',
-          label: 'Change Password'
+          label: {
+            text: 'Change Password'
+          }
         }
       }
     ],
@@ -44,6 +52,10 @@ module.exports = {
           class: 'dashboard-form__divider dashboard-form--hidden email',
           label: {
             text: 'Email',
+          },
+          field: {
+            id: 'email',
+            name: 'email'
           }
         }
       },
@@ -52,6 +64,10 @@ module.exports = {
           class: 'dashboard-form__divider dashboard-form--hidden password',
           label: {
             text: 'Current Passwords',
+          },
+          field: {
+            id: 'password',
+            name: 'password'
           }
         }
       },
@@ -60,6 +76,10 @@ module.exports = {
           class: 'dashboard-form__divider dashboard-form--hidden newPassword',
           label: {
             text: 'New Password'
+          },
+          field: {
+            id: 'newPassword',
+            name: 'newPassword'
           }
         }
       },
@@ -68,6 +88,10 @@ module.exports = {
           class: 'dashboard-form__divider dashboard-form--hidden confirmPassword',
           label: {
             text: 'Confirm New Password'
+          },
+          field: {
+            id: 'confirmPassword',
+            name: 'confirmPassword'
           }
         }
       }
