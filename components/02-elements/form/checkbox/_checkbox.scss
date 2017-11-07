@@ -1,12 +1,13 @@
 $checkbox__margin            : 10px !default;
 $checkbox__line-height       : $font-line-height !default;
-$checkbox__label-padding     : 33px !default;
-$checkbox__label-width       : 23px !default;
-$checkbox__label-height      : 23px !default;
-$checkbox__label-border      : 1px solid #d9d9d9 !default;
-$checkbox__icon-size         : 15px !default;
+$checkbox__label-padding     : 26px !default;
+$checkbox__spacer            : 18px !default;
+$checkbox__gap               : 0 !default;
 $checkbox__icon-border-radius: 2px !default;
+$checkbox__icon-fill         : $color-primary !default;
 $checkbox__icon-transition   : $transition-base !default;
+$checkbox__border            : 2px solid $form-elements-border-color !default;
+$checkbox__border--checked   : none !default;
 
 .checkbox {
     position: relative;
@@ -21,6 +22,10 @@ $checkbox__icon-transition   : $transition-base !default;
         &:checked + .checkbox__icon {
             opacity: 1;
         }
+
+        &:checked ~ .checkbox__label:before {
+            border: $checkbox__border--checked;
+        }
     }
 
     &__label {
@@ -31,22 +36,22 @@ $checkbox__icon-transition   : $transition-base !default;
         &:before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: $checkbox__label-width;
-            height: $checkbox__label-height;
-            border: $checkbox__label-border;
+            top: $checkbox__gap;
+            left: $checkbox__gap;
+            width: $checkbox__spacer;
+            height: $checkbox__spacer;
+            border: $checkbox__border;
             border-radius: $checkbox__icon-border-radius;
         }
     }
 
     &__icon {
         position: absolute;
-        top: 5px;
-        left: 5px;
-        width: $checkbox__icon-size;
-        height: $checkbox__icon-size;
-        fill: $color-primary;
+        top: $checkbox__gap;
+        left: $checkbox__gap;
+        width: $checkbox__spacer;
+        height: $checkbox__spacer;
+        fill: $checkbox__icon-fill;
         cursor: pointer;
         opacity: 0;
         transition: $checkbox__icon-transition;
