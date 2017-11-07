@@ -21,7 +21,7 @@ $link-line-height     : $font-line-height !default;
     }
     // visible only for screen readers and when focused
     &--visually-hidden {
-        @include visually-hidden;
+        @include visually-hidden($usePseudo: true);
     }
 }
 

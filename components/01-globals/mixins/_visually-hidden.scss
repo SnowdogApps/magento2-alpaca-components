@@ -1,4 +1,4 @@
-@mixin visually-hidden() {
+@mixin visually-hidden($usePseudo:'') {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -7,14 +7,15 @@
     padding: 0;
     overflow: hidden;
     border: 0;
-
-    &:focus,
-    &:active {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
+    @if $usePseudo != '' {
+        &:focus,
+        &:active {
+            clip:     auto;
+            height:   auto;
+            margin:   0;
+            overflow: visible;
+            position: static;
+            width:    auto;
+        }
     }
 }
