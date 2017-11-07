@@ -14,6 +14,12 @@ module.exports = {
         'maxValue': '1000',
         'minValue': '0',
         'type': 'text'
+      },
+      suffix: {
+        'lowerText': '$',
+        'upperText': '$',
+        'lowerClass': '',
+        'upperClass': ''
       }
     },
     'rangeInputLower': {
@@ -29,7 +35,7 @@ module.exports = {
       }
     },
     'rangeInputUpper': {
-      'class': 'range-filter_input range-filter__input--upper',
+      'class': 'range-filter__input range-filter__input--upper',
       'label': {
         'class': 'range-filter__label',
         'text': 'Maximum value'

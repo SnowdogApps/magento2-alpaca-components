@@ -12,9 +12,10 @@
   function createRangeSlider(rangeFilter) {
 
     const rangeSlider = rangeFilter.querySelector('.range-filter__slider'),
-          inputMax = rangeFilter.querySelector('.range-filter__upper'),
-          inputMin = rangeFilter.querySelector('.range-filter__lower');
+          inputMax = rangeFilter.querySelector('.range-filter__field--upper'),
+          inputMin = rangeFilter.querySelector('.range-filter__field--lower');
 
+    rangeSlider.classList.add('noUi-extended');
     initNoUiSlider(rangeSlider);
     bindEvents(rangeSlider, inputMin, inputMax);
 
