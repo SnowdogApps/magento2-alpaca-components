@@ -1,0 +1,13 @@
+<form class="newsletter {{ class }}">
+    <div class="newsletter__heading {{ heading.class }}">
+        {{ heading.text }}
+    </div>
+
+    <div class="newsletter__controls">
+        {{> '@input' input }}
+        {{render '@button' button}}
+    </div>
+    <div class="newsletter__agreements">
+         {{render '@checkbox' checkbox }}
+    </div>
+</form>

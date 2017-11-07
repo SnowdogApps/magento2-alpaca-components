@@ -1,72 +1,82 @@
-$tab__padding                   : 15px !default;
-$tab__margin                    : 10px !default;
-$tab__title-border              : 1px solid $gray-light !default;
-$tab__title-background          : $gray-lightest !default;
-$tab__title-border-color--active: $gray-light !default;
-$tab__title-border-width--active: 1px 1px 0 1px !default;
-$tab__title-border-style--active: solid !default;
-$tab__title-background--active  : $white !default;
-$tab__icon-width                : 13px !default;
-$tab__icon-height               : 13px !default;
-$tab__icon-fill                 : $gray !default;
-$tab__icon-transition           : transform 0.3s !default;
-$tab__content-transition        : opacity 0.5s !default;
-
+$tab__border-width                      : 1px !default;
+$tab__border-width--large               : 8px !default;
+// title
+$tab__title-padding                     : $spacer--medium !default;
+$tab__title-border                      : $tab__border-width solid $gray-light !default;
+$tab__title-border--large               : $tab__border-width--large solid $gray-light !default;
+$tab__title-border--large-active        : $tab__border-width--large solid $color-primary !default;
+$tab__title-color                       : $color-secondary !default;
+$tab__title-color--active               : $color-primary !default;
+$tab__title-font-weight--large          : $font-weight-normal !default;
+$tab__title-font-weight--large-active   : $font-weight-bold !default;
+$tab__title-font-weight                 : $font-weight-bold !default;
+$tab__title-background                  : $bg-color-base !default;
+$tab__title-background--active          : $color-secondary !default;
+$tab__title-background--large-active    : $gray-light !default;
+// content
+$tab__content-padding                   : $spacer--medium $spacer--large !default;
+$tab__content-padding--large            : $spacer--large $spacer--extra-large !default;
+// icon
+$tab__icon-padding                      : $spacer--medium !default;
+$tab__icon-size                         : 48px !default;
 .tab {
-    position: relative;
-
     @include mq($screen-l) {
         display: flex;
         flex-flow: row wrap;
     }
-
     &__title {
         position: relative;
-        padding: $tab__padding;
-        border-bottom: $tab__title-border;
-        font-weight: 700;
+        padding: $tab__title-padding;
+        border-top: $tab__title-border;
+        background: $tab__title-background;
+        text-align: center;
+        font-weight: $tab__title-font-weight;
+        color: $tab__title-color;
         cursor: pointer;
-        text-align: left;
+
+        &:nth-last-child(2) {
+            border-bottom: $tab__title-border;
+
+            @include mq($screen-l) {
+                border-bottom: $tab__title-border--large;
+            }
+        }
 
         @include mq($screen-l) {
-            flex-basis: 25%;
+            flex: 1;
             order: -1;
-            margin-right: $tab__margin;
-            background-color: $tab__title-background;
-            border-bottom: 0 none;
-            bottom: -1px;
+            border-top: none;
+            border-bottom : $tab__title-border--large;
+            font-weight: $tab__title-font-weight--large;
         }
 
         &--active {
-            @include mq($screen-l) {
-                border-color: $tab__title-border-color--active;
-                border-width: $tab__title-border-width--active;
-                border-style: $tab__title-border-style--active;
-                background-color: $tab__title-background--active;
-                z-index: 2;
-            }
+            border-top: none;
+            border-bottom: none;
+            background: $tab__title-background--active;
+            color: $tab__title-color--active;
 
-            .tabs__icon {
-                transform: rotate(45deg);
+            &:nth-last-child(2) {
+                border: none;
 
                 @include mq($screen-l) {
-                    display: none;
+                    border-bottom: $tab__title-border--large-active;
                 }
             }
-        }
-    }
+            @include mq($screen-l) {
+                border-bottom: $tab__title-border--large-active;
+                background-color: $tab__title-background--large-active;
+                font-weight: $tab__title-font-weight--large-active;
+                color: $tab__title-color;
+                z-index: 2;
+            }
+            .tab__icon {
+                transform: rotateX(180deg);
 
-    &__icon {
-        position: absolute;
-        top: 17px;
-        right: 10px;
-        width: $tab__icon-width;
-        height: $tab__icon-height;
-        fill: $tab__icon-fill;
-        transition: $tab__icon-transition;
-
-        @include mq($screen-l) {
-            display: none;
+                svg {
+                    fill: $color-primary;
+                }
+            }
         }
     }
 
@@ -74,14 +84,13 @@ $tab__content-transition        : opacity 0.5s !default;
         position: relative;
         display: none;
         width: 100%;
-        padding: 10px;
+        padding: $tab__content-padding;
         z-index: -1;
         opacity: 0;
-        overflow-y: hidden;
-        transition: $tab__content-transition;
         overflow: hidden;
 
         @include mq($screen-l) {
+            padding: $tab__content-padding--large;
             flex-basis: 100%;
             z-index: 1;
         }
@@ -89,11 +98,34 @@ $tab__content-transition        : opacity 0.5s !default;
         &--active {
             display: block;
             opacity: 1;
-            border-bottom: $tab__title-border;
-            @include mq($screen-l) {
-                border-bottom: 0 none;
-                border-top: $tab__title-border;
+
+            &:nth-last-child(1) {
+                border-bottom: $tab__title-border;
+
+                @include mq($screen-l) {
+                    border-bottom: none;
+                }
             }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: $tab__icon-size;
+        height: $tab__icon-size;
+        padding: $tab__icon-padding;
+
+        @include mq($screen-l) {
+            display: none;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
         }
     }
 }

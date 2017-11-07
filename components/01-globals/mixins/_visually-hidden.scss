@@ -7,4 +7,14 @@
     padding: 0;
     overflow: hidden;
     border: 0;
+
+    &:focus,
+    &:active {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
 }
