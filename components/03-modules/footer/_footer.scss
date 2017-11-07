@@ -1,3 +1,4 @@
+$footer__padding                     : $spacer--medium 0 !default;
 $footer__bg-color                    : $gray-darker !default;
 $footer__bg-color--screen-l          : $gray-dark !default;
 $footer__font-color                  : $white !default;
@@ -18,7 +19,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
 
 .footer {
     background-color: $footer__bg-color;
-    padding: $spacer--medium 0;
+    padding: $footer__padding;
 
     @include mq($screen-m) {
         padding-bottom: 0;
@@ -86,7 +87,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
                 content: '';
                 position: absolute;
                 bottom: 1px;
-                left: 0%;
+                left: 0;
                 height: $footer__link-height-after-hover;
                 background-color: $footer__link-color-after-hover;
                 width: 100%;

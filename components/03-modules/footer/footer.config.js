@@ -1,5 +1,9 @@
 module.exports = {
   context: {
+    handlerClass: 'container',
+    bottomBar: {
+      handlerClass: 'container'
+    },
     linkList: {
       class: 'dropdown-list@screen-m js-is-open-screen-m dropdown-list--dark',
       dropdowns: [

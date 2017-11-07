@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div class="container footer__handler">
+<footer class="footer {{ class }}" {{{ attributes }}}>
+    <div class="footer__handler {{ handlerClass }}">
         <section class="footer__newsletter">
             {{ render '@newsletter' }}
         </section>
@@ -9,9 +9,9 @@
         </section>
     </div>
 
-    <section class="footer__bottom-bar">
-        <div class="container footer__bottom-bar-handler">
-            <div class="footer__social-handler">
+    <section class="footer__bottom-bar {{ bottomBar.class }}" {{{ bottomBar.attributes }}}>
+        <div class="footer__bottom-bar-handler {{ bottomBar.handlerClass }}">
+            <div class="footer__social-handler {{ bottomBar.socialHandler }}">
                 <span class="footer__social-list-subtitle">
                     {{ socialListSubtitle }}
                 </span>
