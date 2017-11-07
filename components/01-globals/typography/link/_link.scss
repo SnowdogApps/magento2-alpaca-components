@@ -2,15 +2,15 @@ $link__color                       : $color-primary !default;
 $link__decoration                  : underline !default;
 $link__font-family                 : $font-family-base !default;
 $link__font-weight                 : $font-weight-normal !default;
-$link__hover-color                 : $color-secondary !default;
-$link__hover-decoration            : underline !default;
+$link__color-hover                 : $color-secondary !default;
+$link__decoration-hover            : underline !default;
 $link__font-size                   : $font-size-base !default;
 $link__line-height                 : $font-line-height !default;
 $link__transition                  : $transition-base !default;
 $link__color--secondary            : $gray !default;
 $link__height-after--secondary     : 8px !default;
 $link__background-after--secondary : $color-primary !default;
-$link__color-hover                 : $white !default;
+$link__color-hover--secondary      : $white !default;
 $link__font-weight-hover--secondary: $font-weight-bold !default;
 
 .link {
@@ -22,8 +22,8 @@ $link__font-weight-hover--secondary: $font-weight-bold !default;
     line-height: $link__line-height;
 
     &:hover {
-        color: $link__hover-color;
-        text-decoration: $link__hover-decoration;
+        color: $link__color-hover;
+        text-decoration: $link__decoration-hover;
     }
     // visible only for screen readers and when focused
     &--visually-hidden {
@@ -55,7 +55,7 @@ $link__font-weight-hover--secondary: $font-weight-bold !default;
 
         &:hover,
         &:focus {
-            color: $link__color-hover;
+            color: $link__color-hover--secondary;
             font-weight: $link__font-weight-hover--secondary;
             text-decoration: none;
 
