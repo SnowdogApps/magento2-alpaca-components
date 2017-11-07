@@ -47,6 +47,8 @@ module.exports = {
         textarea: {
           class: 'dashboard__input',
           field: {
+            id: 'comment',
+            name: 'comment',
             placeholder: 'Comment'
           }
         },
@@ -57,6 +59,8 @@ module.exports = {
             class: 'dashboard__label'
           },
           field: {
+            id: 'qty',
+            name: 'qty',
             class: 'dashboard__field-qty'
           }
         },
@@ -98,6 +102,8 @@ module.exports = {
         textarea: {
           class: 'dashboard__input',
           field: {
+            id: 'comment',
+            name: 'comment',
             placeholder: 'Comment'
           }
         },
@@ -108,6 +114,8 @@ module.exports = {
             class: 'dashboard__label'
           },
           field: {
+            id: 'qty',
+            name: 'qty',
             class: 'dashboard__field-qty'
           }
         },

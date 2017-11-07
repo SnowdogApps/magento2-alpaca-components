@@ -497,6 +497,8 @@ module.exports = {
         contactEmailAddress: {
           class: 'dashboard__item',
           field: {
+            id: 'email',
+            name: 'email',
             placeholder: 'Contact Email Address'
           }
         },
@@ -511,6 +513,8 @@ module.exports = {
                   text: 'Quantity to Return'
                 },
                 field: {
+                  id: 'qtyReturnValue',
+                  name: 'qtyReturnValue',
                   placeholder: 'Quantity to Return'
                 }
               }
@@ -602,6 +606,8 @@ module.exports = {
         comments: {
           class: 'dashboard__item',
           field: {
+            id: 'comments',
+            name: 'comments',
             placeholder: 'Comments'
           }
         },
