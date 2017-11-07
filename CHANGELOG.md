@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+ - update form elements style and structure (improve accessibility):
+   checkbox/radio button, select, input, textarea
 
 ## [0.3.0] - 06.11.2017
 ### Added
@@ -26,8 +29,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Project description
 
 ### Changed
- - update form elements style and structure (improve accessibility):
-   checkbox/radio button, select, input, textarea
  - Refactor banner styles
  - Optimize new banner images
  - Simplify banner template
