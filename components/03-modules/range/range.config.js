@@ -2,6 +2,7 @@ module.exports = {
   status: 'wip',
   preview: '@docs-only-styles',
   context: {
+    attributes: '',
     class: '',
     filter: {
       wrapperClass: '',
@@ -27,6 +28,8 @@ module.exports = {
       },
       'field': {
         class: 'range-filter__field range-filter__field--lower',
+        id: 'range-filter-min',
+        name: 'range-filter-min',
         placeholder: '',
         value: '0'
       }
@@ -39,6 +42,8 @@ module.exports = {
       },
       field: {
         class: 'range-filter__field range-filter__field--upper',
+        id: 'range-filter-max',
+        name: 'range-filter-max',
         placeholder: '',
         value: '1000'
       }
