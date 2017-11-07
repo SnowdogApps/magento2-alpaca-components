@@ -13,7 +13,6 @@ module.exports = {
     input: {
       class: ''
     }
-
   },
   variants: [
     {
