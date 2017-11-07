@@ -10,19 +10,16 @@
   }
 
   function createRangeSlider(rangeFilter) {
-
-    const rangeSlider = rangeFilter.querySelector('.range-filter__slider'),
-          inputMax = rangeFilter.querySelector('.range-filter__field--upper'),
-          inputMin = rangeFilter.querySelector('.range-filter__field--lower');
+    const inputMax = rangeFilter.querySelector('.range-filter__field--upper'),
+          inputMin = rangeFilter.querySelector('.range-filter__field--lower'),
+          rangeSlider = rangeFilter.querySelector('.range-filter__slider');
 
     rangeSlider.classList.add('noUi-extended');
     initNoUiSlider(rangeSlider);
     bindEvents(rangeSlider, inputMin, inputMax);
-
   }
 
   function initNoUiSlider(rangeSlider) {
-
     noUiSlider.create(rangeSlider, {
       start: [0, 1000],
       connect: true,
@@ -43,11 +40,9 @@
         }
       },
     });
-
   }
 
   function bindEvents(rangeSlider, inputMin, inputMax) {
-
     rangeSlider.noUiSlider.on('update', (values) => {
       inputMin.value = values[0];
       inputMax.value = values[1];
@@ -63,6 +58,5 @@
   }
 
   init();
-
 
 }());
