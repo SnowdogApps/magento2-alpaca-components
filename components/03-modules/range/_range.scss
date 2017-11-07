@@ -6,9 +6,8 @@ $range__handler-border             : none !default;
 $range__handler-border-radius      : 50% !default;
 $range__handler-box-shadow         : 0 2px 4px 0 rgba(51, 51, 51, 0.5) !default;
 $range__handler-offset-top         : -1 * $range__height !default;
-$range__handler-offset-left--lower : 16px !default;
-$range__handler-offset-right--upper: -7px !default;
-$range__track-bg-color             : #f1f1f1 !default;
+$range__track-bg-color             : red !default;
+$range__track-border-radius        : $border-radius;
 $range__track-border               : none !default;
 $range__dash-padding               : 0 $spacer--medium 0 $spacer !default;
 $range__suffix-padding             : 0 $spacer !default;
@@ -45,7 +44,10 @@ $range__suffix-padding             : 0 $spacer !default;
 .noUi-tooltip {
     display: none;
 }
-
+.noUi-base {
+    background-color: $range__track-bg-color;
+    border-radius: $range__track-border-radius;
+}
 .noUi-target {
     box-shadow: none;
     border: none;
@@ -53,6 +55,9 @@ $range__suffix-padding             : 0 $spacer !default;
     height: $range__height;
 }
 .noUi-handle {
+    &:hover {
+        cursor: pointer;
+    }
     .noUi-horizontal & {
         border-radius: $range__handler-border-radius;
         background: $range__handler-bg-color;
