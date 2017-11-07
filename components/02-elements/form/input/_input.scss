@@ -1,8 +1,10 @@
-$input__padding             : 0 $spacer--medium !default;
-$input__field-spacing       : 40px !default;
-$input__field-border        : 1px solid $form-elements-border-color !default;
-$input__field-border-radius : $form-elements-radius !default;
-$input__placeholder-color   : $gray !default;
+$input__padding                      : 0 $spacer--medium !default;
+$input__field-spacing                : 40px !default;
+$input__field-border                 : 1px solid $form-elements-border-color !default;
+$input__field-border-radius          : $form-elements-radius !default;
+$input__field-border-radius--textarea: $form-elements-radius--small !default;
+$input__field-line-height--textarea  : $font-line-height !default;
+$input__placeholder-color            : $gray !default;
 
 $input__min-height--textarea: 100px !default;
 
@@ -37,10 +39,12 @@ $input__min-height--textarea: 100px !default;
         }
 
         &--textarea {
-            border-radius: $form-elements-radius--small;
+            border-radius: $input__field-border-radius--textarea;
             min-width: 100%;
             max-width: 100%;
             min-height: $input__min-height--textarea;
+            padding: $spacer--medium;
+            line-height: $input__field-line-height--textarea;
         }
     }
 }
