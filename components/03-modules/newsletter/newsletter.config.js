@@ -9,6 +9,8 @@ module.exports = {
       class: 'newsletter__input',
       field: {
         placeholder: 'Enter your email address',
+        id: 'newsletterEmail',
+        name: 'newsletterEamil',
         class: 'newsletter__field'
       },
       label: {
@@ -20,10 +22,12 @@ module.exports = {
       text: 'Submit',
       class: 'newsletter__button'
     },
-    'checkbox': {
-      'class': 'newsletter__checkbox',
-      'id': 'newsletter',
-      'label': 'I agree to <a href="#">Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
+    checkbox: {
+      class: 'newsletter__checkbox',
+      id: 'newsletter',
+      label: {
+        text: 'I agree to <a href="#">Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
+      }
     }
   }
 };

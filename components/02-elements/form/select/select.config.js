@@ -3,6 +3,11 @@ module.exports = {
     label: {
       attribute: '',
       text: 'Label text',
+      class: 'select__label'
+    },
+    field: {
+      id: 'field-id',
+      name: 'field-name'
     },
     options: [
       {

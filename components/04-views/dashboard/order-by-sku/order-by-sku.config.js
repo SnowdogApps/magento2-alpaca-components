@@ -7,6 +7,8 @@ module.exports = {
           input: {
             class: 'dashboard-form__divider',
             field: {
+              id: 'sku',
+              name: 'sku',
               placeholder: 'SKU'
             }
           }
@@ -15,6 +17,8 @@ module.exports = {
           input: {
             class: 'dashboard-form__divider',
             field: {
+              id: 'qty',
+              name: 'qty',
               placeholder: 'Qty'
             }
           }
@@ -23,6 +27,8 @@ module.exports = {
           input: {
             class: 'dashboard-form__divider',
             field: {
+              id: 'sku2',
+              name: 'sku2',
               placeholder: 'SKU'
             }
           }
@@ -31,6 +37,8 @@ module.exports = {
           input: {
             class: 'dashboard-form__divider',
             field: {
+              id: 'qty2',
+              name: 'qty2',
               placeholder: 'Qty'
             }
           }
@@ -60,11 +68,14 @@ module.exports = {
     },
     fileUpload: {
       class: 'dashboard__item',
-      fileId: 'file',
       labelText: 'Your file (csv max 1 MB)',
-      labelTextSecond: 'Choose a file',
-      type: 'file',
-      name: 'uploadCSV',
+      input: {
+        id: 'file',
+        type: 'file',
+        name: 'uploadCSV',
+        formats: '.pdf,.doc,.png',
+        size: '1024'
+      },
       fileName: 'File not choosen',
       text: 'Choose a file',
       button: {

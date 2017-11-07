@@ -1,8 +1,24 @@
 module.exports = {
   context: {
-    id: 'id',
-    label: 'Radio Label',
-    name: 'radio',
-    class: ''
+    name: 'radio1',
+    legend: 'Choose option',
+    legendId: 'legend-id',
+    options: [
+      {
+        id: 'id1',
+        label: 'Option one',
+        class: ''
+      },
+      {
+        id: 'id2',
+        label: 'Option two',
+        class: ''
+      },
+      {
+        id: 'id3',
+        label: 'Options three',
+        class: ''
+      }
+    ]
   }
 };

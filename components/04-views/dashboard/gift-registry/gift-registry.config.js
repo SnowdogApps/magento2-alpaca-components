@@ -146,6 +146,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'event',
+                  name: 'event',
                   placeholder: 'Event'
                 }
               }
@@ -156,6 +158,8 @@ module.exports = {
               textarea: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'message',
+                  name: 'message',
                   placeholder: 'Message'
                 }
               }
@@ -256,6 +260,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'state',
+                  name: 'state',
                   placeholder: 'State/Province'
                 }
               }
@@ -264,6 +270,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'date',
+                  name: 'date',
                   placeholder: 'Event Date'
                 }
               }
@@ -277,6 +285,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'firstName',
+                  name: 'firstName',
                   placeholder: 'Firist name'
                 }
               }
@@ -285,6 +295,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'lastName',
+                  name: 'lastName',
                   placeholder: 'Last name'
                 }
               }
@@ -293,6 +305,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'email',
+                  name: 'email',
                   placeholder: 'Email'
                 }
               }
@@ -352,6 +366,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'firstName',
+                  name: 'firstName',
                   placeholder: 'First Name'
                 }
               }
@@ -360,6 +376,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'lastName',
+                  name: 'lastName',
                   placeholder: 'Last Name'
                 }
               }
@@ -368,6 +386,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'company',
+                  name: 'company',
                   placeholder: 'Company'
                 }
               }
@@ -376,6 +396,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'address',
+                  name: 'address',
                   placeholder: 'Address'
                 }
               }
@@ -389,6 +411,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'state',
+                  name: 'state',
                   placeholder: 'State/Province'
                 }
               }
@@ -397,6 +421,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'zipCode',
+                  name: 'zipCode',
                   placeholder: 'Zip/Posta Code'
                 }
               }
@@ -405,6 +431,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'county',
+                  name: 'country',
                   placeholder: 'Country'
                 }
               }
@@ -413,6 +441,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'phoneNumber',
+                  name: 'phoneNumber',
                   placeholder: 'Phone Number'
                 }
               }
@@ -421,6 +451,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'fax',
+                  name: 'fax',
                   placeholder: 'Fax'
                 }
               }

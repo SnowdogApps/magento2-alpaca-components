@@ -7,6 +7,8 @@ module.exports = {
           input: {
             class: 'dashboard-form__divider',
             field: {
+              id: 'giftCardCode',
+              name: 'giftCardCode',
               placeholder: 'Enter gitf card code'
             }
           }

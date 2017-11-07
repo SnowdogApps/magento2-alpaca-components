@@ -12,8 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
  - Dropdown list component
  - Footer module changed
-
-### Changed
+ - update form elements style and structure (improve accessibility):
+   checkbox/radio button, select, input, textarea
  - Tab styling that fits alpaca design.
 
 ## [0.3.0] - 06.11.2017

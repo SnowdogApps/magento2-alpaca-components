@@ -1,11 +1,12 @@
-$select__margin            : 10px !default;
-$select__padding           : 10px 15px !default;
-$select__border-radius     : $border-radius !default;
+$select__margin            : $spacer !default;
+$select__padding           : 0 $spacer--medium !default;
+$select__border            : 1px solid $form-elements-border-color !default;
+$select__spacing           : 40px !default;
+$select__border-radius     : 20px !default;
 $select__field-background  : $white !default;
-$select__list-border       : 1px solid #d9d9d9 !default;
-$select__input-border-width: 0 0 1px 0 !default;
-$select__input-boredr-style: solid !default;
-$select__input-border-color: #d9d9d9 !default;
+$select__dropdown-margin   : $spacer !default;
+$select__dropdown-padding  : $select__dropdown-margin * 2;
+$select__input-border-color: $form-elements-border-color !default;
 
 .select {
     margin-bottom: $select__margin;
@@ -17,52 +18,48 @@ $select__input-border-color: #d9d9d9 !default;
         &--native {
             width: 100%;
             padding: $select__padding;
-            border: $select__list-border;
+            border: $select__border;
             appearance: none;
         }
+    }
+    &__field-item {
+        position: relative;
+        height: $select__spacing;
+        line-height: $select__spacing;
+        padding: $select__padding;
+        cursor: pointer;
+        font-size: $font-size-base;
+    }
 
-        &-item {
-            position: relative;
-            padding: $select__padding;
-            cursor: pointer;
-        }
-
-        &-list {
+    &__field-list {
+        &--single {
+            height: $select__spacing;
+            line-height: $select__spacing;
+            padding: 0;
+            border: $select__border;
             border-radius: $select__border-radius;
+        }
+    }
 
+    &__field-input:focus {
+        outline: none;
+    }
+}
+// Choices.js lib styles overwrites
+.choices {
+    &.is-open {
+        .select__field-list {
             &--single {
-                display: inline-block;
-                padding: 0;
-                width: 100%;
-                border: $select__list-border;
-            }
-
-            &--dropdown {
-                border: $select__list-border;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom: 0;
             }
         }
-
-        &-input {
-            width: 100%;
-            display: block;
-            padding: $select__padding;
-            border-width: $select__input-border-width;
-            border-style: $select__input-boredr-style;
+    }
+    &__list--dropdown {
+        .is-open & {
+            border-radius: 0 0 $select__border-radius $select__border-radius;
             border-color: $select__input-border-color;
-
-            &:focus {
-                outline: none;
-            }
-        }
-        // Choices.js lib styles overwrites
-        .choices {
-            &.is-open {
-                .select__field {
-                    border-bottom-left-radius: 0;
-                    border-bottom-right-radius: 0;
-                    border-bottom: 0;
-                }
-            }
         }
     }
 }

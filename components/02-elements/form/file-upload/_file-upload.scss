@@ -1,12 +1,13 @@
-$file-upload-margin   : 15px !default;
-$file-upload-padding  : 15px !default;
-$file-upload-font-size: 14px !default;
+$file-upload__margin        : $spacer--medium !default;
+$file-upload__field-height  : 48px !default;
+$file-upload__font-size     : 14px !default;
+$file-upload__button-padding: 0 $spacer--large !default;
 
 .file-upload {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: $file-upload-margin;
+    margin-bottom: $file-upload__margin;
 
     &__handler {
         display: flex;
@@ -21,7 +22,7 @@ $file-upload-font-size: 14px !default;
         top: 0;
         opacity: 0;
         overflow: hidden;
-        height: 48px;
+        height: $file-upload__field-height;
         width: 100%;
         cursor: pointer;
         z-index: 2;
@@ -39,23 +40,23 @@ $file-upload-font-size: 14px !default;
     &__label {
         display: flex;
         flex-basis: 100%;
-        margin-bottom: 5px;
-        font-size: $file-upload-font-size;
+        margin-bottom: $spacer;
+        font-size: $file-upload__font-size;
     }
 
     &__name {
-        font-size: $file-upload-font-size;
-        margin-top: $file-upload-margin;
+        font-size: $file-upload__font-size;
+        margin-top: $file-upload__margin;
 
         @include mq($screen-s) {
-            margin-left: $file-upload-margin;
+            margin-left: $file-upload__margin;
             margin-top: 0;
         }
     }
 
     &__button {
         margin-bottom: 0;
-        padding: 10px 35px;
+        padding: $file-upload__button-padding;
         z-index: 1;
         width: 100%;
 
