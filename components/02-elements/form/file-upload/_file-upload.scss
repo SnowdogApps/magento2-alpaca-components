@@ -1,7 +1,8 @@
-$file-upload__margin      : $spacer--medium !default;
-$file-upload__padding     : $spacer--medium !default;
-$file-upload__field-height: 48px !default;
-$file-upload__font-size   : 14px !default;
+$file-upload__margin        : $spacer--medium !default;
+$file-upload__padding       : $spacer--medium !default;
+$file-upload__field-height  : 48px !default;
+$file-upload__font-size     : 14px !default;
+$file-upload__button-padding: 0 $spacer--large !default;
 
 .file-upload {
     position: relative;
@@ -56,7 +57,7 @@ $file-upload__font-size   : 14px !default;
 
     &__button {
         margin-bottom: 0;
-        padding: 0 $spacer--large;
+        padding: $file-upload__button-padding;
         z-index: 1;
         width: 100%;
 
