@@ -10,7 +10,7 @@ module.exports = {
       class: 'button--icon marketing-bar__close',
       iconId: 'close',
       iconClass: 'marketing-bar__close-icon',
-      attributes: 'type="button"',
+      attributes: 'type="button" aria-label="Close marketing bar"',
     },
   },
 };

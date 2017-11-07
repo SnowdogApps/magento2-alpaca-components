@@ -23,15 +23,18 @@
             {{ render '@logo' logo }}
             <div class="header__icons">
                 {{#each icons as |item| }}
-                    <a class="header__icons-item" href="#">
+                    <a class="header__icons-item"
+                       href="#"
+                       aria-label="{{ item.ariaLabel }}"
+                    >
                         <svg class="header__icon">
-                            <use xlink:href="{{ svg item }}"></use>
+                            <use xlink:href="{{ svg item.icon }}"></use>
                         </svg>
                     </a>
                 {{/each}}
                 <div class="header__minicart">
                     {{ render '@minicart-trigger' trigger }}
-                    {{ render '@popup' minicartPopup }}
+                    <!-- Tep commented render '@popup' minicartPopup -->
                 </div>
             </div>
             <div class="header__menu-trigger">
