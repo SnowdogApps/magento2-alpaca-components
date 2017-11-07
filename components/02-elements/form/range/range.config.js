@@ -3,9 +3,6 @@ module.exports = {
   preview: '@docs-only-styles',
   context: {
     class: '',
-    button: {
-      label: 'Filter'
-    },
     filter: {
       wrapperClass: '',
       input: {
