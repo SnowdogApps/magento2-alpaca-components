@@ -1,4 +1,4 @@
-<div class="dropdown-list {{ class }}" >
+<div class="dropdown-list {{ class }}" {{{ attributes }}}>
     <ul class="dropdown-list__list">
         {{#each dropdowns as |dropdown|}}
             <li class="
@@ -8,26 +8,29 @@
                     {{/if}}
                 "
             >
-                <{{ itemTag }} {{{ itemAttributes }}}
+                <{{ itemTag }}
                    class="dropdown-list__label"
+                   {{{ itemAttributes }}}
                    {{#if id }}
                         data-dropdown="{{ id }}"
                    {{/if}}
                 >
                     {{ title }}
+
                     {{#if collapse }}
                         <svg class="dropdown-list__icon">
                             <use xlink:href="{{ svg 'angle-down' }}"></use>
                         </svg>
                     {{/if}}
                 </{{ itemTag }}>
+
                 {{#if contentElement}}
                     <div id="{{ id }}"
                          class="dropdown-list__content"
                          data-content="{{ id }}"
                          aria-hidden="true"
                     >
-                        {{{ contentElement }}}
+                        {{ render (component contentElement) contentContext }}
                     </div>
                 {{/if}}
             </li>
