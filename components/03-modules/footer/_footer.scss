@@ -1,0 +1,173 @@
+$footer__padding                     : $spacer--medium 0 !default;
+$footer__bg-color                    : $gray-darker !default;
+$footer__bg-color--screen-l          : $gray-dark !default;
+$footer__font-color                  : $white !default;
+$footer__transition                  : $transition-base !default;
+
+$footer__newsletter-max-width        : 400px !default;
+$footer__newsletter-width--screen-l  : 30% !default;
+
+$footer__links-width--screen-l       : 70% !default;
+$footer__link-color-after-hover      : $color-primary !default;
+$footer__link-height-after-hover     : 8px !default;
+$footer__link-font-weight-after-hover: $font-weight-bold !default;
+
+$footer__bottom-bar-background       : $gray-darker !default;
+$footer__bottom-bar-color            : $gray !default;
+$footer__bottom-bar-font-size        : $font-size-small !default;
+
+
+.footer {
+    background-color: $footer__bg-color;
+    padding: $footer__padding;
+
+    @include mq($screen-m) {
+        padding-bottom: 0;
+    }
+
+    @include mq($screen-l) {
+        background-color: $footer__bg-color--screen-l;
+    }
+
+    &__handler {
+        margin: 0 auto $spacer--medium;
+
+        @include mq($screen-m) {
+            margin: 0 auto;
+        }
+
+        @include mq($screen-l) {
+            display: flex;
+            flex-flow: row wrap;
+        }
+    }
+
+    &__newsletter {
+        margin: 0 auto $spacer--medium;
+        max-width: $footer__newsletter-max-width;
+
+        @include mq($screen-l) {
+            width: $footer__newsletter-width--screen-l;
+            order: 1;
+            padding-top: $spacer--medium;
+        }
+    }
+
+    &__links {
+        @include mq($screen-l) {
+            width: $footer__links-width--screen-l;
+        }
+
+        .dropdown-list {
+            @include mq($screen-m) {
+                padding: 0;
+            }
+        }
+
+        .dropdown-list__item {
+            @include mq($screen-m) {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &__links-list {
+        padding: $spacer--medium 0;
+
+        .link {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            color: $footer__font-color;
+            text-decoration: none;
+            transition: $footer__transition;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 1px;
+                left: 0;
+                height: $footer__link-height-after-hover;
+                background-color: $footer__link-color-after-hover;
+                width: 100%;
+                z-index: -1;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: $footer__transition;
+            }
+
+            &:hover,
+            &:focus {
+                color: $footer__font-color;
+                font-weight: $footer__link-font-weight-after-hover;
+                text-decoration: none;
+
+                &:after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+
+    &__bottom-bar {
+        background: $footer__bottom-bar-background;
+        color: $footer__bottom-bar-color;
+    }
+
+    &__bottom-bar-handler {
+        @include mq($screen-m) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__social-handler {
+        margin-bottom: $spacer--medium;
+
+        @include mq($screen-m) {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            order: 1;
+            margin: 0;
+        }
+    }
+
+    &__social-list-subtitle {
+        display: none;
+        @include mq($screen-m) {
+            display: block;
+            margin-right: $spacer--medium;
+            font-size: $footer__bottom-bar-font-size;
+        }
+    }
+
+    &__copyright {
+        display: block;
+        font-size: $footer__bottom-bar-font-size;
+        text-align: center;
+
+        @include mq($screen-m) {
+            padding-left: $spacer;
+        }
+
+        @include mq($screen-l) {
+            padding-left: $spacer--medium;
+        }
+    }
+
+    // Can't add just &__social-list-item
+    .footer__social-list-item {
+        padding-right: $spacer--medium;
+
+        @include mq($screen-m) {
+            padding-right: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}

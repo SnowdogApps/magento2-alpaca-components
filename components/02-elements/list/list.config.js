@@ -40,15 +40,15 @@ module.exports = {
         elements: [
           {
             icon: 'facebook',
-            text: 'Facebook'
+            iconLink: '#'
           },
           {
             icon: 'twitter',
-            text: 'Twitter'
+            iconLink: '#'
           },
           {
             icon: 'linkedin',
-            text: 'Linkedin'
+            iconLink: '#'
           }
         ]
       }

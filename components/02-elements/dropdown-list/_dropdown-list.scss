@@ -1,75 +1,112 @@
-$dropdown-list-padding         : 10px !default;
-$dropdown-list-background      : $white !default;
-$dropdown-list-font-size       : $font-size-extra-small !default;
-$dropdown-list-icon-transition : transform 0.3s, opacity 0.3s !default;
-$dropdown-list-icon-color      : $gray !default;
-$dropdown-list-icon-width      : 10px !default;
-$dropdown-list-icon-height     : 6px !default;
-$dropdown-list-icon-top        : 20px !default;
-$dropdown-list-icon-right      : 15px !default;
-$dropdown-list-icon-inner-base : 8px !default;
-$dropdown-list-link-color      : $font-color-base !default;
-$dropwodn-list-inner-item-color: $color-primary !default;
+$dropdown-list__width                    : 100% !default;
+$dropdown-list__bg-color                 : $white !default;
+$dropdown-list__border-radius            : 0 !default;
+$dropdown-list__outline                  : none !default;
+$dropdown-list__font-size                : $font-size-base !default;
+$dropdown-list__transition-height        : height 0.3s !default;
+$dropdown-list__transition               : $transition-base !default;
+$dropdown-list__content-padding          : $spacer--medium !default;
+
+// List item
+$dropdown-list__item-padding             : $spacer--medium !default;
+$dropdown-list__item-color               : $font-color-base !default;
+$dropdown-list__item-color-hover         : $color-primary !default;
+$dropdown-list__item-color--open         : $color-primary !default;
+$dropdown-list__item-bg-color            : $white !default;
+$dropdown-list__item-bg-color--open      : $black !default;
+$dropdown-list__item-bg-color-hover      : $black !default;
+$dropdown-list__item-bg-color--level2    : $gray !default;
+
+// List icon
+$dropdown-list__icon-width               : 16px !default;
+$dropdown-list__icon-height              : 16px !default;
+$dropdown-list__icon-fill                : $black !default;
+$dropdown-list__icon-fill-hover          : $color-primary !default;
+$dropdown-list__icon-fill--open          : $color-primary !default;
+
+// Dark list variant
+$dropdown-list__bg-color--dark           : $gray-dark !default;
+$dropdown-list__list-padding--dark       : $spacer--medium !default;
+$dropdown-list__item-border-color--dark  : $gray-darker !default;
+$dropdown-list__icon-fill--dark          : $white !default;
+$dropdown-list__item-color--dark         : $white !default;
+$dropdown-list__item-color-hover--dark   : $white !default;
+$dropdown-list__item-bg-color-hover--dark: $gray-dark !default;
+
+// Nested list variables
+$dropdown-list__inner-item-bg-color      : $gray-dark !default;
+$dropdown-list__inner-item-color         : $white !default;
+$dropdown-list__icon-fill--inner         : $white !default;
+$dropdown-list__inner-item-border        : 1px solid $white !default;
+$dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
 .dropdown-list {
-    width: 100%;
+    width: $dropdown-list__width;
     position: relative;
-    padding: $dropdown-list-padding;
-    background-color: $dropdown-list-background;
+    background-color: $dropdown-list__bg-color;
 
-    @include mq($screen-l) {
-        max-width: 320px;
-    }
+    &--dark {
+        background-color: $dropdown-list__bg-color--dark;
+        padding: 0 $dropdown-list__list-padding--dark;
 
-    @include mq($screen-xl) {
-        padding-left: 0;
-    }
+        .dropdown-list__item {
+            border-bottom: 2px solid $dropdown-list__item-border-color--dark;
+        }
 
-    &--item-wide {
-        .dropdown-list__list {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-                flex-flow: row wrap;
+        .dropdown-list__item,
+        .dropdown-list__item--open {
+            .dropdown-list__label {
+                background-color: $dropdown-list__bg-color--dark;
+                color: $dropdown-list__item-color--dark;
+                font-weight: $font-weight-bold;
+
+                &:hover,
+                &:focus {
+                    color: $dropdown-list__item-color-hover--dark;
+                    background-color: $dropdown-list__item-bg-color-hover--dark;
+
+                    & .dropdown-list__icon {
+                        fill: $dropdown-list__icon-fill--dark;
+                    }
+                }
+
+                & .dropdown-list__icon {
+                    fill: $dropdown-list__icon-fill--dark;
+                }
             }
         }
 
-        .dropdown-list__item {
-            flex-basis: 100%;
+        .dropdown-list__content {
+            background-color: $dropdown-list__bg-color--dark;
         }
     }
 
     &__list {
         display: block;
-        width: 100%;
+        width: $dropdown-list__width;
         list-style-type: none;
         padding: 0;
         margin: 0;
-
-        @include mq($min-screen: $screen-m, $max-screen: $screen-l) {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
     }
 
     &__icon {
         position: absolute;
-        top: $dropdown-list-icon-top;
-        right: $dropdown-list-icon-right;
-        width: $dropdown-list-icon-width;
-        height: $dropdown-list-icon-height;
-        color: $dropdown-list-icon-color;
-        transition: $dropdown-list-icon-transition;
-
-        @include mq($screen-m) {
-            right: 10px;
-        }
+        right: 10px;
+        top: 0;
+        bottom: 0;
+        width: $dropdown-list__icon-width;
+        height: $dropdown-list__icon-height;
+        margin: auto;
+        fill: $dropdown-list__icon-fill;
+        transition: $dropdown-list__transition;
 
         &--inner {
-            width: $dropdown-list-icon-inner-base;
-            height: $dropdown-list-icon-inner-base;
-            top: 15px;
-            opacity: 0.7;
+            width: $dropdown-list__icon-width;
+            height: $dropdown-list__icon-width;
+            top: 0;
+            bottom: 0;
+            fill: $dropdown-list__icon-fill--inner;
+            margin: auto 0;
         }
     }
 
@@ -78,84 +115,65 @@ $dropwodn-list-inner-item-color: $color-primary !default;
         display: block;
         width: 100%;
         padding: 0;
-        font-weight: 700;
-        font-size: $dropdown-list-font-size;
-        text-transform: uppercase;
+        font-size: $dropdown-list__font-size;
         cursor: pointer;
-        transition: box-shadow 0.5s;
 
-        @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-            flex-basis: 24%;
-
-            &:hover {
-                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
-            }
-        }
-
+        &--open,
         &.open {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
-            }
+            & .dropdown-list__label {
+                color: $dropdown-list__item-color--open;
+                background-color: $dropdown-list__item-bg-color--open;
 
-            .filter__list {
-                margin-top: 10px;
-            }
-
-            .dropdown-list__link {
-                text-decoration: none;
-
-                & > .dropdown-list__icon {
+                & .dropdown-list__icon {
+                    fill: $dropdown-list__icon-fill--open;
                     transform: rotate(180deg);
                 }
-                @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-                    &:after {
-                        visibility: visible;
-                    }
-                }
+            }
+        }
+
+        &--collapse {
+            .dropdown-list__label {
+                padding-right: 30px;
             }
         }
     }
 
-    &__link {
+    &__label {
+        display: block;
+        position: relative;
+        width: 100%;
+        color: $dropdown-list__item-color;
+        background-color: $dropdown-list__item-bg-color;
+        padding: $dropdown-list__item-padding;
+        margin: 0;
+        border: 0;
+        border-radius: $dropdown-list__border-radius;
         text-decoration: none;
+        text-align: left;
+        cursor: pointer;
+        transition: $dropdown-list__transition;
 
-        @include links(active) {
-            display: block;
-            padding: 15px;
-            font-weight: 700;
-            color: $dropdown-list-link-color;
-            transition: box-shadow 0.5s;
-
-            @include mq($screen-m) {
-                padding: 15px 22px 15px 15px;
-            }
-        }
-
-        @include links(hover) {
-            color: $dropdown-list-link-color;
+        &:hover,
+        &:focus {
+            color: $dropdown-list__item-color-hover;
+            background-color: $dropdown-list__item-bg-color-hover;
             text-decoration: none;
-            box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
+            outline: $dropdown-list__outline;
 
-            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-                box-shadow: none;
+            .dropdown-list__icon {
+                fill: $dropdown-list__icon-fill-hover;
             }
-        }
-
-        // hack to set box-shadow on opening absolute list and title element
-        &:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 10px;
-            background-color: $dropdown-list-background;
-            width: 100%;
-            z-index: 109;
-            visibility: hidden;
-            transition: visibility 0.5s;
         }
     }
 
+    &__content {
+        height: 0;
+        overflow: hidden;
+        padding: 0 $dropdown-list__content-padding;
+        transition: $dropdown-list__transition-height;
+    }
+
+    // Nested lists styles
     &__inner-list {
         list-style-type: none;
         display: block;
@@ -163,71 +181,83 @@ $dropwodn-list-inner-item-color: $color-primary !default;
         padding: 0;
         margin: 0;
         overflow: hidden;
-        transition: margin 0.3s, height 0.5s;
-        font-size: $dropdown-list-font-size;
-
-        &--level1 {
-            @include mq($min-screen: $screen-m, $max-screen: $screen-xl) {
-                position: absolute;
-                width: 100%;
-                background-color: $dropdown-list-background;
-                box-shadow: 0 3px 18px 0 rgba(0, 0, 0, 0.13);
-                z-index: 99;
-            }
-        }
-
-        &--level2 {
-            padding-left: 20px;
-        }
+        transition: $dropdown-list__transition;
+        font-size: $dropdown-list__font-size;
     }
 
     &__inner-item {
         position: relative;
         display: block;
+        padding: 0;
+        background-color: $dropdown-list__inner-item-bg-color;
+        border-bottom: $dropdown-list__inner-item-border;
 
         &.open {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                & > .dropdown-list__icon {
-                    transform: rotate(45deg);
-                }
-            }
-        }
-
-        &--level1 {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                @include links(hover) {
-                    font-weight: 700;
-                    text-decoration: none;
-                }
+            .dropdown-list__icon--inner {
+                transform: rotate(180deg);
             }
         }
 
         &--level2 {
-            .dropdown-list__inner-link {
-                text-decoration: none;
-
-                @include links(hover) {
-                    font-weight: 400;
-                    color: $dropwodn-list-inner-item-color;
-                    text-decoration: underline;
-                }
+            background-color: $dropdown-list__item-bg-color--level2;
+            border-bottom: $dropdown-list__inner-item-border--level2;
+            .dropdown-list__inner-label {
+                color: $dropdown-list__item-color;
             }
         }
     }
 
-    &__inner-link {
+    &__inner-label {
+        display: block;
+        position: relative;
         text-decoration: none;
+        padding: $dropdown-list__item-padding;
+        color: $dropdown-list__inner-item-color;
 
-        @include links(active) {
-            display: block;
-            padding: 15px 20px;
-            text-transform: none;
-            font-weight: 400;
-            color: $dropdown-list-link-color;
+        &:hover,
+        &:focus {
+            color: $dropdown-list__inner-item-color;
+            text-decoration: none;
+        }
+    }
+
+    @include mq($screen-m) {
+        // from $screen-m drpdown list displays inline and with opened list
+        &\@screen-m {
+            .dropdown-list__list {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+
+            .dropdown-list__item {
+                width: 25%;
+                cursor: default;
+            }
+
+            .dropdown-list__label {
+                cursor: default;
+                &:hover,
+                &:focus {
+                    color: $dropdown-list__item-color;
+                    background-color: $dropdown-list__item-bg-color;
+                }
+            }
+            .dropdown-list__icon {
+                display: none;
+            }
+            .dropdown-list__content {
+                height: auto;
+            }
+
+            &.dropdown-list--dark {
+                .dropdown-list__label {
+                    &:hover,
+                    &:focus {
+                        color: $dropdown-list__item-color-hover--dark;
+                        background-color: $dropdown-list__item-bg-color-hover--dark;
+                    }
+                }
+            }
         }
     }
 }
