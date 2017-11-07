@@ -1,4 +1,5 @@
-$input__padding             : $spacer $spacer--medium !default;
+$input__padding             : 0 $spacer--medium !default;
+$input__field-spacing       : 40px !default;
 $input__field-border        : 1px solid $form-elements-border-color !default;
 $input__field-border-radius : $form-elements-radius !default;
 $input__placeholder-color   : $gray !default;
@@ -21,6 +22,8 @@ $input__min-height--textarea: 100px !default;
 
     &__field {
         width: 100%;
+        height: $input__field-spacing;
+        line-height: $input__field-spacing;
         padding: $input__padding;
         border: $input__field-border;
         border-radius: $input__field-border-radius;

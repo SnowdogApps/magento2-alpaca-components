@@ -1,7 +1,8 @@
 $select__margin            : $spacer !default;
-$select__padding           : $spacer $spacer--medium !default;
+$select__padding           : 0 $spacer--medium !default;
 $select__border            : 1px solid $form-elements-border-color !default;
-$select__border-radius     : 17px !default;
+$select__spacing           : 40px !default;
+$select__border-radius     : 20px !default;
 $select__field-background  : $white !default;
 $select__dropdown-margin   : $spacer !default;
 $select__dropdown-padding  : $select__dropdown-margin * 2;
@@ -23,6 +24,8 @@ $select__input-border-color: $form-elements-border-color !default;
     }
     &__field-item {
         position: relative;
+        height: $select__spacing;
+        line-height:$select__spacing;
         padding: $select__padding;
         cursor: pointer;
         font-size: $font-size-base;
@@ -30,6 +33,8 @@ $select__input-border-color: $form-elements-border-color !default;
 
     &__field-list {
         &--single {
+            height: $select__spacing;
+            line-height: $select__spacing;
             padding: 0;
             border: $select__border;
             border-radius: $select__border-radius;
