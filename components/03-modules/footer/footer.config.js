@@ -5,7 +5,7 @@ module.exports = {
       handlerClass: 'container'
     },
     linkList: {
-      class: 'dropdown-list@screen-m js-is-open-screen-m dropdown-list--dark',
+      class: 'dropdown-list@screen-m dropdown-list--is-open@screen-m dropdown-list--dark',
       dropdowns: [
         {
           itemTag: 'button',
