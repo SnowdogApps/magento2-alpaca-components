@@ -43,13 +43,5 @@ module.exports = {
         value: '1000'
       }
     }
-  },
-  variants: [
-    {
-      name: 'inline',
-      context: {
-        class: 'input--inline'
-      }
-    }
-  ]
+  }
 };
