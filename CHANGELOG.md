@@ -8,10 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
  - Add quantity-updater module
  - Add minus icon
+ - `dropdown-list` component to `side-menu`
 
 ### Changed
  - Dropdown list component
  - Footer module changed
+ - Name of `dropdown-menu` element to `mega-menu`
+ - Mega menu styling that fits alpaca design
 
 ### Changed
  - Tab styling that fits alpaca design.
