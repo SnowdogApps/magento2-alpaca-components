@@ -17,8 +17,14 @@ module.exports = {
       }
     ],
     icons: [
-      'phone',
-      'account'
+      {
+        icon: 'phone',
+        ariaLabel: 'Store phone number'
+      },
+      {
+        icon: 'account',
+        ariaLabel: 'Customer Account'
+      }
     ],
     logo: {
       class: 'header__logo',
@@ -40,7 +46,7 @@ module.exports = {
       class: 'button--icon search-form__button',
       iconId: 'search',
       iconClass: 'button__icon',
-      attributes: 'type="button"',
+      attributes: 'type="button" aria-label="Search button"',
     },
     likeButton: {
       tag: 'button',
