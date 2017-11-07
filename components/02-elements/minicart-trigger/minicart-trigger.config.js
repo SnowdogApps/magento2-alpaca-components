@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     class: 'button',
-    attributes: 'type="button"',
+    attributes: '',
     counter: '2'
   }
 }

@@ -12,7 +12,6 @@ $minicart-trigger__counter-size      : 20px !default;
 
 .minicart-trigger {
     position: relative;
-    display: block;
     padding: $minicart-trigger__padding;
     margin: $minicart-trigger__margin;
     border: 0;
@@ -44,6 +43,7 @@ $minicart-trigger__counter-size      : 20px !default;
         border-radius: $minicart-trigger__counter-size;
         line-height: $minicart-trigger__counter-size;
         font-size: $minicart-trigger__counter-font-size;
+        text-align: center;
         color: $minicart-trigger__counter-color;
         background-color: $minicart-trigger__counter-background;
     }
