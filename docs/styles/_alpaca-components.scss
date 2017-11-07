@@ -18,6 +18,7 @@
 // Libs
 @import '../../components/01-globals/libs/normalize';
 @import '../../components/01-globals/libs/choices';
+@import '../../components/01-globals/libs/nouislider';
 
 // Typography
 @import '../../components/01-globals/_fonts/fonts';
@@ -87,6 +88,7 @@
 @import '../../components/03-modules/popup/popup';
 @import '../../components/03-modules/product/product';
 @import '../../components/03-modules/products-list-item/products-list-item';
+@import '../../components/03-modules/range/range';
 @import '../../components/03-modules/quantity-update/quantity-update';
 @import '../../components/03-modules/review/review';
 @import '../../components/03-modules/search/search';
