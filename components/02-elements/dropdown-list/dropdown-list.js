@@ -1,11 +1,11 @@
 'use-strict'
 
-const dropdownCollapsLabel = '.dropdown-list__item--collapse .dropdown-list__label',
-      dropdownItem         = [ ...document.querySelectorAll(dropdownCollapsLabel) ],
-      openClass            = 'dropdown-list__item--open',
-      contentClass         = 'dropdown-list__content',
-      mqClass              = 'js-is-open-screen-m',
-      mq                   = '(min-width: 768px)';
+const dropdownCollapseLabel = '.dropdown-list__item--collapse .dropdown-list__label',
+      dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
+      openClass             = 'dropdown-list__item--open',
+      contentClass          = 'dropdown-list__content',
+      mqClass               = 'js-is-open@screen-m',
+      mq                    = '(min-width: 768px)';
 
 function setListHeight(item) {
   return Array.from(item.children)
@@ -79,7 +79,7 @@ dropdownItem.forEach(
 window.addEventListener('resize', () => {
   const dropdownMediumOpen = document.querySelector(`.${mqClass}`);
   if (dropdownMediumOpen) {
-    const dropdownItems =  [ ...dropdownMediumOpen.querySelectorAll(dropdownCollapsLabel)];
+    const dropdownItems =  [ ...dropdownMediumOpen.querySelectorAll(dropdownCollapseLabel)];
     dropdownItems.forEach(key => resetMqMediumOpen(key));
   }
 });
