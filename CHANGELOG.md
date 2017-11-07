@@ -9,11 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Add quantity-updater module
  - Add minus icon
 
-### Update
- - Add link modifier with custom border on hover
-
 ### Changed
  - Dropdown list component
+ - Add link modifier with custom border on hover
  - Footer module changed
  - update form elements style and structure (improve accessibility):
    checkbox/radio button, select, input, textarea
