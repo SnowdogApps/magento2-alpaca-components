@@ -34,8 +34,8 @@ $quantity-updater__icon-spacing                      : 12px !default;
     }
 
     &__button {
-        border: 1px solid $gray-dark;
-        background: $white;
+        border: $quantity-update__button-border;
+        background: $quantity-update__button-background;
         margin: 0;
 
         &--plus {
@@ -75,8 +75,6 @@ $quantity-updater__icon-spacing                      : 12px !default;
     }
 
     // Disable spin buttons in number input type
-    // Project rules
-
     input[type="number"]::-webkit-outer-spin-button, // sass-lint:disable-line no-vendor-prefixes
     input[type="number"]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
         -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
