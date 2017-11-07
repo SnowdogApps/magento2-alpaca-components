@@ -1,4 +1,4 @@
-@mixin visually-hidden($usePseudo:'') {
+@mixin visually-hidden($usePseudo: '') {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
