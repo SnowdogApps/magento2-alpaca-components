@@ -1,13 +1,13 @@
-$gallery__stage-margin-bottom: $spacer--medium !default;
+$gallery__stage-margin-bottom      : $spacer--medium !default;
 $gallery__nav-vertical-margin-right: 40px !default;
-$gallery__thumb-spacing: $spacer--medium !default;
-$gallery__thumb-border: none !default;
-$gallery__thumb-border--active: 1px solid $green !default;
-$gallery__thumb-width: 48px !default;
-$gallery__thumb-width--large: 80px !default;
-$gallery__thumb-arrow-width: 48px !default;
-$gallery__thumb-arrow-height: 48px !default;
-$gallery__icon-arrow-width: 12px !default;
+$gallery__thumb-spacing            : $spacer--medium !default;
+$gallery__thumb-border             : none !default;
+$gallery__thumb-border--active     : 1px solid $green !default;
+$gallery__thumb-width              : 48px !default;
+$gallery__thumb-width--large       : 80px !default;
+$gallery__thumb-arrow-width        : 48px !default;
+$gallery__thumb-arrow-height       : 48px !default;
+$gallery__icon-arrow-width         : 12px !default;
 
 .gallery {
     display: flex;
