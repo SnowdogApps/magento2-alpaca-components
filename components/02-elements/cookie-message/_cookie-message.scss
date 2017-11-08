@@ -1,27 +1,35 @@
-$cookie-message__margin     : 10px !default;
-$cookie-message__padding    : 10px !default;
-$cookie-message__width      : 100% !default;
-$cookie-message__color      : $gray-lightest !default;
-$cookie-message__font-size  : $font-size-extra-small !default;
-$cookie-message__transition : height 0.3s !default;
-$cookie-message__close-width: 35px !default;
-$cookie-message__link-border: 1px solid $white !default;
-$cookie-message__icon-fill  : $white !default;
-$cookie-message__icon-width : 10px !default;
+$cookie-message__margin          : 10px !default;
+$cookie-message__padding         : 10px !default;
+$cookie-message__width           : 100% !default;
+$cookie-message__background-color: $gray-light !default;
+$cookie-message__color           : $gray !default;
+$cookie-message__font-size       : $font-size-small !default;
+$cookie-message__transition      : height 0.3s !default;
+$cookie-message__close-width     : 35px !default;
+$cookie-message__link-border     : 1px solid $white !default;
+$cookie-message__icon-fill       : $white !default;
+$cookie-message__icon-width      : 10px !default;
 
 .cookie-message {
+    display: flex;
+    align-items: stretch;
     width: $cookie-message__width;
-    background-color: $cookie-message__color;
+    background-color: $cookie-message__background-color;
     transition: $cookie-message__transition;
     box-sizing: border-box;
 
     &__container {
-        position: relative;
-        display: block;
-        margin: 0 auto;
-        max-width: $max-content-width;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //position: relative;
+        //display: block;
+        //margin: 0 auto;
+        //padding: $spacer--medium $spacer--large;
+        //max-width: $max-content-width;
+        min-width: 100%;
         text-align: center;
-        padding: $cookie-message__padding 35px;
+        //padding: $cookie-message__padding 35px;
     }
 
     &__message {
@@ -32,15 +40,19 @@ $cookie-message__icon-width : 10px !default;
 
     &__text {
         font-size: $cookie-message__font-size;
-        font-weight: 700;
+        color: $cookie-message__color;
+        //font-weight: 700;
         display: block;
-        margin-bottom: $cookie-message__margin;
-        text-transform: uppercase;
+        //margin-bottom: $cookie-message__margin;
+        //text-transform: uppercase;
+        text-align: left;
+        margin-right: 8px;
+        padding: 16px 0 16px 32px;
 
         @include mq($screen-m) {
             display: inline-block;
             margin-bottom: 0;
-            margin-right: 35px;
+            //margin-right: 35px;
         }
     }
 
@@ -55,27 +67,31 @@ $cookie-message__icon-width : 10px !default;
     }
 
     &__close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: $cookie-message__close-width;
-        height: $cookie-message__close-width;
+        margin-left: 8px;
+        flex-basis: 80px;
+        flex-shrink: 0;
+        //position: absolute;
+        //top: 0;
+        //right: 0;
+        //width: $cookie-message__close-width;
+        //height: $cookie-message__close-width;
+        height: 48px;
         background: none;
         border: none;
-        padding: 0;
+        //padding: 0;
         cursor: pointer;
-
-        &--icon {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            fill: $cookie-message__icon-fill;
-            width: $cookie-message__icon-width;
-            height: $cookie-message__icon-width;
-        }
+        //
+        //&--icon {
+        //    position: absolute;
+        //    top: 0;
+        //    left: 0;
+        //    right: 0;
+        //    bottom: 0;
+        //    margin: auto;
+        //    fill: $cookie-message__icon-fill;
+        //    width: $cookie-message__icon-width;
+        //    height: $cookie-message__icon-width;
+        //}
     }
 
     &--with-button {
@@ -84,51 +100,51 @@ $cookie-message__icon-width : 10px !default;
         bottom: 0;
         left: 0;
         z-index: 6;
-
-        .cookie-message__message {
-            display: block;
-            margin-bottom: $cookie-message__margin;
-
-            @include mq($screen-m) {
-                display: inline-block;
-                margin-bottom: 0;
-                margin-right: 35px;
-            }
-        }
-
-        .cookie-message__text {
-            text-transform: none;
-            display: inline;
-            font-weight: 400;
-            margin: 0;
-        }
-
-        .cookie-message__link {
-            text-transform: none;
-            display: inline;
-            border: none;
-            padding: 0;
-            margin: 0;
-            text-decoration: underline;
-
-            @include links(hover) {
-                color: $black;
-            }
-        }
-
-        .cookie-message__close {
-            display: inline-block;
-            position: relative;
-            top: auto;
-            right: auto;
-            width: auto;
-            height: auto;
-            font-weight: 400;
-            font-size: $cookie-message__font-size;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        //
+        //.cookie-message__message {
+        //    display: block;
+        //    margin-bottom: $cookie-message__margin;
+        //
+        //    @include mq($screen-m) {
+        //        display: inline-block;
+        //        margin-bottom: 0;
+        //        margin-right: 35px;
+        //    }
+        //}
+        //
+        //.cookie-message__text {
+        //    text-transform: none;
+        //    display: inline;
+        //    font-weight: 400;
+        //    margin: 0;
+        //}
+        //
+        //.cookie-message__link {
+        //    text-transform: none;
+        //    display: inline;
+        //    border: none;
+        //    padding: 0;
+        //    margin: 0;
+        //    text-decoration: underline;
+        //
+        //    @include links(hover) {
+        //        color: $black;
+        //    }
+        //}
+        //
+        //.cookie-message__close {
+        //    display: inline-block;
+        //    position: relative;
+        //    top: auto;
+        //    right: auto;
+        //    width: auto;
+        //    height: auto;
+        //    font-weight: 400;
+        //    font-size: $cookie-message__font-size;
+        //    &:hover {
+        //        text-decoration: underline;
+        //    }
+        //}
     }
 
     &--closed {

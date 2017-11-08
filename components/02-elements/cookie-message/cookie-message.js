@@ -1,6 +1,6 @@
 // TO DO - Needs a refactor
 
-'use strict'
+'use strict';
 
 const messageClose = document.querySelector('.cookie-message__close'),
       messageTop = document.querySelector('.cookie-message--top'),

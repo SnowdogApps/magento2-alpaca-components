@@ -4,16 +4,16 @@ module.exports = {
     linkAnchor: 'Action\'s details',
     closeIcon: 'close',
     text: 'Some action / promotion text',
-    clas: 'cookie-message--top'
+    class: 'cookie-message--top'
   },
   variants: [
     {
       name: 'With button',
       context: {
         linkAnchor: 'Details',
-        closeIcon: false,
-        closeLabel: 'OK, close',
-        text: 'This website uses cookies. For information on cookies and how you can disable them see our',
+        closeIcon:  true,
+        closeLabel: 'Close  X',
+        text: 'This site uses cookies. Find out more about their purpose and settings in your browser. By browsing the site you are agreeing to use cookies according to your browser settings.',
         class: 'cookie-message--with-button'
       }
     }
