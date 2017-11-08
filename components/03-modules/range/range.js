@@ -1,4 +1,4 @@
-/* global noUiSlider */
+/* global noUiSlider, wNumb */
 (function () { // eslint-disable-line
   'use strict';
 
@@ -20,25 +20,28 @@
   }
 
   function initNoUiSlider(rangeSlider) {
+    let minValue = parseInt(rangeSlider.getAttribute('data-min')),
+        maxValue = parseInt(rangeSlider.getAttribute('data-max'));
+
+    if (!minValue) {
+      minValue = 0;
+    }
+    if (!maxValue) {
+      maxValue = 1000;
+    }
+
     noUiSlider.create(rangeSlider, {
-      start: [0, 1000],
+      start: [minValue, maxValue],
       connect: true,
-      tooltips: [
-        true,
-        true
-      ],
+      step: 1,
       range: {
-        'min': 0,
-        'max': 200
+        'min': minValue,
+        'max': maxValue
       },
-      formatter: {
-        to(value) {
-          return value + ',-';
-        },
-        from(value) {
-          return value.replace(',-', '');
-        }
-      },
+      formatter: wNumb({
+        decimals: 0,
+        thousand: ' '
+      }),
     });
   }
 
