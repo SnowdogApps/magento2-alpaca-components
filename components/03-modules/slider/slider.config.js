@@ -24,6 +24,10 @@ module.exports = {
           tag: 'div',
           name: 'Some product name',
           price: '$ 200.00',
+          badge: {
+            text: 'New',
+            class: 'badge--new'
+          }
         }
       },
       {

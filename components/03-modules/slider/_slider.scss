@@ -1,11 +1,12 @@
-$slider__margin           : $spacer--medium;
-$slider__transition       : $transition-base;
+$slider__margin                  : $spacer--medium !default;
+$slider__item-padding            : $spacer--medium !default;
+$slider__transition              : $transition-base !default;
 
-$slider__navigation-icon__spacing: 48px;
+$slider__navigation-icon__spacing: 48px !default;
 
-$slider__icon-spacing     : 25px;
-$slider__icon-fill        : $green;
-$slider__icon-fill-hover  : #007025;
+$slider__icon-spacing            : 25px !default;
+$slider__icon-fill               : $green !default;
+$slider__icon-fill-hover         : #007025 !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -26,11 +27,15 @@ $slider__icon-fill-hover  : #007025;
 
     &__item {
         padding: 0;
-        min-width: 100%;
-        margin-right: 15px;
+        min-width: 50%;
+        padding-right: $slider__item-padding;
         border: 0;
 
-        @include mq($screen-xl) {
+        @include mq($screen-m) {
+            min-width: 33%;
+        }
+
+        @include mq($screen-l) {
             min-width: 25%;
         }
 
@@ -47,6 +52,10 @@ $slider__icon-fill-hover  : #007025;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mq($screen-m) {
+            display: none;
+        }
     }
 
     &__navigation-icon {
