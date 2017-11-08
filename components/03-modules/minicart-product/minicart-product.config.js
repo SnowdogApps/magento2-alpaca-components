@@ -16,7 +16,7 @@ module.exports = {
       },
       field: {
         attribute: 'type="number" value="1"',
-        class: '',
+        class: 'minicart-product__qty-input',
         placeholder: 'Qty'
       }
     },
