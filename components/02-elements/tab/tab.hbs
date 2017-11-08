@@ -3,10 +3,12 @@
         <div class="tab__title {{#if active}}tab__title--active{{/if}}"
              data-tab="{{ tabId }}"
         >
-            <svg class="tab__icon">
-                <use xlink:href="{{ svg 'plus' }}"/>
-            </svg>
             {{ title }}
+            <div class="tab__icon">
+                <svg>
+                    <use xlink:href="{{ svg 'angle-down' }}"/>
+                </svg>
+            </div>
         </div>
 
         <div class="tab__content {{#if active}}tab__content--active{{/if}}"

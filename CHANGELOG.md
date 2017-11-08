@@ -6,13 +6,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+ - Add quantity-updater module
+ - Add minus icon
  - Add slider module
  - Add lory lib
  - Add 2 icons to slider
  - Add optimized product images
 
 ### Changed
+ - Dropdown list component
+ - Add link modifier with custom border on hover
+ - Footer module changed
+ - update form elements style and structure (improve accessibility):
+   checkbox/radio button, select, input, textarea
+ - Tab styling that fits alpaca design.
+
+## [0.3.0] - 06.11.2017
+### Added
+- Spacer global variables
+
+### Changed
  - Variables in password strength element
+ - Popup component
+ - Table styles
+ - Newsletter module
 
 ## [0.2.0] - 28.10.2017
 ### Added

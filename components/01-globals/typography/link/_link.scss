@@ -1,44 +1,67 @@
-$link-color           : $color-primary !default;
-$link-decoration      : underline !default;
-$link-font-family     : $font-family-base !default;
-$link-font-weight     : $font-weight-normal !default;
-$link-hover-color     : $color-secondary !default;
-$link-hover-decoration: underline !default;
-$link-transition      : $transition-base !default;
-$link-font-size       : $font-size-base !default;
-$link-line-height     : $font-line-height !default;
+$link__color                       : $color-primary !default;
+$link__decoration                  : underline !default;
+$link__font-family                 : $font-family-base !default;
+$link__font-weight                 : $font-weight-normal !default;
+$link__color-hover                 : $color-secondary !default;
+$link__decoration-hover            : underline !default;
+$link__font-size                   : $font-size-base !default;
+$link__line-height                 : $font-line-height !default;
+$link__transition                  : $transition-base !default;
+$link__color--secondary            : $gray !default;
+$link__height-after--secondary     : 8px !default;
+$link__background-after--secondary : $color-primary !default;
+$link__color-hover--secondary      : $white !default;
+$link__font-weight-hover--secondary: $font-weight-bold !default;
+
 .link {
-    color: $link-color;
-    text-decoration: $link-decoration;
-    transition: $link-transition;
-    font-family: $link-font-family;
-    font-weight: $link-font-weight;
-    line-height: $link-line-height;
+    color: $link__color;
+    text-decoration: $link__decoration;
+    transition: $link__transition;
+    font-family: $link__font-family;
+    font-weight: $link__font-weight;
+    line-height: $link__line-height;
 
     &:hover {
-        color: $link-hover-color;
-        text-decoration: $link-hover-decoration;
+        color: $link__color-hover;
+        text-decoration: $link__decoration-hover;
     }
     // visible only for screen readers and when focused
     &--visually-hidden {
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;
+        @include visually-hidden($usePseudo: true);
+    }
 
-        &:focus,
-        &:active,
+    &--secondary {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        color: $link__color--secondary;
+        text-decoration: none;
+        transition: $link__transition;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: $link__height-after--secondary;
+            background-color: $link__background-after--secondary;
+            z-index: -1;
+            transition: $link__transition;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        &:hover,
         &:focus {
-            clip: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            position: static;
-            width: auto;
+            color: $link__color-hover--secondary;
+            font-weight: $link__font-weight-hover--secondary;
+            text-decoration: none;
+
+            &:after {
+                transform:  scaleX(1);
+            }
         }
     }
 }

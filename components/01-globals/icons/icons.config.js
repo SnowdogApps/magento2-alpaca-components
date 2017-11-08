@@ -12,6 +12,7 @@ module.exports = {
       'instagram',
       'google-plus',
       'mobile-menu',
+      'minus',
       'search',
       'phone',
       'user',

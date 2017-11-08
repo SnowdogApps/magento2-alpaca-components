@@ -1,5 +1,27 @@
-<footer class="footer">
-    <div class="container">
-        Footer
+<footer class="footer {{ class }}" {{{ attributes }}}>
+    <div class="footer__handler {{ handlerClass }}">
+        <section class="footer__newsletter">
+            {{ render '@newsletter' }}
+        </section>
+
+        <section class="footer__links">
+            {{ render '@dropdown-list' linkList }}
+        </section>
     </div>
+
+    <section class="footer__bottom-bar {{ bottomBar.class }}" {{{ bottomBar.attributes }}}>
+        <div class="footer__bottom-bar-handler {{ bottomBar.handlerClass }}">
+            <div class="footer__social-handler {{ bottomBar.socialHandler }}">
+                <span class="footer__social-list-subtitle">
+                    {{ socialListSubtitle }}
+                </span>
+
+                {{ render '@list--icon' socialIconList }}
+            </div>
+
+            <small class="footer__copyright">
+                {{ copyrightText }}
+            </small>
+        </div>
+    </section>
 </footer>
