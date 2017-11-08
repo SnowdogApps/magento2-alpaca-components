@@ -1,4 +1,4 @@
-$minicart-content__spacing        : 15px !default;
+$minicart-content__spacing        : $spacer--medium !default;
 $minicart-content__font-size      : $font-size-small !default;
 $minicart-content__font-size-big  : $font-size-large !default;
 $minicart-content__border         : 3px solid $gray !default;
@@ -14,6 +14,22 @@ $minicart-content__icon-fill-hover: $gray-darker !default;
 
     @include mq($screen-l) {
         max-height: calc(100vh - 120px);
+    }
+
+    &__bar {
+        height: $spacer;
+        width: 100%;
+        background-color: $gray-light;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: $minicart-content__spacing;
+        padding: $minicart-content__spacing 0 $spacer;
+        border-bottom: $minicart-content__border;
     }
 
     &__title {
@@ -66,16 +82,6 @@ $minicart-content__icon-fill-hover: $gray-darker !default;
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
-    }
-
-    &__total {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-        margin-bottom: $minicart-content__spacing;
-        padding: $minicart-content__spacing 0;
-        border-bottom: $minicart-content__border;
     }
 
     &__button {

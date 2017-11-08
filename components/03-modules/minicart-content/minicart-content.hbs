@@ -1,17 +1,17 @@
 <div class="minicart-content {{ class }}" {{{ attributes }}}>
-    {{ render '@minicart-product' }}
-    {{ render '@minicart-product' }}
+    <div class="minicart-content__bar">
+
+    </div>
     <div class="minicart-content__total">
         <div class="minicart-content__cart">
             {{ total }}
         </div>
-
         <div class="minicart-content__summary">
             {{ price }}
         </div>
     </div>
-
-    {{> '@button' checkout }}
-
-    {{> '@button--secondary' editCart }}
+    {{ render '@button--secondary' checkout }}
+    {{ render '@minicart-product' }}
+    {{ render '@minicart-product' }}
+    {{> '@button' editCart }}
 </div>

@@ -21,13 +21,13 @@ module.exports = {
     ],
     checkout: {
       tag: 'button',
-      class: 'minicart-content__button',
+      class: 'button--secondary minicart-content__button',
       attributes: 'type="button"',
       text: 'Go to Checkout'
     },
     editCart: {
       tag: 'button',
-      class: 'button--secondary minicart-content__button',
+      class: 'minicart-content__button',
       attributes: 'type="button"',
       text: 'View and edit cart'
     }
