@@ -21,22 +21,27 @@ module.exports = {
             elements: [
               {
                 text: 'Contact',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Frequently asked questions (FAQ)',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'How to buy',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Track your package',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Guides',
+                linkClass: 'link--secondary',
                 link: '#'
               }
             ]
@@ -56,18 +61,22 @@ module.exports = {
             elements: [
               {
                 text: 'Delivery time',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Payments',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Delivery cost',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Returns and exchanges',
+                linkClass: 'link--secondary',
                 link: '#'
               }
             ]
@@ -87,18 +96,22 @@ module.exports = {
             elements: [
               {
                 text: '30 days for return',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Guarantee',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: '454 Brands',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Discounts',
+                linkClass: 'link--secondary',
                 link: '#'
               }
             ]
@@ -118,22 +131,27 @@ module.exports = {
             elements: [
               {
                 text: 'About us',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Certificates and safety',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Prizes and customer feedback',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Cookie policy',
+                linkClass: 'link--secondary',
                 link: '#'
               },
               {
                 text: 'Regulations',
+                linkClass: 'link--secondary',
                 link: '#'
               }
             ]
