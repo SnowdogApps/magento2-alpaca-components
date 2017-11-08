@@ -1,8 +1,18 @@
 $slider__margin                  : $spacer--medium !default;
 $slider__item-padding            : $spacer--medium !default;
 $slider__transition              : $transition-base !default;
-
 $slider__navigation-icon__spacing: 48px !default;
+$slider__name-font-weight        : $font-weight-base !default;
+$slider__name-font-size          : $font-size-base !default;
+
+$slider__price-font-weight       : $font-weight-bold !default;
+$slider__price-color             : $black !default;
+$slider__price-old-color         : $black !default;
+$slider__price-old-font-weight   : $font-weight-base !default;
+$slider__price-old-font-size     : $font-size-extra-small !default;
+$slider__price-new-color         : $color-primary !default;
+$slider__price-new-font-wieght   : $font-weight-bold !default;
+$slider__price-new-font-size     : $font-size-small !default;
 
 $slider__icon-spacing            : 25px !default;
 $slider__icon-fill               : $green !default;
@@ -73,12 +83,16 @@ $slider__icon-fill-hover         : #007025 !default;
 
     &__name {
         flex-basis: 100%;
-        font-weight: $font-weight-base;
+        font-weight: $slider__name-font-weight;
 
         @include mq($screen-m) {
             flex-basis: auto;
             margin-right: $spacer;
             margin-bottom: 0;
+        }
+
+        @include mq($screen-l) {
+            font-size: $slider__name-font-size;
         }
     }
 
@@ -86,8 +100,8 @@ $slider__icon-fill-hover         : #007025 !default;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        color: $black;
-        font-weight: $font-weight-bold;
+        color: $slider__price-color;
+        font-weight: $slider__price-font-weight;
 
         @include mq($screen-m) {
             flex-flow: column;
@@ -99,9 +113,9 @@ $slider__icon-fill-hover         : #007025 !default;
     &__price-old {
         display: block;
         margin-right: $spacer;
-        color: $black;
-        font-weight: $font-weight-base;
-        font-size: $font-size-extra-small;
+        color: $slider__price-old-color;
+        font-weight: $slider__price-old-font-weight;
+        font-size: $slider__price-old-font-size;
         text-decoration: line-through;
 
         @include mq($screen-m) {
@@ -110,9 +124,9 @@ $slider__icon-fill-hover         : #007025 !default;
     }
 
     &__price-new {
-        color: $color-primary;
-        font-size: $font-size-small;
-        font-weight: $font-weight-bold;
+        color: $slider__price-new-color;
+        font-size: $slider__price-new-font-size;
+        font-weight: $slider__price-new-font-wieght;
     }
 
     &__badge {
