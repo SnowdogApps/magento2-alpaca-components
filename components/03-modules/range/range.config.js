@@ -26,7 +26,7 @@ module.exports = {
         class: 'range-filter__label',
         text: 'Minimum value'
       },
-      'field': {
+      field: {
         class: 'range-filter__field range-filter__field--lower',
         id: 'range-filter-min',
         name: 'range-filter-min',
