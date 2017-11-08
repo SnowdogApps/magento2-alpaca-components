@@ -1,6 +1,5 @@
 module.exports = {
   context: {
-    title: 'Shopping Bag',
     total: 'Cart Subtotal:',
     price: '$ 200.00',
     elements: [

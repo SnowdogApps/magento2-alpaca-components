@@ -1,5 +1,5 @@
 $minicart-product__image-width           : 72px !default;
-$minicart-product__qty-width             : 50% !default;
+$minicart-product__qty-width             : 40% !default;
 $minicart-product__details-label-color   : $color-primary !default;
 $minicart-product__details-label-bg-color: $white !default;
 $minicart-product__details-icon-size     : 14px !default;
@@ -45,20 +45,43 @@ $minicart-product__action-icon-color     : $color-secondary !default;
     &__price {
         width: 100%;
         font-weight: $font-weight-bold;
-        margin-bottom: $spacer;
+        margin-bottom: 3px;
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
     }
     &__qty {
-        width: $minicart-product__qty-width;
-        margin-bottom: $spacer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-form {
+            margin-bottom: 0;
+        }
+        flex: 1 $minicart-product__qty-width;
+        max-width: $minicart-product__qty-width;
+        margin-bottom: 0;
+        &-input {
+            margin-bottom: 0;
+        }
+        &-label {
+            margin: 0 $spacer 0 0;
+        }
     }
     &__action {
+        display: flex;
         width: $minicart-product__action-width;
         padding-right: $spacer--medium;
     }
     &__button {
-        background-color: $minicart-product__action-button-bg;
+        margin-left: $spacer;
+        padding: 12px;
         border: 0;
-        .button__icon {
+        background-color: $minicart-product__action-button-bg;
+        &-icon {
+            height: 24px;
+            width: 24px;
+            padding: 2px;
             fill: $minicart-product__action-icon-color;
         }
         &:hover,

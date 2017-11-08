@@ -11,7 +11,8 @@ module.exports = {
       class: 'input--inline minicart-product__qty-input',
       label: {
         attribute: '',
-        text: 'Qty',
+        text: 'Qty:',
+        class: 'minicart-product__qty-label'
       },
       field: {
         attribute: 'type="number" value="1"',
@@ -20,20 +21,20 @@ module.exports = {
       }
     },
     editIcon: {
-      tag: 'button',
-      attributes: 'type="button" aria-label="edit product in your shopping cart"',
+      tag: 'a',
+      attributes: 'href="#" aria-label="edit product in your shopping cart"',
       text: '',
       class: 'button--icon minicart-product__button',
-      iconClass: 'button__icon',
-      iconId: 'edit',
+      iconClass: 'button__icon minicart-product__button-icon',
+      iconId: 'edit'
     },
     removeIcon: {
-      tag: 'button',
-      attributes: 'type="button" aria-label="remove this product from your shopping cart"',
+      tag: 'a',
+      attributes: 'href="#" aria-label="remove this product from your shopping cart"',
       text: '',
       class: 'button--icon minicart-product__button',
-      iconClass: 'button__icon',
-      iconId: 'remove',
+      iconClass: 'button__icon minicart-product__button-icon',
+      iconId: 'remove'
     },
     configurable: true,
     detailsList: {

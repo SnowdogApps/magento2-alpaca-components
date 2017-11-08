@@ -12,16 +12,16 @@
         <div class="minicart-product__price">
             {{ productPrice }}
         </div>
-        <div class="minicart-product__qty">
-            <form>
-                {{ render '@input--inline' qtyInput }}
-            </form>
-        </div>
-        <div class="minicart-product__action">
-            {{ render '@button--icon' editIcon }}
-            {{ render '@button--icon' removeIcon }}
+        <div class="minicart-product__bottom">
+            <div class="minicart-product__qty">
+                <form class="minicart-product__qty-form">
+                    {{ render '@input--inline' qtyInput }}
+                </form>
+            </div>
+            <div class="minicart-product__action">
+                {{ render '@button--icon' editIcon }}
+                {{ render '@button--icon' removeIcon }}
+            </div>
         </div>
     </div>
-
-
 </div>
