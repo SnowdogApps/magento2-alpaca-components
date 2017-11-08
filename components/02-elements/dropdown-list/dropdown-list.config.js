@@ -5,6 +5,7 @@ module.exports = {
       {
         itemTag: 'a',
         title: 'All',
+        class: '',
         itemAttributes: 'href="#"',
         collapse: false
       },
@@ -12,6 +13,7 @@ module.exports = {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
         title: 'dropdown title',
+        class: '',
         id: 'dropdown-1',
         collapse: true,
         contentElement: 'image'
@@ -19,6 +21,7 @@ module.exports = {
       {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-2"',
+        class: '',
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
         collapse: true,
@@ -28,6 +31,7 @@ module.exports = {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-3"',
         title: 'dropdown title',
+        class: '',
         id: 'dropdown-3',
         collapse: true,
         contentElement: 'image'
@@ -36,6 +40,7 @@ module.exports = {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-4"',
         title: 'dropdown title',
+        class: '',
         id: 'dropdown-4',
         collapse: true,
         contentElement: 'paragraph'

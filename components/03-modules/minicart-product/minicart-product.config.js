@@ -7,6 +7,35 @@ module.exports = {
     },
     productName: 'Some product name',
     productPrice: '$85.00',
+    attributes: {
+      class: 'minicart-product__attributes',
+      dropdowns: [
+        {
+          itemTag: 'button',
+          class: 'minicart-product__attributes-button',
+          itemAttributes: 'aria-expanded="false" aria-controls="see-details"',
+          title: 'See details',
+          id: 'see-details',
+          collapse: true,
+          contentElement: 'list--description',
+          contentContext: {
+            listTag: 'ul',
+            elementTag: 'li',
+            class: 'minicart-product__attributes-list',
+            elements: [
+              {
+                label: 'Label',
+                value: 'Value'
+              },
+              {
+                label: 'Label',
+                value: 'Value'
+              }
+            ]
+          }
+        }
+      ]
+    },
     qtyInput: {
       class: 'input--inline minicart-product__qty-input',
       label: {
@@ -36,19 +65,6 @@ module.exports = {
       iconClass: 'button__icon minicart-product__button-icon',
       iconId: 'remove'
     },
-    configurable: true,
-    detailsList: {
-      class: 'minicart-product__details',
-      dropdowns: [
-        {
-          itemTag: 'button',
-          itemAttributes: 'aria-expanded="false" aria-controls="minicart-product-details-1"',
-          title: 'see product details',
-          id: 'minicart-product-details-1',
-          collapse: true,
-          contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
-        },
-      ]
-    }
+    configurable: true
   }
 }
