@@ -1,14 +1,18 @@
-'use strict'
-
 /* globals lory */
 
-const slider = document.querySelector('.slider');
+(function() { // eslint-disable-line
+  'use strict'
 
-lory(slider, {
-  rewind: true,
-  enableMouseEvents: true,
-  classNameFrame: 'slider__frame',
-  classNameSlideContainer: 'slider__slides',
-  classNamePrevCtrl: 'slider__prev',
-  classNameNextCtrl: 'slider__next'
-});
+  const sliders = [...document.querySelectorAll('.slider')];
+
+  sliders.forEach(slider => {
+    lory(slider, {
+      rewind: true,
+      enableMouseEvents: true,
+      classNameFrame: 'slider__frame',
+      classNameSlideContainer: 'slider__slides',
+      classNamePrevCtrl: 'slider__prev',
+      classNameNextCtrl: 'slider__next'
+    });
+  });
+}());

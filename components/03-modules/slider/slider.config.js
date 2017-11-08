@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    script: true,
     iconPrev: 'slider-prev',
     iconNext: 'slider-next',
     iconClass: 'slider__icon',
