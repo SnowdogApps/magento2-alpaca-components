@@ -47,6 +47,7 @@ module.exports = {
         placeholder: '',
         value: '1000'
       }
-    }
+    },
+    script: true
   }
 };
