@@ -3,7 +3,31 @@
         <div class="slider__frame">
             <div class="slider__slides">
                 {{#each products }}
-                    {{ render '@product' product }}
+                    <div class="slider__item">
+                        <a href="{{ this.link }}" class="slider__link">
+                            {{ render '@image' this.image }}
+
+                            <div class="slider__item-handler">
+                                <h2 class="heading heading--fifth-level slider__name">
+                                    {{ this.name }}
+                                </h2>
+
+                                <div class="slider__price">
+                                    <span class="slider__price-old">
+                                        {{ this.oldPrice }}
+                                    </span>
+
+                                    <span class="slider__price-new">
+                                        {{ this.price }}
+                                    </span>
+                                </div>
+                            </div>
+
+                            {{#if badge}}
+                                {{ render '@badge' this.badge }}
+                            {{/if}}
+                        </a>
+                    </div>
                 {{/each}}
             </div>
         </div>
