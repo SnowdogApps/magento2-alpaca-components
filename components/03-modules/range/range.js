@@ -1,4 +1,4 @@
-/* global noUiSlider, wNumb */
+/* global noUiSlider */
 (function () { // eslint-disable-line
   'use strict';
 
@@ -37,18 +37,22 @@
       range: {
         'min': minValue,
         'max': maxValue
-      },
-      formatter: wNumb({
-        decimals: 0,
-        thousand: ' '
-      }),
+      }
     });
   }
 
   function bindEvents(rangeSlider, inputMin, inputMax) {
+    const showFloat = parseInt(rangeSlider.getAttribute('data-show-float'));
+
     rangeSlider.noUiSlider.on('update', (values) => {
-      inputMin.value = values[0];
-      inputMax.value = values[1];
+      if (showFloat) {
+        inputMin.value = values[0];
+        inputMax.value = values[1];
+      }
+      else {
+        inputMin.value = parseInt(values[0]);
+        inputMax.value = parseInt(values[1]);
+      }
     });
 
     inputMax.addEventListener('change', (event) => {

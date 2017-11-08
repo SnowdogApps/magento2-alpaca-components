@@ -48,6 +48,7 @@ module.exports = {
         value: '1000'
       }
     },
-    script: true
-  }
+    script: true,
+    showFloat: 0
+  },
 };
