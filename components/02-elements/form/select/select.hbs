@@ -1,11 +1,11 @@
 <div class="select {{ class }}" {{{ attribute }}}>
     <label class="label {{ label.class }}"
-           for="input"
+           for="{{ field.id }}"
            {{{ label.attribute }}}
     >
         {{ label.text }}
     </label>
-    <select class="select__field" name="select">
+    <select id="{{ field.id }}" class="select__field" name="{{ field.name }}">
         {{#each options}}
             <option value="{{ value }}" {{ attributes }}>
                 {{text}}

@@ -14,7 +14,7 @@ module.exports = {
         title: 'dropdown title',
         id: 'dropdown-1',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'image'
       },
       {
         itemTag: 'button',
@@ -22,7 +22,7 @@ module.exports = {
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'paragraph'
       },
       {
         itemTag: 'button',
@@ -30,7 +30,7 @@ module.exports = {
         title: 'dropdown title',
         id: 'dropdown-3',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'image'
       },
       {
         itemTag: 'button',
@@ -38,11 +38,23 @@ module.exports = {
         title: 'dropdown title',
         id: 'dropdown-4',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'paragraph'
       }
     ]
   },
   variants: [
+    {
+      name: 'screen-m',
+      context: {
+        class: 'dropdown-list@screen-m dropdown-list--is-open@screen-m',
+      }
+    },
+    {
+      name: 'dark',
+      context: {
+        class: 'dropdown-list--dark'
+      }
+    },
     {
       name: 'with-nested',
       context: {

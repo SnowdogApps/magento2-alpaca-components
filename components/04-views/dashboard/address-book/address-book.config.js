@@ -148,6 +148,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'firstName',
+                  name: 'firstName',
                   placeholder: 'First Name'
                 }
               }
@@ -156,6 +158,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'lastName',
+                  name: 'lastName',
                   placeholder: 'Last Name'
                 }
               }
@@ -164,6 +168,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'company',
+                  name: 'company',
                   placeholder: 'Company'
                 }
               }
@@ -172,6 +178,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'phoneNumber',
+                  name: 'phoneNumber',
                   placeholder: 'Phone Number'
                 }
               }
@@ -180,6 +188,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'fax',
+                  name: 'fax',
                   placeholder: 'Fax'
                 }
               }
@@ -194,6 +204,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'address',
+                  name: 'address',
                   placeholder: 'Street Address'
                 }
               }
@@ -202,6 +214,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'address2',
+                  name: 'address2',
                   placeholder: 'Street Address vol.2'
                 }
               }
@@ -210,6 +224,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'city',
+                  name: 'city',
                   placeholder: 'City'
                 }
               }
@@ -218,6 +234,8 @@ module.exports = {
               input: {
                 class: 'dashboard__input',
                 field: {
+                  id: 'zipCode',
+                  name: 'zipCode',
                   placeholder: 'Zip/Postal Code'
                 }
               }
