@@ -73,41 +73,6 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
 
     &__links-list {
         padding: $spacer--medium 0;
-
-        .link {
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-            color: $footer__font-color;
-            text-decoration: none;
-            transition: $footer__transition;
-
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: 1px;
-                left: 0;
-                height: $footer__link-height-after-hover;
-                background-color: $footer__link-color-after-hover;
-                width: 100%;
-                z-index: -1;
-                transform: scaleX(0);
-                transform-origin: left;
-                transition: $footer__transition;
-            }
-
-            &:hover,
-            &:focus {
-                color: $footer__font-color;
-                font-weight: $footer__link-font-weight-after-hover;
-                text-decoration: none;
-
-                &:after {
-                    transform: scaleX(1);
-                }
-            }
-        }
     }
 
     &__bottom-bar {
