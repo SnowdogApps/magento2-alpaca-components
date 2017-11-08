@@ -9,6 +9,7 @@ $range__handler-offset-top         : -1 * $range__height !default;
 $range__track-bg-color             : $gray !default;
 $range__track-border-radius        : $border-radius;
 $range__track-border               : none !default;
+$range__track-box-shadow           : none !default;
 $range__dash-padding               : 0 $spacer--medium 0 $spacer !default;
 $range__suffix-padding             : 0 $spacer !default;
 
@@ -47,9 +48,9 @@ $range__suffix-padding             : 0 $spacer !default;
 .noUi-target {
     background-color: $range__track-bg-color;
     border-radius: $range__track-border-radius;
-    box-shadow: none;
-    border: none;
-    border-radius: 100px;
+    box-shadow: $range__track-box-shadow;
+    border: $range__track-border;
+    border-radius: $border-radius;
     height: $range__height;
 }
 .noUi-handle {
