@@ -48,12 +48,12 @@
       inputMax.value = values[1];
     });
 
-    inputMax.addEventListener('change', () => {
-      rangeSlider.noUiSlider.set([null, this.value]);
+    inputMax.addEventListener('change', (event) => {
+      rangeSlider.noUiSlider.set([null, event.target.value]);
     });
 
-    inputMin.addEventListener('change', () => {
-      rangeSlider.noUiSlider.set([null, this.value]);
+    inputMin.addEventListener('change', (event) => {
+      rangeSlider.noUiSlider.set([null, event.target.value]);
     });
   }
 
