@@ -1,0 +1,18 @@
+$icon-width       : 48px !default;
+$icon-padding     : 12px !default;
+$icon__svg-width  : 24px !default;
+$icon__svg-height : 24px !default;
+$icon__svg-padding: 2px !default;
+
+.icon {
+    padding: $icon-padding;
+    display: flex;
+    flex-flow: row nowrap;
+    width: $icon-width;
+
+    &__svg {
+        width: $icon__svg-width;
+        height: $icon__svg-height;
+        padding: $icon__svg-padding;
+    }
+}
