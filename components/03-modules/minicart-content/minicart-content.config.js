@@ -1,35 +1,13 @@
 module.exports = {
   context: {
-    total: 'Cart Subtotal:',
+    total: 'Cart Subtotal',
+    counter: '2 items',
     price: '$ 200.00',
-    elements: [
-      {
-        name: 'Lorem ipsum  dolor sit amet copy 8',
-        price: '$ 200.00',
-        quantity: '1',
-        image: {
-          src: '/images/product/product-img-70_46.png',
-          class: 'minicart-content__image'
-        },
-        button: {
-          tag: 'button',
-          class: 'button--icon minicart-content__button--icon',
-          attributes: 'type="button"',
-          iconClass: 'minicart-content__icon'
-        }
-      }
-    ],
     checkout: {
       tag: 'button',
-      class: 'button--secondary minicart-content__button',
+      class: 'button--secondary button--fluid minicart-content__checkout',
       attributes: 'type="button"',
       text: 'Go to Checkout'
-    },
-    editCart: {
-      tag: 'button',
-      class: 'minicart-content__button',
-      attributes: 'type="button"',
-      text: 'View and edit cart'
     }
   }
 };

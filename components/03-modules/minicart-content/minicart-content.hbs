@@ -1,17 +1,28 @@
 <div class="minicart-content {{ class }}" {{{ attributes }}}>
-    <div class="minicart-content__bar">
-
-    </div>
+    <div class="minicart-content__bar"></div>
     <div class="minicart-content__total">
-        <div class="minicart-content__cart">
-            {{ total }}
+        <div class="minicart-content__total-counter">
+            {{ counter}}
         </div>
         <div class="minicart-content__summary">
-            {{ price }}
+            <div class="minicart-content__summary-label">
+                {{ total }}
+            </div>
+            <div class="minicart-content__summary-value">
+                {{ price }}
+            </div>
         </div>
     </div>
-    {{ render '@button--secondary' checkout }}
-    {{ render '@minicart-product' }}
-    {{ render '@minicart-product' }}
-    {{> '@button' editCart }}
+    <div class="minicart-content__actions">
+        {{ render '@button--secondary' checkout }}
+    </div>
+    <div class="minicart-content__products-list">
+        {{ render '@minicart-product' }}
+        {{ render '@minicart-product' }}
+    </div>
+    <div class="minicart-content__actions">
+        <a href="#" class="minicart-content__edit">
+            View and edit cart
+        </a>
+    </div>
 </div>

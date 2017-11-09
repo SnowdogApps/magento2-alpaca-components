@@ -11,6 +11,11 @@ $minicart-product__action-icon-color     : $color-secondary !default;
     display: flex;
     width: 100%;
     flex-flow: row nowrap;
+    padding: $spacer--medium 0;
+    border-bottom: 1px solid $gray;
+    &:last-child {
+        border-bottom: none;
+    }
 
     &__image {
         width: $minicart-product__image-width;
@@ -55,7 +60,6 @@ $minicart-product__action-icon-color     : $color-secondary !default;
     &__price {
         width: 100%;
         font-weight: $font-weight-bold;
-        margin-bottom: 3px;
     }
 
     &__bottom {
@@ -70,27 +74,12 @@ $minicart-product__action-icon-color     : $color-secondary !default;
         justify-content: center;
         flex: 1 $minicart-product__qty-width;
         max-width: $minicart-product__qty-width;
-        margin-bottom: 0;
-
-        &-form {
-            margin-bottom: 0;
-        }
-
-        &-input {
-            margin-bottom: 0;
-            border-radius: 38px;
-        }
-
-        &-label {
-            margin: 0 $spacer 0 0;
-        }
     }
 
-    &__action {
+    &__actions {
         display: flex;
         justify-content: flex-end;
         width: $minicart-product__action-width;
-        padding-right: $spacer--medium;
     }
 
     &__button {

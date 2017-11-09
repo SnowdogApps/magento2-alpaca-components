@@ -1,25 +1,35 @@
-$minicart-content__spacing        : $spacer--medium !default;
-$minicart-content__font-size      : $font-size-small !default;
-$minicart-content__font-size-big  : $font-size-large !default;
-$minicart-content__border         : 3px solid $gray !default;
-$minicart-content__transition     : $transition-base !default;
-$minicart-content__icon-width     : 20px !default;
-$minicart-content__icon-fill      : $gray !default;
+$minicart-content__spacing: $spacer--medium !default;
+$minicart-content__font-size: $font-size-small !default;
+$minicart-content__font-size-big: $font-size-large !default;
+$minicart-content__border: 3px solid $gray !default;
+$minicart-content__transition: $transition-base !default;
+$minicart-content__icon-width: 20px !default;
+$minicart-content__icon-fill: $gray !default;
 $minicart-content__icon-fill-hover: $gray-darker !default;
 
 .minicart-content {
     max-height: calc(100vh - 90px);
     font-size: $minicart-content__font-size;
     overflow-y: auto;
-
     @include mq($screen-l) {
         max-height: calc(100vh - 120px);
     }
 
     &__bar {
+        position: relative;
         height: $spacer;
         width: 100%;
         background-color: $gray-light;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: '';
+            height: $spacer;
+            width: 64px;
+            background-color: $color-primary;
+        }
     }
 
     &__total {
@@ -27,94 +37,48 @@ $minicart-content__icon-fill-hover: $gray-darker !default;
         justify-content: space-between;
         align-items: center;
         flex-wrap: nowrap;
-        margin-bottom: $minicart-content__spacing;
-        padding: $minicart-content__spacing 0 $spacer;
-        border-bottom: $minicart-content__border;
-    }
+        margin: $minicart-content__spacing 0;
+        padding: 0 $spacer--medium;
 
-    &__title {
-        text-align: center;
-        padding: $minicart-content__spacing;
-        margin-bottom: 0;
-    }
-
-    &__list {
-        margin: 0;
-    }
-
-    &__list-clear {
-        height: auto !important;
-    }
-
-    &__item {
-        position: relative;
-        border-bottom: $minicart-content__border;
-        padding: $minicart-content__spacing 0;
-    }
-
-    &__image {
-        margin: 10px auto;
-    }
-
-    &__name {
-        margin-bottom: $minicart-content__spacing;
-        text-transform: none;
-    }
-
-    &__empty {
-        text-align: center;
-    }
-
-    &__price {
-        margin-bottom: $minicart-content__spacing;
-    }
-
-    &__cart {
-        text-transform: none;
-        margin-bottom: 0;
+        &-counter {
+            align-self: flex-start;
+            font-size: 14px;
+        }
     }
 
     &__summary {
-        font-size: $minicart-content__font-size-big;
-    }
+        text-align: right;
+        font-size: 14px;
 
-    &__icons {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-    }
-
-    &__button {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: $minicart-content__spacing;
-
-        &--icon {
-            margin: 0 $minicart-content__spacing 0 0;
-
-            &:last-child {
-                margin: 0;
-            }
+        &-value {
+            font-weight: $font-weight-bold;
         }
+    }
 
+    &__actions {
+        padding: 0 $spacer--medium;
+    }
+
+    &__checkout {
+        font-size: 12px;
+    }
+
+    &__edit {
+        display: block;
+        padding: $spacer--medium;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        text-decoration: none;
+        &:focus,
         &:hover {
             text-decoration: none;
         }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 
-    &__icon {
-        width: $minicart-content__icon-width;
-        height: $minicart-content__icon-width;
-        fill: $minicart-content__icon-fill;
-        transition: $minicart-content__transition;
-
-        &:hover {
-            fill: $minicart-content__icon-fill-hover;
-        }
+    &__products-list {
+        margin: 16px 0 0 0;
+        padding: 0 $spacer--medium;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
     }
 }
