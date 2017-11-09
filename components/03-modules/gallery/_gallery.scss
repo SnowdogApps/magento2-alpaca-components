@@ -7,7 +7,10 @@ $gallery__thumb-width              : 48px !default;
 $gallery__thumb-width--large       : 80px !default;
 $gallery__thumb-arrow-width        : 48px !default;
 $gallery__thumb-arrow-height       : 48px !default;
+$gallery__icon-arrow-color         : $gray !default;
 $gallery__icon-arrow-width         : 12px !default;
+$gallery__label-offset-top         : $spacer--medium !default;
+$gallery__label-offset-left        : $spacer !default;
 
 .gallery {
     display: flex;
@@ -83,6 +86,7 @@ $gallery__icon-arrow-width         : 12px !default;
     &__icon-arrow {
         width: $gallery__icon-arrow-width;
         transform: rotate(-90deg);
+        fill: $gallery__icon-arrow-color;
         &--small {
             width: $gallery__icon-arrow-width;
         }
@@ -96,7 +100,7 @@ $gallery__icon-arrow-width         : 12px !default;
         color: $green;
         text-transform: uppercase;
         position: absolute;
-        left: $spacer;
-        top: $spacer--medium;
+        left: $gallery__label-offset-left;
+        top: $gallery__label-offset-right;
     }
 }
