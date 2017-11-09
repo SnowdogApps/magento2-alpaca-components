@@ -12,7 +12,6 @@ module.exports = {
       'curved-arrows',
       'delivery-truck',
       'edit',
-      'edit',
       'facebook',
       'google-plus',
       'heart',
