@@ -70,7 +70,8 @@ module.exports = {
       counter: '82'
     },
     minicartPopup: {
-      script: false,
+      class: 'header__minicart-content',
+      popupId: 'popup-1',
       content: 'minicart-content'
     },
     loginPopup: {

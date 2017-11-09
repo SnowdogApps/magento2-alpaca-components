@@ -20,9 +20,11 @@
         this.toggle();
       });
 
-      this.closeButton.addEventListener('click', () => {
-        this.hide();
-      });
+      if (this.closeButton) {
+        this.closeButton.addEventListener('click', () => {
+          this.hide();
+        });
+      }
 
       window.addEventListener('resize', () => {
         this.position();

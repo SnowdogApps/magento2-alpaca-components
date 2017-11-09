@@ -4,7 +4,9 @@
         <div class="popup__content" tabindex="0" role="document">
             {{ render (component content) contentContext }}
         </div>
-        {{ render '@button--icon' buttonClose }}
+        {{#if buttonClose }}
+            {{ render '@button--icon' buttonClose }}
+        {{/if}}
     </div>
 </dialog>
 
