@@ -1,23 +1,18 @@
-<div class="cookie-message {{ class }}" {{{ attributes }}}>
+<div class="cookie-message {{ class }}" data-type="{{ dataType }}">
     <div class="cookie-message__container">
             <span class="cookie-message__text">
-                {{ text }}
+                {{{ text }}}
             </span>
-            <!--{{#if link}}-->
-                <!--<a href="#" class="cookie-message__link">-->
-                    <!--{{ linkAnchor }}-->
-                <!--</a>-->
-            <!--{{/if}}-->
 
         <button class="cookie-message__close" type="button">
             {{#if closeLabel}}
                 {{ closeLabel }}
             {{/if}}
-            <!--{{#if closeIcon}}-->
-                <!--<svg class="cookie-message__close--icon">-->
-                    <!--<use xlink:href="{{ svg closeIcon }}"></use>-->
-                <!--</svg>-->
-            <!--{{/if}}-->
+            {{#if closeIcon}}
+                <svg class="cookie-message__close-icon">
+                    <use xlink:href="{{ svg closeIcon }}"></use>
+                </svg>
+            {{/if}}
         </button>
     </div>
 </div>
