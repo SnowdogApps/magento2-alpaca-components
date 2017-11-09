@@ -6,8 +6,7 @@ $icon__svg-padding: 2px !default;
 
 .icon {
     padding: $icon__padding;
-    display: flex;
-    flex-flow: row nowrap;
+    display: block;
     width: $icon__width;
 
     &__svg {
