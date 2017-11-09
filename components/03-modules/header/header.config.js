@@ -65,18 +65,15 @@ module.exports = {
       iconClass: 'button__icon'
     },
     trigger: {
-      attributes: '',
-      class: 'button popup__button',
+      attributes: 'data-popuptrigger="popup-1"',
+      class: 'button popup-trigger',
       counter: '82'
     },
     minicartPopup: {
       class: 'header__minicart-content',
       popupId: 'popup-1',
+      popupTrigger: false,
       content: 'minicart-content'
-    },
-    loginPopup: {
-      script: true,
-      content: 'login-form--popup'
     }
   }
 }

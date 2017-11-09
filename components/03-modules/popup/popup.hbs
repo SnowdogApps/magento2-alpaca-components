@@ -1,4 +1,6 @@
-{{ render '@popup-trigger' }}
+{{#if popupTrigger }}
+    {{ render '@popup-trigger' }}
+{{/if}}
 <dialog data-popup="{{ popupId }}" class="popup {{ class }}" role="alertdialog" >
     <div class="popup__handler">
         <div class="popup__content" tabindex="0" role="document">

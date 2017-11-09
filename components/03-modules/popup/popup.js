@@ -31,7 +31,10 @@
       });
 
       window.addEventListener('click', (e) => {
-        if ((e.target !== this.button) && (!this.popup.contains(e.target))) {
+        if ((e.target !== this.button)
+          && (!this.popup.contains(e.target))
+          && (!this.button.contains(e.target))
+        ) {
           if (this.isActive()) {
             this.hide();
           }
