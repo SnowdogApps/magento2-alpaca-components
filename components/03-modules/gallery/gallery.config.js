@@ -2,34 +2,30 @@ module.exports = {
   title: 'Product grid item',
   context: {
     class: '',
-    productLabel: {
-      text: 'NEW',
-      type: 'new'
-    },
     typeHorizontal: false,
     imageMain: {
-      src: '/images/gallery/product-img-496-496.jpg'
+      dataSrc: '/images/gallery/product-img-496-496.jpg'
     },
     thumbs: [
       {
         imageThumb: {
-          src: '/images/gallery/product-img-80-80.jpg',
+          dataSrc: '/images/gallery/product-img-80-80.jpg',
           active: true
         }
       },
       {
         imageThumb: {
-          src: '/images/gallery/product-img-80-80.jpg'
+          dataSrc: '/images/gallery/product-img-80-80.jpg'
         }
       },
       {
         imageThumb: {
-          src: '/images/gallery/product-img-80-80.jpg'
+          dataSrc: '/images/gallery/product-img-80-80.jpg'
         }
       },
       {
         imageThumb: {
-          src: '/images/gallery/product-img-80-80.jpg'
+          dataSrc: '/images/gallery/product-img-80-80.jpg'
         }
       }
     ]
@@ -45,8 +41,8 @@ module.exports = {
       name: 'with-label',
       context: {
         productLabel: {
-          text: 'NEW',
-          type: 'new'
+          class: 'badge--new gallery__product-label',
+          text: 'new'
         }
       }
     }

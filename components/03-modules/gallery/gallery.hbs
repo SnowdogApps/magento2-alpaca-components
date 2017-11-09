@@ -1,5 +1,6 @@
 <div class="
-         gallery {{ class }}
+         gallery
+         {{ class }}
          {{#if typeHorizontal }}
              gallery--horizontal
          {{else}}
@@ -18,23 +19,11 @@
              {{/if}}
          "
     >
-        <div class="gallery__arr gallery__arr--prev">
-        </div>
-        <div class="gallery__shaft">
-            <div class="gallery__frame">
-                {{#if productLabel }}
-                <span class="
-                          gallery__product-label
-                          gallery__product--{{productLabel.type}}
-                      "
-                >
-                    {{ productLabel.text }}
-                </span>
-                {{/if}}
-                {{ render '@image' imageMain }}
-            </div>
-        </div>
-        <div class="gallery__arr gallery__arr--next">
+        <div class="gallery__frame">
+            {{#if productLabel }}
+                {{ render '@badge' productLabel }}
+            {{/if}}
+            {{ render '@image' imageMain }}
         </div>
     </div>
     <div class="gallery__nav
