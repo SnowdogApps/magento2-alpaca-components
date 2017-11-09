@@ -5,7 +5,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+ - Add quantity-updater module
+ - Add minus icon
+
 ### Changed
+ - Dropdown list component
+ - Add link modifier with custom border on hover
+ - Footer module changed
+ - update form elements style and structure (improve accessibility):
+   checkbox/radio button, select, input, textarea
+ - Tab styling that fits alpaca design.
  - Cookie message : styling that fits new alpaca design.
 
 ## [0.3.0] - 06.11.2017
@@ -13,7 +23,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Spacer global variables
 
 ### Changed
- - Dropdown list component
  - Variables in password strength element
  - Popup component
  - Table styles

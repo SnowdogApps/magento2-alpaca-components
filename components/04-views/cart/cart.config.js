@@ -35,6 +35,8 @@ module.exports = {
           },
           field: {
             attribute: 'value="5"',
+            id: 'qtyValue',
+            name: 'qtyValue',
             class: 'products-list-item__details-qty-input'
           }
         },
@@ -83,6 +85,8 @@ module.exports = {
           },
           field: {
             attribute: 'value="5"',
+            id: 'qtyValue',
+            name: 'qtyValue',
             class: 'products-list-item__details-qty-input'
           }
         },
@@ -123,6 +127,8 @@ module.exports = {
         class: '',
         field: {
           class: 'form-compact__input-field cart__discount-field',
+          id: 'discountCode',
+          name: 'discountCode',
           placeholder: 'Enter discount code'
         }
       },
@@ -135,20 +141,21 @@ module.exports = {
         class: ''
       }
     },
-    shippingMethods: [
-      {
-        heading: 'Flat Rate',
-        id: 'id',
-        label: 'Fixed $5.00',
-        name: 'radio'
-      },
-      {
-        heading: 'Best Way',
-        id: 'id1',
-        label: 'Table Rate $15.00',
-        name: 'radio'
-      }
-    ],
+    shippingMethods: {
+      name: 'shippingMethods',
+      legend: 'Choose option',
+      legendId: 'legend-id',
+      options: [
+        {
+          id: 'id',
+          label: 'Fixed $5.00'
+        },
+        {
+          id: 'id1',
+          label: 'Table Rate $15.00'
+        }
+      ]
+    },
     buttonCheckout: {
       tag: 'button',
       text: 'Proceed to Checkout',

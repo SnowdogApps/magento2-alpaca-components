@@ -93,6 +93,8 @@ module.exports = {
               input: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'email',
+                  name: 'email',
                   placeholder: 'Email'
                 }
               }
@@ -103,6 +105,8 @@ module.exports = {
               textarea: {
                 class: 'dashboard-form__divider',
                 field: {
+                  id: 'email',
+                  name: 'email',
                   placeholder: 'Message'
                 }
               }

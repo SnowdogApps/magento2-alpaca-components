@@ -33,6 +33,8 @@ module.exports = {
       },
       field: {
         attribute: 'value="5"',
+        id: 'qtyValue',
+        name: 'qtyValue',
         class: 'products-list-item__details-qty-input'
       }
     },

@@ -1,26 +1,42 @@
 $dropdown-list__width                    : 100% !default;
 $dropdown-list__bg-color                 : $white !default;
+$dropdown-list__border-radius            : 0 !default;
+$dropdown-list__outline                  : none !default;
+$dropdown-list__font-size                : $font-size-base !default;
+$dropdown-list__transition-height        : height 0.3s !default;
+$dropdown-list__transition               : $transition-base !default;
+$dropdown-list__content-padding          : $spacer--medium !default;
+
+// List item
+$dropdown-list__item-padding             : $spacer--medium !default;
 $dropdown-list__item-color               : $font-color-base !default;
-$dropdown-list__item-color-active        : $color-primary !default;
+$dropdown-list__item-color-hover         : $color-primary !default;
+$dropdown-list__item-color--open         : $color-primary !default;
 $dropdown-list__item-bg-color            : $white !default;
-$dropdown-list__item-bg-color-active     : $black !default;
-$dropdown-list__item-bg-color-level2     : $gray !default;
+$dropdown-list__item-bg-color--open      : $black !default;
+$dropdown-list__item-bg-color-hover      : $black !default;
+$dropdown-list__item-bg-color--level2    : $gray !default;
+
+// List icon
 $dropdown-list__icon-width               : 16px !default;
 $dropdown-list__icon-height              : 16px !default;
-$dropdown-list__icon-color               : $black !default;
-$dropdown-list__icon-color-active        : $color-primary !default;
-$dropdown-list__font-size                : $font-size-base !default;
-$dropdown-list__item-padding             : 16px !default;
-$dropdown-list__content-padding          : 16px !default;
-$dropdown-list__outline                  : none !default;
-$dropdown-list__height-trasition         : height 0.3s !default;
-$dropdown-list__border-radius            : 0 !default;
+$dropdown-list__icon-fill                : $black !default;
+$dropdown-list__icon-fill-hover          : $color-primary !default;
+$dropdown-list__icon-fill--open          : $color-primary !default;
 
-// nested list variables
+// Dark list variant
+$dropdown-list__bg-color--dark           : $gray-dark !default;
+$dropdown-list__list-padding--dark       : $spacer--medium !default;
+$dropdown-list__item-border-color--dark  : $gray-darker !default;
+$dropdown-list__icon-fill--dark          : $white !default;
+$dropdown-list__item-color--dark         : $white !default;
+$dropdown-list__item-color-hover--dark   : $white !default;
+$dropdown-list__item-bg-color-hover--dark: $gray-dark !default;
+
+// Nested list variables
 $dropdown-list__inner-item-bg-color      : $gray-dark !default;
 $dropdown-list__inner-item-color         : $white !default;
-$dropdown-list__icon-color--inner        : $white !default;
-$dropdown-list__icon-color-active--inner : $white !default;
+$dropdown-list__icon-fill--inner         : $white !default;
 $dropdown-list__inner-item-border        : 1px solid $white !default;
 $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
@@ -28,6 +44,42 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
     width: $dropdown-list__width;
     position: relative;
     background-color: $dropdown-list__bg-color;
+
+    &--dark {
+        background-color: $dropdown-list__bg-color--dark;
+        padding: 0 $dropdown-list__list-padding--dark;
+
+        .dropdown-list__item {
+            border-bottom: 2px solid $dropdown-list__item-border-color--dark;
+        }
+
+        .dropdown-list__item,
+        .dropdown-list__item--open {
+            .dropdown-list__label {
+                background-color: $dropdown-list__bg-color--dark;
+                color: $dropdown-list__item-color--dark;
+                font-weight: $font-weight-bold;
+
+                &:hover,
+                &:focus {
+                    color: $dropdown-list__item-color-hover--dark;
+                    background-color: $dropdown-list__item-bg-color-hover--dark;
+
+                    & .dropdown-list__icon {
+                        fill: $dropdown-list__icon-fill--dark;
+                    }
+                }
+
+                & .dropdown-list__icon {
+                    fill: $dropdown-list__icon-fill--dark;
+                }
+            }
+        }
+
+        .dropdown-list__content {
+            background-color: $dropdown-list__bg-color--dark;
+        }
+    }
 
     &__list {
         display: block;
@@ -45,15 +97,15 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         width: $dropdown-list__icon-width;
         height: $dropdown-list__icon-height;
         margin: auto;
-        fill: $dropdown-list__icon-color;
-        transition: $transition-base;
+        fill: $dropdown-list__icon-fill;
+        transition: $dropdown-list__transition;
 
         &--inner {
             width: $dropdown-list__icon-width;
             height: $dropdown-list__icon-width;
             top: 0;
             bottom: 0;
-            fill: $dropdown-list__icon-color--inner;
+            fill: $dropdown-list__icon-fill--inner;
             margin: auto 0;
         }
     }
@@ -68,12 +120,12 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
         &--open,
         &.open {
-            & > .dropdown-list__label {
-                color: $dropdown-list__item-color-active;
-                background-color: $dropdown-list__item-bg-color-active;
+            & .dropdown-list__label {
+                color: $dropdown-list__item-color--open;
+                background-color: $dropdown-list__item-bg-color--open;
 
-                & > .dropdown-list__icon {
-                    fill: $dropdown-list__icon-color-active;
+                & .dropdown-list__icon {
+                    fill: $dropdown-list__icon-fill--open;
                     transform: rotate(180deg);
                 }
             }
@@ -99,17 +151,17 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         text-decoration: none;
         text-align: left;
         cursor: pointer;
-        transition: $transition-base;
+        transition: $dropdown-list__transition;
 
         &:hover,
         &:focus {
-            color: $dropdown-list__item-color-active;
-            background-color: $dropdown-list__item-bg-color-active;
+            color: $dropdown-list__item-color-hover;
+            background-color: $dropdown-list__item-bg-color-hover;
             text-decoration: none;
             outline: $dropdown-list__outline;
 
             .dropdown-list__icon {
-                fill: $dropdown-list__icon-color-active;
+                fill: $dropdown-list__icon-fill-hover;
             }
         }
     }
@@ -118,10 +170,10 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         height: 0;
         overflow: hidden;
         padding: 0 $dropdown-list__content-padding;
-        transition: $dropdown-list__height-trasition;
+        transition: $dropdown-list__transition-height;
     }
 
-    // nested lists styles
+    // Nested lists styles
     &__inner-list {
         list-style-type: none;
         display: block;
@@ -129,8 +181,8 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         padding: 0;
         margin: 0;
         overflow: hidden;
-        transition: $transition-base;
-        font-size: $font-size-base;
+        transition: $dropdown-list__transition;
+        font-size: $dropdown-list__font-size;
     }
 
     &__inner-item {
@@ -147,7 +199,7 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         }
 
         &--level2 {
-            background-color: $dropdown-list__item-bg-color-level2;
+            background-color: $dropdown-list__item-bg-color--level2;
             border-bottom: $dropdown-list__inner-item-border--level2;
             .dropdown-list__inner-label {
                 color: $dropdown-list__item-color;
@@ -166,6 +218,46 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         &:focus {
             color: $dropdown-list__inner-item-color;
             text-decoration: none;
+        }
+    }
+
+    @include mq($screen-m) {
+        // from $screen-m drpdown list displays inline and with opened list
+        &\@screen-m {
+            .dropdown-list__list {
+                display: flex;
+                flex-flow: row nowrap;
+            }
+
+            .dropdown-list__item {
+                width: 25%;
+                cursor: default;
+            }
+
+            .dropdown-list__label {
+                cursor: default;
+                &:hover,
+                &:focus {
+                    color: $dropdown-list__item-color;
+                    background-color: $dropdown-list__item-bg-color;
+                }
+            }
+            .dropdown-list__icon {
+                display: none;
+            }
+            .dropdown-list__content {
+                height: auto;
+            }
+
+            &.dropdown-list--dark {
+                .dropdown-list__label {
+                    &:hover,
+                    &:focus {
+                        color: $dropdown-list__item-color-hover--dark;
+                        background-color: $dropdown-list__item-bg-color-hover--dark;
+                    }
+                }
+            }
         }
     }
 }
