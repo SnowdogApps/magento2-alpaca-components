@@ -97,10 +97,8 @@ $gallery__thumb-width--large       : 80px !default;
         }
     }
     &__product-label {
-        color: $green;
-        text-transform: uppercase;
         position: absolute;
         left: $gallery__label-offset-left;
-        top: $gallery__label-offset-right;
+        top: $gallery__label-offset-top;
     }
 }
