@@ -15,24 +15,28 @@ module.exports = {
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               }
@@ -46,24 +50,28 @@ module.exports = {
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               }
@@ -90,24 +98,28 @@ module.exports = {
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               }
@@ -121,24 +133,28 @@ module.exports = {
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
+                link: '/lorem-ipsum',
                 elementLink: '#',
                 linkClass: 'mega-menu__link mega-menu__link--inner'
               }
