@@ -5,7 +5,6 @@ class CookieMessage {
     this.cookies = document.querySelectorAll('.cookie-message');
 
     this.start();
-    this.setListeners();
   }
   closeBar(el) {
     const cookieMessage = el.currentTarget.parentElement.parentElement,
@@ -20,12 +19,14 @@ class CookieMessage {
     });
   }
   start() {
+    // Display message if it wasn't closed before
     this.cookies.forEach(el => {
       const dataType = el.dataset.type;
       if (localStorage.getItem(dataType) !== 'closed') {
         el.classList.add('cookie-message--open')
       }
     });
+    this.setListeners();
   }
 }
 new CookieMessage();
