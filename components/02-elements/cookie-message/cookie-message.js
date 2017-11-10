@@ -1,8 +1,8 @@
 'use strict';
 class CookieMessage {
   constructor() {
-    this.cookies       = document.querySelectorAll('.cookie-message');
     this.closing = document.querySelectorAll('.cookie-message__close');
+    this.cookies = document.querySelectorAll('.cookie-message');
 
     this.start();
     this.setListeners();
