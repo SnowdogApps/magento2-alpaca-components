@@ -1,4 +1,10 @@
 .image {
     display: block;
     width: 100%;
+    max-width: 100%;
+}
+
+img,
+picture {
+    @extend .image;
 }

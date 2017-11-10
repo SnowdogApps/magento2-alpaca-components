@@ -33,6 +33,7 @@ $minicart-product__action-icon-color--active : $color-primary !default;
         width: $minicart-product__image-width;
         img {
             width: $minicart-product__image-width;
+            max-width: $minicart-product__image-width;
         }
     }
 
