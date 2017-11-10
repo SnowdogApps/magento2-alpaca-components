@@ -22,14 +22,12 @@
             {{/if}}
         {{/each}}
 
-        {{#if arrowRightVisible}}
-            <li class="pager__item pager__item--next">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="{{ svg 'arrow-right' }}"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/if}}
+        <li class="pager__item">
+            <a href="#" class="pager__link pager__link--next" {{#unless arrowRightActive}}disabled{{/unless}}>
+                <svg class="pager__icon">
+                    <use xlink:href="{{ svg 'arrow-right' }}"></use>
+                </svg>
+            </a>
+        </li>
     </ul>
 </div>
