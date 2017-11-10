@@ -1,10 +1,17 @@
 $slider__margin                  : $spacer--medium !default;
-$slider__item-padding            : $spacer--medium !default;
 $slider__transition              : $transition-base !default;
-$slider__navigation-icon__spacing: 48px !default;
+$slider__title-margin            : $spacer--large !default;
+$slider__navigation-margin       : $spacer !default;
+$slider__navigation-icon-spacing : 48px !default;
+$slider__navigation-icon-margin  : $spacer !default;
+$slider__name-margin-right       : $spacer !default;
 $slider__name-font-weight        : $font-weight-base !default;
 $slider__name-font-size          : $font-size-base !default;
+$slider__item-padding-right      : $spacer--medium !default;
+$slider__image-margin            : 0 auto $spacer auto !default;
+$slider__badge-left              : $spacer !default;
 
+$slider__price-old-margin        : $spacer !default;
 $slider__price-font-weight       : $font-weight-bold !default;
 $slider__price-color             : $black !default;
 $slider__price-old-color         : $black !default;
@@ -15,7 +22,7 @@ $slider__price-new-font-wieght   : $font-weight-bold !default;
 $slider__price-new-font-size     : $font-size-small !default;
 
 $slider__icon-spacing            : 25px !default;
-$slider__icon-fill               : $green !default;
+$slider__icon-fill               : $color-primary !default;
 $slider__icon-fill-hover         : #007025 !default;
 
 .slider {
@@ -23,7 +30,7 @@ $slider__icon-fill-hover         : #007025 !default;
     position: relative;
 
     &__title {
-        margin-bottom: $slider__margin * 2;
+        margin-bottom: $slider__title-margin;
         width: 100%;
     }
 
@@ -39,7 +46,7 @@ $slider__icon-fill-hover         : #007025 !default;
         position: relative;
         padding: 0;
         min-width: 50%;
-        padding-right: $slider__item-padding;
+        padding-right: $slider__item-padding-right;
         border: 0;
 
         @include mq($screen-m) {
@@ -68,7 +75,8 @@ $slider__icon-fill-hover         : #007025 !default;
     }
 
     &__image {
-        margin-bottom: $spacer;
+        width: 100%;
+        margin: $slider__image-margin;
     }
 
     &__item-handler {
@@ -87,7 +95,7 @@ $slider__icon-fill-hover         : #007025 !default;
 
         @include mq($screen-m) {
             flex-basis: auto;
-            margin-right: $spacer;
+            margin-right: $slider__name-margin-right;
             margin-bottom: 0;
         }
 
@@ -112,7 +120,7 @@ $slider__icon-fill-hover         : #007025 !default;
 
     &__price-old {
         display: block;
-        margin-right: $spacer;
+        margin-right: $slider__price-old-margin;
         color: $slider__price-old-color;
         font-weight: $slider__price-old-font-weight;
         font-size: $slider__price-old-font-size;
@@ -131,7 +139,7 @@ $slider__icon-fill-hover         : #007025 !default;
 
     &__badge {
         position: absolute;
-        top: $spacer;
+        top: $slider__badge-left;
         left: 0;
     }
 
@@ -139,7 +147,7 @@ $slider__icon-fill-hover         : #007025 !default;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: $spacer;
+        margin-top: $slider__navigation-margin;
 
         @include mq($screen-m) {
             display: none;
@@ -150,16 +158,16 @@ $slider__icon-fill-hover         : #007025 !default;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: $slider__navigation-icon__spacing;
-        width: $slider__navigation-icon__spacing;
+        height: $slider__navigation-icon-spacing;
+        width: $slider__navigation-icon-spacing;
 
         &--left {
-            margin-right: 8px;
+            margin-right: $slider__navigation-icon-margin;
             left: 0;
         }
 
         &--right {
-            margin-left: 8px;
+            margin-left: $slider__navigation-icon-margin;
             right: 0;
         }
     }

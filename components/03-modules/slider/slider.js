@@ -1,7 +1,7 @@
 /* globals lory */
 
 (function() { // eslint-disable-line
-  'use strict'
+  'use strict';
 
   const sliders = [...document.querySelectorAll('.slider')];
 
