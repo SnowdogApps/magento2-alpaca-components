@@ -5,6 +5,7 @@ module.exports = {
       'account-mini',
       'account',
       'angle-down',
+      'angle-up',
       'arrow-circle-up',
       'arrow-left',
       'checked',
