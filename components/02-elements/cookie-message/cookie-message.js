@@ -1,8 +1,8 @@
 'use strict';
 class CookieMessage {
   constructor() {
-    this.messageClose  = document.querySelector('.cookie-message__close');
     this.cookies       = document.querySelectorAll('.cookie-message');
+    this.closing = document.querySelectorAll('.cookie-message__close');
 
     this.start();
     this.setListeners();
@@ -15,7 +15,9 @@ class CookieMessage {
     localStorage.setItem(dataType, 'closed')
   }
   setListeners() {
-    this.messageClose.addEventListener('click', this.closeBar);
+    this.closing.forEach(el => {
+      el.addEventListener('click', this.closeBar);
+    });
   }
   start() {
     this.cookies.forEach(el => {
