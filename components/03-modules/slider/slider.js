@@ -1,6 +1,6 @@
 /* globals lory */
 
-(function() { // eslint-disable-line
+(function alpacaSlider() {
   'use strict';
 
   const sliders = [...document.querySelectorAll('.slider')];
