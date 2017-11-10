@@ -2,8 +2,8 @@
     <ul class="mega-menu__wrapper container">
         {{#each list}}
             <li class="mega-menu__item {{ class }}">
-                <a href="#" class="mega-menu__link">
-                    {{text}}
+                <a href="{{ link }}" class="mega-menu__link">
+                    {{ text }}
                 </a>
 
                 {{#if nestedList}}
@@ -21,7 +21,7 @@
                                     {{/if}}
                                 "
                             >
-                                <a href="#"
+                                <a href="{{ link }}"
                                    class="
                                        mega-menu__link
                                        mega-menu__link--inner-heading

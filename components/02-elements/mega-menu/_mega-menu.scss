@@ -1,5 +1,6 @@
 $mega-menu__margin                    : 0 !default;
 $mega-menu__font-color                : $font-color-base !default;
+$mega-menu__font-color--hover         : $color-primary !default;
 $mega-menu__font-weight               : $font-weight-bold !default;
 $mega-menu__font-size                 : $font-size-base !default;
 $mega-menu__font-size--large          : 16px !default;
@@ -7,13 +8,19 @@ $mega-menu__text-decoration           : none !default;
 $mega-menu__background-color          : $white !default;
 $mega-menu__container-background-color: $white !default;
 $mega-menu__justify-content           : center !default;
+
 $mega-menu__link-padding              : 12px $spacer--medium !default;
 $mega-menu__link-margin               : 0 $spacer--medium !default;
+
+$mega-menu__link-inner-margin         : 0 !default;
+$mega-menu__link-inner-padding        : 0 !default;
+$mega-menu__link-inner-font-weight    : $font-weight-normal !default;
 
 $mega-menu__dropdown-padding          : 0 0 0 112px !default;
 $mega-menu__dropdown-box-shadow       : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
 $mega-menu__dropdown-background-color : $white !default;
 $mega-menu__dropdown-item-padding     : 68px $spacer--large 0 0 !default;
+$mega-menu__dropdown-max-width        : 850px !default;
 
 .mega-menu {
     display: none;
@@ -57,13 +64,13 @@ $mega-menu__dropdown-item-padding     : 68px $spacer--large 0 0 !default;
         }
 
         &--inner {
-            margin: 0;
-            padding: 0;
+            margin: $mega-menu__link-inner-margin;
+            padding: $mega-menu__link-inner-padding;
             font-size: $mega-menu__font-size;
-            font-weight: normal;
+            font-weight: $mega-menu__link-inner-font-weight;
             &:focus,
             &:hover {
-                color: $color-primary;
+                color: $mega-menu__font-color--hover;
             }
         }
 
@@ -85,7 +92,7 @@ $mega-menu__dropdown-item-padding     : 68px $spacer--large 0 0 !default;
         list-style: none;
         z-index: 2;
         @include mq($screen-l) {
-            max-width: 850px;
+            max-width: $mega-menu__dropdown-max-width;
             right: 0;
             margin: auto;
         }
