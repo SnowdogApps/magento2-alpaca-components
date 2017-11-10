@@ -1,0 +1,34 @@
+<div class="toolbar {{ class }}" {{{ attributes }}}>
+    <div class="toolbar__mode grid__column">
+        <a href="{{grid.href}}" class="toolbar__mode-link">
+            <svg class="toolbar__mode-icon">
+                <use xlink:href="{{ svg 'grid' }}"></use>
+            </svg>
+        </a>
+        <a href="{{grid.href}}" class="toolbar__mode-link">
+            <svg class="
+                     toolbar__mode-icon
+                     toolbar__mode-icon--inactive
+                 "
+            >
+                <use xlink:href="{{ svg 'list' }}"></use>
+            </svg>
+        </a>
+    </div>
+    <div class="toolbar__sorter grid__column">
+        {{render '@select' sortBy }}
+    </div>
+    <div class="toolbar__amount grid__column">
+        <span class="toolbar__amount-content">
+            {{ amount.prefix }} {{ amount.currentRange }} {{ amount.preposition }}
+            {{ amount.total }}
+        </span>
+    </div>
+    <div class="toolbar__limiter grid__column">
+        {{> '@select' limiter.select }}
+        <span class="toolbar__limiter-suffix">
+            {{ limiter.suffix }}
+        </span>
+    </div>
+</div>
+
