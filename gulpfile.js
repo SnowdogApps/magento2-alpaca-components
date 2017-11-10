@@ -22,7 +22,8 @@ const autoprefixer = require('autoprefixer'),
       sourcemaps   = require('gulp-sourcemaps'),
       stylelint    = require('stylelint'),
       svgSprite    = require('gulp-svg-sprite'),
-      util         = require('gulp-util');
+      util         = require('gulp-util'),
+      inject = require('gulp-inject');
 
 // Turn off Bluebird unhandled promises warnings
 bluebird.config({
@@ -51,7 +52,7 @@ hbsEngine.handlebars.registerHelper('component', name => {
 });
 
 // Fractal gulp tasks
-gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () => {
+gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'a11y', 'watch'], () => {
   const server = fractal.web.server({
     sync: true,
     port: 4000
@@ -60,10 +61,13 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
 
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
+    var destPath = fractal.web.get('builder.dest');
+    logger.success(destPath);
   });
 });
 
-gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
+
+gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass', 'a11y'], () => {
   const builder = fractal.web.builder();
 
   builder.on('progress', (completed, total) => {
@@ -78,6 +82,17 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
 });
 
 // Gulp tasks
+gulp.task('a11y', () => {
+  const a11yTestFile = fractal.web.get('path', __dirname + '/test.js');
+  const testTarget = fractal.components.get('path') + '/preview.hbs';
+  logger.success(a11yTestFile);
+  logger.success(testTarget)
+  logger.success(fractal.web.get('static.path'));
+  return gulp.src(testTarget)
+    .pipe(inject(gulp.src([a11yTestFile], {read: false})))
+    .pipe(gulp.dest(fractal.components.get('path')));
+});
+
 gulp.task('watch', () => {
   gulp.watch([
     fractal.components.get('path') + '/**/*.scss',
