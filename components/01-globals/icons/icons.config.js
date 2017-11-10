@@ -5,6 +5,7 @@ module.exports = {
       'angle-down',
       'arrow-circle-up',
       'arrow-left',
+      'arrow-right',
       'checked',
       'close',
       'youtube',
