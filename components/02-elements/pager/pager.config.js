@@ -2,8 +2,8 @@ module.exports = {
   status: 'wip',
   collated: true,
   context: {
-    arrowLeftVisible: false,
-    arrowRightVisible: true,
+    arrowLeftActive: false,
+    arrowRightActive: true,
     pages: [
       {
         pageNo: '1',
@@ -31,8 +31,8 @@ module.exports = {
     {
       name: 'both arrows',
       context: {
-        arrowLeftVisible: true,
-        arrowRightVisible: true,
+        arrowLeftActive: true,
+        arrowRightActive: true,
         pages: [
           {
             pageNo: 1,
@@ -60,8 +60,8 @@ module.exports = {
     {
       name: 'arrow left',
       context: {
-        arrowLeftVisible: true,
-        arrowRightVisible: false,
+        arrowLeftActive: true,
+        arrowRightActive: false,
         pages: [
           {
             pageNo: 1,
@@ -89,8 +89,8 @@ module.exports = {
     {
       name: 'more sites',
       context: {
-        arrowLeftVisible: true,
-        arrowRightVisible: true,
+        arrowLeftActive: true,
+        arrowRightActive: true,
         pages: [
           {
             pageNo: 6,
@@ -118,8 +118,8 @@ module.exports = {
     {
       name: 'arrow right',
       context: {
-        arrowLeftVisible: true,
-        arrowRightVisible: true,
+        arrowLeftActive: true,
+        arrowRightActive: true,
         pages: [
           {
             pageNo: 13,
