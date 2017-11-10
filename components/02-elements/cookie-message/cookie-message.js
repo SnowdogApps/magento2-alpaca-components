@@ -4,8 +4,6 @@ class CookieMessage {
     this.messageClose  = document.querySelector('.cookie-message__close');
     this.cookies       = document.querySelectorAll('.cookie-message');
 
-    // todo domyslnie wylaczony, jezeli local storage nie ma wpisu to wlaczamy
-    // this.setHeight();
     this.start();
     this.setListeners();
   }
@@ -13,10 +11,8 @@ class CookieMessage {
     const cookieMessage = el.currentTarget.parentElement.parentElement,
           dataType      = cookieMessage.dataset.type;
 
-    // if (!localStorage.getItem(dataType) !== 'closed') {
     cookieMessage.classList.remove('cookie-message--open');
     localStorage.setItem(dataType, 'closed')
-    // }
   }
   setListeners() {
     this.messageClose.addEventListener('click', this.closeBar);
