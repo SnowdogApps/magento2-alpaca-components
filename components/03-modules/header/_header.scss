@@ -13,7 +13,7 @@ $header__icon-color            : $gray-dark !default;
         display: flex;
         flex-flow: row wrap;
         @include mq($screen-xl) {
-            margin: 2px 0;
+            margin: 4px 0;
         }
     }
 
@@ -112,6 +112,10 @@ $header__icon-color            : $gray-dark !default;
             max-width: 300px;
             margin-right: 24px;
         }
+    }
+
+    &__minicart {
+        position: relative;
     }
 
     &--menu-open {
