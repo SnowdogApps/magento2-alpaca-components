@@ -24,10 +24,6 @@ module.exports = {
       {
         pageNo: 5,
         active: false
-      },
-      {
-        pageNo: 6,
-        active: false
       }
     ]
   },
@@ -57,10 +53,6 @@ module.exports = {
           {
             pageNo: 5,
             active: false
-          },
-          {
-            pageNo: 6,
-            active: false
           }
         ]
       }
@@ -89,10 +81,6 @@ module.exports = {
           },
           {
             pageNo: 5,
-            active: false
-          },
-          {
-            pageNo: 6,
             active: true
           }
         ]
@@ -110,10 +98,6 @@ module.exports = {
           },
           {
             pageNo: 7,
-            active: false
-          },
-          {
-            pageNo: 8,
             active: false
           },
           {
