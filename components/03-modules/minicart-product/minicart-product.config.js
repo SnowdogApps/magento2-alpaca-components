@@ -7,6 +7,7 @@ module.exports = {
     },
     productName: 'Some product name',
     productPrice: '$85.00',
+    productQty: 'Qty: 32',
     attributes: {
       class: 'minicart-product__attributes',
       dropdowns: [

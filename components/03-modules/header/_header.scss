@@ -1,3 +1,5 @@
+$header__margin                : 4px 0 !default;
+$header__margin--xl            : 0 !default;
 $header__border-color          : $gray !default;
 $header__font-size             : $font-size-small !default;
 $header__button-size           : 48px !default;
@@ -12,8 +14,9 @@ $header__icon-color            : $gray-dark !default;
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
+        margin: $header__margin--xl;
         @include mq($screen-xl) {
-            margin: 4px 0;
+            margin: $header__margin;
         }
     }
 

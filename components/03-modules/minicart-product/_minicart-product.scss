@@ -121,7 +121,6 @@ $minicart-product__action-icon-color--active : $color-primary !default;
         &:focus,
         &:hover {
             background-color: $minicart-product__action-button-bg;
-            border: 0;
         }
     }
 }

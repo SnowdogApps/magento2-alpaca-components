@@ -14,15 +14,15 @@
         </div>
     </div>
     <div class="minicart-content__actions">
-        {{ render '@button--secondary' checkout }}
+        {{ render '@button--secondary' checkoutButton }}
     </div>
     <div class="minicart-content__products-list">
         {{ render '@minicart-product' }}
         {{ render '@minicart-product' }}
     </div>
     <div class="minicart-content__actions">
-        <a href="#" class="minicart-content__edit">
-            View and edit cart
+        <a href="{{ editButton.link }}" class="minicart-content__edit">
+            {{ editButton.label }}
         </a>
     </div>
 </div>

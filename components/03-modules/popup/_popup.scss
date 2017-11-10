@@ -1,6 +1,7 @@
 $popup__padding                  : 0 !default;
 $popup__content-top-margin       : 0 !default;
 $popup__width                    : 320px !default;
+$popup__width--screen-s          : 100% !default;
 $popup__background               : $white !default;
 $popup__z-index                  : 50 !default;
 $popup__border                   : 0 !default;
@@ -17,7 +18,7 @@ $popup__margin                   : 0 !default;
     position: fixed;
     right: 0;
     left: auto;
-    width: 100%;
+    width: $popup__width--screen-s;
     padding: $popup__padding;
     margin: $popup__margin;
     z-index: $popup__z-index;

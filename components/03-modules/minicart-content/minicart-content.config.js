@@ -3,7 +3,11 @@ module.exports = {
     total: 'Cart Subtotal',
     counter: '2 items',
     price: '$ 200.00',
-    checkout: {
+    editButton: {
+      label: 'View and edit cart',
+      link: '/edit'
+    },
+    checkoutButton: {
       tag: 'button',
       class: 'button--secondary button--fluid minicart-content__checkout',
       attributes: 'type="button"',
