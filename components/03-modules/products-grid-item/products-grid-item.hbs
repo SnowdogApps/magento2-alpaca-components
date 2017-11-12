@@ -1,0 +1,60 @@
+<{{{ tag }}} class="products-grid-item {{ class }}">
+    <a href="#" class="products-grid-item__link">
+        <div class="products-grid-item__media">
+            {{ render '@image' image }}
+        </div>
+    </a>
+        <div class="products-grid-item__content">
+            <a href="#" class="products-grid-item__link products-grid-item__link--name">
+                <h2 class="products-grid-item__name">
+                    {{ name }}
+                </h2>
+            </a>
+
+            <div class="products-grid-item__price">
+                {{ render '@price' price }}
+            </div>
+            <div class="products-grid-item__options">
+                {{#each swatches as |swatch|}}
+                    <ul class="swatches-list swatches--list--{{ swatch.modifier }}">
+                        {{#each swatch.data}}
+                            <li class="
+                                    swatches-list__item
+                                    swatches-list__item--{{ swatch.modifier }}
+                                    {{#if this.selected}}
+                                    swatches-list__item--{{ swatch.modifier }}-selected
+                                    {{/if}}
+                                "
+                             >
+                                {{#if this.image}}
+                                    {{render '@image' this.image}}
+                                {{else}}
+                                    {{ this.label }}
+                                {{/if}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                {{/each}}
+            </div>
+            <div class="products-grid-item__actions">
+                {{ render '@button--link' button }}
+                <button class="products-grid-item__wishlist">
+                    <svg class="products-grid-item__wishlist-icon">
+                        <use xlink:href="{{ svg 'wishlist' }}"></use>
+                    </svg>
+                </button>
+                <button class="products-grid-item__compare">
+                    <svg class="products-grid-item__compare-icon">
+                        <use xlink:href="{{ svg 'compare' }}"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    {{#if badgeDiscount}}
+        {{ render '@badge--discount' badge.discount }}
+    {{/if}}
+    {{#if badgeNew}}
+        {{ render '@badge--new' badge.new }}
+    {{/if}}
+</{{{ tag }}}>

@@ -1,0 +1,32 @@
+<div class="price {{ class }} {{{ attributes }}}">
+{{#if specialPrice }}
+    <span class="price__value price__value--old {{ oldPriceClass }}">
+        {{prefix.tag}}
+            {{prefix.text}}
+        {{prefix.closingTag}}
+        {{regularPrice}}
+        {{suffix.tag}}
+            {{suffix.text}}
+        {{suffix.closingTag}}
+    </span>
+    <span class="price__value price__value--special {{ specialPriceClass }}">
+        {{prefix.tag}}
+            {{prefix.text}}
+        {{prefix.closingTag}}
+        {{specialPrice}}
+        {{suffix.tag}}
+            {{suffix.text}}
+        {{suffix.closingTag}}
+    </span>
+{{else}}
+    <span class="price__value {{ regularPriceClass }}">
+        {{prefix.tag}}
+            {{prefix.text}}
+        {{prefix.closingTag}}
+        {{regularPrice}}
+        {{suffix.tag}}
+            {{suffix.text}}
+        {{suffix.closingTag}}
+    </span>
+{{/if}}
+</div>

@@ -25,7 +25,7 @@ module.exports = {
         button: {
           tag: 'a',
           text: 'Add to Cart',
-          class: 'product-item__button'
+          class: 'products-grid-item__button'
         }
       }
     }
