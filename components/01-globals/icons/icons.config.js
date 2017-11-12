@@ -10,6 +10,7 @@ module.exports = {
       'arrow-left',
       'checked',
       'close',
+      'compare',
       'curved-arrows',
       'delivery-truck',
       'edit',
