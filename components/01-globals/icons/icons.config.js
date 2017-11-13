@@ -47,6 +47,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'compare',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'curved-arrows',
         class: 'icons__single-icon'
       },
