@@ -1,3 +1,5 @@
+$header__margin                : 4px 0 !default;
+$header__margin--xl            : 0 !default;
 $header__border-color          : $gray !default;
 $header__font-size             : $font-size-small !default;
 $header__button-size           : 48px !default;
@@ -6,14 +8,16 @@ $header__icon-padding          : 2px !default;
 $header__icon-color            : $gray-dark !default;
 
 .header {
+    position: relative;
     border-bottom: 1px solid $header__border-color;
 
     &__wrapper {
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
+        margin: $header__margin--xl;
         @include mq($screen-xl) {
-            margin: 2px 0;
+            margin: $header__margin;
         }
     }
 
@@ -112,6 +116,10 @@ $header__icon-color            : $gray-dark !default;
             max-width: 300px;
             margin-right: 24px;
         }
+    }
+
+    &__minicart {
+        position: relative;
     }
 
     &--menu-open {

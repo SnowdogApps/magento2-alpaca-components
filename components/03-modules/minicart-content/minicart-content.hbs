@@ -1,47 +1,28 @@
 <div class="minicart-content {{ class }}" {{{ attributes }}}>
-    <h2 class="heading heading--fourth-level minicart-content__title">
-        {{ title }}
-    </h2>
-
-    <ul class="list minicart-content__list">
-        {{#each elements}}
-            <li class="minicart-content__item">
-                {{> '@image' image }}
-
-                <div class="minicart-content__description">
-                    <h5 class="minicart-content__name">
-                        {{ name }}
-                    </h5>
-
-                    <div class="minicart-content__price">
-                        {{ price }}
-                    </div>
-
-                    <div class="minicart-content__quantity">
-                        Qty: {{ quantity }}
-                    </div>
-                </div>
-
-                <div class="minicart-content__icons">
-                    {{> '@button--icon' button iconId="edit" }}
-
-                    {{> '@button--icon' button iconId="remove" }}
-                </div>
-            </li>
-        {{/each}}
-    </ul>
-
+    <div class="minicart-content__bar"></div>
     <div class="minicart-content__total">
-        <div class="minicart-content__cart">
-            {{ total }}
+        <div class="minicart-content__total-counter">
+            {{ counter}}
         </div>
-
         <div class="minicart-content__summary">
-            {{ price }}
+            <div class="minicart-content__summary-label">
+                {{ total }}
+            </div>
+            <div class="minicart-content__summary-value">
+                {{ price }}
+            </div>
         </div>
     </div>
-
-    {{> '@button' checkout }}
-
-    {{> '@button--secondary' editCart }}
+    <div class="minicart-content__actions">
+        {{ render '@button--secondary' checkoutButton }}
+    </div>
+    <div class="minicart-content__products-list">
+        {{ render '@minicart-product' }}
+        {{ render '@minicart-product' }}
+    </div>
+    <div class="minicart-content__actions">
+        <a href="{{ editButton.link }}" class="minicart-content__edit">
+            {{ editButton.label }}
+        </a>
+    </div>
 </div>
