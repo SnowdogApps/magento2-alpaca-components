@@ -47,6 +47,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'compare',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'curved-arrows',
         class: 'icons__single-icon'
       },
@@ -67,6 +71,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'grid',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'heart',
         class: 'icons__single-icon'
       },
@@ -76,6 +84,10 @@ module.exports = {
       },
       {
         iconId: 'linkedin',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'list',
         class: 'icons__single-icon'
       },
       {
