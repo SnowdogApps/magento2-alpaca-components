@@ -17,8 +17,14 @@ module.exports = {
       }
     ],
     icons: [
-      'phone',
-      'account'
+      {
+        icon: 'phone',
+        ariaLabel: 'Store phone number'
+      },
+      {
+        icon: 'account',
+        ariaLabel: 'Customer Account'
+      }
     ],
     logo: {
       class: 'header__logo',
@@ -31,6 +37,8 @@ module.exports = {
       },
       field: {
         class: 'search-form__input',
+        id: 'search',
+        name: 'search',
         placeholder: 'Search entire store here...'
       }
     },
@@ -40,7 +48,7 @@ module.exports = {
       class: 'button--icon search-form__button',
       iconId: 'search',
       iconClass: 'button__icon',
-      attributes: 'type="button"',
+      attributes: 'type="button" aria-label="Search button"',
     },
     likeButton: {
       tag: 'button',
@@ -57,17 +65,15 @@ module.exports = {
       iconClass: 'button__icon'
     },
     trigger: {
-      attributes: 'type="button"',
-      class: 'button popup__button',
+      attributes: 'data-popuptrigger="popup-1"',
+      class: 'button popup-trigger',
       counter: '82'
     },
     minicartPopup: {
-      script: false,
+      class: 'header__minicart-content',
+      popupId: 'popup-1',
+      popupTrigger: false,
       content: 'minicart-content'
-    },
-    loginPopup: {
-      script: true,
-      content: 'login-form--popup'
     }
   }
 }

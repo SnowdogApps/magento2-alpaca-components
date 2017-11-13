@@ -5,6 +5,7 @@ module.exports = {
       {
         itemTag: 'a',
         title: 'All',
+        class: '',
         itemAttributes: 'href="#"',
         collapse: false
       },
@@ -12,37 +13,53 @@ module.exports = {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
         title: 'dropdown title',
+        class: '',
         id: 'dropdown-1',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'image'
       },
       {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-2"',
+        class: '',
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'paragraph'
       },
       {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-3"',
         title: 'dropdown title',
+        class: '',
         id: 'dropdown-3',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'image'
       },
       {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-4"',
         title: 'dropdown title',
+        class: '',
         id: 'dropdown-4',
         collapse: true,
-        contentElement: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere magna at erat mollis egestas a ut quam. Pellentesque ac varius ligula.</p>'
+        contentElement: 'paragraph'
       }
     ]
   },
   variants: [
+    {
+      name: 'screen-m',
+      context: {
+        class: 'dropdown-list@screen-m dropdown-list--is-open@screen-m',
+      }
+    },
+    {
+      name: 'dark',
+      context: {
+        class: 'dropdown-list--dark'
+      }
+    },
     {
       name: 'with-nested',
       context: {

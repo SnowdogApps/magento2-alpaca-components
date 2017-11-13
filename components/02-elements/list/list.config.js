@@ -40,15 +40,15 @@ module.exports = {
         elements: [
           {
             icon: 'facebook',
-            text: 'Facebook'
+            iconLink: '#'
           },
           {
             icon: 'twitter',
-            text: 'Twitter'
+            iconLink: '#'
           },
           {
             icon: 'linkedin',
-            text: 'Linkedin'
+            iconLink: '#'
           }
         ]
       }
@@ -121,22 +121,27 @@ module.exports = {
       context: {
         elements: [
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           }

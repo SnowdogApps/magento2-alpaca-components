@@ -1,5 +1,5 @@
+{{ render '@marketing-bar' }}
 <header class="header">
-    {{ render '@marketing-bar' }}
     <div class="top-bar">
         <div class="container top-bar__wrapper">
             <div class="top-bar__contact-info">
@@ -23,9 +23,12 @@
             {{ render '@logo' logo }}
             <div class="header__icons">
                 {{#each icons as |item| }}
-                    <a class="header__icons-item" href="#">
+                    <a class="header__icons-item"
+                       href="#"
+                       aria-label="{{ item.ariaLabel }}"
+                    >
                         <svg class="header__icon">
-                            <use xlink:href="{{ svg item }}"></use>
+                            <use xlink:href="{{ svg item.icon }}"></use>
                         </svg>
                     </a>
                 {{/each}}
@@ -37,7 +40,6 @@
             <div class="header__menu-trigger">
                 {{ render '@side-menu-trigger--span-way' }}
             </div>
-
             <div class="header__featured-info">
                 <a href="#" class="featured-info">
                     <div class="featured-info__icon">
@@ -79,4 +81,6 @@
             </div>
         </div>
     </div>
+    {{ render '@side-menu' }}
 </header>
+{{ render '@mega-menu' }}

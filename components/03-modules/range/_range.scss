@@ -1,0 +1,89 @@
+$range__height               : 8px !default;
+$range__handler-width        : 24px !default;
+$range__handler-height       : 24px !default;
+$range__handler-bg-color     : $white !default;
+$range__handler-border       : none !default;
+$range__handler-border-radius: 50% !default;
+$range__handler-box-shadow   : 0 2px 4px 0 rgba(51, 51, 51, 0.5) !default;
+$range__handler-offset-top   : -1 * $range__height !default;
+$range__track-bg-color       : $gray !default;
+$range__track-border-radius  : $border-radius;
+$range__track-border         : none !default;
+$range__track-box-shadow     : none !default;
+$range__dash-padding         : 0 $spacer--medium 0 $spacer !default;
+$range__suffix-padding       : 0 $spacer !default;
+
+.range-filter {
+    padding: 0;
+    padding-top: $range__height;
+    overflow: hidden;
+    &__slider {
+        margin-bottom: $spacer--medium;
+    }
+    &__inputs-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__dash {
+        text-align: center;
+        padding: $range__dash-padding;
+    }
+    &__suffix {
+        padding: $range__suffix-padding;
+    }
+    &__label {
+        @include visually-hidden();
+    }
+    &__input {
+        width: auto;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+}
+
+.noUi-tooltip {
+    display: none;
+}
+.noUi-target {
+    background-color: $range__track-bg-color;
+    border-radius: $range__track-border-radius;
+    box-shadow: $range__track-box-shadow;
+    border: $range__track-border;
+    border-radius: $border-radius;
+    height: $range__height;
+}
+.noUi-handle {
+    &:hover {
+        cursor: pointer;
+    }
+    .noUi-horizontal & {
+        border-radius: $range__handler-border-radius;
+        background: $range__handler-bg-color;
+        width: $range__handler-width;
+        height: $range__handler-height;
+        border: $range__handler-border;
+        box-shadow: $range__handler-box-shadow;
+        top: $range__handler-offset-top;
+        &:before,
+        &:after {
+            display: none;
+        }
+        &:focus {
+            outline: none;
+
+            .noUi-tooltip {
+                display: block;
+            }
+        }
+    }
+}
+.noUi-extended {
+    padding-right: 24px;
+}
+.noUi-extended .noUi-handle {
+    left: -1px;
+}
+.noUi-extended .noUi-origin  {
+    right: -24px;
+}
