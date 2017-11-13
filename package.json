@@ -29,6 +29,8 @@
   },
   "devDependencies": {
     "accessibilityjs": "^1.0.1",
-    "gulp-inject": "^4.3.0"
+    "gulp-inject": "^4.3.0",
+    "gulp-replace": "^0.6.1",
+    "pa11y": "^4.13.1"
   }
 }

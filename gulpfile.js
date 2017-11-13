@@ -23,7 +23,9 @@ const autoprefixer = require('autoprefixer'),
       stylelint    = require('stylelint'),
       svgSprite    = require('gulp-svg-sprite'),
       util         = require('gulp-util'),
-      inject = require('gulp-inject');
+      inject       = require('gulp-inject'),
+      replace      = require('gulp-replace'),
+      pa11y        = require('pa11y');
 
 // Turn off Bluebird unhandled promises warnings
 bluebird.config({
@@ -52,7 +54,7 @@ hbsEngine.handlebars.registerHelper('component', name => {
 });
 
 // Fractal gulp tasks
-gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'a11y', 'watch'], () => {
+gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () => {
   const server = fractal.web.server({
     sync: true,
     port: 4000
@@ -61,13 +63,12 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'a11y', 'watch'
 
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
-    var destPath = fractal.web.get('builder.dest');
-    logger.success(destPath);
   });
+
 });
 
 
-gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass', 'a11y'], () => {
+gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
   const builder = fractal.web.builder();
 
   builder.on('progress', (completed, total) => {
@@ -82,15 +83,18 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass', 'a11y'], () => 
 });
 
 // Gulp tasks
-gulp.task('a11y', () => {
-  const a11yTestFile = fractal.web.get('path', __dirname + '/test.js');
-  const testTarget = fractal.components.get('path') + '/preview.hbs';
-  logger.success(a11yTestFile);
-  logger.success(testTarget)
-  logger.success(fractal.web.get('static.path'));
-  return gulp.src(testTarget)
-    .pipe(inject(gulp.src([a11yTestFile], {read: false})))
-    .pipe(gulp.dest(fractal.components.get('path')));
+gulp.task('a11y', ['fractal:start'], () => {
+  const baseUrl = fractal.web.get('path', __dirname + '/components');
+  const a11yTestSrc = fractal.web.get('path', __dirname + '/public/tests/test.js');
+  const testTarget = baseUrl  + '/_preview.hbs';
+
+  logger.success('baseUrl' + baseUrl);
+  logger.success(a11yTestSrc);
+  logger.success('testTarget' + testTarget);
+
+  return gulp.src(testTarget, {base: baseUrl})
+    .pipe(inject(gulp.src([a11yTestSrc], {read: false, 'cwd': __dirname + '/public/'})))
+    .pipe(gulp.dest(baseUrl));
 });
 
 gulp.task('watch', () => {
