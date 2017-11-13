@@ -1,46 +1,32 @@
-// TO DO - Needs a refactor
+'use strict';
+class CookieMessage {
+  constructor() {
+    this.closing = document.querySelectorAll('.cookie-message__close');
+    this.cookies = document.querySelectorAll('.cookie-message');
 
-'use strict'
-
-const messageClose = document.querySelector('.cookie-message__close'),
-      messageTop = document.querySelector('.cookie-message--top'),
-      cookieMessage = document.querySelector('.cookie-message--cookie');
-
-function closeBar() {
-  const cookieMessage = this.parentNode.parentNode;
-
-  if (cookieMessage.classList.contains('cookie-message--top')) {
-    localStorage.setItem('cookie-message-top', 1);
-    messageTop.style.height = 0;
-    messageTop.classList.add('closed');
+    this.start();
   }
-  else if (cookieMessage.classList.contains('cookie-message--cookie')) {
-    localStorage.setItem('cookie-message-cookie', 1);
-    cookieMessage.style.height = 0;
-    cookieMessage.classList.add('closed');
+  closeBar(el) {
+    const cookieMessage = el.currentTarget.parentElement.parentElement,
+          dataType      = cookieMessage.dataset.type;
+
+    cookieMessage.classList.remove('cookie-message--open');
+    localStorage.setItem(dataType, 'closed')
+  }
+  setListeners() {
+    this.closing.forEach(el => {
+      el.addEventListener('click', this.closeBar);
+    });
+  }
+  start() {
+    // Display message if it wasn't closed before
+    this.cookies.forEach(el => {
+      const dataType = el.dataset.type;
+      if (localStorage.getItem(dataType) !== 'closed') {
+        el.classList.add('cookie-message--open')
+      }
+    });
+    this.setListeners();
   }
 }
-
-function setBarHeight(el) {
-  el.style.height = 'auto';
-  el.style.height = el.clientHeight + 'px';
-}
-
-if (messageTop) {
-  setBarHeight(messageTop);
-}
-
-if (cookieMessage) {
-  setBarHeight(cookieMessage);
-}
-
-window.addEventListener('resize', () => {
-  if (messageTop) {
-    setBarHeight(messageTop);
-  }
-  if (cookieMessage) {
-    setBarHeight(cookieMessage);
-  }
-}, true);
-
-messageClose.addEventListener('click', closeBar);
+new CookieMessage();

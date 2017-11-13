@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - update form elements style and structure (improve accessibility):
    checkbox/radio button, select, input, textarea
  - Tab styling that fits alpaca design.
+ - Cookie message : styling that fits new alpaca design.
+ - Update icon list and change to alph order
 
 ## [0.3.0] - 06.11.2017
 ### Added

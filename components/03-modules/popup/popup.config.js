@@ -3,6 +3,7 @@ module.exports = {
     class: '',
     popupId: 'popup-1',
     content: 'button',
+    popupTrigger: true,
     buttonClose: {
       tag: 'button',
       text: '',
