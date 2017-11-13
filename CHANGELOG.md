@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+ - Slide module
  - Arrow-Right icon.
 ### Changed
  - Pager element styling that fits alpaca design.

@@ -19,6 +19,14 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'angle-right',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'angle-left',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'arrow-circle-up',
         class: 'icons__single-icon'
       },
