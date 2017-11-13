@@ -5,24 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.4.0] - 13.11.2017
 ### Added
- - Add quantity-updater module
- - Add minus icon
- - component icon added - to generate single icon in components
- - `dropdown-list` component to `side-menu`
+ - Quantity-updater module
+ - Minus icon
+ - Icon component
+ - Dropdown list component for side menu
+ - Link modifier with custom border on hover
 
 ### Changed
  - Dropdown list component
- - Add link modifier with custom border on hover
  - Footer module changed
- - update form elements style and structure (improve accessibility):
-   checkbox/radio button, select, input, textarea
- - Tab styling that fits alpaca design.
- - Cookie message : styling that fits new alpaca design.
+ - Update form elements style and structure (accessibility): checkbox/radio button, select, input, textarea
+ - Tab styling
+ - Cookie message styling
  - Update icon list and change to alph order
  - Update icons list to display with icon components
  - Name of `dropdown-menu` element to `mega-menu`
- - Mega menu styling that fits alpaca design
+ - Mega menu styling
 
 ## [0.3.0] - 06.11.2017
 ### Added
