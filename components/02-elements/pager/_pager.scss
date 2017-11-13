@@ -1,8 +1,8 @@
 $pager__list-padding                        : $spacer !default;
 $pager__item-margin                         : 0 $spacer;
-$pager__item--current-after-height          : $spacer;
-$pager__item--current-after-background-color: $color-primary;
-$pager__item--current-after-transition      : $transition-base  !default;
+$pager__item-after-height--current          : $spacer;
+$pager__item-after-background-color--current: $color-primary;
+$pager__item-after-transition--current      : $transition-base  !default;
 $pager__item-size                           : 48px !default;
 $pager__item-color--current                 : $white !default;
 $pager__item-background--current            : $color-primary !default;
@@ -50,10 +50,10 @@ $pager__link-color-hover                    : $color-primary !default;
                 bottom: 14px;
                 left: 0;
                 width: 100%;
-                height: $pager__item--current-after-height ;
-                background-color: $pager__item--current-after-background-color;
+                height: $pager__item-after-height--current ;
+                background-color: $pager__item-after-background-color--current;
                 z-index: -1;
-                transition: $pager__item--current-after-transition ;
+                transition: $pager__item-after-transition--current ;
                 transform-origin: left;
             }
         }
