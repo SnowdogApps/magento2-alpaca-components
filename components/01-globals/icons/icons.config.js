@@ -27,6 +27,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'arrow-right',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'checked',
         class: 'icons__single-icon'
       },
