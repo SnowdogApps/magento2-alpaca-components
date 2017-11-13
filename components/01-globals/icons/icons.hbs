@@ -1,11 +1,9 @@
 <div class="icons">
     {{#each icons}}
         <div class="icons__item">
-           <svg class="icons__svg">
-               <use xlink:href="{{ svg this }}"></use>
-           </svg>
+           {{ render '@icon' this }}
            <span class="icons__name">
-               {{ this }}
+               {{ this.iconId }}
            </span>
        </div>
     {{/each}}

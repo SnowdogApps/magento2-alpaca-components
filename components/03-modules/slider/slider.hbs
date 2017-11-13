@@ -1,0 +1,48 @@
+<div class="slider {{ class }}" {{{ attributes }}}>
+    <div class="slider__handler">
+        <div class="slider__slides">
+            {{#each products }}
+                <div class="slider__item">
+                    <a href="{{ this.link }}"
+                       class="slider__link"
+                       aria-label="{{ this.ariaLabel }}"
+                    >
+                        {{ render '@image' this.image }}
+
+                        <div class="slider__item-handler">
+                            {{ render '@heading' this.heading }}
+
+                            <div class="slider__price">
+                                {{#if this.oldPrice}}
+                                    <span class="slider__price-old">
+                                        {{ this.oldPrice }}
+                                    </span>
+
+                                    <span class="slider__price-new">
+                                        {{ this.price }}
+                                    </span>
+                                {{else}}
+                                    {{ this.price }}
+                                {{/if}}
+                            </div>
+                        </div>
+
+                        {{#if badge}}
+                            {{ render '@badge' this.badge }}
+                        {{/if}}
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="slider__navigation">
+        {{render '@button--icon' iconPrev }}
+
+        {{render '@button--icon' iconNext }}
+    </div>
+</div>
+
+{{#if script }}
+    <script src="{{static 'slider.js' }}"></script>
+{{/if}}

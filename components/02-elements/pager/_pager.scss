@@ -1,46 +1,61 @@
-$pager__padding                 : 15px !default;
-$pager__margin                  : 15px !default;
-$pager__item-size               : 48px !default;
-$pager__item-color--current     : $white !default;
-$pager__item-background--current: $color-primary !default;
-$pager__link-color              : $gray !default;
-$pager__link-color-hover        : $color-primary !default;
-$pager__icon-width              : 12px !default;
-$pager__icon-height             : 12px !default;
+$pager__list-padding                        : $spacer !default;
+$pager__item-margin                         : 0 $spacer;
+$pager__item-after-height--current          : $spacer;
+$pager__item-after-background-color--current: $color-primary;
+$pager__item-after-transition--current      : $transition-base  !default;
+$pager__item-size                           : 48px !default;
+$pager__item-color--current                 : $white !default;
+$pager__item-background--current            : $color-primary !default;
+$pager__icon-width                          : 15px !default;
+$pager__icon-height                         : 15px !default;
+$pager__link-fill-disabled                  : $gray !default;
+$pager__link-fill                           : $green !default;
+$pager__link-color                          : $gray-dark !default;
+$pager__link-color-hover                    : $color-primary !default;
 
 .pager {
     width: 100%;
     text-align: center;
-    margin-bottom: $pager__margin;
 
     &__list {
         display: flex;
         align-items: center;
         justify-content: center;
         list-style-type: none;
-        padding: 0 $pager__padding;
-        margin: 10px 0;
-
-        @include mq($screen-m) {
-            padding: 0 ($pager__padding * 2);
-        }
+        padding: $pager__list-padding;
+        margin: 0;
     }
 
     &__item {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-basis: $pager__item-size;
         height: $pager__item-size;
-        min-width: $pager__item-size;
-        margin-right: 5px;
+        margin: $pager__item-margin;
+
+        &:first-child {
+            margin-left: 0;
+        }
 
         &:last-child {
             margin-right: 0;
         }
 
         &--current {
-            color: $pager__item-color--current;
-            background-color: $pager__item-background--current;
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 14px;
+                left: 0;
+                width: 100%;
+                height: $pager__item-after-height--current;
+                background-color: $pager__item-after-background-color--current;
+                z-index: -1;
+                transition: $pager__item-after-transition--current;
+                transform-origin: left;
+            }
         }
     }
 
@@ -50,14 +65,23 @@ $pager__icon-height             : 12px !default;
         justify-content: center;
         width: 100%;
         height: $pager__item-size;
-        padding: 0 5px;
-        line-height: $pager__item-size;
         color: $pager__link-color;
-        text-align: center;
+        text-decoration: none;
 
         &:hover {
             color: $pager__link-color-hover;
-            text-decoration: none;
+            text-decoration: underline;
+        }
+
+        &[disabled] {
+            fill: $pager__link-fill-disabled;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        &--prev,
+        &--next {
+            fill: $pager__link-fill;
         }
     }
 
