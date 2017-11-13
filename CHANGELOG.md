@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Add lory lib
  - Add 2 icons to slider
  - Add optimized product images
+ - component icon added - to generate single icon in components
 
 ### Changed
  - Dropdown list component
@@ -22,6 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Tab styling that fits alpaca design.
  - Cookie message : styling that fits new alpaca design.
  - Update icon list and change to alph order
+ - Update icons list to display with icon components
 
 ## [0.3.0] - 06.11.2017
 ### Added
