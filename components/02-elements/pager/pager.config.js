@@ -4,6 +4,8 @@ module.exports = {
   context: {
     arrowLeftActive: false,
     arrowRightActive: true,
+    ariaLabelLeft: 'Link to previous page, disabled',
+    ariaLabelRight: 'Link to next page',
     pages: [
       {
         pageNo: '1',
@@ -11,19 +13,23 @@ module.exports = {
       },
       {
         pageNo: 2,
-        active: false
+        active: false,
+        ariaLabel: 'Link to page 2'
       },
       {
         pageNo: 3,
-        active: false
+        active: false,
+        ariaLabel: 'Link to page 3'
       },
       {
         pageNo: 4,
-        active: false
+        active: false,
+        ariaLabel: 'Link to page 4'
       },
       {
         pageNo: 5,
-        active: false
+        active: false,
+        ariaLabel: 'Link to page 5'
       }
     ]
   },
@@ -33,26 +39,33 @@ module.exports = {
       context: {
         arrowLeftActive: true,
         arrowRightActive: true,
+        ariaLabelLeft: 'Link to previous page',
+        ariaLabelRight: 'Link to next page',
         pages: [
           {
             pageNo: 1,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 1'
           },
           {
             pageNo: 2,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 2'
           },
           {
             pageNo: 3,
-            active: true
+            active: true,
+            ariaLabel: 'Link to page 3'
           },
           {
             pageNo: 4,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 4'
           },
           {
             pageNo: 5,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 5'
           }
         ]
       }
@@ -62,22 +75,28 @@ module.exports = {
       context: {
         arrowLeftActive: true,
         arrowRightActive: false,
+        ariaLabelLeft: 'Link to previous page',
+        ariaLabelRight: 'Link to next page, disabled',
         pages: [
           {
             pageNo: 1,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 1'
           },
           {
             pageNo: 2,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 2'
           },
           {
             pageNo: 3,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 3'
           },
           {
             pageNo: 4,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 4'
           },
           {
             pageNo: 5,
@@ -91,6 +110,8 @@ module.exports = {
       context: {
         arrowLeftActive: true,
         arrowRightActive: true,
+        ariaLabelLeft: 'Link to previous page',
+        ariaLabelRight: 'Link to next page',
         pages: [
           {
             pageNo: 6,
@@ -98,7 +119,8 @@ module.exports = {
           },
           {
             pageNo: 7,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 7'
           },
           {
             pageNo: '...',
@@ -106,11 +128,13 @@ module.exports = {
           },
           {
             pageNo: 17,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 17'
           },
           {
             pageNo: 18,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 18'
           }
         ]
       }
@@ -120,6 +144,8 @@ module.exports = {
       context: {
         arrowLeftActive: true,
         arrowRightActive: true,
+        ariaLabelLeft: 'Link to previous page',
+        ariaLabelRight: 'Link to next page',
         pages: [
           {
             pageNo: 13,
@@ -127,19 +153,23 @@ module.exports = {
           },
           {
             pageNo: 14,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 14'
           },
           {
             pageNo: 15,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 15'
           },
           {
             pageNo: 16,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 16'
           },
           {
             pageNo: 17,
-            active: false
+            active: false,
+            ariaLabel: 'Link to page 17'
           }
         ]
       }
