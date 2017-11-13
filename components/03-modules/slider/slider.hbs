@@ -10,9 +10,7 @@
                         {{ render '@image' this.image }}
 
                         <div class="slider__item-handler">
-                            <h5 class="slider__name">
-                                {{ this.name }}
-                            </h5>
+                            {{ render '@heading' this.heading }}
 
                             <div class="slider__price">
                                 {{#if this.oldPrice}}

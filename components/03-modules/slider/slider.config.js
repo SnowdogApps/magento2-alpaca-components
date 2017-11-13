@@ -17,7 +17,6 @@ module.exports = {
       iconClass: 'button__icon slider__icon',
       attributes: 'type="button" aria-label="button arrow slider next"'
     },
-    iconClass: 'slider__icon',
     products: [
       {
         link: '#',
@@ -26,7 +25,11 @@ module.exports = {
           class: 'slider__image',
           src: '/images/product/product-base.jpg',
         },
-        name: 'Some product name',
+        heading: {
+          tag: 'h5',
+          class: 'slider__name',
+          text: 'Some product name',
+        },
         price: '$ 200.00',
         oldPrice: '$ 250.00'
       },
@@ -37,7 +40,11 @@ module.exports = {
           class: 'slider__image',
           src: '/images/product/product-second.jpg',
         },
-        name: 'Some product name',
+        heading: {
+          tag: 'h5',
+          class: 'slider__name',
+          text: 'Some product name',
+        },
         price: '$ 200.00',
         badge: {
           text: 'New',
@@ -51,7 +58,11 @@ module.exports = {
           class: 'slider__image',
           src: '/images/product/product-base.jpg',
         },
-        name: 'Some product name',
+        heading: {
+          tag: 'h5',
+          class: 'slider__name',
+          text: 'Some product name',
+        },
         price: '$ 200.00',
         oldPrice: '$ 250.00'
       },
@@ -62,7 +73,11 @@ module.exports = {
           class: 'slider__image',
           src: '/images/product/product-second.jpg',
         },
-        name: 'Some product name',
+        heading: {
+          tag: 'h5',
+          class: 'slider__name',
+          text: 'Some product name',
+        },
         price: '$ 200.00',
         oldPrice: '$ 250.00',
         badge: {
@@ -77,7 +92,11 @@ module.exports = {
           class: 'slider__image',
           src: '/images/product/product-base.jpg',
         },
-        name: 'Some product name',
+        heading: {
+          tag: 'h5',
+          class: 'slider__name',
+          text: 'Some product name',
+        },
         price: '$ 200.00',
         oldPrice: '$ 250.00'
       }
