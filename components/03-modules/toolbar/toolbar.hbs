@@ -1,14 +1,22 @@
 <div class="toolbar {{ class }}" {{{ attributes }}}>
     <div class="toolbar__mode grid__column">
         <a href="{{grid.href}}" class="toolbar__mode-link">
-            <svg class="toolbar__mode-icon">
+            <svg class="
+                    toolbar__mode-icon
+                    {{#if grid.active}}
+                        toolbar__mode-icon--active
+                    {{/if}}
+                 "
+            >
                 <use xlink:href="{{ svg 'grid' }}"></use>
             </svg>
         </a>
-        <a href="{{grid.href}}" class="toolbar__mode-link">
+        <a href="{{list.href}}" class="toolbar__mode-link">
             <svg class="
                      toolbar__mode-icon
-                     toolbar__mode-icon--inactive
+                     {{#if list.active}}
+                         toolbar__mode-icon--active
+                     {{/if}}
                  "
             >
                 <use xlink:href="{{ svg 'list' }}"></use>

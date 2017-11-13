@@ -1,5 +1,11 @@
 $toolbar__offset: $spacer !default;
+$toolbar__secondary-text-color: #a09fa6 !default;
+$toolbar__icon-color: #a09fa6 !default;
+$toolbar__icon-color--active: $black !default;
 $toolbar__sorter-label-offset: $spacer !default;
+$toolbar__select-border: 1px solid $black !default;
+$toolbar__select-border-radius: 0 !default;
+$toolbar__select-border--hidden: none !default;
 
 .toolbar {
     display: flex;
@@ -24,6 +30,9 @@ $toolbar__sorter-label-offset: $spacer !default;
             display: flex;
         }
     }
+    &__amount-content {
+        color: $toolbar__secondary-text-color;
+    }
     &__sorter {
         width: 75%;
         @include mq($screen-m) {
@@ -43,6 +52,10 @@ $toolbar__sorter-label-offset: $spacer !default;
         padding: 4px;
         display: block;
         margin: 0 auto;
+        fill: $toolbar__icon-color;
+        &--active {
+            fill: $toolbar__icon-color--active;
+        }
     }
     &__mode-link {
         padding: 12px;
@@ -54,17 +67,43 @@ $toolbar__sorter-label-offset: $spacer !default;
     }
     &__sorter-wrapper,
     &__limiter-wrapper {
-        display: flex;
-        align-items: center;
         margin-bottom: 0;
-        .choices {
-            flex-grow: 1;
+        @include mq($screen-m) {
+            display: flex;
+            align-items: center;
+            .choices {
+                flex-grow: 1;
+            }
+        }
+        .select__field-list {
+            border: $toolbar__select-border;
+            border-radius: $toolbar__select-border-radius;
+            @include mq($screen-m) {
+                border: none;
+            }
+        }
+        .choices__list--dropdown {
+            .select__field-item {
+                padding-right: 0;
+            }
+        }
+    }
+    &__sorter-wrapper {
+
+    }
+    &__limiter-wrapper {
+        margin-bottom: 0;
+        @include mq($screen-m) {
+            margin-right: $toolbar__offset;
         }
     }
     &__sorter-label,
     &__limiter-label {
-        display: none;
+        @media (max-width: $screen-m - 1) {
+            @include visually-hidden;
+        }
         @include mq($screen-m) {
+            color: $toolbar__secondary-text-color;
             margin-bottom: 0;
             margin-right:  $toolbar__offset;
         }
@@ -78,15 +117,10 @@ $toolbar__sorter-label-offset: $spacer !default;
             width: auto;
         }
     }
-    &__limiter-wrapper {
-        margin-bottom: 0;
-        @include mq($screen-m) {
-            margin-right: $toolbar__offset;
-        }
-    }
     &__limiter-suffix {
         display: none;
         @include mq($screen-m) {
+            color: $toolbar__secondary-text-color;
             display: block;
         }
     }

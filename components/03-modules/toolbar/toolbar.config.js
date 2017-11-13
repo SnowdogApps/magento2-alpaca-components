@@ -6,6 +6,14 @@ module.exports = {
       preposition: 'of',
       total: '12'
     },
+    grid: {
+      href: '',
+      active: true
+    },
+    list: {
+      href: '',
+      active: false
+    },
     sortBy: {
       class: 'toolbar__sorter-wrapper',
       label: {
