@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
  - Add quantity-updater module
  - Add minus icon
+ - Filters module
 
 ### Changed
  - Dropdown list component
