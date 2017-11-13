@@ -1,10 +1,10 @@
-$toolbar__offset: $spacer !default;
-$toolbar__secondary-text-color: #a09fa6 !default;
-$toolbar__icon-color: #a09fa6 !default;
-$toolbar__icon-color--active: $black !default;
-$toolbar__sorter-label-offset: $spacer !default;
-$toolbar__select-border: 1px solid $black !default;
-$toolbar__select-border-radius: 0 !default;
+$toolbar__offset               : $spacer !default;
+$toolbar__secondary-text-color : #a09fa6 !default;
+$toolbar__icon-color           : #a09fa6 !default;
+$toolbar__icon-color--active   : $black !default;
+$toolbar__sorter-label-offset  : $spacer !default;
+$toolbar__select-border        : 1px solid $black !default;
+$toolbar__select-border-radius : 0 !default;
 $toolbar__select-border--hidden: none !default;
 
 .toolbar {
@@ -15,6 +15,7 @@ $toolbar__select-border--hidden: none !default;
     @include mq($screen-m) {
         justify-content: flex-start;
     }
+
     &__mode,
     &__limiter,
     &__amount,
@@ -22,6 +23,7 @@ $toolbar__select-border--hidden: none !default;
         flex: 0 0 auto;
         align-items: center;
     }
+
     &__amount {
         display: none;
         @include mq($screen-m) {
@@ -30,15 +32,18 @@ $toolbar__select-border--hidden: none !default;
             display: flex;
         }
     }
+
     &__amount-content {
         color: $toolbar__secondary-text-color;
     }
+
     &__sorter {
         width: 75%;
         @include mq($screen-m) {
             width: auto;
         }
     }
+
     &__mode {
         display: none;
         @include mq($screen-m) {
@@ -46,6 +51,7 @@ $toolbar__select-border--hidden: none !default;
             flex: 0 0 auto;
         }
     }
+
     &__mode-icon {
         width: 20px;
         height: 20px;
@@ -57,6 +63,7 @@ $toolbar__select-border--hidden: none !default;
             fill: $toolbar__icon-color--active;
         }
     }
+
     &__mode-link {
         padding: 12px;
         height: 48px;
@@ -65,6 +72,7 @@ $toolbar__select-border--hidden: none !default;
         justify-content: center;
         align-items: center;
     }
+
     &__sorter-wrapper,
     &__limiter-wrapper {
         margin-bottom: 0;
@@ -88,15 +96,14 @@ $toolbar__select-border--hidden: none !default;
             }
         }
     }
-    &__sorter-wrapper {
 
-    }
     &__limiter-wrapper {
         margin-bottom: 0;
         @include mq($screen-m) {
             margin-right: $toolbar__offset;
         }
     }
+
     &__sorter-label,
     &__limiter-label {
         @media (max-width: $screen-m - 1) {
@@ -108,6 +115,7 @@ $toolbar__select-border--hidden: none !default;
             margin-right:  $toolbar__offset;
         }
     }
+
     &__limiter {
         display: flex;
         align-items: center;
@@ -117,6 +125,7 @@ $toolbar__select-border--hidden: none !default;
             width: auto;
         }
     }
+
     &__limiter-suffix {
         display: none;
         @include mq($screen-m) {
