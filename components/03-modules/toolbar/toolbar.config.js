@@ -8,11 +8,19 @@ module.exports = {
     },
     grid: {
       href: '',
-      active: true
+      icon: {
+        iconId: 'grid',
+        svgClass: 'toolbar__mode-icon toolbar__mode-icon--active',
+        title: 'Grid view'
+      }
     },
     list: {
       href: '',
-      active: false
+      icon: {
+        iconId: 'list',
+        svgClass: 'toolbar__mode-icon',
+        title: 'List view'
+      }
     },
     sortBy: {
       class: 'toolbar__sorter-wrapper',
