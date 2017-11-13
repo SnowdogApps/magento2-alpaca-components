@@ -20,15 +20,19 @@ module.exports = {
     iconClass: 'slider__icon',
     products: [
       {
+        link: '#',
+        ariaLabel: 'first product slider',
         image: {
           class: 'slider__image',
-          dataSrc: '/images/product/product-base.jpg',
+          src: '/images/product/product-base.jpg',
         },
         name: 'Some product name',
         price: '$ 200.00',
         oldPrice: '$ 250.00'
       },
       {
+        link: '#',
+        ariaLabel: 'second product slider',
         image: {
           class: 'slider__image',
           src: '/images/product/product-second.jpg',
@@ -41,15 +45,19 @@ module.exports = {
         }
       },
       {
+        link: '#',
+        ariaLabel: 'third product slider',
         image: {
           class: 'slider__image',
-          dataSrc: '/images/product/product-base.jpg',
+          src: '/images/product/product-base.jpg',
         },
         name: 'Some product name',
         price: '$ 200.00',
         oldPrice: '$ 250.00'
       },
       {
+        link: '#',
+        ariaLabel: 'fourth product slider',
         image: {
           class: 'slider__image',
           src: '/images/product/product-second.jpg',
@@ -63,9 +71,11 @@ module.exports = {
         }
       },
       {
+        link: '#',
+        ariaLabel: 'fifth product slider',
         image: {
           class: 'slider__image',
-          dataSrc: '/images/product/product-base.jpg',
+          src: '/images/product/product-base.jpg',
         },
         name: 'Some product name',
         price: '$ 200.00',

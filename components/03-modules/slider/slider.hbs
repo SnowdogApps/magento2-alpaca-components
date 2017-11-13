@@ -3,11 +3,14 @@
         <div class="slider__slides">
             {{#each products }}
                 <div class="slider__item">
-                    <a href="{{ this.link }}" class="slider__link">
+                    <a href="{{ this.link }}"
+                       class="slider__link"
+                       aria-label="{{ this.ariaLabel }}"
+                    >
                         {{ render '@image' this.image }}
 
                         <div class="slider__item-handler">
-                            <h5 class="heading heading--fifth-level slider__name">
+                            <h5 class="slider__name">
                                 {{ this.name }}
                             </h5>
 

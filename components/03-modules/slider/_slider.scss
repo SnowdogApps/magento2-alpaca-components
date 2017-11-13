@@ -21,7 +21,7 @@ $slider__price-new-font-weight     : $font-weight-bold !default;
 $slider__price-new-font-size       : $font-size-small !default;
 $slider__icon-size                 : 25px !default;
 $slider__icon-fill                 : $color-primary !default;
-$slider__icon-fill-hover           : #007025 !default;
+$slider__icon-fill-hover           : darken($color-primary, 10%) !default;
 
 .slider {
     margin-bottom: $slider__margin;
