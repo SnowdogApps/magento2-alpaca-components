@@ -19,6 +19,14 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'angle-right',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'angle-left',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'arrow-circle-up',
         class: 'icons__single-icon'
       },
@@ -100,14 +108,6 @@ module.exports = {
       },
       {
         iconId: 'shopping-cart',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'slider-next',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'slider-prev',
         class: 'icons__single-icon'
       },
       {

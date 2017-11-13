@@ -5,7 +5,7 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon slider__navigation-icon slider__prev',
-      iconId: 'slider-prev',
+      iconId: 'angle-left',
       iconClass: 'button__icon slider__icon',
       attributes: 'type="button" aria-label="button arrow slider prev"'
     },
@@ -13,7 +13,7 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon slider__navigation-icon slider__next',
-      iconId: 'slider-next',
+      iconId: 'angle-right',
       iconClass: 'button__icon slider__icon',
       attributes: 'type="button" aria-label="button arrow slider next"'
     },
