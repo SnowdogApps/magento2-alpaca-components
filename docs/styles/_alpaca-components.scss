@@ -23,6 +23,7 @@
 // Typography
 @import '../../components/01-globals/_fonts/fonts';
 @import '../../components/01-globals/_container/container';
+@import '../../components/01-globals/icon/icon';
 @import '../../components/01-globals/typography/blockquote/blockquote';
 @import '../../components/01-globals/typography/heading/heading';
 @import '../../components/01-globals/typography/label/label';
@@ -44,7 +45,6 @@
 @import '../../components/02-elements/button/button';
 @import '../../components/02-elements/cookie-message/cookie-message';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
-@import '../../components/02-elements/dropdown-menu/dropdown-menu';
 @import '../../components/02-elements/form/checkbox/checkbox';
 @import '../../components/02-elements/form/fieldset/fieldset';
 @import '../../components/02-elements/form/file-upload/file-upload';
@@ -61,13 +61,10 @@
 @import '../../components/02-elements/pager/pager';
 @import '../../components/02-elements/password-strength/password-strength';
 @import '../../components/02-elements/rating/rating';
-@import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/swatch/swatch';
-@import '../../components/02-elements/side-menu/side-menu';
 @import '../../components/02-elements/tab/tab';
 @import '../../components/02-elements/table/table';
-@import '../../components/02-elements/wrapper-collapsible/wrapper-collapsible';
 
 // -----
 // Modules
@@ -75,6 +72,7 @@
 
 @import '../../components/03-modules/dashboard/form/form';
 @import '../../components/03-modules/dashboard/items/items';
+@import '../../components/03-modules/mega-menu/mega-menu';
 @import '../../components/03-modules/dashboard/nav/nav';
 @import '../../components/03-modules/dashboard/table/table';
 @import '../../components/03-modules/dashboard/toolbar/toolbar';
@@ -85,6 +83,7 @@
 @import '../../components/03-modules/header/top-bar';
 @import '../../components/03-modules/header/search-form';
 @import '../../components/03-modules/minicart-content/minicart-content';
+@import '../../components/03-modules/minicart-product/minicart-product';
 @import '../../components/03-modules/newsletter/newsletter';
 @import '../../components/03-modules/popup/popup';
 @import '../../components/03-modules/product/product';
@@ -92,8 +91,9 @@
 @import '../../components/03-modules/range/range';
 @import '../../components/03-modules/quantity-update/quantity-update';
 @import '../../components/03-modules/review/review';
-@import '../../components/03-modules/search/search';
+@import '../../components/03-modules/side-menu/side-menu';
 @import '../../components/03-modules/sidebar-nav-list/sidebar-nav-list';
+@import '../../components/03-modules/slider/slider';
 @import '../../components/03-modules/toolbar/toolbar';
 
 // -----

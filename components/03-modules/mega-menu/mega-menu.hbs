@@ -1,0 +1,54 @@
+<div class="mega-menu">
+    <ul class="mega-menu__wrapper container">
+        {{#each list}}
+            <li class="mega-menu__item {{ class }}">
+                <a href="{{{ link }}}" class="mega-menu__link">
+                    {{ text }}
+                </a>
+                {{#if nestedList}}
+                    <ul class="
+                            mega-menu__dropdown
+                            mega-menu__dropdown--level1
+                        "
+                    >
+                        {{#each nestedList}}
+                            <li class="
+                                    mega-menu__dropdown-item
+                                    mega-menu__dropdown-item--level1
+                                    {{#if modifier}}
+                                        {{modifier}}
+                                    {{/if}}
+                                "
+                            >
+                                <a href="{{{ link }}}"
+                                   class="
+                                       mega-menu__link
+                                       mega-menu__link--inner-heading
+                                   "
+                                >
+                                    {{ heading }}
+                                </a>
+
+                                {{> '@list--link'
+                                    listTag="ul"
+                                    elementTag="li"
+                                }}
+                            </li>
+                        {{/each}}
+
+                        <li class="
+                                mega-menu__dropdown-item
+                                mega-menu__dropdown-item--image
+                            "
+                        >
+                            {{> '@image'
+                                src="/images/banner/banner-480_480.png"
+                                additionalClasses="mega-menu__image"
+                            }}
+                        </li>
+                    </ul>
+                {{/if}}
+            </li>
+        {{/each}}
+    </ul>
+</div>

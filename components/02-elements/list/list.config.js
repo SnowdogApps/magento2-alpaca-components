@@ -121,22 +121,27 @@ module.exports = {
       context: {
         elements: [
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           },
           {
+            linkClass: '',
             text: 'Lorem ipsum',
             link: '#'
           }

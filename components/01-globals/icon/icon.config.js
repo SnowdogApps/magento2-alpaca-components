@@ -1,5 +1,5 @@
 module.exports = {
   context: {
-    icon: 'search'
+    iconId: 'angle-down'
   }
 }
