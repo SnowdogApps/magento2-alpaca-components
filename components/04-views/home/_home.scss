@@ -1,0 +1,41 @@
+$home__banner-spacer: $spacer--medium !default;
+$home__text-column-gap: $spacer--medium !default;
+
+.home {
+    &__banners-handler {
+        @include mq($screen-m) {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+    }
+
+    &__banner-content {
+        margin: $spacer 0;
+        @include mq($screen-m) {
+            margin-right: $home__banner-spacer;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__static-block {
+        padding: $home__banner-spacer;
+    }
+
+    &__cms-block-title {
+        @include mq($screen-m) {
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    &__static-text {
+        @include mq($screen-m) {
+            column-count: 2;
+            column-gap: $home__text-column-gap;
+            text-align: justify;
+        }
+    }
+}
