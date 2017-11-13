@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
  - Pager element styling that fits alpaca design.
 
+## [0.4.1] - 13.11.2017
+### Fixed
+- Typo - double semicolon
+
 ## [0.4.0] - 13.11.2017
 ### Added
  - Quantity-updater module
