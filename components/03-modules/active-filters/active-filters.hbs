@@ -1,0 +1,11 @@
+<ul class="list active-filters">
+    {{# each filters }}
+        <li class="list__item active-filters__item">
+            <button class="active-filters__close">
+                x
+            </button>
+            <span class="active-filters__label">{{label}}:</span>
+            <span class="active-filters__value">{{value}}</span>
+        </li>
+    {{/each}}
+</ul>
