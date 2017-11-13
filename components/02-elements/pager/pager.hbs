@@ -1,7 +1,11 @@
 <div class="pager {{ class }}">
     <ul class="pager__list">
         <li class="pager__item">
-            <a href="#" class="pager__link pager__link--prev" {{#unless arrowLeftActive}}disabled{{/unless}}>
+            <a href="#"
+               class="pager__link pager__link--prev"
+               aria-label="{{ariaLabelLeft}}"
+               {{#unless arrowLeftActive}}disabled{{/unless}}
+            >
                 <svg class="pager__icon">
                     <use xlink:href="{{ svg 'arrow-left' }}"></use>
                 </svg>
@@ -15,7 +19,10 @@
                 </li>
             {{else}}
                 <li class="pager__item">
-                    <a href="#" class="pager__link">
+                    <a href="#"
+                       class="pager__link"
+                       aria-label="{{ariaLabel}}"
+                    >
                         {{ pageNo }}
                     </a>
                 </li>
@@ -23,7 +30,11 @@
         {{/each}}
 
         <li class="pager__item">
-            <a href="#" class="pager__link pager__link--next" {{#unless arrowRightActive}}disabled{{/unless}}>
+            <a href="#"
+               class="pager__link pager__link--next"
+               aria-label="{{ariaLabelRight}}"
+               {{#unless arrowRightActive}}disabled{{/unless}}
+            >
                 <svg class="pager__icon">
                     <use xlink:href="{{ svg 'arrow-right' }}"></use>
                 </svg>
