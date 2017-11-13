@@ -3,7 +3,19 @@ module.exports = {
   context: {
     icons: [
       {
+        iconId: 'account-mini',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'account',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'angle-down',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'angle-up',
         class: 'icons__single-icon'
       },
       {
@@ -23,7 +35,15 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
-        iconId: 'youtube',
+        iconId: 'curved-arrows',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'delivery-truck',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'edit',
         class: 'icons__single-icon'
       },
       {
@@ -31,43 +51,15 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
-        iconId: 'instagram',
-        class: 'icons__single-icon'
-      },
-      {
         iconId: 'google-plus',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'mobile-menu',
+        iconId: 'heart',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'minus',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'search',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'phone',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'user',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'shopping-cart',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'settings',
-        class: 'icons__single-icon'
-      },
-      {
-        iconId: 'edit',
+        iconId: 'instagram',
         class: 'icons__single-icon'
       },
       {
@@ -79,6 +71,18 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'minus',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'mobile-menu',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'phone',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'plus',
         class: 'icons__single-icon'
       },
@@ -87,7 +91,31 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'search',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'settings',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'shopping-cart',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'signin',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'twitter',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'user',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'youtube',
         class: 'icons__single-icon'
       }
     ]

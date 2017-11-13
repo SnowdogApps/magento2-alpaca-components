@@ -1,7 +1,7 @@
-$popup__padding                  : $spacer--medium !default;
-$popup__content-top-margin       : $spacer--large !default;
-$popup__width                    : 80% !default;
-$popup__max-width                : 500px !default;
+$popup__padding                  : 0 !default;
+$popup__content-top-margin       : 0 !default;
+$popup__width                    : 320px !default;
+$popup__width--screen-s          : 100% !default;
 $popup__background               : $white !default;
 $popup__z-index                  : 50 !default;
 $popup__border                   : 0 !default;
@@ -16,21 +16,23 @@ $popup__margin                   : 0 !default;
 .popup {
     display: none;
     position: fixed;
-    width: $popup__width;
-    max-width: $popup__max-width;
+    right: 0;
+    left: auto;
+    width: $popup__width--screen-s;
     padding: $popup__padding;
     margin: $popup__margin;
     z-index: $popup__z-index;
     box-shadow: $popup__box-shadow;
     background-color: $popup__background;
     border: $popup__border;
+    @include mq($screen-s) {
+        position: absolute;
+        width: $popup__width;
+        right: - $spacer;
+    }
 
     &--active {
         display: block;
-    }
-
-    &--full-width {
-        width: 100vw;
     }
 
     &__handler {
@@ -49,14 +51,14 @@ $popup__margin                   : 0 !default;
         &:focus {
             background-color: $popup__close-button-bg;
         }
-    }
 
-    &__close-button-icon {
-        fill: $popup__button-icon-fill;
+        &-icon {
+            fill: $popup__button-icon-fill;
 
-        &:hover,
-        &:focus {
-            fill: $popup__button-icon-fill--actiive;
+            &:hover,
+            &:focus {
+                fill: $popup__button-icon-fill--actiive;
+            }
         }
     }
 }
