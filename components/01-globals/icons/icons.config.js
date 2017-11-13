@@ -103,6 +103,14 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'slider-next',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'slider-prev',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'signin',
         class: 'icons__single-icon'
       },
