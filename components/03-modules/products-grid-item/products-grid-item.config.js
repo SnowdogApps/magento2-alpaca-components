@@ -7,6 +7,10 @@ module.exports = {
       text: 'Add to Cart',
       class: 'button button--link products-grid-item__button'
     },
+    buttonWishlist: {
+      text: '',
+      iconId: 'heart'
+    },
     class: '',
     image: {
       dataSrc: '/images/products-grid-item/product-1_320_312.jpg'
@@ -29,6 +33,8 @@ module.exports = {
     options: true,
     swatches: [
       {
+        attributeCode: 'color',
+        attributeId: '100',
         modifier: 'image',
         data: [
           {
@@ -39,6 +45,9 @@ module.exports = {
               dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
               alt: 'Color 1'
             },
+            type: 0,
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'Color 1',
           },
           {
             label: 'Color 2',
@@ -48,7 +57,10 @@ module.exports = {
               dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
               alt: 'Color 2'
             },
-            selected: true
+            selected: true,
+            type: 0,
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'Color 2',
           },
           {
             label: 'Color 3',
@@ -58,6 +70,9 @@ module.exports = {
               dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
               alt: 'Color 3'
             },
+            type: 0,
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'Color 3',
           },
           {
             label: 'Color 4',
@@ -67,35 +82,56 @@ module.exports = {
               dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
               alt: 'Color 4'
             },
+            type: 0,
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'Color 4'
           },
         ]
       },
       {
+        attributeCode: 'size',
+        attributeId: '200',
         modifier: 'small-rect',
         data: [
           {
-            label: 'XS',
             id: '167',
+            label: 'XS',
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'XS',
+            type: 0,
             value: 'XS'
           },
           {
-            label: 'S',
             id: '168',
+            label: 'S',
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'S',
+            type: 0,
             value: 'S'
           },
           {
-            label: 'M',
             id: '169',
+            label: 'M',
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'M',
+            type: 0,
             value: 'M'
           },
           {
-            label: 'L',
             id: '170',
-            value: 'K'
+            label: 'L',
+            selected: true,
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'L',
+            type: 0,
+            value: 'L'
           },
           {
-            label: 'XL',
             id: '171',
+            label: 'XL',
+            tooltipType: 'option-tooltip-thumb',
+            tooltipValue: 'XL',
+            type: 0,
             value: 'XL'
           }
         ],
@@ -115,9 +151,10 @@ module.exports = {
             text: 'NEW'
           }
         },
+        name: 'Short name',
         price: {
           oldPriceClass: 'products-grid-item__old-price',
-          regularPrice: '1 400',
+          regularPrice: '1  400',
           specialPrice: '999.99',
           specialPriceClass: 'products-grid-item__special-price',
           prefix: {
@@ -131,6 +168,7 @@ module.exports = {
             text: ''
           },
         },
+        script: true
       }
     },
   ]

@@ -5,49 +5,84 @@
         </div>
     </a>
         <div class="products-grid-item__content">
-            <a href="#" class="products-grid-item__link products-grid-item__link--name">
-                <h2 class="products-grid-item__name">
-                    {{ name }}
-                </h2>
-            </a>
+            <div class="products-grid-item__details">
+                <a href="#"
+                   class="
+                       products-grid-item__link
+                       products-grid-item__link--name
+                   "
+               >
+                    <h2 class="products-grid-item__name">
+                        {{ name }}
+                    </h2>
+                </a>
+                <div class="products-grid-item__price">
+                    {{ render '@price' price }}
+                </div>
+            </div>
 
-            <div class="products-grid-item__price">
-                {{ render '@price' price }}
-            </div>
-            <div class="products-grid-item__options">
-                {{#each swatches as |swatch|}}
-                    <ul class="swatches-list swatches--list--{{ swatch.modifier }}">
-                        {{#each swatch.data}}
-                            <li class="
-                                    swatches-list__item
-                                    swatches-list__item--{{ swatch.modifier }}
-                                    {{#if this.selected}}
-                                    swatches-list__item--{{ swatch.modifier }}-selected
+            <div class="products-grid-item__extra">
+                <div class="products-grid-item__options">
+                    {{#each swatches as |swatch|}}
+                        <ul class="
+                                swatch-attribute-options
+                                swatch-attribute-options--{{ swatch.modifier }}
+                            "
+                            attribute-code="{{ swatch.attributeCode }}"
+                            attribute-id="{{ swatch.attributeId }}"
+                        >
+                            {{#each swatch.data}}
+                                <li class="
+                                        swatch-attribute-options__item
+                                        swatch-attribute-options__item--{{ swatch.modifier }}
+                                        {{#if this.selected}}
+                                        swatch-attribute-options__item--{{ swatch.modifier }}-selected
+                                        {{/if}}
+                                    "
+                                    option-type="{{ this.type }}"
+                                    option-id="{{ this.id }}"
+                                    option-label="{{ this.label }}"
+                                    {{ this.tooltipType }}
+                                    option-tooltip-value="{{ this.tooltipValue }}"
+                                 >
+                                    {{#if this.image}}
+                                        {{render '@image' this.image}}
+                                    {{else}}
+                                        {{ this.label }}
                                     {{/if}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    {{/each}}
+                </div>
+                <div class="products-grid-item__actions">
+                    {{ render '@button--link' button }}
+
+                    <div class="products-grid-item__action-icons">
+                        <button class="
+                                    products-grid-item__action-item
+                                    products-grid-item__action-item--wishlist
                                 "
+                        >
+                            <svg class="
+                                     products-grid-item__action-icon
+                                     products-grid-item__action-icon--wishlist
+                                 "
                              >
-                                {{#if this.image}}
-                                    {{render '@image' this.image}}
-                                {{else}}
-                                    {{ this.label }}
-                                {{/if}}
-                            </li>
-                        {{/each}}
-                    </ul>
-                {{/each}}
-            </div>
-            <div class="products-grid-item__actions">
-                {{ render '@button--link' button }}
-                <button class="products-grid-item__wishlist">
-                    <svg class="products-grid-item__wishlist-icon">
-                        <use xlink:href="{{ svg 'wishlist' }}"></use>
-                    </svg>
-                </button>
-                <button class="products-grid-item__compare">
-                    <svg class="products-grid-item__compare-icon">
-                        <use xlink:href="{{ svg 'compare' }}"></use>
-                    </svg>
-                </button>
+                                <use xlink:href="{{ svg 'heart' }}"></use>
+                            </svg>
+                        </button>
+                        <button class="
+                                    products-grid-item__action-item
+                                    products-grid-item__action-item--compare
+                                "
+                        >
+                            <svg class="products-grid-item__action-icon">
+                                <use xlink:href="{{ svg 'compare' }}"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -58,3 +93,7 @@
         {{ render '@badge--new' badge.new }}
     {{/if}}
 </{{{ tag }}}>
+
+{{#if script}}
+<script src="{{ static 'products-grid-item.js' }}"></script>
+{{/if}}
