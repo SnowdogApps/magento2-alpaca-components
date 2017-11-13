@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Add quantity-updater module
  - Add minus icon
  - component icon added - to generate single icon in components
+ - `dropdown-list` component to `side-menu`
 
 ### Changed
  - Dropdown list component
@@ -20,6 +21,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Cookie message : styling that fits new alpaca design.
  - Update icon list and change to alph order
  - Update icons list to display with icon components
+ - Name of `dropdown-menu` element to `mega-menu`
+ - Mega menu styling that fits alpaca design
 
 ## [0.3.0] - 06.11.2017
 ### Added

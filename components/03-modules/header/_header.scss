@@ -8,6 +8,7 @@ $header__icon-padding          : 2px !default;
 $header__icon-color            : $gray-dark !default;
 
 .header {
+    position: relative;
     border-bottom: 1px solid $header__border-color;
 
     &__wrapper {
