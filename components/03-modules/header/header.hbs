@@ -1,5 +1,5 @@
+{{ render '@marketing-bar' }}
 <header class="header">
-    {{ render '@marketing-bar' }}
     <div class="top-bar">
         <div class="container top-bar__wrapper">
             <div class="top-bar__contact-info">
@@ -34,13 +34,12 @@
                 {{/each}}
                 <div class="header__minicart">
                     {{ render '@minicart-trigger' trigger }}
-                    <!-- Tep commented render '@popup' minicartPopup -->
+                    {{ render '@popup' minicartPopup }}
                 </div>
             </div>
             <div class="header__menu-trigger">
                 {{ render '@side-menu-trigger--span-way' }}
             </div>
-
             <div class="header__featured-info">
                 <a href="#" class="featured-info">
                     <div class="featured-info__icon">
@@ -82,4 +81,6 @@
             </div>
         </div>
     </div>
+    {{ render '@side-menu' }}
 </header>
+{{ render '@mega-menu' }}
