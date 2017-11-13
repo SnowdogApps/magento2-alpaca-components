@@ -1,8 +1,22 @@
 module.exports = {
   context: {
     script: true,
-    iconPrev: 'slider-prev',
-    iconNext: 'slider-next',
+    iconPrev: {
+      tag: 'button',
+      text: '',
+      class: 'button--icon slider__navigation-icon slider__prev',
+      iconId: 'slider-prev',
+      iconClass: 'button__icon slider__icon',
+      attributes: 'type="button" aria-label="button arrow slider prev"'
+    },
+    iconNext: {
+      tag: 'button',
+      text: '',
+      class: 'button--icon slider__navigation-icon slider__next',
+      iconId: 'slider-next',
+      iconClass: 'button__icon slider__icon',
+      attributes: 'type="button" aria-label="button arrow slider next"'
+    },
     iconClass: 'slider__icon',
     products: [
       {

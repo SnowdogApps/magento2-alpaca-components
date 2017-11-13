@@ -1,26 +1,27 @@
-$slider__margin                : $spacer--medium !default;
-$slider__transition            : $transition-base !default;
-$slider__title-margin          : $spacer--large !default;
-$slider__navigation-margin     : $spacer !default;
-$slider__navigation-icon-size  : 48px !default;
-$slider__navigation-icon-margin: $spacer !default;
-$slider__name-margin-right     : $spacer !default;
-$slider__name-font-weight      : $font-weight-base !default;
-$slider__name-font-size        : $font-size-base !default;
-$slider__item-padding          : 0 $spacer--medium 0 0 !default;
-$slider__image-margin          : 0 auto $spacer auto !default;
-$slider__badge-top             : $spacer !default;
-$slider__price-old-margin      : $spacer !default;
-$slider__price-font-weight     : $font-weight-bold !default;
-$slider__price-color           : $black !default;
-$slider__price-old-font-weight : $font-weight-base !default;
-$slider__price-old-font-size   : $font-size-extra-small !default;
-$slider__price-new-color       : $color-primary !default;
-$slider__price-new-font-weight : $font-weight-bold !default;
-$slider__price-new-font-size   : $font-size-small !default;
-$slider__icon-size             : 25px !default;
-$slider__icon-fill             : $color-primary !default;
-$slider__icon-fill-hover       : #007025 !default;
+$slider__margin                    : $spacer--medium !default;
+$slider__transition                : $transition-base !default;
+$slider__title-margin              : $spacer--large !default;
+$slider__navigation-margin         : $spacer !default;
+$slider__navigation-icon-size      : 48px !default;
+$slider__navigation-icon-margin    : $spacer !default;
+$slider__navigation-icon-background: $white !default;
+$slider__name-margin-right         : $spacer !default;
+$slider__name-font-weight          : $font-weight-base !default;
+$slider__name-font-size            : $font-size-base !default;
+$slider__item-padding              : 0 $spacer--medium 0 0 !default;
+$slider__image-margin              : 0 auto $spacer auto !default;
+$slider__badge-top                 : $spacer !default;
+$slider__price-old-margin          : $spacer !default;
+$slider__price-font-weight         : $font-weight-bold !default;
+$slider__price-color               : $black !default;
+$slider__price-old-font-weight     : $font-weight-base !default;
+$slider__price-old-font-size       : $font-size-extra-small !default;
+$slider__price-new-color           : $color-primary !default;
+$slider__price-new-font-weight     : $font-weight-bold !default;
+$slider__price-new-font-size       : $font-size-small !default;
+$slider__icon-size                 : 25px !default;
+$slider__icon-fill                 : $color-primary !default;
+$slider__icon-fill-hover           : #007025 !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -156,15 +157,25 @@ $slider__icon-fill-hover       : #007025 !default;
         align-items: center;
         height: $slider__navigation-icon-size;
         width: $slider__navigation-icon-size;
+        background-color: $slider__navigation-icon-background;
+        border: 0;
 
-        &--left {
+        &:first-child {
             margin-right: $slider__navigation-icon-margin;
-            left: 0;
         }
 
-        &--right {
+        &:last-child {
             margin-left: $slider__navigation-icon-margin;
-            right: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $slider__navigation-icon-background;
+
+            .slider__icon {
+                fill: $slider__icon-fill-hover;
+            }
         }
     }
 
@@ -174,9 +185,5 @@ $slider__icon-fill-hover       : #007025 !default;
         fill: $slider__icon-fill;
         transition: $slider__transition;
         cursor: pointer;
-
-        &:hover {
-            fill: $slider__icon-fill-hover;
-        }
     }
 }
