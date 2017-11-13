@@ -21,7 +21,6 @@ module.exports = {
         },
         name: 'Some product name',
         price: '$ 200.00',
-        oldPrice: '$ 250.00',
         badge: {
           text: 'New',
           class: 'badge--new slider__badge'

@@ -1,18 +1,18 @@
 <div class="slider {{ class }}" {{{ attributes }}}>
     <div class="slider__handler">
-        <div class="slider__frame">
-            <div class="slider__slides">
-                {{#each products }}
-                    <div class="slider__item">
-                        <a href="{{ this.link }}" class="slider__link">
-                            {{ render '@image' this.image }}
+        <div class="slider__slides">
+            {{#each products }}
+                <div class="slider__item">
+                    <a href="{{ this.link }}" class="slider__link">
+                        {{ render '@image' this.image }}
 
-                            <div class="slider__item-handler">
-                                <h2 class="heading heading--fifth-level slider__name">
-                                    {{ this.name }}
-                                </h2>
+                        <div class="slider__item-handler">
+                            <h5 class="heading heading--fifth-level slider__name">
+                                {{ this.name }}
+                            </h5>
 
-                                <div class="slider__price">
+                            <div class="slider__price">
+                                {{#if this.oldPrice}}
                                     <span class="slider__price-old">
                                         {{ this.oldPrice }}
                                     </span>
@@ -20,27 +20,39 @@
                                     <span class="slider__price-new">
                                         {{ this.price }}
                                     </span>
-                                </div>
+                                {{else}}
+                                    {{ this.price }}
+                                {{/if}}
                             </div>
+                        </div>
 
-                            {{#if badge}}
-                                {{ render '@badge' this.badge }}
-                            {{/if}}
-                        </a>
-                    </div>
-                {{/each}}
-            </div>
+                        {{#if badge}}
+                            {{ render '@badge' this.badge }}
+                        {{/if}}
+                    </a>
+                </div>
+            {{/each}}
         </div>
     </div>
 
     <div class="slider__navigation">
-        <div class="slider__navigation-icon slider__navigation-icon--left slider__prev">
+        <div class="
+                slider__navigation-icon
+                slider__navigation-icon--left
+                slider__prev
+             "
+        >
             <svg title="{{ iconPrev }}" class="{{ iconClass }}">
                 <use xlink:href="{{ svg iconPrev }}"></use>
             </svg>
         </div>
 
-        <div class="slider__navigation-icon slider__navigation-icon--right slider__next">
+        <div class="
+                slider__navigation-icon
+                slider__navigation-icon--right
+                slider__next
+             "
+        >
             <svg title="{{ iconNext }}" class="{{ iconClass }}">
                 <use xlink:href="{{ svg iconNext }}"></use>
             </svg>

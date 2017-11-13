@@ -9,7 +9,7 @@
     lory(slider, {
       rewind: true,
       enableMouseEvents: true,
-      classNameFrame: 'slider__frame',
+      classNameFrame: 'slider__handler',
       classNameSlideContainer: 'slider__slides',
       classNamePrevCtrl: 'slider__prev',
       classNameNextCtrl: 'slider__next'
