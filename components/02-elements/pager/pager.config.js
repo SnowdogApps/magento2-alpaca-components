@@ -1,5 +1,4 @@
 module.exports = {
-  status: 'wip',
   collated: true,
   context: {
     arrowLeftActive: false,
