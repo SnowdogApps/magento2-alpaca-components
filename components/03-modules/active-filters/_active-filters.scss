@@ -1,0 +1,30 @@
+$active-filters__close-size       : 48px !default;
+$active-filters__icon-fill        : $gray !default;
+$active-filters__icon-size        : 14px !default;
+$active-filters__label-font-weight: $font-weight-bold !default;
+.active-filters {
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__close {
+        width: $active-filters__close-size;
+        height: $active-filters__close-size;
+        background: none;
+        border: none;
+        outline: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: $active-filters__icon-size;
+        height: $active-filters__icon-size;
+        fill: $active-filters__icon-fill;
+    }
+
+    &__label {
+        font-weight: $active-filters__label-font-weight;
+    }
+}
