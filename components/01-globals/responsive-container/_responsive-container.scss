@@ -1,11 +1,11 @@
 @keyframes fadeEffect {
-  @for $i from 1 through 5 {
-    $number: $i * 20;
-    $percent: $number + "%";
-    #{$percent} {
-      opacity: $i * 2 / 10;
+    @for $i from 1 through 5 {
+        $number: $i * 20;
+        $percent: $number + "%";
+        #{$percent} {
+            opacity: $i * 2 / 10;
+        }
     }
-  }
 }
 
 [data-aspect-ratio] {
