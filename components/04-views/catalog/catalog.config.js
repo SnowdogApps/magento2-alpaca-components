@@ -7,7 +7,17 @@ module.exports = {
       price: '210$',
       type: 'some attribute text',
       image: {
-        src: '/images/product/product-img-230_180.png'
+        dataSrc: '/images/product/product-img-230_180.png'
+      }
+    },
+    product2: {
+      tag: 'li',
+      class: 'products-grid__item',
+      name: 'Some product name',
+      price: '210$',
+      type: 'some attribute text',
+      image: {
+        dataSrc: 'https://loremflickr.com/640/620/brazil,rio'
       }
     }
   },
