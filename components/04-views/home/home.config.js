@@ -8,11 +8,11 @@ module.exports = {
         sources: [
           {
             src: '/images/home/banners/banner-small-men_432-248.jpg',
-            mediaQuery: '(max-width: 480px)'
+            mediaQuery: '(max-width: 768px)'
           },
           {
-            src: '/images/home/banners/banner-small-men_752-434.jpg',
-            mediaQuery: '(max-width: 768px)'
+            src: '/images/home/banners/banner-small-men_304-184.jpg',
+            mediaQuery: '(max-width: 1024px)'
           },
           {
             src: '/images/home/banners/banner-small-men_432-248.jpg',
@@ -30,11 +30,11 @@ module.exports = {
         sources: [
           {
             src: '/images/home/banners/banner-small-women_432-248.jpg',
-            mediaQuery: '(max-width: 480px)'
+            mediaQuery: '(max-width: 768px)'
           },
           {
-            src: '/images/home/banners/banner-small-women_752-434.jpg',
-            mediaQuery: '(max-width: 768px)'
+            src: '/images/home/banners/banner-small-women_304-184.jpg',
+            mediaQuery: '(max-width: 1024px)'
           },
           {
             src: '/images/home/banners/banner-small-women_432-248.jpg',
@@ -52,11 +52,11 @@ module.exports = {
         sources: [
           {
             src: '/images/home/banners/banner-small-gear_432-248.jpg',
-            mediaQuery: '(max-width: 480px)'
+            mediaQuery: '(max-width: 768px)'
           },
           {
-            src: '/images/home/banners/banner-small-gear_752-434.jpg',
-            mediaQuery: '(max-width: 768px)'
+            src: '/images/home/banners/banner-small-gear_304-184.jpg',
+            mediaQuery: '(max-width: 1024px)'
           },
           {
             src: '/images/home/banners/banner-small-gear_432-248.jpg',
@@ -82,8 +82,12 @@ module.exports = {
           },
           {
             src: '/images/home/banners/banner-medium-new_464-256.jpg',
-            mediaQuery: ''
+            mediaQuery: '(max-width: 2080px)'
           },
+          {
+            src: '/images/home/banners/banner-medium-new_656-360.jpg',
+            mediaQuery: ''
+          }
         ],
         alt: 'banner new collection alt text'
       }
@@ -104,8 +108,12 @@ module.exports = {
           },
           {
             src: '/images/home/banners/banner-medium-discover_464-256.jpg',
-            mediaQuery: ''
+            mediaQuery: '(max-width: 2080px)'
           },
+          {
+            src: '/images/home/banners/banner-medium-discover_656-360.jpg',
+            mediaQuery: ''
+          }
         ],
         alt: 'banner discover alt text'
       }
