@@ -1,6 +1,7 @@
 module.exports = {
   context: {
     script: true,
+    attributes: 'data-rewind="true" data-enable-mouse-events="true"',
     iconPrev: {
       tag: 'button',
       text: '',
