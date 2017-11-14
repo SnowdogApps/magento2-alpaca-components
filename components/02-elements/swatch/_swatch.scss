@@ -1,6 +1,6 @@
-$swatch__font-size                         : $font-size-base !default;
 $swatch__margin                            : $spacer !default;
 $swatch__transition                        : $transition-base !default;
+$swatch__title-font-size                   : $font-size-base !default;
 $swatch__option-sizing                     : 48px !default;
 $swatch__option-sizing-screen-m            : 32px !default;
 $swatch__option-margin                     : 0 $spacer--medium $spacer--medium 0 !default;
@@ -16,7 +16,7 @@ $swatch__option-height-screen-l--attributes: 64px !default;
 
 .swatch {
     &__title {
-        font-size: $swatch__font-size;
+        font-size: $swatch__title-font-size;
         margin-bottom: $swatch__margin;
     }
 
