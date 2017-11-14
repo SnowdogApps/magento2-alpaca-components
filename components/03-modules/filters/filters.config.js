@@ -2,6 +2,28 @@ module.exports = {
   title: 'Filters',
   context: {
     tag: 'div',
+    activeFilters: {
+      filters: [
+        {
+          iconId: 'close',
+          label: 'Label',
+          value: 'Value',
+          ariaLabel: 'Disable filter'
+        },
+        {
+          iconId: 'close',
+          label: 'Label',
+          value: 'Value',
+          ariaLabel: 'Disable filter'
+        },
+        {
+          iconId: 'close',
+          label: 'Label',
+          value: 'Value',
+          ariaLabel: 'Disable filter'
+        }
+      ]
+    },
     range: {
       attributes: '',
       class: '',
