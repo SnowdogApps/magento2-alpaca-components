@@ -4,17 +4,20 @@ module.exports = {
       {
         iconId: 'close',
         label: 'Label',
-        value: 'Value'
+        value: 'Value',
+        ariaLabel: 'Disable filter'
       },
       {
         iconId: 'close',
         label: 'Label',
-        value: 'Value'
+        value: 'Value',
+        ariaLabel: 'Disable filter'
       },
       {
         iconId: 'close',
         label: 'Label',
-        value: 'Value'
+        value: 'Value',
+        ariaLabel: 'Disable filter'
       }
     ]
   }
