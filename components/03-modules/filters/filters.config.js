@@ -3,6 +3,8 @@ module.exports = {
   context: {
     tag: 'div',
     activeFilters: {
+      clearHref: '#',
+      clearText: 'Clear',
       filters: [
         {
           iconId: 'close',
