@@ -1,7 +1,7 @@
 <div class="swatch {{ class }}" {{{ attributes }}}>
-    <h5 class="swatch__title {{ titleClass }}">
-        {{ title }}
-    </h5>
+    <{{{ heading.tag}}} class="swatch__title {{ heading.class }}">
+        {{ heading.title }}
+    </{{{ heading.tag}}}>
 
     <div class="swatch__wrapper">
         {{#each options }}

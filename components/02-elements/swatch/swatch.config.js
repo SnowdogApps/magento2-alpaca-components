@@ -4,7 +4,10 @@ module.exports = {
     class: '',
     attributes: '',
     titleClass: '',
-    title: 'Size',
+    heading: {
+      tag: 'h5',
+      title: 'Size'
+    },
     options: [
       {
         class: '',
@@ -38,7 +41,10 @@ module.exports = {
       name: 'attribute',
       context: {
         class: '',
-        title: 'Color',
+        heading: {
+          tag: 'h5',
+          title: 'Color'
+        },
         options: [
           {
             class: 'swatch__option--attributes',
