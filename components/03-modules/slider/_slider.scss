@@ -1,5 +1,6 @@
 $slider__margin                    : $spacer--medium !default;
 $slider__transition                : $transition-base !default;
+$slider__item-padding              : 0 $spacer--medium 0 0 !default;
 $slider__navigation-margin         : $spacer !default;
 $slider__navigation-icon-size      : 48px !default;
 $slider__navigation-icon-margin    : $spacer !default;
@@ -18,6 +19,29 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
 
     &__slides {
         display: flex;
+    }
+
+    &__item {
+        position: relative;
+        min-width: 50%;
+        padding: $slider__item-padding;
+        border: 0;
+
+        @include mq($screen-m) {
+            min-width: 33%;
+        }
+
+        @include mq($screen-l) {
+            min-width: 25%;
+        }
+
+        .product__img-box {
+            min-height: unset;
+        }
+
+        .product__type {
+            padding: 0;
+        }
     }
 
     &__navigation {

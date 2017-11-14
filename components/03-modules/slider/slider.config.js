@@ -19,7 +19,46 @@ module.exports = {
     },
     elements: [
       {
-        content: 'button'
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-base.jpg'
+        }
+      },
+      {
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-second.jpg'
+        }
+      },
+      {
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-base.jpg'
+        }
+      },
+      {
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-second.jpg'
+        }
+      },
+      {
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-base.jpg'
+        }
+      },
+      {
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-second.jpg'
+        }
+      },
+      {
+        content: 'image',
+        contentContext: {
+          src: '../../images/product/product-base.jpg'
+        }
       }
     ]
   }

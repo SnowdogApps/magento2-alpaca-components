@@ -2,12 +2,14 @@
     <div class="slider__handler">
         <div class="slider__slides">
             {{#each elements }}
-                {{ render (component content) contentContext }}
+                <div class="slider__item {{ this.itemClass }}">
+                    {{ render (component content) contentContext }}
+                </div>
             {{/each}}
         </div>
     </div>
 
-    <div class="slider__navigation">
+    <div class="slider__navigation {{ navigationClass }}">
         {{render '@button--icon' iconPrev }}
 
         {{render '@button--icon' iconNext }}
