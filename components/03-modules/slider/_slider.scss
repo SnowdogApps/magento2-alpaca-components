@@ -1,24 +1,9 @@
 $slider__margin                    : $spacer--medium !default;
 $slider__transition                : $transition-base !default;
-$slider__title-margin              : $spacer--large !default;
 $slider__navigation-margin         : $spacer !default;
 $slider__navigation-icon-size      : 48px !default;
 $slider__navigation-icon-margin    : $spacer !default;
 $slider__navigation-icon-background: $white !default;
-$slider__name-margin-right         : $spacer !default;
-$slider__name-font-weight          : $font-weight-base !default;
-$slider__name-font-size            : $font-size-base !default;
-$slider__item-padding              : 0 $spacer--medium 0 0 !default;
-$slider__image-margin              : 0 auto $spacer auto !default;
-$slider__badge-top                 : $spacer !default;
-$slider__price-old-margin          : $spacer !default;
-$slider__price-font-weight         : $font-weight-bold !default;
-$slider__price-color               : $black !default;
-$slider__price-old-font-weight     : $font-weight-base !default;
-$slider__price-old-font-size       : $font-size-extra-small !default;
-$slider__price-new-color           : $color-primary !default;
-$slider__price-new-font-weight     : $font-weight-bold !default;
-$slider__price-new-font-size       : $font-size-small !default;
 $slider__icon-size                 : 25px !default;
 $slider__icon-fill                 : $color-primary !default;
 $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
@@ -27,117 +12,12 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
     margin-bottom: $slider__margin;
     position: relative;
 
-    &__title {
-        margin-bottom: $slider__title-margin;
-        width: 100%;
-    }
-
     &__handler {
         overflow: hidden;
     }
 
     &__slides {
         display: flex;
-    }
-
-    &__item {
-        position: relative;
-        min-width: 50%;
-        padding: $slider__item-padding;
-        border: 0;
-
-        @include mq($screen-m) {
-            min-width: 33%;
-        }
-
-        @include mq($screen-l) {
-            min-width: 25%;
-        }
-
-        .product__img-box {
-            min-height: unset;
-        }
-
-        .product__type {
-            padding: 0;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    &__image {
-        width: 100%;
-        margin: $slider__image-margin;
-    }
-
-    &__item-handler {
-        display: flex;
-        flex-wrap: wrap;
-
-        @include mq($screen-m) {
-            flex-wrap: nowrap;
-            justify-content: space-between;
-        }
-    }
-
-    &__name {
-        flex-basis: 100%;
-        font-weight: $slider__name-font-weight;
-
-        @include mq($screen-m) {
-            flex-basis: auto;
-            margin-right: $slider__name-margin-right;
-            margin-bottom: 0;
-        }
-
-        @include mq($screen-l) {
-            font-size: $slider__name-font-size;
-        }
-    }
-
-    &__price {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        color: $slider__price-color;
-        font-weight: $slider__price-font-weight;
-
-        @include mq($screen-m) {
-            flex-flow: column;
-            align-items: flex-end;
-            white-space: nowrap;
-        }
-    }
-
-    &__price-old {
-        display: block;
-        margin-right: $slider__price-old-margin;
-        color: $slider__price-color;
-        font-weight: $slider__price-old-font-weight;
-        font-size: $slider__price-old-font-size;
-        text-decoration: line-through;
-
-        @include mq($screen-m) {
-            margin-right: 0;
-        }
-    }
-
-    &__price-new {
-        color: $slider__price-new-color;
-        font-size: $slider__price-new-font-size;
-        font-weight: $slider__price-new-font-weight;
-    }
-
-    &__badge {
-        position: absolute;
-        top: $slider__badge-top;
-        left: 0;
     }
 
     &__navigation {
