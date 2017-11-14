@@ -12,9 +12,11 @@
             {{ render '@banner' bannerMedium1 }}
             {{ render '@banner' bannerMedium2 }}
         </section>
-        <section class="home__brand-slider"></section>
+        <section class="home__brands">
+            {{ render '@heading' brandBlockHeading }}
+            {{ render '@list--link-content' brandsList }}
+        </section>
         <section class="home__static-block">
-            {{ render '@heading' cmsBlockHeading }}
             <article class="home__static-text">
                 {{{ cmsBlock }}}
             </article>

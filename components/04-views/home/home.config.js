@@ -118,11 +118,84 @@ module.exports = {
         alt: 'banner discover alt text'
       }
     },
-    cmsBlockHeading: {
+    brandBlockHeading: {
       tag: 'h2',
       class: 'home__cms-block-title',
-      text: 'Our Story'
+      text: 'Brands'
     },
-    cmsBlock: '<p>Vestibulum quis consectetur enim, sit amet iaculis enim. Integer sit amet justo dictum, faucibus enim quis, mattis leo. Aenean sagittis eget arcu ac facilisis. Vestibulum mi lacus, consequat et sodales id, vehicula in felis. Praesent at molestie eros, at pretium nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce iaculis felis vitae tempus elementum.</p> <p>Curabitur hendrerit, augue pharetra suscipit posuere, nunc risus congue nulla, ac sollicitudin leo sem sed ante. Nulla at velit imperdiet, dapibus libero in, vehicula mi. Nunc consequat quis ligula eu porttitor. Maecenas laoreet, sapien vel consequat vestibulum, purus tellus gravida arcu, quis interdum ligula diam quis lacus. Cras ac odio urna. Aenean tempus tristique felis, vitae pellentesque sem fringilla id. Nam euismod purus ornare, suscipit ante ut, aliquam odio. Integer cursus odio id odio tempus, non ullamcorper erat malesuada.</p>'
+    cmsBlock: '<p>Vestibulum quis consectetur enim, sit amet iaculis enim. Integer sit amet justo dictum, faucibus enim quis, mattis leo. Aenean sagittis eget arcu ac facilisis. Vestibulum mi lacus, consequat et sodales id, vehicula in felis. Praesent at molestie eros, at pretium nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce iaculis felis vitae tempus elementum.</p> <p>Curabitur hendrerit, augue pharetra suscipit posuere, nunc risus congue nulla, ac sollicitudin leo sem sed ante. Nulla at velit imperdiet, dapibus libero in, vehicula mi. Nunc consequat quis ligula eu porttitor. Maecenas laoreet, sapien vel consequat vestibulum, purus tellus gravida arcu, quis interdum ligula diam quis lacus. Cras ac odio urna. Aenean tempus tristique felis, vitae pellentesque sem fringilla id. Nam euismod purus ornare, suscipit ante ut, aliquam odio. Integer cursus odio id odio tempus, non ullamcorper erat malesuada.</p>',
+    brandsList: {
+      listTag: 'ul',
+      elementTag: 'li',
+      class: 'home__brands-list',
+      elements: [
+        {
+          linkClass: '',
+          text: '',
+          content: 'image',
+          contentContext: {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            dataSrc: '/images/home/brand-example_112-112.png',
+            alt: 'brand name alt text'
+          },
+          link: '#',
+        },
+        {
+          linkClass: '',
+          text: '',
+          content: 'image',
+          contentContext: {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            dataSrc: '/images/home/brand-example_112-112.png',
+            alt: 'brand name alt text'
+          },
+          link: '#link',
+        },
+        {
+          linkClass: '',
+          text: '',
+          content: 'image',
+          contentContext: {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            dataSrc: '/images/home/brand-example_112-112.png',
+            alt: 'brand name alt text'
+          },
+          link: '#',
+        },
+        {
+          linkClass: '',
+          text: '',
+          content: 'image',
+          contentContext: {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            dataSrc: '/images/home/brand-example_112-112.png',
+            alt: 'brand name alt text'
+          },
+          link: '#',
+        },
+        {
+          linkClass: '',
+          text: '',
+          content: 'image',
+          contentContext: {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            dataSrc: '/images/home/brand-example_112-112.png',
+            alt: 'brand name alt text'
+          },
+          link: '#'
+        },
+        {
+          linkClass: '',
+          text: '',
+          content: 'image',
+          contentContext: {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            dataSrc: '/images/home/brand-example_112-112.png',
+            alt: 'brand name alt text'
+          },
+          link: '#'
+        }
+      ]
+    }
   }
 }

@@ -1,5 +1,9 @@
-$home__banner-spacer: $spacer--medium !default;
-$home__text-column-gap: $spacer--medium !default;
+$home__banner-spacer      : $spacer--medium !default;
+$home__banner-spacer-small: $spacer !default;
+$home__banner-spacer-large: $spacer--large !default;
+$home__text-column-gap    : $spacer--medium !default;
+$home__block-border       : 1px solid $gray !default;
+$home__brand-wdth--small  : 33.33% !default;
 
 .home {
     &__banners-handler {
@@ -7,10 +11,14 @@ $home__text-column-gap: $spacer--medium !default;
             display: flex;
             flex-flow: row nowrap;
         }
+
+        &:first-child {
+            margin-top: $home__banner-spacer-small;
+        }
     }
 
     &__banner-content {
-        margin: $spacer 0;
+        margin: $home__banner-spacer-small 0;
         @include mq($screen-m) {
             margin-right: $home__banner-spacer;
 
@@ -20,15 +28,57 @@ $home__text-column-gap: $spacer--medium !default;
         }
     }
 
+    &__brands {
+        margin-top: $home__banner-spacer;
+        border-bottom: $home__block-border;
+    }
+
+    &__brands-list {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: $home__banner-spacer-large 0;
+
+        @include mq($screen-m) {
+            flex-wrap: nowrap;
+        }
+
+        .list__item {
+            margin-bottom: $home__banner-spacer;
+            width: $home__brand-wdth--small;
+            padding: $home__banner-spacer;
+            border-right: $home__block-border;
+
+            &:nth-child(3n) {
+                border-right: 0;
+            }
+            @include mq($screen-m) {
+                width: auto;
+                flex-basis: auto;
+
+                &:nth-child(3n) {
+                    border-right: $home__block-border;
+                }
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+
+        .link {
+            display: block;
+        }
+    }
+
     &__static-block {
-        padding: $home__banner-spacer;
+        padding: $home__banner-spacer-large;
     }
 
     &__cms-block-title {
-        @include mq($screen-m) {
-            text-transform: uppercase;
-            text-align: center;
-        }
+        text-align: center;
+        text-transform: uppercase;
     }
 
     &__static-text {
