@@ -40,10 +40,45 @@ module.exports = {
     {
       name: 'attribute',
       context: {
-        class: '',
         heading: {
           tag: 'h5',
           title: 'Color'
+        },
+        options: [
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-orange.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-green.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes swatch__option--active',
+            attributes: 'style="background: url(../../images/swatch/swatch-red.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-white.jpg); background-size: cover; background-position: center center;"'
+          }
+        ]
+      }
+    },
+    {
+      name: 'small',
+      context: {
+        class: 'swatch--small',
+        heading: {
+          title: ''
+        }
+      }
+    },
+    {
+      name: 'small-attribute',
+      context: {
+        class: 'swatch--small-attributes',
+        heading: {
+          title: ''
         },
         options: [
           {
