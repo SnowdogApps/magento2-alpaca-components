@@ -1,8 +1,10 @@
 <ul class="list active-filters">
     {{# each filters }}
         <li class="list__item active-filters__item">
-            <button type="button" class="active-filters__close">
-                <svg class="active-filters__icon">
+            <button type="button"
+                    class="active-filters__remove"
+            >
+                <svg class="active-filters__remove-icon">
                     <use xlink:href="{{ svg iconId }}"></use>
                 </svg>
             </button>

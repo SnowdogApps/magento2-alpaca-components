@@ -8,7 +8,7 @@ $active-filters__label-font-weight: $font-weight-bold !default;
         align-items: center;
     }
 
-    &__close {
+    &__remove {
         width: $active-filters__close-size;
         height: $active-filters__close-size;
         background: none;
@@ -18,7 +18,7 @@ $active-filters__label-font-weight: $font-weight-bold !default;
         cursor: pointer;
     }
 
-    &__icon {
+    &__remove-icon {
         width: $active-filters__icon-size;
         height: $active-filters__icon-size;
         fill: $active-filters__icon-fill;
