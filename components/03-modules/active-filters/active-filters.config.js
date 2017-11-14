@@ -1,5 +1,7 @@
 module.exports = {
   context: {
+    clearHref: '#',
+    clearText: 'Clear',
     filters: [
       {
         iconId: 'close',
