@@ -1,10 +1,11 @@
-(function() {
+/* global debounce */
+(function() { // eslint-disable-line
   'use strict';
 
-  const items = [...document.querySelectorAll('.products-grid-item')],
-    mq = '(min-width: 768px)';
-
-  const imageRatio = 0.975; // to calculate image height based on container width
+  // to calculate image height based on container width
+  const imageRatio = 0.975,
+        items = [...document.querySelectorAll('.products-grid-item')],
+        mq = '(min-width: 768px)';
 
 
   function getExtraHeight(item, detailsHeight) {
@@ -37,9 +38,9 @@
     const detailsHeight = item.querySelector('.products-grid-item__details').clientHeight,
           extraHeight = getExtraHeight(item, detailsHeight);
     if (window.matchMedia(mq).matches) {
-        itemContent.style.transform = `translate(0%,-${extraHeight}px)`;
-        item.classList.add('products-grid-item--active');
-      }
+      itemContent.style.transform = `translate(0%,-${extraHeight}px)`;
+      item.classList.add('products-grid-item--active');
+    }
   }
 
   function bindEvents(items) {
