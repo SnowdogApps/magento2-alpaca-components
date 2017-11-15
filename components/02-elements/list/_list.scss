@@ -31,8 +31,7 @@ $list__border--divider         : 1px solid $gray-dark !default;
 
     &--horizontal {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         .list__item {
             padding: $list__padding--horizontal;
 
@@ -48,8 +47,7 @@ $list__border--divider         : 1px solid $gray-dark !default;
     &--min-medium-horizontal {
         @include mq($screen-m) {
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
+            flex-flow: row nowrap;
         }
         .list__item {
             @include mq($screen-m) {

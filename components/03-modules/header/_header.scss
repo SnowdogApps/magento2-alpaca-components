@@ -98,8 +98,7 @@ $header__icon-color            : $gray-dark !default;
 
     &__search-wrapper {
         display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
+        flex-flow: column nowrap;
         flex: 1 70%;
         order: 5;
         justify-content: center;
