@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    link: '#',
     image: {
       defaultSrc: '/images/banner/banner-320_176.jpg',
       sources: [
@@ -19,7 +20,8 @@ module.exports = {
           src: '/images/banner/banner-1920_512.jpg',
           mediaQuery: ''
         }
-      ]
+      ],
+      alt: 'banner-image'
     }
   }
 };
