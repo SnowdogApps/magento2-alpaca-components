@@ -49,13 +49,13 @@ $home__brand-wdth--small  : 33.33% !default;
             width: $home__brand-wdth--small;
             padding: $home__banner-spacer;
             border-right: $home__block-border;
+            text-align: center;
 
             &:nth-child(3n) {
                 border-right: 0;
             }
             @include mq($screen-m) {
-                width: auto;
-                flex-basis: auto;
+                width: 20%;
 
                 &:nth-child(3n) {
                     border-right: $home__block-border;
@@ -64,6 +64,10 @@ $home__brand-wdth--small  : 33.33% !default;
                 &:last-child {
                     border-right: 0;
                 }
+            }
+
+            @include mq($screen-l) {
+                padding: $home__banner-spacer-large;
             }
         }
 
