@@ -147,6 +147,51 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      name: 'link-content',
+      context: {
+        listTag: 'ul',
+        elementTag: 'li',
+        class: '',
+        elements: [
+          {
+            linkClass: '',
+            text: '',
+            content: 'button',
+            link: '#',
+          },
+          {
+            linkClass: '',
+            text: '',
+            content: 'button',
+            link: '#link',
+          },
+          {
+            linkClass: '',
+            text: '',
+            content: 'image',
+            contentContext: {
+              src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+              dataSrc: '/images/home/brand-example_112-112.png',
+              alt: 'brand name alt text'
+            },
+            link: '#lorem',
+          },
+          {
+            linkClass: '',
+            text: '',
+            content: 'image',
+            link: '#',
+          },
+          {
+            linkClass: '',
+            text: '',
+            content: 'image',
+            link: '#'
+          }
+        ]
+      }
     }
   ]
 };
