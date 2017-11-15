@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer'),
       gulp         = require('gulp'),
       gulpif       = require('gulp-if'),
       hbsEngine    = fractal.components.engine(),
+      log          = require('gulp-logger'),
       logger       = fractal.cli.console,
       mandelbrot   = require('@frctl/mandelbrot'),
       notify       = require('gulp-notify'),
@@ -98,6 +99,15 @@ gulp.task('watch', () => {
 gulp.task('sass', () => {
   return gulp.src(fractal.docs.get('path') + '/styles/**/*.scss')
     .pipe(
+      gulpif(
+        util.env.ci,
+        log({
+          display: 'name',
+          beforeEach: 'Processing: '
+        })
+      )
+    )
+    .pipe(
       gulpif(!util.env.ci,
         plumber({
           errorHandler: notify.onError('Error: <%= error.message %>')
@@ -114,6 +124,22 @@ gulp.task('sass', () => {
 
 gulp.task('sass-lint', () => {
   return gulp.src(fractal.components.get('path') + '/**/*.scss')
+    .pipe(
+      gulpif(
+        util.env.ci,
+        log({
+          display: 'name',
+          beforeEach: 'Processing: '
+        })
+      )
+    )
+    .pipe(
+      gulpif(!util.env.ci,
+        plumber({
+          errorHandler: notify.onError('Error: <%= error.message %>')
+        })
+      )
+    )
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(gulpif(util.env.ci, sassLint.failOnError()));
@@ -121,6 +147,22 @@ gulp.task('sass-lint', () => {
 
 gulp.task('css-lint', () => {
   return gulp.src(fractal.web.get('static.path') + '/**/*.css')
+    .pipe(
+      gulpif(
+        util.env.ci,
+        log({
+          display: 'name',
+          beforeEach: 'Processing: '
+        })
+      )
+    )
+    .pipe(
+      gulpif(!util.env.ci,
+        plumber({
+          errorHandler: notify.onError('Error: <%= error.message %>')
+        })
+      )
+    )
     .pipe(postcss([
       stylelint(),
       reporter({ throwError: util.env.ci || false })
@@ -129,6 +171,22 @@ gulp.task('css-lint', () => {
 
 gulp.task('js-lint', () => {
   return gulp.src(fractal.components.get('path') + '/**/*.js')
+    .pipe(
+      gulpif(
+        util.env.ci,
+        log({
+          display: 'name',
+          beforeEach: 'Processing: '
+        })
+      )
+    )
+    .pipe(
+      gulpif(!util.env.ci,
+        plumber({
+          errorHandler: notify.onError('Error: <%= error.message %>')
+        })
+      )
+    )
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(gulpif(util.env.ci, eslint.failAfterError()));
@@ -154,7 +212,6 @@ gulp.task('inheritance', done => {
 
   // Remove old build directory
   fs.removeSync('./build');
-
 
   // Find all local files
   globby
