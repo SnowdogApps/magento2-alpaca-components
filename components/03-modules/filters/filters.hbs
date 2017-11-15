@@ -1,20 +1,109 @@
-<{{{ tag }}} class="filters {{ class }}" {{ attributes }}>
-    <div class="filters__container">
-        <div class="filters__lists">
-            {{> '@range' range }}
-        </div>
+<div class="filters {{ class }}" {{ attributes }}>
+    <h5>ACTIVE FILTERS</h5>
 
+    <div class="filters__divider">
+        <div class="filters__divider__left"></div>
+        <div class="filters__divider__right"></div>
     </div>
-</{{{ tag }}}>
+
     <div class="filters__active">
         {{> '@active-filters' activeFilters}}
     </div>
-    <div class="filters__checkbox-list">
-    {{# each checkboxes }}
-        {{> '@checkbox--fake' this }}
-    {{/each}}
+
+
+    <h5>ALL FILTERS</h5>
+    <div class="filters__divider">
+        <div class="filters__divider__left"></div>
+        <div class="filters__divider__right"></div>
     </div>
-    {{> '@swatch' swatch}}
-    {{> '@swatch--color' color }}
-    {{> '@range' range }}
+
+    <div class="dropdown-list {{ class }}" {{{ attributes }}}>
+        <ul class="dropdown-list__list">
+            <li class="dropdown-list__item dropdown-list__item--collapse">
+                <div class="dropdown-list__label"
+                     data-dropdown="checkboxList"
+                >
+                    Checkboxes
+                    <svg class="dropdown-list__icon">
+                        <use xlink:href="{{ svg 'angle-down' }}"></use>
+                    </svg>
+                </div>
+
+                <div id="checkboxList"
+                     class="dropdown-list__content {{ class }}"
+                     data-content="checkboxList"
+                     aria-hidden="true"
+                >
+                    <div class="filters__checkbox-list">
+                        {{# each checkboxes }}
+                            {{> '@checkbox--fake' this }}
+                        {{/each}}
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-list__item dropdown-list__item--collapse">
+                <div class="dropdown-list__label"
+                     data-dropdown="checkboxList"
+                >
+                    Size
+                    <svg class="dropdown-list__icon">
+                        <use xlink:href="{{ svg 'angle-down' }}"></use>
+                    </svg>
+                </div>
+
+                <div id="checkboxList"
+                     class="dropdown-list__content {{ class }}"
+                     data-content="checkboxList"
+                     aria-hidden="true"
+                >
+                    <div class="filters__checkbox-list">
+                        {{> '@swatch' swatch}}
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-list__item dropdown-list__item--collapse">
+                <div class="dropdown-list__label"
+                     data-dropdown="checkboxList"
+                >
+                    Color
+                    <svg class="dropdown-list__icon">
+                        <use xlink:href="{{ svg 'angle-down' }}"></use>
+                    </svg>
+                </div>
+
+                <div id="checkboxList"
+                     class="dropdown-list__content {{ class }}"
+                     data-content="checkboxList"
+                     aria-hidden="true"
+                >
+                    <div class="filters__checkbox-list">
+                        {{> '@swatch--color' color }}
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-list__item dropdown-list__item--collapse">
+                <div class="dropdown-list__label"
+                     data-dropdown="checkboxList"
+                >
+                    Range
+                    <svg class="dropdown-list__icon">
+                        <use xlink:href="{{ svg 'angle-down' }}"></use>
+                    </svg>
+                </div>
+
+                <div id="checkboxList"
+                     class="dropdown-list__content {{ class }}"
+                     data-content="checkboxList"
+                     aria-hidden="true"
+                >
+                    <div class="filters__checkbox-list">
+                        {{> '@range' range }}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
 <script src="{{static '../filters/filters.js'}}"></script>
+<script src="{{static '../dropdown-list/dropdown-list.js' }}"></script>
