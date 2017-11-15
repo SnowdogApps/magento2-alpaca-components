@@ -75,6 +75,50 @@ module.exports = {
       },
       script: true,
       showFloat: 0
-    }
+    },
+    checkboxes: [
+      {
+        id: 'checkbox',
+        name: 'checkbox-name',
+        label: {
+          text: 'Insulated',
+          class: ''
+        },
+        icon: {
+          class: ''
+        },
+        input: {
+          class: ''
+        }
+      },
+      {
+        id: 'checkbox1',
+        name: 'checkbox-name1',
+        label: {
+          text: 'Lightweight',
+          class: ''
+        },
+        icon: {
+          class: ''
+        },
+        input: {
+          class: ''
+        }
+      },
+      {
+        id: 'checkbox2',
+        name: 'checkbox-name2',
+        label: {
+          text: 'Value',
+          class: ''
+        },
+        icon: {
+          class: ''
+        },
+        input: {
+          class: ''
+        }
+      }
+    ]
   }
 };
