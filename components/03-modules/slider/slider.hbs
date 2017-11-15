@@ -1,8 +1,10 @@
 <div class="slider {{ class }}" {{{ attributes }}}>
     <div class="slider__handler">
         <div class="slider__slides">
-            {{#each elements }}
-                <div class="slider__item {{ this.itemClass }}">
+            {{#each slides }}
+                <div class="slider__item {{ this.itemClass }}"
+                     {{{ this.itemAttributes }}}
+                >
                     {{ render (component content) contentContext }}
                 </div>
             {{/each}}

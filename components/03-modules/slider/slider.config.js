@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     script: true,
-    attributes: 'data-rewind="true" data-enable-mouse-events="true"',
+    attributes: 'data-rewind="true" data-enable-mouse-events="true" data-slides-to-scroll="1"',
     iconPrev: {
       tag: 'button',
       text: '',
@@ -18,47 +18,61 @@ module.exports = {
       iconClass: 'button__icon slider__icon',
       attributes: 'type="button" aria-label="button arrow slider next"'
     },
-    elements: [
+    slides: [
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-base.jpg'
+          dataSrc: '../../images/product/product-base.jpg',
+          alt: 'slider1'
         }
       },
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-second.jpg'
+          dataSrc: '../../images/product/product-second.jpg',
+          alt: 'slider2'
         }
       },
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-base.jpg'
+          dataSrc: '../../images/product/product-base.jpg',
+          alt: 'slider3'
         }
       },
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-second.jpg'
+          dataSrc: '../../images/product/product-second.jpg',
+          alt: 'slider4'
         }
       },
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-base.jpg'
+          dataSrc: '../../images/product/product-base.jpg',
+          alt: 'slider5'
         }
       },
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-second.jpg'
+          dataSrc: '../../images/product/product-second.jpg',
+          alt: 'slider6'
         }
       },
       {
+        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
-          src: '../../images/product/product-base.jpg'
+          dataSrc: '../../images/product/product-base.jpg',
+          alt: 'slider7'
         }
       }
     ]
