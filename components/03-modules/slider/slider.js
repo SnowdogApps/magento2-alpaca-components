@@ -16,7 +16,12 @@
     };
 
     for (const key of Object.keys(dataValues)) {
-      config[key] = dataValues[key];
+      if (!isNaN(parseInt(dataValues[key]))) {
+        config[key] = parseInt(dataValues[key]);
+      }
+      else {
+        config[key] = dataValues[key];
+      }
     }
 
     lory(slider, config);
