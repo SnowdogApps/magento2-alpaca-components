@@ -41,8 +41,10 @@ $select__input-border-color: $form-elements-border-color !default;
         }
     }
 
-    &__field-input:focus {
-        outline: none;
+    &__field-input {
+        &::focus {
+            outline: none;
+        }
     }
 }
 // Choices.js lib styles overwrites
