@@ -14,9 +14,8 @@ $range__dash-padding         : 0 $spacer--medium 0 $spacer !default;
 $range__suffix-padding       : 0 $spacer !default;
 
 .range-filter {
-    padding: 0;
-    padding-top: $range__height;
-    overflow: hidden;
+    padding: $range__height 0 0;
+    overflow: visible;
     &__slider {
         margin-bottom: $spacer--medium;
     }
@@ -82,7 +81,7 @@ $range__suffix-padding       : 0 $spacer !default;
     padding-right: 24px;
 }
 .noUi-extended .noUi-handle {
-    left: -1px;
+    left: 0;
 }
 .noUi-extended .noUi-origin  {
     right: -24px;
