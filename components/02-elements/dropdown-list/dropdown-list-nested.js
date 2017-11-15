@@ -33,7 +33,7 @@ function toggleSubmenu(item, inner) {
     dropdownList = item
       .parentNode
       .querySelector(`${innerListLevel2}[data-dropdown="${dropdownId}"]`);
-    
+
     innerLists = null;
     upperList  = item.closest(innerListLevel1);
   }
@@ -45,11 +45,11 @@ function toggleSubmenu(item, inner) {
       innerLists.forEach(key => {
         key.style.height = 0;
         key.parentNode.classList.remove(activeClass);
-        
+
         const innerListLabel = key
-                .parentNode
-                .querySelector(`[data-dropdown="${key.getAttribute('id')}"]`);
-        
+          .parentNode
+          .querySelector(`[data-dropdown="${key.getAttribute('id')}"]`);
+  
         setAriaAttributes(innerListLabel, key, true);
       });
     }
@@ -59,9 +59,9 @@ function toggleSubmenu(item, inner) {
 
     dropdownList.style.height = 0;
     const listLabel = dropdownList
-            .parentNode
-            .querySelector(`[data-dropdown="${dropdownList.getAttribute('id')}"]`);
-    
+      .parentNode
+      .querySelector(`[data-dropdown="${dropdownList.getAttribute('id')}"]`);
+
     setAriaAttributes(listLabel, dropdownList, true);
   }
   else if (dropdownList) {
@@ -69,7 +69,7 @@ function toggleSubmenu(item, inner) {
           listLabel = dropdownList
             .parentNode
             .querySelector(`[data-dropdown="${dropdownList.getAttribute('id')}"]`);
-    
+
     dropdownList.style.height = listHeight + 'px';
     setAriaAttributes(listLabel, dropdownList, false);
 
