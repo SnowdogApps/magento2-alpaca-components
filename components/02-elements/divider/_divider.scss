@@ -1,0 +1,22 @@
+$divider__color--left : $color-primary !default;
+$divider__color--right: $gray-light !default;
+$divider__size        : 8px !default;
+.divider {
+    display: flex;
+
+    &__left,
+    &__right {
+        border: $divider__size solid;
+        flex: 1;
+    }
+
+    &__left {
+        border-color: $divider__color--left;
+        flex-grow: 1;
+    }
+
+    &__right {
+        border-color: $divider__color--right;
+        flex-grow: 8;
+    }
+}

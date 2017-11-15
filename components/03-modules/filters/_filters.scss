@@ -1,25 +1,2 @@
-$filters__divider-color--left : $color-primary !default;
-$filters__divider-color--right: $gray-light !default;
-$filters__divider-size        : 8px !default;
-
 .filters {
-    &__divider {
-        display: flex;
-
-        &__left,
-        &__right {
-            border: $filters__divider-size solid;
-            flex: 1;
-        }
-
-        &__left {
-            border-color: $filters__divider-color--left;
-            flex-grow: 1;
-        }
-
-        &__right {
-            border-color: $filters__divider-color--right;
-            flex-grow: 8;
-        }
-    }
 }

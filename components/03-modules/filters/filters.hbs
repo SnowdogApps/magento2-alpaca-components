@@ -1,10 +1,6 @@
 <div class="filters {{ class }}" {{ attributes }}>
     <h5>ACTIVE FILTERS</h5>
-
-    <div class="filters__divider">
-        <div class="filters__divider__left"></div>
-        <div class="filters__divider__right"></div>
-    </div>
+    {{> '@divider' }}
 
     <div class="filters__active">
         {{> '@active-filters' activeFilters}}
@@ -12,10 +8,7 @@
 
 
     <h5>ALL FILTERS</h5>
-    <div class="filters__divider">
-        <div class="filters__divider__left"></div>
-        <div class="filters__divider__right"></div>
-    </div>
+    {{> '@divider' }}
 
     <div class="dropdown-list {{ class }}" {{{ attributes }}}>
         <ul class="dropdown-list__list">
