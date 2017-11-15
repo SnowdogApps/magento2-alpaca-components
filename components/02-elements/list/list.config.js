@@ -1,4 +1,5 @@
 module.exports = {
+  preview: '@docs-only-styles',
   context: {
     listTag: 'ul',
     elementTag: 'li',
