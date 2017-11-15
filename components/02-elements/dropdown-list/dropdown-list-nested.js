@@ -49,7 +49,7 @@ function toggleSubmenu(item, inner) {
         const innerListLabel = key
           .parentNode
           .querySelector(`[data-dropdown="${key.getAttribute('id')}"]`);
-  
+
         setAriaAttributes(innerListLabel, key, true);
       });
     }
