@@ -6,6 +6,9 @@
 
     </div>
 </{{{ tag }}}>
+    <div class="filters__active">
+        {{> '@active-filters' activeFilters}}
+    </div>
     <div class="filters__checkbox-list">
     {{# each checkboxes }}
         {{> '@checkbox--fake' this }}
