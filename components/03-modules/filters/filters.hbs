@@ -6,4 +6,9 @@
 
     </div>
 </{{{ tag }}}>
+    <div class="filters__checkbox-list">
+    {{# each checkboxes }}
+        {{> '@checkbox--fake' this }}
+    {{/each}}
+    </div>
 <script src="{{static '../filters/filters.js'}}"></script>
