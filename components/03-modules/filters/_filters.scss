@@ -1,2 +1,6 @@
+$filters__heading-font-weight: $font-weight-normal !default;
 .filters {
+    &__heading {
+        font-weight: $filters__heading-font-weight;
+    }
 }
