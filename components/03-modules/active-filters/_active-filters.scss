@@ -27,4 +27,8 @@ $active-filters__label-font-weight: $font-weight-bold !default;
     &__label {
         font-weight: $active-filters__label-font-weight;
     }
+    &__clear {
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+    }
 }
