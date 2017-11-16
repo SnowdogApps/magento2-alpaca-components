@@ -65,15 +65,6 @@ module.exports = {
       }
     },
     {
-      name: 'small',
-      context: {
-        class: 'swatch--small',
-        heading: {
-          title: ''
-        }
-      }
-    },
-    {
       name: 'small-attribute',
       context: {
         class: 'swatch--small-attributes',

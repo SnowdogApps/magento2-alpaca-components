@@ -12,25 +12,11 @@ $swatch__option-width--medium--attributes : 42px !default;
 $swatch__option-height--medium--attributes: 48px !default;
 $swatch__option-width--large--attributes  : 54px !default;
 $swatch__option-height--large--attributes : 64px !default;
-$swatch__option-sizing--medium            : 32px !default;
-$swatch__option-sizing--small             : 32px !default;
-$swatch__option-margin--small             : 0 $spacer $spacer 0 !default;
+$swatch__option-margin--small-attributes  : 0 $spacer $spacer 0 !default;
 $swatch__option-width--small-attributes   : 32px !default;
 $swatch__option-height--small-attributes  : 40px !default;
 
 .swatch {
-    &--small {
-        .swatch__title {
-            display: none;
-        }
-
-        .swatch__option {
-            min-width: $swatch__option-sizing--small;
-            min-height: $swatch__option-sizing--small;
-            margin: $swatch__option-margin--small;
-        }
-    }
-
     &--small-attributes {
         .swatch__title {
             display: none;
@@ -39,7 +25,7 @@ $swatch__option-height--small-attributes  : 40px !default;
         .swatch__option {
             min-width: $swatch__option-width--small-attributes;
             min-height: $swatch__option-height--small-attributes;
-            margin: $swatch__option-margin--small;
+            margin: $swatch__option-margin--small-attributes;
         }
     }
 
@@ -73,11 +59,6 @@ $swatch__option-height--small-attributes  : 40px !default;
 
         &:last-child {
             margin-right: 0;
-        }
-
-        @include mq($screen-m) {
-            min-width: $swatch__option-sizing--medium;
-            min-height: $swatch__option-sizing--medium;
         }
 
         &--active {
