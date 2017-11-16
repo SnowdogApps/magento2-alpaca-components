@@ -1,15 +1,25 @@
-$header__margin                : 4px 0 !default;
+$lavender-gray: #c2c1df;
+$kimberly: #73739c;
+
 $header__margin--xl            : 0 !default;
-$header__border-color          : $gray !default;
+$header__border-color          : $lavender-gray !default;
 $header__font-size             : $font-size-small !default;
+
+$header__wrapper-margin        : 0 !default;
+$header__wrapper-margin--m     : 12px 0 !default;
+
+$header__logo-padding          : 12px 0 12px $spacer !default;
+$header__logo-padding--m       : 0 0 0 $spacer !default;
+
 $header__button-size           : 48px !default;
+
 $header__icon-size             : 24px !default;
 $header__icon-padding          : 2px !default;
 $header__icon-color            : $gray-dark !default;
 
 .header-button {
     height: 48px;
-    width: 48px;
+    min-width: 48px;
     display: flex;
     margin-left: $spacer;
     flex-direction: column;
@@ -28,10 +38,12 @@ $header__icon-color            : $gray-dark !default;
         margin-bottom: 4px;
         padding: 2px;
     }
+
     &__text {
         font-size: 10px;
         line-height: 10px;
         text-align: center;
+        color: $kimberly;
     }
 }
 
@@ -43,68 +55,25 @@ $header__icon-color            : $gray-dark !default;
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
-        margin: $header__margin--xl;
-        @include mq($screen-xl) {
-            margin: $header__margin;
+        margin: $header__wrapper-margin;
+        @include mq($screen-m) {
+            margin: $header__wrapper-margin--m;
         }
+
+        // @include mq($screen-xl) {
+        //     margin: $header__margin;
+        // }
     }
 
     &__logo {
         order: 3;
-        padding: 12px 0 12px 8px;
+        padding: $header__logo-padding;
         border-top: 1px solid $header__border-color;
-        // @include mq($screen-xl) {
-        //     margin: 0 auto 0 0;
-        // }
-    }
-
-    &__featured-info {
-        display: none;
-        flex-direction: row;
-        order: 3;
-        margin-right: 16px;
-        margin-left: auto;
-        @include mq($screen-xl) {
-            display: flex;
-        }
-    }
-
-    &__icons {
-        display: flex;
-        order: 2;
-        flex: 1 65%;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: flex-end;
-        @include mq($screen-s) {
-            flex: 1 70%;
-        }
         @include mq($screen-m) {
-            order: 4;
-            flex: 1 168px;
-            max-width: 168px;
+            // margin: 0 auto 0 0;
+            padding: $header__logo-padding--m;
+            border-top: none;
         }
-        @include mq($screen-xl) {
-            flex: 1 48px;
-            max-width: 48px;
-        }
-
-        &-item {
-            margin-right: 8px;
-            padding: $header__font-size;
-            @include mq($screen-xl) {
-                display: none;
-            }
-        }
-    }
-
-    &__icon {
-        display: block;
-        width: $header__icon-size;
-        height: $header__icon-size;
-        padding: $header__icon-padding;
-        fill: $header__icon-color;
-        cursor: pointer;
     }
 
     &__menu-trigger {
@@ -153,4 +122,42 @@ $header__icon-color            : $gray-dark !default;
     &--menu-open {
         overflow: visible;
     }
+
+    &__buttons {
+        display: flex;
+        order: 2;
+        flex: 1 65%;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        @include mq($screen-s) {
+            flex: 1 70%;
+        }
+        @include mq($screen-m) {
+            order: 4;
+            flex: 1 168px;
+            max-width: 168px;
+        }
+        @include mq($screen-xl) {
+            flex: 1 48px;
+            max-width: 48px;
+        }
+
+        &-item {
+            margin-right: 8px;
+            padding: $header__font-size;
+            @include mq($screen-xl) {
+                display: none;
+            }
+        }
+    }
+    //
+    // &__icon {
+    //     display: block;
+    //     width: $header__icon-size;
+    //     height: $header__icon-size;
+    //     padding: $header__icon-padding;
+    //     fill: $header__icon-color;
+    //     cursor: pointer;
+    // }
 }
