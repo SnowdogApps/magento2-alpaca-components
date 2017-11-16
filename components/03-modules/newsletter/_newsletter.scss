@@ -31,7 +31,7 @@ $newsletter__checkbox-icon-position-top : 0 !default;
     }
     &__controls {
         position: relative;
-        height: $newsletter__controls-height;
+        height: auto;
         margin-bottom: $newsletter__bottom-gap;
     }
     &__button {
