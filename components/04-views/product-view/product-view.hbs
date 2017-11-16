@@ -1,0 +1,118 @@
+{{ render '@header' }}
+
+<div class="product-view container">
+    {{render '@breadcrumbs' }}
+
+    <div class="product-view__wrapper">
+        <div class="product-view__gallery">
+            {{ render '@gallery' }}
+        </div>
+
+        <div class="product-view__main-details">
+            <h1 class="heading heading--first-level product-view__title">
+                {{{ title }}}
+            </h1>
+
+            <span class="product-view__sku">
+                {{{ sku.label }}} {{{ sku.value }}}
+            </span>
+
+            <span class="product-view__price">
+                {{{ price }}}
+            </span>
+
+            <div class="
+                     product-view__stock-status
+                     {{#if stock.outOfStock}}
+                         product-view__stock-status--out-of-stock
+                     {{/if}}
+                     {{#if stock.alert}}
+                         product-view__stock-status--alert
+                     {{/if}}
+            ">
+                {{{ stock.html }}}
+            </div>
+
+            <div class="product-view__rating">
+                <div class="product-view__rating-rates">
+                    {{ render '@rating--summary' }}
+                    {{#if rating.parenthesis}}
+                        (
+                    {{/if}}
+                    <a href="{{ rating.href }}"
+                       class="product-view__link product-view__link--rating {{ rating.class }}"
+                    >
+                        {{{ rating.value }}}
+                    </a>
+                    {{#if rating.parenthesis}}
+                        )
+                    {{/if}}
+                </div>
+                <div class="product-view__rating-actions">
+                    <a href="{{ addReview.href }}"
+                       class="
+                           product-view__link
+                           product-view__link--add-review
+                           {{ addReview.class }}
+                       "
+                   >
+                        {{ addReview.text }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-view__secondary-details">
+
+            <div class="product-view__description">
+                {{{ description }}}
+            </div>
+
+            <div class="product-view__options">
+                <h3>Color</h3>
+                {{render '@select'}}
+                <h3>Size</h3>
+                {{render '@select'}}
+            </div>
+
+            <div class="product-view__options">
+                <div class="product-view__qty">
+                    <h3>Qty</h3>
+                    {{render '@quantity-update'}}
+                </div>
+                <div class="product-view__add-to-cart">
+                    {{> '@button' button }}
+                </div>
+            </div>
+            <div class="product-view__extra-actions">
+
+            </div>
+
+            <div class="product-view__icons">
+                <a href="#" class="link product-view__link">
+                    <svg class="product-view__icon">
+                        <use xlink:href="{{ svg 'like' }}"></use>
+                    </svg>
+                </a>
+
+                <div class="product-view__handler">
+                    {{> '@list--icon' listIcon }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-view__tabs">
+        {{> '@tab' tab }}
+    </div>
+
+    <div class="product-view__related">
+        <h3 class="heading heading--second-level product-view__title--slider">
+            {{ sliderHeading }}
+        </h3>
+        {{> '@slider' slider }}
+        </div>
+    </div>
+</div>
+{{ render '@footer' }}

@@ -2,6 +2,7 @@ $gallery__icon-arrow-color                 : $gray !default;
 $gallery__icon-arrow-width                 : 12px !default;
 $gallery__label-offset-top                 : $spacer--medium !default;
 $gallery__label-offset-left                : $spacer !default;
+$gallery__nav-vertical-height              : 80px !default;
 $gallery__nav-vertical-margin-right--medium: $spacer--medium !default;
 $gallery__nav-vertical-margin-right        : 40px !default;
 $gallery__stage-margin-bottom              : $spacer--medium !default;
@@ -15,7 +16,7 @@ $gallery__thumb-width--large               : 80px !default;
 
 .gallery {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: nowrap;
     justify-content: flex-start;
     width: 100%;
     margin: 0;
@@ -36,7 +37,7 @@ $gallery__thumb-width--large               : 80px !default;
         &--vertical {
             @include mq($screen-m) {
                 order: 2;
-                width: calc(100% - (#{$gallery__nav-vertical-margin-right--medium} + #{$gallery__thumb-width--large}));
+                width: calc(100% - (#{$gallery__nav-vertical-margin-right--medium} + #{$gallery__thumb-width}));
             }
             @include mq($screen-l) {
                 width: calc(100% - (#{$gallery__nav-vertical-margin-right} + #{$gallery__thumb-width--large}));
