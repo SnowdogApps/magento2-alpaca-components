@@ -15,7 +15,6 @@ $range__suffix-padding       : 0 $spacer !default;
 
 .range-filter {
     padding: $range__height 0 0;
-    overflow: visible;
     &__slider {
         margin-bottom: $spacer--medium;
     }
