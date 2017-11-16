@@ -2,6 +2,7 @@ $gallery__icon-arrow-color         : $gray !default;
 $gallery__icon-arrow-width         : 12px !default;
 $gallery__label-offset-top         : $spacer--medium !default;
 $gallery__label-offset-left        : $spacer !default;
+$gallery__nav-vertical-margin-right--medium: $spacer--medium !default;
 $gallery__nav-vertical-margin-right: 40px !default;
 $gallery__stage-margin-bottom      : $spacer--medium !default;
 $gallery__thumb-arrow-height       : 48px !default;
@@ -47,9 +48,12 @@ $gallery__thumb-width--large       : 80px !default;
         align-items: center;
         &--vertical {
             @include mq($screen-m) {
-                margin-right: $gallery__nav-vertical-margin-right;
+                margin-right: $gallery__nav-vertical-margin-right--medium;
                 flex-direction: column;
                 order: 1;
+            }
+            @include mq($screen-l) {
+                margin-right: $gallery__nav-vertical-margin-right;
             }
         }
     }
