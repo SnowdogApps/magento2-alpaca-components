@@ -7,6 +7,34 @@ $header__icon-size             : 24px !default;
 $header__icon-padding          : 2px !default;
 $header__icon-color            : $gray-dark !default;
 
+.header-button {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    margin-left: $spacer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+
+    &__icon {
+        display: block;
+        height: 24px;
+        width: 24px;
+        margin-bottom: 4px;
+        padding: 2px;
+    }
+    &__text {
+        font-size: 10px;
+        line-height: 10px;
+        text-align: center;
+    }
+}
+
 .header {
     position: relative;
     border-bottom: 1px solid $header__border-color;
@@ -22,11 +50,12 @@ $header__icon-color            : $gray-dark !default;
     }
 
     &__logo {
-        order: 2;
-        margin-left: 8px;
-        @include mq($screen-xl) {
-            margin: 0 auto 0 0;
-        }
+        order: 3;
+        padding: 12px 0 12px 8px;
+        border-top: 1px solid $header__border-color;
+        // @include mq($screen-xl) {
+        //     margin: 0 auto 0 0;
+        // }
     }
 
     &__featured-info {
@@ -42,7 +71,7 @@ $header__icon-color            : $gray-dark !default;
 
     &__icons {
         display: flex;
-        order: 3;
+        order: 2;
         flex: 1 65%;
         flex-wrap: nowrap;
         align-items: center;
@@ -81,9 +110,8 @@ $header__icon-color            : $gray-dark !default;
     &__menu-trigger {
         display: flex;
         flex: 1 20%;
-        order: 4;
-        height: 49px;
-        border-top: 1px solid $header__border-color;
+        order: 1;
+        height: 48px;
         @include mq($screen-m) {
             order: 1;
             flex: 1 $header__button-size;
@@ -99,10 +127,11 @@ $header__icon-color            : $gray-dark !default;
     &__search-wrapper {
         display: flex;
         flex-flow: column nowrap;
-        flex: 1 70%;
+        flex: 1 50%;
         order: 5;
         justify-content: center;
         width: 100%;
+        padding-left: 24px;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
             order: 3;

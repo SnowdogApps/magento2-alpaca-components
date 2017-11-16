@@ -18,12 +18,19 @@ module.exports = {
     ],
     icons: [
       {
+        icon: 'heart',
+        ariaLabel: 'Wishlist',
+        text: 'Wishlist'
+      },
+      {
         icon: 'phone',
-        ariaLabel: 'Store phone number'
+        ariaLabel: 'Store phone number',
+        text: 'Contact'
       },
       {
         icon: 'account',
-        ariaLabel: 'Customer Account'
+        ariaLabel: 'Customer Account',
+        text: 'Account'
       }
     ],
     logo: {
@@ -66,7 +73,7 @@ module.exports = {
     },
     trigger: {
       attributes: 'data-popuptrigger="popup-1"',
-      class: 'button popup-trigger',
+      class: 'header-button popup-trigger',
       counter: '82'
     },
     minicartPopup: {
