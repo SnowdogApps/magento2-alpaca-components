@@ -61,6 +61,7 @@ $newsletter__checkbox-icon-position-top : 0 !default;
         border-radius: $newsletter__field-border-radius;
         height: $newsletter__field-height;
         color: $newsletter__input-color;
+        line-height: $newsletter__field-height;
         &::placeholder {
             color: $newsletter__input-color--placeholder;
         }
