@@ -5,7 +5,7 @@ $dropdown-list__outline                  : none !default;
 $dropdown-list__font-size                : $font-size-base !default;
 $dropdown-list__transition-height        : height 0.3s !default;
 $dropdown-list__transition               : $transition-base !default;
-$dropdown-list__content-padding          : $spacer $spacer--medium !default;
+$dropdown-list__content-margin           : $spacer $spacer--medium !default;
 
 // List item
 $dropdown-list__item-padding             : $spacer--medium !default;
@@ -169,7 +169,7 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
     &__content {
         height: 0;
         overflow: hidden;
-        padding: $dropdown-list__content-padding;
+        margin: $dropdown-list__content-margin;
         transition: $dropdown-list__transition-height;
     }
 
