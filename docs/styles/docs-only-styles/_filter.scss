@@ -1,0 +1,15 @@
+.filter {
+    & .dropdown-list__label {
+        color: $dropdown-list__item-color--open;
+        background-color: $dropdown-list__item-bg-color--open;
+
+        & .dropdown-list__icon {
+            fill: $dropdown-list__icon-fill--open;
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        height: 95px;
+    }
+}
