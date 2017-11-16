@@ -36,6 +36,10 @@ $gallery__thumb-width--large               : 80px !default;
         &--vertical {
             @include mq($screen-m) {
                 order: 2;
+                width: calc(100% - (#{$gallery__nav-vertical-margin-right--medium} + #{$gallery__thumb-width--large}));
+            }
+            @include mq($screen-l) {
+                width: calc(100% - (#{$gallery__nav-vertical-margin-right} + #{$gallery__thumb-width--large}));
             }
         }
         &--horizontal {
