@@ -1,3 +1,38 @@
-<div class="filter">
+<li class="dropdown-list__item dropdown-list__item--collapse filter">
+    <div class="dropdown-list__label filter__label"
+         data-dropdown="{{id}}"
+    >
+        {{title}}
+        <svg class="dropdown-list__icon">
+            <use xlink:href="{{ svg 'angle-down' }}"></use>
+        </svg>
+    </div>
+    <div id="{{id}}"
+         class="dropdown-list__content filter__content"
+         data-content="{{id}}"
+         aria-hidden="true"
+    >
+        {{#if default }}
+            {{ content }}
+        {{/if}}
 
-</div>
+        {{#if checkbox }}
+            {{# each checkboxes }}
+                {{> '@checkbox--fake' this }}
+            {{/each}}
+        {{/if}}
+
+        {{#if swatch }}
+            {{> '@swatch' config }}
+        {{/if}}
+
+        {{#if color }}
+            {{> '@swatch--color' config }}
+        {{/if}}
+
+        {{#if range }}
+            {{> '@range' config }}
+        {{/if}}
+    </div>
+</li>
+
