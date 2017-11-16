@@ -1,99 +1,29 @@
 <div class="filters {{ class }}" {{ attributes }}>
-    <h5>ACTIVE FILTERS</h5>
-    {{> '@divider' }}
+    <h2 class="filters__heading">
+        Active filters
+    </h2>
+    <div class="filters__divider">
+        {{> '@divider' divider}}
+    </div>
 
     <div class="filters__active">
         {{> '@active-filters' activeFilters}}
     </div>
 
+    <h2 class="filters__heading">
+        All filters
+    </h2>
 
-    <h5>ALL FILTERS</h5>
-    {{> '@divider' }}
+    <div class="filters__divider">
+        {{> '@divider' }}
+    </div>
 
     <div class="dropdown-list {{ class }}" {{{ attributes }}}>
         <ul class="dropdown-list__list">
-            <li class="dropdown-list__item dropdown-list__item--collapse">
-                <div class="dropdown-list__label"
-                     data-dropdown="checkboxList"
-                >
-                    Checkboxes
-                    <svg class="dropdown-list__icon">
-                        <use xlink:href="{{ svg 'angle-down' }}"></use>
-                    </svg>
-                </div>
-
-                <div id="checkboxList"
-                     class="dropdown-list__content {{ class }}"
-                     data-content="checkboxList"
-                     aria-hidden="true"
-                >
-                    <div class="filters__checkbox-list">
-                        {{# each checkboxes }}
-                            {{> '@checkbox--fake' this }}
-                        {{/each}}
-                    </div>
-                </div>
-            </li>
-            <li class="dropdown-list__item dropdown-list__item--collapse">
-                <div class="dropdown-list__label"
-                     data-dropdown="checkboxList"
-                >
-                    Size
-                    <svg class="dropdown-list__icon">
-                        <use xlink:href="{{ svg 'angle-down' }}"></use>
-                    </svg>
-                </div>
-
-                <div id="checkboxList"
-                     class="dropdown-list__content {{ class }}"
-                     data-content="checkboxList"
-                     aria-hidden="true"
-                >
-                    <div class="filters__checkbox-list">
-                        {{> '@swatch' swatch}}
-                    </div>
-                </div>
-            </li>
-            <li class="dropdown-list__item dropdown-list__item--collapse">
-                <div class="dropdown-list__label"
-                     data-dropdown="checkboxList"
-                >
-                    Color
-                    <svg class="dropdown-list__icon">
-                        <use xlink:href="{{ svg 'angle-down' }}"></use>
-                    </svg>
-                </div>
-
-                <div id="checkboxList"
-                     class="dropdown-list__content {{ class }}"
-                     data-content="checkboxList"
-                     aria-hidden="true"
-                >
-                    <div class="filters__checkbox-list">
-                        {{> '@swatch--color' color }}
-                    </div>
-                </div>
-            </li>
-            <li class="dropdown-list__item dropdown-list__item--collapse">
-                <div class="dropdown-list__label"
-                     data-dropdown="checkboxList"
-                >
-                    Range
-                    <svg class="dropdown-list__icon">
-                        <use xlink:href="{{ svg 'angle-down' }}"></use>
-                    </svg>
-                </div>
-
-                <div id="checkboxList"
-                     class="dropdown-list__content {{ class }}"
-                     data-content="checkboxList"
-                     aria-hidden="true"
-                >
-                    <div class="filters__checkbox-list">
-                        {{> '@range' range }}
-                    </div>
-                </div>
-            </li>
+            {{> '@filter--checkbox' checkbox }}
+            {{> '@filter' swatch }}
+            {{> '@filter' color }}
+            {{> '@filter--range' range }}
         </ul>
     </div>
 
