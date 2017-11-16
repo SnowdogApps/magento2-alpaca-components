@@ -2,6 +2,10 @@ $lavender-gray: #c2c1df;
 $kimberly: #73739c;
 
 $search-form__height               : 34px !default;
+$search-form__width                : 100% !default;
+$search-form__width--xl            : 70% !default;
+$search-form__alignment            : flex-end !default;
+$search-form__margin               : 0 !default;
 $search-form__border-color         : $lavender-gray !default;
 $search-form__font-size            : $font-size-small !default;
 
@@ -9,6 +13,8 @@ $search-form__input-height         : 32px !default;
 $search-form__input-color          : $kimberly !default;
 
 $search-form__button-size          : 18px !default;
+$search-form__button-margin        : 0 !default;
+$search-form__button-border        : none !default;
 $search-form__button-background    : transparent !default;
 $search-form__button-icon-color    : $gray-dark !default;
 
@@ -18,18 +24,15 @@ $search-form__placeholder-color--xl: $gray !default;
 
 .search-form {
     position: relative;
-    width: 100%;
+    width: $search-form__width;
     height: $search-form__height;
-    margin: 0;
-    align-self: center;
+    align-self: $search-form__alignment;
+    margin: $search-form__margin;
     border: 1px solid $search-form__border-color;
     border-radius: $search-form__height;
     z-index: 1;
-    @include mq($screen-m) {
-        width: 70%;
-    }
     @include mq($screen-xl) {
-        width: 100%;
+        width: $search-form__width--xl;
     }
 
     &__label {
@@ -50,10 +53,6 @@ $search-form__placeholder-color--xl: $gray !default;
                 color: $search-form__placeholder-color--xl;
             }
         }
-
-        &-wrapper {
-            margin-bottom: 0;
-        }
     }
 
     &__button {
@@ -61,8 +60,8 @@ $search-form__placeholder-color--xl: $gray !default;
         top: 0;
         right: 0;
         height: $search-form__input-height;
-        margin-bottom: 0;
-        border: none;
+        margin: $search-form__button-margin;
+        border: $search-form__button-border;
         border-radius: $search-form__height;
         background-color: $search-form__button-background;
         &:focus,

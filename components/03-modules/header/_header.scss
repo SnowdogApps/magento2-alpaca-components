@@ -1,22 +1,30 @@
-$lavender-gray: #c2c1df;
-$kimberly: #73739c;
+$lavender-gray                    : #c2c1df;
+$kimberly                         : #73739c;
 
-$header__margin--xl            : 0 !default;
-$header__border-color          : $lavender-gray !default;
-$header__font-size             : $font-size-small !default;
+$header__margin--xl               : 0 !default;
+$header__border-color             : $lavender-gray !default;
+$header__font-size                : $font-size-small !default;
 
-$header__wrapper-margin        : 0 !default;
-$header__wrapper-margin--m     : 12px 0 !default;
+$header__wrapper-margin           : 0 !default;
+$header__wrapper-margin--m        : 12px 0 !default;
 
-$header__logo-padding          : 12px 0 12px $spacer !default;
-$header__logo-padding--m       : 0 0 0 $spacer !default;
+$header__logo-padding             : 12px 0 12px $spacer !default;
+$header__logo-padding--m          : 0 0 0 $spacer !default;
 
-$header__button-size           : 48px !default;
+$header__menu-trigger-size        : 48px !default;
 
-$header__icon-size             : 24px !default;
-$header__icon-padding          : 2px !default;
-$header__icon-color            : $gray-dark !default;
+$header__buttons-width            : calc(90% - 48px) !default;
+$header__buttons-width--m         : 4 * 48px + 3 * $spacer !default;
+$header__buttons-width--xl        : 4 * 48px + 3 * $spacer--medium !default;
 
+$header__icon-size                : 24px !default;
+$header__icon-padding             : 2px !default;
+$header__icon-color               : $gray-dark !default;
+
+$header__search-wrapper-padding   : 0 0 0 24px !default;
+$header__search-wrapper-padding--m: 0 24px !default;
+
+// tmp styles fo move
 .header-button {
     height: 48px;
     min-width: 48px;
@@ -26,9 +34,17 @@ $header__icon-color            : $gray-dark !default;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    @include mq($screen-xl) {
+        margin-left: $spacer--medium;
+    }
+
     &:focus,
     &:hover {
         text-decoration: none;
+    }
+
+    &:first-child {
+        margin-left: 0;
     }
 
     &__icon {
@@ -46,10 +62,16 @@ $header__icon-color            : $gray-dark !default;
         color: $kimberly;
     }
 }
+// end tmp styles fo move
+
 
 .header {
     position: relative;
     border-bottom: 1px solid $header__border-color;
+
+    &--menu-open {
+        overflow: visible;
+    }
 
     &__wrapper {
         justify-content: space-between;
@@ -59,10 +81,6 @@ $header__icon-color            : $gray-dark !default;
         @include mq($screen-m) {
             margin: $header__wrapper-margin--m;
         }
-
-        // @include mq($screen-xl) {
-        //     margin: $header__margin;
-        // }
     }
 
     &__logo {
@@ -70,7 +88,6 @@ $header__icon-color            : $gray-dark !default;
         padding: $header__logo-padding;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
-            // margin: 0 auto 0 0;
             padding: $header__logo-padding--m;
             border-top: none;
         }
@@ -78,16 +95,11 @@ $header__icon-color            : $gray-dark !default;
 
     &__menu-trigger {
         display: flex;
-        flex: 1 20%;
         order: 1;
-        height: 48px;
-        @include mq($screen-m) {
-            order: 1;
-            flex: 1 $header__button-size;
-            height: $header__button-size;
-            max-width: $header__button-size;
-            border-top: none;
-        }
+        flex: 1 $header__menu-trigger-size;
+        height: $header__menu-trigger-size;
+        max-width: $header__menu-trigger-size;
+        border-top: none;
         @include mq($screen-xl) {
             display: none;
         }
@@ -99,19 +111,14 @@ $header__icon-color            : $gray-dark !default;
         flex: 1 50%;
         order: 5;
         justify-content: center;
-        width: 100%;
-        padding-left: 24px;
+        padding: $header__search-wrapper-padding;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
             order: 3;
-            flex: 1 300px;
             flex-direction: column;
             justify-content: center;
+            padding: $header__search-wrapper-padding--m;
             border-top: none;
-        }
-        @include mq($screen-xl) {
-            max-width: 300px;
-            margin-right: 24px;
         }
     }
 
@@ -119,45 +126,22 @@ $header__icon-color            : $gray-dark !default;
         position: relative;
     }
 
-    &--menu-open {
-        overflow: visible;
-    }
-
     &__buttons {
         display: flex;
         order: 2;
-        flex: 1 65%;
+        flex: 1 $header__buttons-width;
+        max-width: $header__buttons-width;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: flex-end;
-        @include mq($screen-s) {
-            flex: 1 70%;
-        }
         @include mq($screen-m) {
             order: 4;
-            flex: 1 168px;
-            max-width: 168px;
+            flex: 1 $header__buttons-width--m;
+            max-width: $header__buttons-width--m;
         }
         @include mq($screen-xl) {
-            flex: 1 48px;
-            max-width: 48px;
-        }
-
-        &-item {
-            margin-right: 8px;
-            padding: $header__font-size;
-            @include mq($screen-xl) {
-                display: none;
-            }
+            flex: 1 $header__buttons-width--xl;
+            max-width: $header__buttons-width--xl;
         }
     }
-    //
-    // &__icon {
-    //     display: block;
-    //     width: $header__icon-size;
-    //     height: $header__icon-size;
-    //     padding: $header__icon-padding;
-    //     fill: $header__icon-color;
-    //     cursor: pointer;
-    // }
 }
