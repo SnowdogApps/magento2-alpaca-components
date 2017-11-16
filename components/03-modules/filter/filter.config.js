@@ -11,7 +11,7 @@ module.exports = {
       name: 'Checkbox',
       context: {
         default: false,
-        checkbox: true,
+        checkboxEnabled: true,
         id: 'checkbox',
         title: 'Checkbox',
         checkboxes: [
@@ -64,7 +64,7 @@ module.exports = {
       name: 'swatch',
       context: {
         default: false,
-        swatch: true,
+        swatchEnabled: true,
         id: 'swatch',
         title: 'Swatch',
         config: {
@@ -106,7 +106,7 @@ module.exports = {
       name: 'color',
       context: {
         default: false,
-        color: true,
+        colorEnabled: true,
         id: 'color',
         title: 'Color',
         config: {
@@ -142,7 +142,7 @@ module.exports = {
       name: 'range',
       context: {
         default: false,
-        range: true,
+        rangeEnabled: true,
         id: 'range',
         title: 'Range',
         config: {

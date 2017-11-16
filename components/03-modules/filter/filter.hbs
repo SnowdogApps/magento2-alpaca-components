@@ -16,21 +16,21 @@
             {{ content }}
         {{/if}}
 
-        {{#if checkbox }}
+        {{#if checkboxEnabled }}
             {{# each checkboxes }}
                 {{> '@checkbox--fake' this }}
             {{/each}}
         {{/if}}
 
-        {{#if swatch }}
+        {{#if swatchEnabled }}
             {{> '@swatch' config }}
         {{/if}}
 
-        {{#if color }}
+        {{#if colorEnabled }}
             {{> '@swatch--color' config }}
         {{/if}}
 
-        {{#if range }}
+        {{#if rangeEnabled }}
             {{> '@range' config }}
         {{/if}}
     </div>
