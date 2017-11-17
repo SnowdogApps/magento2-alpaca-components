@@ -6,8 +6,8 @@ $products-grid-item__content-bg-color                 : $white !default;
 $products-grid-item__padding                          : 0 !default;
 $products-grid-item__text-padding                     : 0 $spacer !default;
 $products-grid-item__border                           : 1px solid $gray-lightest !default;
-$products-grid-item__font-size-medium                 : $font-size-base !default;
-$products-grid-item__font-size-large                  : 18px !default;
+$products-grid-item__font-size-medium                 : $font-size-small !default;
+$products-grid-item__font-size-large                  : $font-size-base !default;
 $products-grid-item__image-margin-bottom              : $spacer !default;
 $products-grid-item__name-color                       : $font-color-base !default;
 $products-grid-item__name-font-weight                 : $font-weight-normal !default;
@@ -57,7 +57,7 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         font-size: $products-grid-item__font-size-medium;
         padding: $products-grid-item__text-padding;
 
-        @include mq($screen-m) {
+        @include mq($screen-xxl) {
             font-size: $products-grid-item__font-size-large;
         }
     }
@@ -76,7 +76,10 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         text-align: right;
         color: $products-grid-item__price-base-color;
         padding: $products-grid-item__text-padding;
-        margin-top: 6px; // product name aligment
+        font-size: $products-grid-item__font-size-medium;
+        @include mq($screen-xxl) {
+            font-size: $products-grid-item__font-size-large;
+        }
     }
 
     &__old-price {
