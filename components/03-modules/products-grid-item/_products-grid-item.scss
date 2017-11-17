@@ -49,7 +49,6 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: flex-start;
-        width: 100%;
         margin-bottom: $products-grid-item__image-margin-bottom;
     }
     &__badge {
