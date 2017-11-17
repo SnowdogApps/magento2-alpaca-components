@@ -17,9 +17,17 @@
   }
 
   function setItemHeight(item, imageHeight) {
-    const detailsHeight = item.querySelector('.products-grid-item__details').clientHeight;
-    item.style.height = parseInt(imageHeight + detailsHeight + 22) + 'px';
+    const content = item.querySelector('.products-grid-item__content'),
+          details = item.querySelector('.products-grid-item__details'),
+          detailsHeight = details.offsetHeight;
 
+    let contentPaddingTop = window.getComputedStyle(content).paddingTop,
+        detailsMarginBottom = window.getComputedStyle(details).marginBottom;
+
+    contentPaddingTop = parseInt(contentPaddingTop, 10);
+    detailsMarginBottom = parseInt(detailsMarginBottom, 10);
+
+    item.style.height = parseInt(imageHeight + detailsHeight + detailsMarginBottom + contentPaddingTop) + 'px';
   }
 
   function resizeItems() {
@@ -48,7 +56,12 @@
       resizeItems();
     }, 100));
 
+
+    let imageHeight
     items.forEach(item => {
+      imageHeight = item.clientWidth * imageRatio;
+      setItemHeight(item, imageHeight);
+
       item.addEventListener('mouseenter', () => {
         const itemContent = item.querySelector('.products-grid-item__content');
         showExtra(item, itemContent, mq);
