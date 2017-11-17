@@ -17,10 +17,10 @@ $input__min-height--textarea         : 100px !default;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-    }
-    &__label {
-        margin-bottom: 0;
-        margin-right: $input__label-margin-right;
+        .input__label {
+            margin-bottom: 0;
+            margin-right: $input__label-margin-right;
+        }
     }
 
     &__field {
