@@ -2,6 +2,9 @@
     <a href="#" class="products-grid-item__link">
         <div class="products-grid-item__media">
             {{ render '@image' image }}
+            {{#if badge}}
+                {{ render '@badge' this.badge }}
+            {{/if}}
         </div>
     </a>
         <div class="products-grid-item__content">

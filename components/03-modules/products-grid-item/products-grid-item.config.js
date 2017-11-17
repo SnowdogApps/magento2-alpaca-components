@@ -2,6 +2,10 @@ module.exports = {
   title: 'Product grid item',
   collated: true,
   context: {
+    badge: {
+      class: 'badge--new products-grid-item__badge',
+      text: 'NEW'
+    },
     button: {
       tag: 'a',
       text: 'Add to Cart',
