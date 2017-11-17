@@ -1,11 +1,11 @@
-<a href="#" class="header-button {{ class }}" {{{ attributes }}}>
-    <svg class="header-button__icon">
-         <use xlink:href="{{ svg 'shopping-cart' }}"></use>
+<a href="#" class="minicart-trigger {{ class }}" {{{ attributes }}}>
+    <svg class="minicart-trigger__icon">
+        <use xlink:href="{{ svg 'shopping-cart' }}"></use>
     </svg>
-    <span class="header-button__text">
+    <span class="minicart-trigger__text">
         Cart
     </span>
-    <span class="minicart-trigger__counter" style="display: none;">
-        {{ counter }}
+    <span class="minicart-trigger__counter">
+        <span class="minicart-trigger__counter-dot"></span>
     </span>
 </a>

@@ -1,73 +1,28 @@
-$lavender-gray                    : #c2c1df;
-$kimberly                         : #73739c;
+$header__margin--extra-large           : 0 !default;
+$header__font-size                     : $font-size-small !default;
+$header__border-color                  : $gray-light !default;
 
-$header__margin--xl               : 0 !default;
-$header__border-color             : $lavender-gray !default;
-$header__font-size                : $font-size-small !default;
+$header__wrapper-padding               : 0 !default;
+$header__wrapper-padding--medium       : 12px 0 !default;
 
-$header__wrapper-margin           : 0 !default;
-$header__wrapper-margin--m        : 12px 0 !default;
+$header__logo-padding                  : 12px 0 12px $spacer !default;
+$header__logo-padding--medium          : 0 0 0 $spacer !default;
 
-$header__logo-padding             : 12px 0 12px $spacer !default;
-$header__logo-padding--m          : 0 0 0 $spacer !default;
+$header__menu-trigger-size             : 48px !default;
 
-$header__menu-trigger-size        : 48px !default;
+$header__buttons-width                 : calc(90% - 48px) !default;
+$header__buttons-width--medium         : 4 * 48px + 3 * $spacer !default;
+$header__buttons-width--extra-large    : 4 * 48px + 3 * $spacer--medium !default;
 
-$header__buttons-width            : calc(90% - 48px) !default;
-$header__buttons-width--m         : 4 * 48px + 3 * $spacer !default;
-$header__buttons-width--xl        : 4 * 48px + 3 * $spacer--medium !default;
+$header__icon-size                     : 24px !default;
+$header__icon-padding                  : 2px !default;
+$header__icon-color                    : $gray-darker !default;
 
-$header__icon-size                : 24px !default;
-$header__icon-padding             : 2px !default;
-$header__icon-color               : $gray-darker !default;
-
-$header__search-wrapper-padding   : 0 0 0 24px !default;
-$header__search-wrapper-padding--m: 0 24px !default;
-
-// tmp styles fo move
-.header-button {
-    height: 48px;
-    min-width: 48px;
-    display: flex;
-    margin-left: $spacer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    @include mq($screen-xl) {
-        margin-left: $spacer--medium;
-    }
-
-    &:focus,
-    &:hover {
-        text-decoration: none;
-    }
-
-    &:first-child {
-        margin-left: 0;
-    }
-
-    &__icon {
-        display: block;
-        height: 24px;
-        width: 24px;
-        margin-bottom: 4px;
-        padding: 2px;
-    }
-
-    &__text {
-        font-size: 10px;
-        line-height: 10px;
-        text-align: center;
-        color: $kimberly;
-    }
-}
-// end tmp styles fo move
-
+$header__search-wrapper-padding        : 0 0 0 24px !default;
+$header__search-wrapper-padding--medium: 0 24px !default;
 
 .header {
     position: relative;
-    border-bottom: 1px solid $header__border-color;
 
     &--menu-open {
         overflow: visible;
@@ -77,9 +32,10 @@ $header__search-wrapper-padding--m: 0 24px !default;
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
-        margin: $header__wrapper-margin;
+        padding: $header__wrapper-padding;
+        border-bottom: 1px solid $header__border-color;
         @include mq($screen-m) {
-            margin: $header__wrapper-margin--m;
+            padding: $header__wrapper-padding--medium;
         }
     }
 
@@ -88,7 +44,7 @@ $header__search-wrapper-padding--m: 0 24px !default;
         padding: $header__logo-padding;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
-            padding: $header__logo-padding--m;
+            padding: $header__logo-padding--medium;
             border-top: none;
         }
     }
@@ -117,7 +73,7 @@ $header__search-wrapper-padding--m: 0 24px !default;
             order: 3;
             flex-direction: column;
             justify-content: center;
-            padding: $header__search-wrapper-padding--m;
+            padding: $header__search-wrapper-padding--medium;
             border-top: none;
         }
     }
@@ -136,12 +92,12 @@ $header__search-wrapper-padding--m: 0 24px !default;
         justify-content: flex-end;
         @include mq($screen-m) {
             order: 4;
-            flex: 1 $header__buttons-width--m;
-            max-width: $header__buttons-width--m;
+            flex: 1 $header__buttons-width--medium;
+            max-width: $header__buttons-width--medium;
         }
         @include mq($screen-xl) {
-            flex: 1 $header__buttons-width--xl;
-            max-width: $header__buttons-width--xl;
+            flex: 1 $header__buttons-width--extra-large;
+            max-width: $header__buttons-width--extra-large;
         }
     }
 }

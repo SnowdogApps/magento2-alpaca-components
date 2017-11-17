@@ -1,0 +1,52 @@
+$header-button__size               : 48px !default;
+$header-button__margin             : 0 0 0 $spacer !default;
+$header-button__margin--extra-large: 0 0 0 $spacer--medium !default;
+
+$header-button__icon-size          : 24px !default;
+$header-button__icon-margin        : 0 0 4px 0 !default;
+$header-button__icon-padding       : 0 0 4px 0 !default;
+$header-button__icon-color         : $gray-darker !default;
+
+$header-button__text-font-color    : $gray !default;
+$header-button__text-font-size     : 10px !default;
+$header-button__text-line-height   : 10px !default;
+
+
+.header-button {
+    height: $header-button__size;
+    min-width: $header-button__size;
+    display: flex;
+    margin: $header-button__margin;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    @include mq($screen-xl) {
+        margin-left: $header-button__margin--extra-large;
+    }
+
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &__icon {
+        display: block;
+        height: $header-button__icon-size;
+        width: $header-button__icon-size;
+        margin: $header-button__icon-margin;
+        padding: $header-button__icon-padding;
+        fill: $header-button__icon-color;
+    }
+
+    &__text {
+        font-size: $header-button__text-font-size;
+        line-height: $header-button__text-line-height;
+        text-align: center;
+        color: $header-button__text-font-color;
+    }
+}

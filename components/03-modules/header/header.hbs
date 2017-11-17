@@ -19,8 +19,10 @@
                         </span>
                     </a>
                 {{/each}}
-                {{ render '@minicart-trigger' trigger }}
-                {{ render '@popup' minicartPopup }}
+                <div class="header__minicart">
+                    {{ render '@minicart-trigger' trigger }}
+                    {{ render '@popup' minicartPopup }}
+                </div>
             </div>
             {{ render '@logo' logo }}
             <div class="header__search-wrapper">

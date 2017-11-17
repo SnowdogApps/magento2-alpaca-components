@@ -1,15 +1,13 @@
-$kimberly                             : #73739c;
-
 $side-menu-trigger__width             : 34px !default;
 $side-menu-trigger__height            : 34px !default;
 $side-menu-trigger__padding           : 8px !default;
 $side-menu-trigger__transition        : $transition-base !default;
 
-$side-menu-trigger__line-background   : $gray-dark !default;
+$side-menu-trigger__line-background   : $gray-darker !default;
 $side-menu-trigger__line-height       : 2px !default;
 $side-menu-trigger__line-border-radius: 2px !default;
 
-$side-menu-trigger__text-color        : $kimberly !default;
+$side-menu-trigger__text-color        : $gray !default;
 $side-menu-trigger__text-transform    : none !default;
 $side-menu-trigger__text-font-size    : $font-size-extra-small !default;
 $side-menu-trigger__text-font-weight  : $font-weight-normal !default;
@@ -19,7 +17,6 @@ $side-menu-trigger__text-font-weight  : $font-weight-normal !default;
     border: 0;
     background: none;
     cursor: pointer;
-
     @include mq($screen-xl) {
         display: none;
     }
@@ -33,7 +30,7 @@ $side-menu-trigger__text-font-weight  : $font-weight-normal !default;
     }
 
     &:hover .side-menu-trigger__text {
-        opacity: 0.6;
+        opacity: 1;
     }
 
     &__handler,
