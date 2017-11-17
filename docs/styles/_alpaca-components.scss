@@ -61,7 +61,6 @@
 @import '../../components/02-elements/pager/pager';
 @import '../../components/02-elements/password-strength/password-strength';
 @import '../../components/02-elements/rating/rating';
-@import '../../components/02-elements/search-trigger/search-trigger';
 @import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/swatch/swatch';
 @import '../../components/02-elements/tab/tab';
@@ -92,9 +91,9 @@
 @import '../../components/03-modules/range/range';
 @import '../../components/03-modules/quantity-update/quantity-update';
 @import '../../components/03-modules/review/review';
-@import '../../components/03-modules/search/search';
 @import '../../components/03-modules/side-menu/side-menu';
 @import '../../components/03-modules/sidebar-nav-list/sidebar-nav-list';
+@import '../../components/03-modules/slider/slider';
 
 // -----
 // Views
@@ -107,3 +106,4 @@
 @import '../../components/04-views/cart/totals';
 @import '../../components/04-views/catalog/catalog';
 @import '../../components/04-views/dashboard/default/dashboard';
+@import '../../components/04-views/home/home';

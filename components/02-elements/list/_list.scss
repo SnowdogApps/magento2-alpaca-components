@@ -1,23 +1,22 @@
-$list__style                   : none !default;
-$list__margin                  : 0 !default;
-$list__padding                 : 0 !default;
-$list__item-padding            : 5px 0 !default;
-$list__content-padding         : 10px !default;
-$list__label-padding           : 0 5px 5px 0 !default;
-$list__icon-color              : $white !default;
-$list__item-bg-color--with-icon: $gray-darker !default;
+$list__style              : none !default;
+$list__margin             : 0 !default;
+$list__padding            : 0 !default;
+$list__item-padding       : 5px 0 !default;
+$list__content-padding    : 10px !default;
+$list__label-padding      : 0 5px 5px 0 !default;
+$list__icon-color         : $white !default;
 
 // Horizontal
-$list__padding--horizontal     : 10px !default;
+$list__padding--horizontal: 10px !default;
 
 // With icon
-$list__icon-size--icon         : 30px !default;
+$list__icon-size--icon    : 30px !default;
 
 // With image
-$list__width--image            : 16px !default;
+$list__width--image       : 16px !default;
 
 // Divided
-$list__border--divider         : 1px solid $gray-dark !default;
+$list__border--divider    : 1px solid $gray-dark !default;
 
 .list {
     margin: $list__margin;
@@ -31,8 +30,7 @@ $list__border--divider         : 1px solid $gray-dark !default;
 
     &--horizontal {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         .list__item {
             padding: $list__padding--horizontal;
 
@@ -48,8 +46,7 @@ $list__border--divider         : 1px solid $gray-dark !default;
     &--min-medium-horizontal {
         @include mq($screen-m) {
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
+            flex-flow: row nowrap;
         }
         .list__item {
             @include mq($screen-m) {
@@ -72,7 +69,6 @@ $list__border--divider         : 1px solid $gray-dark !default;
             display: flex;
             align-items: center;
             padding: 0;
-            background-color: $list__item-bg-color--with-icon;
 
             &:first-child {
                 padding-top: 0;
