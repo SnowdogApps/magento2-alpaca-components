@@ -50,19 +50,12 @@
 
     items.forEach(item => {
       item.addEventListener('mouseenter', () => {
-        const itemContent = item.querySelector('.products-grid-item__content'),
-              imageHeight = item.clientWidth * imageRatio;
-
-        setItemHeight(item, imageHeight);
+        const itemContent = item.querySelector('.products-grid-item__content');
         showExtra(item, itemContent, mq);
 
       });
       item.addEventListener('mouseleave', () => {
-        const itemContent = item.querySelector('.products-grid-item__content'),
-              imageHeight = item.clientWidth * imageRatio;
-
-        setItemHeight(item, imageHeight);
-
+        const itemContent = item.querySelector('.products-grid-item__content');
         if (window.matchMedia(mq).matches) {
           itemContent.style.transform = '';
         }
