@@ -6,11 +6,13 @@ $footer__transition                  : $transition-base !default;
 
 $footer__newsletter-max-width        : 400px !default;
 $footer__newsletter-width--screen-l  : 30% !default;
+$footer__newsletter-padding          : 0 $spacer--medium !default;
 
 $footer__links-width--screen-l       : 70% !default;
 $footer__link-color-after-hover      : $color-primary !default;
 $footer__link-height-after-hover     : 8px !default;
 $footer__link-font-weight-after-hover: $font-weight-bold !default;
+$footer__link-inner-padding          : $spacer--large !default;
 
 $footer__bottom-bar-background       : $gray-darker !default;
 $footer__bottom-bar-color            : $gray !default;
@@ -45,6 +47,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     &__newsletter {
         margin: 0 auto $spacer--medium;
         max-width: $footer__newsletter-max-width;
+        padding: $footer__newsletter-padding;
 
         @include mq($screen-l) {
             width: $footer__newsletter-width--screen-l;
@@ -67,6 +70,13 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
         .dropdown-list__item {
             @include mq($screen-m) {
                 border-bottom: 0;
+            }
+        }
+
+        .list__item {
+            padding-left: $footer__link-inner-padding;
+            @include mq($screen-m) {
+                padding-left: 0;
             }
         }
     }
