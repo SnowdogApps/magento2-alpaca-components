@@ -1,32 +1,19 @@
 <div class="price {{ class }} {{{ attributes }}}">
-{{#if specialPrice }}
-    <span class="price__value price__value--old {{ oldPriceClass }}">
-        {{prefix.tag}}
-            {{prefix.text}}
-        {{prefix.closingTag}}
-        {{regularPrice}}
-        {{suffix.tag}}
-            {{suffix.text}}
-        {{suffix.closingTag}}
-    </span>
-    <span class="price__value price__value--special {{ specialPriceClass }}">
-        {{prefix.tag}}
-            {{prefix.text}}
-        {{prefix.closingTag}}
-        {{specialPrice}}
-        {{suffix.tag}}
-            {{suffix.text}}
-        {{suffix.closingTag}}
-    </span>
-{{else}}
     <span class="price__value {{ regularPriceClass }}">
-        {{prefix.tag}}
+        {{#if prefix.tag}}
+            <{{tag}}>
+        {{/if}}
             {{prefix.text}}
-        {{prefix.closingTag}}
+        {{#if prefix.tag}}
+            </{{tag}}>
+        {{/if}}
         {{regularPrice}}
-        {{suffix.tag}}
+        {{#if suffix.tag}}
+            <{{suffix.tag}}>
+        {{/if}}
             {{suffix.text}}
-        {{suffix.closingTag}}
+        {{#if suffix.tag}}
+            </{{suffix.tag}}>
+        {{/if}}
     </span>
-{{/if}}
 </div>

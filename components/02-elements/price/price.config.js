@@ -5,18 +5,16 @@ module.exports = {
     specialPrice: '',
     prefix: {
       tag: '',
-      closingTag: '',
       text: '$'
     },
     suffix: {
       tag: '',
-      closingTag: '',
       text: ''
     },
   },
   variants: [
     {
-      name: 'special-price',
+      name: 'with-special-price',
       context: {
         oldPriceClass: '',
         prefix: {
