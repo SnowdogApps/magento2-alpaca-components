@@ -1,7 +1,5 @@
-$products-grid-item__action-icon-size                 : 16px !default;
-$products-grid-item__action-icon-size--wishlist-height: 20px !default;
-$products-grid-item__action-icon-size--wishlist-width : 18px !default;
 $products-grid-item__action-item-size                 : 32px !default;
+$products-grid-item__action-icon-size                 : 32px !default;
 $products-grid-item__action-item-spacing              : $spacer !default;
 $products-grid-item__base-spacing                     : $spacer !default;
 $products-grid-item__content-bg-color                 : $white !default;
@@ -128,6 +126,7 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         width: $products-grid-item__action-item-size;
         height: $products-grid-item__action-item-size;
         margin-right: $products-grid-item__action-item-spacing;
+        padding: 0;
         &:hover {
             cursor: pointer;
         }
@@ -139,10 +138,6 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
     &__action-icon {
         width: $products-grid-item__action-icon-size;
         height: $products-grid-item__action-icon-size;
-        &--wishlist {
-            width: $products-grid-item__action-icon-size--wishlist-width;
-            height: $products-grid-item__action-icon-size--wishlist-height;
-        }
     }
 }
 
