@@ -22,49 +22,49 @@ module.exports = {
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-base.jpg',
+          src: '../../images/product/product-base.jpg',
           alt: 'slider1'
         }
       },
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-second.jpg',
+          src: '../../images/product/product-second.jpg',
           alt: 'slider2'
         }
       },
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-base.jpg',
+          src: '../../images/product/product-base.jpg',
           alt: 'slider3'
         }
       },
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-second.jpg',
+          src: '../../images/product/product-second.jpg',
           alt: 'slider4'
         }
       },
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-base.jpg',
+          src: '../../images/product/product-base.jpg',
           alt: 'slider5'
         }
       },
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-second.jpg',
+          src: '../../images/product/product-second.jpg',
           alt: 'slider6'
         }
       },
       {
         content: 'image',
         contentContext: {
-          dataSrc: '../../images/product/product-base.jpg',
+          src: '../../images/product/product-base.jpg',
           alt: 'slider7'
         }
       }
