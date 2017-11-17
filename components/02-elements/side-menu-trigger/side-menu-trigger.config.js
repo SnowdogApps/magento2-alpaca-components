@@ -1,6 +1,6 @@
 module.exports = {
   context: {
-    text: 'menu',
+    text: 'Menu',
     svgIcon: true
   },
   variants: [

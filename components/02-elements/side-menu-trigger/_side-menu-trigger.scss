@@ -1,12 +1,18 @@
-$side-menu-trigger__width             : 32px !default;
-$side-menu-trigger__height            : 28px !default;
+$kimberly                             : #73739c;
+
+$side-menu-trigger__width             : 34px !default;
+$side-menu-trigger__height            : 34px !default;
 $side-menu-trigger__padding           : 8px !default;
-$side-menu-trigger__font-size         : $font-size-extra-small !default;
-$side-menu-trigger__font-weight       : $font-weight-bold !default;
 $side-menu-trigger__transition        : $transition-base !default;
+
 $side-menu-trigger__line-background   : $gray-dark !default;
 $side-menu-trigger__line-height       : 2px !default;
 $side-menu-trigger__line-border-radius: 2px !default;
+
+$side-menu-trigger__text-color        : $kimberly !default;
+$side-menu-trigger__text-transform    : none !default;
+$side-menu-trigger__text-font-size    : $font-size-extra-small !default;
+$side-menu-trigger__text-font-weight  : $font-weight-normal !default;
 
 .side-menu-trigger {
     padding: $side-menu-trigger__padding;
@@ -49,10 +55,11 @@ $side-menu-trigger__line-border-radius: 2px !default;
         bottom: 0;
         left: 0;
         width: 100%;
-        font-size: $side-menu-trigger__font-size;
-        font-weight: $side-menu-trigger__font-weight;
+        font-size: $side-menu-trigger__text-font-size;
+        font-weight: $side-menu-trigger__text-font-weight;
         text-align: center;
-        text-transform: uppercase;
+        text-transform: $side-menu-trigger__text-transform;
+        color: $side-menu-trigger__text-color;
         transition: $side-menu-trigger__transition;
 
         &--close {
