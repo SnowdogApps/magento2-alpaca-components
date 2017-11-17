@@ -18,7 +18,7 @@
 
   function setItemHeight(item, imageHeight) {
     const detailsHeight = item.querySelector('.products-grid-item__details').clientHeight;
-    item.style.height = parseInt(imageHeight + detailsHeight + 10) + 'px';
+    item.style.height = parseInt(imageHeight + detailsHeight + 22) + 'px';
 
   }
 

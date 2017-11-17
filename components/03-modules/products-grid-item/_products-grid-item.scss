@@ -10,9 +10,10 @@ $products-grid-item__text-padding                     : 0 $spacer !default;
 $products-grid-item__border                           : 1px solid $gray-lightest !default;
 $products-grid-item__font-size-medium                 : $font-size-small !default;
 $products-grid-item__font-size-large                  : $font-size-base !default;
-$products-grid-item__image-margin-bottom              : $spacer !default;
+$products-grid-item__content-padding                  : 22px $spacer--medium 12px !default;
 $products-grid-item__name-color                       : $font-color-base !default;
 $products-grid-item__name-font-weight                 : $font-weight-normal !default;
+$products-grid-item__name-margin-bottom               : 12px !default;
 $products-grid-item__price-base-color                 : $bg-color-dark !default;
 
 .products-grid-item {
@@ -24,18 +25,17 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
     overflow: hidden;
 
     &__link {
+        display: block;
+        text-decoration: none;
         &--name {
             flex-basis: 70%;
-        }
-        @include links(active) {
-            display: block;
-            text-decoration: none;
         }
     }
 
     &__content {
         background: $products-grid-item__content-bg-color;
         transition: all 0.5s ease-in-out;
+        padding: $products-grid-item__content-padding;
     }
 
     &__details {
@@ -49,7 +49,6 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: flex-start;
-        margin-bottom: $products-grid-item__image-margin-bottom;
     }
     &__badge {
         position: absolute;
@@ -62,6 +61,7 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         color: $products-grid-item__name-color;
         font-size: $products-grid-item__font-size-medium;
         padding: $products-grid-item__text-padding;
+        margin-bottom: $products-grid-item__name-margin-bottom;
 
         @include mq($screen-xxl) {
             font-size: $products-grid-item__font-size-large;
