@@ -1,31 +1,36 @@
-$swatch__font-size                    : $font-size-small !default;
-$swatch__margin                       : 15px !default;
-$swatch__width                        : 48px !default;
-$swatch__transition                   : $transition-base !default;
-
-$swatch__background                   : $white !default;
-$swatch__background--active           : $color-primary !default;
-
-$swatch__label-color                  : $gray-light !default;
-$swatch__label-color-hover            : $color-primary !default;
-$swatch__label-color--active          : $white !default;
-
-$swatch__border                       : 3px solid $gray-light !default;
-$swatch__border-color-hover           : $color-primary !default;
-$swatch__border-color--active         : $color-primary !default;
-
-// Variables for color swatches
-$swatch__outline--color               : 3px solid $white !default;
-$swatch__outline-color-hover--color   : $color-primary !default;
-$swatch__outline-color--color--active : $color-primary !default;
-
-$swatch__border-color--color          : $white !default;
-$swatch__border-color-hover--color    : $white !default;
-$swatch__border-color--color--active  : $white !default;
+$swatch__margin                           : $spacer !default;
+$swatch__transition                       : $transition-base !default;
+$swatch__title-font-size                  : $font-size-base !default;
+$swatch__option-sizing                    : 48px !default;
+$swatch__option-margin                    : 0 $spacer--medium $spacer--medium 0 !default;
+$swatch__option-background                : $white !default;
+$swatch__option-color                     : $gray-dark !default;
+$swatch__option-border                    : 1px solid $white !default;
+$swatch__option-border-color-hover        : $color-primary !default;
+$swatch__option-border-color--active      : $color-primary !default;
+$swatch__option-width--medium--attributes : 42px !default;
+$swatch__option-height--medium--attributes: 48px !default;
+$swatch__option-width--large--attributes  : 54px !default;
+$swatch__option-height--large--attributes : 64px !default;
+$swatch__option-margin--small-attributes  : 0 $spacer $spacer 0 !default;
+$swatch__option-width--small-attributes   : 32px !default;
+$swatch__option-height--small-attributes  : 40px !default;
 
 .swatch {
+    &--small-attributes {
+        .swatch__title {
+            display: none;
+        }
+
+        .swatch__option {
+            min-width: $swatch__option-width--small-attributes;
+            min-height: $swatch__option-height--small-attributes;
+            margin: $swatch__option-margin--small-attributes;
+        }
+    }
+
     &__title {
-        font-size: $swatch__font-size;
+        font-size: $swatch__title-font-size;
         margin-bottom: $swatch__margin;
     }
 
@@ -38,19 +43,18 @@ $swatch__border-color--color--active  : $white !default;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: $swatch__width;
-        width: $swatch__width;
-        border: $swatch__border;
-        background: $swatch__background;
-        margin-right: $swatch__margin;
-        margin-bottom: $swatch__margin;
+        min-width: $swatch__option-sizing;
+        min-height: $swatch__option-sizing;
+        margin: $swatch__option-margin;
+        border: $swatch__option-border;
+        background: $swatch__option-background;
+        color: $swatch__option-color;
         transition: $swatch__transition;
-        color: $swatch__label-color;
         cursor: pointer;
 
-        &:hover {
-            border-color: $swatch__border-color-hover;
-            color: $swatch__label-color-hover;
+        &:hover,
+        &:focus {
+            border-color: $swatch__option-border-color-hover;
         }
 
         &:last-child {
@@ -58,27 +62,18 @@ $swatch__border-color--color--active  : $white !default;
         }
 
         &--active {
-            background: $swatch__background--active;
-            border-color: $swatch__border-color--active;
-            color: $swatch__label-color--active;
-
-            &:hover {
-                color: $swatch__label-color--active;
-            }
+            border-color: $swatch__option-border-color--active;
         }
 
-        &--color {
-            border-color: $swatch__border-color--color;
-            outline: $swatch__outline--color;
-
-            &:hover {
-                border-color: $swatch__border-color-hover--color;
-                outline-color: $swatch__outline-color-hover--color;
+        &--attributes {
+            @include mq($screen-m) {
+                min-width: $swatch__option-width--medium--attributes;
+                min-height: $swatch__option-height--medium--attributes;
             }
 
-            &.swatch__option--active {
-                border-color: $swatch__border-color--color--active;
-                outline-color: $swatch__outline-color--color--active;
+            @include mq($screen-l) {
+                min-width: $swatch__option-width--large--attributes;
+                min-height: $swatch__option-height--large--attributes;
             }
         }
     }

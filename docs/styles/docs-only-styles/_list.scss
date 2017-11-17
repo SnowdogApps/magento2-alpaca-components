@@ -1,0 +1,9 @@
+.docs-only-styles {
+    .list {
+        &--with-icon {
+            .list__item {
+                background-color: $gray-darker;
+            }
+        }
+    }
+}
