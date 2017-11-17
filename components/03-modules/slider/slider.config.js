@@ -20,7 +20,6 @@ module.exports = {
     },
     slides: [
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-base.jpg',
@@ -28,7 +27,6 @@ module.exports = {
         }
       },
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-second.jpg',
@@ -36,7 +34,6 @@ module.exports = {
         }
       },
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-base.jpg',
@@ -44,7 +41,6 @@ module.exports = {
         }
       },
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-second.jpg',
@@ -52,7 +48,6 @@ module.exports = {
         }
       },
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-base.jpg',
@@ -60,7 +55,6 @@ module.exports = {
         }
       },
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-second.jpg',
@@ -68,7 +62,6 @@ module.exports = {
         }
       },
       {
-        itemAttributes: 'data-aspect-ratio="1:1"',
         content: 'image',
         contentContext: {
           dataSrc: '../../images/product/product-base.jpg',
