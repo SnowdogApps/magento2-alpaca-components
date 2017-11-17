@@ -37,13 +37,7 @@ $product__type-color      : $gray-light !default;
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding-bottom: ($product__padding - 5);
         text-align: center;
-        min-height: 310px;
-
-        @include mq($screen-s) {
-            min-height: 200px;
-        }
     }
 
     &__img {

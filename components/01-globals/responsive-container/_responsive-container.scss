@@ -12,7 +12,7 @@
     display: block;
     max-width: 100%;
     position: relative;
-
+padding-bottom:0!important;
     &:before {
         content: '';
         display: block;
@@ -40,8 +40,8 @@
         animation: fadeEffect 2s linear infinite;
     }
 }
-[data-aspect-radio="40:39"]:before {
-    padding-top: (40 / 39) * 100%;
+[data-aspect-ratio="23:18"]:before {
+    padding-top: (180 / 230) * 100%;
 }
 [data-aspect-ratio="3:1"]:before {
     padding-top: 33.33%;
