@@ -27,7 +27,7 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
-        iconId: 'arrow-circle-up',
+        iconId: 'arrow-down',
         class: 'icons__single-icon'
       },
       {
@@ -36,6 +36,10 @@ module.exports = {
       },
       {
         iconId: 'arrow-right',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'arrow-up',
         class: 'icons__single-icon'
       },
       {
@@ -71,6 +75,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'grid',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'heart',
         class: 'icons__single-icon'
       },
@@ -80,6 +88,10 @@ module.exports = {
       },
       {
         iconId: 'linkedin',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'list',
         class: 'icons__single-icon'
       },
       {
