@@ -7,7 +7,9 @@
         {{> @libs }}
     </head>
     <body>
+        <section id="a11y-test" class="a11y-test"></section>
         {{{ yield }}}
+        <script src="{{ path '/tests/libs/accessibilityjs.js' }}"></script>
         <script src="{{ path '/tests/a11y-test.js' }}"></script>
     </body>
 </html>
