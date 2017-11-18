@@ -82,18 +82,9 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
 });
 
 // Gulp tasks
-gulp.task('a11y', ['fractal:start'], () => {
-  const baseUrl = fractal.web.get('path', __dirname + '/components');
-  const a11yTestSrc = fractal.web.get('path', __dirname + '/public/tests/test.js');
-  const testTarget = baseUrl  + '/_preview.hbs';
-
-  logger.success('baseUrl' + baseUrl);
-  logger.success(a11yTestSrc);
-  logger.success('testTarget' + testTarget);
-
-  return gulp.src(testTarget, {base: baseUrl})
-    .pipe(inject(gulp.src([a11yTestSrc], {read: false, 'cwd': __dirname + '/public/'})))
-    .pipe(gulp.dest(baseUrl));
+gulp.task('a11y', () => {
+  fractal.components.set('default.preview', '@preview-test');
+  runSequence('fractal:start');
 });
 
 gulp.task('watch', () => {
