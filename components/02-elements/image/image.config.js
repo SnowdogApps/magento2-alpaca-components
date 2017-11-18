@@ -26,7 +26,8 @@ module.exports = {
             src: '/images/banner/banner-1170_300.png',
             mediaQuery: ''
           }
-        ]
+        ],
+        alt: 'image alt text'
       }
     }
   ]

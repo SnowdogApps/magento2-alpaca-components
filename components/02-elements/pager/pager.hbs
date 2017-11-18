@@ -1,14 +1,16 @@
 <div class="pager {{ class }}">
     <ul class="pager__list">
-        {{#if arrowLeftVisible}}
-            <li class="pager__item pager__item--prev">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="{{ svg 'arrow-left' }}"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/if}}
+        <li class="pager__item">
+            <a href="#"
+               class="pager__link pager__link--prev"
+               aria-label="{{ariaLabelLeft}}"
+               {{#unless arrowLeftActive}}disabled{{/unless}}
+            >
+                <svg class="pager__icon">
+                    <use xlink:href="{{ svg 'arrow-left' }}"></use>
+                </svg>
+            </a>
+        </li>
 
         {{#each pages as |page|}}
             {{#if this.active}}
@@ -17,21 +19,26 @@
                 </li>
             {{else}}
                 <li class="pager__item">
-                    <a href="#" class="pager__link link">
+                    <a href="#"
+                       class="pager__link"
+                       aria-label="{{ariaLabel}}"
+                    >
                         {{ pageNo }}
                     </a>
                 </li>
             {{/if}}
         {{/each}}
 
-        {{#if arrowRightVisible}}
-            <li class="pager__item pager__item--next">
-                <a href="#" class="pager__link">
-                    <svg class="pager__icon">
-                        <use xlink:href="{{ svg 'arrow-right' }}"></use>
-                    </svg>
-                </a>
-            </li>
-        {{/if}}
+        <li class="pager__item">
+            <a href="#"
+               class="pager__link pager__link--next"
+               aria-label="{{ariaLabelRight}}"
+               {{#unless arrowRightActive}}disabled{{/unless}}
+            >
+                <svg class="pager__icon">
+                    <use xlink:href="{{ svg 'arrow-right' }}"></use>
+                </svg>
+            </a>
+        </li>
     </ul>
 </div>

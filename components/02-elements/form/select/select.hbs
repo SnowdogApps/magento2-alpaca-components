@@ -5,7 +5,10 @@
     >
         {{ label.text }}
     </label>
-    <select id="{{ field.id }}" class="select__field" name="{{ field.name }}">
+    <select id="{{ field.id }}"
+            class="select__field {{ field.class }}"
+            name="{{ field.name }}"
+    >
         {{#each options}}
             <option value="{{ value }}" {{ attributes }}>
                 {{text}}

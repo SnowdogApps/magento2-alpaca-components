@@ -9,7 +9,7 @@
                 "
             >
                 <{{ itemTag }}
-                   class="dropdown-list__label"
+                   class="dropdown-list__label {{ class }}"
                    {{{ itemAttributes }}}
                    {{#if id }}
                         data-dropdown="{{ id }}"
@@ -26,7 +26,7 @@
 
                 {{#if contentElement}}
                     <div id="{{ id }}"
-                         class="dropdown-list__content"
+                         class="dropdown-list__content {{ class }}"
                          data-content="{{ id }}"
                          aria-hidden="true"
                     >
