@@ -13,8 +13,9 @@
         list: 'select__field-list',
         input: 'select__field-input',
         item: 'select__field-item',
-        listSingle: 'select__field-list--single'
-      }
+        listSingle: 'select__field-list--single',
+      },
+      itemSelectText: ''
     });
   });
 }());
