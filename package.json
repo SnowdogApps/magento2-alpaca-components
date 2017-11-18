@@ -25,12 +25,7 @@
     "postcss-reporter": "~3.0.0",
     "run-sequence": "~1.2.2",
     "stylelint": "~7.10.1",
-    "stylelint-config-standard": "~16.0.0"
-  },
-  "devDependencies": {
-    "accessibilityjs": "^1.0.1",
-    "gulp-inject": "^4.3.0",
-    "gulp-replace": "^0.6.1",
-    "pa11y": "^4.13.1"
+    "stylelint-config-standard": "~16.0.0",
+    "accessibilityjs": "^1.0.1"
   }
 }

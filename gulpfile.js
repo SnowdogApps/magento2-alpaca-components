@@ -22,10 +22,7 @@ const autoprefixer = require('autoprefixer'),
       sourcemaps   = require('gulp-sourcemaps'),
       stylelint    = require('stylelint'),
       svgSprite    = require('gulp-svg-sprite'),
-      util         = require('gulp-util'),
-      inject       = require('gulp-inject'),
-      replace      = require('gulp-replace'),
-      pa11y        = require('pa11y');
+      util         = require('gulp-util');
 
 // Turn off Bluebird unhandled promises warnings
 bluebird.config({
@@ -39,6 +36,7 @@ fractal.docs.set('path', __dirname + '/build/docs');
 fractal.web.set('static.path', __dirname + '/build/public');
 fractal.web.set('builder.dest', __dirname + '/dest');
 fractal.web.theme(mandelbrot({ skin: 'black' }));
+fractal.components.set('default.preview', '@preview-default');
 
 // Handlebars helpers
 hbsEngine.handlebars.registerHelper('static', (file, data) => {
@@ -59,12 +57,12 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
     sync: true,
     port: 4000
   });
+
   server.on('error', err => logger.error(err.message));
 
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
   });
-
 });
 
 
