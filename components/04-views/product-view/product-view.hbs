@@ -70,10 +70,9 @@
             </div>
 
             <div class="product-view__options">
-                <h3>Color</h3>
-                {{render '@select'}}
-                <h3>Size</h3>
-                {{render '@select'}}
+                {{#each options as |option|}}
+                {{> '@swatch' option}}
+                {{/each}}
             </div>
 
             <div class="product-view__options">
@@ -109,9 +108,17 @@
 
     <div class="product-view__related">
         <h3 class="heading heading--second-level product-view__title--slider">
-            {{ sliderHeading }}
+            {{ relatedProducts.heading }}
         </h3>
-        {{> '@slider' slider }}
+        {{> '@slider' relatedProducts.slider }}
+        </div>
+    </div>
+
+    <div class="product-view__related">
+        <h3 class="heading heading--second-level product-view__title--slider">
+            {{ upsellProducts.heading }}
+        </h3>
+        {{> '@slider' upsellProducts.slider }}
         </div>
     </div>
 </div>

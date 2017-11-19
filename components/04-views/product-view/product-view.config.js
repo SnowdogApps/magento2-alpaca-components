@@ -49,13 +49,77 @@ module.exports = {
     },
     description: 'Limestone is currently on backorder - this item is available to ship on December 24th. <br/> Palladium is currently on backorder - this item is available to ship on January 3rd.',
     attributesTitle: 'For interion and exterior use.',
-    sliderHeading: 'You may also like',
     button: {
       tag: 'button',
       class: 'product-view__button',
       attributes: 'type="button"',
       text: 'Add to Cart'
     },
+    options: [
+      {
+        class: '',
+        attributes: '',
+        titleClass: '',
+        heading: {
+          tag: 'h2',
+          title: 'Size'
+        },
+        options: [
+          {
+            class: '',
+            attributes: '',
+            text: 'XS'
+          },
+          {
+            class: 'swatch__option--active',
+            attributes: '',
+            text: 'S'
+          },
+          {
+            class: '',
+            attributes: '',
+            text: 'M'
+          },
+          {
+            class: '',
+            attributes: '',
+            text: 'L'
+          },
+          {
+            class: '',
+            attributes: '',
+            text: 'XL'
+          }
+        ]
+      },
+      {
+        class: '',
+        attributes: '',
+        titleClass: '',
+        heading: {
+          tag: 'h2',
+          title: 'Color'
+        },
+        options: [
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-orange.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-green.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes swatch__option--active',
+            attributes: 'style="background: url(../../images/swatch/swatch-red.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-white.jpg); background-size: cover; background-position: center center;"'
+          }
+        ]
+      }
+    ],
     listIcon: {
       listTag: 'ul',
       elementTag: 'li',
@@ -163,68 +227,137 @@ module.exports = {
         }
       ]
     },
-    slider: {
-      class: 'product-view__slider',
-      iconPrev: 'arrow-left',
-      iconNext: 'arrow-right',
-      iconClass: 'slider__icon',
-      products: [
-        {
-          product: {
-            image: {
-              src: '/images/produkt-image.png'
-            },
-            class: 'slider__item',
-            tag: 'div',
-            name: 'Some product name',
-            price: '$ 200.00'
+    relatedProducts: {
+      heading: 'Related products',
+      slider: {
+        class: 'product-view__slider',
+        iconPrev: 'arrow-left',
+        iconNext: 'arrow-right',
+        iconClass: 'slider__icon',
+        products: [
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
           }
-        },
-        {
-          product: {
-            image: {
-              src: '/images/produkt-image.png'
-            },
-            class: 'slider__item',
-            tag: 'div',
-            name: 'Some product name',
-            price: '$ 200.00'
+        ]
+      }
+    },
+    upsellProducts: {
+      heading: 'You may also like',
+      slider: {
+        class: 'product-view__slider',
+        iconPrev: 'arrow-left',
+        iconNext: 'arrow-right',
+        iconClass: 'slider__icon',
+        products: [
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
+          },
+          {
+            product: {
+              image: {
+                src: '/images/produkt-image.png'
+              },
+              class: 'slider__item',
+              tag: 'div',
+              name: 'Some product name',
+              price: '$ 200.00'
+            }
           }
-        },
-        {
-          product: {
-            image: {
-              src: '/images/produkt-image.png'
-            },
-            class: 'slider__item',
-            tag: 'div',
-            name: 'Some product name',
-            price: '$ 200.00'
-          }
-        },
-        {
-          product: {
-            image: {
-              src: '/images/produkt-image.png'
-            },
-            class: 'slider__item',
-            tag: 'div',
-            name: 'Some product name',
-            price: '$ 200.00'
-          }
-        },
-        {
-          product: {
-            image: {
-              src: '/images/produkt-image.png'
-            },
-            class: 'slider__item',
-            tag: 'div',
-            name: 'Some product name',
-            price: '$ 200.00'
-          }
-        }
-      ]
-    }
+        ]
+      }
+    },
   }
 };

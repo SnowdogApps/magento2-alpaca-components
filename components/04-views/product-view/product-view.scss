@@ -7,10 +7,12 @@ $product-view__col-right-width                    : calc(#{$product-view__col-ri
 
 $product-view__base-elements-vertical-spacing     : $spacer !default;
 
+$product-view__description-margin-bottom          : $spacer--medium !default;
+
 $product-view__gallery-bottom-border              : 1px solid $gray !default;
 $product-view__gallery-bottom-border--screen-m    : none !default;
 $product-view__gallery-padding-bottom             : $spacer !default;
-$product-view__gallery-padding-bottom--screen-m    : 0 !default;
+$product-view__gallery-padding-bottom--screen-m   : 0 !default;
 $product-view__gallery-margin-bottom              : $spacer--medium !default;
 $product-view__gallery-margin-bottom--screen-m    : 0 !default;
 
@@ -125,6 +127,7 @@ $product-view__rating-value-font-size: $font-size-base;
 
     &__description {
         order: 2;
+        margin-bottom: $product-view__description-margin-bottom;
     }
     &__options {
         width: 100%;
