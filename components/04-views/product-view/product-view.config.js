@@ -51,7 +51,7 @@ module.exports = {
     attributesTitle: 'For interion and exterior use.',
     button: {
       tag: 'button',
-      class: 'product-view__button',
+      class: 'product-view__add-to-cart-btn',
       attributes: 'type="button"',
       text: 'Add to Cart'
     },
@@ -143,6 +143,32 @@ module.exports = {
         }
       ]
     },
+    extraActions: [
+      {
+        icon: {
+          iconId: 'heart',
+          title: 'Add to wishlist',
+          svgClass: 'product-view__action-icon'
+        },
+        tag: 'button'
+      },
+      {
+        icon: {
+          iconId: 'compare',
+          title: 'Add to compare',
+          svgClass: 'product-view__action-icon'
+        },
+        tag: 'button'
+      },
+      {
+        icon: {
+          iconId: 'envelope',
+          title: 'Send email to a friend'
+        },
+        tag: 'a',
+        attributes: 'href="#"'
+      }
+    ],
     tab: {
       class: 'product-view__tab',
       tabs: [

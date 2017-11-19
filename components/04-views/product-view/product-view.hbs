@@ -75,7 +75,7 @@
                 {{/each}}
             </div>
 
-            <div class="product-view__options">
+            <div class="product-view__main-actions">
                 <div class="product-view__qty">
                     <h3>Qty</h3>
                     {{render '@quantity-update'}}
@@ -83,11 +83,15 @@
                 <div class="product-view__add-to-cart">
                     {{> '@button' button }}
                 </div>
-            </div>
-            <div class="product-view__extra-actions">
+                <div class="product-view__extra-actions">
+                    {{#each extraActions as |action|}}
+                        <{{tag}} class="product-view__action product-view__action--{{tag}} {{ action.class }}">
+                            {{ render '@icon' action.icon}}
+                        </{{tag}}>
+                    {{/each}}
+                </div>
 
             </div>
-
             <div class="product-view__icons">
                 <a href="#" class="link product-view__link">
                     <svg class="product-view__icon">
