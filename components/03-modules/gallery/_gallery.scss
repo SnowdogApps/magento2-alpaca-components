@@ -11,8 +11,11 @@ $gallery__thumb-arrow-width                : 48px !default;
 $gallery__thumb-border                     : none !default;
 $gallery__thumb-border--active             : 1px solid $green !default;
 $gallery__thumb-spacing                    : $spacer--medium !default;
+$gallery__thumb-height                     : 48px !default;
+$gallery__thumb-height--large              : 80px !default;
 $gallery__thumb-width                      : 48px !default;
 $gallery__thumb-width--large               : 80px !default;
+
 
 .gallery {
     display: flex;
@@ -67,12 +70,14 @@ $gallery__thumb-width--large               : 80px !default;
         margin-right: $gallery__thumb-spacing;
         border: $gallery__thumb-border;
         width: $gallery__thumb-width;
+        height: $gallery__thumb-height;
         @include mq($screen-m) {
             margin-bottom: $gallery__thumb-spacing;
             margin-right: 0;
         }
         @include mq($screen-l) {
             width: $gallery__thumb-width--large;
+            height: $gallery__thumb-height--large;
         }
         &:hover {
             cursor: pointer;
