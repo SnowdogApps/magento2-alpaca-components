@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
  - Arrow-Right icon.
  - home page view
  - variant for list - with components as content
+ - accessibility tests
 
 ### Changed
  - Pager element styling that fits alpaca design.
