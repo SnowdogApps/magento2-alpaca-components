@@ -1,0 +1,20 @@
+<div class="brief-info">
+    {{#each items as |item|}}
+    <div class="brief-info__item">
+        {{ render '@icon' item.icon }}
+        <div class="brief-info__content">
+            <{{ item.title.tag }}
+                {{{ item.title.attributes }}}
+                class="brief-info__title {{ item.title.class }}"
+            >
+               {{ item.title.text }}
+            </{{ item.title.tag }}>
+            <a href="{{ item.link.href }}"
+               class="brief-info__link {{ item.link.class }}"
+           >
+               {{ item.link.text }}
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</div>

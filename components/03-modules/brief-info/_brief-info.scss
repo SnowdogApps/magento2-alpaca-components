@@ -1,0 +1,74 @@
+$brief-info__padding                                       : $spacer--medium 0 !default;
+$brief-info__border-style                                  : 1px $gray-light solid !default;
+$brief-info__icon-bg-color                                 : $gray-light !default;
+$brief-info__icon-border-radius                            : 32px !default;
+$brief-info__icon-delivery-truck-padding                   : 13px $spacer 13px 6px !default;
+$brief-info__icon-delivery-truck-svg-height                : 100%;
+$brief-info__icon-delivery-truck-svg-padding               : 0 !default;
+$brief-info__icon-delivery-truck-svg-width                 : 100%;
+$brief-info__icon-margin                                   : 0 0 $spacer 0 !default;
+$brief-info__icon-shield-padding                           : 12px 14px 12px 15px !default;
+$brief-info__icon-shield-svg-height                        : 100%;
+$brief-info__icon-shield-svg-padding                       : 0 !default;
+$brief-info__icon-shield-svg-width                         : 100%;
+$brief-info__link-font-size                                : $font-size-small !default;
+$brief-info__link-font-weight                              : $font-weight-bold !default;
+$brief-info__link-text-decoration                          : none !default;
+$brief-info__title-font-size                               : $font-size-small !default;
+$brief-info__title-font-size--screen-l                     : $font-size-base !default
+$brief-info__title-font-weight                             : $font-weight-normal !default;
+$brief-info__title-line-height                             : 1em !default;
+$brief-info__title-text-transform                          : uppercase !default;
+$brief-info__title-margin-bottom                           : 0 !default;
+
+
+.brief-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: $brief-info__padding;
+    border-top: $brief-info__border-style;
+    border-bottom: $brief-info__border-style;
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__icon {
+        margin: $brief-info__icon-margin;
+        background-color: $brief-info__icon-bg-color;
+        border-radius: $brief-info__icon-border-radius;
+        &--delivery-truck {
+            padding: $brief-info__icon-delivery-truck-padding;
+        }
+    }
+    &__svg {
+        &--delivery-truck {
+            padding: $brief-info__icon-delivery-truck-svg-padding;
+            width: $brief-info__icon-delivery-truck-svg-width;
+            height: $brief-info__icon-delivery-truck-svg-height;
+        }
+        &--shield {
+            padding: $brief-info__icon-shield-padding;
+            width: $brief-info__icon-shield-svg-width;
+            height: $brief-info__icon-shield-svg-height;
+        }
+    }
+    &__title {
+        margin-bottom: $brief-info__title-margin-bottom;
+        font-size: $brief-info__title-font-size;
+        text-transform: $brief-info__title-text-transform;
+        line-height: $brief-info__title-line-height;
+        font-weight: $brief-info__title-font-weight;
+        @include mq($screen-l) {
+            font-size: $brief-info__title-font-size--screen-l;
+        }
+    }
+    &__link {
+        font-size: $brief-info__link-font-size;
+        font-weight: $brief-info__link-font-weight;
+        text-decoration: $brief-info__link-text-decoration;
+    }
+
+}
