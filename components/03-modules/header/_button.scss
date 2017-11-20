@@ -3,9 +3,9 @@ $header-button__margin              : 0 0 0 $spacer !default;
 $header-button__margin--extra-large : 0 0 0 $spacer--medium !default;
 $header-button__padding             : 0 !default;
 
-$header-button__icon-size           : 24px !default;
 $header-button__icon-size--small    : 18px !default;
-$header-button__icon-margin         : 0 0 4px 0 !default;
+$header-button__icon-margin         : 0 0 2px 0 !default;
+$header-button__icon-margin--medium : 0 0 4px 0 !default;
 $header-button__icon-padding        : 0 0 4px 0 !default;
 $header-button__icon-color          : $gray-darker !default;
 
@@ -53,21 +53,19 @@ $header-button__counter-dot-bg-color: $white !default;
     }
 
     &__icon {
-        display: block;
-        height: $header-button__icon-size;
-        width: $header-button__icon-size;
         margin: $header-button__icon-margin;
         padding: $header-button__icon-padding;
         fill: $header-button__icon-color;
+        @include mq($screen-m) {
+            margin: $header-button__icon-margin--medium;
+        }
         &--small {
             width: $header-button__icon-size--small;
             height: $header-button__icon-size--small;
         }
 
-        &-svg {
-            &--close {
-                display: none;
-            }
+        &--close {
+            display: none;
         }
     }
 

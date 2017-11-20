@@ -61,10 +61,10 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         }
 
         &--active {
-            .header-button__icon-svg--open {
+            .header-button__icon--open {
                 display: none;
             }
-            .header-button__icon-svg--close {
+            .header-button__icon--close {
                 display: block;
             }
         }

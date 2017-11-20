@@ -3,22 +3,34 @@ module.exports = {
   context: {
     buttons: [
       {
-        icon: 'heart',
         ariaLabel: 'Wishlist',
         text: 'Wishlist',
-        class: 'header-button--reset-margin'
+        class: 'header-button--reset-margin',
+        icon: {
+          iconId: 'heart',
+          title: 'Heart',
+          class: 'header-button__icon'
+        }
       },
       {
-        icon: 'phone',
         ariaLabel: 'Store phone number',
         text: 'Contact',
-        class: ''
+        class: '',
+        icon: {
+          iconId: 'phone',
+          title: 'Phone',
+          class: 'header-button__icon'
+        }
       },
       {
-        icon: 'account',
         ariaLabel: 'Customer Account',
         text: 'Account',
-        class: ''
+        class: '',
+        icon: {
+          iconId: 'account',
+          title: 'Account',
+          class: 'header-button__icon'
+        }
       }
     ],
     logo: {
@@ -45,8 +57,22 @@ module.exports = {
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Search button"',
     },
+    sideMenuIcon: {
+      iconId: 'mobile-menu',
+      title: 'Side menu open',
+      class: 'header-button__icon header-button__icon--small header-button__icon--open'
+    },
+    sideMenuIconClose: {
+      iconId: 'close',
+      title: 'Side menu close',
+      class: 'header-button__icon header-button__icon--small header-button__icon--close'
+    },
     minicartTrigger: {
-      icon: 'shopping-cart',
+      icon: {
+        iconId: 'shopping-cart',
+        title: 'Shopping cart',
+        class: 'header-button__icon'
+      },
       text: 'Cart',
       link: '/cart',
       ariaLabel: 'Cart trigger'

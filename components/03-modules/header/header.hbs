@@ -6,20 +6,8 @@
                 <button class="header-button--side-menu header-button header-button--reset-margin"
                         type="button"
                 >
-                    <svg class="header-button__icon header-button__icon--small">
-                        <use xlink:href="{{ svg 'mobile-menu' }}"
-                             class="
-                                header-button__icon-svg
-                                header-button__icon-svg--open
-                             "
-                        ></use>
-                        <use xlink:href="{{ svg 'close' }}"
-                             class="
-                                header-button__icon-svg
-                                header-button__icon-svg--close
-                             "
-                        ></use>
-                    </svg>
+                    {{ render '@icon' sideMenuIcon }}
+                    {{ render '@icon' sideMenuIconClose }}
                     <span class="header-button__text">
                         Menu
                     </span>
@@ -31,9 +19,7 @@
                        href="#"
                        aria-label="{{ item.ariaLabel }}"
                     >
-                        <svg class="header-button__icon">
-                            <use xlink:href="{{ svg item.icon }}"></use>
-                        </svg>
+                        {{ render '@icon' item.icon }}
                         <span class="header-button__text">
                             {{ item.text }}
                         </span>
@@ -45,9 +31,7 @@
                        aria-label="{{ minicartTrigger.ariaLabel }}"
                        data-popuptrigger="popup-1"
                     >
-                        <svg class="header-button__icon">
-                            <use xlink:href="{{ svg minicartTrigger.icon }}"></use>
-                        </svg>
+                        {{ render '@icon' minicartTrigger.icon }}
                         <span class="header-button__text">
                             {{ minicartTrigger.text }}
                         </span>
