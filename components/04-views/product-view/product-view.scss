@@ -300,14 +300,13 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
 
     &__action-elements {
         margin-top: $product-view__action-elements-margin-top;
-        flex-wrap: nowrap;
+        flex-flow: column;
         flex: 1 0 auto;
-        flex-direction: column;
         justify-content: space-between;
         display: flex;
         @include mq($screen-l) {
             margin-top: $product-view__action-elements-margin-top--screen-l;
-            flex-direction: row;
+            flex-flow: row nowrap;
         }
     }
 
