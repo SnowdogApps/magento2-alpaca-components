@@ -30,10 +30,6 @@ $search-form__placeholder-color: $gray !default;
         width: $search-form__width--xl;
     }
 
-    &__label {
-        display: none;
-    }
-
     &__input {
         width: 100%;
         height: $search-form__input-height;

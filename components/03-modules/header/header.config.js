@@ -35,12 +35,14 @@ module.exports = {
     ],
     logo: {
       class: 'header__logo',
-      logoSVG: true
+      logoSVG: true,
+      ariaLabel: 'Home page link',
+      imageAlt: 'Logo'
     },
     searchInput: {
       class: 'search-form__input-wrapper',
       label: {
-        class: 'search-form__label',
+        hidden: true
       },
       field: {
         class: 'search-form__input',
