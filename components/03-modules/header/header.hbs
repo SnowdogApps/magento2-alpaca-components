@@ -6,8 +6,8 @@
                 {{ render '@side-menu-trigger--span-way' }}
             </div>
             <div class="header__buttons">
-                {{#each icons as |item| }}
-                    <a class="header-button"
+                {{#each buttons as |item| }}
+                    <a class="header-button {{ item.class }}"
                        href="#"
                        aria-label="{{ item.ariaLabel }}"
                     >
@@ -20,7 +20,21 @@
                     </a>
                 {{/each}}
                 <div class="header__minicart">
-                    {{ render '@minicart-trigger' trigger }}
+                    <a class="header-button popup-trigger"
+                       href="{{ minicartTrigger.link }}"
+                       aria-label="{{ minicartTrigger.ariaLabel }}"
+                       data-popuptrigger="popup-1"
+                    >
+                        <svg class="header-button__icon">
+                            <use xlink:href="{{ svg minicartTrigger.icon }}"></use>
+                        </svg>
+                        <span class="header-button__text">
+                            {{ minicartTrigger.text }}
+                        </span>
+                        <span class="header-button__counter">
+                            <span class="header-button__counter-dot"></span>
+                        </span>
+                    </a>
                     {{ render '@popup' minicartPopup }}
                 </div>
             </div>

@@ -1,36 +1,24 @@
 module.exports = {
   title: 'Header module',
   context: {
-    phoneNumber: '+ 48 68 433 00 00',
-    topLinks: [
-      {
-        text: 'Wish List',
-        icon: 'heart'
-      },
-      {
-        text: 'Sign In',
-        icon: 'signin'
-      },
-      {
-        text: 'Create account',
-        icon: 'account-mini'
-      }
-    ],
-    icons: [
+    buttons: [
       {
         icon: 'heart',
         ariaLabel: 'Wishlist',
-        text: 'Wishlist'
+        text: 'Wishlist',
+        class: 'header-button--reset-margin'
       },
       {
         icon: 'phone',
         ariaLabel: 'Store phone number',
-        text: 'Contact'
+        text: 'Contact',
+        class: ''
       },
       {
         icon: 'account',
         ariaLabel: 'Customer Account',
-        text: 'Account'
+        text: 'Account',
+        class: ''
       }
     ],
     logo: {
@@ -57,24 +45,11 @@ module.exports = {
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Search button"',
     },
-    likeButton: {
-      tag: 'button',
-      text: '',
-      class: 'button--icon header__button header__button--like',
-      iconId: 'like',
-      iconClass: 'button__icon'
-    },
-    infoButton: {
-      tag: 'button',
-      text: '',
-      class: 'button--icon header__button header__button--info',
-      iconId: 'info',
-      iconClass: 'button__icon'
-    },
-    trigger: {
-      attributes: 'data-popuptrigger="popup-1"',
-      class: 'header-button popup-trigger',
-      counter: '82'
+    minicartTrigger: {
+      icon: 'shopping-cart',
+      text: 'Cart',
+      link: '/cart',
+      ariaLabel: 'Cart trigger'
     },
     minicartPopup: {
       class: 'header__minicart-content',

@@ -1,15 +1,28 @@
-$header-button__size               : 48px !default;
-$header-button__margin             : 0 0 0 $spacer !default;
-$header-button__margin--extra-large: 0 0 0 $spacer--medium !default;
+$header-button__size                : 48px !default;
+$header-button__margin              : 0 0 0 $spacer !default;
+$header-button__margin--extra-large : 0 0 0 $spacer--medium !default;
 
-$header-button__icon-size          : 24px !default;
-$header-button__icon-margin        : 0 0 4px 0 !default;
-$header-button__icon-padding       : 0 0 4px 0 !default;
-$header-button__icon-color         : $gray-darker !default;
+$header-button__icon-size           : 24px !default;
+$header-button__icon-margin         : 0 0 4px 0 !default;
+$header-button__icon-padding        : 0 0 4px 0 !default;
+$header-button__icon-color          : $gray-darker !default;
 
-$header-button__text-font-color    : $gray !default;
-$header-button__text-font-size     : 10px !default;
-$header-button__text-line-height   : 10px !default;
+$header-button__text-font-color     : $gray !default;
+$header-button__text-font-size      : 10px !default;
+$header-button__text-line-height    : 10px !default;
+
+$header-button__counter-top         : 0 !default;
+$header-button__counter-top--medium : -2px !default;
+$header-button__counter-right       : 8px !default;
+$header-button__counter-font-size   : $font-size-extra-small !default;
+$header-button__counter-background  : $color-primary !default;
+$header-button__counter-color       : $white !default;
+$header-button__counter-size        : 14px !default;
+$header-button__counter-border      : 2px solid $white !default;
+
+$header-button__counter-dot-size    : 2px !default;
+$header-button__counter-dot-width   : 2px !default;
+$header-button__counter-dot-bg-color: $white !default;
 
 .header-button {
     height: $header-button__size;
@@ -21,7 +34,7 @@ $header-button__text-line-height   : 10px !default;
     align-items: center;
     text-decoration: none;
     @include mq($screen-xl) {
-        margin-left: $header-button__margin--extra-large;
+        margin: $header-button__margin--extra-large;
     }
 
     &:focus,
@@ -29,8 +42,8 @@ $header-button__text-line-height   : 10px !default;
         text-decoration: none;
     }
 
-    &:first-child {
-        margin-left: 0;
+    &--reset-margin {
+        margin: 0;
     }
 
     &__icon {
@@ -47,5 +60,31 @@ $header-button__text-line-height   : 10px !default;
         line-height: $header-button__text-line-height;
         text-align: center;
         color: $header-button__text-font-color;
+    }
+
+    &__counter {
+        position: absolute;
+        top: $header-button__counter-top;
+        right: $header-button__counter-right;
+        display: flex;
+        width: $header-button__counter-size;
+        height: $header-button__counter-size;
+        border: $header-button__counter-border;
+        border-radius: $header-button__counter-size;
+        line-height: $header-button__counter-size;
+        font-size: $header-button__counter-font-size;
+        text-align: center;
+        color: $header-button__counter-color;
+        background-color: $header-button__counter-background;
+        @include mq($screen-m) {
+            top: $header-button__counter-top--medium;
+        }
+        &-dot {
+            width: $header-button__counter-dot-size;
+            height: $header-button__counter-dot-size;
+            border-radius: $header-button__counter-dot-size;
+            margin: auto;
+            background-color: $header-button__counter-dot-bg-color;
+        }
     }
 }
