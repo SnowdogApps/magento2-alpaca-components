@@ -394,4 +394,11 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
             margin-bottom: $product-view__slider-heading-margin-bottom;
         }
     }
+
+    &__additional-content {
+        display: none;
+        @include mq($screen-m) {
+            display: block;
+        }
+    }
 }

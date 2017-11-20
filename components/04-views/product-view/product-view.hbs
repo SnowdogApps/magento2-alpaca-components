@@ -111,7 +111,6 @@
             {{ relatedProducts.heading }}
         </h3>
         {{> '@slider' relatedProducts.slider }}
-        </div>
     </div>
 
     <div class="product-view__slider">
@@ -119,7 +118,7 @@
             {{ upsellProducts.heading }}
         </h3>
         {{> '@slider' upsellProducts.slider }}
-        </div>
     </div>
+    {{render '@additional-content'}}
 </div>
 {{ render '@footer' }}

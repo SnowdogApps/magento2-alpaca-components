@@ -385,5 +385,17 @@ module.exports = {
         ]
       }
     },
+    additionalContent: {
+      image: {
+        defaultSrc: '',
+        sources: [
+          {
+            src: '/images/product-view/banner.jpg',
+            mediaQuery: '(min-width: 768px)'
+          }
+        ],
+        alt: 'image alt text'
+      }
+    }
   }
 };
