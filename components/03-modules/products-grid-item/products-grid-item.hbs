@@ -47,37 +47,7 @@
 
         <div class="products-grid-item__options">
             {{#each swatches as |swatch|}}
-                <ul class="
-                        swatch-attribute-options
-                        {{#if this.modifier}}
-                            swatch-attribute-options--{{ swatch.modifier }}
-                        {{/if}}
-                    "
-                    attribute-code="{{ swatch.attributeCode }}"
-                    attribute-id="{{ swatch.attributeId }}"
-                >
-                    {{#each swatch.data}}
-                        <li class="
-                                swatch-attribute-options__item
-                                swatch-attribute-options__item--{{ swatch.modifier }}
-                                {{#if this.selected}}
-                                    swatch-attribute-options__item--{{ swatch.modifier }}-selected
-                                {{/if}}
-                            "
-                            option-type="{{ this.type }}"
-                            option-id="{{ this.id }}"
-                            option-label="{{ this.label }}"
-                            option-tooltip-value="{{ this.tooltipValue }}"
-                            {{ this.tooltipType }}
-                        >
-                            {{#if this.image}}
-                                {{render '@image' this.image}}
-                            {{else}}
-                                {{ this.label }}
-                            {{/if}}
-                        </li>
-                    {{/each}}
-                </ul>
+                {{ render (component swatch.name) swatch.context }}
             {{/each}}
         </div>
 

@@ -16,7 +16,6 @@ $products-grid-item__content-padding\@medium          : $spacer--medium !default
 $products-grid-item__name-color                       : $font-color-base !default;
 $products-grid-item__name-font-weight                 : $font-weight-normal !default;
 
-
 $products-grid-item__action-size                      : 32px !default;
 $products-grid-item__action-item-spacing              : $spacer !default;
 
@@ -132,9 +131,10 @@ $products-grid-item__action-item-spacing              : $spacer !default;
         }
     }
 
-    &__options,
-    &__actions {
-        flex-basis: 100%;
+    &__options {
+        .swatch {
+            margin: $products-grid-item__base-spacing 0;
+        }
     }
 
     &__actions {
@@ -162,54 +162,6 @@ $products-grid-item__action-item-spacing              : $spacer !default;
             width: 100%;
             height: 100%;
             padding: 0;
-        }
-    }
-}
-
-$swatch-attribute-options__item-width: 32px !default;
-$swatch-attribute-options__small-rect-size: 32px !default;
-$swatch-attribute-options__image-selected-border: 1px solid $green !default;
-$swatch-attribute-options__item-spacing: $spacer !default;
-$swatch-attribute-options__underline-offset-bottom: $spacer !default;
-$swatch-attribute-options__link-bar-height: 8px !default;
-$swatch-attribute-options__link-bar-bg-color: $green !default;
-.swatch-attribute-options {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 0;
-    &__item {
-        flex: 0 0 $swatch-attribute-options__item-width;
-        margin-right: $swatch-attribute-options__item-spacing;
-        position: relative;
-        &:last-child {
-            margin-right: 0;
-        }
-        &:hover {
-            cursor: pointer;
-        }
-        &--small-rect {
-            width: $swatch-attribute-options__small-rect-size;
-            height: $swatch-attribute-options__small-rect-size;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        &--small-rect-selected {
-            &:after {
-                content: '';
-                position: absolute;
-                bottom: $swatch-attribute-options__underline-offset-bottom;
-                left: 0;
-                width: 100%;
-                height: $swatch-attribute-options__link-bar-height;
-                background-color: $swatch-attribute-options__link-bar-bg-color;
-                z-index: -1;
-            }
-        }
-        &--image-selected {
-            border: $swatch-attribute-options__image-selected-border;
         }
     }
 }

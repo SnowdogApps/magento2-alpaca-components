@@ -35,111 +35,53 @@ module.exports = {
       text: 'Add to Cart',
       class: 'button products-grid-item__primary-action'
     },
-    options: true,
     swatches: [
       {
-        attributeCode: 'color',
-        attributeId: '100',
-        modifier: 'image',
-        data: [
-          {
-            label: 'Color 1',
-            id: '167',
-            value: 'color1',
-            image: {
-              dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
-              alt: 'Color 1'
+        name: 'swatch',
+        context: {
+          class: 'swatch--small swatch--image',
+          options: [
+            {
+              attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
             },
-            type: 0,
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'Color 1',
-          },
-          {
-            label: 'Color 2',
-            id: '168',
-            value: 'color2',
-            image: {
-              dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
-              alt: 'Color 2'
+            {
+              attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
             },
-            selected: true,
-            type: 0,
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'Color 2',
-          },
-          {
-            label: 'Color 3',
-            id: '169',
-            value: 'color3',
-            image: {
-              dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
-              alt: 'Color 3'
+            {
+              class: 'swatch__option--active',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
             },
-            type: 0,
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'Color 3',
-          },
-          {
-            label: 'Color 4',
-            id: '170',
-            value: 'color4',
-            image: {
-              dataSrc: '/images/products-grid-item/product-color-swatch-image-1-32_40.jpg',
-              alt: 'Color 4'
-            },
-            type: 0,
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'Color 4'
-          },
-        ]
+            {
+              attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
+            }
+          ]
+        }
       },
       {
-        attributeCode: 'size',
-        attributeId: '200',
-        modifier: 'small-rect',
-        data: [
-          {
-            id: '167',
-            label: 'XS',
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'XS',
-            type: 0,
-            value: 'XS'
-          },
-          {
-            id: '168',
-            label: 'S',
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'S',
-            type: 0,
-            value: 'S'
-          },
-          {
-            id: '169',
-            label: 'M',
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'M',
-            type: 0,
-            value: 'M'
-          },
-          {
-            id: '170',
-            label: 'L',
-            selected: true,
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'L',
-            type: 0,
-            value: 'L'
-          },
-          {
-            id: '171',
-            label: 'XL',
-            tooltipType: 'option-tooltip-thumb',
-            tooltipValue: 'XL',
-            type: 0,
-            value: 'XL'
-          }
-        ]
+        name: 'swatch',
+        context: {
+          class: 'swatch--small',
+          attributes: '',
+          titleClass: '',
+          options: [
+            {
+              text: 'XS'
+            },
+            {
+              class: 'swatch__option--active',
+              text: 'S'
+            },
+            {
+              text: 'M'
+            },
+            {
+              text: 'L'
+            },
+            {
+              text: 'XL'
+            }
+          ]
+        }
       }
     ]
   },
