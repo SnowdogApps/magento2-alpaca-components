@@ -1,38 +1,39 @@
 module.exports = {
   title: 'Product grid item',
-  collated: true,
   context: {
-    badge: {
-      class: 'badge--new products-grid-item__badge',
-      text: 'NEW'
-    },
-    button: {
-      tag: 'a',
-      text: 'Add to Cart',
-      class: 'button button--link products-grid-item__button'
-    },
-    buttonWishlist: {
-      text: '',
-      iconId: 'heart'
-    },
+    tag: 'div',
     class: '',
+    badge: {
+      name: 'badge--new',
+      context: {
+        class: 'badge products-grid-item__badge',
+        text: 'NEW'
+      }
+    },
     image: {
+      class: 'products-grid-item__image',
       dataSrc: '/images/products-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
     price: {
-      regularPrice: '1 400',
-      specialPrice: '',
-      prefix: {
-        tag: '',
-        closingTag: '',
-        text: '$'
-      },
-      suffix: {
-        tag: '',
-        closingTag: '',
-        text: ''
-      },
+      name: 'price',
+      context: {
+        regularPrice: '1 400',
+        specialPrice: '',
+        prefix: {
+          tag: '',
+          text: '$'
+        },
+        suffix: {
+          tag: '',
+          text: ''
+        }
+      }
+    },
+    primaryAction: {
+      tag: 'button',
+      text: 'Add to Cart',
+      class: 'button products-grid-item__primary-action'
     },
     options: true,
     swatches: [
@@ -138,42 +139,40 @@ module.exports = {
             type: 0,
             value: 'XL'
           }
-        ],
-      },
-    ],
-    tag: 'div'
+        ]
+      }
+    ]
   },
   variants: [
     {
-      name: 'with-badge',
+      name: 'special-price',
       context: {
         badge: {
-          discount: {
-            text: '-20%'
-          },
-          new: {
-            text: 'NEW'
+          name: 'badge--discount',
+          context: {
+            text: '-10%',
+            class: 'badge--discount products-grid-item__badge'
           }
         },
         name: 'Short name',
         price: {
-          oldPriceClass: 'products-grid-item__old-price',
-          regularPrice: '1  400',
-          specialPrice: '999.99',
-          specialPriceClass: 'products-grid-item__special-price',
-          prefix: {
-            tag: '',
-            closingTag: '',
-            text: '$'
-          },
-          suffix: {
-            tag: '',
-            closingTag: '',
-            text: ''
-          },
-        },
-        script: true
+          name: 'price--with-special-price',
+          context: {
+            oldPriceClass: 'products-grid-item__old-price',
+            regularPrice: '400.00',
+            specialPrice: '999.99',
+            specialPriceClass: 'products-grid-item__special-price',
+            prefix: {
+              tag: '',
+              text: '$'
+            },
+            suffix: {
+              tag: '',
+              text: ''
+            }
+          }
+        }
       }
-    },
+    }
   ]
 };

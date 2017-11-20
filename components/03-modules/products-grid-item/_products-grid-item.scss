@@ -1,90 +1,106 @@
-$products-grid-item__action-item-size                 : 32px !default;
-$products-grid-item__action-icon-size                 : 32px !default;
-$products-grid-item__action-item-spacing              : $spacer !default;
-$products-grid-item__badge-top-position               : $spacer--medium !default;
-$products-grid-item__badge-left-position              : 0 !default;
 $products-grid-item__base-spacing                     : $spacer !default;
-$products-grid-item__content-bg-color                 : $white !default;
 $products-grid-item__padding                          : 0 !default;
-$products-grid-item__text-padding                     : 0 $spacer !default;
 $products-grid-item__border                           : 1px solid $gray-lightest !default;
-$products-grid-item__font-size-medium                 : $font-size-small !default;
-$products-grid-item__font-size-large                  : $font-size-base !default;
-$products-grid-item__content-padding                  : 22px $spacer--medium 12px !default;
+
+$products-grid-item__font-size                        : $font-size-small !default;
+$products-grid-item__font-size\@large                 : $font-size-base !default;
+$products-grid-item__line-height                      : 1.5 !default;
+
+$products-grid-item__badge-left-position              : 0 !default;
+$products-grid-item__badge-top-position               : $spacer--medium !default;
+
+$products-grid-item__content-bg-color                 : $white !default;
+$products-grid-item__content-padding                  : $spacer !default;
+$products-grid-item__content-padding\@medium          : $spacer--medium !default;
+
 $products-grid-item__name-color                       : $font-color-base !default;
 $products-grid-item__name-font-weight                 : $font-weight-normal !default;
-$products-grid-item__name-margin-bottom               : 12px !default;
-$products-grid-item__price-base-color                 : $bg-color-dark !default;
+
+
+$products-grid-item__action-size                      : 32px !default;
+$products-grid-item__action-item-spacing              : $spacer !default;
 
 .products-grid-item {
-    max-width: 320px; // for proper imageHeight calculation based on container width
+    position: relative;
     display: block;
     padding: $products-grid-item__padding;
     border: $products-grid-item__border;
-    position: relative;
     overflow: hidden;
 
-    &__link {
-        display: block;
-        text-decoration: none;
-        &--name {
-            flex-basis: 70%;
+    &:hover {
+        .products-grid-item__details {
+            transform: translateY(-100%);
         }
     }
 
-    &__content {
-        background: $products-grid-item__content-bg-color;
-        transition: all 0.5s ease-in-out;
-        padding: $products-grid-item__content-padding;
-    }
-
-    &__details {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    &__media {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: flex-start;
-    }
     &__badge {
         position: absolute;
         top: $products-grid-item__badge-top-position;
         left: $products-grid-item__badge-left-position;
     }
 
-    &__name {
-        font-weight: $products-grid-item__name-font-weight;
-        color: $products-grid-item__name-color;
-        font-size: $products-grid-item__font-size-medium;
-        padding: $products-grid-item__text-padding;
-        margin-bottom: $products-grid-item__name-margin-bottom;
+    &__link {
+        display: block;
+    }
 
-        @include mq($screen-xxl) {
-            font-size: $products-grid-item__font-size-large;
+    &__image-wrapper {
+        background: #f9f9f9;
+    }
+
+    &__image {
+        mix-blend-mode: multiply;
+    }
+
+    &__flex-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__main {
+        padding: $products-grid-item__content-padding;
+        background: $products-grid-item__content-bg-color;
+        @include mq($screen-m) {
+            padding: $products-grid-item__content-padding\@medium;
         }
     }
 
-    &__button {
-        &--active {
-            @include mq($screen-l) {
-                display: inline-flex;
+    &__name {
+        font-weight: $products-grid-item__name-font-weight;
+        font-size: $products-grid-item__font-size;
+        line-height: $products-grid-item__line-height;
+        padding-right: $products-grid-item__base-spacing;
+        margin: 0;
+
+        @include mq($screen-xxl) {
+            font-size: $products-grid-item__font-size\@large;
+        }
+
+        &--one-line {
+            overflow: hidden;
+            .link {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
             }
+        }
+
+        .link {
+            color: $products-grid-item__name-color;
+            text-decoration: none;
         }
     }
 
     &__price {
-        flex: 1 0 auto;
+        padding-left: $products-grid-item__base-spacing;
+        font-size: $products-grid-item__font-size;
+        line-height: $products-grid-item__line-height;
         font-weight: $font-weight-bold;
         text-align: right;
-        color: $products-grid-item__price-base-color;
-        padding: $products-grid-item__text-padding;
-        font-size: $products-grid-item__font-size-medium;
+        white-space: nowrap;
+
         @include mq($screen-xxl) {
-            font-size: $products-grid-item__font-size-large;
+            font-size: $products-grid-item__font-size\@large;
         }
     }
 
@@ -101,52 +117,52 @@ $products-grid-item__price-base-color                 : $bg-color-dark !default;
         }
     }
 
-    &__extra {
-        opacity: 0;
-        height: 0;
-        .products-grid-item--active & {
-            opacity: 1;
-            height: auto;
+    &__details {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        top: 100%;
+        width: 100%;
+        padding: $products-grid-item__content-padding;
+        background: $products-grid-item__content-bg-color;
+        transition: $transition-base;
+
+        @include mq($screen-m) {
+            padding: $products-grid-item__content-padding\@medium;
         }
     }
 
     &__options,
-    &__details {
-        margin-bottom: $products-grid-item__base-spacing;
+    &__actions {
+        flex-basis: 100%;
     }
 
     &__actions {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         width: 100%;
     }
 
-    &__action-icons {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+    &__primary-action {
+        height: $products-grid-item__action-size;
+        margin-right: $products-grid-item__base-spacing;
+        padding: 0 $spacer--large;
     }
 
-    &__action-item {
-        box-shadow: none;
+    &__secondary-action {
+        height: $products-grid-item__action-size;
+        width: $products-grid-item__action-size;
+        margin-left: $products-grid-item__base-spacing;
+        padding: 0;
         background: transparent;
         border: none;
-        width: $products-grid-item__action-item-size;
-        height: $products-grid-item__action-item-size;
-        margin-right: $products-grid-item__action-item-spacing;
-        padding: 0;
-        &:hover {
-            cursor: pointer;
+        cursor: pointer;
+        .icon {
+            width: 100%;
+            height: 100%;
+            padding: 0;
         }
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    &__action-icon {
-        width: $products-grid-item__action-icon-size;
-        height: $products-grid-item__action-icon-size;
     }
 }
 

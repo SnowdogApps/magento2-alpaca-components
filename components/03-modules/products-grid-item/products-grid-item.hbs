@@ -1,102 +1,100 @@
 <{{{ tag }}} class="products-grid-item {{ class }}">
+    {{#if badge}}
+        {{ render (component badge.name) badge.context }}
+    {{/if}}
+
     <a href="#" class="products-grid-item__link">
-        <div class="products-grid-item__media">
+        <div class="products-grid-item__image-wrapper">
             {{ render '@image' image }}
-            {{#if badge}}
-                {{ render '@badge' this.badge }}
-            {{/if}}
         </div>
     </a>
-        <div class="products-grid-item__content">
-            <div class="products-grid-item__details">
+
+    <section class="
+                 products-grid-item__flex-wrapper
+                 products-grid-item__main
+             "
+    >
+        <h2 class="products-grid-item__name">
+            <a href="#"
+               class="products-grid-item__link"
+            >
+                {{ name }}
+            </a>
+        </h2>
+        <div class="products-grid-item__price">
+            {{ render (component price.name) price.context }}
+        </div>
+    </section>
+
+    <section class="products-grid-item__details">
+        <div class="products-grid-item__flex-wrapper">
+            <div class="
+                     products-grid-item__name
+                     products-grid-item__name--one-line
+                "
+            >
                 <a href="#"
-                   class="
-                       products-grid-item__link
-                       products-grid-item__link--name
-                   "
-               >
-                    <h2 class="products-grid-item__name">
-                        {{ name }}
-                    </h2>
+                   class="products-grid-item__link"
+                >
+                    {{ name }}
                 </a>
-                <div class="products-grid-item__price">
-                    {{ render '@price' price }}
-                </div>
             </div>
 
-            <div class="products-grid-item__extra">
-                <div class="products-grid-item__options">
-                    {{#each swatches as |swatch|}}
-                        <ul class="
-                                swatch-attribute-options
-                                swatch-attribute-options--{{ swatch.modifier }}
-                            "
-                            attribute-code="{{ swatch.attributeCode }}"
-                            attribute-id="{{ swatch.attributeId }}"
-                        >
-                            {{#each swatch.data}}
-                                <li class="
-                                        swatch-attribute-options__item
-                                        swatch-attribute-options__item--{{ swatch.modifier }}
-                                        {{#if this.selected}}
-                                        swatch-attribute-options__item--{{ swatch.modifier }}-selected
-                                        {{/if}}
-                                    "
-                                    option-type="{{ this.type }}"
-                                    option-id="{{ this.id }}"
-                                    option-label="{{ this.label }}"
-                                    {{ this.tooltipType }}
-                                    option-tooltip-value="{{ this.tooltipValue }}"
-                                 >
-                                    {{#if this.image}}
-                                        {{render '@image' this.image}}
-                                    {{else}}
-                                        {{ this.label }}
-                                    {{/if}}
-                                </li>
-                            {{/each}}
-                        </ul>
-                    {{/each}}
-                </div>
-                <div class="products-grid-item__actions">
-                    {{ render '@button--link' button }}
-
-                    <div class="products-grid-item__action-icons">
-                        <button class="
-                                    products-grid-item__action-item
-                                    products-grid-item__action-item--wishlist
-                                "
-                        >
-                            <svg class="
-                                     products-grid-item__action-icon
-                                     products-grid-item__action-icon--wishlist
-                                 "
-                             >
-                                <use xlink:href="{{ svg 'heart' }}"></use>
-                            </svg>
-                        </button>
-                        <button class="
-                                    products-grid-item__action-item
-                                    products-grid-item__action-item--compare
-                                "
-                        >
-                            <svg class="products-grid-item__action-icon">
-                                <use xlink:href="{{ svg 'compare' }}"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+            <div class="products-grid-item__price">
+                {{ render (component price.name) price.context }}
             </div>
         </div>
 
-    {{#if badgeDiscount}}
-        {{ render '@badge--discount' badge.discount }}
-    {{/if}}
-    {{#if badgeNew}}
-        {{ render '@badge--new' badge.new }}
-    {{/if}}
-</{{{ tag }}}>
+        <div class="products-grid-item__options">
+            {{#each swatches as |swatch|}}
+                <ul class="
+                        swatch-attribute-options
+                        {{#if this.modifier}}
+                            swatch-attribute-options--{{ swatch.modifier }}
+                        {{/if}}
+                    "
+                    attribute-code="{{ swatch.attributeCode }}"
+                    attribute-id="{{ swatch.attributeId }}"
+                >
+                    {{#each swatch.data}}
+                        <li class="
+                                swatch-attribute-options__item
+                                swatch-attribute-options__item--{{ swatch.modifier }}
+                                {{#if this.selected}}
+                                    swatch-attribute-options__item--{{ swatch.modifier }}-selected
+                                {{/if}}
+                            "
+                            option-type="{{ this.type }}"
+                            option-id="{{ this.id }}"
+                            option-label="{{ this.label }}"
+                            option-tooltip-value="{{ this.tooltipValue }}"
+                            {{ this.tooltipType }}
+                        >
+                            {{#if this.image}}
+                                {{render '@image' this.image}}
+                            {{else}}
+                                {{ this.label }}
+                            {{/if}}
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/each}}
+        </div>
 
-{{#if script}}
-<script src="{{ static 'products-grid-item.js' }}"></script>
-{{/if}}
+        <div class="products-grid-item__actions">
+            {{ render '@button' primaryAction }}
+
+            <button class="products-grid-item__secondary-action">
+                <svg class="icon">
+                    <use xlink:href="{{ svg 'heart' }}"></use>
+                </svg>
+            </button>
+
+            <button class="products-grid-item__secondary-action">
+                <svg class="icon">
+                    <use xlink:href="{{ svg 'compare' }}"></use>
+                </svg>
+            </button>
+        </div>
+    </section>
+</{{{ tag }}}>
