@@ -1,0 +1,143 @@
+$toolbar__offset               : $spacer !default;
+$toolbar__secondary-text-color : #a09fa6 !default;
+$toolbar__icon-color           : #a09fa6 !default;
+$toolbar__icon-color--active   : $black !default;
+$toolbar__sorter-label-offset  : $spacer !default;
+$toolbar__select-border        : 1px solid $black !default;
+$toolbar__select-border-radius : 0 !default;
+$toolbar__select-border--hidden: none !default;
+
+.toolbar {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    @include mq($screen-m) {
+        justify-content: flex-start;
+    }
+
+    &__mode,
+    &__limiter,
+    &__amount,
+    &__sorter {
+        flex: 0 0 auto;
+        align-items: center;
+    }
+
+    &__amount {
+        display: none;
+        @include mq($screen-m) {
+            // It's related to IE10/11 bug, which is solved by adding unit to flex-basis
+            // Detailed description:
+            // https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
+            // sass-lint:disable no-css-comments
+            /* stylelint-disable length-zero-no-unit */
+            flex: 1 0 0;
+            /* stylelint-enable length-zero-no-unit */
+            // sass-lint:enable no-css-comments
+            justify-content: center;
+            display: flex;
+        }
+    }
+
+    &__amount-content {
+        color: $toolbar__secondary-text-color;
+    }
+
+    &__sorter {
+        width: 75%;
+        @include mq($screen-m) {
+            width: auto;
+        }
+    }
+
+    &__mode {
+        display: none;
+        @include mq($screen-m) {
+            display: flex;
+            flex: 0 0 auto;
+        }
+    }
+
+    &__mode-icon {
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+        display: block;
+        margin: 0 auto;
+        fill: $toolbar__icon-color;
+        &--active {
+            fill: $toolbar__icon-color--active;
+        }
+    }
+
+    &__mode-link {
+        padding: 12px;
+        height: 48px;
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__sorter-wrapper,
+    &__limiter-wrapper {
+        margin-bottom: 0;
+        @include mq($screen-m) {
+            display: flex;
+            align-items: center;
+            .choices {
+                flex-grow: 1;
+            }
+        }
+        .select__field-list {
+            border: $toolbar__select-border;
+            border-radius: $toolbar__select-border-radius;
+            @include mq($screen-m) {
+                border: none;
+            }
+        }
+        .choices__list--dropdown {
+            .select__field-item {
+                padding-right: 0;
+            }
+        }
+    }
+
+    &__limiter-wrapper {
+        margin-bottom: 0;
+        @include mq($screen-m) {
+            margin-right: $toolbar__offset;
+        }
+    }
+
+    &__sorter-label,
+    &__limiter-label {
+        @media (max-width: $screen-m - 1) {
+            @include visually-hidden;
+        }
+        @include mq($screen-m) {
+            color: $toolbar__secondary-text-color;
+            margin-bottom: 0;
+            margin-right:  $toolbar__offset;
+        }
+    }
+
+    &__limiter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 20%;
+        @include mq($screen-m) {
+            width: auto;
+        }
+    }
+
+    &__limiter-suffix {
+        display: none;
+        @include mq($screen-m) {
+            color: $toolbar__secondary-text-color;
+            display: block;
+        }
+    }
+}
