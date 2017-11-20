@@ -24,10 +24,6 @@ $header__search-wrapper-padding--medium: 0 24px !default;
 .header {
     position: relative;
 
-    &--menu-open {
-        overflow: visible;
-    }
-
     &__wrapper {
         justify-content: space-between;
         display: flex;
