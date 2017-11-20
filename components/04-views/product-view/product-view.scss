@@ -17,7 +17,7 @@ $product-view__col-base-spacing                         : $spacer--medium !defau
 $product-view__col-base-reduce-width                    : $product-view__col-base-spacing / 2;
 $product-view__col-left-base-width                      : 50%;
 $product-view__col-left-width                           : calc(#{$product-view__col-left-base-width} - #{$product-view__col-base-reduce-width}) !default;
-$product-view__col-right-base-width                     : calc(100% - #{$product-view__col-left-base-width});
+$product-view__col-right-base-width                     : 100% - #{$product-view__col-left-base-width};
 $product-view__col-right-width                          : calc(#{$product-view__col-right-base-width} - #{$product-view__col-base-reduce-width}) !default;
 
 $product-view__description-margin-bottom                : $spacer--medium !default;
