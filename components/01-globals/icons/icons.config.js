@@ -131,6 +131,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'shipping-time-truck',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'shopping-cart',
         class: 'icons__single-icon'
       },
