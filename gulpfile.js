@@ -13,6 +13,7 @@ const autoprefixer = require('autoprefixer'),
       logger       = fractal.cli.console,
       mandelbrot   = require('@frctl/mandelbrot'),
       notify       = require('gulp-notify'),
+      path         = require('path'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
       reporter     = require('postcss-reporter'),
@@ -235,22 +236,23 @@ gulp.task('inheritance', done => {
         );
       }
     });
-
   if (fs.existsSync('./modules.json')) {
     const modules = require('./modules.json');
 
     // Go through array of module paths
-    modules.forEach(path => {
+    modules.forEach(src => {
+      src = path.resolve(src);
+
       // Find all module files
       globby
         .sync([
-          path + '/' + components + '/**',
-          path + '/' + docs + '/**',
-          path + '/' + static + '/**'
+          src + '/' + components + '/**',
+          src + '/' + docs + '/**',
+          src + '/' + static + '/**'
         ], { nodir: true })
         .forEach(file => {
-          const srcPath = __dirname + '/' + file,
-                destPath = srcPath.replace(path, 'build');
+          const srcPath = path.resolve(file),
+                destPath = srcPath.replace(src, path.resolve('build'));
 
           // Symlink all module files to build dir
           if (util.env.ci) {
