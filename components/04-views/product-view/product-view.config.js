@@ -386,9 +386,14 @@ module.exports = {
       }
     },
     additionalContent: {
+      class: 'product-view__additional-content',
       image: {
-        defaultSrc: '',
+        defaultSrc: '/images/product-view/banner.jpg',
         sources: [
+          {
+            src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+            mediaQuery: '(max-width: 767px)'
+          },
           {
             src: '/images/product-view/banner.jpg',
             mediaQuery: '(min-width: 768px)'
