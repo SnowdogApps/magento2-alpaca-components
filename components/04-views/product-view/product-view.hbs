@@ -80,22 +80,22 @@
                     <h3>Qty</h3>
                     {{render '@quantity-update'}}
                 </div>
-                <div class="product-view__add-to-cart">
-                    {{> '@button' button }}
-                </div>
-                <div class="product-view__extra-actions">
-                    {{#each extraActions as |action|}}
-                        <{{tag}} class="product-view__action product-view__action--{{tag}} {{ action.class }}">
-                            {{ render '@icon' action.icon}}
-                        </{{tag}}>
-                    {{/each}}
+                <div class="product-view__action-elements">
+                    <div class="product-view__add-to-cart">
+                        {{> '@button' button }}
+                    </div>
+                    <div class="product-view__extra-actions">
+                        {{#each extraActions as |action|}}
+                            <{{tag}} class="product-view__action product-view__action--{{tag}} {{ action.class }}">
+                                {{ render '@icon' action.icon}}
+                            </{{tag}}>
+                        {{/each}}
+                    </div>
                 </div>
 
             </div>
             <div class="product-view__information">
-                SOME EXTRA INFORMATION
-                IT SHOULD BE MODULE
-                as it would be possibly a CMS block here
+                {{ render '@brief-info' briefInfo }}
             </div>
         </div>
     </div>

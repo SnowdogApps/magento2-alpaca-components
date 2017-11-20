@@ -20,8 +20,11 @@ $product-view__col-right-width                       : calc(#{$product-view__col
 $product-view__description-margin-bottom             : $spacer--medium !default;
 
 $product-view__extra-actions-margin-bottom           : $spacer--medium !default;
-$product-view__extra-actions-margin-bottom--screen-m: 0 !default;
+$product-view__extra-actions-margin-bottom--screen-m : $spacer !default;
+$product-view__extra-actions-margin-bottom--screen-l : 0 !default;
 $product-view__extra-actions-padding                 : 0 $spacer !default;
+// to match vertical aligment with input and btn
+$product-view__extra-actions-qty-margin-bottom--screen-m: 4px !default;
 
 $product-view__gallery-bottom-border                 : 1px solid $gray !default;
 $product-view__gallery-bottom-border--screen-m       : none !default;
@@ -30,7 +33,7 @@ $product-view__gallery-margin-bottom--screen-m       : 0 !default;
 $product-view__gallery-padding-bottom                : $spacer !default;
 $product-view__gallery-padding-bottom--screen-m      : 0 !default;
 
-$product-view__main-actions-margin-bottom            : 40px !default;
+$product-view__main-actions-margin-bottom            : 23px !default;
 
 $product-view__main-details-bottom-border            : 1px solid $gray !default;
 $product-view__main-details-bottom-spacing           : $spacer--medium !default;
@@ -253,11 +256,12 @@ $product-view__wrapper-margin-bottom--screen-xl      : 78px !default;
         display: flex;
         width: 100%;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         margin-bottom: $product-view__main-actions-margin-bottom;
         flex-wrap: wrap;
         @include mq($screen-l) {
             flex-wrap: nowrap;
+            align-items: flex-end;
         }
     }
 
@@ -268,13 +272,12 @@ $product-view__wrapper-margin-bottom--screen-xl      : 78px !default;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        flex: 0 0 100%;
+        flex: 0 0 auto;
         padding: $product-view__extra-actions-padding;
         margin-bottom: $product-view__extra-actions-margin-bottom;
         @include mq($screen-l) {
             justify-content: center;
-            flex: 0 0 auto;
-            margin-bottom: $product-view__extra-actions-margin-bottom--screen-m;
+            margin-bottom: $product-view__extra-actions-margin-bottom--screen-l;
         }
 
     }
@@ -282,9 +285,21 @@ $product-view__wrapper-margin-bottom--screen-xl      : 78px !default;
     &__qty {
         margin-bottom: $product-view__extra-actions-margin-bottom;
         flex: 0 0 auto;
+        margin-right: $product-view__qty-margin-right;
         @include mq($screen-l) {
-            margin-right: $product-view__qty-margin-right;
-            margin-bottom: $product-view__extra-actions-margin-bottom--screen-m;
+            margin-bottom: $product-view__extra-actions-margin-bottom--screen-l;
+        }
+    }
+    &__action-elements {
+        margin-top: 28px;
+        flex-wrap: nowrap;
+        flex: 1 0 auto;
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+        @include mq($screen-l) {
+            margin-top: 0;
+            flex-direction: row;
         }
     }
     &__add-to-cart-btn {
@@ -292,12 +307,13 @@ $product-view__wrapper-margin-bottom--screen-xl      : 78px !default;
         width: 100%;
     }
     &__add-to-cart {
-        width: 50%;
-        margin-bottom: $product-view__extra-actions-margin-bottom;
+        width: 100%;
+        margin-bottom: $product-view__extra-actions-margin-bottom--screen-m;
         @include mq($screen-l) {
-            width: 100%;
-            margin-right: $product-view__add-to-cart-margin-right;
-            margin-bottom: $product-view__extra-actions-margin-bottom--screen-m;
+            width: 50%;
+            flex: 1 0 auto;
+            margin-right: 16px;
+            margin-bottom: $product-view__extra-actions-margin-bottom--screen-l;
         }
     }
     &__action {
@@ -323,6 +339,7 @@ $product-view__wrapper-margin-bottom--screen-xl      : 78px !default;
             display: flex;
             justify-content: center;
             align-items: center;
+            fill: $gray;
         }
     }
     &__action-icon {
