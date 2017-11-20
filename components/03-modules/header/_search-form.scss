@@ -1,21 +1,21 @@
-$search-form__height           : 34px !default;
-$search-form__width            : 100% !default;
-$search-form__width--xl        : 70% !default;
-$search-form__alignment        : flex-end !default;
-$search-form__margin           : 0 !default;
-$search-form__border-color     : $gray-light !default;
-$search-form__font-size        : $font-size-small !default;
+$search-form__height            : 34px !default;
+$search-form__width             : 100% !default;
+$search-form__width--extra-large: 70% !default;
+$search-form__alignment         : flex-end !default;
+$search-form__margin            : 0 !default;
+$search-form__border-color      : $gray-light !default;
+$search-form__font-size         : $font-size-small !default;
 
-$search-form__input-height     : 32px !default;
-$search-form__input-color      : $gray !default;
+$search-form__input-height      : 32px !default;
+$search-form__input-color       : $gray !default;
 
-$search-form__button-size      : 18px !default;
-$search-form__button-margin    : 0 !default;
-$search-form__button-border    : none !default;
-$search-form__button-background: transparent !default;
-$search-form__button-icon-color: $gray-dark !default;
+$search-form__button-size       : 18px !default;
+$search-form__button-margin     : 0 !default;
+$search-form__button-border     : none !default;
+$search-form__button-background : transparent !default;
+$search-form__button-icon-color : $gray-dark !default;
 
-$search-form__placeholder-color: $gray !default;
+$search-form__placeholder-color : $gray !default;
 
 .search-form {
     position: relative;
@@ -27,7 +27,7 @@ $search-form__placeholder-color: $gray !default;
     border-radius: $search-form__height;
     z-index: 1;
     @include mq($screen-xl) {
-        width: $search-form__width--xl;
+        width: $search-form__width--extra-large;
     }
 
     &__input {

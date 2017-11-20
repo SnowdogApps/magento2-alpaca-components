@@ -37,7 +37,7 @@ module.exports = {
       class: 'header__logo',
       logoSVG: true,
       ariaLabel: 'Home page link',
-      imageAlt: 'Logo'
+      imageAlt: 'Alpaca Logo'
     },
     searchInput: {
       class: 'search-form__input-wrapper',
