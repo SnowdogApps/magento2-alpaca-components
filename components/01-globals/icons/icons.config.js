@@ -127,6 +127,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'shield',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'shopping-cart',
         class: 'icons__single-icon'
       },
