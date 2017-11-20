@@ -162,8 +162,10 @@ module.exports = {
       },
       {
         icon: {
+          class: 'product-view__icon-envelope',
           iconId: 'envelope',
-          title: 'Send email to a friend'
+          title: 'Send email to a friend',
+          svgClass: 'product-view__action-icon product-view__icon-envelope'
         },
         tag: 'a',
         attributes: 'href="#"'
