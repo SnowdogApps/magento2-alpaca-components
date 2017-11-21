@@ -89,12 +89,17 @@ $product-view__swatch-option-height--attributes         : 64px !default;
 $product-view__swatch-option-width                      : 32px !default;
 $product-view__swatch-option-width--attributes          : 54px !default;
 
+$product-view__slider-margin-bottom                     : $spacer !default;
+$product-view__slider-margin-bottom\@medium             : 72px !default;
+$product-view__slider-margin-bottom--last\@medium       : 56px !default;
+$product-view__slider-margin-bottom--last\@large        : 64px !default;
 $product-view__slider-heading-font-size                 : 24px !default;
 $product-view__slider-heading-font-size-weight          : $font-weight-bold;
 $product-view__slider-heading-margin-bottom             : 35px !default;
 $product-view__slider-heading-text-transform            : uppercase !default;
 
-$product-view__tabs-margin-bottom                       : 72px !default;
+$product-view__tabs-margin-bottom                       : 14px !default;
+$product-view__tabs-margin-bottom\@medium               : 72px !default;
 
 $product-view__wrapper-margin-bottom                    : 18px !default;
 $product-view__wrapper-margin-bottom\@medium            : 40px !default;
@@ -201,14 +206,17 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
 
     &__tabs {
         margin-bottom: $product-view__tabs-margin-bottom;
+        @include mq($screen-m) {
+            margin-bottom: $product-view__tabs-margin-bottom\@medium;
+        }
     }
 
     &__information {
         order: 3;
         width: 100%;
-        padding: 0 $product-view__information-padding;
+        padding: $product-view__information-padding;
         @include mq($screen-m) {
-            padding: 0 $product-view__information-padding\@medium;
+            padding: $product-view__information-padding\@medium;
         }
     }
 
@@ -414,11 +422,28 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
     }
 
     &__slider {
+        margin-bottom: $product-view__slider-margin-bottom;
+        @include mq($screen-m) {
+            margin-bottom: $product-view__slider-margin-bottom\@medium;
+        }
+        &:last-child {
+            @include mq($screen-m) {
+                margin-bottom: $product-view__slider-margin-bottom--last\@medium;
+            }
+            @include mq($screen-l) {
+                margin-bottom: $product-view__slider-margin-bottom--last\@large;
+            }
+        }
         .heading {
             font-size: $product-view__slider-heading-font-size;
             font-weight: $product-view__slider-heading-font-size-weight;
             text-transform: $product-view__slider-heading-text-transform;
             margin-bottom: $product-view__slider-heading-margin-bottom;
+        }
+    }
+    &__slider-navigation {
+        @include mq($screen-l) {
+            display: none;
         }
     }
 

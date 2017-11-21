@@ -283,71 +283,109 @@ module.exports = {
     },
     relatedProducts: {
       heading: 'Related products',
-      script: false,
-      slides: [
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-base.jpg',
-            alt: 'slider1'
-          }
+      slider: {
+        attributes: 'data-rewind="true" data-enable-mouse-events="true" data-slides-to-scroll="1"',
+        iconPrev: {
+          tag: 'button',
+          text: '',
+          class: 'button--icon slider__navigation-icon slider__prev',
+          iconId: 'angle-left',
+          iconClass: 'button__icon slider__icon',
+          attributes: 'type="button" aria-label="button arrow slider prev"'
         },
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-second.jpg',
-            alt: 'slider2'
-          }
+        iconNext: {
+          tag: 'button',
+          text: '',
+          class: 'button--icon slider__navigation-icon slider__next',
+          iconId: 'angle-right',
+          iconClass: 'button__icon slider__icon',
+          attributes: 'type="button" aria-label="button arrow slider next"'
         },
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-base.jpg',
-            alt: 'slider3'
+        navigationClass: 'product-view__slider-navigation',
+        slides: [
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-base.jpg',
+              alt: 'slider1'
+            }
+          },
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-second.jpg',
+              alt: 'slider2'
+            }
+          },
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-base.jpg',
+              alt: 'slider3'
+            }
+          },
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-second.jpg',
+              alt: 'slider4'
+            }
           }
-        },
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-second.jpg',
-            alt: 'slider4'
-          }
-        }
-      ]
+        ]
+      },
     },
     upsellProducts: {
       heading: 'You may also like',
-      script: true,
-      slides: [
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-base.jpg',
-            alt: 'slider1'
-          }
+      slider: {
+        attributes: 'data-rewind="true" data-enable-mouse-events="true" data-slides-to-scroll="1"',
+        iconPrev: {
+          tag: 'button',
+          text: '',
+          class: 'button--icon slider__navigation-icon slider__prev',
+          iconId: 'angle-left',
+          iconClass: 'button__icon slider__icon',
+          attributes: 'type="button" aria-label="button arrow slider prev"'
         },
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-second.jpg',
-            alt: 'slider2'
-          }
+        iconNext: {
+          tag: 'button',
+          text: '',
+          class: 'button--icon slider__navigation-icon slider__next',
+          iconId: 'angle-right',
+          iconClass: 'button__icon slider__icon',
+          attributes: 'type="button" aria-label="button arrow slider next"'
         },
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-base.jpg',
-            alt: 'slider3'
+        navigationClass: 'product-view__slider-navigation',
+        slides: [
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-base.jpg',
+              alt: 'slider1'
+            }
+          },
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-second.jpg',
+              alt: 'slider2'
+            }
+          },
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-base.jpg',
+              alt: 'slider3'
+            }
+          },
+          {
+            content: 'image',
+            contentContext: {
+              src: '../../images/product/product-second.jpg',
+              alt: 'slider4'
+            }
           }
-        },
-        {
-          content: 'image',
-          contentContext: {
-            src: '../../images/product/product-second.jpg',
-            alt: 'slider4'
-          }
-        }
-      ]
+        ]
+      }
     },
     additionalContent: {
       class: 'product-view__additional-content',

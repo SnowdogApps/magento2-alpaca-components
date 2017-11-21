@@ -1,5 +1,6 @@
-$brief-info__padding                                       : $spacer--medium 0 !default;
-$brief-info__border-style                                  : 1px $gray-light solid !default;
+$brief-info__padding                                       : $spacer--medium 0 0 !default;
+$brief-info__padding\@large                                : $spacer--medium 0 !default;
+$brief-info__border                                        : 1px $gray-light solid !default;
 $brief-info__content-text-align                            : center !default;
 $brief-info__content-text-align\@medium                    : left !default;
 $brief-info__icon-bg-color                                 : $gray-light !default;
@@ -31,8 +32,11 @@ $brief-info__title-margin-bottom                           : 0 !default;
     justify-content: space-between;
     align-items: flex-start;
     padding: $brief-info__padding;
-    border-top: $brief-info__border-style;
-    border-bottom: $brief-info__border-style;
+    border-top: $brief-info__border;
+    @include mq($screen-m) {
+        padding: $brief-info__padding\@large;
+        border-bottom: $brief-info__border;
+    }
 
     &__item {
         display: flex;
