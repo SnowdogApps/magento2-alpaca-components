@@ -60,7 +60,7 @@
     });
 
     inputMin.addEventListener('change', (event) => {
-      rangeSlider.noUiSlider.set([null, event.target.value]);
+      rangeSlider.noUiSlider.set([event.target.value, null]);
     });
   }
 
