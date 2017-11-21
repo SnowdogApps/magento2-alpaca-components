@@ -16,6 +16,7 @@ module.exports = {
         class: '',
         id: 'dropdown-1',
         collapse: true,
+        collapseIcon: 'angle-down',
         contentElement: 'image'
       },
       {
@@ -25,6 +26,7 @@ module.exports = {
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
         collapse: true,
+        collapseIcon: 'angle-down',
         contentElement: 'paragraph'
       },
       {
@@ -34,6 +36,7 @@ module.exports = {
         class: '',
         id: 'dropdown-3',
         collapse: true,
+        collapseIcon: 'angle-down',
         contentElement: 'image'
       },
       {
@@ -43,6 +46,7 @@ module.exports = {
         class: '',
         id: 'dropdown-4',
         collapse: true,
+        collapseIcon: 'angle-down',
         contentElement: 'paragraph'
       }
     ]
@@ -77,6 +81,7 @@ module.exports = {
             id: 'dropdown-1',
             itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
             collapse: true,
+            collapseIcon: 'angle-down',
             listNested: [
               {
                 itemTag: 'a',
@@ -84,6 +89,7 @@ module.exports = {
                 itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-1-1"',
                 id: 'dropdown-1-1',
                 collapse: true,
+                collapseIcon: 'angle-down',
                 sublist: [
                   {
                     itemTag: 'a',
@@ -113,6 +119,7 @@ module.exports = {
                 itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-1-2"',
                 id: 'dropdown-1-2',
                 collapse: true,
+                collapseIcon: 'angle-down',
                 sublist: [
                   {
                     itemTag: 'a',
@@ -153,6 +160,7 @@ module.exports = {
             title: 'dropdown title',
             id: 'dropdown-2',
             collapse: true,
+            collapseIcon: 'angle-down',
             listNested: [
               {
                 itemTag: 'a',
@@ -174,6 +182,7 @@ module.exports = {
             title: 'dropdown title',
             id: 'dropdown-3',
             collapse: true,
+            collapseIcon: 'angle-down',
             listNested: [
               {
                 itemTag: 'a',
@@ -181,6 +190,7 @@ module.exports = {
                 itemName: 'Item name',
                 id: 'dropdown-3-1',
                 collapse: true,
+                collapseIcon: 'angle-down',
                 sublist: [
                   {
                     itemTag: 'a',
@@ -206,6 +216,7 @@ module.exports = {
                 itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-2"',
                 id: 'dropdown-3-2',
                 collapse: true,
+                collapseIcon: 'angle-down',
                 sublist: [
                   {
                     itemTag: 'a',
@@ -245,6 +256,7 @@ module.exports = {
                 itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-3"',
                 id: 'dropdown-3-3',
                 collapse: true,
+                collapseIcon: 'angle-down',
                 sublist: [
                   {
                     itemTag: 'a',
@@ -259,6 +271,7 @@ module.exports = {
                 itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-4"',
                 id: 'dropdown-3-4',
                 collapse: true,
+                collapseIcon: 'angle-down',
                 sublist: [
                   {
                     itemTag: 'a',
