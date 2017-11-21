@@ -13,6 +13,7 @@ $brief-info__icon-shield-padding                           : 12px 14px 12px 15px
 $brief-info__icon-shield-svg-height                        : 100% !default;
 $brief-info__icon-shield-svg-padding                       : 0 !default;
 $brief-info__icon-shield-svg-width                         : 100% !default;
+$brief-info__icon-size                                     : 48px !default;
 $brief-info__item-margin-right                             : 30px !default;
 $brief-info__item-margin-right\@medium                     : $spacer--medium !default;
 $brief-info__link-font-size                                : $font-size-small !default;
@@ -49,16 +50,21 @@ $brief-info__title-margin-bottom                           : 0 !default;
         }
     }
 
-    &__icon {
+    &__icon-wrapper {
         margin: $brief-info__icon-margin;
         background-color: $brief-info__icon-bg-color;
         border-radius: $brief-info__icon-border-radius;
+        width: $brief-info__icon-size;
+        height: $brief-info__icon-size;
         &--delivery-truck {
             padding: $brief-info__icon-delivery-truck-padding;
         }
     }
 
-    &__svg {
+    &__icon {
+        width: 100%;
+        height: 100%;
+        padding: 14px;
         &--delivery-truck {
             padding: $brief-info__icon-delivery-truck-svg-padding;
             width: $brief-info__icon-delivery-truck-svg-width;

@@ -2,10 +2,10 @@ module.exports = {
   context: {
     items: [
       {
+        iconWrapperClass: 'brief-info__icon-wrapper--delivery-truck',
         icon: {
           class: 'brief-info__icon brief-info__icon--delivery-truck',
           iconId: 'shipping-time-truck',
-          svgClass: 'brief-info__svg brief-info__svg--delivery-truck'
         },
         link: {
           class: '',
@@ -35,6 +35,7 @@ module.exports = {
         }
       },
       {
+        class: 'brief-info__icon brief-info__icon--shield',
         icon: {
           class: 'brief-info__icon',
           iconId: 'shield'

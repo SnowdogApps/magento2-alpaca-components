@@ -1,7 +1,9 @@
 <div class="brief-info">
     {{#each items as |item|}}
     <div class="brief-info__item">
-        {{ render '@icon' item.icon }}
+        <i class="brief-info__icon-wrapper {{ item.iconWrapperClass }}">
+            {{ render '@icon' item.icon }}
+        </i>
         <div class="brief-info__content">
             <{{ item.title.tag }}
                 {{{ item.title.attributes }}}
