@@ -1,16 +1,20 @@
 $brief-info__padding                                       : $spacer--medium 0 !default;
 $brief-info__border-style                                  : 1px $gray-light solid !default;
+$brief-info__content-text-align                            : center !default;
+$brief-info__content-text-align\@medium                    : left !default;
 $brief-info__icon-bg-color                                 : $gray-light !default;
 $brief-info__icon-border-radius                            : 32px !default;
 $brief-info__icon-delivery-truck-padding                   : 13px $spacer 13px 6px !default;
-$brief-info__icon-delivery-truck-svg-height                : 100%;
+$brief-info__icon-delivery-truck-svg-height                : 100% !default;
 $brief-info__icon-delivery-truck-svg-padding               : 0 !default;
-$brief-info__icon-delivery-truck-svg-width                 : 100%;
+$brief-info__icon-delivery-truck-svg-width                 : 100% !default;
 $brief-info__icon-margin                                   : 0 0 $spacer 0 !default;
 $brief-info__icon-shield-padding                           : 12px 14px 12px 15px !default;
-$brief-info__icon-shield-svg-height                        : 100%;
+$brief-info__icon-shield-svg-height                        : 100% !default;
 $brief-info__icon-shield-svg-padding                       : 0 !default;
-$brief-info__icon-shield-svg-width                         : 100%;
+$brief-info__icon-shield-svg-width                         : 100% !default;
+$brief-info__item-margin-right                             : 30px !default;
+$brief-info__item-margin-right\@medium                     : 10px !default;
 $brief-info__link-font-size                                : $font-size-small !default;
 $brief-info__link-font-weight                              : $font-weight-bold !default;
 $brief-info__link-text-decoration                          : none !default;
@@ -24,7 +28,7 @@ $brief-info__title-margin-bottom                           : 0 !default;
 .brief-info {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-center;
     padding: $brief-info__padding;
     border-top: $brief-info__border-style;
     border-bottom: $brief-info__border-style;
@@ -32,8 +36,16 @@ $brief-info__title-margin-bottom                           : 0 !default;
     &__item {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
+        margin-right: $brief-info__item-margin-right;
+        @include mq($screen-m) {
+            align-items: flex-start;
+            margin-right: $brief-info__item-margin-right\@medium;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     &__icon {
@@ -73,5 +85,11 @@ $brief-info__title-margin-bottom                           : 0 !default;
         font-size: $brief-info__link-font-size;
         font-weight: $brief-info__link-font-weight;
         text-decoration: $brief-info__link-text-decoration;
+    }
+    &__content {
+        text-align: $brief-info__content-text-align;
+        @include mq($screen-m) {
+            text-align: $brief-info__content-text-align\@medium;
+        }
     }
 }

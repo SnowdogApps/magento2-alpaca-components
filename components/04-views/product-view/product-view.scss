@@ -40,6 +40,9 @@ $product-view__gallery-margin-bottom\@medium            : 0 !default;
 $product-view__gallery-padding-bottom                   : $spacer !default;
 $product-view__gallery-padding-bottom\@medium           : 0 !default;
 
+$product-view__information-padding                      : 0 20px !default;
+$product-view__information-padding\@medium              : 0 !default;
+
 $product-view__main-actions-margin-bottom               : 23px !default;
 
 $product-view__main-details-bottom-border               : 1px solid $gray !default;
@@ -202,6 +205,11 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
 
     &__information {
         order: 3;
+        width: 100%;
+        padding: 0 $product-view__information-padding;
+        @include mq($screen-m) {
+            padding: 0 $product-view__information-padding\@medium;
+        }
     }
 
     &__rating {
