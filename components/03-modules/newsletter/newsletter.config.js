@@ -14,7 +14,9 @@ module.exports = {
         class: 'newsletter__field'
       },
       label: {
-        class: 'newsletter__label'
+        class: 'newsletter__label',
+        hidden: true,
+        text: 'Email for newsletter subscription'
       }
     },
     button: {
