@@ -1,35 +1,37 @@
-$footer__padding                     : $spacer--medium 0 !default;
-$footer__bg-color                    : $gray-darkest !default;
-$footer__bg-color\@large             : $gray-darker !default;
-$footer__font-color                  : $gray-lighter !default;
-$footer__transition                  : $transition-base !default;
+$footer__padding                       : $spacer--medium !default;
+$footer__background-color              : $gray-darkest !default;
+$footer__background-color\@large       : $gray-darker !default;
 
-$footer__newsletter-max-width        : 400px !default;
-$footer__newsletter-width--screen-l  : 30% !default;
-$footer__newsletter-padding          : 0 $spacer--medium !default;
+$footer__newsletter-max-width          : 400px !default;
+$footer__newsletter-width\@large       : 30% !default;
+$footer__newsletter-padding            : 0 $spacer--medium !default;
 
-$footer__links-width--screen-l       : 70% !default;
-$footer__link-inner-padding          : $spacer--medium !default;
+$footer__links-width\@large            : 70% !default;
+$footer__link-inner-padding            : $spacer--medium !default;
 
-$footer__bottom-bar-background\@large: $gray-darkest !default;
-$footer__bottom-bar-color            : $gray-lighter !default;
-$footer__bottom-bar-font-size        : $font-size-small !default;
+$footer__bottom-bar-background\@large  : $gray-darkest !default;
+$footer__bottom-bar-color              : $gray-lighter !default;
+$footer__bottom-bar-font-size          : $font-size-small !default;
+
+$footer__copywrite-padding-left\@medium: $spacer;
+$footer__copywrite-padding-left\@large : $spacer--medium;
+
 
 
 .footer {
-    background-color: $footer__bg-color;
-    padding: $footer__padding;
+    background-color: $footer__background-color;
+    padding: $footer__padding 0;
 
     @include mq($screen-m) {
         padding-bottom: 0;
     }
 
     @include mq($screen-l) {
-        background-color: $footer__bg-color\@large;
+        background-color: $footer__background-color\@large;
     }
 
     &__handler {
-        margin: 0 auto $spacer--medium;
+        margin: 0 auto $footer__padding;
 
         @include mq($screen-m) {
             margin: 0 auto;
@@ -42,20 +44,20 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     }
 
     &__newsletter {
-        margin: 0 auto $spacer--medium;
+        margin: 0 auto $footer__padding;
         max-width: $footer__newsletter-max-width;
         padding: $footer__newsletter-padding;
 
         @include mq($screen-l) {
-            width: $footer__newsletter-width--screen-l;
+            width: $footer__newsletter-width\@large;
             order: 1;
-            padding-top: $spacer--medium;
+            padding-top: $footer__padding;
         }
     }
 
     &__links {
         @include mq($screen-l) {
-            width: $footer__links-width--screen-l;
+            width: $footer__links-width\@large;
         }
 
         .dropdown-list {
@@ -79,7 +81,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     }
 
     &__links-list {
-        padding-bottom: $spacer--medium;
+        padding-bottom: $footer__padding;
     }
 
     &__bottom-bar {
@@ -98,7 +100,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     }
 
     &__social-handler {
-        margin-bottom: $spacer--medium;
+        margin-bottom: $footer__padding;
 
         @include mq($screen-m) {
             display: flex;
@@ -113,7 +115,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
         display: none;
         @include mq($screen-m) {
             display: block;
-            margin-right: $spacer--medium;
+            margin-right: $footer__padding;
             font-size: $footer__bottom-bar-font-size;
         }
     }
@@ -124,24 +126,11 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
         text-align: center;
 
         @include mq($screen-m) {
-            padding-left: $spacer;
+            padding-left: $footer__copywrite-padding-left\@medium;
         }
 
         @include mq($screen-l) {
-            padding-left: $spacer--medium;
-        }
-    }
-
-    // Can't add just &__social-list-item
-    .footer__social-list-item {
-        padding-right: $spacer--medium;
-
-        @include mq($screen-m) {
-            padding-right: 0;
-        }
-
-        &:last-child {
-            padding-right: 0;
+            padding-left: $footer__copywrite-padding-left\@large;
         }
     }
 }
