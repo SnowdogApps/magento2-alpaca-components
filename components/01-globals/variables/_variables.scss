@@ -4,17 +4,17 @@ $black                       : #000 !default;
 $red                         : #e85b55 !default;
 $orange                      : #fab216 !default;
 $yellow                      : #ffd500 !default;
-$green                       : #00b840 !default;
+$green                       : #31e37d !default;
 $blue                        : #0275d8 !default;
 $teal                        : #5bc0de !default;
 $pink                        : #ff5b77 !default;
 $purple                      : #613d7c !default;
 
 // Grayscale colors
-$gray-darker                 : #292b2c !default;
+$gray-darker                 : #393243 !default;
 $gray-dark                   : #333333 !default;
-$gray                        : #d1d0d4 !default;
-$gray-light                  : #f5f5f6 !default;
+$gray                        : #73739c !default;
+$gray-light                  : #c2c1df !default;
 $gray-lighter                : #eceeef !default;
 $gray-lightest               : #f7f7f9 !default;
 
@@ -77,9 +77,9 @@ $screen-xl                   : 1200px !default;
 $screen-xxl                  : 1600px !default;
 
 // Components
-$border-radius               : 4px !default;
-$form-elements-radius        : 32px !default;
-$form-elements-radius--small : 10px !default; // TODO : formatting rest of rules
-$form-elements-border-color  : $gray !default;
-$transition-base             : all 0.3s ease-in-out !default;
-$transition-fade             : opacity 0.25s linear !default;
+$border-radius              : 4px !default;
+$form-elements-radius       : 32px !default;
+$form-elements-radius--small: 10px !default; // TODO: formatting rest of rules
+$form-elements-border-color : $gray-light !default;
+$transition-base            : all 0.3s ease-in-out !default;
+$transition-fade            : opacity 0.25s linear !default;
