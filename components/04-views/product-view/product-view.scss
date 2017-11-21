@@ -1,5 +1,5 @@
 $product-view__action-elements-margin-top               : 28px !default;
-$product-view__action-elements-margin-top--screen-l     : 0 !default;
+$product-view__action-elements-margin-top\@large        : 0 !default;
 
 $product-view__action-icon-color                        : #a09fa6 !default;
 $product-view__action-icon-padding                      : 0 !default;
@@ -8,7 +8,7 @@ $product-view__action-item-size                         : 32px !default;
 $product-view__action-item-spacing                      : $spacer !default;
 
 $product-view__add-review-link-font-size                : $font-size-base;
-$product-view__add-review-link-font-size--screen-m      : $font-size-small;
+$product-view__add-review-link-font-size\@medium        : $font-size-small;
 
 $product-view__add-to-cart-margin-right                 : $spacer--medium !default;
 
@@ -24,18 +24,21 @@ $product-view__col-right-width                          : calc(#{$product-view__
 $product-view__description-margin-bottom                : $spacer--medium !default;
 
 $product-view__extra-actions-margin-bottom              : $spacer--medium !default;
-$product-view__extra-actions-margin-bottom--screen-m    : $spacer !default;
-$product-view__extra-actions-margin-bottom--screen-l    : 0 !default;
+$product-view__extra-actions-margin-bottom\@medium      : $spacer !default;
+$product-view__extra-actions-margin-bottom\@large       : 0 !default;
 $product-view__extra-actions-padding                    : 0 $spacer !default;
 // to match vertical aligment with input and btn
-$product-view__extra-actions-qty-margin-bottom--screen-m: 4px !default;
+$product-view__extra-actions-qty-margin-bottom\@medium  : 4px !default;
+
+$product-view__add-to-cart-margin                       : 0 0 $product-view__extra-actions-margin-bottom\@medium 0 !default;
+$product-view__add-to-cart-margin\@large                : 0 $product-view__add-to-cart-margin-right $product-view__extra-actions-margin-bottom\@large 0 !default
 
 $product-view__gallery-bottom-border                    : 1px solid $gray !default;
-$product-view__gallery-bottom-border--screen-m          : none !default;
+$product-view__gallery-bottom-border\@medium            : none !default;
 $product-view__gallery-margin-bottom                    : $spacer--medium !default;
-$product-view__gallery-margin-bottom--screen-m          : 0 !default;
+$product-view__gallery-margin-bottom\@medium            : 0 !default;
 $product-view__gallery-padding-bottom                   : $spacer !default;
-$product-view__gallery-padding-bottom--screen-m         : 0 !default;
+$product-view__gallery-padding-bottom\@medium           : 0 !default;
 
 $product-view__main-actions-margin-bottom               : 23px !default;
 
@@ -43,14 +46,14 @@ $product-view__main-details-bottom-border               : 1px solid $gray !defau
 $product-view__main-details-bottom-spacing              : $spacer--medium !default;
 
 $product-view__order-gallery                            : 2 !default;
-$product-view__order-gallery--screen-m                  : 1 !default;
+$product-view__order-gallery\@medium                    : 1 !default;
 $product-view__order-main-details                       : 1 !default;
-$product-view__order-main-details--screen-m             : 2 !default;
+$product-view__order-main-details\@medium               : 2 !default;
 $product-view__order-secondary-details                  : 3 !default;
-$product-view__order-secondary-details--screen-m        : 3 !default;
+$product-view__order-secondary-details\@medium          : 3 !default;
 
 $product-view__price-bottom-margin                      : $spacer--medium !default;
-$product-view__price-bottom-margin--medium-m            : $spacer !default;
+$product-view__price-bottom-margin\@medium              : $spacer !default;
 $product-view__price-color                              : $gray-darker !default;
 $product-view__price-font-size                          : $font-size-large !default;
 $product-view__price-font-weight                        : $font-weight-bold !default;
@@ -63,20 +66,20 @@ $product-view__qty-margin-right                         : 24px !default;
 
 $product-view__rating-link-color                        : $gray-dark !default;
 $product-view__rating-margin                            : 0 0 14px 0 !default;
-$product-view__rating-margin--screen-m                  : 0 !default;
+$product-view__rating-margin\@medium                    : 0 !default;
 $product-view__rating-text-color                        : $gray-dark !default;
 $product-view__rating-value-font-size                   : $font-size-base;
-$product-view__rating-value-font-size--screen-m         : $font-size-small;
+$product-view__rating-value-font-size\@medium           : $font-size-small;
 
 $product-view__sku-color                                : $gray-dark !default;
 $product-view__sku-margin-bottom                        : $spacer--medium !default;
-$product-view__sku-margin-bottom--screen-m              : $spacer !default;
+$product-view__sku-margin-bottom\@medium                : $spacer !default;
 $product-view__sku-padding-right                        : 55% !default;
 
 $product-view__stock-color                              : $gray-dark !default;
 $product-view__stock-color--out-of-stock                : $red !default;
 $product-view__stock-color--alert                       : $red !default;
-$product-view__stock-font-weight--screen-m              : $font-weight-bold !default;
+$product-view__stock-font-weight\@medium                : $font-weight-bold !default;
 
 $product-view__swatch-option-height                     : 32px !default;
 $product-view__swatch-option-height--attributes         : 64px !default;
@@ -91,7 +94,7 @@ $product-view__slider-heading-text-transform            : uppercase !default;
 $product-view__tabs-margin-bottom                       : 72px !default;
 
 $product-view__wrapper-margin-bottom                    : 18px !default;
-$product-view__wrapper-margin-bottom--screen-m          : 40px !default;
+$product-view__wrapper-margin-bottom\@medium            : 40px !default;
 $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
 
 .product-view {
@@ -105,10 +108,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
 
         @include mq($screen-m) {
             display: block;
-            margin-bottom: $product-view__wrapper-margin-bottom--screen-m;
-        }
-        @include mq($screen-xl) {
-            margin-bottom: $product-view__wrapper-margin-bottom--screen-m;
+            margin-bottom: $product-view__wrapper-margin-bottom\@medium;
         }
     }
 
@@ -119,9 +119,9 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
         padding-bottom: $product-view__gallery-padding-bottom;
         margin-bottom: $product-view__gallery-margin-bottom;
         @include mq($screen-m) {
-            border-bottom: $product-view__gallery-bottom-border--screen-m;
-            padding-bottom: $product-view__gallery-padding-bottom--screen-m;
-            margin-bottom: $product-view__gallery-margin-bottom--screen-m;
+            border-bottom: $product-view__gallery-bottom-border\@medium;
+            padding-bottom: $product-view__gallery-padding-bottom\@medium;
+            margin-bottom: $product-view__gallery-margin-bottom\@medium;
             float: left;
             width: $product-view__col-left-width;
         }
@@ -172,7 +172,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
             float: left;
             width: 100%;
             padding-right: 55%;
-            margin-bottom: $product-view__price-bottom-margin--medium-m;
+            margin-bottom: $product-view__price-bottom-margin\@medium;
         }
     }
 
@@ -213,7 +213,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
             right: 0;
             width: 45%;
             text-align: right;
-            margin: $product-view__rating-margin--screen-m;
+            margin: $product-view__rating-margin\@medium;
         }
     }
 
@@ -226,7 +226,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
             margin-bottom: 0;
             float: right;
             text-align: left;
-            font-weight: $product-view__stock-font-weight--screen-m;
+            font-weight: $product-view__stock-font-weight\@medium;
             text-transform: uppercase;
             position: absolute;
             right: 0;
@@ -301,7 +301,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
         margin-bottom: $product-view__extra-actions-margin-bottom;
         @include mq($screen-l) {
             justify-content: center;
-            margin-bottom: $product-view__extra-actions-margin-bottom--screen-l;
+            margin-bottom: $product-view__extra-actions-margin-bottom\@large;
         }
 
     }
@@ -311,7 +311,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
         flex: 0 0 auto;
         margin-right: $product-view__qty-margin-right;
         @include mq($screen-l) {
-            margin-bottom: $product-view__extra-actions-margin-bottom--screen-l;
+            margin-bottom: $product-view__extra-actions-margin-bottom\@large;
         }
     }
 
@@ -322,7 +322,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
         justify-content: space-between;
         display: flex;
         @include mq($screen-l) {
-            margin-top: $product-view__action-elements-margin-top--screen-l;
+            margin-top: $product-view__action-elements-margin-top\@large;
             flex-flow: row nowrap;
         }
     }
@@ -334,12 +334,11 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
 
     &__add-to-cart {
         width: 100%;
-        margin-bottom: $product-view__extra-actions-margin-bottom--screen-m;
+        margin: $product-view__add-to-cart-margin;
         @include mq($screen-l) {
             width: 50%;
             flex: 1 0 auto;
-            margin-right: $product-view__add-to-cart-margin-right;
-            margin-bottom: $product-view__extra-actions-margin-bottom--screen-l;
+            margin: $product-view__add-to-cart-margin\@large;
         }
     }
 
@@ -391,7 +390,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
             text-decoration: none;
             font-size: $product-view__add-review-link-font-size;
             @include mq($screen-m) {
-                font-size: $product-view__add-review-link-font-size--screen-m;
+                font-size: $product-view__add-review-link-font-size\@medium;
             }
         }
     }
@@ -402,7 +401,7 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
         margin-bottom: $product-view__sku-margin-bottom;
         @include mq($screen-m) {
             display: block;
-            margin-bottom: $product-view__sku-margin-bottom--screen-m;
+            margin-bottom: $product-view__sku-margin-bottom\@medium;
             padding-right: $product-view__sku-padding-right;
         }
     }
