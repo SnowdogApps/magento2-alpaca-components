@@ -15,7 +15,7 @@ $brief-info__link-font-size                                : $font-size-small !d
 $brief-info__link-font-weight                              : $font-weight-bold !default;
 $brief-info__link-text-decoration                          : none !default;
 $brief-info__title-font-size                               : $font-size-small !default;
-$brief-info__title-font-size--screen-l                     : $font-size-base !default
+$brief-info__title-font-size\@large                        : $font-size-base !default
 $brief-info__title-font-weight                             : $font-weight-normal !default;
 $brief-info__title-line-height                             : 1em !default;
 $brief-info__title-text-transform                          : uppercase !default;
@@ -65,7 +65,7 @@ $brief-info__title-margin-bottom                           : 0 !default;
         line-height: $brief-info__title-line-height;
         font-weight: $brief-info__title-font-weight;
         @include mq($screen-l) {
-            font-size: $brief-info__title-font-size--screen-l;
+            font-size: $brief-info__title-font-size\@large;
         }
     }
 
