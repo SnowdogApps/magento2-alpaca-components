@@ -1,19 +1,9 @@
-$icon__width      : 48px !default;
-$icon__height     : 48px !default;
-$icon__padding    : 12px !default;
-$icon__svg-width  : 24px !default;
-$icon__svg-height : 24px !default;
-$icon__svg-padding: 2px !default;
+$icon__size    : 24px !default;
+$icon__padding : 2px !default;
 
 .icon {
-    padding: $icon__padding;
     display: block;
-    width: $icon__width;
-    height: $icon__height;
-
-    &__svg {
-        width: $icon__svg-width;
-        height: $icon__svg-height;
-        padding: $icon__svg-padding;
-    }
+    width: $icon__size;
+    height: $icon__size;
+    padding: $icon__padding;
 }
