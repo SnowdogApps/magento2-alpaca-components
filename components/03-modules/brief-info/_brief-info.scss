@@ -21,7 +21,6 @@ $brief-info__title-line-height                             : 1em !default;
 $brief-info__title-text-transform                          : uppercase !default;
 $brief-info__title-margin-bottom                           : 0 !default;
 
-
 .brief-info {
     display: flex;
     justify-content: space-between;
@@ -29,12 +28,14 @@ $brief-info__title-margin-bottom                           : 0 !default;
     padding: $brief-info__padding;
     border-top: $brief-info__border-style;
     border-bottom: $brief-info__border-style;
+
     &__item {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-direction: column;
     }
+
     &__icon {
         margin: $brief-info__icon-margin;
         background-color: $brief-info__icon-bg-color;
@@ -43,6 +44,7 @@ $brief-info__title-margin-bottom                           : 0 !default;
             padding: $brief-info__icon-delivery-truck-padding;
         }
     }
+
     &__svg {
         &--delivery-truck {
             padding: $brief-info__icon-delivery-truck-svg-padding;
@@ -55,6 +57,7 @@ $brief-info__title-margin-bottom                           : 0 !default;
             height: $brief-info__icon-shield-svg-height;
         }
     }
+
     &__title {
         margin-bottom: $brief-info__title-margin-bottom;
         font-size: $brief-info__title-font-size;
@@ -65,10 +68,10 @@ $brief-info__title-margin-bottom                           : 0 !default;
             font-size: $brief-info__title-font-size--screen-l;
         }
     }
+
     &__link {
         font-size: $brief-info__link-font-size;
         font-weight: $brief-info__link-font-weight;
         text-decoration: $brief-info__link-text-decoration;
     }
-
 }
