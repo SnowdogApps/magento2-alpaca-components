@@ -4,7 +4,6 @@ const dropdownCollapseLabel = '.dropdown-list__item--collapse .dropdown-list__la
       dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
       openClass             = 'dropdown-list__item--open',
       contentClass          = 'dropdown-list__content',
-      mqClass               = 'dropdown-list--is-open\\@screen-m',
       mq                    = '(min-width: 768px)';
 
 function setListHeight(item) {
@@ -25,7 +24,7 @@ function setAriaAttributes(label, content, expanded) {
 }
 
 function isMediumOpen(dropdownBlock) {
-  return (dropdownBlock.classList.contains(mqClass)) && window.matchMedia(mq).matches;
+  return (dropdownBlock.classList.contains('dropdown-list--is-open@screen-m')) && window.matchMedia(mq).matches;
 }
 
 function resetMqMediumOpen(item) {
@@ -77,7 +76,7 @@ dropdownItem.forEach(
 );
 
 window.addEventListener('resize', () => {
-  const dropdownMediumOpen = document.querySelector(`.${mqClass}`);
+  const dropdownMediumOpen = document.querySelector('.dropdown-list--is-open\\@screen-m');
   if (dropdownMediumOpen) {
     const dropdownItems =  [ ...dropdownMediumOpen.querySelectorAll(dropdownCollapseLabel)];
     dropdownItems.forEach(key => resetMqMediumOpen(key));
