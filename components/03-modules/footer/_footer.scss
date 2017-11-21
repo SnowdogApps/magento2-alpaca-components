@@ -1,7 +1,7 @@
 $footer__padding                     : $spacer--medium 0 !default;
-$footer__bg-color                    : $gray-darker !default;
-$footer__bg-color--screen-l          : $gray-dark !default;
-$footer__font-color                  : $white !default;
+$footer__bg-color                    : $gray-darkest !default;
+$footer__bg-color\@large             : $gray-darker !default;
+$footer__font-color                  : $gray-lighter !default;
 $footer__transition                  : $transition-base !default;
 
 $footer__newsletter-max-width        : 400px !default;
@@ -9,13 +9,10 @@ $footer__newsletter-width--screen-l  : 30% !default;
 $footer__newsletter-padding          : 0 $spacer--medium !default;
 
 $footer__links-width--screen-l       : 70% !default;
-$footer__link-color-after-hover      : $color-primary !default;
-$footer__link-height-after-hover     : 8px !default;
-$footer__link-font-weight-after-hover: $font-weight-bold !default;
-$footer__link-inner-padding          : $spacer--large !default;
+$footer__link-inner-padding          : $spacer--medium !default;
 
-$footer__bottom-bar-background       : $gray-darker !default;
-$footer__bottom-bar-color            : $gray !default;
+$footer__bottom-bar-background\@large: $gray-darkest !default;
+$footer__bottom-bar-color            : $gray-lighter !default;
 $footer__bottom-bar-font-size        : $font-size-small !default;
 
 
@@ -28,7 +25,7 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     }
 
     @include mq($screen-l) {
-        background-color: $footer__bg-color--screen-l;
+        background-color: $footer__bg-color\@large;
     }
 
     &__handler {
@@ -82,12 +79,14 @@ $footer__bottom-bar-font-size        : $font-size-small !default;
     }
 
     &__links-list {
-        padding: $spacer--medium 0;
+        padding-bottom: $spacer--medium;
     }
 
     &__bottom-bar {
-        background: $footer__bottom-bar-background;
         color: $footer__bottom-bar-color;
+        @include mq($screen-l) {
+            background-color: $footer__bottom-bar-background\@large;
+        }
     }
 
     &__bottom-bar-handler {

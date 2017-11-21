@@ -3,7 +3,7 @@ $newsletter__font-size--agreements      : $font-size-small !default;
 $newsletter__field-height               : 32px !default;
 $newsletter__field-border-radius        : 32px !default;
 $newsletter__line-height                : 1.2 !default;
-$newsletter__input-background           : #717171 !default;
+$newsletter__input-background           : $gray-dark !default;
 $newsletter__input-color                : $white !default;
 $newsletter__input-color--placeholder   : rgba(255, 255, 255, 0.7) !default;
 $newsletter__checkbox-label-color       : $white !default;
