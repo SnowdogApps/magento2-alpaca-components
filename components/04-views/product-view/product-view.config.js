@@ -283,135 +283,71 @@ module.exports = {
     },
     relatedProducts: {
       heading: 'Related products',
-      slider: {
-        class: 'product-view__slider',
-        iconPrev: 'arrow-left',
-        iconNext: 'arrow-right',
-        iconClass: 'slider__icon',
-        products: [
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
+      script: false,
+      slides: [
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-base.jpg',
+            alt: 'slider1'
           }
-        ]
-      }
+        },
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-second.jpg',
+            alt: 'slider2'
+          }
+        },
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-base.jpg',
+            alt: 'slider3'
+          }
+        },
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-second.jpg',
+            alt: 'slider4'
+          }
+        }
+      ]
     },
     upsellProducts: {
       heading: 'You may also like',
-      slider: {
-        class: 'product-view__slider',
-        iconPrev: 'arrow-left',
-        iconNext: 'arrow-right',
-        iconClass: 'slider__icon',
-        products: [
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
-          },
-          {
-            product: {
-              image: {
-                src: '/images/produkt-image.png'
-              },
-              class: 'slider__item',
-              tag: 'div',
-              name: 'Some product name',
-              price: '$ 200.00'
-            }
+      script: true,
+      slides: [
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-base.jpg',
+            alt: 'slider1'
           }
-        ]
-      }
+        },
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-second.jpg',
+            alt: 'slider2'
+          }
+        },
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-base.jpg',
+            alt: 'slider3'
+          }
+        },
+        {
+          content: 'image',
+          contentContext: {
+            src: '../../images/product/product-second.jpg',
+            alt: 'slider4'
+          }
+        }
+      ]
     },
     additionalContent: {
       class: 'product-view__additional-content',
