@@ -77,8 +77,8 @@
 
             <div class="product-view__main-actions">
                 <div class="product-view__qty">
-                    <h3>Qty</h3>
-                    {{render '@quantity-update'}}
+                    <label>{{ qty.label }}</label>
+                    {{render '@quantity-update' qty.field}}
                 </div>
                 <div class="product-view__action-elements">
                     <div class="product-view__add-to-cart">
