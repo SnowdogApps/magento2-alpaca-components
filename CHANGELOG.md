@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
  - Footer view with updated design
 
+### Changed
+ - global variables update
+ - list module update styles
+ - newsletter module update
+
 ## [0.5.0] - 20.11.2017
 ### Added
  - Slide module
