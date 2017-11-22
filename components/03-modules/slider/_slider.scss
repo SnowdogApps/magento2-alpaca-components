@@ -10,6 +10,12 @@ $slider__navigation-icon-background: $white !default;
 $slider__icon-size                 : 25px !default;
 $slider__icon-fill                 : $color-primary !default;
 $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
+$slider__dot-width                 : $spacer--medium !default;
+$slider__dot-height                : $spacer !default;
+$slider__dot-background            : $gray-dark !default;
+$slider__dot-border-radius         : 5px !default;
+$slider__dot-margin                : $spacer--medium !default;
+$slider__dot-background--active    : $color-primary !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -78,5 +84,28 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
         fill: $slider__icon-fill;
         transition: $slider__transition;
         cursor: pointer;
+    }
+
+    &__dot-navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: $spacer;
+    }
+
+    &__dot {
+        width: $slider__dot-width;
+        height: $slider__dot-height;
+        background-color: $slider__dot-background;
+        border-radius: $slider__dot-border-radius;
+        margin-right: $slider__dot-margin;
+
+        &--active {
+            background-color: $slider__dot-background--active;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
