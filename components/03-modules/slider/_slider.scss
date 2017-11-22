@@ -1,8 +1,7 @@
 $slider__margin                    : $spacer--medium !default;
 $slider__transition                : $transition-base !default;
 $slider__item-width                : 50% !default;
-$slider__item-width--medium        : 33% !default;
-$slider__item-width--large         : 25% !default;
+$slider__item-width--medium        : 25% !default;
 $slider__navigation-margin         : $spacer !default;
 $slider__navigation-icon-size      : 48px !default;
 $slider__navigation-icon-margin    : $spacer !default;
@@ -36,10 +35,6 @@ $slider__dot-background--active    : $color-primary !default;
 
         @include mq($screen-m) {
             min-width: $slider__item-width--medium;
-        }
-
-        @include mq($screen-l) {
-            min-width: $slider__item-width--large;
         }
     }
 
