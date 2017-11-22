@@ -18,9 +18,7 @@
                     {{ title }}
 
                     {{#if collapse }}
-                        <svg class="dropdown-list__icon">
-                            <use xlink:href="{{ svg collapseIcon }}"></use>
-                        </svg>
+                        {{ render '@icon' collapse }}
                     {{/if}}
                 </{{ itemTag }}>
 
