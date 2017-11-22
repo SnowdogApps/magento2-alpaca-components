@@ -3,7 +3,7 @@ $newsletter__font-size--agreements      : $font-size-small !default;
 $newsletter__field-height               : 32px !default;
 $newsletter__field-border-radius        : 32px !default;
 $newsletter__line-height                : 1.2 !default;
-$newsletter__input-background           : #717171 !default;
+$newsletter__input-background           : $gray-dark !default;
 $newsletter__input-color                : $white !default;
 $newsletter__input-color--placeholder   : rgba(255, 255, 255, 0.7) !default;
 $newsletter__checkbox-label-color       : $white !default;
@@ -15,7 +15,7 @@ $newsletter__checkbox-bg-color          : $white !default;
 $newsletter__checkbox-label-padding-left: 24px !default;
 $newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
-$newsletter__checkbox-icon-size         : 15px !default;
+$newsletter__checkbox-icon-size         : 18px !default;
 $newsletter__checkbox-icon-position-top : 0 !default;
 
 .newsletter {
@@ -31,7 +31,7 @@ $newsletter__checkbox-icon-position-top : 0 !default;
     }
     &__controls {
         position: relative;
-        height: $newsletter__controls-height;
+        height: auto;
         margin-bottom: $newsletter__bottom-gap;
     }
     &__button {
@@ -61,6 +61,7 @@ $newsletter__checkbox-icon-position-top : 0 !default;
         border-radius: $newsletter__field-border-radius;
         height: $newsletter__field-height;
         color: $newsletter__input-color;
+        line-height: $newsletter__field-height;
         &::placeholder {
             color: $newsletter__input-color--placeholder;
         }
