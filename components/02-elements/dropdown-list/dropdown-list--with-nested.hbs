@@ -18,9 +18,7 @@
                 >
                     {{ title }}
                     {{#if collapse }}
-                        <svg class="dropdown-list__icon">
-                            <use xlink:href="{{ svg 'angle-down' }}"></use>
-                        </svg>
+                        {{ render '@icon' collapse }}
                     {{/if}}
                 </a>
 
@@ -55,9 +53,7 @@
                                     {{ itemName }}
 
                                     {{#if collapse }}
-                                        <svg class="dropdown-list__icon dropdown-list__icon--inner">
-                                            <use xlink:href="{{ svg 'angle-down' }}"></use>
-                                        </svg>
+                                        {{ render '@icon' collapse }}
                                     {{/if}}
                                 </a>
 
