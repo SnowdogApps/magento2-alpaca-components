@@ -18,7 +18,7 @@ $input__min-height--textarea         : 100px !default;
         flex-flow: row nowrap;
         align-items: center;
         .input__label {
-            margin-bottom: 0;
+            @extend .label--inline;
             margin-right: $input__label-margin-right;
         }
     }

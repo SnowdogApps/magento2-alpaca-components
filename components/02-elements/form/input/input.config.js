@@ -18,10 +18,7 @@ module.exports = {
     {
       name: 'inline',
       context: {
-        class: 'input--inline',
-        label: {
-          class: 'label--inline'
-        }
+        class: 'input--inline'
       }
     }
   ]
