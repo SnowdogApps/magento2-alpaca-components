@@ -1,10 +1,17 @@
-<ul class="products-grid">
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-    {{ render '@products-grid-item' product }}
-</ul>
+{{ render '@header' }}
+
+<main class="container">
+    <ul class="products-grid">
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+        {{ render '@products-grid-item' product }}
+    </ul>
+</main>
+
+{{ render '@footer' }}
