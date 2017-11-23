@@ -55,15 +55,11 @@
             {{ render '@button' primaryAction }}
 
             <button class="products-grid-item__secondary-action">
-                <svg class="icon">
-                    <use xlink:href="{{ svg 'heart' }}"></use>
-                </svg>
+                {{ render '@icon' secondaryActions.0.icon }}
             </button>
 
             <button class="products-grid-item__secondary-action">
-                <svg class="icon">
-                    <use xlink:href="{{ svg 'compare' }}"></use>
-                </svg>
+                {{ render '@icon' secondaryActions.1.icon }}
             </button>
         </div>
     </section>

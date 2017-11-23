@@ -35,6 +35,18 @@ module.exports = {
       text: 'Add to Cart',
       class: 'button products-grid-item__primary-action'
     },
+    secondaryActions: [
+      {
+        icon: {
+          iconId: 'heart'
+        }
+      },
+      {
+        icon: {
+          iconId: 'compare'
+        }
+      }
+    ],
     swatches: [
       {
         name: 'swatch',
