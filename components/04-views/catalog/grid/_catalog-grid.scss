@@ -1,0 +1,14 @@
+$catalog-grid__gap: $spacer--medium;
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $catalog-grid__gap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include mq($screen-m) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
