@@ -32,11 +32,11 @@ It makes a 'bug' in dot active classes with wrong calculating the last item
 and keep the active class in previous item in navigation.
 
 If we want to create a responsive slider with 2 items on mobile and 4 on desktop
-delete inline width on elements and use additional class in item with using `min-width`
-on this screen sizes which you want (like in preview).
+don't use inline width on elements and use additional class in item with using
+`min-width` on this screen sizes which you want (like in preview).
 
-Slider item can accept additional classes which can edit inline `width`
-or we can pass as slide item inline styles own width to each one.
+Slider item can accept inline styles where we can pass as slide item
+own width to each one.
 
 ### Slider navigation
 
