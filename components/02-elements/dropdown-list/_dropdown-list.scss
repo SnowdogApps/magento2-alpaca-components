@@ -13,9 +13,9 @@ $dropdown-list__item-color               : $font-color-base !default;
 $dropdown-list__item-color-hover         : $color-primary !default;
 $dropdown-list__item-color--open         : $color-primary !default;
 $dropdown-list__item-bg-color            : $white !default;
-$dropdown-list__item-bg-color--open      : $black !default;
-$dropdown-list__item-bg-color-hover      : $black !default;
-$dropdown-list__item-bg-color--level2    : $gray !default;
+$dropdown-list__item-bg-color--open      : $gray-darker !default;
+$dropdown-list__item-bg-color-hover      : $gray-darker !default;
+$dropdown-list__item-bg-color--level2    : $gray-dark !default;
 
 // List icon
 $dropdown-list__icon-width               : 16px !default;
@@ -25,13 +25,13 @@ $dropdown-list__icon-fill-hover          : $color-primary !default;
 $dropdown-list__icon-fill--open          : $color-primary !default;
 
 // Dark list variant
-$dropdown-list__bg-color--dark           : $gray-dark !default;
+$dropdown-list__bg-color--dark           : $gray-darker !default;
 $dropdown-list__list-padding--dark       : $spacer--medium !default;
-$dropdown-list__item-border-color--dark  : $gray-darker !default;
+$dropdown-list__item-border-color--dark  : $gray-darkest !default;
 $dropdown-list__icon-fill--dark          : $white !default;
 $dropdown-list__item-color--dark         : $white !default;
 $dropdown-list__item-color-hover--dark   : $white !default;
-$dropdown-list__item-bg-color-hover--dark: $gray-dark !default;
+$dropdown-list__item-bg-color-hover--dark: $gray-darker !default;
 
 // Nested list variables
 $dropdown-list__inner-item-bg-color      : $gray-dark !default;
@@ -202,7 +202,8 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
             background-color: $dropdown-list__item-bg-color--level2;
             border-bottom: $dropdown-list__inner-item-border--level2;
             .dropdown-list__inner-label {
-                color: $dropdown-list__item-color;
+                color: $dropdown-list__inner-item-color;
+                padding-left: $dropdown-list__item-padding * 2;
             }
         }
     }
