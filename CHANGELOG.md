@@ -6,13 +6,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
- - Slide module
- - Arrow-Right icon.
- - home page view
- - variant for list - with components as content
+ - Footer view with updated design
+ - global focus style
 
 ### Changed
- - Pager element styling that fits alpaca design.
+ - global variables update
+ - list module update styles
+ - newsletter module update
+
+## [0.5.0] - 20.11.2017
+### Added
+ - Slide module
+ - Arrow-right icon
+ - Home page view
+ - Variant for list - with components as content
+
+### Changed
+ - Pager element styling that fits design
+ - Adjustements in slider module
  - Swatcher update
 
 ## [0.4.1] - 13.11.2017

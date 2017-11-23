@@ -4,7 +4,8 @@ module.exports = {
     class: '',
     label: {
       attribute: '',
-      text: 'Label text'
+      text: 'Label text',
+      hidden: false
     },
     field: {
       attribute: '',

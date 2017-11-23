@@ -24,6 +24,7 @@
 @import '../../components/01-globals/_fonts/fonts';
 @import '../../components/01-globals/_container/container';
 @import '../../components/01-globals/icon/icon';
+@import '../../components/01-globals/_focus/focus';
 @import '../../components/01-globals/typography/blockquote/blockquote';
 @import '../../components/01-globals/typography/heading/heading';
 @import '../../components/01-globals/typography/label/label';
@@ -57,12 +58,10 @@
 @import '../../components/02-elements/logo/logo';
 @import '../../components/02-elements/marketing-bar/marketing-bar';
 @import '../../components/02-elements/message/message';
-@import '../../components/02-elements/minicart-trigger/minicart-trigger';
 @import '../../components/02-elements/pager/pager';
 @import '../../components/02-elements/password-strength/password-strength';
 @import '../../components/02-elements/price/price';
 @import '../../components/02-elements/rating/rating';
-@import '../../components/02-elements/side-menu-trigger/side-menu-trigger';
 @import '../../components/02-elements/swatch/swatch';
 @import '../../components/02-elements/tab/tab';
 @import '../../components/02-elements/table/table';
@@ -80,6 +79,7 @@
 @import '../../components/03-modules/footer/footer';
 @import '../../components/03-modules/gallery/gallery';
 @import '../../components/03-modules/header/header';
+@import '../../components/03-modules/header/button';
 @import '../../components/03-modules/header/featured-info';
 @import '../../components/03-modules/header/top-bar';
 @import '../../components/03-modules/header/search-form';
