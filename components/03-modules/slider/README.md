@@ -25,12 +25,11 @@ All settings are available [here](http://meandmax.github.io/lory/).
 ### Slider item width
 
 *IMPORTANT!*
-`visible items in one screen % 2 == 0` - It must be true. Why?
+We must give to `slide__item` width with the most approximation.
+I.e if we want 3 visible items in one screen set width to `calc(100% / 3)`
+Not just `33%`.
 It makes a 'bug' in dot active classes with wrong calculating the last item
 and keep the active class in previous item in navigation.
-Why it's not fixed?
-It's depends on wrong width calculating on item. I.e when we have `slide__item`
-with `width: 33%`, in fact it's never equal to 100% and will generate this bug.
 
 If we want to create a responsive slider with 2 items on mobile and 4 on desktop
 delete inline width on elements and use additional class in item with using `min-width`
