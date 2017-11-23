@@ -1,18 +1,17 @@
 module.exports = {
-  title: 'Product grid item',
   context: {
     tag: 'div',
     class: '',
     badge: {
       name: 'badge--new',
       context: {
-        class: 'badge products-grid-item__badge',
+        class: 'badge catalog-grid-item__badge',
         text: 'NEW'
       }
     },
     image: {
-      class: 'products-grid-item__image',
-      dataSrc: '/images/products-grid-item/product-1_320_312.jpg'
+      class: 'catalog-grid-item__image',
+      dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
     price: {
@@ -33,7 +32,7 @@ module.exports = {
     primaryAction: {
       tag: 'button',
       text: 'Add to Cart',
-      class: 'button products-grid-item__primary-action'
+      class: 'button catalog-grid-item__primary-action'
     },
     secondaryActions: [
       {
@@ -105,17 +104,17 @@ module.exports = {
           name: 'badge--discount',
           context: {
             text: '-10%',
-            class: 'badge--discount products-grid-item__badge'
+            class: 'badge--discount catalog-grid-item__badge'
           }
         },
         name: 'Short name',
         price: {
           name: 'price--with-special-price',
           context: {
-            oldPriceClass: 'products-grid-item__old-price',
+            oldPriceClass: 'catalog-grid-item__old-price',
             regularPrice: '400.00',
             specialPrice: '999.99',
-            specialPriceClass: 'products-grid-item__special-price',
+            specialPriceClass: 'catalog-grid-item__special-price',
             prefix: {
               tag: '',
               text: '$'

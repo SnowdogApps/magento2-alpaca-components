@@ -69,6 +69,7 @@
 // Modules
 // -----
 
+@import '../../components/03-modules/catalog-grid-item/catalog-grid-item';
 @import '../../components/03-modules/dashboard/form/form';
 @import '../../components/03-modules/dashboard/items/items';
 @import '../../components/03-modules/mega-menu/mega-menu';
@@ -86,9 +87,6 @@
 @import '../../components/03-modules/minicart-product/minicart-product';
 @import '../../components/03-modules/newsletter/newsletter';
 @import '../../components/03-modules/popup/popup';
-@import '../../components/03-modules/product/product';
-@import '../../components/03-modules/products-grid-item/products-grid-item';
-@import '../../components/03-modules/products-list-item/products-list-item';
 @import '../../components/03-modules/range/range';
 @import '../../components/03-modules/quantity-update/quantity-update';
 @import '../../components/03-modules/review/review';
@@ -106,6 +104,6 @@
 @import '../../components/04-views/cart/main';
 @import '../../components/04-views/cart/summary';
 @import '../../components/04-views/cart/totals';
-@import '../../components/04-views/catalog/catalog';
+@import '../../components/04-views/catalog/grid/catalog-grid';
 @import '../../components/04-views/dashboard/default/dashboard';
 @import '../../components/04-views/home/home';
