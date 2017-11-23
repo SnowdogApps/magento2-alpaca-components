@@ -17,6 +17,7 @@ $catalog-grid-item__name-color              : $font-color-base !default;
 $catalog-grid-item__name-font-weight        : $font-weight-normal !default;
 
 $catalog-grid-item__action-size             : 32px !default;
+$catalog-grid-item__action-icon-size        : 24px !default;
 $catalog-grid-item__action-item-spacing     : $spacer !default;
 
 .catalog-grid-item {
@@ -150,6 +151,9 @@ $catalog-grid-item__action-item-spacing     : $spacer !default;
     }
 
     &__secondary-action {
+        display: flex;
+        align-content: center;
+        justify-content: center;
         height: $catalog-grid-item__action-size;
         width: $catalog-grid-item__action-size;
         margin-left: $catalog-grid-item__base-spacing;
@@ -158,9 +162,8 @@ $catalog-grid-item__action-item-spacing     : $spacer !default;
         border: none;
         cursor: pointer;
         .icon {
-            width: 100%;
-            height: 100%;
-            padding: 0;
+            width: $catalog-grid-item__action-icon-size;
+            height: $catalog-grid-item__action-icon-size;
         }
     }
 }
