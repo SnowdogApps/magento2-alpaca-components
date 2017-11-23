@@ -8,7 +8,6 @@ module.exports = {
         class: 'header-button--reset-margin',
         icon: {
           iconId: 'heart',
-          title: 'Heart',
           class: 'header-button__icon'
         }
       },
@@ -18,7 +17,6 @@ module.exports = {
         class: '',
         icon: {
           iconId: 'phone',
-          title: 'Phone',
           class: 'header-button__icon'
         }
       },
@@ -28,7 +26,6 @@ module.exports = {
         class: '',
         icon: {
           iconId: 'account',
-          title: 'Account',
           class: 'header-button__icon'
         }
       }
@@ -61,18 +58,15 @@ module.exports = {
     },
     sideMenuIcon: {
       iconId: 'mobile-menu',
-      title: 'Side menu open',
       class: 'header-button__icon header-button__icon--small header-button__icon--open'
     },
     sideMenuIconClose: {
       iconId: 'close',
-      title: 'Side menu close',
       class: 'header-button__icon header-button__icon--small header-button__icon--close'
     },
     minicartTrigger: {
       icon: {
         iconId: 'shopping-cart',
-        title: 'Shopping cart',
         class: 'header-button__icon'
       },
       text: 'Cart',
