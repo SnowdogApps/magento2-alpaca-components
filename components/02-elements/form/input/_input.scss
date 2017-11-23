@@ -30,10 +30,6 @@ $input__min-height--textarea: 100px !default;
         border: $input__field-border;
         border-radius: $input__field-border-radius;
 
-        @include links(active) {
-            outline: none;
-        }
-
         &::placeholder {
             color: $input__placeholder-color;
         }

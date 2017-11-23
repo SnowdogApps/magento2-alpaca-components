@@ -25,8 +25,11 @@ $product__type-color      : $gray-light !default;
     }
 
     &__link {
-        @include links(active) {
-            display: block;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
             text-decoration: none;
         }
     }
