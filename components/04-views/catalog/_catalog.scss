@@ -87,7 +87,8 @@ $product-list__img-box-padding  : 0 $product-grid__padding 0 0 !default;
         width: 100%;
         text-decoration: none;
 
-        @include links(hover) {
+        &:hover,
+        &:focus {
             text-decoration: none;
         }
     }

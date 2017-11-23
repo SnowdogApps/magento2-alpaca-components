@@ -1,10 +1,3 @@
-<svg class="icon {{ class }}"
-     {{#if title}}
-         title="{{ title }}"
-     {{else}}
-         title="{{ iconId }}"
-     {{/if}}
-     {{{ attributes }}}
->
+<svg class="icon {{ class }}" {{{ attributes }}}>
     <use xlink:href="{{ svg iconId }}"></use>
 </svg>
