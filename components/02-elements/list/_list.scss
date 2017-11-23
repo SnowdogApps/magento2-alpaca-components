@@ -1,23 +1,26 @@
-$list__style                   : none !default;
-$list__margin                  : 0 !default;
-$list__padding                 : 0 !default;
-$list__item-padding            : 5px 0 !default;
-$list__content-padding         : 10px !default;
-$list__label-padding           : 0 5px 5px 0 !default;
-$list__icon-color              : $white !default;
-$list__item-bg-color--with-icon: $gray-darker !default;
+$list__style              : none !default;
+$list__margin             : 0 !default;
+$list__padding            : 0 !default;
+$list__item-padding       : 5px 0 !default;
+$list__content-padding    : 10px !default;
+$list__label-padding      : 0 5px 5px 0 !default;
+$list__icon-color         : $white !default;
 
 // Horizontal
-$list__padding--horizontal     : 10px !default;
+$list__padding--horizontal: 10px !default;
+
+// Horizontal\@medium
+$list__padding--horizontal\@medium: 10px !default;
 
 // With icon
-$list__icon-size--icon         : 30px !default;
+$list__padding--with-icon: 10px !default;
+$list__icon-size--icon    : 30px !default;
 
 // With image
-$list__width--image            : 16px !default;
+$list__width--image       : 16px !default;
 
 // Divided
-$list__border--divider         : 1px solid $gray-dark !default;
+$list__border--divider    : 1px solid $gray-dark !default;
 
 .list {
     margin: $list__margin;
@@ -44,20 +47,19 @@ $list__border--divider         : 1px solid $gray-dark !default;
         }
     }
 
-    &--min-medium-horizontal {
+    &--horizontal\@medium {
         @include mq($screen-m) {
             display: flex;
             flex-flow: row nowrap;
-        }
-        .list__item {
-            @include mq($screen-m) {
-                padding: $list__padding--horizontal;
+
+            .list__item {
+                padding: $list__padding--horizontal\@medium;
 
                 &:first-child {
-                    padding-top: $list__padding--horizontal;
+                    padding-top: $list__padding--horizontal\@medium;
                 }
                 &:last-child {
-                    padding-bottom: $list__padding--horizontal;
+                    padding-bottom: $list__padding--horizontal\@medium;
                 }
             }
         }
@@ -70,7 +72,6 @@ $list__border--divider         : 1px solid $gray-dark !default;
             display: flex;
             align-items: center;
             padding: 0;
-            background-color: $list__item-bg-color--with-icon;
 
             &:first-child {
                 padding-top: 0;
@@ -80,7 +81,7 @@ $list__border--divider         : 1px solid $gray-dark !default;
             }
         }
         .list__icon-link {
-            padding: $list__padding--horizontal;
+            padding: $list__padding--with-icon;
         }
         .list__icon {
             fill: $list__icon-color;
@@ -117,7 +118,7 @@ $list__border--divider         : 1px solid $gray-dark !default;
             }
         }
 
-        &.list--min-medium-horizontal {
+        &.list--horizontal\@medium {
             .list__item {
                 @include mq($screen-m) {
                     border-bottom: none;

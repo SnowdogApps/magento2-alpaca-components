@@ -1,4 +1,6 @@
 module.exports = {
   title: 'Logo',
-  class: ''
+  class: '',
+  ariaLabel: 'Home page link',
+  imageAlt: 'Alpaca Logo'
 };
