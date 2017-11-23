@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
  - Footer view with updated design
+ - global focus style
 
 ### Changed
  - global variables update
