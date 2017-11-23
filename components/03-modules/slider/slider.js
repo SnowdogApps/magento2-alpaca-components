@@ -18,16 +18,16 @@
       slidesToScroll: 1
     };
 
-    for (const key of Object.keys(dataValues)) {
-      if (key != 'slidesToScroll') {
-        if (!isNaN(parseInt(dataValues[key]))) {
-          config[key] = parseInt(dataValues[key]);
+    Object.keys(dataValues).map((objectKey) => {
+      if (objectKey != 'slidesToScroll') {
+        if (!isNaN(parseInt(dataValues[objectKey]))) {
+          config[objectKey] = parseInt(dataValues[objectKey]);
         }
         else {
-          config[key] = dataValues[key];
+          config[objectKey] = dataValues[objectKey];
         }
       }
-    }
+    });
 
     function cloneDots() {
       if (dotContainer) {
@@ -48,24 +48,22 @@
     }
 
     function addDotListeners() {
-      const dots     = dotContainer.childNodes,
-            dotCount = dotNumber();
+      const dots = dotContainer.childNodes;
 
-      for (let i = 0; i < dotCount; i++) {
-        dots[i].addEventListener('click', (e) => {
+      dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
           lorySlider.slideTo(Array.prototype.indexOf.call(dots, e.target));
         });
-      }
+      })
     }
 
     function dotClassToggle(e) {
       const dots      = dotContainer.childNodes,
-            dotActive = 'slider__dot--active',
-            dotCount  = dotNumber();
+            dotActive = 'slider__dot--active';
 
-      for (let i = 0; i < dotCount; i++) {
-        dots[i].classList.remove(dotActive);
-      }
+      dots.forEach(dot => {
+        dot.classList.remove(dotActive);
+      });
 
       dots[e.detail.currentSlide].classList.add(dotActive);
     }
@@ -84,8 +82,8 @@
     }
 
     function dotNumber() {
-      let dotCount,
-          visibleElements = Math.round(slider.querySelector('.slider__slides').offsetWidth / slider.querySelector('.slider__item').offsetWidth);
+      const visibleElements = Math.round(slider.querySelector('.slider__slides').offsetWidth / slider.querySelector('.slider__item').offsetWidth);
+      let dotCount;
 
       dotCount = ((items - visibleElements) + 1 > 1) ? (items - visibleElements) + 1 : 1;
 
