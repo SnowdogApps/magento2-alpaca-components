@@ -5,14 +5,14 @@ module.exports = {
       {
         itemTag: 'a',
         title: 'All',
-        class: '',
+        class: 'link--invert',
         itemAttributes: 'href="#"'
       },
       {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
         title: 'dropdown title',
-        class: '',
+        class: 'link--invert',
         id: 'dropdown-1',
         collapse: {
           class: 'dropdown-list__icon',
@@ -23,7 +23,7 @@ module.exports = {
       {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-2"',
-        class: '',
+        class: 'link--invert',
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
         collapse: {
@@ -36,7 +36,7 @@ module.exports = {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-3"',
         title: 'dropdown title',
-        class: '',
+        class: 'link--invert',
         id: 'dropdown-3',
         collapse: {
           class: 'dropdown-list__icon',
@@ -48,7 +48,7 @@ module.exports = {
         itemTag: 'button',
         itemAttributes: 'aria-expanded="false" aria-controls="dropdown-4"',
         title: 'dropdown title',
-        class: '',
+        class: 'link--invert',
         id: 'dropdown-4',
         collapse: {
           class: 'dropdown-list__icon',
@@ -79,12 +79,14 @@ module.exports = {
           {
             itemTag: 'a',
             title: 'All',
+            class: 'link--invert',
             itemAttributes: 'href="#"'
           },
           {
             itemTag: 'button',
             title: 'dropdown title',
             id: 'dropdown-1',
+            class: 'link--invert',
             itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
             collapse: {
               class: 'dropdown-list__icon',
@@ -168,6 +170,7 @@ module.exports = {
             itemTag: 'a',
             itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-2"',
             title: 'dropdown title',
+            class: 'link--invert',
             id: 'dropdown-2',
             collapse: {
               class: 'dropdown-list__icon',
@@ -192,6 +195,7 @@ module.exports = {
             itemTag: 'a',
             itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3"',
             title: 'dropdown title',
+            class: 'link--invert',
             id: 'dropdown-3',
             collapse: {
               class: 'dropdown-list__icon',
