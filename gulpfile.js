@@ -68,9 +68,11 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
 gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
   const builder = fractal.web.builder();
 
-  builder.on('progress', (completed, total) => {
-    return logger.update(`Exported ${completed} of ${total} items`, 'info');
-  });
+  if (!util.env.ci) {
+    builder.on('progress', (completed, total) => {
+      return logger.update(`Exported ${completed} of ${total} items`, 'info');
+    });
+  }
 
   builder.on('error', err => logger.error(err.message));
 
