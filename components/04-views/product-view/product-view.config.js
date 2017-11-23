@@ -170,6 +170,7 @@ module.exports = {
     },
     extraActions: [
       {
+        class: 'product-view__action--wishlist',
         icon: {
           iconId: 'heart',
           title: 'Add to wishlist',
@@ -178,6 +179,7 @@ module.exports = {
         tag: 'button'
       },
       {
+        class: 'product-view__action--compare',
         icon: {
           iconId: 'compare',
           title: 'Add to compare',
@@ -186,6 +188,7 @@ module.exports = {
         tag: 'button'
       },
       {
+        class: 'product-view__action--emailfriend',
         icon: {
           class: 'product-view__icon-envelope',
           iconId: 'envelope',

@@ -1,10 +1,18 @@
 $product-view__action-elements-margin-top               : 28px !default;
 $product-view__action-elements-margin-top\@large        : 0 !default;
 
-$product-view__action-icon-color                        : #a09fa6 !default;
-$product-view__action-icon-padding                      : 0 !default;
-$product-view__action-icon-size                         : 100% !default;
-$product-view__action-item-size                         : 32px !default;
+$product-view__action-icon-color                        : $gray-darker !default;
+$product-view__action-icon-compare-padding              : 16px 16px !default;
+$product-view__action-icon-compare-width                : 16px !default;
+$product-view__action-icon-compare-height               : 16px !default;
+$product-view__action-icon-emailfriend-padding          : 16px 14px !default;
+$product-view__action-icon-emailfriend-height           : 16px !default;
+$product-view__action-icon-emailfriend-width            : 20px !default;
+$product-view__action-icon-wishlist-padding             : 15px 14px !default;
+$product-view__action-icon-wishlist-height              : 18px !default;
+$product-view__action-icon-wishlist-width               : 20px !default;
+
+$product-view__action-item-size                         : 48px !default;
 $product-view__action-item-spacing                      : $spacer !default;
 
 $product-view__add-review-link-font-size                : $font-size-base;
@@ -375,23 +383,31 @@ $product-view__wrapper-margin-bottom--screen-xl         : 78px !default;
             border: none;
         }
         .icon {
-            width: $product-view__action-icon-size;
-            height: $product-view__action-icon-size;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
+            fill: $product-view__action-icon-color;
+        }
+        &--wishlist {
+            padding: $product-view__action-icon-wishlist-padding;
+            .icon {
+                width: $product-view__action-icon-wishlist-width;
+                height: $product-view__action-icon-wishlist-height;
+            }
+        }
+        &--emailfriend {
+            padding: $product-view__action-icon-emailfriend-padding;
+            .icon {
+                width: $product-view__action-icon-emailfriend-width;
+                height: $product-view__action-icon-emailfriend-height;
+            }
+        }
+        &--compare {
+            padding: $product-view__action-icon-compare-padding;
+            .icon {
+                width: $product-view__action-icon-compare-width;
+                height: $product-view__action-icon-compare-height;
+            }
         }
     }
 
-    &__action-icon {
-        fill: $product-view__action-icon-color;
-        width: $product-view__action-icon-size;
-        height: $product-view__action-icon-size;
-        padding: $product-view__action-icon-padding;
-
-    }
 
     &__link {
         &--rating {
