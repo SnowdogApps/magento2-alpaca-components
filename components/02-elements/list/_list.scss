@@ -9,7 +9,11 @@ $list__icon-color         : $white !default;
 // Horizontal
 $list__padding--horizontal: 10px !default;
 
+// Horizontal\@medium
+$list__padding--horizontal\@medium: 10px !default;
+
 // With icon
+$list__padding--with-icon: 10px !default;
 $list__icon-size--icon    : 30px !default;
 
 // With image
@@ -43,20 +47,19 @@ $list__border--divider    : 1px solid $gray-dark !default;
         }
     }
 
-    &--min-medium-horizontal {
+    &--horizontal\@medium {
         @include mq($screen-m) {
             display: flex;
             flex-flow: row nowrap;
-        }
-        .list__item {
-            @include mq($screen-m) {
-                padding: $list__padding--horizontal;
+
+            .list__item {
+                padding: $list__padding--horizontal\@medium;
 
                 &:first-child {
-                    padding-top: $list__padding--horizontal;
+                    padding-top: $list__padding--horizontal\@medium;
                 }
                 &:last-child {
-                    padding-bottom: $list__padding--horizontal;
+                    padding-bottom: $list__padding--horizontal\@medium;
                 }
             }
         }
@@ -78,7 +81,7 @@ $list__border--divider    : 1px solid $gray-dark !default;
             }
         }
         .list__icon-link {
-            padding: $list__padding--horizontal;
+            padding: $list__padding--with-icon;
         }
         .list__icon {
             fill: $list__icon-color;
@@ -115,7 +118,7 @@ $list__border--divider    : 1px solid $gray-dark !default;
             }
         }
 
-        &.list--min-medium-horizontal {
+        &.list--horizontal\@medium {
             .list__item {
                 @include mq($screen-m) {
                     border-bottom: none;

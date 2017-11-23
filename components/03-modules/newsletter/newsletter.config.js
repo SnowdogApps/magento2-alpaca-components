@@ -14,7 +14,9 @@ module.exports = {
         class: 'newsletter__field'
       },
       label: {
-        class: 'newsletter__label'
+        class: 'newsletter__label',
+        hidden: true,
+        text: 'Email for newsletter subscription'
       }
     },
     button: {
@@ -26,7 +28,7 @@ module.exports = {
       class: 'newsletter__checkbox',
       id: 'newsletter',
       label: {
-        text: 'I agree to <a href="#">Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
+        text: 'I agree to <a href="#" title="Terms and conditions">Terms and conditions</a> and I am happy to receive your newsletter with all your promotions.'
       }
     }
   }
