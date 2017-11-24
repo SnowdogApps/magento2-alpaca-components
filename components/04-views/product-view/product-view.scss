@@ -84,11 +84,14 @@ $product-view__stock-color--out-of-stock                : $red !default;
 $product-view__stock-color--alert                       : $red !default;
 $product-view__stock-font-weight\@medium                : $font-weight-bold !default;
 
+$product-view__swatch-margin-bottom                     : $spacer--medium !default;
 $product-view__swatch-option-height                     : 32px !default;
 $product-view__swatch-option-height--attributes         : 64px !default;
 $product-view__swatch-option-width                      : 32px !default;
 $product-view__swatch-option-width--attributes          : 54px !default;
 $product-view__swatch-option-margin-right               : $spacer--medium !default;
+$product-view__swatch-option-title-font-size            : $font-size-base !default;
+$product-view__swatch-option-title-font-weight          : $font-weight-bold !default;
 
 $product-view__slider-add-to-cart-padding               : 0 $spacer--medium !default;
 $product-view__slider-margin-bottom                     : $spacer !default;
@@ -193,6 +196,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         width: 100%;
     }
 
+    .swatch {
+        margin-bottom: $product-view__swatch-margin-bottom;
+    }
+
     .swatch__option {
         width: $product-view__swatch-option-width;
         height: $product-view__swatch-option-height;
@@ -203,6 +210,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             width: $product-view__swatch-option-width--attributes;
             height: $product-view__swatch-option-height--attributes;
         }
+    }
+    &__swatch-option-title {
+        font-size: $product-view__swatch-option-title-font-size;
+        font-weight: $product-view__swatch-option-title-font-weight;
     }
 
     &__tabs {

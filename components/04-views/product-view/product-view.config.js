@@ -86,8 +86,37 @@ module.exports = {
         attributes: '',
         titleClass: '',
         heading: {
-          tag: 'h2',
-          title: 'Size'
+          tag: 'span',
+          text: 'Color',
+          class: 'product-view__swatch-option-title'
+        },
+        options: [
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-orange.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-green.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes swatch__option--active',
+            attributes: 'style="background: url(../../images/swatch/swatch-red.jpg); background-size: cover; background-position: center center;"'
+          },
+          {
+            class: 'swatch__option--attributes',
+            attributes: 'style="background: url(../../images/swatch/swatch-white.jpg); background-size: cover; background-position: center center;"'
+          }
+        ]
+      },
+      {
+        class: 'product-view__swatch-option',
+        attributes: '',
+        titleClass: '',
+        heading: {
+          tag: 'span',
+          text: 'Size',
+          class: 'product-view__swatch-option-title'
         },
         options: [
           {
@@ -117,33 +146,6 @@ module.exports = {
           }
         ]
       },
-      {
-        class: '',
-        attributes: '',
-        titleClass: '',
-        heading: {
-          tag: 'h2',
-          title: 'Color'
-        },
-        options: [
-          {
-            class: 'swatch__option--attributes',
-            attributes: 'style="background: url(../../images/swatch/swatch-orange.jpg); background-size: cover; background-position: center center;"'
-          },
-          {
-            class: 'swatch__option--attributes',
-            attributes: 'style="background: url(../../images/swatch/swatch-green.jpg); background-size: cover; background-position: center center;"'
-          },
-          {
-            class: 'swatch__option--attributes swatch__option--active',
-            attributes: 'style="background: url(../../images/swatch/swatch-red.jpg); background-size: cover; background-position: center center;"'
-          },
-          {
-            class: 'swatch__option--attributes',
-            attributes: 'style="background: url(../../images/swatch/swatch-white.jpg); background-size: cover; background-position: center center;"'
-          }
-        ]
-      }
     ],
     listIcon: {
       listTag: 'ul',
@@ -955,7 +957,7 @@ module.exports = {
                     class: 'swatch--small swatch--image',
                     options: [
                       {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
+                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"',
                       },
                       {
                         attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
