@@ -17,7 +17,7 @@ $footer__copywrite-padding-left\@medium: $spacer;
 $footer__copywrite-padding-left\@large : $spacer--medium;
 
 $footer__scroll-top-top                : -24px !default;
-$footer__icon-sizing                   : 13px !default;
+$footer__icon-size                     : 13px !default;
 $footer__icon-fill                     : $color-secondary !default;
 $footer__icon-fill-hover               : $color-primary !default;
 
@@ -149,8 +149,8 @@ $footer__icon-fill-hover               : $color-primary !default;
     }
 
     &__icon {
-        width: $footer__icon-sizing;
-        height: $footer__icon-sizing;
+        width: $footer__icon-size;
+        height: $footer__icon-size;
         fill: $footer__icon-fill;
     }
 }
