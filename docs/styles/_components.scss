@@ -2,16 +2,16 @@
 // Globals
 // -----
 
-// Base
-@import '../../components/01-globals/_base/base';
-@import '../../components/01-globals/_container/container';
-@import '../../components/01-globals/icon/icon';
-
 // Mixins
 @import '../../components/01-globals/mixins/clearfix';
 @import '../../components/01-globals/mixins/grid-column-width';
 @import '../../components/01-globals/mixins/mq';
 @import '../../components/01-globals/mixins/visually-hidden';
+
+// Base
+@import '../../components/01-globals/_base/base';
+@import '../../components/01-globals/_container/container';
+@import '../../components/01-globals/icon/icon';
 
 // Libs
 @import '../../components/01-globals/libs/normalize';
