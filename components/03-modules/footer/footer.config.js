@@ -19,7 +19,10 @@ module.exports = {
           itemAttributes: 'aria-expanded="false" aria-controls="dropdown-help"',
           title: 'Help',
           id: 'dropdown-help',
-          collapse: true,
+          collapse: {
+            class: 'dropdown-list__icon',
+            iconId: 'angle-down'
+          },
           contentElement: 'list--link',
           contentContext: {
             listTag: 'ul',
@@ -64,7 +67,10 @@ module.exports = {
           itemAttributes: 'aria-expanded="false" aria-controls="dropdown-info"',
           title: 'Information',
           id: 'dropdown-info',
-          collapse: true,
+          collapse: {
+            class: 'dropdown-list__icon',
+            iconId: 'angle-down'
+          },
           contentElement: 'list--link',
           contentContext: {
             listTag: 'ul',
@@ -103,7 +109,10 @@ module.exports = {
           itemAttributes: 'aria-expanded="false" aria-controls="dropdown-worth"',
           title: 'Why is worth it',
           id: 'dropdown-worth',
-          collapse: true,
+          collapse: {
+            class: 'dropdown-list__icon',
+            iconId: 'angle-down'
+          },
           contentElement: 'list--link',
           contentContext: {
             listTag: 'ul',
@@ -142,7 +151,10 @@ module.exports = {
           itemAttributes: 'aria-expanded="false" aria-controls="dropdown-alpaca"',
           title: 'Alpaca.pl',
           id: 'dropdown-alpaca',
-          collapse: true,
+          collapse: {
+            class: 'dropdown-list__icon',
+            iconId: 'angle-down'
+          },
           contentElement: 'list--link',
           contentContext: {
             listTag: 'ul',
