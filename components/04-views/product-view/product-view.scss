@@ -88,14 +88,15 @@ $product-view__swatch-option-height                     : 32px !default;
 $product-view__swatch-option-height--attributes         : 64px !default;
 $product-view__swatch-option-width                      : 32px !default;
 $product-view__swatch-option-width--attributes          : 54px !default;
+$product-view__swatch-option-margin-right               : $spacer--medium !default;
 
+$product-view__slider-add-to-cart-padding               : 0 $spacer--medium !default;
 $product-view__slider-margin-bottom                     : $spacer !default;
 $product-view__slider-margin-bottom\@medium             : 72px !default;
 $product-view__slider-margin-bottom--last\@medium       : 56px !default;
 $product-view__slider-margin-bottom--last\@large        : 64px !default;
 $product-view__slider-heading-font-size                 : 24px !default;
 $product-view__slider-heading-font-size-weight          : $font-weight-bold;
-$product-view__slider-heading-margin-bottom             : 35px !default;
 $product-view__slider-heading-text-transform            : uppercase !default;
 
 $product-view__tabs-margin-bottom                       : 14px !default;
@@ -195,6 +196,7 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     .swatch__option {
         width: $product-view__swatch-option-width;
         height: $product-view__swatch-option-height;
+        margin-right: $product-view__swatch-option-margin-right;
         min-height: 0;
         min-width: 0;
         &--attributes {
@@ -445,7 +447,6 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             font-size: $product-view__slider-heading-font-size;
             font-weight: $product-view__slider-heading-font-size-weight;
             text-transform: $product-view__slider-heading-text-transform;
-            margin-bottom: $product-view__slider-heading-margin-bottom;
         }
     }
     &__slider-navigation {
@@ -464,6 +465,9 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         .catalog-grid-item__name {
             font-size: 12px;
             text-transform: initial;
+        }
+        .catalog-grid-item__primary-action {
+            padding: $product-view__slider-add-to-cart-padding;
         }
     }
 
