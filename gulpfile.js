@@ -58,12 +58,14 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
     sync: true,
     port: 4000
   });
+
   server.on('error', err => logger.error(err.message));
 
   return server.start().then(() => {
     logger.success(`Fractal server is now running at ${server.url}`);
   });
 });
+
 
 gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
   const builder = fractal.web.builder();
@@ -82,6 +84,11 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
 });
 
 // Gulp tasks
+gulp.task('a11y', () => {
+  fractal.components.set('default.preview', '@a11y-tests');
+  runSequence('fractal:start');
+});
+
 gulp.task('watch', () => {
   gulp.watch([
     fractal.components.get('path') + '/**/*.scss',
