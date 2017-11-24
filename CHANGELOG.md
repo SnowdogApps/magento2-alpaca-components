@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Arrow-right icon
 - Home page view
 - Variant for list - with components as content
+- Accessibility tests
 
 ### Changed
 - Pager element styling that fits design
