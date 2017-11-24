@@ -460,4 +460,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             display: block;
         }
     }
+    &__grid-item {
+        .catalog-grid-item__name {
+            font-size: 12px;
+            text-transform: initial;
+        }
+    }
 }
