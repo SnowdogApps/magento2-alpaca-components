@@ -1,4 +1,4 @@
-$brief-info__padding                                       : 31px 0 0 !default;
+$brief-info__padding                                       : $spacer--medium 0 0 !default;
 $brief-info__padding\@medium                               : 23px 0 32px !default;
 $brief-info__border                                        : 1px $gray-light solid !default;
 $brief-info__content-text-align                            : center !default;
@@ -34,8 +34,8 @@ $brief-info__title-margin-bottom                           : 0 !default;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: $brief-info__padding;
-    border-top: $brief-info__border;
     @include mq($screen-m) {
+        border-top: $brief-info__border;
         padding: $brief-info__padding\@medium;
         border-bottom: $brief-info__border;
     }

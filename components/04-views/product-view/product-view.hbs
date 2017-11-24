@@ -18,7 +18,7 @@
             </span>
 
             <span class="product-view__price">
-                {{{ price }}}
+                {{ render (component price.content) price.contentContext }}
             </span>
 
             <div class="
@@ -77,7 +77,11 @@
 
             <div class="product-view__main-actions">
                 <div class="product-view__qty">
-                    <label>{{ qty.label }}</label>
+                    <label class="{{ qty.label.class }}"
+                           for="qty.field.input.id"
+                    >
+                        {{ qty.label.text }}
+                    </label>
                     {{render '@quantity-update' qty.field}}
                 </div>
                 <div class="product-view__action-elements">

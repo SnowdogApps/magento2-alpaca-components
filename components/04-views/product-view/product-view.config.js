@@ -30,7 +30,9 @@ module.exports = {
       label: 'SKU',
       value: 'WSH09'
     },
-    price: '$ 200.00',
+    price: {
+      content: 'price--with-special-price'
+    },
     rating: {
       class: '',
       href: '#',
@@ -50,7 +52,10 @@ module.exports = {
     description: 'Limestone is currently on backorder - this item is available to ship on December 24th. <br/> Palladium is currently on backorder - this item is available to ship on January 3rd.',
     attributesTitle: 'For interion and exterior use.',
     qty: {
-      label: 'Qty',
+      label: {
+        text: 'Quantity',
+        class: 'product-view__swatch-option-title'
+      },
       field: {
         input: {
           id: 'qty',
@@ -317,7 +322,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -338,7 +343,7 @@ module.exports = {
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button catalog-grid-item__primary-action',
               },
               secondaryActions: [
                 {
@@ -418,7 +423,7 @@ module.exports = {
               },
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name - very long name because that\'s important and maybe SKU ?',
               price: {
@@ -512,7 +517,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -606,7 +611,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -700,7 +705,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -794,7 +799,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -915,7 +920,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -1016,7 +1021,7 @@ module.exports = {
               },
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name - very long name because that\'s important and maybe SKU ?',
               price: {
@@ -1110,7 +1115,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -1204,7 +1209,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -1298,7 +1303,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
@@ -1392,7 +1397,7 @@ module.exports = {
               tag: 'div',
               image: {
                 class: 'catalog-grid-item__image',
-                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+                dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
               price: {
