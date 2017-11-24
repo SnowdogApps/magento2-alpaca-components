@@ -3,7 +3,7 @@
         <meta charset="utf-8">
         <title>{{ title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link media="all" rel="stylesheet" href="{{ path '/css/a11y-styles.css' }}" />
+        <link media="all" rel="stylesheet" href="{{ path '/css/styles.css' }}">
         {{> @libs }}
     </head>
     <body class="docs-only-styles">
@@ -12,7 +12,9 @@
                 There is no a11y erros! Well done!
             </h2>
         </section>
+
         {{{ yield }}}
+
         <script src="{{ path '/tests/libs/accessibilityjs.js' }}"></script>
         <script src="{{ path '/tests/a11y-test.js' }}"></script>
     </body>
