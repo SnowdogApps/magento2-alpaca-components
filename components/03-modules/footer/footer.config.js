@@ -1,6 +1,13 @@
 module.exports = {
   context: {
     handlerClass: 'container',
+    scrollToTop: {
+      tag: 'button',
+      class: 'footer__scroll-top',
+      iconId: 'arrow-up',
+      iconClass: 'footer__icon',
+      attributes: 'type="button" aria-label="arrow scroll top"'
+    },
     bottomBar: {
       handlerClass: 'container'
     },
