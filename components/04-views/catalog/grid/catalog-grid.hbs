@@ -1,0 +1,21 @@
+{{ render '@header' }}
+
+<main class="container">
+    {{ render '@breadcrumbs' }}
+
+    <ul class="catalog-grid">
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+        {{ render '@catalog-grid-item' product }}
+    </ul>
+
+    {{ render '@pager' }}
+</main>
+
+{{ render '@footer' }}

@@ -58,6 +58,7 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
     sync: true,
     port: 4000
   });
+
   server.on('error', err => logger.error(err.message));
 
   return server.start().then(() => {
@@ -65,12 +66,15 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
   });
 });
 
+
 gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
   const builder = fractal.web.builder();
 
-  builder.on('progress', (completed, total) => {
-    return logger.update(`Exported ${completed} of ${total} items`, 'info');
-  });
+  if (!util.env.ci) {
+    builder.on('progress', (completed, total) => {
+      return logger.update(`Exported ${completed} of ${total} items`, 'info');
+    });
+  }
 
   builder.on('error', err => logger.error(err.message));
 
@@ -80,6 +84,11 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
 });
 
 // Gulp tasks
+gulp.task('a11y', () => {
+  fractal.components.set('default.preview', '@a11y-tests');
+  runSequence('fractal:start');
+});
+
 gulp.task('watch', () => {
   gulp.watch([
     fractal.components.get('path') + '/**/*.scss',
