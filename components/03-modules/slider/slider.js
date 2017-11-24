@@ -38,8 +38,11 @@
 
         for (let i = 0; i < dotCount; i++) {
           let clone = dotItem.cloneNode();
+          const nestedElement = document.createElement('div');
 
           clone.classList.add('slider__dot');
+          clone.appendChild(nestedElement);
+          nestedElement.classList.add('slider__dot-inside');
           dotContainer.appendChild(clone);
         }
 

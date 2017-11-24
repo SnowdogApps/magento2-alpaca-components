@@ -1,20 +1,20 @@
-$slider__margin                    : $spacer--medium !default;
-$slider__transition                : $transition-base !default;
-$slider__item-width                : 50% !default;
-$slider__item-width--medium        : 25% !default;
-$slider__navigation-margin         : $spacer !default;
-$slider__navigation-icon-size      : 48px !default;
-$slider__navigation-icon-margin    : $spacer !default;
-$slider__navigation-icon-background: $white !default;
-$slider__icon-size                 : 25px !default;
-$slider__icon-fill                 : $color-primary !default;
-$slider__icon-fill-hover           : darken($color-primary, 10%) !default;
-$slider__dot-width                 : $spacer--medium !default;
-$slider__dot-height                : $spacer !default;
-$slider__dot-background            : $gray-dark !default;
-$slider__dot-border-radius         : 5px !default;
-$slider__dot-margin                : $spacer--medium !default;
-$slider__dot-background--active    : $color-primary !default;
+$slider__margin                       : $spacer--medium !default;
+$slider__transition                   : $transition-base !default;
+$slider__item-width                   : 50% !default;
+$slider__item-width--medium           : 25% !default;
+$slider__navigation-margin            : $spacer !default;
+$slider__navigation-icon-size         : 48px !default;
+$slider__navigation-icon-margin       : $spacer !default;
+$slider__navigation-icon-background   : $white !default;
+$slider__icon-size                    : 25px !default;
+$slider__icon-fill                    : $color-primary !default;
+$slider__icon-fill-hover              : darken($color-primary, 10%) !default;
+$slider__dot-margin                   : $spacer--medium !default;
+$slider__dot-padding                  : $spacer--medium !default;
+$slider__dot-inside-size              : $spacer--medium !default;
+$slider__dot-inside-background        : $gray-dark !default;
+$slider__dot-inside-border-radius     : 8px !default;
+$slider__dot-inside-background--active: $color-primary !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -89,18 +89,26 @@ $slider__dot-background--active    : $color-primary !default;
     }
 
     &__dot {
-        width: $slider__dot-width;
-        height: $slider__dot-height;
-        background-color: $slider__dot-background;
-        border-radius: $slider__dot-border-radius;
+        padding: $slider__dot-padding;
         margin-right: $slider__dot-margin;
+        cursor: pointer;
 
         &--active {
-            background-color: $slider__dot-background--active;
+            & .slider__dot-inside {
+                background-color: $slider__dot-inside-background--active;
+            }
         }
 
         &:last-child {
             margin-right: 0;
         }
+    }
+
+
+    &__dot-inside {
+        width: $slider__dot-inside-size;
+        height: $slider__dot-inside-size;
+        background-color: $slider__dot-inside-background;
+        border-radius: $slider__dot-inside-border-radius;
     }
 }
