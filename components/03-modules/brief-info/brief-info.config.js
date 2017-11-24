@@ -1,5 +1,10 @@
 module.exports = {
   context: {
+    heading: {
+      text: 'Buy with us',
+      tag: 'h3',
+      class: ''
+    },
     items: [
       {
         iconWrapperClass: 'brief-info__icon-wrapper--delivery-truck',

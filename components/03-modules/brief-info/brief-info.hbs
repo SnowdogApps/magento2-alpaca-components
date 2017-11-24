@@ -1,4 +1,7 @@
 <div class="brief-info">
+    <{{heading.tag}} class="brief-info__heading {{heading.class}}">
+       {{heading.text}}
+    </{{heading.tag}}>
     {{#each items as |item|}}
     <div class="brief-info__item">
         <i class="brief-info__icon-wrapper {{ item.iconWrapperClass }}">
@@ -11,11 +14,6 @@
             >
                {{ item.title.text }}
             </{{ item.title.tag }}>
-            <a href="{{ item.link.href }}"
-               class="brief-info__link {{ item.link.class }}"
-           >
-               {{ item.link.text }}
-            </a>
         </div>
     </div>
     {{/each}}
