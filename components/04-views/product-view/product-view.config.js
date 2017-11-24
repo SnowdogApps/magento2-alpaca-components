@@ -287,6 +287,7 @@ module.exports = {
     relatedProducts: {
       heading: 'Related products',
       slider: {
+        class: 'product-view__slider-container',
         attributes: 'data-rewind="true" data-enable-mouse-events="true" data-slides-to-scroll="1"',
         iconPrev: {
           tag: 'button',
@@ -307,6 +308,7 @@ module.exports = {
         navigationClass: 'product-view__slider-navigation',
         slides: [
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -351,6 +353,7 @@ module.exports = {
             }
           },
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -402,6 +405,7 @@ module.exports = {
             }
           },
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -446,6 +450,97 @@ module.exports = {
             }
           },
           {
+            itemClass: 'product-view__slide-item',
+            content: 'catalog-grid-item',
+            contentContext: {
+              class: 'product-view__grid-item',
+              tag: 'div',
+              image: {
+                class: 'catalog-grid-item__image',
+                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+              },
+              name: 'Some product name',
+              price: {
+                name: 'price',
+                context: {
+                  regularPrice: '1 400',
+                  specialPrice: '',
+                  prefix: {
+                    tag: '',
+                    text: '$'
+                  },
+                  suffix: {
+                    tag: '',
+                    text: ''
+                  }
+                }
+              },
+              primaryAction: {
+                tag: 'button',
+                text: 'Add to Cart',
+                class: 'button catalog-grid-item__primary-action'
+              },
+              secondaryActions: [
+                {
+                  icon: {
+                    iconId: 'heart'
+                  }
+                },
+                {
+                  icon: {
+                    iconId: 'compare'
+                  }
+                }
+              ],
+            }
+          },
+          {
+            itemClass: 'product-view__slide-item',
+            content: 'catalog-grid-item',
+            contentContext: {
+              class: 'product-view__grid-item',
+              tag: 'div',
+              image: {
+                class: 'catalog-grid-item__image',
+                dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+              },
+              name: 'Some product name',
+              price: {
+                name: 'price',
+                context: {
+                  regularPrice: '1 400',
+                  specialPrice: '',
+                  prefix: {
+                    tag: '',
+                    text: '$'
+                  },
+                  suffix: {
+                    tag: '',
+                    text: ''
+                  }
+                }
+              },
+              primaryAction: {
+                tag: 'button',
+                text: 'Add to Cart',
+                class: 'button catalog-grid-item__primary-action'
+              },
+              secondaryActions: [
+                {
+                  icon: {
+                    iconId: 'heart'
+                  }
+                },
+                {
+                  icon: {
+                    iconId: 'compare'
+                  }
+                }
+              ],
+            }
+          },
+          {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -495,6 +590,8 @@ module.exports = {
     upsellProducts: {
       heading: 'You may also like',
       slider: {
+        script: true,
+        class: 'product-view__slider-container',
         attributes: 'data-rewind="true" data-enable-mouse-events="true" data-slides-to-scroll="1"',
         iconPrev: {
           tag: 'button',
@@ -515,6 +612,7 @@ module.exports = {
         navigationClass: 'product-view__slider-navigation',
         slides: [
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -559,6 +657,7 @@ module.exports = {
             }
           },
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -610,6 +709,7 @@ module.exports = {
             }
           },
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',
@@ -654,6 +754,7 @@ module.exports = {
             }
           },
           {
+            itemClass: 'product-view__slide-item',
             content: 'catalog-grid-item',
             contentContext: {
               class: 'product-view__grid-item',

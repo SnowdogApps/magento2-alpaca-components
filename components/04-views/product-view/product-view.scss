@@ -466,4 +466,16 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             text-transform: initial;
         }
     }
+
+    &__slider {
+        overflow: hidden;
+
+        .slider__handler {
+            margin-right: -$spacer--medium;
+        }
+    }
+
+    &__slide-item {
+        padding-right: $spacer--medium;
+    }
 }
