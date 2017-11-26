@@ -14,7 +14,7 @@ $purple                     : #613d7c !default;
 $gray-darkest               : #333333 !default;
 $gray-darker                : #393243 !default;
 $gray-dark                  : #4c4555 !default
-$gray                        : #73739c !default;
+$gray                       : #73739c !default;
 $gray-light                 : #c2c1df !default;
 $gray-lighter               : #c9c9c9 !default;
 $gray-lightest              : #f7f7f9 !default;
@@ -80,7 +80,7 @@ $screen-xxl                 : 1600px !default;
 // Components
 $border-radius              : 4px !default;
 $form-elements-radius       : 32px !default;
-$form-elements-radius--small: 10px !default;                                                                // TODO: formatting rest of rules
+$form-elements-radius--small: 10px !default;
 $form-elements-border-color : $gray-light !default;
 $transition-base            : all 0.3s ease-in-out !default;
 $transition-fade            : opacity 0.25s linear !default;
