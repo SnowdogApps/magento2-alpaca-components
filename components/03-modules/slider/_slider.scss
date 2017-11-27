@@ -89,6 +89,7 @@ $slider__dot-inside-background--active: $color-primary !default;
     }
 
     &__dot {
+        display: block;
         padding: $slider__dot-padding;
         margin-right: $slider__dot-margin;
         cursor: pointer;
@@ -106,6 +107,7 @@ $slider__dot-inside-background--active: $color-primary !default;
 
 
     &__dot-inside {
+        display: block;
         width: $slider__dot-inside-size;
         height: $slider__dot-inside-size;
         background-color: $slider__dot-inside-background;

@@ -38,7 +38,7 @@
 
         for (let i = 0; i < dotCount; i++) {
           let clone = dotItem.cloneNode();
-          const nestedElement = document.createElement('div');
+          const nestedElement = document.createElement('span');
 
           clone.classList.add('slider__dot');
           clone.appendChild(nestedElement);
@@ -55,7 +55,12 @@
 
       dots.forEach(dot => {
         dot.addEventListener('click', (e) => {
-          lorySlider.slideTo(Array.prototype.indexOf.call(dots, e.target));
+          if (e.target.parentNode === dot) {
+            lorySlider.slideTo(Array.prototype.indexOf.call(dots, e.target.parentNode));
+          }
+          else {
+            lorySlider.slideTo(Array.prototype.indexOf.call(dots, e.target));
+          }
         });
       })
     }
