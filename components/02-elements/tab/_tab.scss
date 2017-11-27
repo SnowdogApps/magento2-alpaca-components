@@ -77,10 +77,9 @@ $tab__icon-size                         : 48px !default;
             }
             .tab__icon {
                 transform: rotateX(180deg);
-
-                svg {
-                    fill: $tab__icon-color--active;
-                }
+            }
+            &__svg {
+                fill: $tab__icon-color--active;
             }
         }
     }
