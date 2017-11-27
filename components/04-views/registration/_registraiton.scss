@@ -1,0 +1,69 @@
+$registration__content-margin                               : 0 0 $spacer--extra-large !default;
+$registration__fieldset-margin                              : 0 0 $spacer--medium !default;
+$registration__fieldset-min-width\@medium                   : 600px !default;
+$registration__fieldset-width\@medium                       : 50% !default;
+$registration__legend-font-size                             : $font-size-base;
+$registration__legend-font-weight                           : $font-weight-bold;
+$registration__legend-margin                                : 0 0 $spacer--medium !default;
+$registration__legend-padding                               : 0 0 $spacer !default;
+$registration__legend-width                                 : 100% !default;
+$registration__legend-border-bottom                         : 8px solid $gray-lightest !default;
+$registration__legend-short-border-height                   : 8px !default;
+$registration__legend-short-border-width                    : 24% !default;
+$registration__legend-short-border-bottom-offset            : -8px;
+$registration__legend-short-border-left-offset              : 0 !default;
+$registration__legend-short-border-color                    : $color-primary !default;
+$registration__newsletter-checkbox-margin                   : 0 0 0 $spacer--medium !default;
+$registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold !default;
+$registration__password-margin                              : 0 !default;
+$registration__password-strength-margin                     : 0 0 $spacer 0 !default;
+$registration__password-strength-radius                     : $form-elements-radius !default;
+
+.registration {
+    &__content {
+        margin: $registration__content-margin;
+    }
+    &__legend {
+        position: relative;
+        margin: $registration__legend-margin;
+        padding: $registration__legend-padding;
+        border-bottom: $registration__legend-border-bottom;
+        width: $registration__legend-width;
+        font-size: $registration__legend-font-size;
+        font-weight: $registration__legend-font-weight;
+        &:after {
+            content: ' ';
+            position: absolute;
+            z-index: 2;
+            width: $registration__legend-short-border-width;
+            height: $registration__legend-short-border-height;
+            bottom: $registration__legend-short-border-bottom-offset;
+            left: $registration__legend-short-border-left-offset;
+            background-color: $registration__legend-short-border-color;
+        }
+    }
+    &__fieldset {
+        margin: $registration__fieldset-margin;
+        @include mq($screen-m) {
+            min-width: $registration__fieldset-min-width\@medium;
+            width: $registration__fieldset-width\@medium;
+        }
+    }
+    &__newsletter-checkbox {
+        margin: $registration__newsletter-checkbox-margin;
+    }
+    &__newsletter-checkbox-field {
+        &:checked ~ .checkbox__label {
+            font-weight: $registration__newsletter-checkbox-checked-label-font-weight;
+        }
+    }
+    &__password {
+        margin: $registration__password-margin;
+    }
+    &__password-strength {
+        margin: $registration__password-strength-margin;
+    }
+    &__password-strength-progress {
+        border-radius: $registration__password-strength-radius;
+    }
+}
