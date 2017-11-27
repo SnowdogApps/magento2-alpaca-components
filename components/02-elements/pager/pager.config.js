@@ -13,21 +13,25 @@ module.exports = {
       {
         pageNo: 2,
         active: false,
+        class: 'link--invert',
         ariaLabel: 'Link to page 2'
       },
       {
         pageNo: 3,
         active: false,
+        class: 'link--invert',
         ariaLabel: 'Link to page 3'
       },
       {
         pageNo: 4,
         active: false,
+        class: 'link--invert',
         ariaLabel: 'Link to page 4'
       },
       {
         pageNo: 5,
         active: false,
+        class: 'link--invert',
         ariaLabel: 'Link to page 5'
       }
     ]
@@ -44,11 +48,13 @@ module.exports = {
           {
             pageNo: 1,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 1'
           },
           {
             pageNo: 2,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 2'
           },
           {
@@ -59,11 +65,13 @@ module.exports = {
           {
             pageNo: 4,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 4'
           },
           {
             pageNo: 5,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 5'
           }
         ]
@@ -80,21 +88,25 @@ module.exports = {
           {
             pageNo: 1,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 1'
           },
           {
             pageNo: 2,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 2'
           },
           {
             pageNo: 3,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 3'
           },
           {
             pageNo: 4,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 4'
           },
           {
@@ -119,20 +131,24 @@ module.exports = {
           {
             pageNo: 7,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 7'
           },
           {
             pageNo: '...',
+            class: 'link--invert',
             active: false
           },
           {
             pageNo: 17,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 17'
           },
           {
             pageNo: 18,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 18'
           }
         ]
@@ -153,21 +169,25 @@ module.exports = {
           {
             pageNo: 14,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 14'
           },
           {
             pageNo: 15,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 15'
           },
           {
             pageNo: 16,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 16'
           },
           {
             pageNo: 17,
             active: false,
+            class: 'link--invert',
             ariaLabel: 'Link to page 17'
           }
         ]

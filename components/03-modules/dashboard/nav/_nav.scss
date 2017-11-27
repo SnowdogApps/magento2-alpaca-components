@@ -73,12 +73,6 @@ $dashboard-nav-margin : 15px !default;
     &__link {
         display: block;
         padding: 15px;
-        color: $gray-dark;
-
-        &:hover {
-            text-decoration: none;
-            color: $gray-dark;
-        }
     }
 
     // This class is changing by Magento
@@ -99,6 +93,6 @@ $dashboard-nav-margin : 15px !default;
     }
 
     .nav.item > a {
-        @extend .dashboard-nav__link;
+        @extend .link--invert;
     }
 }
