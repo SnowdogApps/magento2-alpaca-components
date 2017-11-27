@@ -1,7 +1,7 @@
 $slider__margin                       : $spacer--medium !default;
 $slider__transition                   : $transition-base !default;
 $slider__item-width                   : 50% !default;
-$slider__item-width--medium           : 25% !default;
+$slider__item-width\@medium           : 25% !default;
 $slider__navigation-margin            : $spacer !default;
 $slider__navigation-icon-size         : 48px !default;
 $slider__navigation-icon-margin       : $spacer !default;
@@ -14,7 +14,7 @@ $slider__dot-padding                  : $spacer--medium !default;
 $slider__dot-inside-size              : $spacer--medium !default;
 $slider__dot-inside-background        : $gray-dark !default;
 $slider__dot-inside-border-radius     : 8px !default;
-$slider__dot-inside-background--active: $color-primary !default;
+$slider__dot-inside-background\@active: $color-primary !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -34,7 +34,7 @@ $slider__dot-inside-background--active: $color-primary !default;
         border: 0;
 
         @include mq($screen-m) {
-            min-width: $slider__item-width--medium;
+            min-width: $slider__item-width\@medium;
         }
     }
 
@@ -96,7 +96,7 @@ $slider__dot-inside-background--active: $color-primary !default;
 
         &--active {
             & .slider__dot-inside {
-                background-color: $slider__dot-inside-background--active;
+                background-color: $slider__dot-inside-background\@active;
             }
         }
 
