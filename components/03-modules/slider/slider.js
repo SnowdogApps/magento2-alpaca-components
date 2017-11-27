@@ -30,24 +30,22 @@
     });
 
     function cloneDots() {
-      if (dotContainer) {
-        const dots      = dotContainer.childNodes,
-              dotActive = 'slider__dot--active',
-              dotCount  = dotNumber(),
-              dotItem   = document.createElement('div');
+      const dots      = dotContainer.childNodes,
+            dotActive = 'slider__dot--active',
+            dotCount  = dotNumber(),
+            dotItem   = document.createElement('div');
 
-        for (let i = 0; i < dotCount; i++) {
-          let clone = dotItem.cloneNode();
-          const nestedElement = document.createElement('span');
+      for (let i = 0; i < dotCount; i++) {
+        let clone = dotItem.cloneNode();
+        const nestedElement = document.createElement('span');
 
-          clone.classList.add('slider__dot');
-          clone.appendChild(nestedElement);
-          nestedElement.classList.add('slider__dot-inside');
-          dotContainer.appendChild(clone);
-        }
-
-        dots[0].classList.add(dotActive);
+        clone.classList.add('slider__dot');
+        clone.appendChild(nestedElement);
+        nestedElement.classList.add('slider__dot-inside');
+        dotContainer.appendChild(clone);
       }
+
+      dots[0].classList.add(dotActive);
     }
 
     function addDotListeners() {
