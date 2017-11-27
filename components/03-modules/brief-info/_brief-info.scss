@@ -18,6 +18,7 @@ $brief-info__icon-shield-svg-width                         : 100% !default;
 $brief-info__icon-size                                     : 48px !default;
 $brief-info__item-margin-right                             : 30px !default;
 $brief-info__item-margin-right\@medium                     : $spacer--medium !default;
+$brief-info__item-margin\@large                            : 0 $spacer 0 0;
 $brief-info__link-font-size                                : $font-size-small !default;
 $brief-info__link-font-weight                              : $font-weight-bold !default;
 $brief-info__link-text-decoration                          : none !default;
@@ -65,7 +66,7 @@ $brief-info__title-margin-bottom                           : 0 !default;
             margin-right: $brief-info__item-margin-right\@medium;
         }
         @include mq($screen-l) {
-            margin: 0 $spacer 0 0;
+            margin: $brief-info__item-margin\@large;
             align-items: center;
             flex-flow: row nowrap;
         }

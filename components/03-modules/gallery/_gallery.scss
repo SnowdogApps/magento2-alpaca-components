@@ -3,7 +3,7 @@ $gallery__icon-arrow-width                 : 12px !default;
 $gallery__label-offset-top                 : $spacer--medium !default;
 $gallery__label-offset-left                : $spacer !default;
 $gallery__nav-vertical-height              : 80px !default;
-$gallery__nav-vertical-margin-right--medium: $spacer--medium !default;
+$gallery__nav-vertical-margin-right\@medium: $spacer--medium !default;
 $gallery__nav-vertical-margin-right        : 40px !default;
 $gallery__stage-margin-bottom              : $spacer--medium !default;
 $gallery__thumb-arrow-height               : 48px !default;
@@ -40,7 +40,7 @@ $gallery__thumb-width--large               : 80px !default;
         &--vertical {
             @include mq($screen-m) {
                 order: 2;
-                width: calc(100% - (#{$gallery__nav-vertical-margin-right--medium} + #{$gallery__thumb-width}));
+                width: calc(100% - (#{$gallery__nav-vertical-margin-right\@medium} + #{$gallery__thumb-width}));
             }
             @include mq($screen-l) {
                 width: calc(100% - (#{$gallery__nav-vertical-margin-right} + #{$gallery__thumb-width--large}));
@@ -56,7 +56,7 @@ $gallery__thumb-width--large               : 80px !default;
         align-items: center;
         &--vertical {
             @include mq($screen-m) {
-                margin-right: $gallery__nav-vertical-margin-right--medium;
+                margin-right: $gallery__nav-vertical-margin-right\@medium;
                 flex-direction: column;
                 order: 1;
             }
