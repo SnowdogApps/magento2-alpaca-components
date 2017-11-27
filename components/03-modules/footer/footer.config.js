@@ -20,7 +20,7 @@ module.exports = {
           title: 'Help',
           id: 'dropdown-help',
           collapse: {
-            class: 'dropdown-list__icon',
+            class: 'dropdown-list__icon dropdown-list__icon--inner',
             iconId: 'angle-down'
           },
           contentElement: 'list--link',
@@ -31,31 +31,31 @@ module.exports = {
             elements: [
               {
                 text: 'Contact',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Contact"'
               },
               {
                 text: 'Frequently asked questions (FAQ)',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Frequently asked questions (FAQ)"'
               },
               {
                 text: 'How to buy',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="How to buy"'
               },
               {
                 text: 'Track your package',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Track your package"'
               },
               {
                 text: 'Guides',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Guides"'
               }
@@ -68,7 +68,7 @@ module.exports = {
           title: 'Information',
           id: 'dropdown-info',
           collapse: {
-            class: 'dropdown-list__icon',
+            class: 'dropdown-list__icon dropdown-list__icon--inner',
             iconId: 'angle-down'
           },
           contentElement: 'list--link',
@@ -79,25 +79,25 @@ module.exports = {
             elements: [
               {
                 text: 'Delivery time',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Delivery time"'
               },
               {
                 text: 'Payments',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Payments"'
               },
               {
                 text: 'Delivery cost',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Delivery cost"'
               },
               {
                 text: 'Returns and exchanges',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Returns and exchanges"'
               }
@@ -110,7 +110,7 @@ module.exports = {
           title: 'Why is worth it',
           id: 'dropdown-worth',
           collapse: {
-            class: 'dropdown-list__icon',
+            class: 'dropdown-list__icon dropdown-list__icon--inner',
             iconId: 'angle-down'
           },
           contentElement: 'list--link',
@@ -121,25 +121,25 @@ module.exports = {
             elements: [
               {
                 text: '30 days for return',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="30 days for return"'
               },
               {
                 text: 'Guarantee',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Guarantee"'
               },
               {
                 text: '454 Brands',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="454 Brands"'
               },
               {
                 text: 'Discounts',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Discounts"'
               }
@@ -152,7 +152,7 @@ module.exports = {
           title: 'Alpaca.pl',
           id: 'dropdown-alpaca',
           collapse: {
-            class: 'dropdown-list__icon',
+            class: 'dropdown-list__icon dropdown-list__icon--inner',
             iconId: 'angle-down'
           },
           contentElement: 'list--link',
@@ -163,31 +163,31 @@ module.exports = {
             elements: [
               {
                 text: 'About us',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="About us"'
               },
               {
                 text: 'Certificates and safety',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Certificates and safety"'
               },
               {
                 text: 'Prizes and customer feedback',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Prizes and customer feedback"'
               },
               {
                 text: 'Cookie policy',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Cookie policy"'
               },
               {
                 text: 'Regulations',
-                linkClass: 'link--secondary',
+                linkClass: 'footer__link',
                 link: '#',
                 linkAttributes: 'title="Regulations"'
               }

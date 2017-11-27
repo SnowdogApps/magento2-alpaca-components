@@ -6,6 +6,9 @@ $footer__newsletter-max-width          : 400px !default;
 $footer__newsletter-width\@large       : 30% !default;
 $footer__newsletter-padding            : 0 $spacer--medium !default;
 
+$footer__link-color                    : $gray-lighter !default;
+$footer__link-color-hover              : $color-primary !default;
+
 $footer__links-width\@large            : 70% !default;
 $footer__link-inner-padding            : $spacer--medium !default;
 
@@ -83,6 +86,16 @@ $footer__icon-fill-hover               : $color-primary !default;
 
     &__links-list {
         padding-bottom: $footer__padding;
+    }
+
+    &__link {
+        color: $footer__link-color;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $footer__link-color-hover;
+        }
     }
 
     &__bottom-bar {
