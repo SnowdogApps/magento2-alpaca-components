@@ -17,17 +17,17 @@ $newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
 $newsletter__checkbox-icon-size         : 18px !default;
 $newsletter__checkbox-icon-position-top : 0 !default;
+$newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !default;
 
 .newsletter {
     &__heading {
         line-height: $newsletter__line-height;
-        margin-right: 20px;
         color: $newsletter__heading-color;
         height: auto;
         font-size: $newsletter__font-size;
         font-weight: $font-weight-bold;
         text-align: left;
-        margin-bottom: $newsletter__bottom-gap;
+        margin: $newsletter__heading-margin;
     }
     &__controls {
         position: relative;
