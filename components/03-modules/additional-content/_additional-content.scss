@@ -1,11 +1,11 @@
 $additional-content__image-margin          : 0 0 41px !default;
-$additional-content__image-margin--screen-l: 0 0 32px !default;
+$additional-content__image-margin\@large: 0 0 32px !default;
 $additional-section-width                  : 48% !default;
 .additional-content {
     &__image {
         margin: $additional-content__image-margin;
         @include mq($screen-l) {
-            margin: $additional-content__image-margin--screen-l;
+            margin: $additional-content__image-margin\@large;
         }
     }
     &__info {
