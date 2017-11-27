@@ -38,7 +38,6 @@ fractal.docs.set('path', __dirname + '/build/docs');
 fractal.web.set('static.path', __dirname + '/build/public');
 fractal.web.set('builder.dest', __dirname + '/dest');
 fractal.web.theme(mandelbrot({ skin: 'black' }));
-fractal.components.set('default.preview', '@preview-default');
 
 // Handlebars helpers
 hbsEngine.handlebars.registerHelper('static', (file, data) => {
@@ -86,7 +85,7 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
 
 // Gulp tasks
 gulp.task('a11y', () => {
-  fractal.components.set('default.preview', '@preview-a11y');
+  fractal.components.set('default.preview', '@a11y-tests');
   runSequence('fractal:start');
 });
 
