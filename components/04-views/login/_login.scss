@@ -1,0 +1,96 @@
+$login__margin-bottom                 : $spacer--extra-large !default;
+$login__padding-top                   : $spacer--medium !default;
+$login__actions-margin                : 0 0 $spacer--medium !default;
+
+$login__button-margin                 : 0 $spacer--large 0 0 !default;
+$login__button-width                  : 160px !default;
+
+$login__tabs-margin                   : 0 0 $spacer--extra-large 0 !default;
+$login__tabs-content-max-width\@medium: 496px !default;
+$login__tabs-content-max-width\@large : none !default;
+$login__tabs-content-margin           : 0 auto !default;
+
+$login__forgot-password               : 0 !default;
+$login__forgot-password-margin        : 0 !default;
+$login__forgot-password-color         : $blue !default;
+$login__forgot-password-text-decoration: none !default;
+
+$login__input-margin                  : 0 0 $spacer--medium !default;
+
+$login__sidebar-margin                : 0 0 $spacer !default;
+
+$login__sign-in-info-margin           : 0 0 $spacer !default;
+$login__sign-in-info-margin\@medium   : 0 0 24px !default;
+
+$login__title-margin-bottom           : $spacer--medium !default;
+$login__title-text-transform          : uppercase !default;
+
+$login__validation-tips-color         : $red !default;
+$login__validation-tips-margin         : 0 0 $spacer !default;
+
+.login {
+    padding-top: $login__padding-top;
+    margin-bottom: $login__margin-bottom;
+    &__title {
+        text-transform: $login__title-text-transform;
+        margin-bottom: $login__title-margin-bottom;
+    }
+    &__sign-in-info {
+        margin: $login__sign-in-info-margin;
+        text-align: center;
+        @include mq($screen-m) {
+            margin: $login__sign-in-info-margin\@medium;
+        }
+    }
+    &__content {
+        @include mq($screen-l) {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &__tabs {
+        margin: $login__tabs-margin;
+        @include mq($screen-l) {
+            width: calc(50% - 8px);
+        }
+    }
+    &__tabs-content {
+        @include mq($screen-m) {
+            max-width: $login__tabs-content-max-width\@medium;
+            margin: $login__tabs-content-margin;
+        }
+        @include mq($screen-l) {
+            max-width: $login__tabs-content-max-width\@large;
+        }
+    }
+    &__sidebar {
+        margin: $login__sidebar-margin;
+        @include mq($screen-l) {
+            width: calc(50% - 8px);
+        }
+    }
+    &__actions {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: $login__actions-margin;
+    }
+    &__button {
+        margin: $login__button-margin;
+        width: $login__button-width;
+    }
+    &__forgot-password {
+        margin: $login__forgot-password-margin;
+        color: $login__forgot-password-color;
+        text-decoration: $login__forgot-password-text-decoration;
+    }
+    &__input {
+        margin: $login__input-margin;
+    }
+    &__validation-tips {
+        color: $login__validation-tips-color;
+        margin: $login__validation-tips-margin;
+    }
+}
