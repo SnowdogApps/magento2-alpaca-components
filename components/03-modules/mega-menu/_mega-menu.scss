@@ -68,10 +68,6 @@ $mega-menu__dropdown-max-width        : 850px !default;
             padding: $mega-menu__link-inner-padding;
             font-size: $mega-menu__font-size;
             font-weight: $mega-menu__link-inner-font-weight;
-            &:focus,
-            &:hover {
-                color: $mega-menu__font-color--hover;
-            }
         }
 
         &--inner-heading {

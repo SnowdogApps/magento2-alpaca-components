@@ -10,7 +10,6 @@ $dropdown-list__content-padding          : $spacer--medium !default;
 // List item
 $dropdown-list__item-padding             : $spacer--medium !default;
 $dropdown-list__item-color               : $font-color-base !default;
-$dropdown-list__item-color-hover         : $color-primary !default;
 $dropdown-list__item-color--open         : $color-primary !default;
 $dropdown-list__item-bg-color            : $white !default;
 $dropdown-list__item-bg-color--open      : $gray-darker !default;
@@ -142,7 +141,6 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         display: block;
         position: relative;
         width: 100%;
-        color: $dropdown-list__item-color;
         background-color: $dropdown-list__item-bg-color;
         padding: $dropdown-list__item-padding;
         margin: 0;
@@ -155,7 +153,6 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
 
         &:hover,
         &:focus {
-            color: $dropdown-list__item-color-hover;
             background-color: $dropdown-list__item-bg-color-hover;
             text-decoration: none;
             outline: $dropdown-list__outline;
