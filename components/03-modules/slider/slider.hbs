@@ -16,6 +16,10 @@
 
         {{render '@button--icon' iconNext }}
     </div>
+
+    {{#if navigation }}
+        <div class="slider__dot-navigation {{ dotNavigationClass }}"></div>
+    {{/if}}
 </div>
 
 {{#if script }}
