@@ -10,7 +10,7 @@ class Modal {
 
   setListeners() {
     this.triggers.forEach(trigger => {
-      const triggerId           = trigger.dataset.popuptrigger,
+      const triggerId           = trigger.dataset.modaltrigger,
             modalElement        = document.querySelector(`.modal[data-modal=${triggerId}]`),
             modalContentElement = modalElement.querySelector('.modal__content'),
             closeButton         = modalElement.querySelector('.modal__close-button');
