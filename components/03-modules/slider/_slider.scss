@@ -1,15 +1,20 @@
-$slider__margin                    : $spacer--medium !default;
-$slider__transition                : $transition-base !default;
-$slider__item-width                : 50% !default;
-$slider__item-width--medium        : 33% !default;
-$slider__item-width--large         : 25% !default;
-$slider__navigation-margin         : $spacer !default;
-$slider__navigation-icon-size      : 48px !default;
-$slider__navigation-icon-margin    : $spacer !default;
-$slider__navigation-icon-background: $white !default;
-$slider__icon-size                 : 25px !default;
-$slider__icon-fill                 : $color-primary !default;
-$slider__icon-fill-hover           : darken($color-primary, 10%) !default;
+$slider__margin                       : $spacer--medium !default;
+$slider__transition                   : $transition-base !default;
+$slider__item-width                   : 50% !default;
+$slider__item-width\@medium           : 25% !default;
+$slider__navigation-margin            : $spacer !default;
+$slider__navigation-icon-size         : 48px !default;
+$slider__navigation-icon-margin       : $spacer !default;
+$slider__navigation-icon-background   : $white !default;
+$slider__icon-size                    : 25px !default;
+$slider__icon-fill                    : $color-primary !default;
+$slider__icon-fill-hover              : darken($color-primary, 10%) !default;
+$slider__dot-margin                   : $spacer--medium !default;
+$slider__dot-padding                  : $spacer--medium !default;
+$slider__dot-inside-size              : $spacer--medium !default;
+$slider__dot-inside-background        : $gray-dark !default;
+$slider__dot-inside-border-radius     : $spacer !default;
+$slider__dot-inside-background--active: $color-primary !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -29,11 +34,7 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
         border: 0;
 
         @include mq($screen-m) {
-            min-width: $slider__item-width--medium;
-        }
-
-        @include mq($screen-l) {
-            min-width: $slider__item-width--large;
+            min-width: $slider__item-width\@medium;
         }
     }
 
@@ -78,5 +79,38 @@ $slider__icon-fill-hover           : darken($color-primary, 10%) !default;
         fill: $slider__icon-fill;
         transition: $slider__transition;
         cursor: pointer;
+    }
+
+    &__dot-navigation {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-top: $spacer;
+    }
+
+    &__dot {
+        display: block;
+        padding: $slider__dot-padding;
+        margin-right: $slider__dot-margin;
+        cursor: pointer;
+
+        &--active {
+            .slider__dot-inside {
+                background-color: $slider__dot-inside-background--active;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+    &__dot-inside {
+        display: block;
+        width: $slider__dot-inside-size;
+        height: $slider__dot-inside-size;
+        background-color: $slider__dot-inside-background;
+        border-radius: $slider__dot-inside-border-radius;
     }
 }
