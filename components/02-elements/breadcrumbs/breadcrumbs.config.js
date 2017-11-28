@@ -4,27 +4,32 @@ module.exports = {
       {
         name: 'Home',
         href: '#',
-        ariaLabel: 'Breadcrumb Home'
+        ariaLabel: 'Breadcrumb Home',
+        linkClass: 'breadcrumbs__link link--invert'
       },
       {
         name: 'category2',
         href: '#',
-        ariaLabel: 'Breadcrumb category2'
+        ariaLabel: 'Breadcrumb category2',
+        linkClass: 'breadcrumbs__link link--invert'
       },
       {
         name: 'category3',
         href: '#',
-        ariaLabel: 'Breadcrumb category3'
+        ariaLabel: 'Breadcrumb category3',
+        linkClass: 'breadcrumbs__link link--invert'
       },
       {
         name: 'category4',
         href: '#',
-        ariaLabel: 'Breadcrumb category4'
+        ariaLabel: 'Breadcrumb category4',
+        linkClass: 'breadcrumbs__link link--invert'
       },
       {
         name: 'category5',
         href: '#',
-        ariaLabel: 'Breadcrumb category5'
+        ariaLabel: 'Breadcrumb category5',
+        linkClass: 'breadcrumbs__link link--invert'
       },
       {
         name: 'category6',

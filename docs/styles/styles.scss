@@ -1,28 +1,8 @@
-// -----
+// Variables
+@import '../../components/01-globals/variables/variables';
+
 // Components
-// -----
+@import 'components';
 
-// Custom variables import
-// @import ...
-
-// Alpaca core-components
-@import 'alpaca-components';
-
-// Custom components import
-// @import ...
-
-// -----
-// Documentation
-// -----
-
-@import 'docs-only-styles/checkbox';
-@import 'docs-only-styles/button';
-@import 'docs-only-styles/filter';
-@import 'docs-only-styles/grid';
-@import 'docs-only-styles/icons';
-@import 'docs-only-styles/list';
-@import 'docs-only-styles/minicart-product';
-@import 'docs-only-styles/newsletter';
-@import 'docs-only-styles/product';
-@import 'docs-only-styles/range-filter';
-@import 'docs-only-styles/search';
+// Styles necessary only for Fractal purpoueses
+@import 'fractal';
