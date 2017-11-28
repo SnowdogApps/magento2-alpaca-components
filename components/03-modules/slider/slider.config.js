@@ -69,5 +69,13 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  variants: [
+    {
+      name: 'with-dots',
+      context: {
+        navigation: true
+      }
+    }
+  ]
 }
