@@ -39,11 +39,11 @@ $registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold 
 $registration__password-color                               : $gray !default;
 $registration__password-bg-color                            : transparent !default;
 $registration__password-margin                              : 0 !default;
+
 $registration__password-strength-margin                     : 0 0 $spacer 0 !default;
 $registration__password-strength-padding                    : $spacer 0 !default;
 $registration__password-strength-radius                     : $form-elements-radius !default;
 $registration__password-strength-font-color                 : $gray !default;
-
 
 $registration__password-strength-meter-padding              : 2px $spacer--medium !default;
 $registration__password-strength-meter-color                : $gray !default;
