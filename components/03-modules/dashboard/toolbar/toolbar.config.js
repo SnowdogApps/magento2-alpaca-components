@@ -10,14 +10,17 @@ module.exports = {
       pages: [
         {
           pageNo: 1,
+          class: 'link--invert',
           active: false
         },
         {
           pageNo: 2,
+          class: 'link--invert',
           active: false
         },
         {
           pageNo: 3,
+          class: 'link--invert',
           active: false
         }
       ]
