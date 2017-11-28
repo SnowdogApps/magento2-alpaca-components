@@ -1,27 +1,61 @@
+$registration__padding-top                                  : $spacer--medium !default;
+$registration__title-margin-bottom                          : $spacer--medium !default;
+$registration__title-margin-bottom\@large                   : $spacer--large !default;
+$registration__title-font-size                              : $font-size-base !default;
+$registration__title-font-size\@medium                      : $font-size-large !default;
+$registration__title-font-size\@large                       : 24px !default;
+$registration__title-text-transform                         : uppercase !default;
 $registration__content-margin                               : 0 0 $spacer--extra-large !default;
+$registration__input-margin                                 : 0 0 $spacer--medium !default;
+$registration__input-margin--password                       : 0 0 $spacer !default;
 $registration__fieldset-margin                              : 0 0 $spacer--medium !default;
 $registration__fieldset-min-width\@medium                   : 600px !default;
 $registration__fieldset-width\@medium                       : 50% !default;
 $registration__legend-font-size                             : $font-size-base;
 $registration__legend-font-weight                           : $font-weight-bold;
-$registration__legend-margin                                : 0 0 $spacer--medium !default;
-$registration__legend-padding                               : 0 0 $spacer !default;
+$registration__legend-margin                                : 0 0 $spacer--large !default;
+$registration__legend-padding                               : 0 0 $spacer--medium !default;
 $registration__legend-width                                 : 100% !default;
 $registration__legend-border-bottom                         : 8px solid $gray-lightest !default;
 $registration__legend-short-border-height                   : 8px !default;
-$registration__legend-short-border-width                    : 24% !default;
+$registration__legend-short-border-width                    : 152px !default;
 $registration__legend-short-border-bottom-offset            : -8px;
 $registration__legend-short-border-left-offset              : 0 !default;
 $registration__legend-short-border-color                    : $color-primary !default;
-$registration__newsletter-checkbox-margin                   : 0 0 0 $spacer--medium !default;
+$registration__newsletter-checkbox-margin                   : 0 0 $spacer !default;
+$registration__newsletter-checkbox-icon-offset              : 15px !default;
+$registration__newsletter-checkbox-label-padding-left       : 48px !default;
+$registration__newsletter-checkbox-label-line-height        : 48px !default;
+$registration__newsletter-checkbox-icon-clickable-area      : 48px !default;
 $registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold !default;
+$registration__password-bg-color                            : $gray-lightest !default;
 $registration__password-margin                              : 0 !default;
 $registration__password-strength-margin                     : 0 0 $spacer 0 !default;
 $registration__password-strength-radius                     : $form-elements-radius !default;
+$registration__password-strength-font-color                 : $gray !default;
 
 .registration {
+    padding-top: $registration__padding-top;
+    &__title {
+        font-size: $registration__title-font-size;
+        text-transform: $registration__title-text-transform;
+        margin-bottom: $registration__title-margin-bottom;
+        @include mq($screen-m) {
+            font-size: $registration__title-font-size\@medium;
+        }
+        @include mq($screen-l) {
+            font-size: $registration__title-font-size\@large;
+            margin-bottom: $registration__title-margin-bottom\@large;
+        }
+    }
     &__content {
         margin: $registration__content-margin;
+    }
+    &__input {
+        margin: $registration__input-margin;
+        &--password {
+            margin: $registration__input-margin--password;
+        }
     }
     &__legend {
         position: relative;
@@ -52,10 +86,30 @@ $registration__password-strength-radius                     : $form-elements-rad
     &__newsletter-checkbox {
         margin: $registration__newsletter-checkbox-margin;
     }
+    &__newsletter-checkbox-label {
+        padding-left: $registration__newsletter-checkbox-label-padding-left;
+        line-height: $registration__newsletter-checkbox-label-line-height;
+        &:before {
+            top: $registration__newsletter-checkbox-icon-offset;
+            left: $registration__newsletter-checkbox-icon-offset;
+        }
+        &:after {
+            width: $registration__newsletter-checkbox-icon-clickable-area;
+            height: $registration__newsletter-checkbox-icon-clickable-area;
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
     &__newsletter-checkbox-field {
         &:checked ~ .checkbox__label {
             font-weight: $registration__newsletter-checkbox-checked-label-font-weight;
         }
+    }
+    &__newsletter-checkbox-icon {
+        top: $registration__newsletter-checkbox-icon-offset;
+        left: $registration__newsletter-checkbox-icon-offset;
     }
     &__password {
         margin: $registration__password-margin;
@@ -65,5 +119,13 @@ $registration__password-strength-radius                     : $form-elements-rad
     }
     &__password-strength-progress {
         border-radius: $registration__password-strength-radius;
+        background-color: $registration__password-bg-color;
+        .password-strength--none &,
+        .password-strength-meter--none & {
+           color: $registration__password-strength-font-color;
+           &:before {
+                background-color: $registration__password-bg-color;
+            }
+        }
     }
 }

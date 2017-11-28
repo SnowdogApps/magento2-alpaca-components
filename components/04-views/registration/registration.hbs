@@ -2,7 +2,7 @@
 
 <main class="container registration">
 
-    <h1 class="heading heading--fourth-level registration__title">
+    <h1 class="heading registration__title">
         {{ title }}
     </h1>
 
@@ -15,28 +15,28 @@
             >
                 {{ personalSection.legend.text }}
             </legend>
+
             {{ render '@input' firstName }}
-
             {{ render '@input' lastName }}
-
             {{ render '@checkbox' newsletterCheckbox }}
-            </fieldset>
 
-            <fieldset class="fieldset registration__fieldset {{ signInSection.fieldset.class }}"
-                  {{{ signInSection.fieldset.attributes }}}>
+        </fieldset>
+
+        <fieldset class="fieldset registration__fieldset {{ signInSection.fieldset.class }}"
+                  {{{ signInSection.fieldset.attributes }}}
+        >
             <legend class="fieldset__legends registration__legend {{ signInSection.legend.class }}"
                 {{{ signInSection.legend.attributes }}}
             >
                 {{ signInSection.legend.text }}
             </legend>
 
-                {{ render '@input' email }}
-
+            {{ render '@input' email }}
+            <div class="registration__input">
                 {{ render '@input' password }}
                 {{ render '@password-strength' passwordStrength }}
-
-                {{ render '@input' passwordConfirmation }}
-
+            </div>
+            {{ render '@input' passwordConfirmation }}
             </fieldset>
 
         {{ render '@button' registrationButton }}

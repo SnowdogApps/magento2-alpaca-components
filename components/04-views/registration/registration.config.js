@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    title: 'Create new customer account',
     personalSection: {
       fieldset: {
         attributes: '',
@@ -22,35 +23,35 @@ module.exports = {
     },
     firstName: {
       attribute: '',
-      class: '',
+      class: 'registration__input',
       label: {
         attribute: '',
         text: 'First name',
-        hidden: true
+        hidden: false
       },
       field: {
         attribute: '',
         class: '',
         id: 'firstname',
         name: 'fisrtname',
-        placeholder: 'First name',
+        placeholder: '',
         type: 'text'
       }
     },
     lastName: {
       attribute: '',
-      class: '',
+      class: 'registration__input',
       label: {
         attribute: '',
         text: 'Last name',
-        hidden: true
+        hidden: false
       },
       field: {
         attribute: '',
         class: '',
         id: 'lastname',
         name: 'lastname',
-        placeholder: 'Last name',
+        placeholder: '',
         type: 'text'
       }
     },
@@ -59,68 +60,76 @@ module.exports = {
       id: 'is_subscribed',
       name: 'is_subscribed',
       label: {
-        text: 'Sign Up for Newsletter'
+        text: 'Sign Up for Newsletter',
+        class: 'registration__newsletter-checkbox-label'
       },
       input: {
         class: 'registration__newsletter-checkbox-field'
+      },
+      icon: {
+        class: 'registration__newsletter-checkbox-icon'
       }
     },
     email: {
       attribute: '',
-      class: '',
+      class: 'registration__input',
       label: {
         attribute: '',
         text: 'Email',
-        hidden: true
+        hidden: false
       },
       field: {
         attribute: '',
         class: '',
         id: 'email',
         name: 'email',
-        placeholder: 'Email',
+        placeholder: '',
         type: 'email'
       }
     },
     password: {
       attribute: '',
-      class: '',
+      class: 'registration__input registration__input--password',
       label: {
         attribute: '',
-        text: 'Email',
-        hidden: true
+        text: 'Password',
+        hidden: false
       },
       field: {
         attribute: 'aria-required="true" autocomplete="off"',
         class: '',
         id: 'password',
         name: 'password',
-        placeholder: 'Password',
+        placeholder: '',
         type: 'password'
       }
     },
     passwordConfirmation: {
       attribute: '',
-      class: '',
+      class: 'registration__input',
       label: {
         attribute: '',
         text: 'Confirm password',
-        hidden: true
+        hidden: false
       },
       field: {
         attribute: 'aria-required="true" autocomplete="off"',
         class: '',
         id: 'password-confirmation',
         name: 'password-confirmation',
-        placeholder: 'Confirm password',
+        placeholder: '',
         type: 'password'
       }
     },
     passwordStrength: {
-      class: 'registration__password-strength',
+      class: 'registration__password-strength password-strength--none',
       text: 'Password Strength:',
       noPassword: 'No Password',
       strengthProgressClass: 'registration__password-strength-progress'
+    },
+    registrationButton: {
+      tag: 'button',
+      text: 'Create an Account'
     }
   }
 };
