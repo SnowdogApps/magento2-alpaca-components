@@ -52,18 +52,18 @@
       const dots = dotContainer.childNodes;
 
       dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-          if (e.target.parentNode === dot) {
-            lorySlider.slideTo(Array.prototype.indexOf.call(dots, e.target.parentNode));
+        dot.addEventListener('click', (event) => {
+          if (event.target.parentNode === dot) {
+            lorySlider.slideTo(Array.prototype.indexOf.call(dots, event.target.parentNode));
           }
           else {
-            lorySlider.slideTo(Array.prototype.indexOf.call(dots, e.target));
+            lorySlider.slideTo(Array.prototype.indexOf.call(dots, event.target));
           }
         });
       })
     }
 
-    function dotClassToggle(e) {
+    function dotClassToggle(event) {
       const dots      = dotContainer.childNodes,
             dotActive = 'slider__dot--active';
 
@@ -71,7 +71,7 @@
         dot.classList.remove(dotActive);
       });
 
-      dots[e.detail.currentSlide].classList.add(dotActive);
+      dots[event.detail.currentSlide].classList.add(dotActive);
     }
 
     function sliderResize() {

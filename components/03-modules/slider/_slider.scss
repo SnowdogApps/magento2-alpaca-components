@@ -13,8 +13,8 @@ $slider__dot-margin                   : $spacer--medium !default;
 $slider__dot-padding                  : $spacer--medium !default;
 $slider__dot-inside-size              : $spacer--medium !default;
 $slider__dot-inside-background        : $gray-dark !default;
-$slider__dot-inside-border-radius     : 8px !default;
-$slider__dot-inside-background\@active: $color-primary !default;
+$slider__dot-inside-border-radius     : $spacer !default;
+$slider__dot-inside-background--active: $color-primary !default;
 
 .slider {
     margin-bottom: $slider__margin;
@@ -95,8 +95,8 @@ $slider__dot-inside-background\@active: $color-primary !default;
         cursor: pointer;
 
         &--active {
-            & .slider__dot-inside {
-                background-color: $slider__dot-inside-background\@active;
+            .slider__dot-inside {
+                background-color: $slider__dot-inside-background--active;
             }
         }
 
