@@ -1,6 +1,5 @@
 $catalog-grid-item__base-spacing            : $spacer !default;
 $catalog-grid-item__padding                 : 0 !default;
-$catalog-grid-item__border                  : 1px solid $gray-lightest !default;
 
 $catalog-grid-item__font-size               : $font-size-small !default;
 $catalog-grid-item__font-size\@large        : $font-size-base !default;
@@ -18,7 +17,6 @@ $catalog-grid-item__name-font-weight        : $font-weight-normal !default;
 
 $catalog-grid-item__action-size             : 32px !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
-$catalog-grid-item__action-item-spacing     : $spacer !default;
 
 .catalog-grid-item {
     position: relative;
