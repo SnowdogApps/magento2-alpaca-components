@@ -2,6 +2,7 @@ module.exports = {
   context: {
     title: 'Customer login',
     signInInfo: 'If you have an account, sign in with your email address.',
+    createAccountInfo: 'Creating an account has many benefits: check out faster, keep more than one address, track orders and more.',
     email: {
       attribute: '',
       class: 'login__input',
@@ -41,10 +42,51 @@ module.exports = {
       tag: 'button',
       text: 'Sign in'
     },
+    createAccountButton: {
+      class: 'login__button',
+      tag: 'button',
+      text: 'Create an Account'
+    },
     forgetPassword: {
         href: '#',
         text: 'Forgot your password?'
     },
-    validationTips: '* Required Fields'
-  }
+    validationTips: '* Required Fields',
+    tabs: {
+      modifier: '',
+      registeredCustomer: {
+        active: true,
+        tabId: 'registered-customer',
+        title: 'Registered customer',
+        content: ''
+      },
+      newCustomer: {
+        tabId: 'new-customer',
+        title: 'New customer'
+      }
+    },
+    banner: {
+      defaultSrc: '/images/login/banner-464-360@2x.jpg',
+      sources: [
+        {
+          src: '/images/login/banner-304-144@2x.jpg',
+          mediaQuery: '(max-width: 768px)'
+        },
+        {
+          src: '/images/login/banner-464-360@2x.jpg',
+          mediaQuery: '(max-width: 992px)'
+        },
+        {
+          src: '/images/login/banner-656-360.jpg',
+          mediaQuery: ''
+        }
+      ],
+      alt: 'Description of image'
+    }
+  },
+  variants: [
+    {
+      name: 'without-banner',
+    }
+  ]
 };

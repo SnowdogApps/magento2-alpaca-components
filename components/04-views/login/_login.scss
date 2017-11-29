@@ -1,32 +1,38 @@
-$login__margin-bottom                 : $spacer--extra-large !default;
-$login__padding-top                   : $spacer--medium !default;
-$login__actions-margin                : 0 0 $spacer--medium !default;
+$login__margin-bottom                       : $spacer--extra-large !default;
+$login__padding-top                         : $spacer--medium !default;
+$login__actions-margin                      : 0 0 $spacer--medium !default;
 
-$login__button-margin                 : 0 $spacer--large 0 0 !default;
-$login__button-width                  : 160px !default;
+$login__horizontal-padding                  : 38px !default;
+$login__button-margin                       : 0 $spacer--large 0 0 !default;
+$login__button-min-width                    : 160px !default;
 
-$login__tabs-margin                   : 0 0 $spacer--extra-large 0 !default;
-$login__tabs-content-max-width\@medium: 496px !default;
-$login__tabs-content-max-width\@large : none !default;
-$login__tabs-content-margin           : 0 auto !default;
+$login__tab-content-padding                 : $spacer--large 0 !default;
+$login__tab-title-background-active         : $gray-lightest !default;
+$login__tab-title-border                    : 8px solid $gray-lightest !default;
+$login__tab-title-horizontal-padding        : $spacer !default;
+$login__tab-title-horizontal-padding\@medium: $spacer--medium !default;
 
-$login__forgot-password               : 0 !default;
-$login__forgot-password-margin        : 0 !default;
-$login__forgot-password-color         : $blue !default;
-$login__forgot-password-text-decoration: none !default;
+$login__tabs-margin                         : 0 0 $spacer--extra-large 0 !default;
+$login__tabs-content-max-width\@medium      : 496px !default;
+$login__tabs-content-max-width\@large       : none !default;
+$login__tabs-content-margin                 : 0 auto !default;
 
-$login__input-margin                  : 0 0 $spacer--medium !default;
+$login__forgot-password-margin              : 0 !default;
+$login__forgot-password-color               : $blue !default;
+$login__forgot-password-text-decoration     : none !default;
 
-$login__sidebar-margin                : 0 0 $spacer !default;
+$login__input-margin                        : 0 0 $spacer--medium !default;
 
-$login__sign-in-info-margin           : 0 0 $spacer !default;
-$login__sign-in-info-margin\@medium   : 0 0 24px !default;
+$login__sidebar-margin                      : 0 0 $spacer !default;
 
-$login__title-margin-bottom           : $spacer--medium !default;
-$login__title-text-transform          : uppercase !default;
+$login__info-margin                         : 0 0 $spacer !default;
+$login__info-margin\@medium                 : 0 0 24px !default;
 
-$login__validation-tips-color         : $red !default;
-$login__validation-tips-margin         : 0 0 $spacer !default;
+$login__title-margin-bottom                 : $spacer--medium !default;
+$login__title-text-transform                : uppercase !default;
+
+$login__validation-tips-color               : $red !default;
+$login__validation-tips-margin              : 0 0 $spacer !default;
 
 .login {
     padding-top: $login__padding-top;
@@ -35,38 +41,53 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
         text-transform: $login__title-text-transform;
         margin-bottom: $login__title-margin-bottom;
     }
-    &__sign-in-info {
-        margin: $login__sign-in-info-margin;
+    &__info {
+        margin: $login__info-margin;
         text-align: center;
         @include mq($screen-m) {
-            margin: $login__sign-in-info-margin\@medium;
+            margin: $login__info-margin\@medium;
+            text-align: left;
         }
     }
     &__content {
-        @include mq($screen-l) {
+        @include mq($screen-m) {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
         }
     }
+    &__fieldset {
+        @include mq ($screen-m) {
+            max-width: 488px;
+        }
+    }
     &__tabs {
         margin: $login__tabs-margin;
-        @include mq($screen-l) {
+        width: 100%;
+        @include mq($screen-m) {
             width: calc(50% - 8px);
         }
     }
-    &__tabs-content {
+    &__tab-container {
+        margin: $login__tabs-content-margin;
         @include mq($screen-m) {
             max-width: $login__tabs-content-max-width\@medium;
-            margin: $login__tabs-content-margin;
         }
         @include mq($screen-l) {
             max-width: $login__tabs-content-max-width\@large;
         }
     }
+    &__tab-content {
+        padding: $login__tab-content-padding;
+        &--active {
+            opacity: 1;
+            z-index: 1;
+            display: block;
+        }
+    }
     &__sidebar {
         margin: $login__sidebar-margin;
-        @include mq($screen-l) {
+        @include mq($screen-m) {
             width: calc(50% - 8px);
         }
     }
@@ -79,7 +100,9 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
     }
     &__button {
         margin: $login__button-margin;
-        width: $login__button-width;
+        padding-right: $login__horizontal-padding;
+        padding-left: $login__horizontal-padding;
+        min-width: $login__button-min-width;
     }
     &__forgot-password {
         margin: $login__forgot-password-margin;
@@ -93,4 +116,52 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
         color: $login__validation-tips-color;
         margin: $login__validation-tips-margin;
     }
+    &__tab-container {
+        display: flex;
+        flex-flow: row wrap;
+        .tab {
+            &__title {
+                flex: 1;
+                order: -1;
+                border-top: none;
+                border-bottom: $login__tab-title-border;
+                font-weight: $tab__title-font-weight--large;
+                padding-left: $login__tab-title-horizontal-padding;
+                padding-right: $login__tab-title-horizontal-padding;
+                @include mq($screen-m) {
+                    padding-left: $login__tab-title-horizontal-padding\@medium;
+                    padding-right: $login__tab-title-horizontal-padding\@medium;
+                }
+                &:nth-last-child(2) {
+                    border-bottom: $login__tab-title-border;
+                }
+                &--active {
+                    border-bottom: $tab__title-border--large-active;
+                    background-color: $login__tab-title-background-active;
+                    font-weight: $tab__title-font-weight--large-active;
+                    color: $tab__title-color;
+                    z-index: 2;
+                    &:nth-last-child(2) {
+                        border-bottom: $tab__title-border--large-active;
+                    }
+                }
+            }
+
+            &__content {
+                flex-basis: 100%;
+                z-index: 1;
+
+                &--active {
+                    &:nth-last-child(1) {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            &__icon {
+                display: none;
+            }
+        }
+    }
 }
+
