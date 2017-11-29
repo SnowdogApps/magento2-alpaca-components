@@ -70,6 +70,10 @@ module.exports = {
       sources: [
         {
           src: '/images/login/banner-304-144@2x.jpg',
+          mediaQuery: '(max-width: 468px)'
+        },
+        {
+          src: '/images/login/banner-304-144@3x.jpg',
           mediaQuery: '(max-width: 768px)'
         },
         {
