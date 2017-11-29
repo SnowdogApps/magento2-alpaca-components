@@ -62,13 +62,13 @@ $registration__password-strength-meter-color--weak          : $color-danger !def
 $registration__password-strength-meter-bg-color--weak       : lighten($color-danger, 32) !default;
 $registration__password-strength-meter-border--weak         : 1px solid $color-danger !default;
 
-$registration__password-strength-meter-color--medium       : $color-info !default;
-$registration__password-strength-meter-bg-color--medium    : lighten($color-info, 32) !default;
-$registration__password-strength-meter-border--medium      : 1px solid $color-info !default;
+$registration__password-strength-meter-color--medium        : $color-info !default;
+$registration__password-strength-meter-bg-color--medium     : lighten($color-info, 32) !default;
+$registration__password-strength-meter-border--medium       : 1px solid $color-info !default;
 
-$registration__password-strength-meter-color--strong       : $black !default;
-$registration__password-strength-meter-bg-color--strong    : lighten($color-success, 40) !default;
-$registration__password-strength-meter-border--strong      : 1px solid $color-success !default;
+$registration__password-strength-meter-color--strong        : $black !default;
+$registration__password-strength-meter-bg-color--strong     : lighten($color-success, 40) !default;
+$registration__password-strength-meter-border--strong       : 1px solid $color-success !default;
 
 $registration__password-strength-meter-color--very-strong   : $black !default;
 $registration__password-strength-meter-bg-color--very-strong: lighten($color-success, 28) !default;
@@ -178,7 +178,6 @@ $registration__password-strength-meter-border--very-strong  : 1px solid $color-s
                 background-color: $registration__password-bg-color;
             }
         }
-
         span {
             display: inline;
             margin: $registration__password-strength-meter-margin;
@@ -191,16 +190,14 @@ $registration__password-strength-meter-border--very-strong  : 1px solid $color-s
             .password-strength-meter--weak & {
                 background-color: $registration__password-strength-meter-bg-color--weak;
                 color: $registration__password-strength-meter-color--weak;
-                border: $registration__password-strength-meter-border--weak
+                border: $registration__password-strength-meter-border--weak;
             }
-
             .password-strength--medium &,
             .password-strength-meter--medium & {
                 background-color: $registration__password-strength-meter-bg-color--medium;
                 color: $registration__password-strength-meter-color--medium;
-                border: $registration__password-strength-meter-border--medium
+                border: $registration__password-strength-meter-border--medium;
             }
-
             .password-strength--strong &,
             .password-strength-meter--strong & {
                 background-color: $registration__password-strength-meter-bg-color--strong;
@@ -211,10 +208,8 @@ $registration__password-strength-meter-border--very-strong  : 1px solid $color-s
             .password-strength-meter--very-strong & {
                 background-color: $registration__password-strength-meter-bg-color--very-strong;
                 color: $registration__password-strength-meter-color--very-strong;
-                border: $registration__password-strength-meter-border--very-strong
+                border: $registration__password-strength-meter-border--very-strong;
             }
-            
         }
-        
     }
 }
