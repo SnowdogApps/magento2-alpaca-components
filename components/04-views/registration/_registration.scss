@@ -19,13 +19,20 @@ $registration__fieldset-width\@medium                       : 50% !default;
 $registration__legend-font-size                             : $font-size-base;
 $registration__legend-font-weight                           : $font-weight-bold;
 $registration__legend-margin                                : 0 0 $spacer--large !default;
-$registration__legend-padding                               : 0 0 $spacer--medium !default;
+$registration__legend-border-height                         : 8px !default;
+$registration__legend-bottom-padding                        : $spacer--medium + $registration__legend-border-height !default;
+$registration__legend-padding                               : 0 0 $registration__legend-bottom-padding !default;
 $registration__legend-width                                 : 100% !default;
-$registration__legend-border-bottom                         : 8px solid $gray-lightest !default;
 
-$registration__legend-short-border-height                   : 8px !default;
+$registration__legend-long-border-height                    : $registration__legend-border-height !default;
+$registration__legend-long-border-width                     : 100% !default;
+$registration__legend-long-border-bottom-offset             : 0 !default;
+$registration__legend-long-border-left-offset               : 0 !default;
+$registration__legend-long-border-color                     : $gray-lightest !default;
+
+$registration__legend-short-border-height                   : $registration__legend-border-height !default;
 $registration__legend-short-border-width                    : 152px !default;
-$registration__legend-short-border-bottom-offset            : -8px;
+$registration__legend-short-border-bottom-offset            : 0 !default;
 $registration__legend-short-border-left-offset              : 0 !default;
 $registration__legend-short-border-color                    : $color-primary !default;
 
@@ -43,7 +50,6 @@ $registration__password-margin                              : 0 !default;
 $registration__password-strength-margin                     : 0 0 $spacer 0 !default;
 $registration__password-strength-padding                    : $spacer 0 !default;
 $registration__password-strength-radius                     : $form-elements-radius !default;
-$registration__password-strength-font-color                 : $gray !default;
 
 $registration__password-strength-meter-padding              : 2px $spacer--medium !default;
 $registration__password-strength-meter-color                : $gray !default;
@@ -96,19 +102,29 @@ $registration__password-strength-meter-border--very-strong  : 1px solid $color-s
         position: relative;
         margin: $registration__legend-margin;
         padding: $registration__legend-padding;
-        border-bottom: $registration__legend-border-bottom;
         width: $registration__legend-width;
         font-size: $registration__legend-font-size;
         font-weight: $registration__legend-font-weight;
-        &:after {
+        &:after,
+        &:before {
             content: ' ';
             position: absolute;
+        }
+        &:before {
+            width: $registration__legend-long-border-width;
+            height: $registration__legend-long-border-height;
+            bottom: $registration__legend-long-border-bottom-offset;
+            left: $registration__legend-long-border-left-offset;
+            background-color: $registration__legend-long-border-color;
             z-index: 2;
+        }
+        &:after {
             width: $registration__legend-short-border-width;
             height: $registration__legend-short-border-height;
             bottom: $registration__legend-short-border-bottom-offset;
             left: $registration__legend-short-border-left-offset;
             background-color: $registration__legend-short-border-color;
+            z-index: 3;
         }
     }
     &__fieldset {
