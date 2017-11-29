@@ -34,6 +34,15 @@ class Modal {
           this.toggleModal(modalElement)
         }
       });
+
+      // When the user push escape, close the modal
+      window.addEventListener('keydown', (e) => {
+        if (e.which === 27
+          && modalElement.classList.contains('modal--active')
+        ) {
+          this.toggleModal(modalElement)
+        }
+      });
     })
   }
 
