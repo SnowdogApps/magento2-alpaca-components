@@ -2,10 +2,8 @@ $toolbar__offset               : $spacer !default;
 $toolbar__secondary-text-color : #a09fa6 !default;
 $toolbar__icon-color           : #a09fa6 !default;
 $toolbar__icon-color--active   : $black !default;
-$toolbar__sorter-label-offset  : $spacer !default;
 $toolbar__select-border        : 1px solid $black !default;
 $toolbar__select-border-radius : 0 !default;
-$toolbar__select-border--hidden: none !default;
 
 .toolbar {
     display: flex;
