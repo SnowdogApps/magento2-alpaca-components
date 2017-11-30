@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Global focus style
 - Catalog grid item module
 - Catalog grid view
+- Modal module
 
 ### Changed
 - Footer component design
@@ -16,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - List module styles
 - Newsletter module design
 - Refactored swatch element
+- Update label hidden style
 
 ### Removed
 - Old catalog product modules and catalog views
