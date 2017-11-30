@@ -1,10 +1,9 @@
-<div class="tab {{#if modifier}}tab--{{modifier}}{{/if}}">
+<div class="tab {{#if modifier}}tab--{{modifier}}{{/if}} {{ class }}" {{{ attributes }}}>
     {{#each tabs as |tab|}}
         <div class="tab__title {{#if active}}tab__title--active{{/if}} {{ class.title }}"
              data-tab="{{ tabId }}"
         >
             {{ title }}
-            {{ icon.iconId }}
             <div class="tab__icon {{ class.tabIconWrapper }}">
                 {{render '@icon' icon }}
             </div>

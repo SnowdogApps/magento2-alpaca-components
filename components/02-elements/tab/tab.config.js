@@ -1,5 +1,9 @@
 module.exports = {
   context: {
+    icon: {
+      class: '',
+      iconId: 'angle-down'
+    },
     tabs: [
       {
         tabId: 'tab-1',
