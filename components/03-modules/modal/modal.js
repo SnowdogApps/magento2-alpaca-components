@@ -21,9 +21,11 @@ class Modal {
       );
 
       // When the user clicks on button (x), close the modal
-      closeButton.addEventListener('click',
-        () => this.toggleModal(modalElement)
-      );
+      if (closeButton) {
+        closeButton.addEventListener('click',
+          () => this.toggleModal(modalElement)
+        );
+      }
 
       // When the user clicks anywhere outside of the modal, close the modal
       window.addEventListener('click', (e) => {
