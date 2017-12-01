@@ -53,7 +53,7 @@ module.exports = {
     },
     validationTips: '* Required Fields',
     tabs: {
-      modifier: '',
+      class: '',
       registeredCustomer: {
         active: true,
         tabId: 'registered-customer',
