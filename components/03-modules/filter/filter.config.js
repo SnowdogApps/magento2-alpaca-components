@@ -1,5 +1,6 @@
 module.exports = {
   status: 'wip',
+  preview: '@docs-only-styles',
   context: {
     default: true,
     content: 'Content',
@@ -12,49 +13,23 @@ module.exports = {
       context: {
         default: false,
         checkboxEnabled: true,
-        id: 'checkbox',
-        title: 'Checkbox',
         checkboxes: [
           {
-            id: 'checkbox',
-            name: 'checkbox-name',
+            class: '',
             label: {
-              text: 'Insulated',
-              class: ''
-            },
-            icon: {
-              class: ''
-            },
-            input: {
-              class: ''
+              text: 'Value 1',
             }
           },
           {
-            id: 'checkbox1',
-            name: 'checkbox-name1',
+            class: 'checkbox--link-checked',
             label: {
-              text: 'Lightweight',
-              class: ''
-            },
-            icon: {
-              class: ''
-            },
-            input: {
-              class: ''
+              text: 'Value 2'
             }
           },
           {
-            id: 'checkbox2',
-            name: 'checkbox-name2',
+            class: '',
             label: {
-              text: 'Value',
-              class: ''
-            },
-            icon: {
-              class: ''
-            },
-            input: {
-              class: ''
+              text: 'Value 3',
             }
           }
         ]
@@ -67,39 +42,26 @@ module.exports = {
         swatchEnabled: true,
         id: 'swatch',
         title: 'Swatch',
-        config: {
-          class: '',
-          attributes: '',
-          titleClass: '',
-          title: 'Choose your size',
-          options: [
-            {
-              class: '',
-              attributes: '',
-              text: 'XS'
-            },
-            {
-              class: 'swatch__option--active',
-              attributes: '',
-              text: 'S'
-            },
-            {
-              class: '',
-              attributes: '',
-              text: 'M'
-            },
-            {
-              class: '',
-              attributes: '',
-              text: 'L'
-            },
-            {
-              class: '',
-              attributes: '',
-              text: 'XL'
-            }
-          ]
-        }
+        class: '',
+        attributes: '',
+        options: [
+          {
+            text: 'XS'
+          },
+          {
+            class: 'filter__swatch-option--active',
+            text: 'S'
+          },
+          {
+            text: 'M'
+          },
+          {
+            text: 'L'
+          },
+          {
+            text: 'XL'
+          }
+        ]
       }
     },
     {

@@ -1,0 +1,26 @@
+<li class="filter dropdown-list__item  dropdown-list__item--collapse">
+    <div class="filter__label dropdown-list__label"
+         data-dropdown="{{id}}"
+    >
+        {{title}}
+        <svg class="dropdown-list__icon">
+            <use xlink:href="{{ svg 'angle-down' }}"></use>
+        </svg>
+    </div>
+    <div id="{{id}}"
+         class="filter__content dropdown-list__content"
+         data-content="{{id}}"
+         aria-hidden="true"
+    >
+        <div class="filter__swatch {{ class }}" {{{ attributes }}}>
+            {{#each options }}
+                <div class="filter__swatch-option {{ this.class }}"
+                     {{{ this.attributes }}}
+                >
+                    {{ this.text }}
+                </div>
+            {{/each }}
+        </div>
+        <div class="filter__divider"></div>
+    </div>
+</li>
