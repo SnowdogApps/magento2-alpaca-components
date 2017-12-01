@@ -26,6 +26,12 @@ module.exports = {
         }
       ]
     },
+    divider: {
+      class: 'filters__divider'
+    },
+    dropdownList: {
+      class: 'dropdown-list--secondary'
+    },
     range: {
       default: false,
       rangeEnabled: true,
@@ -33,7 +39,7 @@ module.exports = {
       title: 'Range',
       config: {
         attributes: '',
-        class: '',
+        class: 'filter__range',
         filter: {
           wrapperClass: '',
           input: {
@@ -83,15 +89,33 @@ module.exports = {
       }
     },
     swatch: {
-      default: true,
-      content: '[SWATCHES]',
-      id: 'default',
-      title: 'Swatch'
+      default: false,
+      swatchEnabled: true,
+      id: 'swatch',
+      title: 'Swatch',
+      class: '',
+      attributes: '',
+      options: [
+        {
+          text: 'XS'
+        },
+        {
+          class: 'filter__swatch-option--active',
+          text: 'S'
+        },
+        {
+          text: 'M'
+        },
+        {
+          text: 'L'
+        },
+        {
+          text: 'XL'
+        }
+      ]
     },
     color: {
-      default: true,
-      content: '[COLOR]',
-      id: 'default',
+      name: 'color',
       title: 'Color'
     },
     checkbox: {
@@ -101,45 +125,21 @@ module.exports = {
       title: 'Checkbox',
       checkboxes: [
         {
-          id: 'checkbox',
-          name: 'checkbox-name',
+          class: '',
           label: {
-            text: 'Insulated',
-            class: ''
-          },
-          icon: {
-            class: ''
-          },
-          input: {
-            class: ''
+            text: 'Value 1',
           }
         },
         {
-          id: 'checkbox1',
-          name: 'checkbox-name1',
+          class: 'checkbox--link-checked',
           label: {
-            text: 'Lightweight',
-            class: ''
-          },
-          icon: {
-            class: ''
-          },
-          input: {
-            class: ''
+            text: 'Value 2'
           }
         },
         {
-          id: 'checkbox2',
-          name: 'checkbox-name2',
+          class: '',
           label: {
-            text: 'Value',
-            class: ''
-          },
-          icon: {
-            class: ''
-          },
-          input: {
-            class: ''
+            text: 'Value 3',
           }
         }
       ]
