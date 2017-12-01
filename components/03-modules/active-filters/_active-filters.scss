@@ -1,7 +1,15 @@
-$active-filters__close-size       : 48px !default;
-$active-filters__icon-fill        : $gray !default;
-$active-filters__icon-size        : 14px !default;
-$active-filters__label-font-weight: $font-weight-bold !default;
+$active-filters__close-size          : 48px !default;
+$active-filters__remove-padding      : 0 !default;
+$active-filters__icon-fill           : $gray !default;
+$active-filters__icon-size           : $font-size-base !default;
+$active-filters__label-font-weight   : $font-weight-bold !default;
+$active-filters__clear-border        : 2px solid $red !default;
+$active-filters__clear-height        : 48px !default;
+$active-filters__clear-font-size     : 14px !default;
+$active-filters__clear-color         : $red !default;
+$active-filters__clear-font-weight   : $font-weight-bold !default;
+$active-filters__clear-color\@medium : $color-secondary !default;
+
 .active-filters {
     &__item {
         display: flex;
@@ -11,10 +19,10 @@ $active-filters__label-font-weight: $font-weight-bold !default;
     &__remove {
         width: $active-filters__close-size;
         height: $active-filters__close-size;
-        background: none;
+        padding: $active-filters__remove-padding;
         border: none;
         outline: none;
-        padding: 0;
+        background: none;
         cursor: pointer;
     }
 
@@ -27,8 +35,40 @@ $active-filters__label-font-weight: $font-weight-bold !default;
     &__label {
         font-weight: $active-filters__label-font-weight;
     }
+
     &__clear {
-        font-weight: $font-weight-bold;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        min-width: 100%;
+        min-height: $active-filters__clear-height;
+        color: $active-filters__clear-color;
+        border: $active-filters__clear-border;
+        font-size: $active-filters__clear-font-size;
+        font-weight: $active-filters__clear-font-weight;
         text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $active-filters__clear-color;
+        }
+
+        @include mq($screen-m) {
+            display: inline-flex;
+            justify-content: flex-start;
+            min-width: initial;
+            border: none;
+            color: $color-primary;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                color: $active-filters__clear-color\@medium;
+                text-decoration: underline;
+            }
+        }
+
     }
 }
