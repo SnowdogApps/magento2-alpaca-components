@@ -13,6 +13,8 @@ $login__tab-title-horizontal-padding        : $spacer !default;
 $login__tab-title-horizontal-padding\@medium: $spacer--medium !default;
 
 $login__tabs-margin                         : 0 0 $spacer--extra-large 0 !default;
+$login__tabs-width                          : 100% !default;
+$login__tabs-width\@medium                  : calc(50% - 8px) !default;
 $login__tabs-content-max-width\@medium      : 496px !default;
 $login__tabs-content-max-width\@large       : none !default;
 $login__tabs-content-margin                 : 0 auto !default;
@@ -24,6 +26,7 @@ $login__forgot-password-text-decoration     : none !default;
 $login__input-margin                        : 0 0 $spacer--medium !default;
 
 $login__sidebar-margin                      : 0 0 $spacer !default;
+$login__sidebar-width\@medium               : calc(50% - 8px) !default;
 
 $login__info-margin                         : 0 0 $spacer !default;
 $login__info-margin\@medium                 : 0 0 24px !default;
@@ -63,9 +66,9 @@ $login__validation-tips-margin              : 0 0 $spacer !default;
     }
     &__tabs {
         margin: $login__tabs-margin;
-        width: 100%;
+        width: $login__tabs-width;
         @include mq($screen-m) {
-            width: calc(50% - 8px);
+            width: $login__tabs-width\@medium;
         }
     }
     &__tab-container {
@@ -88,7 +91,7 @@ $login__validation-tips-margin              : 0 0 $spacer !default;
     &__sidebar {
         margin: $login__sidebar-margin;
         @include mq($screen-m) {
-            width: calc(50% - 8px);
+            width: $login__sidebar-width\@medium;
         }
     }
     &__actions {
