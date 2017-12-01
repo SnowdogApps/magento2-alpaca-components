@@ -2,11 +2,15 @@ $divider__color--left : $color-primary !default;
 $divider__color--right: $gray-light !default;
 $divider__size        : 8px !default;
 .divider {
-    display: flex;
+    display: none;
+
+    @include mq($screen-m) {
+        display: flex;
+    }
 
     &__left,
     &__right {
-        border: $divider__size solid;
+        border-top: $divider__size solid;
         flex: 1;
     }
 
