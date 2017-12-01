@@ -33,7 +33,7 @@ $dropdown-list__icon-size---secondary      : 24px !default;
 $dropdown-list__icon-padding--secondary    : 0 5px !default;
 $dropdown-list__icon-margin--secondary     : 0 0 0 5px !default;
 $dropdown-list__icon-fill---secondary-open : $color-primary !default;
-$dropdown-list__content-margin             : 0 !default;
+$dropdown-list__content-margin--secondary  : 0 !default;
 
 
 // Dark list variant
@@ -113,7 +113,7 @@ $dropdown-list__inner-item-border--level2: 1px solid $gray-dark !default;
         }
 
         .dropdown-list__content {
-            margin: $dropdown-list__content-margin;
+            margin: $dropdown-list__content-margin--secondary;
         }
     }
 
