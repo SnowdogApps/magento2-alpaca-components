@@ -1,6 +1,6 @@
 $filter__transition                        : $transition-base !default;
 // Swatch
-$filter__swatch-margin                     : 0 0 $spacer--medium 0;
+$filter__swatch-margin                     : 0 0 $spacer--medium 0 !default;
 $filter__swatch-option-size                : 48px !default;
 $filter__swatch-option-margin              : $spacer--medium !default;
 $filter__swatch-option-background          : $white !default;
@@ -9,28 +9,28 @@ $filter__swatch-option-border              : 3px solid $white !default;
 $filter__swatch-option-border-color-hover  : $color-primary !default;
 $filter__swatch-option-border-color--active: $color-primary !default;
 // Label
-$filter__label-padding                     : $spacer--medium 0;
+$filter__label-padding                     : $spacer--medium 0 !default;
 // Color
-$filter__color-margin                      : 0 0 $spacer--medium 0;
-$filter__color-option-width                : 56px;
-$filter__color-option-height               : 80px;
-$filter__color-option-after-top            : 4px;
-$filter__color-option-after-left           : 8px;
-$filter__color-option-after-size           : 40px;
-$filter__color-option-after-border-radius  : 100%;
-$filter__color-option-after-border         : 2px solid $color-primary;
-$filter__color-sample-size                 : 32px;
-$filter__color-sample-margin               : $spacer;
-$filter__color-sample-border-radius        : 100%;
-$filter__color-label-font-size             : 10px;
-$filter__color-label-color                 : $gray-darkest;
+$filter__color-margin                      : 0 0 $spacer--medium 0 !default;
+$filter__color-option-width                : 56px !default;
+$filter__color-option-height               : 80px !default;
+$filter__color-option-after-top            : 4px !default;
+$filter__color-option-after-left           : 8px !default;
+$filter__color-option-after-size           : 40px !default;
+$filter__color-option-after-border-radius  : 100% !default;
+$filter__color-option-after-border         : 2px solid $color-primary !default;
+$filter__color-sample-size                 : 32px !default;
+$filter__color-sample-margin               : $spacer !default;
+$filter__color-sample-border-radius        : 100% !default;
+$filter__color-label-font-size             : 10px !default;
+$filter__color-label-color                 : $gray-darkest !default;
 // Show-all
-$filter__show-all-height                   : 48px;
-$filter__show-all-font-size                : 12px;
+$filter__show-all-height                   : 48px !default;
+$filter__show-all-font-size                : 12px !default;
 // Divider
-$filter__divider-border-top                : solid 1px #f0f0f0;
+$filter__divider-border-top                : solid 1px #f0f0f0 !default;
 // Range
-$filter__range-margin                      : 0 0 $spacer--medium 0;
+$filter__range-margin                      : 0 0 $spacer--medium 0 !default;
 
 .filter {
     &__label {
