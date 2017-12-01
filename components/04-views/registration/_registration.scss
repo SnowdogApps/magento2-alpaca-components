@@ -178,38 +178,38 @@ $registration__password-strength-meter-border--very-strong  : 1px solid $color-s
                 background-color: $registration__password-bg-color;
             }
         }
-        span {
-            display: inline;
-            margin: $registration__password-strength-meter-margin;
-            color: $registration__password-strength-meter-color;
-            background-color: $registration__password-strength-meter-bg-color;
-            border: $registration__password-strength-meter-border;
-            border-radius: $registration__password-strength-meter-border-radius;
-            padding: $registration__password-strength-meter-padding;
-            .password-strength--weak &,
-            .password-strength-meter--weak & {
-                background-color: $registration__password-strength-meter-bg-color--weak;
-                color: $registration__password-strength-meter-color--weak;
-                border: $registration__password-strength-meter-border--weak;
-            }
-            .password-strength--medium &,
-            .password-strength-meter--medium & {
-                background-color: $registration__password-strength-meter-bg-color--medium;
-                color: $registration__password-strength-meter-color--medium;
-                border: $registration__password-strength-meter-border--medium;
-            }
-            .password-strength--strong &,
-            .password-strength-meter--strong & {
-                background-color: $registration__password-strength-meter-bg-color--strong;
-                color: $registration__password-strength-meter-color--strong;
-                border: $registration__password-strength-meter-border--strong;
-            }
-            .password-strength--very-strong &,
-            .password-strength-meter--very-strong & {
-                background-color: $registration__password-strength-meter-bg-color--very-strong;
-                color: $registration__password-strength-meter-color--very-strong;
-                border: $registration__password-strength-meter-border--very-strong;
-            }
+    }
+    &__password-strength-indicator {
+        display: inline;
+        margin: $registration__password-strength-meter-margin;
+        color: $registration__password-strength-meter-color;
+        background-color: $registration__password-strength-meter-bg-color;
+        border: $registration__password-strength-meter-border;
+        border-radius: $registration__password-strength-meter-border-radius;
+        padding: $registration__password-strength-meter-padding;
+        .password-strength--weak &,
+        .password-strength-meter--weak & {
+            background-color: $registration__password-strength-meter-bg-color--weak;
+            color: $registration__password-strength-meter-color--weak;
+            border: $registration__password-strength-meter-border--weak;
+        }
+        .password-strength--medium &,
+        .password-strength-meter--medium & {
+            background-color: $registration__password-strength-meter-bg-color--medium;
+            color: $registration__password-strength-meter-color--medium;
+            border: $registration__password-strength-meter-border--medium;
+        }
+        .password-strength--strong &,
+        .password-strength-meter--strong & {
+            background-color: $registration__password-strength-meter-bg-color--strong;
+            color: $registration__password-strength-meter-color--strong;
+            border: $registration__password-strength-meter-border--strong;
+        }
+        .password-strength--very-strong &,
+        .password-strength-meter--very-strong & {
+            background-color: $registration__password-strength-meter-bg-color--very-strong;
+            color: $registration__password-strength-meter-color--very-strong;
+            border: $registration__password-strength-meter-border--very-strong;
         }
     }
 }

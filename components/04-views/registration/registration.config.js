@@ -125,7 +125,8 @@ module.exports = {
       class: 'registration__password-strength password-strength--none',
       text: 'Password Strength:',
       noPassword: 'No Password',
-      strengthProgressClass: 'registration__password-strength-progress'
+      strengthProgressClass: 'registration__password-strength-progress',
+      strengthIndicatorClass: 'registration__password-strength-indicator'
     },
     registrationButton: {
       tag: 'button',
