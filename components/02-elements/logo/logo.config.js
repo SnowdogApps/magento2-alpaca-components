@@ -2,7 +2,7 @@ module.exports = {
   title: 'Logo',
   context: {
     class: '',
-    ariaLabel: 'Home page link',
+    ariaLabel: 'Homepage',
     imageAlt: 'Alpaca Logo',
     imageAttributes: '',
     imageClass: '',
