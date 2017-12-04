@@ -1,6 +1,6 @@
 'use-strict';
 
-(function() { // eslint-disable-line
+(function DropdownList() {
   const dropdownCollapseLabel = '.dropdown-list__item--collapse .dropdown-list__label',
         dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
         openClass             = 'dropdown-list__item--open',
