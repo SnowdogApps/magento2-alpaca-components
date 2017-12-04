@@ -1,20 +1,22 @@
-<div class="tab {{ class }}" {{{ attributes }}}>
+<div class="tab {{#if modifier}}tab--{{modifier}}{{/if}} {{ class }}" {{{ attributes }}}>
     {{#each tabs as |tab|}}
-        <div class="tab__title {{#if active}}tab__title--active{{/if}}"
+        <div class="tab__title {{#if active}}tab__title--active{{/if}} {{ class.title }}"
              data-tab="{{ tabId }}"
         >
             {{ title }}
-            <div class="tab__icon">
-                {{ render '@icon' icon }}
+            <div class="tab__icon {{ class.tabIconWrapper }}">
+                {{render '@icon' icon }}
             </div>
         </div>
 
-        <div class="tab__content {{#if active}}tab__content--active{{/if}}"
+        <div class="
+                 tab__content
+                 {{#if active}}tab__content--active{{/if}}
+                 {{ class.content }}
+             "
              data-content="{{ tabId }}"
         >
-            <p class="paragraph">
-                {{ content }}
-            </p>
+            {{{ content }}}
         </div>
     {{/each}}
 </div>
