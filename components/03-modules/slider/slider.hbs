@@ -4,6 +4,7 @@
             {{#each slides }}
                 <div class="slider__item {{ this.itemClass }}"
                      {{{ this.itemAttributes }}}
+
                 >
                     {{ render (component content) contentContext }}
                 </div>

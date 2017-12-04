@@ -12,7 +12,8 @@ module.exports = {
       class: '',
       id: 'field-id',
       name: 'field-name',
-      placeholder: 'First and last name'
+      placeholder: 'First and last name',
+      type: 'text'
     }
   },
   variants: [
