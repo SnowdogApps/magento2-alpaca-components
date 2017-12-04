@@ -73,8 +73,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
 
     &__color {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         margin: $filter__color-margin;
 
         &-option {
@@ -132,7 +131,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
     }
 
     &__show-all {
-        display:flex;
+        display: flex;
         align-items: center;
         height: $filter__show-all-height;
         font-size: $filter__show-all-font-size;
