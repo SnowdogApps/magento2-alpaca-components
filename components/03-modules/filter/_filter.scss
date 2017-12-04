@@ -116,16 +116,6 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
             height: $filter__color-sample-size;
             margin: $filter__color-sample-margin;
             border-radius: $filter__color-sample-border-radius;
-
-            &--green {
-                background-color: green;
-            }
-            &--red {
-                background-color: red;
-            }
-            &--blue {
-                background-color: blue;
-            }
         }
 
         &-label {
