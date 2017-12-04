@@ -40,7 +40,7 @@ module.exports = {
         name: 'range',
         config: {
           attributes: '',
-          class: '',
+          class: 'filter__range',
           filter: {
             wrapperClass: '',
             input: {
