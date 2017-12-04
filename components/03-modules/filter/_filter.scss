@@ -41,7 +41,6 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         display: flex;
         flex-wrap: wrap;
         margin: $filter__swatch-margin;
-
         &-option {
             display: flex;
             justify-content: center;
@@ -54,9 +53,11 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
             color: $filter__swatch-option-color;
             transition: $filter__transition;
             cursor: pointer;
+            text-decoration: none;
 
             &:hover,
             &:focus {
+                text-decoration: none;
                 border-color: $filter__swatch-option-border-color-hover;
             }
 
@@ -74,7 +75,6 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         margin: $filter__color-margin;
 
         &-option {
@@ -83,11 +83,11 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-
             max-width: $filter__color-option-width;
             width: $filter__color-option-width;
             height: $filter__color-option-height;
             max-height: $filter__color-option-height;
+            text-decoration: none;
 
             &:after {
                 content: '';
@@ -104,6 +104,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
             &--active,
             &:hover,
             &:focus {
+                text-decoration: none;
                 &:after {
                     border: $filter__color-option-after-border;
                 }

@@ -14,9 +14,9 @@
     >
         {{ text }}
 
-        {{ render (component component.name) component.config }}
-
-        <!--{{> '@range' config }}-->
+        {{# if componentObject }}
+            {{ render (component componentObject.name) componentObject.config }}
+        {{/if}}
 
         <div class="filter__divider"></div>
     </div>

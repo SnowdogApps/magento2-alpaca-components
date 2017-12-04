@@ -13,35 +13,17 @@
          aria-hidden="true"
     >
         <div class="filter__color">
-            <div class="filter__color-option filter__color-option--active">
-                <div class="filter__color-sample filter__color-sample--green"></div>
-                <span class="filter__color-label">Różowy</span>
-            </div>
-
-            <div class="filter__color-option">
-                <div class="filter__color-sample filter__color-sample--red"></div>
-                <span class="filter__color-label">Pomarańczowy</span>
-            </div>
-
-            <div class="filter__color-option">
-                <div class="filter__color-sample filter__color-sample--blue"></div>
-                <span class="filter__color-label">Czerwony</span>
-            </div>
-
-            <div class="filter__color-option">
-                <div class="filter__color-sample filter__color-sample--green"></div>
-                <span class="filter__color-label">Green</span>
-            </div>
-
-            <div class="filter__color-option">
-                <div class="filter__color-sample filter__color-sample--red"></div>
-                <span class="filter__color-label">Red</span>
-            </div>
-
-            <div class="filter__color-option">
-                <div class="filter__color-sample filter__color-sample--blue"></div>
-                <span class="filter__color-label">Blue</span>
-            </div>
+            {{# each options }}
+                <a href='{{this.href}}'
+                   class="filter__color-option {{this.class}}"
+                   aria-label="{{this.ariaLabel}}"
+                >
+                    <div class="filter__color-sample"
+                         {{{ this.attributes}}}
+                    ></div>
+                    <span class="filter__color-label">{{this.label}}</span>
+                </a>
+            {{/each}}
         </div>
         <div class="filter__divider"></div>
     </div>
