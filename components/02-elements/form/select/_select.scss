@@ -15,8 +15,10 @@ $select__input-border-color: $form-elements-border-color !default;
 
         &--native {
             width: 100%;
+            height: $select__spacing;
             padding: $select__padding;
             border: $select__border;
+            border-radius: $select__border-radius;
             appearance: none;
         }
     }
