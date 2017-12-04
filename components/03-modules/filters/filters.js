@@ -1,6 +1,6 @@
 'use strict';
 
-const FiltersSwitcher = {
+const Filters = {
   init() {
     this.switcher = document.querySelector('.filters__switcher');
     this.filters  = document.querySelector('.filters__list');
@@ -27,4 +27,4 @@ const FiltersSwitcher = {
     this.switcher.dataset.stateCurrent = 'hidden';
   }
 };
-FiltersSwitcher.init();
+Filters.init();
