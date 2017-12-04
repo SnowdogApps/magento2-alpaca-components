@@ -28,7 +28,7 @@ $filter__color-label-color                 : $gray-darkest !default;
 $filter__show-all-height                   : 48px !default;
 $filter__show-all-font-size                : 12px !default;
 // Divider
-$filter__divider-border-top                : solid 1px #f0f0f0 !default;
+$filter__divider-border-top                : solid 1px lighten($gray-lighter, 15%) !default;
 // Range
 $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
 

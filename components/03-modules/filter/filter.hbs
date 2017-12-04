@@ -12,13 +12,12 @@
          data-content="{{id}}"
          aria-hidden="true"
     >
-        {{#if default }}
-            {{ content }}
-        {{/if}}
+        {{ text }}
 
-        {{#if rangeEnabled }}
-            {{> '@range' config }}
-        {{/if}}
+        {{ render (component component.name) component.config }}
+
+        <!--{{> '@range' config }}-->
+
         <div class="filter__divider"></div>
     </div>
 </li>
