@@ -33,90 +33,128 @@ module.exports = {
       class: 'dropdown-list--secondary'
     },
     range: {
-      default: false,
-      rangeEnabled: true,
       id: 'range',
       title: 'Range',
-      config: {
-        attributes: '',
-        class: 'filter__range',
-        filter: {
-          wrapperClass: '',
-          input: {
-            upperClass: '',
-            lowerClass: '',
-            maxValue: '1000',
-            minValue: '0',
-            type: 'text'
+      text: '',
+      componentObject: {
+        name: 'range',
+        config: {
+          attributes: '',
+          class: '',
+          filter: {
+            wrapperClass: '',
+            input: {
+              upperClass: '',
+              lowerClass: '',
+              maxValue: '1000',
+              minValue: '0',
+              type: 'text'
+            },
+            suffix: {
+              lowerText: '$',
+              upperText: '$',
+              lowerClass: '',
+              upperClass: ''
+            }
           },
-          suffix: {
-            lowerText: '$',
-            upperText: '$',
-            lowerClass: '',
-            upperClass: ''
-          }
-        },
-        rangeInputLower: {
-          class: 'range-filter__input range-filter__input--lower',
-          label: {
-            class: 'range-filter__label',
-            text: 'Minimum value'
+          rangeInputLower: {
+            class: 'range-filter__input range-filter__input--lower',
+            label: {
+              class: 'range-filter__label',
+              text: 'Minimum value'
+            },
+            field: {
+              class: 'range-filter__field range-filter__field--lower',
+              id: 'range-filter-min',
+              name: 'range-filter-min',
+              placeholder: '',
+              value: '0'
+            }
           },
-          field: {
-            class: 'range-filter__field range-filter__field--lower',
-            id: 'range-filter-min',
-            name: 'range-filter-min',
-            placeholder: '',
-            value: '0'
-          }
-        },
-        rangeInputUpper: {
-          class: 'range-filter__input range-filter__input--upper',
-          label: {
-            class: 'range-filter__label',
-            text: 'Maximum value'
+          rangeInputUpper: {
+            class: 'range-filter__input range-filter__input--upper',
+            label: {
+              class: 'range-filter__label',
+              text: 'Maximum value'
+            },
+            field: {
+              class: 'range-filter__field range-filter__field--upper',
+              id: 'range-filter-max',
+              name: 'range-filter-max',
+              placeholder: '',
+              value: '1000'
+            }
           },
-          field: {
-            class: 'range-filter__field range-filter__field--upper',
-            id: 'range-filter-max',
-            name: 'range-filter-max',
-            placeholder: '',
-            value: '1000'
-          }
-        },
-        script: true,
-        showFloat: 0
+          script: true,
+          showFloat: 0
+        }
       }
     },
     swatch: {
-      default: false,
-      swatchEnabled: true,
       id: 'swatch',
       title: 'Swatch',
       class: '',
       attributes: '',
+      text: '',
       options: [
         {
-          text: 'XS'
+          text: 'XS',
+          ariaLabel: 'Placeholder for aria-label'
         },
         {
           class: 'filter__swatch-option--active',
-          text: 'S'
+          text: 'S',
+          ariaLabel: 'Placeholder for aria-label'
         },
         {
-          text: 'M'
+          text: 'M',
+          ariaLabel: 'Placeholder for aria-label'
         },
         {
-          text: 'L'
+          text: 'L',
+          ariaLabel: 'Placeholder for aria-label'
         },
         {
-          text: 'XL'
+          text: 'XL',
+          ariaLabel: 'Placeholder for aria-label'
         }
       ]
     },
     color: {
       name: 'color',
-      title: 'Color'
+      title: 'Color',
+      id: 'color',
+      text: '',
+      options: [
+        {
+          href: '#',
+          class: 'filter__color-option--active',
+          attributes: 'style="background: #000"',
+          label: 'Black',
+          ariaLabel: 'Placeholder for aria-label'
+        },
+        {
+          href: '#',
+          class: 'filter__color-option',
+          attributes: 'style="background: red"',
+          label: 'Red',
+          ariaLabel: 'Placeholder for aria-label'
+        },
+        {
+          href: '#',
+          class: 'filter__color-option',
+          attributes: 'style="background: #5cb85c"',
+          label: 'Green',
+          ariaLabel: 'Placeholder for aria-label'
+        },
+        {
+          href: '#',
+          class: 'filter__color-option',
+          attributes: 'style="background: #0275d8"',
+          label: 'Blue',
+          ariaLabel: 'Placeholder for aria-label'
+        }
+      ]
     },
     checkbox: {
       default: false,
