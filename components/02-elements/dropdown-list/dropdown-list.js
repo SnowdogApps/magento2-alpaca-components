@@ -7,12 +7,6 @@
         contentClass          = 'dropdown-list__content',
         mq                    = '(min-width: 768px)';
 
-  function setListHeight(item) {
-    return Array.from(item.children)
-      .map(elem => elem.clientHeight)
-      .reduce((a, b) => a + b, 0);
-  }
-
   function setAriaAttributes(label, content, expanded) {
     if (expanded) {
       label.setAttribute('aria-expanded', 'false');
@@ -57,7 +51,7 @@
         setAriaAttributes(item, dropdownContent, true);
       }
       else {
-        dropdownContent.style.height = `${setListHeight(dropdownContent)}px`;
+        dropdownContent.style.height = 'auto';
         dropdownItem.classList.add(openClass);
         setAriaAttributes(item, dropdownContent, false);
       }
