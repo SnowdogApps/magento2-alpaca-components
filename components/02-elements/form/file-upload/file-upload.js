@@ -1,11 +1,21 @@
 'use strict'
 
-const inputFile = document.querySelector('.file-upload__field');
+const components = [...document.querySelectorAll('.file-upload')];
 
-inputFile.addEventListener('change', (file) => {
-  const filePath          = file.target.value,
-        splitedPath       = filePath.split('\\'),
-        splitedPathLength = splitedPath.length - 1;
+components.forEach(component => {
+  const input = component.querySelector('.file-upload__input'),
+        name  = component.querySelector('.file-upload__name');
 
-  inputFile.parentNode.querySelector('.file-upload__name').innerHTML = splitedPath[splitedPathLength];
-});
+  input.addEventListener('change', file => {
+    const filePath = file.target.value,
+          fileName = filePath.split('\\').pop();
+
+    if (fileName) {
+      name.innerHTML = fileName;
+    }
+    else {
+      name.innerHTML = name.dataset.defaultText;
+    }
+  });
+})
+
