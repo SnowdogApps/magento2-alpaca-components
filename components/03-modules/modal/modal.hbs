@@ -1,12 +1,14 @@
 {{#if trigger }}
     {{ render '@modal-trigger' }}
 {{/if}}
-<div class="modal" data-modal="{{ id }}">
-    <dialog class="modal__content {{ class }}">
+<div class="modal {{ modalClass }}" data-modal="{{ modalId }}">
+    <dialog class="modal__content {{ dialogClass }}" {{{ dialogAttribtues }}}>
         {{ render (component content) contentContext }}
         {{#if buttonClose }}
             {{ render '@button--icon' buttonClose }}
         {{/if}}
     </dialog>
 </div>
+{{#if script }}
 <script src="{{static 'modal.js' }}"></script>
+{{/if}}
