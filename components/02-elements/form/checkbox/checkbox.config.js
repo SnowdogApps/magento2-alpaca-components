@@ -28,6 +28,7 @@ module.exports = {
       name: 'link',
       context: {
         class: '',
+        href: '#',
         label: {
           text: 'Checkbox link'
         },

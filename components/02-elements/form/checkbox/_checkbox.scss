@@ -23,14 +23,14 @@ $checkbox__color--fake          : $gray-dark !default;
         &:hover {
             text-decoration: underline;
         }
-        &-checked {
-            display: block;
-            .checkbox__icon {
-                opacity: 1;
-            }
-            .checkbox__label:before {
-                border: $checkbox__border--checked;
-            }
+    }
+    &--link-checked {
+        display: block;
+        .checkbox__icon {
+            opacity: 1;
+        }
+        .checkbox__label:before {
+            border: $checkbox__border--checked;
         }
     }
 
