@@ -29,6 +29,8 @@ $modal__close-button-icon-color      : $color-primary !default;
     &--active {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center
     }
 
     &__content {
