@@ -4,13 +4,41 @@ class Modal {
     this.init();
   }
 
+  trap(e, modal) {
+    if (e.which == 27) {
+      this.closeModal(modal);
+    }
+    if (e.which == 9) {
+      let currentFocus = document.activeElement;
+      let totalOfFocusable = modal.focusableChildren.length;
+      let focusedIndex = modal.focusableChildren.indexOf(currentFocus);
+      if (e.shiftKey) {
+        if (focusedIndex === 0) {
+          e.preventDefault();
+          modal.focusableChildren[totalOfFocusable - 1].focus();
+        }
+      }
+      else {
+        if (focusedIndex == totalOfFocusable - 1) {
+          e.preventDefault();
+          modal.focusableChildren[0].focus();
+        }
+      }
+    }
+  }
 
   openModal(modal) {
     modal.el.classList.add('modal--active');
+    modal.focusableChildren = Array.from(modal.el.querySelectorAll(modal.focusable));
+    modal.focusableChildren[0].focus();
+    modal.el.addEventListener('keydown', (e) => {
+      this.trap(e, modal);
+    });
   }
 
   closeModal(modal) {
     modal.el.classList.remove('modal--active');
+    modal.focused.focus();
   }
 
   setListeners() {
@@ -50,7 +78,7 @@ class Modal {
         if (e.which === 27
           && modal.el.classList.contains('modal--active')
         ) {
-          this.closeModal(modal.el)
+          this.closeModal(modal)
         }
       });
     })
