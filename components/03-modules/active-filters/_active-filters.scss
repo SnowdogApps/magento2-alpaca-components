@@ -5,8 +5,10 @@ $active-filters__close-background    : none !default;
 $active-filters__icon-fill           : $gray !default;
 $active-filters__icon-size           : $font-size-base !default;
 $active-filters__label-font-weight   : $font-weight-bold !default;
-$active-filters__clear-border        : 2px solid $red !default;
+$active-filters__clear-border-size   : 2px !default;
+$active-filters__clear-border        : $active-filters__clear-border-size solid $red !default;
 $active-filters__clear-height        : 48px !default;
+$active-filters__clear-line-height   : ($active-filters__clear-height - (2 * $active-filters__clear-border-size));
 $active-filters__clear-font-size     : $font-size-base !default;
 $active-filters__clear-color         : $red !default;
 $active-filters__clear-font-weight   : $font-weight-bold !default;
@@ -36,13 +38,13 @@ $active-filters__clear-color\@medium : $color-secondary !default;
     }
 
     &__label {
-        max-width: calc(100% - $active-filters__close-size);
+        max-width: calc(100% - #{$active-filters__close-size});
         word-break: break-all;
         font-weight: $active-filters__label-font-weight;
     }
 
     &__value {
-        max-width: calc(100% - $active-filters__close-size);
+        max-width: calc(100% - #{$active-filters__close-size});
         word-break: break-all;
     }
 
@@ -57,6 +59,7 @@ $active-filters__clear-color\@medium : $color-secondary !default;
         border: $active-filters__clear-border;
         font-size: $active-filters__clear-font-size;
         font-weight: $active-filters__clear-font-weight;
+        line-height: $active-filters__clear-line-height;
         text-decoration: none;
 
         &:hover,

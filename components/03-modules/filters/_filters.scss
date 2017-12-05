@@ -28,9 +28,7 @@ $filters__list-margin                : $spacer--medium 0 0 0 !default;
         }
     }
     &__switcher {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         text-align: center;
         height: $filters__switcher-size;
         min-width: 100%;
