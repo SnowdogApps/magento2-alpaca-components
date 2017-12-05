@@ -9,7 +9,7 @@ $file-upload__button-padding: 0 $spacer--large !default;
     flex-wrap: wrap;
     margin-bottom: $file-upload__margin;
 
-    &__handler {
+    &__wrapper {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -17,24 +17,8 @@ $file-upload__button-padding: 0 $spacer--large !default;
         position: relative;
     }
 
-    &__field {
-        position: absolute;
-        top: 0;
-        opacity: 0;
-        overflow: hidden;
-        height: $file-upload__field-height;
-        width: 100%;
-        cursor: pointer;
-        z-index: 2;
-
-        @include mq($screen-s) {
-            height: 100%;
-        }
-
-        &:hover + .file-upload__button {
-            background: $button__background-hover;
-            border-color: $button__border-hover;
-        }
+    &__input {
+        @include visually-hidden();
     }
 
     &__label {
@@ -55,9 +39,10 @@ $file-upload__button-padding: 0 $spacer--large !default;
     }
 
     &__button {
+        display: flex;
+        align-items: center;
         margin-bottom: 0;
         padding: $file-upload__button-padding;
-        z-index: 1;
         width: 100%;
 
         @include mq($screen-s) {

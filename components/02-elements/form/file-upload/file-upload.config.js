@@ -1,18 +1,17 @@
 module.exports = {
   context: {
     labelText: 'Your file (pdf, doc, max 1 MB)',
+    fileName: 'File not choosen',
+    id: 'file',
     input: {
-      id: 'file',
-      type: 'file',
-      name: 'uploadCv',
+      name: 'upload-cv',
       formats: '.pdf,.doc,.png',
       size: '1024'
     },
-    fileName: 'File not choosen',
     button: {
-      tag: 'button',
+      tag: 'span',
       class: 'file-upload__button',
-      attributes: 'type="button"',
+      attributes: 'role="button"',
       text: 'Upload a file'
     }
   }
