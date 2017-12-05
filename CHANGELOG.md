@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Newsletter module design
 - Refactored swatch element
 - Update label hidden style
+- Refactored `file-upload` component - removed dependecy on button styles, JS code made more roboust
 
 ### Removed
 - Old catalog product modules and catalog views
