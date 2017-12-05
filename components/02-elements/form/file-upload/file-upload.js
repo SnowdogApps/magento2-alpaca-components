@@ -7,8 +7,8 @@ components.forEach(component => {
         name  = component.querySelector('.file-upload__name');
 
   input.addEventListener('change', file => {
-    const filePath          = file.target.value,
-          fileName       = filePath.split('\\').pop();
+    const filePath = file.target.value,
+          fileName = filePath.split('\\').pop();
 
     if (fileName) {
       name.innerHTML = fileName;
