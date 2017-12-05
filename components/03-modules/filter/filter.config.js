@@ -17,18 +17,21 @@ module.exports = {
         checkboxes: [
           {
             class: '',
+            href: '#',
             label: {
               text: 'Value 1',
             }
           },
           {
             class: 'checkbox--link-checked',
+            href: '#',
             label: {
               text: 'Value 2'
             }
           },
           {
             class: '',
+            href: '#',
             label: {
               text: 'Value 3',
             }
