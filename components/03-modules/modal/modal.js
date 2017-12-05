@@ -28,6 +28,7 @@ class Modal {
   }
 
   openModal(modal) {
+    modal.focused = document.activeElement;
     modal.el.classList.add('modal--active');
     modal.focusableChildren = Array.from(modal.el.querySelectorAll(modal.focusable));
     modal.focusableChildren[0].focus();
