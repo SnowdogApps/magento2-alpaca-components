@@ -1,5 +1,5 @@
 $catalog-grid-item__base-spacing            : $spacer !default;
-$catalog-grid-item__padding                 : 0 !default;
+$catalog-list-item__padding                 : $spacer 0 !default;
 
 $catalog-grid-item__font-size               : $font-size-small !default;
 $catalog-grid-item__font-size\@large        : $font-size-base !default;
@@ -9,28 +9,26 @@ $catalog-grid-item__badge-left-position     : 0 !default;
 $catalog-grid-item__badge-top-position      : $spacer--medium !default;
 
 $catalog-grid-item__content-bg-color        : $white !default;
-$catalog-grid-item__content-padding         : $spacer !default;
-$catalog-grid-item__content-padding\@medium : $spacer--medium !default;
-
 $catalog-grid-item__name-color              : $font-color-base !default;
 $catalog-grid-item__name-font-weight        : $font-weight-normal !default;
 
 $catalog-grid-item__action-size             : 32px !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
 
-.catalog-grid-item {
+.catalog-list-item {
     position: relative;
-    display: block;
-    padding: $catalog-grid-item__padding;
+    display: flex;
+    padding: $catalog-list-item__padding;
     overflow: hidden;
 
-    &:hover {
-        .catalog-grid-item__details {
-            transform: translateY(-100%);
-        }
-    }
+    // &:hover {
+    //     .catalog-grid-item__details {
+    //         transform: translateY(-100%);
+    //     }
+    // }
 
     &__badge {
+        display: none;
         position: absolute;
         top: $catalog-grid-item__badge-top-position;
         left: $catalog-grid-item__badge-left-position;
@@ -45,21 +43,19 @@ $catalog-grid-item__action-icon-size        : 24px !default;
     }
 
     &__image {
+        width: 208px;
         mix-blend-mode: multiply;
     }
 
-    &__flex-wrapper {
+    &__main {
         display: flex;
         width: 100%;
         justify-content: space-between;
-    }
-
-    &__main {
-        padding: $catalog-grid-item__content-padding;
+        padding: 0 $spacer;
         background: $catalog-grid-item__content-bg-color;
-        @include mq($screen-m) {
-            padding: $catalog-grid-item__content-padding\@medium;
-        }
+        // @include mq($screen-m) {
+        //     padding: $catalog-grid-item__content-padding\@medium;
+        // }
     }
 
     &__name {
