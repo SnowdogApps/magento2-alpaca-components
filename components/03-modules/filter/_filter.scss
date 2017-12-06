@@ -131,14 +131,6 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         margin: $filter__range-margin;
     }
 
-    &__show-all {
-        display: flex;
-        align-items: center;
-        height: $filter__show-all-height;
-        font-size: $filter__show-all-font-size;
-        text-decoration: none;
-    }
-
     &__divider {
         border-top: $filter__divider-border-top;
     }

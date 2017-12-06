@@ -3,9 +3,8 @@
          data-dropdown="{{id}}"
     >
         {{title}}
-        <svg class="dropdown-list__icon">
-            <use xlink:href="{{ svg 'angle-down' }}"></use>
-        </svg>
+
+        {{ render '@icon' icon }}
     </div>
     <div id="{{id}}"
          class="dropdown-list__content filter__content"
@@ -13,10 +12,8 @@
          aria-hidden="true"
     >
         {{# each checkboxes }}
-            {{> '@checkbox--link' this }}
+            {{render '@checkbox--link' this }}
         {{/each}}
-
-        <a href="#" class="filter__show-all">Show All</a>
         <div class="filter__divider"></div>
     </div>
 </li>

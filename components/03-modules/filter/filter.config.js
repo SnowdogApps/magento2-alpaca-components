@@ -5,7 +5,11 @@ module.exports = {
     content: 'Content',
     id: 'default',
     title: 'Default',
-    text: 'content-text'
+    text: 'content-text',
+    icon: {
+      iconId: 'angle-down',
+      class: 'dropdown-list__icon'
+    }
   },
   variants: [
     {

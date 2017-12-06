@@ -48,6 +48,10 @@ module.exports = {
       id: 'range',
       title: 'Range',
       text: '',
+      icon: {
+        iconId: 'angle-down',
+        class: 'dropdown-list__icon'
+      },
       componentObject: {
         name: 'range',
         config: {
@@ -108,6 +112,10 @@ module.exports = {
       class: '',
       attributes: '',
       text: '',
+      icon: {
+        iconId: 'angle-down',
+        class: 'dropdown-list__icon'
+      },
       options: [
         {
           text: 'XS',
@@ -137,6 +145,10 @@ module.exports = {
       title: 'Color',
       id: 'color',
       text: '',
+      icon: {
+        iconId: 'angle-down',
+        class: 'dropdown-list__icon'
+      },
       options: [
         {
           href: '#',
@@ -171,6 +183,10 @@ module.exports = {
     checkbox: {
       id: 'checkbox',
       title: 'Checkbox',
+      icon: {
+        iconId: 'angle-down',
+        class: 'dropdown-list__icon'
+      },
       checkboxes: [
         {
           class: '',
