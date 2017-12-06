@@ -118,4 +118,40 @@ $dashboard-padding: 15px !default;
     &__label {
         margin: 0 20px 0 0;
     }
+
+    &__list {
+        margin-bottom: $dashboard-margin;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            margin-right: 5px;
+            background-color: $gray-lighter;
+            border: 1px solid $gray;
+
+            &--current {
+                padding: $dashboard-padding;
+                background-color: $white;
+            }
+        }
+
+        &-link {
+            padding: $dashboard-padding;
+        }
+
+        .nav.item {
+            @extend .list__item;
+            @extend .dashboard__list-item;
+        }
+
+        .nav.item.current {
+            @extend .dashboard__list-item--current;
+        }
+
+        .nav.item > a {
+            @extend .link--invert;
+            @extend .dashboard__list-link;
+        }
+    }
 }
