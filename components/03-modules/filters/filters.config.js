@@ -2,6 +2,12 @@ module.exports = {
   title: 'Filters',
   context: {
     tag: 'div',
+    activeFiltersHeading: 'Active filters:',
+    allFiltersHeading: 'All filters:',
+    switcher: {
+      textHidden: 'Show Filters',
+      textDisplay: 'Hide Filters'
+    },
     activeFilters: {
       clearHref: '#',
       clearText: 'Clear All',
