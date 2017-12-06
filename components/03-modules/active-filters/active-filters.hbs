@@ -5,9 +5,7 @@
                     class="active-filters__remove {{class}}"
                     aria-label="{{ariaLabel}}"
             >
-                <svg class="active-filters__remove-icon">
-                    <use xlink:href="{{ svg iconId }}"></use>
-                </svg>
+                {{ render '@icon' icon }}
             </button>
             <span class="active-filters__label">{{label}}&nbsp;:&nbsp;</span>
             <span class="active-filters__value">{{value}}</span>

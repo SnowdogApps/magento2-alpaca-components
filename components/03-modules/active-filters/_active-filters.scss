@@ -1,7 +1,9 @@
-$active-filters__close-size          : 48px !default;
-$active-filters__close-padding       : 0 !default;
-$active-filters__close-border        : none !default;
-$active-filters__close-background    : none !default;
+$active-filters__remove-size         : 48px !default;
+$active-filters__remove-padding      : 0 !default;
+$active-filters__remove-border       : none !default;
+$active-filters__remove-background   : none !default;
+$active-filters__remove-icon-margin  : 0 auto !default;
+$active-filters__remove-icon-padding : 0 !default;
 $active-filters__icon-fill           : $gray !default;
 $active-filters__icon-size           : $font-size-base !default;
 $active-filters__label-font-weight   : $font-weight-bold !default;
@@ -21,30 +23,33 @@ $active-filters__clear-color\@medium : $color-secondary !default;
     }
 
     &__remove {
-        min-width: $active-filters__close-size;
-        min-height: $active-filters__close-size;
-        padding: $active-filters__close-padding;
-        border: $active-filters__close-border;
+        min-width: $active-filters__remove-size;
+        min-height: $active-filters__remove-size;
+        padding: $active-filters__remove-padding;
+        border: $active-filters__remove-border;
         outline: none;
-        background: $active-filters__close-background;
+        background: $active-filters__remove-background;
         cursor: pointer;
         word-break: break-all;
     }
 
     &__remove-icon {
+        display: block;
+        padding: $active-filters__remove-icon-padding;
+        margin: $active-filters__remove-icon-margin;
         width: $active-filters__icon-size;
         height: $active-filters__icon-size;
         fill: $active-filters__icon-fill;
     }
 
     &__label {
-        max-width: calc(100% - #{$active-filters__close-size});
+        max-width: calc(100% - #{$active-filters__remove-size});
         word-break: break-all;
         font-weight: $active-filters__label-font-weight;
     }
 
     &__value {
-        max-width: calc(100% - #{$active-filters__close-size});
+        max-width: calc(100% - #{$active-filters__remove-size});
         word-break: break-all;
     }
 

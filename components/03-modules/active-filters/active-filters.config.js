@@ -4,22 +4,31 @@ module.exports = {
     clearText: 'Clear',
     filters: [
       {
-        iconId: 'close',
         label: 'Label',
         value: 'Value',
-        ariaLabel: 'Disable filter'
+        ariaLabel: 'Disable filter',
+        icon: {
+          iconId: 'close',
+          class: 'active-filters__remove-icon'
+        }
       },
       {
-        iconId: 'close',
         label: 'Label',
         value: 'Value',
-        ariaLabel: 'Disable filter'
+        ariaLabel: 'Disable filter',
+        icon: {
+          iconId: 'close',
+          class: 'active-filters__remove-icon'
+        }
       },
       {
-        iconId: 'close',
         label: 'Label',
         value: 'Value',
-        ariaLabel: 'Disable filter'
+        ariaLabel: 'Disable filter',
+        icon: {
+          iconId: 'close',
+          class: 'active-filters__remove-icon'
+        }
       }
     ]
   }
