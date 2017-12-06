@@ -1,5 +1,5 @@
 /* global noUiSlider */
-(function () { // eslint-disable-line
+(function rangeSlider() {
   'use strict';
 
   function init() {
