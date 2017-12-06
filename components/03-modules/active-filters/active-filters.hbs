@@ -7,8 +7,12 @@
             >
                 {{ render '@icon' icon }}
             </button>
-            <span class="active-filters__label">{{label}}&nbsp;:&nbsp;</span>
-            <span class="active-filters__value">{{value}}</span>
+            <span class="active-filters__label">
+                {{label}}&nbsp;:&nbsp;
+            </span>
+            <span class="active-filters__value">
+                {{value}}
+            </span>
         </li>
     {{/each}}
     <a href="{{clearHref}}"
