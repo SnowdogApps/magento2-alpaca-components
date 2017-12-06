@@ -48,8 +48,8 @@ module.exports = {
       text: 'Create an Account'
     },
     forgetPassword: {
-        href: '#',
-        text: 'Forgot your password?'
+      href: '#',
+      text: 'Forgot your password?'
     },
     validationTips: '* Required Fields',
     tabs: {
