@@ -54,24 +54,29 @@ module.exports = {
         options: [
           {
             text: 'XS',
-            ariaLabel: 'Placaholder for arialabel'
+            ariaLabel: 'Placaholder for arialabel',
+            href: '#'
           },
           {
             class: 'filter__swatch-option--active',
             text: 'S',
-            ariaLabel: 'Placaholder for arialabel'
+            ariaLabel: 'Placaholder for arialabel',
+            href: '#'
           },
           {
             text: 'M',
-            ariaLabel: 'Placaholder for arialabel'
+            ariaLabel: 'Placaholder for arialabel',
+            href: '#'
           },
           {
             text: 'L',
-            ariaLabel: 'Placaholder for arialabel'
+            ariaLabel: 'Placaholder for arialabel',
+            href: '#'
           },
           {
             text: 'XL',
-            ariaLabel: 'Placaholder for arialabel'
+            ariaLabel: 'Placaholder for arialabel',
+            href: '#'
           }
         ]
       }

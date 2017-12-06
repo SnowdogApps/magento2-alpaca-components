@@ -119,24 +119,29 @@ module.exports = {
       options: [
         {
           text: 'XS',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Placeholder for aria-label',
+          href: '#'
         },
         {
           class: 'filter__swatch-option--active',
           text: 'S',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Placeholder for aria-label',
+          href: '#'
         },
         {
           text: 'M',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Placeholder for aria-label',
+          href: '#'
         },
         {
           text: 'L',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Placeholder for aria-label',
+          href: '#'
         },
         {
           text: 'XL',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Placeholder for aria-label',
+          href: '#'
         }
       ]
     },
