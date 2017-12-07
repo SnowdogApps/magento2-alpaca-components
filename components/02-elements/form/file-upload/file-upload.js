@@ -1,10 +1,10 @@
-(function() { //eslint-disable-line func-names
-  'use strict'
+'use strict';
 
+(function FileUpload() {
   const components = [...document.querySelectorAll('.file-upload')];
 
   components.forEach(component => {
-    const input  = component.querySelector('.file-upload__input'),
+    const input = component.querySelector('.file-upload__input'),
           name   = component.querySelector('.file-upload__name'),
           button = component.querySelector('span[role="button"]');
 
@@ -13,10 +13,10 @@
             fileName = filePath.split('\\').pop();
 
       if (fileName) {
-        name.innerHTML = fileName;
+        name.textContent = fileName;
       }
       else {
-        name.innerHTML = name.dataset.defaultText;
+        name.textContent = name.dataset.defaultText;
       }
       name.focus();
     });
