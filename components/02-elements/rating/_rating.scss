@@ -80,7 +80,7 @@ $rating__item-size: $rating__size / 5;
                 display: block;
             }
         }
-        &:after { //active backgroun
+        &:after { //active star with border
             position: absolute;
             top: 0;
             right: 0;
