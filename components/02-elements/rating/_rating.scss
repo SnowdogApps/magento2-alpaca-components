@@ -25,7 +25,7 @@ $rating__item-size: $rating__size / 5;
         height: $rating__item-size;
         width: $rating__size;
         &--rate {
-            width: $rating__item-size
+            width: $rating__item-size;
         }
         &:before { // inactive
             position: absolute;
