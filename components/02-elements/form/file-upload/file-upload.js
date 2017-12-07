@@ -12,10 +12,10 @@
             fileName = filePath.split('\\').pop();
 
       if (fileName) {
-        name.innerHTML = fileName;
+        name.textContent = fileName;
       }
       else {
-        name.innerHTML = name.dataset.defaultText;
+        name.textContent = name.dataset.defaultText;
       }
     });
   })
