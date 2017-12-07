@@ -1,10 +1,14 @@
 module.exports = {
+  context: {
+    ratingScore: '71%'
+  },
   variants: [
     {
       name: 'summary',
       context: {
-        percentFilled: 'style="width: 80%;"',
-        percent: '<span>80%</span>',
+        star: {
+          attributes: 'style="width: 72%"'
+        }
       }
     }
   ]
