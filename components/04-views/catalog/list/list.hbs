@@ -3,18 +3,11 @@
 <main class="container">
     {{ render '@breadcrumbs' }}
 
-    <ul class="catalog-grid">
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-    </ul>
-
+    <div class="catalog-list">
+        {{ render '@catalog-list-item' product }}
+        {{ render '@catalog-list-item' product }}
+        {{ render '@catalog-list-item' product }}
+    </div>
     {{ render '@pager' }}
 </main>
 

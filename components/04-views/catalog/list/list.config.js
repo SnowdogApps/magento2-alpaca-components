@@ -2,24 +2,24 @@ module.exports = {
   name: 'list-view',
   context: {
     product: {
-      tag: 'li',
-      class: 'catalog-grid__item',
+      tag: 'section',
+      class: 'catalog-list__item',
       badge: {
         name: 'badge--new',
         context: {
-          class: 'badge catalog-grid-item__badge',
+          class: 'badge catalog-list-item__badge',
           text: 'NEW'
         }
       },
       image: {
-        class: 'catalog-grid-item__image',
+        class: 'catalog-list-item__image',
         dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
       },
       name: 'Some product name - very long name because that\'s important',
       price: {
         name: 'price',
         context: {
-          regularPrice: '1 400',
+          regularPrice: '1 400,00',
           specialPrice: '',
           prefix: {
             tag: '',
@@ -31,23 +31,27 @@ module.exports = {
           }
         }
       },
-      primaryAction: {
+      addToCartButton: {
         tag: 'button',
         text: 'Add to Cart',
-        class: 'button catalog-grid-item__primary-action'
+        class: 'button button--secondary catalog-list-item__actions-primary-button'
       },
-      secondaryActions: [
-        {
-          icon: {
-            iconId: 'heart'
-          }
-        },
-        {
-          icon: {
-            iconId: 'compare'
-          }
-        }
-      ],
+      buttonWishlist: {
+        tag: 'button',
+        text: '',
+        class: 'button--icon catalog-list-item__actions-secondary-button',
+        iconId: 'heart',
+        iconClass: 'button__icon catalog-list-item__actions-secondary-button-icon',
+        attributes: 'type="button" aria-label="button wishlist"'
+      },
+      buttonCompare: {
+        tag: 'button',
+        text: '',
+        class: 'button--icon catalog-list-item__actions-secondary-button',
+        iconId: 'compare',
+        iconClass: 'button__icon catalog-list-item__actions-secondary-button-icon',
+        attributes: 'type="button" aria-label="button compare"'
+      },
       swatches: [
         {
           name: 'swatch',
