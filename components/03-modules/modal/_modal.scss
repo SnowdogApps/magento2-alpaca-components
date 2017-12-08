@@ -22,12 +22,12 @@ $modal__section-margin-bottom--main  : $spacer--large !default;
     position: fixed;
     left: 0;
     top: 0;
-    display: none;
     z-index: 99;
-    padding: $modal__padding;
+    display: none;
     width: 100%;
     height: 100%;
     overflow: auto;
+    padding: $modal__padding;
     background-color: $modal__background-color;
     &--active {
         display: flex;
