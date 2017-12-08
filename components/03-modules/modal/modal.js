@@ -29,7 +29,7 @@ class Modal {
 
   openModal(modal) {
     modal.focused = document.activeElement;
-    modal.el.classList.add('modal--active');
+    modal.el.classList.add(modal.activeClass);
     modal.focusableChildren = Array.from(modal.el.querySelectorAll(modal.focusable));
     modal.focusableChildren[0].focus();
     modal.el.addEventListener('keydown', (e) => {
@@ -38,7 +38,7 @@ class Modal {
   }
 
   closeModal(modal) {
-    modal.el.classList.remove('modal--active');
+    modal.el.classList.remove(modal.activeClass);
     modal.focused.focus();
   }
 
@@ -48,7 +48,8 @@ class Modal {
       modal.triggerId   = trigger.dataset.modaltrigger,
       modal.el          = document.querySelector(`.modal[data-modal=${modal.triggerId}]`),
       modal.content     = modal.el.querySelector('.modal__content'),
-      modal.closeButton = modal.el.querySelector('.modal__close-button'),
+      modal.closeButton = [...modal.el.querySelectorAll('.modal__js-close-button')],
+      modal.activeClass = 'modal--active',
       modal.focusable   = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]',
       modal.focused     = '';
 
@@ -58,16 +59,18 @@ class Modal {
       );
 
       // When the user clicks on button (x), close the modal
-      if (modal.closeButton) {
-        modal.closeButton.addEventListener('click',
-          () => this.closeModal(modal)
-        );
+      if (modal.closeButton.length > 0) {
+        modal.closeButton.forEach(closeButton => {
+          closeButton.addEventListener('click',
+            () => this.closeModal(modal)
+          );
+        });
       }
 
       // When the user clicks anywhere outside of the modal, close the modal
       window.addEventListener('click', (e) => {
         if (e.target === modal.el
-          && modal.el.classList.contains('modal--active')
+          && modal.el.classList.contains(modal.activeClass)
           && !modal.content.contains(e.target)
         ) {
           this.closeModal(modal)
@@ -77,7 +80,7 @@ class Modal {
       // When the user push escape, close the modal
       window.addEventListener('keydown', (e) => {
         if (e.which === 27
-          && modal.el.classList.contains('modal--active')
+          && modal.el.classList.contains(modal.activeClass)
         ) {
           this.closeModal(modal)
         }

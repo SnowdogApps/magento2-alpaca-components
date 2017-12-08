@@ -24,7 +24,7 @@ module.exports = {
     buttonClose: {
       tag: 'button',
       text: '',
-      class: 'button--icon modal__close-button',
+      class: 'button--icon modal__js-close-button modal__close-button',
       iconId: 'close',
       iconClass: 'button__icon modal__close-button-icon',
       attributes: 'type="button" aria-label="close modal button, click to close the modal"'
@@ -47,7 +47,7 @@ module.exports = {
           contentContext: {
             text: 'Close',
             tag: 'button',
-            class: 'button',
+            class: 'button modal__js-close-button',
             attributes: 'type="button" aria-label="Close"'
           }
         }
