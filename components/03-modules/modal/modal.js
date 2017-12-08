@@ -9,9 +9,9 @@ class Modal {
       this.closeModal(modal);
     }
     if (e.which == 9) {
-      let currentFocus = document.activeElement;
-      let totalOfFocusable = modal.focusableChildren.length;
-      let focusedIndex = modal.focusableChildren.indexOf(currentFocus);
+      let currentFocus = document.activeElement,
+          totalOfFocusable = modal.focusableChildren.length,
+          focusedIndex = modal.focusableChildren.indexOf(currentFocus);
       if (e.shiftKey) {
         if (focusedIndex === 0) {
           e.preventDefault();
@@ -45,12 +45,12 @@ class Modal {
   setListeners() {
     this.triggers.forEach(trigger => {
       const modal = {};
-            modal.triggerId   = trigger.dataset.modaltrigger,
-            modal.el          = document.querySelector(`.modal[data-modal=${modal.triggerId}]`),
-            modal.content     = modal.el.querySelector('.modal__content'),
-            modal.closeButton = modal.el.querySelector('.modal__close-button'),
-            modal.focusable   = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]',
-            modal.focused     = '';
+      modal.triggerId   = trigger.dataset.modaltrigger,
+      modal.el          = document.querySelector(`.modal[data-modal=${modal.triggerId}]`),
+      modal.content     = modal.el.querySelector('.modal__content'),
+      modal.closeButton = modal.el.querySelector('.modal__close-button'),
+      modal.focusable   = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), object, embed, *[tabindex], *[contenteditable]',
+      modal.focused     = '';
 
       /// When the user clicks on trigger, open the modal
       trigger.addEventListener('click',
