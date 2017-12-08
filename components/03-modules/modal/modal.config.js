@@ -1,10 +1,26 @@
 module.exports = {
   context: {
-    dialogClass: '',
-    modalClass: '',
-    modalId: 'modal-1',
+    modalContent: {
+      class: '',
+    },
+    modal: {
+      class: '',
+      id: 'myDialog',
+      // read README.md when implementing modal
+      attributes: 'aria-labelledby="myTitle" aria-describedby="myDesc"'
+    },
     trigger: true,
-    content: 'button',
+    modalTrigger: {
+      buttonModalTrigger: {
+        tag: 'button',
+        class: 'modal-trigger',
+        text: 'Modal trigger button',
+        attributes: 'data-modaltrigger="myDialog" type="button"'
+      }
+    },
+    main: {
+      html: '<h3 id="myTitle">Save "untitled" document?</h3><div id="myDesc">You have made changes to "untitled.txt" that have not been saved. What do you want to do?</div>'
+    },
     buttonClose: {
       tag: 'button',
       text: '',
@@ -14,5 +30,28 @@ module.exports = {
       attributes: 'type="button" aria-label="close modal button, click to close the modal"'
     },
     script: true
-  }
+  },
+  variants: [
+    {
+      name: 'header-footer',
+      context: {
+        header: {
+          html: '<h3 id="myTitle">Save "untitled" document?</h3>',
+        },
+        main: {
+          html: '<div id="myDesc">You have made changes to "untitled.txt" that have not been saved. What do you want to do?</div>'
+        },
+        footer: {
+          html: 'Some text here or via component',
+          content: 'button',
+          contentContext: {
+            text: 'Close',
+            tag: 'button',
+            class: 'button',
+            attributes: 'type="button" aria-label="Close"'
+          }
+        }
+      }
+    },
+  ]
 };

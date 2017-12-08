@@ -1,14 +1,28 @@
 {{#if trigger }}
-    {{ render '@modal-trigger' }}
+    {{ render '@modal-trigger' modalTrigger }}
 {{/if}}
-<div class="modal {{ modalClass }}" data-modal="{{ modalId }}">
-    <dialog class="modal__content {{ dialogClass }}" {{{ dialogAttribtues }}}>
-        {{ render (component content) contentContext }}
+<div role="dialog"
+     aria-hidden="true"
+     id="{{ modal.id }}"
+     data-modal="{{ modal.id }}"
+     class="modal {{ modal.class }}"
+     tabindex="-1"
+     {{{ modal.attributes }}}
+ >
+    <div role="document"
+         class="modal__content {{ modalContent.class }}"
+         {{{ modalContent.attribtues }}}
+         tabindex="0"
+     >
+        {{{ main.html }}}
+        {{#if main.content }}
+            {{ render (component main.content) main.contentContext }}
+        {{/if}}
         {{#if buttonClose }}
             {{ render '@button--icon' buttonClose }}
         {{/if}}
     </dialog>
 </div>
 {{#if script }}
-<script src="{{static 'modal.js' }}"></script>
+    <script src="{{static 'modal.js' }}"></script>
 {{/if}}
