@@ -91,7 +91,6 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         font-weight: $catalog-grid-item__name-font-weight;
         font-size: 12px;
         line-height: $catalog-grid-item__line-height;
-        // padding-right: $catalog-grid-item__base-spacing;
 
         @include mq($screen-m) {
             margin: 0;
@@ -118,15 +117,14 @@ $catalog-grid-item__action-icon-size        : 24px !default;
     }
 
     &__price {
-        // padding-left: $catalog-grid-item__base-spacing;
-        margin-top: $spacer;
+        margin: $spacer 0;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
         font-weight: $font-weight-bold;
         white-space: nowrap;
 
         @include mq($screen-m) {
-            margin-top: $spacer--medium;
+            margin: $spacer--medium 0 0 0;
         }
 
         @include mq($screen-xxl) {
@@ -147,54 +145,57 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         }
     }
 
-    // &__details {
-    //     position: absolute;
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     top: 100%;
-    //     width: 100%;
-    //     padding: $catalog-grid-item__content-padding;
-    //     background: $catalog-grid-item__content-bg-color;
-    //     transition: $transition-base;
-    //
-    //     @include mq($screen-m) {
-    //         padding: $catalog-grid-item__content-padding\@medium;
-    //     }
-    // }
-
     &__options {
         .swatch {
             margin: $catalog-grid-item__base-spacing 0;
         }
     }
 
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__actions-secondary {
         display: flex;
+        flex: 1 50%;
+        order: 2;
         align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        margin: $spacer--medium 0 $spacer 0;
+        justify-content: flex-end;
+        @include mq($screen-m) {
+            margin: $spacer--medium 0 $spacer 0;
+        }
 
         &-button {
-            margin-right: $spacer;
+            width: 32px;
+            min-width: 32px;
+            height: 32px;
             border: none;
             border-radius: 0;
             background-color: transparent;
+            @include mq($screen-m) {
+                margin-right: $spacer;
+            }
+
             &:hover,
             &:focus {
                 background-color: transparent;
             }
             &-icon {
+                width: 12px;
+                height: 12px;
                 fill: $gray-darker;
             }
         }
     }
 
     &__actions-primary {
-        // height: $catalog-grid-item__action-size;
-        // margin-right: $catalog-grid-item__base-spacing;
+        flex: 1 50%;
+        order: 1;
         &-button {
-            padding: 0 $spacer--extra-large;
+            height: 32px;
+            width: 112px;
+            font-size: 12px;
         }
     }
 
