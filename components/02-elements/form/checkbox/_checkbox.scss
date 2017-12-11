@@ -9,10 +9,30 @@ $checkbox__icon-fill            : $color-primary !default;
 $checkbox__icon-transition      : $transition-base !default;
 $checkbox__border               : 2px solid $form-elements-border-color !default;
 $checkbox__border--checked      : none !default;
+$checkbox__color--fake          : $gray-dark !default;
 
 .checkbox {
     position: relative;
     margin-bottom: $checkbox__margin;
+
+    &--link {
+        display: block;
+        text-decoration: none;
+        color: $checkbox__color--fake;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &--link-checked {
+        display: block;
+        .checkbox__icon {
+            opacity: 1;
+        }
+        .checkbox__label:before {
+            border: $checkbox__border--checked;
+        }
+    }
 
     &__field {
         position: absolute;

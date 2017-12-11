@@ -1,17 +1,11 @@
 'use-strict';
 
-(function() { // eslint-disable-line
+(function DropdownList() {
   const dropdownCollapseLabel = '.dropdown-list__item--collapse .dropdown-list__label',
         dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
         openClass             = 'dropdown-list__item--open',
         contentClass          = 'dropdown-list__content',
         mq                    = '(min-width: 768px)';
-
-  function setListHeight(item) {
-    return Array.from(item.children)
-      .map(elem => elem.clientHeight)
-      .reduce((a, b) => a + b, 0);
-  }
 
   function setAriaAttributes(label, content, expanded) {
     if (expanded) {
@@ -57,7 +51,7 @@
         setAriaAttributes(item, dropdownContent, true);
       }
       else {
-        dropdownContent.style.height = `${setListHeight(dropdownContent)}px`;
+        dropdownContent.style.height = 'auto';
         dropdownItem.classList.add(openClass);
         setAriaAttributes(item, dropdownContent, false);
       }
