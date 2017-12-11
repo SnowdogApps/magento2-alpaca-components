@@ -1,16 +1,4 @@
 <div class="file-upload {{ class }}">
-    <label class="file-upload__wrapper" for="{{ id }}">
-        <span class="file-upload__label">
-            {{ labelText }}
-        </span>
-
-        {{ render '@button' button }}
-
-        <span class="file-upload__name" data-default-text="{{ fileName }}">
-            {{ fileName }}
-        </span>
-    </label>
-
     <input class="file-upload__input"
            id="{{ id }}"
            type="file"
@@ -18,6 +6,17 @@
            accept="{{ input.formats }}"
            data-size="{{ input.size }}"
     />
+    <label class="file-upload__wrapper" for="{{ id }}">
+        <span class="file-upload__label">
+            {{ labelText }}
+        </span>
+
+        {{ render '@button' button }}
+
+        <span class="file-upload__name" data-default-text="{{ fileName }}" tabindex="0">
+            {{ fileName }}
+        </span>
+    </label>
 </div>
 
 <script src="{{ static 'file-upload.js' }}"></script>
