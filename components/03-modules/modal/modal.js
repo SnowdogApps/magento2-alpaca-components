@@ -29,6 +29,7 @@ class Modal {
 
   openModal(modal) {
     modal.focused = document.activeElement;
+    modal.el.setAttribute('aria-hidden', false);
     modal.el.classList.add(modal.activeClass);
     modal.focusableChildren = Array.from(modal.el.querySelectorAll(modal.focusable));
     modal.focusableChildren[0].focus();
@@ -38,6 +39,7 @@ class Modal {
   }
 
   closeModal(modal) {
+    modal.el.setAttribute('aria-hidden', true);
     modal.el.classList.remove(modal.activeClass);
     modal.focused.focus();
   }
