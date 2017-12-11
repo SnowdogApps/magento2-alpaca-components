@@ -1,5 +1,10 @@
 $catalog-list__border  : 1px solid $gray-light !default;
-$catalog-list__padding : $spacer--large !default;
+
+$catalog-list__sidebar-width : calc(290px + #{$spacer--medium}) !default;
+$catalog-list__sidebar-margin : 0 $spacer--medium 0 0;
+$catalog-list__sidebar-padding : 0 0 $spacer 0;
+
+$catalog-list__products-padding : 0 0 $spacer--large 0 !default;
 
 .catalog-list {
     display: flex;
@@ -8,18 +13,18 @@ $catalog-list__padding : $spacer--large !default;
         flex-direction: row;
     }
     &__sidebar {
-        padding-bottom: $spacer;
+        padding: $catalog-list__sidebar-padding;
         @include mq($screen-l) {
-            flex: 1 calc(290px + $spacer--medium);
+            flex: 1 $catalog-list__sidebar-width;
             justify-content: space-between;
-            margin-right: $spacer--medium;
+            margin: $catalog-list__sidebar-margin;
         }
     }
     &__products {
-        padding-bottom: $catalog-list__padding;
+        padding: $catalog-list__products-padding ;
         border-bottom: $catalog-list__border;
         @include mq($screen-l) {
-            flex: 1 calc(100% - 290px - #{$spacer--medium});
+            flex: 1 calc(100% - $catalog-list__sidebar-width);
         }
     }
 
