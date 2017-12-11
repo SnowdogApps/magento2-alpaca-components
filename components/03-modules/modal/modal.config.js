@@ -48,7 +48,7 @@ module.exports = {
             text: 'Close',
             tag: 'button',
             class: 'button modal__js-close-button',
-            attributes: 'type="button" aria-label="Close"'
+            attributes: 'type="button"'
           }
         }
       }
