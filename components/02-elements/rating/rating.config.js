@@ -1,14 +1,17 @@
 module.exports = {
   context: {
-    ratingScore: '71%'
+      star: {
+          attributes: 'style="width: 72%"'
+      }
   },
   variants: [
     {
-      name: 'summary',
+      name: 'rate',
       context: {
-        star: {
-          attributes: 'style="width: 72%"'
-        }
+         ratingScore: '71%',
+         star: {
+           attributes: ''
+         }
       }
     }
   ]
