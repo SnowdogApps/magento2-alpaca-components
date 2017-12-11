@@ -19,7 +19,8 @@ $icon__inactive-color           : '#c2c1df' !default;
         position: relative;
         flex: 1 0 $rating__item-size;
         overflow: hidden;
-        &:hover {
+        &:hover,
+        &:focus {
             ~ .rating__rate-item span:before {
                 display: block;
             }
@@ -77,11 +78,13 @@ $icon__inactive-color           : '#c2c1df' !default;
             .rating__star--rate & {
                 display: none;
             }
-            .rating__star--rate:hover & {
+            .rating__star--rate:hover &,
+            .rating__star--rate:focus & {
                 display: block;
             }
 
-            .rating__star--rate:hover & {
+            .rating__star--rate:hover &,
+            .rating__star--rate:focus & {
                 display: block;
             }
         }
