@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Modal module
 
 ### Changed
+- Rating - use svg icons as css background with svg-uri for encoding uri
 - Footer component design
 - Global variables
 - List module styles
