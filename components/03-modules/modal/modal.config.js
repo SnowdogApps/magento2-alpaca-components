@@ -31,7 +31,8 @@ module.exports = {
       text: 'You have made changes to "untitled.txt" that have not been saved. What do you want to do?'
     },
     main: {
-
+      content: '',
+      contentContext: ''
     },
     buttonClose: {
       tag: 'button',
