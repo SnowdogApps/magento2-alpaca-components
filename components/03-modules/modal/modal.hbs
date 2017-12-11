@@ -6,22 +6,20 @@
      id="{{ modal.id }}"
      data-modal="{{ modal.id }}"
      class="modal {{ modal.class }}"
-     tabindex="-1"
      {{{ modal.attributes }}}
  >
     <div role="document"
          class="modal__content {{ modalContent.class }}"
          {{{ modalContent.attribtues }}}
-         tabindex="0"
      >
         {{{ main.html }}}
         {{#if main.content }}
             {{ render (component main.content) main.contentContext }}
         {{/if}}
         {{#if buttonClose }}
-            {{ render '@button--icon' buttonClose }}
+            {{ render '@button--icon' buttonClose merge=true}}
         {{/if}}
-    </dialog>
+    </div>
 </div>
 {{#if script }}
     <script src="{{static 'modal.js' }}"></script>

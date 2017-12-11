@@ -20,7 +20,7 @@
                 {{ render (component header.content) header.contentContext }}
             {{/if}}
             {{#if buttonClose }}
-                {{ render '@button--icon' buttonClose }}
+                {{ render '@button--icon' buttonClose merge=true }}
             {{/if}}
         </div>
         <div class="modal__main">
@@ -35,7 +35,7 @@
                 {{ render (component footer.content) footer.contentContext }}
             {{/if}}
         </div>
-    </dialog>
+    </div>
 </div>
 {{#if script }}
     <script src="{{static 'modal.js' }}"></script>
