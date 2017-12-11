@@ -31,27 +31,4 @@ module.exports = {
     },
     script: true
   },
-  variants: [
-    {
-      name: 'header-footer',
-      context: {
-        header: {
-          html: '<h3 id="myTitle">Save "untitled" document?</h3>',
-        },
-        main: {
-          html: '<div id="myDesc">You have made changes to "untitled.txt" that have not been saved. What do you want to do?</div>'
-        },
-        footer: {
-          html: 'Some text here or via component',
-          content: 'button',
-          contentContext: {
-            text: 'Close',
-            tag: 'button',
-            class: 'button modal__js-close-button',
-            attributes: 'type="button"'
-          }
-        }
-      }
-    },
-  ]
 };

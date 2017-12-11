@@ -36,14 +36,6 @@ $modal__section-margin-bottom--main  : $spacer--large !default;
         align-items: center;
     }
 
-    &__header,
-    &__footer {
-        margin-bottom: $modal__section-margin-bottom;
-    }
-    &__main {
-        margin-bottom: $modal__section-margin-bottom--main;
-    }
-
     &__content {
         position: relative;
         display: block;
