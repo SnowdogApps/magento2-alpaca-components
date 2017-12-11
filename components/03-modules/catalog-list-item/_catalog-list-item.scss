@@ -48,19 +48,6 @@ $catalog-list-item__actions-secondary-button-icon-height         : 12px !default
 $catalog-list-item__actions-secondary-button-icon-height\@medium : 18px !default;
 $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker !default;
 
-
-
-
-$catalog-grid-item__line-height             : 1.5 !default;
-
-$catalog-grid-item__badge-left-position     : 0 !default;
-$catalog-grid-item__badge-top-position      : $spacer--medium !default;
-
-$catalog-grid-item__name-color              : $font-color-base !default;
-
-$catalog-grid-item__action-size             : 32px !default;
-$catalog-grid-item__action-icon-size        : 24px !default;
-
 .catalog-list-item {
     position: relative;
     display: flex;
@@ -149,13 +136,13 @@ $catalog-grid-item__action-icon-size        : 24px !default;
 
     &__price {
         margin: $catalog-list-item__price-margin;
-        font-size: $catalog-list-item__font-size ;
+        font-size: $catalog-list-item__font-size;
         font-weight: $catalog-list-item__price-font-weight;
         white-space: nowrap;
 
         @include mq($screen-m) {
             margin: $catalog-list-item__price-margin\@medium;
-            font-size: $catalog-list-item__font-size\@medium ;
+            font-size: $catalog-list-item__font-size\@medium;
         }
     }
 
