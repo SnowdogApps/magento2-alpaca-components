@@ -1,5 +1,32 @@
-$catalog-grid-item__base-spacing            : $spacer !default;
 $catalog-list-item__padding                 : $spacer 0 !default;
+
+$catalog-list-item__image-width             : 96px !default;
+$catalog-list-item__image-width\@medium     : 208px !default;
+$catalog-list-item__image-height            : 120px !default;
+$catalog-list-item__image-height\@medium    : 258px !default;
+
+$catalog-list-item__badge-padding           : 3px 7px !default;
+$catalog-list-item__badge-padding\@medium   : 3px 7px !default;
+$catalog-list-item__badge-font-size         : 10px !default;
+$catalog-list-item__badge-font-size\@medium : 12px !default;
+
+$catalog-list-item__details-width           : 100%;
+$catalog-list-item__details-margin          : $spacer 0 0 0 !default;
+
+$catalog-list-item__name-margin             : 0 $spacer 0 0 !default;
+$catalog-list-item__name-margin\@medium     : 0 $spacer--large 0 0 !default;
+$catalog-list-item__name-font-weight        : $font-weight-normal !default;
+$catalog-list-item__name-font-size          : 12px !default;
+$catalog-list-item__name-font-size\@medium  : 14px !default;
+
+$catalog-list-item__reviews-padding         : 4px 0 0 0 !default;
+$catalog-list-item__reviews-padding\@medium : 0 !default;
+
+$catalog-list-item__price-margin            : $spacer 0 !default;
+$catalog-list-item__price-margin\@medium    : $spacer--medium 0 0 0 !default;
+$catalog-list-item__price-font-size         : $catalog-grid-item__font-size !default;
+$catalog-list-item__price-font-size\@medium : 14px !default;
+
 
 $catalog-grid-item__font-size               : $font-size-small !default;
 $catalog-grid-item__font-size\@large        : $font-size-base !default;
@@ -8,9 +35,7 @@ $catalog-grid-item__line-height             : 1.5 !default;
 $catalog-grid-item__badge-left-position     : 0 !default;
 $catalog-grid-item__badge-top-position      : $spacer--medium !default;
 
-$catalog-grid-item__content-bg-color        : $white !default;
 $catalog-grid-item__name-color              : $font-color-base !default;
-$catalog-grid-item__name-font-weight        : $font-weight-normal !default;
 
 $catalog-grid-item__action-size             : 32px !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
@@ -22,44 +47,44 @@ $catalog-grid-item__action-icon-size        : 24px !default;
     overflow: hidden;
 
     &__image-wrapper {
-        flex: 1 96px;
-        height: 120px;
+        flex: 1 $catalog-list-item__image-width;
+        height: $catalog-list-item__image-height;
         background: #f9f9f9;
         @include mq($screen-m) {
-            flex: 1 208px;
-            height: 258px;
+            flex: 1 $catalog-list-item__image-width\@medium;
+            height: $catalog-list-item__image-height\@medium;
         }
     }
 
     &__image {
-        width: 96px;
+        width: $catalog-list-item__image-width;
         mix-blend-mode: multiply;
         @include mq($screen-m) {
-            width: 208px;
+            width: $catalog-list-item__image-width\@medium;
         }
     }
 
     &__main {
-        flex: 1 calc(100% - 96px);
-        max-width: calc(100% - 96px);
+        flex: 1 calc(100% - #{$catalog-list-item__image-width});
+        max-width: calc(100% - #{$catalog-list-item__image-width});
         padding: $spacer;
         @include mq($screen-m) {
-            flex: 1 calc(100% - 208px);
+            flex: 1 calc(100% - #{$catalog-list-item__image-width\@medium});
             padding: $spacer--medium $spacer $spacer $spacer--large;
         }
     }
 
     &__badge {
-        position: static;
         border-radius: 0;
-        padding: 3px 7px;
-        font-size: 10px;
+        padding: $catalog-list-item__badge-padding;
+        font-size: $catalog-list-item__badge-font-size;
         background-color: $color-primary;
         @include mq($screen-m) {
             position: absolute;
             top: $catalog-grid-item__badge-top-position;
             left: $catalog-grid-item__badge-left-position;
-            padding: 3px 13px;
+            padding: $catalog-list-item__badge-padding\@medium;
+            font-size: $catalog-list-item__badge-font-size\@medium;
         }
     }
 
@@ -71,64 +96,109 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 100%;
-        margin-top: $spacer;
-        background: $catalog-grid-item__content-bg-color;
+        width: $catalog-list-item__details-width;
+        margin: $catalog-list-item__details-margin;
         @include mq($screen-m) {
             flex-direction: row;
         }
     }
 
-    &__reviews {
-        margin-top: 4px;
+    &__name {
+        margin: $catalog-list-item__name-margin;
+        font-weight: $catalog-list-item__name-font-weight;
+        font-size: $catalog-list-item__name-font-size;
         @include mq($screen-m) {
-            margin-top: 0;
+            margin: $catalog-list-item__name-margin\@medium;
+            font-size: $catalog-list-item__name-font-size\@medium;
         }
     }
 
-    &__name {
-        margin: 0 $spacer 0 0;
-        font-weight: $catalog-grid-item__name-font-weight;
-        font-size: 12px;
-        line-height: $catalog-grid-item__line-height;
-
+    &__reviews {
+        margin: $catalog-list-item__reviews-padding;
         @include mq($screen-m) {
-            margin: 0;
-            font-size: 14px;
-        }
-
-        @include mq($screen-xxl) {
-            font-size: $catalog-grid-item__font-size\@large;
-        }
-
-        &--one-line {
-            overflow: hidden;
-            .link {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
-        }
-
-        .link {
-            color: $catalog-grid-item__name-color;
-            text-decoration: none;
+            margin: $catalog-list-item__reviews-padding\@medium;
         }
     }
 
     &__price {
-        margin: $spacer 0;
-        font-size: $catalog-grid-item__font-size;
-        line-height: $catalog-grid-item__line-height;
+        margin: $catalog-list-item__price-margin;
+        font-size: $catalog-list-item__price-font-size;
         font-weight: $font-weight-bold;
         white-space: nowrap;
 
         @include mq($screen-m) {
-            margin: $spacer--medium 0 0 0;
+            margin: $catalog-list-item__price-margin\@medium;
+            font-size: $catalog-list-item__price-font-size\@medium;
         }
 
         @include mq($screen-xxl) {
             font-size: $catalog-grid-item__font-size\@large;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: $spacer;
+        @include mq($screen-m) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__actions-primary {
+        @include mq($screen-m) {
+            margin: $spacer 0 0 0;
+        }
+    }
+
+    &__actions-primary-button {
+        height: 32px;
+        width: 112px;
+        font-size: 12px;
+        @include mq($screen-m) {
+            height: 48px;
+            width: auto;
+            padding: 0 45px;
+            font-size: 14px;
+        }
+    }
+
+    &__actions-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 0 0 $spacer--medium;
+        @include mq($screen-m) {
+            justify-content: flex-start;
+            margin: 0;
+        }
+    }
+
+    &__actions-secondary-button {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        @include mq($screen-m) {
+            margin-right: $spacer;
+            width: 48px;
+            height: 48px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+        &-icon {
+            width: 12px;
+            height: 12px;
+            fill: $gray-darker;
+            @include mq($screen-m) {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 
@@ -142,77 +212,6 @@ $catalog-grid-item__action-icon-size        : 24px !default;
     &__special-price {
         @include mq($screen-m) {
             display: block;
-        }
-    }
-
-    &__options {
-        .swatch {
-            margin: $catalog-grid-item__base-spacing 0;
-        }
-    }
-
-    &__actions {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__actions-secondary {
-        display: flex;
-        flex: 1 50%;
-        order: 2;
-        align-items: center;
-        justify-content: flex-end;
-        @include mq($screen-m) {
-            margin: $spacer--medium 0 $spacer 0;
-        }
-
-        &-button {
-            width: 32px;
-            min-width: 32px;
-            height: 32px;
-            border: none;
-            border-radius: 0;
-            background-color: transparent;
-            @include mq($screen-m) {
-                margin-right: $spacer;
-            }
-
-            &:hover,
-            &:focus {
-                background-color: transparent;
-            }
-            &-icon {
-                width: 12px;
-                height: 12px;
-                fill: $gray-darker;
-            }
-        }
-    }
-
-    &__actions-primary {
-        flex: 1 50%;
-        order: 1;
-        &-button {
-            height: 32px;
-            width: 112px;
-            font-size: 12px;
-        }
-    }
-
-    &__secondary-action {
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        height: $catalog-grid-item__action-size;
-        width: $catalog-grid-item__action-size;
-        margin-left: $catalog-grid-item__base-spacing;
-        padding: 0;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        .icon {
-            width: $catalog-grid-item__action-icon-size;
-            height: $catalog-grid-item__action-icon-size;
         }
     }
 }

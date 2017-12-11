@@ -20,12 +20,12 @@
             {{ render (component price.name) price.context }}
         </div>
         <div class="catalog-list-item__actions">
+            <div class="catalog-list-item__actions-primary">
+                {{ render '@button' addToCartButton }}
+            </div>
             <div class="catalog-list-item__actions-secondary">
                 {{ render '@button--icon' buttonWishlist }}
                 {{ render '@button--icon' buttonCompare }}
-            </div>
-            <div class="catalog-list-item__actions-primary">
-                {{ render '@button' addToCartButton }}
             </div>
         </div>
     </div>
