@@ -36,6 +36,7 @@ $product-view__description-padding                      : $spacer--medium !defau
 $product-view__description-padding\@medium              : $spacer--medium 0 !default;
 $product-view__description-border-top                   : 1px solid $gray-light !default;
 $product-view__description-border-bottom                : 1px solid $gray-light !default;
+$product-view__description-line-height                  : 1.7 !default;
 
 
 
@@ -222,6 +223,7 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         padding: $product-view__description-padding;
         border-top: $product-view__description-border-top;
         border-bottom: $product-view__description-border-bottom;
+        line-height: $product-view__description-line-height;
         @include mq($screen-m) {
             padding: $product-view__description-padding\@medium;
             margin: $product-view__description-margin\@medium;
@@ -257,7 +259,11 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             margin-bottom: $product-view__tabs-margin-bottom\@medium;
         }
     }
-
+    &__tab {
+        .tab__content {
+            line-height: $product-view__description-line-height;
+        }
+    }
     &__information {
         order: 3;
         width: 100%;
