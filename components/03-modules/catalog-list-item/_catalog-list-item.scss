@@ -7,8 +7,11 @@ $catalog-list-item__image-width\@medium                          : 208px !defaul
 $catalog-list-item__image-height                                 : 120px !default;
 $catalog-list-item__image-height\@medium                         : 258px !default;
 
+$catalog-list-item__badge-top-position\@medium                   : 24px !default;
+$catalog-list-item__badge-left-position\@medium                  : 0 !default;
 $catalog-list-item__badge-padding                                : 3px 7px !default;
 $catalog-list-item__badge-padding\@medium                        : 6px 13px !default;
+$catalog-list-item__badge-bg-color                               : $color-primary !default;
 $catalog-list-item__badge-font-size                              : 10px !default;
 $catalog-list-item__badge-font-size\@medium                      : 12px !default;
 
@@ -18,6 +21,7 @@ $catalog-list-item__details-margin\@medium                       : 0 !default;
 
 $catalog-list-item__name-margin                                  : 0 $spacer 0 0 !default;
 $catalog-list-item__name-margin\@medium                          : 0 $spacer--large 0 0 !default;
+$catalog-list-item__name-color                                   : $font-color-base !default;
 $catalog-list-item__name-font-weight                             : $font-weight-normal !default;
 
 $catalog-list-item__reviews-padding                              : 4px 0 0 0 !default;
@@ -86,11 +90,11 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
         border-radius: 0;
         padding: $catalog-list-item__badge-padding;
         font-size: $catalog-list-item__badge-font-size;
-        background-color: $color-primary;
+        background-color: $catalog-list-item__badge-bg-color;
         @include mq($screen-m) {
             position: absolute;
-            top: $catalog-grid-item__badge-top-position;
-            left: $catalog-grid-item__badge-left-position;
+            top: $catalog-list-item__badge-top-position\@medium;
+            left: $catalog-list-item__badge-left-position\@medium;
             padding: $catalog-list-item__badge-padding\@medium;
             font-size: $catalog-list-item__badge-font-size\@medium;
         }
@@ -122,7 +126,7 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
         }
 
         .link {
-            color: $catalog-grid-item__name-color;
+            color: $catalog-list-item__name-color;
             text-decoration: none;
         }
     }
