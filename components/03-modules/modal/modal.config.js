@@ -18,8 +18,20 @@ module.exports = {
         attributes: 'data-modaltrigger="myDialog" type="button"'
       }
     },
+     header: {
+      attributes: 'id="myTitle"',
+      tag: 'h3',
+      class: 'heading heading--third-level',
+      text: 'Save "untitled" document?'
+    },
+    description: {
+      attributes: 'id="myDesc"',
+      class: '',
+      tag: 'div',
+      text: 'You have made changes to "untitled.txt" that have not been saved. What do you want to do?'
+    },
     main: {
-      html: '<h3 id="myTitle">Save "untitled" document?</h3><div id="myDesc">You have made changes to "untitled.txt" that have not been saved. What do you want to do?</div>'
+
     },
     buttonClose: {
       tag: 'button',

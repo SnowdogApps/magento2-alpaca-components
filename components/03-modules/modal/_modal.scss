@@ -1,6 +1,8 @@
 $modal__padding                      : 0 !default;
 $modal__background-color             : rgba(0, 0, 0, 0.7) !default;
 
+$modal__description-margin           : 0 0 $spacer 0 !default;
+
 $modal__content-width                : calc(100% - (2 * #{$spacer--medium})) !default;
 $modal__content-width\@extra-large   : 80% !default;
 $modal__content-max-width            : 900px !default;
@@ -34,6 +36,10 @@ $modal__section-margin-bottom--main  : $spacer--large !default;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+    }
+
+    &__description {
+        margin: $modal__description-margin;
     }
 
     &__content {
