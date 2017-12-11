@@ -4,14 +4,14 @@ module.exports = {
     fileName: 'File not choosen',
     id: 'file',
     input: {
-      name: 'upload-cv',
+      name: 'file',
       formats: '.pdf,.doc,.png',
       size: '1024'
     },
     button: {
       tag: 'span',
       class: 'file-upload__button',
-      attributes: 'role="button"',
+      attributes: 'role="button" tabindex="0" aria-controls="file"',
       text: 'Upload a file'
     }
   }

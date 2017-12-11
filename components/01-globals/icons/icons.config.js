@@ -143,6 +143,14 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'star',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'star-border',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'twitter',
         class: 'icons__single-icon'
       },
