@@ -1,8 +1,8 @@
-$rating__size: 96px !default;
-$rating__item-size: $rating__size / 5 !default;
-$icon__active-color: '#fab216' !default;
+$rating__size                   : 96px !default;
+$rating__item-size              : $rating__size / 5 !default;
+$icon__active-color             : '#fab216' !default;
 $icon__active-color--with-border: '#fab216' !default;
-$icon__inactive-color: '#c2c1df' !default;
+$icon__inactive-color           : '#c2c1df' !default;
 
 
 .rating {
