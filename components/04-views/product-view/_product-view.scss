@@ -322,6 +322,9 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         @include mq($screen-m) {
             float: none;
             width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
         }
     }
 
