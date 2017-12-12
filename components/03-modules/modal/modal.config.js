@@ -18,7 +18,7 @@ module.exports = {
         attributes: 'data-modaltrigger="myDialog" type="button"'
       }
     },
-     header: {
+    header: {
       attributes: 'id="myTitle"',
       tag: 'h3',
       class: 'heading heading--third-level',
