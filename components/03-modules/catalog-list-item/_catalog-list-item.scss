@@ -1,0 +1,218 @@
+$catalog-list-item__padding                                      : $spacer 0 !default;
+$catalog-list-item__font-size                                    : 12px !default;
+$catalog-list-item__font-size\@medium                            : 14px !default;
+
+$catalog-list-item__image-width                                  : 96px !default;
+$catalog-list-item__image-width\@medium                          : 208px !default;
+$catalog-list-item__image-height                                 : 120px !default;
+$catalog-list-item__image-height\@medium                         : 258px !default;
+
+$catalog-list-item__badge-top-position\@medium                   : 24px !default;
+$catalog-list-item__badge-left-position\@medium                  : 0 !default;
+$catalog-list-item__badge-padding                                : 3px 7px !default;
+$catalog-list-item__badge-padding\@medium                        : 6px 13px !default;
+$catalog-list-item__badge-bg-color                               : $color-primary !default;
+$catalog-list-item__badge-font-size                              : 10px !default;
+$catalog-list-item__badge-font-size\@medium                      : 12px !default;
+
+$catalog-list-item__details-width                                : 100%;
+$catalog-list-item__details-margin                               : $spacer 0 0 0 !default;
+$catalog-list-item__details-margin\@medium                       : 0 !default;
+
+$catalog-list-item__name-margin                                  : 0 $spacer 0 0 !default;
+$catalog-list-item__name-margin\@medium                          : 0 $spacer--large 0 0 !default;
+$catalog-list-item__name-color                                   : $font-color-base !default;
+$catalog-list-item__name-font-weight                             : $font-weight-normal !default;
+
+$catalog-list-item__reviews-padding                              : 4px 0 0 0 !default;
+$catalog-list-item__reviews-padding\@medium                      : 0 !default;
+
+$catalog-list-item__price-margin                                 : $spacer 0 !default;
+$catalog-list-item__price-margin\@medium                         : $spacer--medium 0 0 0 !default;
+$catalog-list-item__price-font-weight                            : $font-weight-bold !default;
+
+$catalog-list-item__actions-margin                               : $spacer 0 !default;
+$catalog-list-item__actions-primary-margin\@medium               : $spacer 0 0 0 !default;
+$catalog-list-item__actions-primary-button-width                 : 112px !default;
+$catalog-list-item__actions-primary-button-width\@medium         : auto !default;
+$catalog-list-item__actions-primary-button-height                : 32px !default;
+$catalog-list-item__actions-primary-button-height\@medium        : 48px !default;
+$catalog-list-item__actions-primary-button-padding\@medium       : 0 45px !default;
+
+$catalog-list-item__actions-secondary-margin                     : 0 0 0 $spacer--medium !default;
+$catalog-list-item__actions-secondary-margin\@medium             : 0 !default;
+$catalog-list-item__actions-secondary-button-width               : 32px !default;
+$catalog-list-item__actions-secondary-button-width\@medium       : 48px !default;
+$catalog-list-item__actions-secondary-button-height              : 32px !default;
+$catalog-list-item__actions-secondary-button-height\@medium      : 48px !default;
+$catalog-list-item__actions-secondary-button-margin\@medium      : 0 $spacer 0 0 !default;
+$catalog-list-item__actions-secondary-button-icon-width          : 12px !default;
+$catalog-list-item__actions-secondary-button-icon-width\@medium  : 18px !default;
+$catalog-list-item__actions-secondary-button-icon-height         : 12px !default;
+$catalog-list-item__actions-secondary-button-icon-height\@medium : 18px !default;
+$catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker !default;
+
+.catalog-list-item {
+    position: relative;
+    display: flex;
+    padding: $catalog-list-item__padding;
+    overflow: hidden;
+
+    &__image-wrapper {
+        flex: 1 $catalog-list-item__image-width;
+        height: $catalog-list-item__image-height;
+        background: #f9f9f9;
+        @include mq($screen-m) {
+            flex: 1 $catalog-list-item__image-width\@medium;
+            height: $catalog-list-item__image-height\@medium;
+        }
+    }
+
+    &__image {
+        width: $catalog-list-item__image-width;
+        mix-blend-mode: multiply;
+        @include mq($screen-m) {
+            width: $catalog-list-item__image-width\@medium;
+        }
+    }
+
+    &__main {
+        flex: 1 calc(100% - #{$catalog-list-item__image-width});
+        max-width: calc(100% - #{$catalog-list-item__image-width});
+        padding: $spacer;
+        @include mq($screen-m) {
+            flex: 1 calc(100% - #{$catalog-list-item__image-width\@medium});
+            padding: $spacer $spacer $spacer $spacer--large;
+        }
+    }
+
+    &__badge {
+        border-radius: 0;
+        padding: $catalog-list-item__badge-padding;
+        font-size: $catalog-list-item__badge-font-size;
+        background-color: $catalog-list-item__badge-bg-color;
+        @include mq($screen-m) {
+            position: absolute;
+            top: $catalog-list-item__badge-top-position\@medium;
+            left: $catalog-list-item__badge-left-position\@medium;
+            padding: $catalog-list-item__badge-padding\@medium;
+            font-size: $catalog-list-item__badge-font-size\@medium;
+        }
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: $catalog-list-item__details-width;
+        margin: $catalog-list-item__details-margin;
+        @include mq($screen-m) {
+            flex-direction: row;
+            margin: $catalog-list-item__details-margin\@medium;
+        }
+    }
+
+    &__name {
+        margin: $catalog-list-item__name-margin;
+        font-weight: $catalog-list-item__name-font-weight;
+        font-size: $catalog-list-item__font-size;
+        @include mq($screen-m) {
+            margin: $catalog-list-item__name-margin\@medium;
+            font-size: $catalog-list-item__font-size\@medium;
+        }
+
+        .link {
+            color: $catalog-list-item__name-color;
+            text-decoration: none;
+        }
+    }
+
+    &__reviews {
+        margin: $catalog-list-item__reviews-padding;
+        @include mq($screen-m) {
+            margin: $catalog-list-item__reviews-padding\@medium;
+        }
+    }
+
+    &__price {
+        margin: $catalog-list-item__price-margin;
+        font-size: $catalog-list-item__font-size;
+        font-weight: $catalog-list-item__price-font-weight;
+        white-space: nowrap;
+
+        @include mq($screen-m) {
+            margin: $catalog-list-item__price-margin\@medium;
+            font-size: $catalog-list-item__font-size\@medium;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        margin: $catalog-list-item__actions-margin;
+        @include mq($screen-m) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__actions-primary {
+        @include mq($screen-m) {
+            margin: $catalog-list-item__actions-primary-margin\@medium;
+        }
+    }
+
+    &__actions-primary-button {
+        height: $catalog-list-item__actions-primary-button-height;
+        width: $catalog-list-item__actions-primary-button-width;
+        font-size: $catalog-list-item__font-size;
+        @include mq($screen-m) {
+            height: $catalog-list-item__actions-primary-button-height\@medium;
+            width: $catalog-list-item__actions-primary-button-width\@medium;
+            padding: $catalog-list-item__actions-primary-button-padding\@medium;
+            font-size: $catalog-list-item__font-size\@medium;
+        }
+    }
+
+    &__actions-secondary {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: $catalog-list-item__actions-secondary-margin\@medium;
+        @include mq($screen-m) {
+            justify-content: flex-start;
+            margin: $catalog-list-item__actions-secondary-margin\@medium;
+        }
+    }
+
+    &__actions-secondary-button {
+        width: $catalog-list-item__actions-secondary-button-width;
+        min-width: $catalog-list-item__actions-secondary-button-width;
+        height: $catalog-list-item__actions-secondary-button-height;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        @include mq($screen-m) {
+            margin: $catalog-list-item__actions-secondary-button-margin\@medium;
+            width: $catalog-list-item__actions-secondary-button-width\@medium;
+            height: $catalog-list-item__actions-secondary-button-height\@medium;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+        }
+
+        &-icon {
+            width: $catalog-list-item__actions-secondary-button-icon-width;
+            height: $catalog-list-item__actions-secondary-button-icon-height;
+            fill: $catalog-list-item__actions-secondary-button-icon-fill;
+            @include mq($screen-m) {
+                width: $catalog-list-item__actions-secondary-button-icon-width\@medium;
+                height: $catalog-list-item__actions-secondary-button-icon-height\@medium;
+            }
+        }
+    }
+}
