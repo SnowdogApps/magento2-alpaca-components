@@ -1,3 +1,10 @@
+$toolbar__dropdown-icon-area-border: none !default;
+$toolbar__dropdown-icon-area-size: 32px !default;
+$toolbar__dropdown-icon-color: $gray !default;
+$toolbar__dropdown-icon-size: 12px !default;
+$toolbar__dropdown-icon-area-margin: 0 !default;
+$toolbar__dropdown-icon-area-offset-right: 0 !default;
+$toolbar__dropdown-icon-area-offset-top: 2px !default;
 $toolbar__offset                      : $spacer !default;
 $toolbar__secondary-text-color        : $gray !default;
 $toolbar__icon-color                  : $gray-light !default;
@@ -11,6 +18,7 @@ $toolbar__select-border\@medium       : 1px solid $gray-light !default;
 $toolbar__select-border-radius        : 0 !default;
 $toolbar__select-border-radius\@medium: $form-elements-radius !default;
 $toolbar__select-field-item-color     : $gray-darker !default;
+$toolbar__select-field-item-height    : 32px !default;
 
 .toolbar {
     display: flex;
@@ -98,6 +106,7 @@ $toolbar__select-field-item-color     : $gray-darker !default;
             border: $toolbar__select-border;
             border-radius: $toolbar__select-border-radius;
             &--single {
+                height: $toolbar__select-field-item-height;
                 @include mq($screen-m) {
                    border: $toolbar__select-border\@medium;
                    border-radius: $toolbar__select-border-radius\@medium;
@@ -113,6 +122,8 @@ $toolbar__select-field-item-color     : $gray-darker !default;
 
     .select__field-item {
         color: $toolbar__select-field-item-color;
+        height: $toolbar__select-field-item-height;
+        line-height: $toolbar__select-field-item-height;
     }
 
     &__limiter-wrapper {
@@ -149,6 +160,22 @@ $toolbar__select-field-item-color     : $gray-darker !default;
         @include mq($screen-m) {
             color: $toolbar__secondary-text-color;
             display: block;
+        }
+    }
+    .choices {
+        &.is-open:after,
+        &:after {
+            top: $toolbar__dropdown-icon-area-offset-top;
+            right: $toolbar__dropdown-icon-area-offset-right;
+            width: $toolbar__dropdown-icon-area-size;
+            height: $toolbar__dropdown-icon-area-size;
+            margin: $toolbar__dropdown-icon-area-margin;
+            border: $toolbar__dropdown-icon-area-border;
+            background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z" fill="#{$toolbar__dropdown-icon-color}" /></svg>');
+            background-size: $toolbar__dropdown-icon-size;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: red;
         }
     }
 }
