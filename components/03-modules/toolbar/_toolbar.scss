@@ -13,10 +13,10 @@ $toolbar__mode-icon-area-size            : 48px !default;
 $toolbar__mode-icon-margin               : 0 auto !default;
 $toolbar__mode-icon-padding              : 0 !default;
 $toolbar__mode-icon-size                 : 18px !default;
-$toolbar__select-border                  : 1px solid $black !default;
-$toolbar__select-border\@medium          : 1px solid $gray-light !default;
-$toolbar__select-border-radius           : 0 !default;
-$toolbar__select-border-radius\@medium   : $form-elements-radius !default;
+$toolbar__mode-margin-right              : $spacer !default;
+$toolbar__select-border                  : 1px solid $gray-light !default;
+$toolbar__select-border-radius           : $form-elements-radius !default;
+$toolbar__select-padding-right           : $spacer--medium !default;
 $toolbar__select-field-item-color        : $gray-darker !default;
 $toolbar__select-field-item-height       : 32px !default;
 $toolbar__sorter-border-top              : 1px solid $gray-light !default;
@@ -76,6 +76,7 @@ $toolbar__sorter-padding                 : 8px 0 !default;
     &__mode {
         display: flex;
         flex: 0 0 auto;
+        margin-right: $toolbar__mode-margin-right;
     }
 
     &__mode-icon {
@@ -111,8 +112,9 @@ $toolbar__sorter-padding                 : 8px 0 !default;
             border-radius: $toolbar__select-border-radius;
             &--single {
                 height: $toolbar__select-field-item-height;
-                border: $toolbar__select-border\@medium;
-                border-radius: $toolbar__select-border-radius\@medium;
+                border: $toolbar__select-border;
+                border-radius: $toolbar__select-border-radius;
+                padding-right: $toolbar__select-padding-right;
             }
         }
         .choices__list--dropdown {
@@ -184,5 +186,5 @@ $toolbar__sorter-padding                 : 8px 0 !default;
 }
 
 .choices.is-open .select__field-list--single {
-    border-radius: $toolbar__select-border-radius\@medium;
+    border-radius: $toolbar__select-border-radius;
 }
