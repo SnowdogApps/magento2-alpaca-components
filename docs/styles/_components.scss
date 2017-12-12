@@ -71,6 +71,7 @@
 @import '../../components/03-modules/additional-content/additional-content';
 @import '../../components/03-modules/brief-info/brief-info';
 @import '../../components/03-modules/catalog-grid-item/catalog-grid-item';
+@import '../../components/03-modules/catalog-list-item/catalog-list-item';
 @import '../../components/03-modules/dashboard/form/form';
 @import '../../components/03-modules/dashboard/items/items';
 @import '../../components/03-modules/mega-menu/mega-menu';
@@ -108,10 +109,10 @@
 @import '../../components/04-views/cart/main';
 @import '../../components/04-views/cart/summary';
 @import '../../components/04-views/cart/totals';
-@import '../../components/04-views/catalog/grid/catalog-grid';
+@import '../../components/04-views/catalog/grid/grid';
+@import '../../components/04-views/catalog/list/list';
 @import '../../components/04-views/dashboard/default/dashboard';
 @import '../../components/04-views/home/home';
 @import '../../components/04-views/login/login';
 @import '../../components/04-views/product-view/product-view';
 @import '../../components/04-views/registration/registration';
-
