@@ -1,9 +1,16 @@
 $toolbar__offset               : $spacer !default;
-$toolbar__secondary-text-color : #a09fa6 !default;
-$toolbar__icon-color           : #a09fa6 !default;
+$toolbar__secondary-text-color : $gray !default;
+$toolbar__icon-color           : $gray-light !default;
 $toolbar__icon-color--active   : $black !default;
+$toolbar__mode-icon-area-size: 48px;
+$toolbar__mode-icon-margin: 0 auto;
+$toolbar__mode-icon-padding: 0;
+$toolbar__mode-icon-size: 18px;
 $toolbar__select-border        : 1px solid $black !default;
+$toolbar__select-border\@medium: 1px solid $gray-light !default;
 $toolbar__select-border-radius : 0 !default;
+$toolbar__select-border-radius\@medium: $form-elements-radius !default;
+$toolbar__select-field-item-color: $gray-darker !default;
 
 .toolbar {
     display: flex;
@@ -58,11 +65,11 @@ $toolbar__select-border-radius : 0 !default;
     }
 
     &__mode-icon {
-        width: 20px;
-        height: 20px;
-        padding: 4px;
         display: block;
-        margin: 0 auto;
+        width: $toolbar__mode-icon-size;
+        height: $toolbar__mode-icon-size;
+        padding: $toolbar__mode-icon-padding;
+        margin: $toolbar__mode-icon-margin;
         fill: $toolbar__icon-color;
         &--active {
             fill: $toolbar__icon-color--active;
@@ -70,9 +77,8 @@ $toolbar__select-border-radius : 0 !default;
     }
 
     &__mode-link {
-        padding: 12px;
-        height: 48px;
-        width: 48px;
+        height: $toolbar__mode-icon-area-size;
+        width: $toolbar__mode-icon-area-size;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -91,8 +97,11 @@ $toolbar__select-border-radius : 0 !default;
         .select__field-list {
             border: $toolbar__select-border;
             border-radius: $toolbar__select-border-radius;
-            @include mq($screen-m) {
-                border: none;
+            &--single {
+                @include mq($screen-m) {
+                   border: $toolbar__select-border\@medium;
+                   border-radius: $toolbar__select-border-radius\@medium;
+                }
             }
         }
         .choices__list--dropdown {
@@ -100,6 +109,10 @@ $toolbar__select-border-radius : 0 !default;
                 padding-right: 0;
             }
         }
+    }
+
+    .select__field-item {
+        color: $toolbar__select-field-item-color;
     }
 
     &__limiter-wrapper {
@@ -137,5 +150,11 @@ $toolbar__select-border-radius : 0 !default;
             color: $toolbar__secondary-text-color;
             display: block;
         }
+    }
+}
+
+.choices.is-open .select__field-list--single {
+    @include mq($screen-m) {
+        border-radius: $toolbar__select-border-radius\@medium;
     }
 }
