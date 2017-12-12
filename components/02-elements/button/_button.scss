@@ -15,11 +15,11 @@ $button__font-color-hover           : $color-primary !default;
 $button__transition                 : $transition-base !default;
 
 // Secondary
-$button__border--secondary          : 1px solid $color-primary !default;
+$button__border--secondary          : 2px solid $color-primary !default;
 $button__border-hover--secondary    : $color-primary !default;
 $button__background--secondary      : $white !default;
 $button__background-hover--secondary: $color-primary !default;
-$button__font-color--secondary      : $color-primary !default;
+$button__font-color--secondary      : $gray-darker !default;
 $button__font-color-hover--secondary: $gray-dark !default;
 
 // Icon

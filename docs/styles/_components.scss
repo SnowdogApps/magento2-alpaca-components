@@ -6,6 +6,7 @@
 @import '../../components/01-globals/mixins/clearfix';
 @import '../../components/01-globals/mixins/grid-column-width';
 @import '../../components/01-globals/mixins/mq';
+@import '../../components/01-globals/mixins/svg-uri';
 @import '../../components/01-globals/mixins/visually-hidden';
 
 // Base
@@ -40,6 +41,7 @@
 @import '../../components/02-elements/breadcrumbs/breadcrumbs';
 @import '../../components/02-elements/button/button';
 @import '../../components/02-elements/cookie-message/cookie-message';
+@import '../../components/02-elements/divider/divider';
 @import '../../components/02-elements/dropdown-list/dropdown-list';
 @import '../../components/02-elements/form/checkbox/checkbox';
 @import '../../components/02-elements/form/fieldset/fieldset';
@@ -65,15 +67,19 @@
 // Modules
 // -----
 
+@import '../../components/03-modules/active-filters/active-filters';
 @import '../../components/03-modules/additional-content/additional-content';
 @import '../../components/03-modules/brief-info/brief-info';
 @import '../../components/03-modules/catalog-grid-item/catalog-grid-item';
+@import '../../components/03-modules/catalog-list-item/catalog-list-item';
 @import '../../components/03-modules/dashboard/form/form';
 @import '../../components/03-modules/dashboard/items/items';
 @import '../../components/03-modules/mega-menu/mega-menu';
 @import '../../components/03-modules/dashboard/nav/nav';
 @import '../../components/03-modules/dashboard/table/table';
 @import '../../components/03-modules/dashboard/toolbar/toolbar';
+@import '../../components/03-modules/filter/filter';
+@import '../../components/03-modules/filters/filters';
 @import '../../components/03-modules/footer/footer';
 @import '../../components/03-modules/gallery/gallery';
 @import '../../components/03-modules/header/header';
@@ -103,10 +109,10 @@
 @import '../../components/04-views/cart/main';
 @import '../../components/04-views/cart/summary';
 @import '../../components/04-views/cart/totals';
-@import '../../components/04-views/catalog/grid/catalog-grid';
+@import '../../components/04-views/catalog/grid/grid';
+@import '../../components/04-views/catalog/list/list';
 @import '../../components/04-views/dashboard/default/dashboard';
 @import '../../components/04-views/home/home';
 @import '../../components/04-views/login/login';
 @import '../../components/04-views/product-view/product-view';
 @import '../../components/04-views/registration/registration';
-

@@ -7,17 +7,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Global focus style
+- Catalog list item module
 - Catalog grid item module
 - Catalog grid view
+- Catalog list view
+- Filters module.
 - Modal module
 
 ### Changed
+- Rating - use svg icons as css background with svg-uri for encoding uri
 - Footer component design
 - Global variables
 - List module styles
 - Newsletter module design
 - Refactored swatch element
 - Update label hidden style
+- Refactored `file-upload` component - removed dependecy on button styles, JS code made more roboust
+- Update accessibility features in `file-upload` component
 
 ### Removed
 - Old catalog product modules and catalog views

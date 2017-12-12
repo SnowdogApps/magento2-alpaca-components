@@ -72,6 +72,12 @@ module.exports = {
       }
     },
     {
+      name: 'secondary',
+      context: {
+        class: 'dropdown-list--secondary'
+      }
+    },
+    {
       name: 'with-nested',
       context: {
         class: 'dropdown-list--with-nested',
