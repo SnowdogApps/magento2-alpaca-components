@@ -24,7 +24,7 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
         padding: $catalog-list__products-padding ;
         border-bottom: $catalog-list__border;
         @include mq($screen-l) {
-            flex: 1 calc(100% - $catalog-list__sidebar-width\@medium);
+            flex: 1 calc(100% - #{$catalog-list__sidebar-width\@medium});
         }
     }
 
