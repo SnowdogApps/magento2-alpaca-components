@@ -39,7 +39,7 @@ module.exports = {
             src: '/images/product/product-img-230_180.png'
           },
           button: {
-            tag: 'a',
+            tag: 'button',
             text: 'Add to Cart',
             class: 'product-item__button action__button'
           }
@@ -94,7 +94,7 @@ module.exports = {
             src: '/images/product/product-img-230_180.png'
           },
           button: {
-            tag: 'a',
+            tag: 'button',
             text: 'Add to Cart',
             class: 'product-item__button action__button'
           }
