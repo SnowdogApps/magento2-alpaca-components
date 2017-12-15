@@ -118,6 +118,10 @@ $dashboard-padding: 15px !default;
         margin: 0 20px 0 0;
     }
 
+    &__link {
+        display: inline-flex;
+    }
+
     &__list {
         &-item {
             display: flex;

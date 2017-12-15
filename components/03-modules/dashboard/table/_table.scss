@@ -31,6 +31,14 @@ $dashboard-table-margin: 30px !default;
         margin: 0;
     }
 
+    &__link {
+        display: inline-flex;
+    }
+
+    &__spacer {
+        margin-right: $spacer;
+    }
+
     &__title {
         margin-bottom: 0;
         margin-right: $dashboard-table-margin;
