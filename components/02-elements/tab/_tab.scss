@@ -22,7 +22,7 @@ $tab__content-padding--large          : $spacer--large $spacer--extra-large !def
 // icon
 $tab__icon-color                      : $gray !default;
 $tab__icon-color--active              : $gray-darker !default;
-$tab__icon-padding                    : $spacer--medium !default;
+$tab__icon-padding                    : 16px !default;
 $tab__icon-size                       : 48px !default;
 
 .tab {
