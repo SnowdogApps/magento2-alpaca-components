@@ -20,7 +20,7 @@
         title.forEach(key => key.classList.remove(activeTitleClass));
         self.classList.add(activeTitleClass);
       }
-    
+
       content.forEach(key => {
         if (key.dataset.content === tabId && !key.classList.contains(activeContentClass)) {
           key.classList.add(activeContentClass);
