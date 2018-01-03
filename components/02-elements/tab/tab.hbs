@@ -16,7 +16,12 @@
              "
              data-content="{{ tabId }}"
         >
-            {{{ content }}}
+            {{#if content}}
+                {{{ content }}}
+            {{/if}}
+            {{#if contentElement}}
+                {{ render (component contentElement) contentContext }}
+            {{/if}}
         </div>
     {{/each}}
 </div>
