@@ -35,7 +35,7 @@
 
             <div class="product-view__rating">
                 <div class="product-view__rating-rates">
-                    {{ render '@rating--summary' }}
+                    {{ render '@rating--rate' }}
                     {{#if rating.parenthesis}}
                         (
                     {{/if}}
@@ -105,7 +105,7 @@
     </div>
 
     <div class="product-view__tabs">
-        {{> '@tab' tab }}
+        {{ render '@tab' tab }}
     </div>
 
     <div class="product-view__slider">

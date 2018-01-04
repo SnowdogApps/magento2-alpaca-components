@@ -1,5 +1,5 @@
 $tab__border-width                    : 1px !default;
-$tab__border-width--large             : 8px !default
+$tab__border-width--large             : 8px !default;
     
 // title
 $tab__title-padding                   : $spacer--medium !default;
@@ -22,7 +22,7 @@ $tab__content-padding--large          : $spacer--large $spacer--extra-large !def
 // icon
 $tab__icon-color                      : $gray !default;
 $tab__icon-color--active              : $gray-darker !default;
-$tab__icon-padding                    : $spacer--medium !default;
+$tab__icon-padding                    : 16px !default;
 $tab__icon-size                       : 48px !default;
 
 .tab {
@@ -132,6 +132,7 @@ $tab__icon-size                       : 48px !default;
         &--active {
             display: block;
             opacity: 1;
+            z-index: 1;
 
             &:nth-last-child(1) {
                 border-bottom: $tab__title-border;

@@ -4,9 +4,7 @@
              data-tab="{{ tabId }}"
         >
             {{ title }}
-            <div class="tab__icon {{ class.tabIconWrapper }}">
-                {{render '@icon' icon }}
-            </div>
+            {{ render '@icon' icon }}
         </div>
 
         <div class="
@@ -16,9 +14,16 @@
              "
              data-content="{{ tabId }}"
         >
-            {{{ content }}}
+            {{#if content}}
+                {{{ content }}}
+            {{/if}}
+            {{#if contentElement}}
+                {{ render (component contentElement) contentContext }}
+            {{/if}}
         </div>
     {{/each}}
 </div>
 
-<script src="{{static 'tab.js' }}"></script>
+{{#if script}}
+    <script src="{{static 'tab.js' }}"></script>
+{{/if}}
