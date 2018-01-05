@@ -21,7 +21,8 @@
 
       content.forEach(key => {
         if (key.dataset.content === tabId
-            && !key.classList.contains(activeContentClass)) {
+            && !key.classList.contains(activeContentClass)
+        ) {
           content.forEach(key => key.classList.remove(activeContentClass));
           key.classList.add(activeContentClass);
         }
