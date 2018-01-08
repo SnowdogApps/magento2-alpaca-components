@@ -7,8 +7,8 @@
         mediaQuery         = window.matchMedia('(min-width: 768px)');
 
   tab.forEach(element => {
-    const title   = element.querySelectorAll('.tab__title'),
-          content = element.querySelectorAll('.tab__content');
+    const title   = element.querySelectorAll(':scope > .tab__title'),
+          content = element.querySelectorAll(':scope > .tab__content');
 
     title.forEach(key => key.addEventListener('click', event => {
       const self = event.currentTarget,
