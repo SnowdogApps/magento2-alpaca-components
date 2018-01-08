@@ -2,7 +2,7 @@ module.exports = {
   context: {
     script: true,
     icon: {
-      class: '',
+      class: 'tab__icon',
       iconId: 'angle-down'
     },
     tabs: [
@@ -14,10 +14,6 @@ module.exports = {
         class: {
           content: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__icon',
-          iconId: 'angle-down'
         }
       },
       {
@@ -27,10 +23,6 @@ module.exports = {
         class: {
           content: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__icon',
-          iconId: 'angle-down'
         }
       },
       {
@@ -40,10 +32,6 @@ module.exports = {
         class: {
           content: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__icon',
-          iconId: 'angle-down'
         }
       },
       {
@@ -53,10 +41,6 @@ module.exports = {
         class: {
           content: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__icon',
-          iconId: 'angle-down'
         }
       },
       {
@@ -66,10 +50,6 @@ module.exports = {
         class: {
           content: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__icon',
-          iconId: 'angle-down'
         }
       }
     ]
