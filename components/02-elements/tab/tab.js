@@ -3,8 +3,7 @@
 (function() { // eslint-disable-line
   const tab                = [...document.querySelectorAll('.tab')],
         activeTitleClass   = 'tab__title--active',
-        activeContentClass = 'tab__content--active',
-        mediaQuery         = window.matchMedia('(min-width: 768px)');
+        activeContentClass = 'tab__content--active';
 
   tab.forEach(element => {
     const children = Array.from(element.children);
