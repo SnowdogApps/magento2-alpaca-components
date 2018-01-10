@@ -7,35 +7,30 @@
         mediaQuery         = window.matchMedia('(min-width: 768px)');
 
   tab.forEach(element => {
-    const title   = element.querySelectorAll(':scope > .tab__title'),
-          content = element.querySelectorAll(':scope > .tab__content');
+    const children = Array.from(element.children);
+    
+    children.forEach(item => {
 
-    title.forEach(key => key.addEventListener('click', event => {
-      const self = event.currentTarget,
-            tabId = self.dataset.tab;
+      if (item.classList.contains('tab__title')) {
+        item.addEventListener('click', (e) => {
+          const self = e.currentTarget,
+                tabId = self.dataset.tab;
 
-      if (!self.classList.contains(activeTitleClass)) {
-        title.forEach(key => key.classList.remove(activeTitleClass));
-        self.classList.add(activeTitleClass);
-      }
+          if (!self.classList.contains(activeTitleClass)) {
+            children.forEach(key => {
+              key.classList.remove(activeTitleClass);
+              key.classList.remove(activeContentClass);
 
-      content.forEach(key => {
-        if (key.dataset.content === tabId
-            && !key.classList.contains(activeContentClass)
-        ) {
-          content.forEach(key => key.classList.remove(activeContentClass));
-          key.classList.add(activeContentClass);
-        }
-      });
-    }));
-
-    window.addEventListener('resize', () => {
-      if (mediaQuery.matches
-          && !document.querySelectorAll('.tab__title--active').length
-      ) {
-        title[0].classList.add('tab__title--active');
-        content[0].classList.add('tab__content--active');
+              if (key.dataset.content === tabId &&
+                  key.classList.contains('tab__content')) {
+                item.classList.add(activeTitleClass);
+                key.classList.add(activeContentClass);
+              }
+            });
+          }
+        });
       }
     });
   });
 })();
+
