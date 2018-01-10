@@ -7,7 +7,7 @@
 
   tab.forEach(element => {
     const children = Array.from(element.children);
-    
+
     children.forEach(item => {
 
       if (item.classList.contains('tab__title')) {
@@ -32,4 +32,3 @@
     });
   });
 })();
-
