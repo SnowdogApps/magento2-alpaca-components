@@ -58,9 +58,7 @@ $tab__icon-size                       : 48px !default;
         }
         
         .tab__icon {
-            svg {
-                fill: $tab__icon-color;
-            }
+            fill: $tab__icon-color;
         }
 
         &--active {
@@ -86,9 +84,6 @@ $tab__icon-size                       : 48px !default;
             
             .tab__icon {
                 transform: rotateX(180deg);
-            }
-            
-            &__svg {
                 fill: $tab__icon-color--active;
             }
         }
@@ -106,11 +101,6 @@ $tab__icon-size                       : 48px !default;
 
         @include mq($screen-l) {
             display: none;
-        }
-
-        svg {
-            width: 14px;
-            height: 14px;
         }
     }
     
