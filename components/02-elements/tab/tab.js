@@ -16,7 +16,7 @@
           children.forEach((item) => {
             item.classList.remove(activeTitleClass);
             item.classList.remove(activeContentClass);
-            
+
             if (
               item.classList.contains('tab__content')
               && tabTitle === item.dataset.content
@@ -24,7 +24,7 @@
               item.classList.add(activeContentClass);
             }
           });
-          
+
           item.classList.add(activeTitleClass);
         });
       }
