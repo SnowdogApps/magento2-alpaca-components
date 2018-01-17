@@ -4,7 +4,9 @@
              data-tab="{{ tabId }}"
         >
             {{ title }}
-            {{ render '@icon' icon }}
+            {{#if ../icon}}
+                {{ render '@icon' ../icon }}
+            {{/if}}
         </div>
 
         <div class="
