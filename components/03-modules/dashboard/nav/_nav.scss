@@ -102,6 +102,12 @@ $dashboard-nav-margin : 15px !default;
         @extend .current;
     }
 
+    .nav.item.current {
+        & > a {
+            color: $red;
+        }
+    }
+
     .nav.item > a {
         @extend .link--invert;
     }

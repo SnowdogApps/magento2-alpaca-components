@@ -62,6 +62,11 @@ $dashboard-padding: 15px !default;
         margin-bottom: $dashboard-margin;
     }
 
+    &__wishlist-handler {
+        justify-content: flex-start;
+        margin: 0;
+    }
+
     &__wishlist-item {
         margin-bottom: $dashboard-margin;
 
