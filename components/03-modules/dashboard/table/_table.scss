@@ -3,6 +3,16 @@ $dashboard-table-margin: 30px !default;
 .dashboard-table {
     overflow: hidden;
 
+    &--tab {
+        padding: 10px;
+        margin-bottom: $dashboard-table-margin;
+        border: 1px solid $gray;
+
+        .dashboard-table__content {
+            margin-bottom: 0;
+        }
+    }
+
     &__header {
         display: flex;
         flex-wrap: nowrap;
@@ -19,6 +29,14 @@ $dashboard-table-margin: 30px !default;
 
     &__table {
         margin: 0;
+    }
+
+    &__link {
+        display: inline-flex;
+    }
+
+    &__spacer {
+        margin-right: $spacer;
     }
 
     &__title {

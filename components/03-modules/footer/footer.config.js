@@ -12,6 +12,7 @@ module.exports = {
       handlerClass: 'container'
     },
     linkList: {
+      script: true,
       class: 'dropdown-list@screen-m dropdown-list--is-open@screen-m dropdown-list--dark',
       dropdowns: [
         {

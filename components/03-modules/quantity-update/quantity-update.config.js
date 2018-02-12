@@ -19,6 +19,7 @@ module.exports = {
       attributes: 'type="button" aria-label="quantity plus button"',
       iconClass: 'button__icon quantity-update__icon',
       iconId: 'plus'
-    }
+    },
+    script: true
   }
 }

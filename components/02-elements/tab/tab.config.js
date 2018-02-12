@@ -1,7 +1,8 @@
 module.exports = {
   context: {
+    script: true,
     icon: {
-      class: '',
+      class: 'tab__icon',
       iconId: 'angle-down'
     },
     tabs: [
@@ -12,26 +13,16 @@ module.exports = {
         active: true,
         class: {
           content: '',
-          tabIconWrapper: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__svg',
-          iconId: 'angle-down'
         }
       },
       {
         tabId: 'tab-2',
         title: 'Tab title 2',
-        content: '<p>Etiam orci ex, tristique at tempor quis, bibendum vel diam. Nullam vel mollis leo. Etiam facilisis mattis tortor, a ullamcorper nulla congue sed. Morbi non odio neque. In ut leo a elit consectetur fermentum aliquet non eros. In elementum vitae nulla sed semper. Nulla lacinia fermentum quam eu scelerisque. Sed et bibendum augue. Etiam sagittis enim eu ex aliquet ornare. Donec congue facilisis neque.</p>',
+        contentElement: 'image',
         class: {
           content: '',
-          tabIconWrapper: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__svg',
-          iconId: 'angle-down'
         }
       },
       {
@@ -40,12 +31,7 @@ module.exports = {
         content: '<p>Pellentesque velit nisl, posuere ac erat nec, iaculis auctor magna. Donec ut elementum mauris. Sed in scelerisque lorem. Cras pretium laoreet vestibulum. In dui mauris, sagittis vitae rhoncus quis, ornare in enim. Vivamus pellentesque ligula sed quam sollicitudin lobortis. Etiam interdum euismod nisi a interdum. Nunc turpis urna, pharetra nec nunc sit amet, consequat porta orci. Suspendisse sit amet dignissim lacus. Quisque vel est pretium, aliquam lacus id, lobortis neque. Nullam non neque mi. Vivamus quis pulvinar mi, in elementum nulla. Etiam neque diam, suscipit vitae luctus et, sollicitudin in turpis. Proin vitae cursus augue, sit amet vestibulum mi. Mauris feugiat justo eget purus fringilla aliquam vitae a massa.</p>',
         class: {
           content: '',
-          tabIconWrapper: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__svg',
-          iconId: 'angle-down'
         }
       },
       {
@@ -54,12 +40,7 @@ module.exports = {
         content: '<p>Pellentesque velit nisl, posuere ac erat nec, iaculis auctor magna. Donec ut elementum mauris. Sed in scelerisque lorem. Cras pretium laoreet vestibulum. In dui mauris, sagittis vitae rhoncus quis, ornare in enim. Vivamus pellentesque ligula sed quam sollicitudin lobortis. Etiam interdum euismod nisi a interdum. Nunc turpis urna, pharetra nec nunc sit amet, consequat porta orci. Suspendisse sit amet dignissim lacus. Quisque vel est pretium, aliquam lacus id, lobortis neque. Nullam non neque mi. Vivamus quis pulvinar mi, in elementum nulla. Etiam neque diam, suscipit vitae luctus et, sollicitudin in turpis. Proin vitae cursus augue, sit amet vestibulum mi. Mauris feugiat justo eget purus fringilla aliquam vitae a massa.</p>',
         class: {
           content: '',
-          tabIconWrapper: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__svg',
-          iconId: 'angle-down'
         }
       },
       {
@@ -68,12 +49,7 @@ module.exports = {
         content: '<p>Pellentesque velit nisl, posuere ac erat nec, iaculis auctor magna. Donec ut elementum mauris. Sed in scelerisque lorem. Cras pretium laoreet vestibulum. In dui mauris, sagittis vitae rhoncus quis, ornare in enim. Vivamus pellentesque ligula sed quam sollicitudin lobortis. Etiam interdum euismod nisi a interdum. Nunc turpis urna, pharetra nec nunc sit amet, consequat porta orci. Suspendisse sit amet dignissim lacus. Quisque vel est pretium, aliquam lacus id, lobortis neque. Nullam non neque mi. Vivamus quis pulvinar mi, in elementum nulla. Etiam neque diam, suscipit vitae luctus et, sollicitudin in turpis. Proin vitae cursus augue, sit amet vestibulum mi. Mauris feugiat justo eget purus fringilla aliquam vitae a massa.</p>',
         class: {
           content: '',
-          tabIconWrapper: '',
           title: ''
-        },
-        icon: {
-          class: 'tab__svg',
-          iconId: 'angle-down'
         }
       }
     ]
