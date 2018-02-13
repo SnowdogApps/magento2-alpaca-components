@@ -108,8 +108,6 @@ $toolbar__sorter-padding                 : 8px 0 !default;
             flex-grow: 1;
         }
         .select__field-list {
-            border: $toolbar__select-border;
-            border-radius: $toolbar__select-border-radius;
             &--single {
                 height: $toolbar__select-field-item-height;
                 border: $toolbar__select-border;
@@ -180,11 +178,6 @@ $toolbar__sorter-padding                 : 8px 0 !default;
             background-size: $toolbar__dropdown-icon-size;
             background-repeat: no-repeat;
             background-position: center center;
-            color: red;
         }
     }
-}
-
-.choices.is-open .select__field-list--single {
-    border-radius: $toolbar__select-border-radius;
 }
