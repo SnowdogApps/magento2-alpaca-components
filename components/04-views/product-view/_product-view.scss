@@ -313,7 +313,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     &__rating {
         color: $product-view__rating-text-color;
         clear: both;
+        display: flex;
+        justify-content: space-between;
         @include mq($screen-m) {
+            display: block;
             top: 0;
             text-align: right;
             line-height: $product-view__product-rating-line-height;
@@ -322,8 +325,7 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     &__rating-rates {
-        width: 48%;
-        float: left;
+        width: 50%;
         font-size: $product-view__rating-value-font-size;
         @include mq($screen-m) {
             float: none;
