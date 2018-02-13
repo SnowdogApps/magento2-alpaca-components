@@ -207,7 +207,12 @@ module.exports = {
       }
     ],
     tab: {
+      script: true,
       class: 'product-view__tab',
+      icon: {
+        class: 'tab__icon',
+        iconId: 'angle-down'
+      },
       tabs: [
         {
           active: true,

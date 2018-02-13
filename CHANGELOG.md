@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Global focus style
+- Catalog list item module
 - Catalog grid item module
 - Catalog grid view
+- Catalog list view
 - Filters module.
 - Modal module
+- Working js for Quantity-update
 
 ### Changed
 - Rating - use svg icons as css background with svg-uri for encoding uri

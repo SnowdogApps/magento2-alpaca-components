@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'catalog-grid',
+  name: 'grid-view',
   context: {
     product: {
       tag: 'li',

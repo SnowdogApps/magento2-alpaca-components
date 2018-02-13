@@ -59,6 +59,9 @@ $select__input-border-color: $form-elements-border-color !default;
         }
     }
     &__list--dropdown {
+        max-height: 300px;
+        overflow: auto;
+
         .is-open & {
             border-radius: 0 0 $select__border-radius $select__border-radius;
             border-color: $select__input-border-color;

@@ -1,6 +1,8 @@
 $modal__padding                      : 0 !default;
 $modal__background-color             : rgba(0, 0, 0, 0.7) !default;
 
+$modal__description-margin           : 0 0 $spacer 0 !default;
+
 $modal__content-width                : calc(100% - (2 * #{$spacer--medium})) !default;
 $modal__content-width\@extra-large   : 80% !default;
 $modal__content-max-width            : 900px !default;
@@ -15,20 +17,29 @@ $modal__close-button-background-color: transparent !default;
 
 $modal__close-button-icon-color      : $color-primary !default;
 
+$modal__section-margin-bottom        : $spacer--medium !default;
+$modal__section-margin-bottom--main  : $spacer--large !default;
+
 .modal {
     position: fixed;
     left: 0;
     top: 0;
-    display: none;
     z-index: 99;
-    padding: $modal__padding;
+    display: none;
     width: 100%;
     height: 100%;
     overflow: auto;
+    padding: $modal__padding;
     background-color: $modal__background-color;
     &--active {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__description {
+        margin: $modal__description-margin;
     }
 
     &__content {
