@@ -106,6 +106,9 @@ $toolbar__sorter-padding           : 8px 0 !default;
         align-items: center;
         .choices {
             flex-grow: 1;
+            @include mq($screen_m) {
+                width: 200px;
+            }
         }
         .select__field-list {
             &--single {
