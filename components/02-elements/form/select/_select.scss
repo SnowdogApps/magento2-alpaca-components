@@ -1,5 +1,5 @@
 $select__margin                          : $spacer !default;
-$select__padding                         : 0 $spacer--large 0 $spacer--medium !default;
+$select__padding                         : 0 $spacer--medium 0 $spacer--medium !default;
 $select__border                          : 1px solid $form-elements-border-color !default;
 $select__spacing                         : 40px !default;
 $select__border-radius                   : 20px !default;
@@ -71,7 +71,7 @@ $select__field-list-border-radius--single: 20px !default;
         }
 
         & .choices__item--selectable {
-            padding-right: 0;
+            padding-right: $spacer--medium;
         }
     }
 }
