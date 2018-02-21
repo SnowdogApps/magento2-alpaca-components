@@ -69,5 +69,9 @@ $select__field-list-border-radius--single: 20px !default;
             border-radius: 0 0 $select__border-radius $select__border-radius;
             border-color: $select__input-border-color;
         }
+
+        & .choices__item--selectable {
+            padding-right: 0;
+        }
     }
 }
