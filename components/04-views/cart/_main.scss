@@ -1,11 +1,10 @@
-$cart__margin : 15px !default;
-$cart__padding: 15px !default;
+$cart__margin : $spacer--medium !default;
+$cart__padding: $spacer--medium !default;
 $cart__border : 1px solid $gray-lighter !default;
 
 .cart {
     margin-bottom: ($cart__margin * 2);
     &__main-col {
-        padding: 0 $cart__padding;
         @include mq($screen-s, 1024px) {
             flex-basis: 100%;
         }
@@ -25,7 +24,6 @@ $cart__border : 1px solid $gray-lighter !default;
 
     &__products-list {
         margin: 0;
-        padding-top: $cart__padding;
         border-top: $cart__border;
     }
 }

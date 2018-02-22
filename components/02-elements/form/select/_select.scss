@@ -11,7 +11,6 @@ $select__input-border-color: $form-elements-border-color !default;
 
     &__field {
         position: relative;
-        background: $select__field-background;
 
         &--native {
             width: 100%;
@@ -32,6 +31,7 @@ $select__input-border-color: $form-elements-border-color !default;
     }
 
     &__field-list {
+        background: $select__field-background;
         &--single {
             height: $select__spacing;
             line-height: $select__spacing;
@@ -47,6 +47,7 @@ $select__input-border-color: $form-elements-border-color !default;
         }
     }
 }
+
 // Choices.js lib styles overwrites
 .choices {
     &.is-open {
