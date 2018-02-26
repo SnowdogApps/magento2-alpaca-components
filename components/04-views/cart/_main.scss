@@ -11,7 +11,6 @@ $cart__border : 1px solid $gray-lighter !default;
     }
 
     &__summary-col {
-        padding: 0 15px;
         @include mq($screen-s, 1024px) {
             flex-basis: 100%;
         }
