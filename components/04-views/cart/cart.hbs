@@ -1,7 +1,13 @@
+{{ render '@header' }}
+
+<div class="container">
+    {{ render '@heading' mainHeading }}
+</div>
+
 <div class="container cart">
     <div class="grid">
         <div class="grid__column grid__column--4-4">
-            {{render '@heading' mainHeading}}
+
         </div>
         <div class="grid__column grid__column--4-6 cart__main-col">
             <form class="cart__products-list">
@@ -14,6 +20,24 @@
                     {{ render '@button' buttonClearCart }}
                 </div>
             </form>
+            <div class="grid cart__bottom">
+                <div class="discount">
+                    <div class="discount__title">
+                        <span class="discount__title-text">
+                            {{ discount.title }}
+                        </span>
+                        {{ render '@icon' discount.icon }}
+                    </div>
+                    <div class="discount__content">
+                        <form>
+                            <div class="discount__controls">
+                                {{ render '@input' discount.input }}
+                                {{ render '@button' discount.button }}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="grid__column grid__column--2-6 cart__summary-col">
             <div class="cart-summary">
@@ -94,3 +118,5 @@
         </div>
     </div>
 </div>
+
+{{ render '@footer' }}
