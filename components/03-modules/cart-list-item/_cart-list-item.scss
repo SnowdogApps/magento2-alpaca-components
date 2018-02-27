@@ -12,6 +12,8 @@ $cart-list-item__details-width             : calc(100% - #{$cart-list-item__name
 $cart-list-item__details-margin            : $spacer--medium 0 !default;
 $cart-list-item__details-margin\@small     : 0 !default;
 
+$cart-list-item__attributes-margin         : 0 0 $spacer--medium 0 !default;
+
 $cart-list-item__price-margin              : $spacer 0 0 0 !default;
 $cart-list-item__price-margin\@medium      : 0 !default;
 
@@ -23,16 +25,6 @@ $cart-list-item__qty-wrapper-margin        : 0 !default;
 $cart-list-item__qty-input-width\@small    : 70px !default;
 
 $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
-
-// $cart-list-item__attributes-button-color   : $color-primary !default;
-// $cart-list-item__attributes-button-bg-color: $white !default;
-// $cart-list-item__attributes-list-padding   : $spacer 0 !default;
-// $cart-list-item__attributes-list-color     : $gray-dark !default;
-//
-// $cart-list-item__action-width              : 50% !default;
-// $cart-list-item__action-button-bg          : transparent !default;
-// $cart-list-item__action-icon-color         : $gray !default;
-// $cart-list-item__action-icon-color--active : $color-primary !default;
 
 .cart-list-item {
     display: flex;
@@ -56,8 +48,9 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
     &__data {
         display: flex;
         flex-direction: column;
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             flex-direction: row;
+            flex-flow: row wrap;
         }
     }
 
@@ -65,7 +58,7 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
         line-height: $font-line-height;
         text-decoration: none;
         font-weight: $cart-list-item__name-weight;
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             flex: 0 0 $cart-list-item__name-width;
             padding: $cart-list-item__name-padding\@small;
         }
@@ -80,17 +73,18 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         margin: $cart-list-item__details-margin;
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             flex: 0 0 $cart-list-item__details-width;
             margin: $cart-list-item__details-margin\@small;
-        }
-
-        @include mq($screen-m) {
             flex-direction: row;
             align-items: center;
         }
+    }
+
+    &__attributes {
+        margin: $cart-list-item__attributes-margin;
     }
 
     &__price {
@@ -102,7 +96,7 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
 
     &__qty {
         width: $cart-list-item__qty-width;
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             width: $cart-list-item__qty-width\@small;
         }
     }
@@ -112,7 +106,7 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
     }
 
     &__qty-input {
-        @include mq($screen-s) {
+        @include mq($screen-m) {
             width: $cart-list-item__qty-input-width\@small;
         }
     }

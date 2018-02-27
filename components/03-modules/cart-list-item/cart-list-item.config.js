@@ -36,6 +36,19 @@ module.exports = {
       iconClass: 'button__icon',
       iconId: 'remove'
     },
+    attributes: {
+      class: 'cart-list-item__attributes',
+      elements: [
+        {
+          label: 'Size',
+          value: 'XXL'
+        },
+        {
+          label: 'Color',
+          value: 'Red'
+        }
+      ]
+    },
     configurable: true
   }
 }
