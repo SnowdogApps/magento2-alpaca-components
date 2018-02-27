@@ -1,4 +1,5 @@
 $mega-menu__margin                    : 0 !default;
+$mega-menu__border-bottom             : 1px solid $gray-light !default;
 $mega-menu__font-color                : $font-color-base !default;
 $mega-menu__font-weight               : $font-weight-bold !default;
 $mega-menu__font-size                 : $font-size-base !default;
@@ -27,6 +28,7 @@ $mega-menu__dropdown-max-width        : 850px !default;
     color: $mega-menu__font-color;
     position: relative;
     margin-bottom: $mega-menu__margin;
+    border-bottom: $mega-menu__border-bottom;
     @include mq($screen-xl) {
         display: block;
     }

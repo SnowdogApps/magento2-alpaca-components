@@ -1,5 +1,5 @@
 $login__margin-bottom                       : $spacer--extra-large !default;
-$login__padding-top                         : $spacer--medium !default;
+$login__padding-top                         : $spacer !default;
 $login__actions-margin                      : 0 0 $spacer--medium !default;
 
 $login__horizontal-padding                  : 38px !default;
@@ -38,6 +38,24 @@ $login__validation-tips-color               : $red !default;
 $login__validation-tips-margin              : 0 0 $spacer !default;
 
 .login {
+    &__form-column {
+        flex-basis: 100%;
+        max-width: 100%;
+        @include mq($screen-m) {
+            @include grid-column-width(1, 2);
+            padding-right: $spacer--large;
+        }
+    }
+
+    &__link-column {
+        flex-basis: 100%;
+        max-width: 100%;
+        @include mq($screen-m) {
+            @include grid-column-width(1, 2);
+            padding-left: $spacer--large;
+        }
+    }
+
     padding-top: $login__padding-top;
     margin-bottom: $login__margin-bottom;
     &__title {
@@ -46,7 +64,6 @@ $login__validation-tips-margin              : 0 0 $spacer !default;
     }
     &__info {
         margin: $login__info-margin;
-        text-align: center;
         @include mq($screen-m) {
             margin: $login__info-margin\@medium;
             text-align: left;
@@ -167,4 +184,3 @@ $login__validation-tips-margin              : 0 0 $spacer !default;
         }
     }
 }
-

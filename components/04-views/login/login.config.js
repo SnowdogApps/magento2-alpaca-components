@@ -1,6 +1,10 @@
 module.exports = {
   context: {
-    title: 'Customer login',
+    mainHeading: {
+      tag: 'h1',
+      class: 'heading heading--page',
+      text: 'Customer login'
+    },
     signInInfo: 'If you have an account, sign in with your email address.',
     createAccountInfo: 'Creating an account has many benefits: check out faster, keep more than one address, track orders and more.',
     email: {
@@ -87,10 +91,5 @@ module.exports = {
       ],
       alt: 'Description of image'
     }
-  },
-  variants: [
-    {
-      name: 'without-banner',
-    }
-  ]
+  }
 };
