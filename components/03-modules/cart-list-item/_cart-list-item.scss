@@ -49,7 +49,6 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
         display: flex;
         flex-direction: column;
         @include mq($screen-m) {
-            flex-direction: row;
             flex-flow: row wrap;
         }
     }
