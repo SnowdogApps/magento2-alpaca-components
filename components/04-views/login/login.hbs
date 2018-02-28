@@ -1,12 +1,14 @@
 {{ render '@header' }}
+
 <div class="container">
     {{ render '@heading' mainHeading }}
     <main class="grid login">
         <div class="grid__column grid__column--1-2 login__form-column">
-            <div class="login__info">
+            {{ render '@heading' formHeading }}
+            <p class="login__info">
                 {{{ signInInfo }}}
-            </div>
-            <form>
+            </p>
+            <form class="login__form">
                 <fieldset
                     class="fieldset login__fieldset {{ signInSection.fieldset.class }}"
                     {{{ signInSection.fieldset.attributes }}}
@@ -16,12 +18,9 @@
                     >
                         {{ signInSection.legend.text }}
                     </legend>
-
                     {{ render '@input' email }}
                     {{ render '@input' password }}
-
                 </fieldset>
-
                 <div class="login__actions">
                     {{ render '@button' loginButton }}
                     <a
@@ -37,9 +36,10 @@
             </form>
         </div>
         <div class="grid__column grid__column--1-2 login__link-column">
-            <div class="login__info">
+            {{ render '@heading' linkHeading }}
+            <p class="login__info">
                 {{ createAccountInfo }}
-            </div>
+            </p>
             {{ render '@button' createAccountButton }}
         </div>
     </main>
