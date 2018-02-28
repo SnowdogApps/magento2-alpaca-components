@@ -10,11 +10,25 @@
 
 html,
 body {
+    height: 100%;
     min-width: 320px;
     font-family: $font-family-base;
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     color: $font-color-base;
+}
+
+body {
+    @include mq($max-content-width) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.page-wrapper {
+    @include mq($max-content-width) {
+        flex: 1 0 auto;
+    }
 }
 
 p {
@@ -27,4 +41,3 @@ dt,
 dd {
     margin: 0;
 }
-

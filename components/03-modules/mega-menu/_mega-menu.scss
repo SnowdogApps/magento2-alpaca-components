@@ -23,6 +23,7 @@ $mega-menu__dropdown-max-width        : 850px !default;
 
 .mega-menu {
     display: none;
+    flex-basis: 100%;
     background: $mega-menu__background-color;
     color: $mega-menu__font-color;
     position: relative;
