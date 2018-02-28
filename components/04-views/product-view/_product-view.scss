@@ -312,7 +312,6 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
 
     &__rating {
         color: $product-view__rating-text-color;
-        clear: both;
         display: flex;
         justify-content: space-between;
         @include mq($screen-m) {
@@ -328,7 +327,6 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         width: 50%;
         font-size: $product-view__rating-value-font-size;
         @include mq($screen-m) {
-            float: none;
             width: auto;
             display: flex;
             align-items: center;
