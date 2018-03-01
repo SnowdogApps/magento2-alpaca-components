@@ -1,3 +1,4 @@
+$toolbar__border                   : 1px solid $gray-light !default;
 $toolbar__dropdown-icon-area-border: none !default;
 $toolbar__dropdown-icon-area-size  : 32px !default;
 $toolbar__dropdown-icon-color      : $gray !default;
@@ -28,6 +29,7 @@ $toolbar__sorter-padding           : 8px 0 !default;
     align-items: left;
     justify-content: space-between;
     flex-direction: column;
+    border-bottom: $toolbar__border;
     @include mq($screen-m) {
         align-items: center;
         flex-direction: row;
