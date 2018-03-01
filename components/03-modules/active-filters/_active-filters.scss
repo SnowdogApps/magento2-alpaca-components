@@ -23,6 +23,8 @@ $active-filters__clear-color\@medium : $color-secondary !default;
     }
 
     &__remove {
+        display: flex;
+        align-items: center;
         min-width: $active-filters__remove-size;
         min-height: $active-filters__remove-size;
         padding: $active-filters__remove-padding;
