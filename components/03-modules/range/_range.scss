@@ -15,6 +15,7 @@ $range__track-border          : none !default;
 $range__track-box-shadow      : none !default;
 $range__dash-padding          : 0 $spacer--medium 0 $spacer !default;
 $range__suffix-padding        : 0 $spacer !default;
+$range__button-padding        : 0 $spacer--extra-large !default;
 
 .range-filter {
     padding: $range__padding;
@@ -44,6 +45,7 @@ $range__suffix-padding        : 0 $spacer !default;
     }
     &__button {
         margin: $range__margin;
+        padding: $range__button-padding;
     }
 }
 
