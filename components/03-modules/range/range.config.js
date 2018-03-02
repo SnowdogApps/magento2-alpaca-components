@@ -48,6 +48,12 @@ module.exports = {
         value: '1000'
       }
     },
+    apply: {
+      class: 'button--secondary',
+      tag: 'button',
+      text: 'Apply',
+      attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"'
+    },
     script: true,
     showFloat: 0
   },
