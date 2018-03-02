@@ -93,12 +93,15 @@ $toolbar__sorter-padding           : 8px 0 !default;
         }
     }
 
-    &__mode-link {
+    &__mode-button {
         height: $toolbar__mode-icon-area-size;
         width: $toolbar__mode-icon-area-size;
         display: flex;
         justify-content: center;
         align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     &__sorter-wrapper,
@@ -121,6 +124,7 @@ $toolbar__sorter-padding           : 8px 0 !default;
             }
         }
         .choices__list--dropdown {
+            z-index: 4;
             .select__field-item {
                 padding-right: 0;
             }
