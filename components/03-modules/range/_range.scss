@@ -42,6 +42,9 @@ $range__suffix-padding        : 0 $spacer !default;
         flex-grow: 1;
         margin-bottom: 0;
     }
+    &__button {
+        margin: $range__margin;
+    }
 }
 
 .noUi-connect {

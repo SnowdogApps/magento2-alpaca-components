@@ -49,7 +49,7 @@ module.exports = {
       }
     },
     apply: {
-      class: 'button--secondary',
+      class: 'button--secondary range-filter__button',
       tag: 'button',
       text: 'Apply',
       attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"'
