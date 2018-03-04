@@ -24,6 +24,7 @@ $toolbar__sorter-border-top        : 1px solid $gray-light !default;
 $toolbar__sorter-padding           : 8px 0 !default;
 
 .toolbar {
+    position: relative;
     display: flex;
     flex: 0 0 auto;
     align-items: left;
