@@ -132,6 +132,14 @@ $toolbar__sorter-padding           : 8px 0 !default;
         }
     }
 
+    &__limiter-wrapper {
+        .choices {
+            @include mq($screen_m) {
+                width: 72px;
+            }
+        }
+    }
+
     .select__field-item {
         color: $toolbar__select-field-item-color;
         height: $toolbar__select-field-item-height;
@@ -142,6 +150,21 @@ $toolbar__sorter-padding           : 8px 0 !default;
         margin-bottom: 0;
         @include mq($screen-m) {
             margin-right: $toolbar__offset;
+        }
+    }
+
+    &__sorter-select,
+    &__limiter-select {
+        height: 32px;
+        font-family: $font-family-base;
+        @include mq($screen_m) {
+            width: 200px;
+        }
+    }
+
+    &__limiter-select {
+        @include mq($screen_m) {
+            width: 72px;
         }
     }
 
