@@ -4,9 +4,9 @@ module.exports = {
     tag: 'div',
     activeFiltersHeading: 'Now Shopping by',
     allFiltersHeading: 'Shopping Options',
-    switcher: {
-      textHidden: 'Show Filters',
-      textDisplay: 'Hide Filters'
+    switcherIcon: {
+      class: 'filters__switcher-icon',
+      iconId: 'angle-down'
     },
     activeFilters: {
       clearHref: '#',
