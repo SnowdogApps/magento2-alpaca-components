@@ -4,11 +4,12 @@ $active-filters__remove-border       : none !default;
 $active-filters__remove-background   : none !default;
 $active-filters__remove-icon-margin  : 0 auto !default;
 $active-filters__remove-icon-padding : 0 !default;
-$active-filters__icon-fill           : $gray !default;
+$active-filters__icon-fill           : $red !default;
 $active-filters__icon-size           : $font-size-base !default;
 $active-filters__label-font-weight   : $font-weight-bold !default;
 $active-filters__clear-border-size   : 2px !default;
 $active-filters__clear-border        : $active-filters__clear-border-size solid $red !default;
+$active-filters__clear-margin        : 0 0 0 $spacer--extra-large !default;
 $active-filters__clear-height        : 48px !default;
 $active-filters__clear-line-height   : ($active-filters__clear-height - (2 * $active-filters__clear-border-size));
 $active-filters__clear-font-size     : $font-size-base !default;
@@ -77,10 +78,10 @@ $active-filters__clear-color\@medium : $color-secondary !default;
 
         @include mq($screen-m) {
             display: inline-flex;
+            margin: $active-filters__clear-margin;
             justify-content: flex-start;
             min-width: 0;
             border: none;
-            color: $color-primary;
             text-decoration: none;
 
             &:hover,

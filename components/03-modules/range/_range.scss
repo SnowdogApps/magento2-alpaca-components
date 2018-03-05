@@ -51,6 +51,7 @@ $range__button-padding        : 0 $spacer--extra-large !default;
 
 .noUi-connect {
     background-color: $range__track-bg-color--active;
+    border-radius: 0;
 }
 
 .noUi-tooltip {

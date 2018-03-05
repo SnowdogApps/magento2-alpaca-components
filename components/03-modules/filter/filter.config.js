@@ -175,6 +175,12 @@ module.exports = {
                 value: '1000'
               }
             },
+            apply: {
+              tag: 'button',
+              class: 'button--secondary range-filter__button',
+              attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"',
+              text: 'Apply'
+            },
             script: true,
             showFloat: 0
           }
