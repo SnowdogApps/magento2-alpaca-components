@@ -1,0 +1,37 @@
+<div class="filters {{ class }}" {{{ attributes }}}>
+    <h1 class="filters__heading">{{ activeFiltersHeading }}</h1>
+
+    {{> '@divider' divider}}
+
+    <div class="filters__active">
+        {{> '@active-filters' activeFilters}}
+    </div>
+
+    <button type="button"
+            class="filters__switcher"
+            data-state-current="hidden"
+            data-state-hidden-text="{{ switcher.textHidden }}"
+            data-state-display-text="{{ switcher.textDisplay }}"
+    >
+        Show Filters
+    </button>
+
+    <div class="filters__list filters__list--mobile-hidden dropdown-list
+                {{ dropdownList.class }}
+               "
+         {{{ dropdownList.attributes }}}
+    >
+        <h1 class="filters__heading filters__heading--mobile-hidden">
+            {{ allFiltersHeading }}
+        </h1>
+        {{> '@divider' }}
+        <ul class="dropdown-list__list">
+            {{> '@filter--checkbox' checkbox }}
+            {{> '@filter--swatch' swatch }}
+            {{> '@filter--color' color }}
+            {{> '@filter--range' range }}
+        </ul>
+    </div>
+
+</div>
+<script src="{{static '../filters/filters.js'}}"></script>

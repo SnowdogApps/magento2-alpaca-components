@@ -1,39 +1,49 @@
 module.exports = {
   title: 'Header module',
   context: {
-    phoneNumber: '+ 48 68 433 00 00',
-    topLinks: [
+    buttons: [
       {
-        text: 'Wish List',
-        icon: 'heart'
+        ariaLabel: 'Wishlist',
+        text: 'Wishlist',
+        class: 'header-button--reset-margin',
+        icon: {
+          iconId: 'heart',
+          class: 'header-button__icon'
+        }
       },
       {
-        text: 'Sign In',
-        icon: 'signin'
+        ariaLabel: 'Store phone number',
+        text: 'Contact',
+        class: '',
+        icon: {
+          iconId: 'phone',
+          class: 'header-button__icon'
+        }
       },
       {
-        text: 'Create account',
-        icon: 'account-mini'
-      }
-    ],
-    icons: [
-      {
-        icon: 'phone',
-        ariaLabel: 'Store phone number'
-      },
-      {
-        icon: 'account',
-        ariaLabel: 'Customer Account'
+        ariaLabel: 'Customer Account',
+        text: 'Account',
+        class: '',
+        icon: {
+          iconId: 'account',
+          class: 'header-button__icon'
+        }
       }
     ],
     logo: {
       class: 'header__logo',
-      logoSVG: true
+      logoSVG: true,
+      ariaLabel: 'Home page link',
+      imageAlt: 'Alpaca Logo',
+      imageAttributes: '',
+      imageClass: '',
+      imageSrc: '/images/logo/alpaca.svg',
+      href: '#'
     },
     searchInput: {
       class: 'search-form__input-wrapper',
       label: {
-        class: 'search-form__label',
+        hidden: true
       },
       field: {
         class: 'search-form__input',
@@ -50,24 +60,22 @@ module.exports = {
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Search button"',
     },
-    likeButton: {
-      tag: 'button',
-      text: '',
-      class: 'button--icon header__button header__button--like',
-      iconId: 'like',
-      iconClass: 'button__icon'
+    sideMenuIcon: {
+      iconId: 'mobile-menu',
+      class: 'header-button__icon header-button__icon--small header-button__icon--open'
     },
-    infoButton: {
-      tag: 'button',
-      text: '',
-      class: 'button--icon header__button header__button--info',
-      iconId: 'info',
-      iconClass: 'button__icon'
+    sideMenuIconClose: {
+      iconId: 'close',
+      class: 'header-button__icon header-button__icon--small header-button__icon--close'
     },
-    trigger: {
-      attributes: 'data-popuptrigger="popup-1"',
-      class: 'button popup-trigger',
-      counter: '82'
+    minicartTrigger: {
+      icon: {
+        iconId: 'shopping-cart',
+        class: 'header-button__icon'
+      },
+      text: 'Cart',
+      link: '/cart',
+      ariaLabel: 'Cart trigger'
     },
     minicartPopup: {
       class: 'header__minicart-content',
