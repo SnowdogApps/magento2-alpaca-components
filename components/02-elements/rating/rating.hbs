@@ -1,21 +1,5 @@
 <div class="rating {{ class }}" {{{ attributes }}}>
-    <span>
-        ☆
-    </span>
-
-    <span>
-        ☆
-    </span>
-
-    <span>
-        ☆
-    </span>
-
-    <span>
-        ☆
-    </span>
-
-    <span>
-        ☆
-    </span>
+    <div class="rating__star {{ star.class }}" {{{ star.attributes }}}>
+        <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+    </div>
 </div>

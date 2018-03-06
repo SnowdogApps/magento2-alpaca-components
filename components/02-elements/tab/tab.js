@@ -1,28 +1,33 @@
 'use strict';
 
-const tab                = document.querySelectorAll('.tab__title'),
-      content            = document.querySelectorAll('.tab__content'),
-      activeTitleClass   = 'tab__title--active',
-      activeContentClass = 'tab__content--active';
+(function() { // eslint-disable-line
+  const tab                = [...document.querySelectorAll('.tab')],
+        activeTitleClass   = 'tab__title--active',
+        activeContentClass = 'tab__content--active';
 
-tab.forEach(key => key.addEventListener('click', event => {
-  const self = event.currentTarget,
-        tabId = self.dataset.tab;
+  tab.forEach(element => {
+    const children = Array.from(element.children);
 
-  if (self.classList.contains(activeTitleClass)) {
-    self.classList.remove(activeTitleClass);
-  }
-  else {
-    tab.forEach(key => key.classList.remove(activeTitleClass));
-    self.classList.add(activeTitleClass);
-  }
+    children.forEach(item => {
+      const tabTitle = item.dataset.tab;
 
-  content.forEach(key => {
-    if (key.dataset.content === tabId && !key.classList.contains(activeContentClass)) {
-      key.classList.add(activeContentClass);
-    }
-    else {
-      key.classList.remove(activeContentClass);
-    }
+      if (item.classList.contains('tab__title')) {
+        item.addEventListener('click', () => {
+          children.forEach((item) => {
+            item.classList.remove(activeTitleClass);
+            item.classList.remove(activeContentClass);
+
+            if (
+              item.classList.contains('tab__content')
+              && tabTitle === item.dataset.content
+            ) {
+              item.classList.add(activeContentClass);
+            }
+          });
+
+          item.classList.add(activeTitleClass);
+        });
+      }
+    });
   });
-}));
+})();
