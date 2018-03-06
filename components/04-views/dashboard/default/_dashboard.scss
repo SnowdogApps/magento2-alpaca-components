@@ -26,7 +26,6 @@ $dashboard-padding: 15px !default;
     &__content {
         @include mq($screen-m) {
             padding-top: $dashboard-padding;
-            overflow-x: hidden;
         }
     }
 
@@ -61,6 +60,11 @@ $dashboard-padding: 15px !default;
 
     &__item {
         margin-bottom: $dashboard-margin;
+    }
+
+    &__wishlist-handler {
+        justify-content: flex-start;
+        margin: 0;
     }
 
     &__wishlist-item {
@@ -117,5 +121,55 @@ $dashboard-padding: 15px !default;
 
     &__label {
         margin: 0 20px 0 0;
+    }
+
+    &__link {
+        display: inline-flex;
+    }
+
+    &__list {
+        .nav.item {
+            @extend .list__item;
+            @extend .dashboard__list-item;
+        }
+
+        .nav.item.current {
+            @extend .dashboard__list-item--current;
+        }
+
+        .nav.item > a {
+            @extend .link--invert;
+            @extend .dashboard__list-link;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        margin-right: 5px;
+        background-color: $gray-lighter;
+        border: 1px solid $gray;
+        border-bottom: 0;
+
+        &--current {
+            padding: $dashboard-padding;
+            background-color: $white;
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+            }
+        }
+    }
+
+    &__list-link {
+        padding: $dashboard-padding;
     }
 }

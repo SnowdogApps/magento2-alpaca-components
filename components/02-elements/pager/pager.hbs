@@ -3,7 +3,7 @@
         <li class="pager__item">
             <a href="#"
                class="pager__link pager__link--prev"
-               aria-label="{{ariaLabelLeft}}"
+               aria-label="{{ ariaLabelLeft }}"
                {{#unless arrowLeftActive}}disabled{{/unless}}
             >
                 <svg class="pager__icon">
@@ -20,8 +20,8 @@
             {{else}}
                 <li class="pager__item">
                     <a href="#"
-                       class="pager__link"
-                       aria-label="{{ariaLabel}}"
+                       class="pager__link {{ class }}"
+                       aria-label="{{ ariaLabel }}"
                     >
                         {{ pageNo }}
                     </a>
@@ -32,7 +32,7 @@
         <li class="pager__item">
             <a href="#"
                class="pager__link pager__link--next"
-               aria-label="{{ariaLabelRight}}"
+               aria-label="{{ ariaLabelRight }}"
                {{#unless arrowRightActive}}disabled{{/unless}}
             >
                 <svg class="pager__icon">

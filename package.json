@@ -1,13 +1,13 @@
 {
   "name": "alpaca-components",
   "scripts": {
-    "postinstall": "gulp fractal:build --ci"
+    "heroku-postbuild": "gulp fractal:build --ci"
   },
   "dependencies": {
     "@frctl/fractal": "~1.1.7",
     "autoprefixer": "~7.2.1",
     "eslint-config-idiomatic": "~4.0.0",
-    "fs-extra": "~4.0.2",
+    "fs-extra": "~5.0.0",
     "globby": "~7.1.1",
     "gulp": "~3.9.1",
     "gulp-eslint": "~4.0.0",

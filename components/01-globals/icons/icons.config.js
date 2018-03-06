@@ -127,11 +127,27 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'shield',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'shipping-time-truck',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'shopping-cart',
         class: 'icons__single-icon'
       },
       {
         iconId: 'signin',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'star',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'star-border',
         class: 'icons__single-icon'
       },
       {

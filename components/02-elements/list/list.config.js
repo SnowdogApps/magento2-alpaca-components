@@ -29,9 +29,9 @@ module.exports = {
       }
     },
     {
-      name: 'min-medium-horizontal',
+      name: 'horizontal-medium',
       context: {
-        class: 'list--min-medium-horizontal'
+        class: 'list--horizontal@medium'
       }
     },
     {
@@ -85,9 +85,9 @@ module.exports = {
       }
     },
     {
-      name: 'divided-min-medium-horizontal',
+      name: 'divided-horizontal-medium',
       context: {
-        class: 'list--divided list--min-medium-horizontal'
+        class: 'list--divided list--horizontal@medium'
       }
     },
     {

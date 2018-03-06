@@ -1,0 +1,66 @@
+$filters__heading-font-weight        : $font-weight-bold !default;
+$filters__heading-font-weight\@medium: $font-weight-normal !default;
+$filters__heading-margin             : 0 !default;
+$filters__heading-margin\@medium     : 0 0 $spacer--medium 0 !default;
+$filters__switcher-margin            : $spacer 0 0 0 !default;
+$filters__switcher-padding           : 0 !default;
+$filters__switcher-border            : 2px solid $color-primary !default;
+$filters__switcher-border-radius     : 0 !default;
+$filters__switcher-background-color  : $bg-color-base !default;
+$filters__switcher-color             : $color-primary !default;
+$filters__switcher-font-size         : $font-size-base !default;
+$filters__switcher-font-weight       : $font-weight-bold !default;
+$filters__switcher-size              : 48px !default;
+$filters__list-margin                : $spacer--medium 0 0 0 !default;
+.filters {
+    &__heading {
+        font-weight: $filters__heading-font-weight;
+        margin: $filters__heading-margin;
+        @include mq($screen-m) {
+            font-weight: $filters__heading-font-weight\@medium;
+            margin: $filters__heading-margin\@medium;
+        }
+        &--mobile-hidden {
+            display: none;
+            @include mq($screen-m) {
+                display: block;
+            }
+        }
+    }
+    &__switcher {
+        display: block;
+        text-align: center;
+        height: $filters__switcher-size;
+        min-width: 100%;
+        margin: $filters__switcher-margin;
+        padding: $filters__switcher-padding;
+        border: $filters__switcher-border;
+        border-radius: $filters__switcher-border-radius;
+        background-color: $filters__switcher-background-color;
+        color: $filters__switcher-color;
+        font-size: $filters__switcher-font-size;
+        font-weight: $filters__switcher-font-weight;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: $filters__switcher-color;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @include mq($screen-m) {
+            display: none;
+        }
+    }
+
+    &__list {
+        margin: $filters__list-margin;
+        &--mobile-hidden {
+            display: none;
+            @include mq($screen-m) {
+                display: block;
+            }
+        }
+    }
+}

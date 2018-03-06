@@ -1,0 +1,12 @@
+.docs-only-styles {
+    @extend .dropdown-list--secondary;
+    .filter {
+        &__content {
+            height: auto;
+
+            .range-filter {
+                margin: 0;
+            }
+        }
+    }
+}

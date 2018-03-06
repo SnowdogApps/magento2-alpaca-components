@@ -4,14 +4,10 @@ $pager__item-after-height--current          : $spacer;
 $pager__item-after-background-color--current: $color-primary;
 $pager__item-after-transition--current      : $transition-base  !default;
 $pager__item-size                           : 48px !default;
-$pager__item-color--current                 : $white !default;
-$pager__item-background--current            : $color-primary !default;
 $pager__icon-width                          : 15px !default;
 $pager__icon-height                         : 15px !default;
 $pager__link-fill-disabled                  : $gray !default;
 $pager__link-fill                           : $green !default;
-$pager__link-color                          : $gray-dark !default;
-$pager__link-color-hover                    : $color-primary !default;
 
 .pager {
     width: 100%;
@@ -65,13 +61,7 @@ $pager__link-color-hover                    : $color-primary !default;
         justify-content: center;
         width: 100%;
         height: $pager__item-size;
-        color: $pager__link-color;
         text-decoration: none;
-
-        &:hover {
-            color: $pager__link-color-hover;
-            text-decoration: underline;
-        }
 
         &[disabled] {
             fill: $pager__link-fill-disabled;
