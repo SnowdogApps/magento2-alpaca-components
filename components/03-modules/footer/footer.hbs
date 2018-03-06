@@ -1,5 +1,7 @@
 <footer class="footer {{ class }}" {{{ attributes }}}>
+
     <div class="footer__handler {{ handlerClass }}">
+    {{ render '@button--icon' scrollToTop }}
         <section class="footer__newsletter">
             {{ render '@newsletter' }}
         </section>
@@ -15,7 +17,6 @@
                 <span class="footer__social-list-subtitle">
                     {{ socialListSubtitle }}
                 </span>
-
                 {{ render '@list--icon' socialIconList }}
             </div>
 
@@ -25,3 +26,5 @@
         </div>
     </section>
 </footer>
+
+<script src="{{ static 'footer.js' }}"></script>

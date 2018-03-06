@@ -1,7 +1,7 @@
 <{{{ listTag }}} class="list {{ class }}">
     {{# each elements }}
         <{{{ ../elementTag }}} class="list__item {{ this.class }}">
-            <a href="{{ link }}" class="link {{ linkClass }}">
+            <a href="{{ link }}" class="link {{ linkClass }}" {{{ linkAttributes }}}>
                 {{ render (component content) contentContext }}
             </a>
         </{{{ ../elementTag }}}>

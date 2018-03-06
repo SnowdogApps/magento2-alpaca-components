@@ -1,13 +1,12 @@
 $mega-menu__margin                    : 0 !default;
 $mega-menu__font-color                : $font-color-base !default;
-$mega-menu__font-color--hover         : $color-primary !default;
 $mega-menu__font-weight               : $font-weight-bold !default;
 $mega-menu__font-size                 : $font-size-base !default;
 $mega-menu__font-size--large          : 16px !default;
 $mega-menu__text-decoration           : none !default;
 $mega-menu__background-color          : $white !default;
 $mega-menu__container-background-color: $white !default;
-$mega-menu__justify-content           : center !default;
+$mega-menu__justify-content           : flex-start !default;
 
 $mega-menu__link-padding              : 12px $spacer--medium !default;
 $mega-menu__link-margin               : 0 $spacer--medium !default;
@@ -68,10 +67,6 @@ $mega-menu__dropdown-max-width        : 850px !default;
             padding: $mega-menu__link-inner-padding;
             font-size: $mega-menu__font-size;
             font-weight: $mega-menu__link-inner-font-weight;
-            &:focus,
-            &:hover {
-                color: $mega-menu__font-color--hover;
-            }
         }
 
         &--inner-heading {

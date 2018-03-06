@@ -1,5 +1,11 @@
 <div class="input {{ class }}" {{{ attribute }}}>
-    <label class="label {{ label.class }}"
+    <label class="
+               label
+               {{#if label.hidden }}
+                   label--hidden
+               {{/if}}
+               {{ label.class }}
+           "
            for="{{ field.id }}"
            {{{ label.attribute }}}
     >
@@ -8,7 +14,7 @@
     <input class="input__field {{ field.class }}"
            id="{{ field.id }}"
            name="{{ field.name }}"
-           type="text"
+           type="{{ field.type }}"
            placeholder="{{ field.placeholder }}"
            {{{ field.attribute }}}
     >
