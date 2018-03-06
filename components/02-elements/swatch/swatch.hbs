@@ -1,13 +1,13 @@
 <div class="swatch {{ class }}" {{{ attributes }}}>
-    <{{{ heading.tag }}} class="swatch__title {{ heading.class }}">
-        {{ heading.title }}
-    </{{{ heading.tag }}}>
+    {{#if heading}}
+        <{{{ heading.tag }}} class="swatch__title {{ heading.class }}">
+            {{ heading.text }}
+        </{{{ heading.tag }}}>
+    {{/if}}
 
-    <div class="swatch__wrapper">
-        {{#each options }}
-            <div class="swatch__option {{ this.class }}" {{{ this.attributes }}}>
-                {{ this.text }}
-            </div>
-        {{/each }}
-    </div>
+    {{#each options }}
+        <div class="swatch__option {{ this.class }}" {{{ this.attributes }}}>
+            {{ this.text }}
+        </div>
+    {{/each }}
 </div>
