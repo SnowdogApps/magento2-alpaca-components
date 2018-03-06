@@ -8,7 +8,8 @@ module.exports = {
     field: {
       id: 'field-id',
       name: 'field-name',
-      class: ''
+      class: '',
+      attributes: ''
     },
     options: [
       {

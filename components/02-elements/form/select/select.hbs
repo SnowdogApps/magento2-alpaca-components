@@ -8,6 +8,7 @@
     <select id="{{ field.id }}"
             class="select__field {{ field.class }}"
             name="{{ field.name }}"
+            {{{ field.attributes }}}
     >
         {{#each options}}
             <option value="{{ value }}" {{ attributes }}>
