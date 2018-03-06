@@ -6,9 +6,7 @@ $quantity-update__input-color                        : $gray-dark !default;
 // Button
 $quantity-update__button-background                  : $white !default;
 $quantity-update__button-border                      : 1px solid $gray-dark !default;
-$quantity-update__button-border-color--disabled      : $gray !default;
 $quantity-update__button-background-hover--disabled  : $white !default;
-$quantity-update__button-border-color-hover--disabled: $white !default;
 $quantity-update__button-fill-hover--disabled        : $gray !default;
 
 // Icon
@@ -50,12 +48,10 @@ $quantity-updater__icon-spacing                      : 12px !default;
 
         &--disabled {
             pointer-events: none;
-            border-color: $quantity-update__button-border-color--disabled;
 
             &:hover,
             &:focus {
                 background: $quantity-update__button-background-hover--disabled;
-                border-color: $quantity-update__button-border-color-hover--disabled;
 
                 .quantity-update__icon {
                     fill: $quantity-update__button-fill-hover--disabled;

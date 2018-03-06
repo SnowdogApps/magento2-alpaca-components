@@ -1,34 +1,27 @@
-$label-margin-top   : 0 !default;
-$label-margin-right : 0 !default;
-$label-margin-bottom: 8px !default;
-$label-margin-left  : 0 !default;
-$label-font-size    : $font-size-base !default;
-$label-color        : $color-secondary !default;
-$label-font-family  : $font-family-base !default;
-$label-font-weight  : $font-weight-normal !default;
-$label-line-height  : $font-line-height !default;
-$label-transition   : none !default;
+$label-margin        : 0 0 $spacer !default;
+$label-margin--inline: 0 $spacer 0 0 !default;
+$label-font-size     : $font-size-base !default;
+$label-color         : $color-secondary !default;
+$label-font-family   : $font-family-base !default;
+$label-font-weight   : $font-weight-normal !default;
+$label-line-height   : $font-line-height !default;
+$label-transition    : none !default;
 
 .label {
     display: block;
-    margin: $label-margin-top $label-margin-right $label-margin-bottom $label-margin-left;
+    margin: $label-margin;
     font-size: $label-font-size;
     color : $label-color;
     font-family: $label-font-family;
     font-weight: $label-font-weight;
     line-height: $label-line-height;
     transition: $label-transition;
+    &--inline {
+        margin: $label-margin--inline;
+    }
 
     &--hidden {
-        // a11y friendly hiding
-        position: absolute;
-        clip: rect(0 0 0 0);
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: 0;
+        @include visually-hidden();
     }
 }
 

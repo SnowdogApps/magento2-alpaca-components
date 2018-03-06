@@ -1,0 +1,24 @@
+$additional-content__image-margin          : 0 0 41px !default;
+$additional-content__image-margin\@large   : 0 0 32px !default;
+$additional-section-width                  : 48% !default;
+.additional-content {
+    &__image {
+        margin: $additional-content__image-margin;
+        @include mq($screen-l) {
+            margin: $additional-content__image-margin\@large;
+        }
+    }
+    &__info {
+        @include mq($screen-l) {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+
+    }
+    &__section {
+        @include mq($screen-l) {
+            flex: 0 0 $additional-section-width;
+        }
+    }
+}
