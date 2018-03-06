@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     label: {
-      attribute: '',
+      attributes: '',
       text: 'Label text',
       class: 'select__label'
     },
