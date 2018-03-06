@@ -1,21 +1,23 @@
-{{ render '@header' }}
+<div class="page-wrapper">
+    {{ render '@header' }}
 
-<main class="container">
-    {{ render '@breadcrumbs' }}
+    <main class="container">
+        {{ render '@breadcrumbs' }}
 
-    <ul class="catalog-grid">
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-        {{ render '@catalog-grid-item' product }}
-    </ul>
+        <ul class="catalog-grid">
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+            {{ render '@catalog-grid-item' product }}
+        </ul>
 
-    {{ render '@pager' }}
-</main>
+        {{ render '@pager' }}
+    </main>
+</div>
 
 {{ render '@footer' }}
