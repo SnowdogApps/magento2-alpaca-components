@@ -9,6 +9,7 @@ module.exports = {
     productPrice: '$85.00',
     productQty: 'Qty: 32',
     attributes: {
+      script: true,
       class: 'minicart-product__attributes',
       dropdowns: [
         {
