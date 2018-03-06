@@ -31,13 +31,6 @@ module.exports = {
           }
         }
       },
-      primaryAction: {
-        tag: 'button',
-        text: 'Add to Cart',
-        class: 'button button--secondary catalog-grid-item__primary-action',
-        iconId: 'shopping-cart',
-        iconClass: 'icon catalog-grid-item__cart-icon'
-      },
       secondaryActions: [
         {
           icon: {
