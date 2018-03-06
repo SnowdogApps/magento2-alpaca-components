@@ -26,7 +26,7 @@ $footer__icon-fill-hover               : $color-primary !default;
 
 
 .footer {
-    flex-basis: 100%;
+    flex-shrink: 0;
     background-color: $footer__background-color;
 
     @include mq($screen-l) {

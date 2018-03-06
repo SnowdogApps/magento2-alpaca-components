@@ -19,16 +19,12 @@ body {
 }
 
 body {
-    @include mq($max-content-width) {
-        display: flex;
-        flex-wrap: wrap;
-    }
+    display: flex;
+    flex-direction: column;
 }
 
 .page-wrapper {
-    @include mq($max-content-width) {
-        flex: 1 0 auto;
-    }
+    flex: 1 0 auto;
 }
 
 p {

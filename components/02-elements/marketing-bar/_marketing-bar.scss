@@ -15,7 +15,6 @@ $marketing-bar__button-icon-padding : 2px !default;
 .marketing-bar {
     position: relative;
     display: flex;
-    flex-basis: 100%;
     flex-direction: column;
     justify-content: center;
     padding: $marketing-bar__padding;
