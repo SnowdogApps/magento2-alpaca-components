@@ -10,7 +10,6 @@
       this.body         = document.querySelector('body');
       this.button       = button;
       this.buttonId     = button.dataset.popuptrigger;
-      this.fullWidth    = 'popup--full-width';
       this.popup        = document.querySelector(`${popup}[data-popup=${this.buttonId}]`);
       this.popupContent = this.popup.querySelector('.popup__content');
       this.closeButton  = this.popup.querySelector('.popup__close-button');

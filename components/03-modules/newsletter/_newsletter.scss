@@ -2,8 +2,9 @@ $newsletter__font-size                  : $font-size-base !default;
 $newsletter__font-size--agreements      : $font-size-small !default;
 $newsletter__field-height               : 32px !default;
 $newsletter__field-border-radius        : 32px !default;
+$newsletter__field-padding              : 0 $spacer--medium !default;
 $newsletter__line-height                : 1.2 !default;
-$newsletter__input-background           : #717171 !default;
+$newsletter__input-background           : $gray-dark !default;
 $newsletter__input-color                : $white !default;
 $newsletter__input-color--placeholder   : rgba(255, 255, 255, 0.7) !default;
 $newsletter__checkbox-label-color       : $white !default;
@@ -15,23 +16,23 @@ $newsletter__checkbox-bg-color          : $white !default;
 $newsletter__checkbox-label-padding-left: 24px !default;
 $newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
-$newsletter__checkbox-icon-size         : 15px !default;
+$newsletter__checkbox-icon-size         : 18px !default;
 $newsletter__checkbox-icon-position-top : 0 !default;
+$newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !default;
 
 .newsletter {
     &__heading {
         line-height: $newsletter__line-height;
-        margin-right: 20px;
         color: $newsletter__heading-color;
         height: auto;
         font-size: $newsletter__font-size;
         font-weight: $font-weight-bold;
         text-align: left;
-        margin-bottom: $newsletter__bottom-gap;
+        margin: $newsletter__heading-margin;
     }
     &__controls {
         position: relative;
-        height: $newsletter__controls-height;
+        height: auto;
         margin-bottom: $newsletter__bottom-gap;
     }
     &__button {
@@ -55,12 +56,13 @@ $newsletter__checkbox-icon-position-top : 0 !default;
     }
     &__field {
         background: $newsletter__input-background;
-        padding: $spacer $spacer--medium;
+        padding: $newsletter__field-padding;
         margin: 0;
         border: none;
         border-radius: $newsletter__field-border-radius;
         height: $newsletter__field-height;
         color: $newsletter__input-color;
+        line-height: $newsletter__field-height;
         &::placeholder {
             color: $newsletter__input-color--placeholder;
         }

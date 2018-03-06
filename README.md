@@ -20,3 +20,8 @@ Components documentation is built on top of [Fractal.js](http://fractal.build/gu
 
 ## Preview / Demo
 - Develop branch - https://alpaca-components-staging.herokuapp.com/
+
+## Accessibility tests
+- `gulp a11y` - run local development server with accessibility tests
+- if on some view there is no a11y message, please go to the component's config and comment line:
+`preview: '@docs-only-styles',` - server restart not needed
