@@ -22,15 +22,15 @@ module.exports = {
       }
     },
     firstName: {
-      attribute: '',
+      attributes: '',
       class: 'registration__input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'First name',
         hidden: false
       },
       field: {
-        attribute: '',
+        attributes: '',
         class: '',
         id: 'firstname',
         name: 'fisrtname',
@@ -39,15 +39,15 @@ module.exports = {
       }
     },
     lastName: {
-      attribute: '',
+      attributes: '',
       class: 'registration__input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Last name',
         hidden: false
       },
       field: {
-        attribute: '',
+        attributes: '',
         class: '',
         id: 'lastname',
         name: 'lastname',
@@ -71,15 +71,15 @@ module.exports = {
       }
     },
     email: {
-      attribute: '',
+      attributes: '',
       class: 'registration__input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Email',
         hidden: false
       },
       field: {
-        attribute: '',
+        attributes: '',
         class: '',
         id: 'email',
         name: 'email',
@@ -88,15 +88,15 @@ module.exports = {
       }
     },
     password: {
-      attribute: '',
+      attributes: '',
       class: 'registration__input registration__input--password',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Password',
         hidden: false
       },
       field: {
-        attribute: 'aria-required="true" autocomplete="off"',
+        attributes: 'aria-required="true" autocomplete="off"',
         class: '',
         id: 'password',
         name: 'password',
@@ -105,15 +105,15 @@ module.exports = {
       }
     },
     passwordConfirmation: {
-      attribute: '',
+      attributes: '',
       class: 'registration__input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Confirm password',
         hidden: false
       },
       field: {
-        attribute: 'aria-required="true" autocomplete="off"',
+        attributes: 'aria-required="true" autocomplete="off"',
         class: '',
         id: 'password-confirmation',
         name: 'password-confirmation',

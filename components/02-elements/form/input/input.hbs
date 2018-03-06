@@ -1,4 +1,4 @@
-<div class="input {{ class }}" {{{ attribute }}}>
+<div class="input {{ class }}" {{{ attributes }}}>
     <label class="
                label
                {{#if label.hidden }}
@@ -7,7 +7,7 @@
                {{ label.class }}
            "
            for="{{ field.id }}"
-           {{{ label.attribute }}}
+           {{{ label.attributes }}}
     >
         {{ label.text }}
     </label>
@@ -16,6 +16,6 @@
            name="{{ field.name }}"
            type="{{ field.type }}"
            placeholder="{{ field.placeholder }}"
-           {{{ field.attribute }}}
+           {{{ field.attributes }}}
     >
 </div>

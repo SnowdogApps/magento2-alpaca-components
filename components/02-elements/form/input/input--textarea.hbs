@@ -1,7 +1,7 @@
-<div class="input {{ class }}" {{{ attribute }}}>
+<div class="input {{ class }}" {{{ attributes }}}>
     <label class="input__label {{ label.class }}"
            for="{{ field.id }}"
-           {{ label.attribute }}
+           {{{ label.attributes }}}
     >
         {{ label.text }}
     </label>
@@ -10,6 +10,6 @@
               id="{{ field.id }}"
               name="{{ field.name }}"
               placeholder="{{ field.placeholder }}"
-              {{ field.attribute }}
+              {{{ field.attributes }}}
     ></textarea>
 </div>
