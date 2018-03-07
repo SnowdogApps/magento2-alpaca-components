@@ -69,14 +69,14 @@ $discount__button-padding           : 0 21px !default;
     }
 
     &__field {
-        background: $discount__field-background;
+        height: $discount__field-height;
         padding: $discount__field-padding;
         margin: 0;
         border: none;
         border-radius: $discount__field-border-radius;
-        height: $discount__field-height;
         color: $discount__field-color;
         line-height: $discount__field-height;
+        background: $discount__field-background;
         &::placeholder {
             color: $discount__field-color--placeholder;
         }
