@@ -12,6 +12,16 @@ module.exports = {
       class: 'button--secondary button--fluid minicart-content__checkout',
       attributes: 'type="button"',
       text: 'Go to Checkout'
-    }
+    },
+    products: [
+      {
+        attributes: {
+          script: false,
+        }
+      },
+      {
+        productName: 'Some product 2 name',
+      }
+    ]
   }
 };

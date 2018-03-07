@@ -16,9 +16,12 @@ module.exports = {
           itemTag: 'button',
           class: 'minicart-product__attributes-button',
           itemAttributes: 'aria-expanded="false" aria-controls="see-details"',
-          title: 'See details',
+          title: 'See Details',
           id: 'see-details',
-          collapse: true,
+          collapse: {
+            class: 'dropdown-list__icon',
+            iconId: 'angle-down'
+          },
           contentElement: 'list--description',
           contentContext: {
             listTag: 'ul',
