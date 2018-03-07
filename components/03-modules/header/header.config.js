@@ -78,7 +78,7 @@ module.exports = {
     },
     minicartPopup: {
       class: 'header__minicart-content',
-      popupId: 'popup-1',
+      popupId: 'popup-minicart',
       popupTrigger: false,
       content: 'minicart-content',
       script: true
