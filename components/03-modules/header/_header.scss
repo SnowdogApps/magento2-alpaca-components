@@ -81,6 +81,10 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         position: relative;
     }
 
+    &__minicart-content {
+        top: calc(100% + 12px);
+    }
+
     &__buttons {
         display: flex;
         order: 2;

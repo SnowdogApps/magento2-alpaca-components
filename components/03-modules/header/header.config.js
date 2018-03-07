@@ -74,14 +74,14 @@ module.exports = {
         class: 'header-button__icon'
       },
       text: 'Cart',
-      link: '/cart',
       ariaLabel: 'Cart trigger'
     },
     minicartPopup: {
       class: 'header__minicart-content',
       popupId: 'popup-1',
       popupTrigger: false,
-      content: 'minicart-content'
+      content: 'minicart-content',
+      script: true
     }
   }
 }

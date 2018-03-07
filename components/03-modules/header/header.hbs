@@ -26,10 +26,10 @@
                     </a>
                 {{/each}}
                 <div class="header__minicart">
-                    <a class="header-button popup-trigger"
-                       href="{{ minicartTrigger.link }}"
-                       aria-label="{{ minicartTrigger.ariaLabel }}"
-                       data-popuptrigger="popup-1"
+                    <button
+                        class="header-button popup-trigger"
+                        aria-label="{{ minicartTrigger.ariaLabel }}"
+                        data-popuptrigger="popup-1"
                     >
                         {{ render '@icon' minicartTrigger.icon }}
                         <span class="header-button__text">
@@ -38,7 +38,7 @@
                         <span class="header-button__counter">
                             <span class="header-button__counter-dot"></span>
                         </span>
-                    </a>
+                    </button>
                     {{ render '@popup' minicartPopup }}
                 </div>
             </div>
