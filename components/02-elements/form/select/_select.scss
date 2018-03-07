@@ -12,7 +12,6 @@ $select__field-list-border-radius--single: 20px !default;
 
     &__field {
         position: relative;
-        background: $select__field-background;
 
         &--native {
             width: 100%;
@@ -33,6 +32,7 @@ $select__field-list-border-radius--single: 20px !default;
     }
 
     &__field-list {
+        background: $select__field-background;
         &--single {
             height: $select__spacing;
             line-height: $select__spacing;
@@ -48,6 +48,7 @@ $select__field-list-border-radius--single: 20px !default;
         }
     }
 }
+
 // Choices.js lib styles overwrites
 .choices {
     &.is-open {

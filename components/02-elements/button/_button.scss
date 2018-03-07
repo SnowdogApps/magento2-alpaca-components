@@ -37,7 +37,8 @@ $button__background-hover--icon     : $gray-dark !default;
 $button__width--fluid               : 100% !default;
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
     cursor: pointer;
     height: $button__height;
     min-width: $button__width;
@@ -60,7 +61,6 @@ $button__width--fluid               : 100% !default;
     }
 
     &--link {
-        display: inline-flex;
         align-items: center;
         text-decoration: none;
 
@@ -85,6 +85,7 @@ $button__width--fluid               : 100% !default;
     }
 
     &--icon {
+        align-items: center;
         padding: $button__padding--icon;
         border: $button__border--icon;
         background: $button__background--icon;
