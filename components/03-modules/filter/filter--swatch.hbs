@@ -14,11 +14,11 @@
         <div class="filter__swatch {{ class }}" {{{ attributes }}}>
             {{#each options }}
                 <a href="{{href}}"
-                   class="filter__swatch-option {{ this.class }}"
-                   aria-label="{{this.ariaLabel}}"
-                   {{{ this.attributes }}}
+                   class="filter__swatch-option {{ class }}"
+                   aria-label="{{ariaLabel}}"
+                   {{{ attributes }}}
                 >
-                    {{ this.text }}
+                    {{ text }}
                 </a>
             {{/each }}
         </div>

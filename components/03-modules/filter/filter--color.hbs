@@ -13,15 +13,15 @@
     >
         <div class="filter__color">
             {{# each options }}
-                <a href='{{this.href}}'
-                   class="filter__color-option {{this.class}}"
-                   aria-label="{{this.ariaLabel}}"
+                <a href='{{href}}'
+                   class="filter__color-option {{class}}"
+                   aria-label="{{ariaLabel}}"
                 >
                     <div class="filter__color-sample"
-                         {{{ this.attributes }}}
+                         {{{ attributes }}}
                     ></div>
                     <span class="filter__color-label">
-                        {{this.label}}
+                        {{label}}
                     </span>
                 </a>
             {{/each}}
