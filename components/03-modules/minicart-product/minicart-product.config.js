@@ -7,7 +7,22 @@ module.exports = {
     },
     productName: 'Some product name',
     productPrice: '$85.00',
-    productQty: 'Qty: 32',
+    productQty: {
+      class: 'input--inline minicart-product__input',
+      label: {
+        class: 'minicart-product__label',
+        text: 'Qty:',
+        hidden: false
+      },
+      field: {
+        attributes: 'aria-label="Change the quantity" min="1"',
+        class: 'minicart-product__field',
+        id: 'mini-qty',
+        name: 'mini-qty',
+        placeholder: '32',
+        type: 'number'
+      }
+    },
     attributes: {
       script: true,
       class: 'minicart-product__attributes',

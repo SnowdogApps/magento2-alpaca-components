@@ -10,6 +10,11 @@ $minicart-product__name-line-height               : 1.15 !default;
 
 $minicart-product__qty-width                      : 45% !default;
 
+$minicart-product__field-width                    : 56px !default;
+$minicart-product__field-height                   : 32px !default;
+$minicart-product__field-padding                  : $spacer !default;
+$minicart-product__field-margin                   : 0 0 0 3px !default;
+
 $minicart-product__attributes-button-color        : $blue !default;
 $minicart-product__attributes-button-color--active: $color-primary !default;
 $minicart-product__attributes-button-bg-color     : $white !default;
@@ -105,6 +110,18 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         justify-content: center;
         flex: 1 $minicart-product__qty-width;
         max-width: $minicart-product__qty-width;
+    }
+
+    &__label,
+    &__input {
+        margin: 0;
+    }
+
+    &__field {
+        padding: $minicart-product__field-padding;
+        width: $minicart-product__field-width;
+        height: $minicart-product__field-height;
+        margin: $minicart-product__field-margin;
     }
 
     &__actions {
