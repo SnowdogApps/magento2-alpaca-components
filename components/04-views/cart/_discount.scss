@@ -1,9 +1,22 @@
-$discount__padding             : $spacer--medium !default;
-$discount__margin              : $spacer--medium !default;
-$discount__transition          : $transition-base !default;
-$discount__icon-width          : 18px !default;
-$discount__icon-height         : 18px !default;
-$discount__title-icon-transform: rotate(180deg) !default;
+$discount__padding                  : $spacer--medium !default;
+$discount__margin                   : $spacer--medium !default;
+$discount__transition               : $transition-base !default;
+
+$discount__icon-width               : 18px !default;
+$discount__icon-height              : 18px !default;
+
+$discount__title-icon-transform     : rotate(180deg) !default;
+
+$discount__field-background         : $gray-dark !default;
+$discount__field-padding            : 0 $spacer--medium !default;
+$discount__field-border-radius      : 32px !default;
+$discount__field-height             : 32px !default;
+$discount__field-color              : $white !default;
+$discount__field-color--placeholder : rgba(255, 255, 255, 0.7) !default;
+
+$discount__button-height            : 32px !default;
+$discount__button-border-radius     : 32px !default;
+$discount__button-padding           : 0 21px !default;
 
 .discount {
     flex-basis: 100%;
@@ -56,16 +69,16 @@ $discount__title-icon-transform: rotate(180deg) !default;
     }
 
     &__field {
-        background: $newsletter__input-background;
-        padding: $newsletter__field-padding;
+        background: $discount__field-background;
+        padding: $discount__field-padding;
         margin: 0;
         border: none;
-        border-radius: $newsletter__field-border-radius;
-        height: $newsletter__field-height;
-        color: $newsletter__input-color;
-        line-height: $newsletter__field-height;
+        border-radius: $discount__field-border-radius;
+        height: $discount__field-height;
+        color: $discount__field-color;
+        line-height: $discount__field-height;
         &::placeholder {
-            color: $newsletter__input-color--placeholder;
+            color: $discount__field-color--placeholder;
         }
     }
 
@@ -73,10 +86,10 @@ $discount__title-icon-transform: rotate(180deg) !default;
         position: absolute;
         top: 0;
         right: -2px;
-        height: $newsletter__controls-height;
+        height: $discount__button-height;
         width: auto;
-        border-radius: $newsletter__field-border-radius;
-        padding: 0 $newsletter__button-padding;
+        border-radius: $discount__button-border-radius;
+        padding: $discount__button-padding;
         &:hover,
         &:focus {
             cursor: pointer;
