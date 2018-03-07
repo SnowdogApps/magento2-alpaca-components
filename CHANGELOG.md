@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update label hidden style
 - Refactored `file-upload` component - removed dependecy on button styles, JS code made more roboust
 - Update accessibility features in `file-upload` component
+- Update aria-label values
 
 ### Removed
 - Old catalog product modules and catalog views
