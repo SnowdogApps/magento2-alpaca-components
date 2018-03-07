@@ -42,7 +42,7 @@ module.exports = {
         class: 'button--icon catalog-list-item__actions-secondary-button',
         iconId: 'heart',
         iconClass: 'button__icon catalog-list-item__actions-secondary-button-icon',
-        attributes: 'type="button" aria-label="button wishlist"'
+        attributes: 'type="button" aria-label="Add to wishlist"'
       },
       buttonCompare: {
         tag: 'button',
@@ -50,7 +50,7 @@ module.exports = {
         class: 'button--icon catalog-list-item__actions-secondary-button',
         iconId: 'compare',
         iconClass: 'button__icon catalog-list-item__actions-secondary-button-icon',
-        attributes: 'type="button" aria-label="button compare"'
+        attributes: 'type="button" aria-label="Add to compare"'
       },
       swatches: [
         {
