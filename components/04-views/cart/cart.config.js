@@ -59,7 +59,7 @@ module.exports = {
             class: 'label--hidden'
           },
           field: {
-            attribute: 'value="5"',
+            attributes: 'value="5"',
             id: 'qtyValue',
             name: 'qtyValue',
             class: 'products-list-item__details-qty-input'
@@ -109,7 +109,7 @@ module.exports = {
             class: 'label--hidden'
           },
           field: {
-            attribute: 'value="5"',
+            attributes: 'value="5"',
             id: 'qtyValue',
             name: 'qtyValue',
             class: 'products-list-item__details-qty-input'
