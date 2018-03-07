@@ -2,7 +2,7 @@ module.exports = {
   context: {
     productImage: {
       src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
-      dataSrc: '/images/product/minicart-product-72_72.png',
+      dataSrc: '/images/product/cart-product-160_160.jpg',
       alt: 'product name goes here'
     },
     productName: 'Some product long name',
