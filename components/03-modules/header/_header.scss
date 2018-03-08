@@ -82,7 +82,12 @@ $header__search-wrapper-padding--medium: 0 24px !default;
     }
 
     &__minicart-content {
-        top: calc(100% + 12px);
+        @include mq($screen-s) {
+            top: 100%;
+        }
+        @include mq($screen-m) {
+            top: calc(100% + 12px);
+        }
     }
 
     &__buttons {
