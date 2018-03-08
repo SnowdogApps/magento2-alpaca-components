@@ -17,6 +17,9 @@
         <div class="minicart-product__bottom">
             <div class="minicart-product__qty">
                 {{ render '@input' productQty }}
+                {{#if updateQty }}
+                    {{ render '@button' updateQty }}
+                {{/if}}
             </div>
             <div class="minicart-product__actions">
                 {{ render '@button--icon' editIcon }}

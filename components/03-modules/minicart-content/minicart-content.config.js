@@ -21,6 +21,7 @@ module.exports = {
       },
       {
         productName: 'Some product 2 name',
+        updateQty: false
       }
     ]
   }

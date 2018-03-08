@@ -10,6 +10,13 @@ $minicart-product__name-line-height               : 1.15 !default;
 
 $minicart-product__qty-width                      : 45% !default;
 
+$minicart-product__update-width                   : 90px !default;
+$minicart-product__update-height                  : 32px !default;
+$minicart-product__update-padding                 : 0 $spacer !default;
+$minicart-product__update-margin                  : 0 0 $spacer 0 !default;
+
+$minicart-product__input-padding                  : $spacer 0 !default;
+
 $minicart-product__field-width                    : 56px !default;
 $minicart-product__field-height                   : 32px !default;
 $minicart-product__field-padding                  : $spacer !default;
@@ -116,9 +123,20 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         max-width: $minicart-product__qty-width;
     }
 
+    &__update {
+        height: $minicart-product__update-height;
+        width: $minicart-product__update-width;
+        padding: $minicart-product__update-padding;
+        margin: $minicart-product__update-margin;
+    }
+
     &__label,
     &__input {
         margin: 0;
+    }
+
+    &__input {
+        padding: $minicart-product__input-padding;
     }
 
     &__field {

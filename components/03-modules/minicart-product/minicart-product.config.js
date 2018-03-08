@@ -20,8 +20,14 @@ module.exports = {
         id: 'mini-qty',
         name: 'mini-qty',
         placeholder: '32',
-        type: 'number'
+        type: 'text'
       }
+    },
+    updateQty: {
+      tag: 'button',
+      text: 'Update',
+      class: 'button--secondary minicart-product__update',
+      attributes: 'type="button"'
     },
     attributes: {
       script: true,
