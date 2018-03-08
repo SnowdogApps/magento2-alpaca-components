@@ -4,7 +4,9 @@
     </div>
     <div class="minicart-product__info">
         <h3 class="minicart-product__name">
-            {{ productName }}
+            <a class="link link--invert minicart-product__link" href="#">
+                {{ productName }}
+            </a>
         </h3>
         {{#if configurable }}
             {{ render '@dropdown-list' attributes }}

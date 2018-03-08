@@ -50,7 +50,7 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     &__info {
         display: flex;
         flex-flow: row wrap;
-        width: calc(100% - $minicart-product__image-width);
+        width: calc(100% - #{$minicart-product__image-width});
         padding: $minicart-product__info-padding;
     }
 
@@ -58,6 +58,10 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         margin-bottom: $minicart-product__spacer;
         font-weight: $font-weight-normal;
         line-height: $minicart-product__name-line-height;
+    }
+
+    &__link {
+        text-decoration: none;
     }
 
     &__attributes {
