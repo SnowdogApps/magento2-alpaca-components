@@ -83,7 +83,9 @@ $header__search-wrapper-padding--medium: 0 24px !default;
     }
 
     &__minicart-content {
-        top: calc(100% - 1px);
+        @include mq($screen-m) {
+            top: calc(100% - 1px);
+        }
         &.popup {
             position: absolute;
             right: 0;
