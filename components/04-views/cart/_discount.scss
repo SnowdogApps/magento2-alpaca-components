@@ -1,15 +1,27 @@
-$discount__padding             : 15px !default;
-$discount__margin              : 15px !default;
-$discount__transition          : $transition-base !default;
-$discount__icon-width          : 14px !default;
-$discount__icon-height         : 14px !default;
-$discount__title-icon-transform: rotate(180deg) !default;
+$discount__padding                  : $spacer--medium !default;
+$discount__margin                   : $spacer--medium !default;
+$discount__transition               : $transition-base !default;
+
+$discount__icon-width               : 18px !default;
+$discount__icon-height              : 18px !default;
+
+$discount__title-icon-transform     : rotate(180deg) !default;
+
+$discount__field-background         : $gray-dark !default;
+$discount__field-padding            : 0 $spacer--medium !default;
+$discount__field-border-radius      : 32px !default;
+$discount__field-height             : 32px !default;
+$discount__field-color              : $white !default;
+$discount__field-color--placeholder : rgba(255, 255, 255, 0.7) !default;
+
+$discount__button-height            : 32px !default;
+$discount__button-border-radius     : 32px !default;
+$discount__button-padding           : 0 21px !default;
 
 .discount {
     flex-basis: 100%;
     margin-bottom: $discount__margin;
-    padding: 0 $discount__padding;
-
+    padding: 0;
     @include mq($screen-m) {
         @include grid-column-width(1, 2);
     }
@@ -23,19 +35,19 @@ $discount__title-icon-transform: rotate(180deg) !default;
     &__title {
         display: flex;
         align-items: center;
-        padding: 10px 0;
+        padding: $spacer--medium 0;
         cursor: pointer;
+    }
 
-        &-text {
-            margin-right: $discount__margin;
-            font-weight: 500;
-        }
+    &__title-text {
+        margin-right: $discount__margin;
+        font-weight: 500;
+    }
 
-        &-icon {
-            width: $discount__icon-width;
-            height: $discount__icon-height;
-            transition: $discount__transition;
-        }
+    &__title-icon {
+        width: $discount__icon-width;
+        height: $discount__icon-height;
+        transition: $discount__transition;
     }
 
     &__content {
@@ -44,5 +56,44 @@ $discount__title-icon-transform: rotate(180deg) !default;
 
     &__form {
         display: block;
+    }
+
+    &__controls {
+        position: relative;
+        height: auto;
+        margin-bottom: $newsletter__bottom-gap;
+    }
+
+    &__input {
+        margin: 0;
+    }
+
+    &__field {
+        height: $discount__field-height;
+        padding: $discount__field-padding;
+        margin: 0;
+        border: none;
+        border-radius: $discount__field-border-radius;
+        color: $discount__field-color;
+        line-height: $discount__field-height;
+        background: $discount__field-background;
+        &::placeholder {
+            color: $discount__field-color--placeholder;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: -2px;
+        height: $discount__button-height;
+        width: auto;
+        border-radius: $discount__button-border-radius;
+        padding: $discount__button-padding;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            outline: none;
+        }
     }
 }
