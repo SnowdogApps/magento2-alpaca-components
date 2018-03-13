@@ -28,6 +28,16 @@ $swatch__option-image-margin--small  : $spacer !default;
     display: flex;
     flex-wrap: wrap;
 
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__tooltip,
+    &__selected-option {
+        display: none;
+    }
+
     &--image {
         .swatch__option {
             background-size: cover;
