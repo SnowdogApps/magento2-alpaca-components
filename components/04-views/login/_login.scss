@@ -20,7 +20,8 @@ $login__form-border\@medium             : none !default;
 
 $login__fieldset-max-width\@medium      : 488px !default;
 
-$login__forgot-password-margin          : 0 !default;
+$login__forgot-password-margin          : $spacer--medium 0 0 0 !default;
+$login__forgot-password-margin\@small   : 0 !default;
 $login__forgot-password-color           : $blue !default;
 $login__forgot-password-text-decoration : none !default;
 
@@ -104,11 +105,11 @@ $login__validation-tips-margin          : 0 0 $spacer !default;
     }
 
     &__forgot-password {
-        margin-top: $spacer--medium;
+        margin: $login__forgot-password-margin;
         color: $login__forgot-password-color;
         text-decoration: $login__forgot-password-text-decoration;
         @include mq($screen-s) {
-            margin: $login__forgot-password-margin;
+            margin: $login__forgot-password-margin\@small;
         }
     }
 
