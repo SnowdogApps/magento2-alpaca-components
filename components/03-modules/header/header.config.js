@@ -58,7 +58,7 @@ module.exports = {
       class: 'button--icon search-form__button',
       iconId: 'search',
       iconClass: 'button__icon',
-      attributes: 'type="button" aria-label="Search button"',
+      attributes: 'type="button" aria-label="Search"',
     },
     sideMenuIcon: {
       iconId: 'mobile-menu',
@@ -74,7 +74,8 @@ module.exports = {
         class: 'header-button__icon'
       },
       text: 'Cart',
-      ariaLabel: 'Cart trigger'
+      link: '/cart',
+      ariaLabel: 'Shopping cart dropdown trigger'
     },
     minicartPopup: {
       class: 'header__minicart-content',

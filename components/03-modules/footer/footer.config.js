@@ -6,7 +6,7 @@ module.exports = {
       class: 'footer__scroll-top',
       iconId: 'arrow-up',
       iconClass: 'footer__icon',
-      attributes: 'type="button" aria-label="arrow scroll top"'
+      attributes: 'type="button" aria-label="Scroll to top"'
     },
     bottomBar: {
       handlerClass: 'container'

@@ -61,19 +61,19 @@ module.exports = {
           id: 'qty',
           min: '1',
           defaultValue: '1',
-          ariaLabel: ''
+          ariaLabel: 'Change the quantity'
         },
         minusQtyButton: {
           tag: 'button',
           class: 'button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled',
-          attributes: 'type="button" aria-label="quantity minus button"',
+          attributes: 'type="button" aria-label="Decrease the quantity"',
           iconClass: 'button__icon quantity-update__icon',
           iconId: 'minus'
         },
         plusQtyButton: {
           tag: 'button',
           class: 'button--icon quantity-update__button quantity-update__button--plus',
-          attributes: 'type="button" aria-label="quantity plus button"',
+          attributes: 'type="button" aria-label="Increase the quantity"',
           iconClass: 'button__icon quantity-update__icon',
           iconId: 'plus'
         }
@@ -307,7 +307,7 @@ module.exports = {
           class: 'button--icon slider__navigation-icon slider__prev',
           iconId: 'angle-left',
           iconClass: 'button__icon slider__icon',
-          attributes: 'type="button" aria-label="button arrow slider prev"'
+          attributes: 'type="button" aria-label="Previous slide"'
         },
         iconNext: {
           tag: 'button',
@@ -315,7 +315,7 @@ module.exports = {
           class: 'button--icon slider__navigation-icon slider__next',
           iconId: 'angle-right',
           iconClass: 'button__icon slider__icon',
-          attributes: 'type="button" aria-label="button arrow slider next"'
+          attributes: 'type="button" aria-label="Next slide"'
         },
         navigationClass: 'product-view__slider-navigation',
         slides: [
@@ -905,7 +905,7 @@ module.exports = {
           class: 'button--icon slider__navigation-icon slider__prev',
           iconId: 'angle-left',
           iconClass: 'button__icon slider__icon',
-          attributes: 'type="button" aria-label="button arrow slider prev"'
+          attributes: 'type="button" aria-label="Previous slide"'
         },
         iconNext: {
           tag: 'button',
@@ -913,7 +913,7 @@ module.exports = {
           class: 'button--icon slider__navigation-icon slider__next',
           iconId: 'angle-right',
           iconClass: 'button__icon slider__icon',
-          attributes: 'type="button" aria-label="button arrow slider next"'
+          attributes: 'type="button" aria-label="Next slide"'
         },
         navigationClass: 'product-view__slider-navigation',
         slides: [

@@ -1,5 +1,7 @@
-$dashboard-margin : 30px !default;
-$dashboard-padding: 15px !default;
+$dashboard-margin                : 30px !default;
+$dashboard-padding               : 15px !default;
+$dashboard__sidebar-width--medium: calc(#{100% / 4} - #{(4 - 1) * $grid__gutter / 4}) !default;
+$dashboard__content-width--medium: calc(#{100% / 4 * 3} - #{(4 - 3) * $grid__gutter / 4}) !default;
 
 .dashboard {
     &__sidebar,
@@ -23,9 +25,21 @@ $dashboard-padding: 15px !default;
 
     }
 
+    &__sidebar {
+        @include mq($screen-m) {
+            @include isIE() {
+                max-width: $dashboard__sidebar-width--medium;
+            }
+        }
+    }
+
     &__content {
         @include mq($screen-m) {
             padding-top: $dashboard-padding;
+
+            @include isIE() {
+                max-width: $dashboard__content-width--medium;
+            }
         }
     }
 
