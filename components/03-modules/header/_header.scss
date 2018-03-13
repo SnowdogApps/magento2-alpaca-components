@@ -19,6 +19,7 @@ $header__search-wrapper-padding--medium: 0 24px !default;
     position: relative;
 
     &__wrapper {
+        position: relative;
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
@@ -79,6 +80,14 @@ $header__search-wrapper-padding--medium: 0 24px !default;
 
     &__minicart {
         position: relative;
+    }
+
+    &__minicart-content {
+        top: calc(100% - 1px);
+        &.popup {
+            position: absolute;
+            right: 0;
+        }
     }
 
     &__buttons {

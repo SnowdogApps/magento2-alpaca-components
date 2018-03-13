@@ -58,7 +58,7 @@ module.exports = {
       class: 'button--icon search-form__button',
       iconId: 'search',
       iconClass: 'button__icon',
-      attributes: 'type="button" aria-label="Search button"',
+      attributes: 'type="button" aria-label="Search"',
     },
     sideMenuIcon: {
       iconId: 'mobile-menu',
@@ -75,13 +75,14 @@ module.exports = {
       },
       text: 'Cart',
       link: '/cart',
-      ariaLabel: 'Cart trigger'
+      ariaLabel: 'Shopping cart dropdown trigger'
     },
     minicartPopup: {
       class: 'header__minicart-content',
-      popupId: 'popup-1',
+      popupId: 'popup-minicart',
       popupTrigger: false,
-      content: 'minicart-content'
+      content: 'minicart-content',
+      script: true
     }
   }
 }

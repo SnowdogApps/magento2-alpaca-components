@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Filters module.
 - Modal module
 - Working js for Quantity-update
+- Sticky footer
+- Minicart
 
 ### Changed
 - Rating - use svg icons as css background with svg-uri for encoding uri
@@ -25,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update label hidden style
 - Refactored `file-upload` component - removed dependecy on button styles, JS code made more roboust
 - Update accessibility features in `file-upload` component
+- Aria-label values
 
 ### Removed
 - Old catalog product modules and catalog views

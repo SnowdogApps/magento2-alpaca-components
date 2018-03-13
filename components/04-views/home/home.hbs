@@ -1,27 +1,29 @@
-{{ render '@header' }}
+<div class="page-wrapper">
+    {{ render '@header' }}
 
-<main class="home">
-    {{ render '@banner' }}
-    <div class="container">
-        <section class="home__banners-handler">
-            {{ render '@banner' bannerSmall1 }}
-            {{ render '@banner' bannerSmall2 }}
-            {{ render '@banner' bannerSmall3 }}
-        </section>
-        <section class="home__banners-handler">
-            {{ render '@banner' bannerMedium1 }}
-            {{ render '@banner' bannerMedium2 }}
-        </section>
-        <section class="home__brands">
-            {{ render '@heading' brandBlockHeading }}
-            {{ render '@list--link-content' brandsList }}
-        </section>
-        <section class="home__static-block">
-            <article class="home__static-text">
-                {{{ cmsBlock }}}
-            </article>
-        </section>
-    </div>
-</main>
+    <main class="home">
+        {{ render '@banner' }}
+        <div class="container">
+            <section class="home__banners-handler">
+                {{ render '@banner' bannerSmall1 }}
+                {{ render '@banner' bannerSmall2 }}
+                {{ render '@banner' bannerSmall3 }}
+            </section>
+            <section class="home__banners-handler">
+                {{ render '@banner' bannerMedium1 }}
+                {{ render '@banner' bannerMedium2 }}
+            </section>
+            <section class="home__brands">
+                {{ render '@heading' brandBlockHeading }}
+                {{ render '@list--link-content' brandsList }}
+            </section>
+            <section class="home__static-block">
+                <article class="home__static-text">
+                    {{{ cmsBlock }}}
+                </article>
+            </section>
+        </div>
+    </main>
+</div>
 
 {{ render '@footer' }}
