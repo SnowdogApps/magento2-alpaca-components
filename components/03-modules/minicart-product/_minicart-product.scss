@@ -8,6 +8,8 @@ $minicart-product__info-padding                   : 0 0 0 $spacer--medium !defau
 
 $minicart-product__name-line-height               : 1.15 !default;
 
+$minicart-product__link-text-decoration           : none !default;
+
 $minicart-product__update-width                   : 90px !default;
 $minicart-product__update-height                  : 32px !default;
 $minicart-product__update-padding                 : 0 $spacer !default;
@@ -20,6 +22,8 @@ $minicart-product__field-height                   : 32px !default;
 $minicart-product__field-padding                  : $spacer !default;
 $minicart-product__field-margin                   : 0 0 0 $spacer !default;
 
+$minicart-product__attributes-button-margin       : 0 !default;
+$minicart-product__attributes-button-padding      : 0 !default;
 $minicart-product__attributes-button-color        : $blue !default;
 $minicart-product__attributes-button-color--active: $color-primary !default;
 $minicart-product__attributes-button-bg-color     : $white !default;
@@ -27,6 +31,7 @@ $minicart-product__attributes-button-font-family  : $font-family-base !default;
 $minicart-product__attributes-button-font-size    : $font-size-small !default;
 $minicart-product__attributes-list-padding        : $spacer 0 0 0 !default;
 $minicart-product__attributes-list-color          : $gray-dark !default;
+$minicart-product__attributes-list-icon-margin    : 0 0 0 $spacer !default;
 
 $minicart-product__price-color                    : $color-secondary !default;
 $minicart-product__price-font-weight              : $font-weight-bold !default;
@@ -70,7 +75,7 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     }
 
     &__link {
-        text-decoration: none;
+        text-decoration: $minicart-product__link-text-decoration;
     }
 
     &__attributes {
@@ -80,14 +85,14 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     &__attributes-button {
         display: flex;
         align-items: center;
-        margin: 0;
-        padding: 0;
+        margin: $minicart-product__attributes-button-margin;
+        padding: $minicart-product__attributes-button-padding;
         font-family: $minicart-product__attributes-button-font-family;
         font-size: $minicart-product__attributes-button-font-size;
 
         .dropdown-list__icon {
             position: static;
-            margin-left: $spacer;
+            margin: $minicart-product__attributes-list-icon-margin;
             fill: $minicart-product__attributes-button-color;
         }
 
