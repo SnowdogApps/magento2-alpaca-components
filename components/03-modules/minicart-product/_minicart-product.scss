@@ -121,6 +121,7 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     }
 
     &__update {
+        display: none;
         height: $minicart-product__update-height;
         width: $minicart-product__update-width;
         padding: $minicart-product__update-padding;
