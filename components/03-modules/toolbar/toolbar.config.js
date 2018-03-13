@@ -25,7 +25,7 @@ module.exports = {
     sortBy: {
       class: 'toolbar__sorter-wrapper',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Sort By',
         class: 'toolbar__sorter-label'
       },
@@ -49,7 +49,7 @@ module.exports = {
       select: {
         class: 'toolbar__limiter-wrapper',
         label: {
-          attribute: '',
+          attributes: '',
           text: 'Show',
           class: 'toolbar__limiter-label'
         },

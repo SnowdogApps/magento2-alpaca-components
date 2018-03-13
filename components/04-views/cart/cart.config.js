@@ -2,7 +2,32 @@ module.exports = {
   context: {
     mainHeading: {
       tag: 'h1',
-      text: 'Shopping Cart'
+      text: 'Shopping Cart',
+      class: 'heading heading--page'
+    },
+    discount: {
+      title: 'Apply Discount Code',
+      icon: {
+        class: 'discount__title-icon',
+        iconId: 'arrow-down'
+      },
+      button: {
+        tag: 'button',
+        text: 'Apply Discount',
+        class: 'discount__button',
+      },
+      input: {
+        class: 'discount__input',
+        label: {
+          class: 'label--hidden'
+        },
+        field: {
+          placeholder: 'Enter discount code',
+          id: 'discount-code',
+          name: 'discount-code',
+          class: 'discount__field'
+        }
+      },
     },
     productlist: [
       {
@@ -34,7 +59,7 @@ module.exports = {
             class: 'label--hidden'
           },
           field: {
-            attribute: 'value="5"',
+            attributes: 'value="5"',
             id: 'qtyValue',
             name: 'qtyValue',
             class: 'products-list-item__details-qty-input'
@@ -84,7 +109,7 @@ module.exports = {
             class: 'label--hidden'
           },
           field: {
-            attribute: 'value="5"',
+            attributes: 'value="5"',
             id: 'qtyValue',
             name: 'qtyValue',
             class: 'products-list-item__details-qty-input'
