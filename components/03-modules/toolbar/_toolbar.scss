@@ -13,6 +13,9 @@ $toolbar__icon-color--active       : $black !default;
 $toolbar__mode-icon-area-size      : 48px !default;
 $toolbar__mode-icon-margin         : 0 auto !default;
 $toolbar__mode-icon-padding        : 0 !default;
+$toolbar__mode-icon-border         : none !default;
+$toolbar__mode-icon-background     : none !default;
+$toolbar__mode-icon-cursor         : pointer !default;
 $toolbar__mode-icon-size           : 18px !default;
 $toolbar__mode-margin-right        : $spacer !default;
 $toolbar__select-border            : 1px solid $gray-light !default;
@@ -22,6 +25,9 @@ $toolbar__select-field-item-color  : $gray-darker !default;
 $toolbar__select-field-item-height : 32px !default;
 $toolbar__sorter-border-top        : 1px solid $gray-light !default;
 $toolbar__sorter-padding           : 8px 0 !default;
+$toolbar__sorter-width             : 200px !default;
+$toolbar__limiter-width            : 72px !default;
+$toolbar__select-margin            : 0 !default;
 
 .toolbar {
     position: relative;
@@ -100,20 +106,20 @@ $toolbar__sorter-padding           : 8px 0 !default;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: none;
-        border: none;
-        cursor: pointer;
+        background: $toolbar__mode-icon-background;
+        border: $toolbar__mode-icon-border;
+        cursor: $toolbar__mode-icon-cursor;
     }
 
     &__sorter-wrapper,
     &__limiter-wrapper {
-        margin-bottom: 0;
+        margin: $toolbar__select-margin;
         display: flex;
         align-items: center;
         .choices {
             flex-grow: 1;
             @include mq($screen_m) {
-                width: 200px;
+                width: $toolbar__sorter-width;
             }
         }
         .select__field-list {
@@ -124,18 +130,12 @@ $toolbar__sorter-padding           : 8px 0 !default;
                 padding-right: $toolbar__select-padding-right;
             }
         }
-        .choices__list--dropdown {
-            z-index: 4;
-            .select__field-item {
-                padding-right: 0;
-            }
-        }
     }
 
     &__limiter-wrapper {
         .choices {
             @include mq($screen_m) {
-                width: 72px;
+                width: $toolbar__limiter-width;
             }
         }
     }
@@ -144,13 +144,6 @@ $toolbar__sorter-padding           : 8px 0 !default;
         color: $toolbar__select-field-item-color;
         height: $toolbar__select-field-item-height;
         line-height: $toolbar__select-field-item-height;
-    }
-
-    &__limiter-wrapper {
-        margin-bottom: 0;
-        @include mq($screen-m) {
-            margin-right: $toolbar__offset;
-        }
     }
 
     &__sorter-select,

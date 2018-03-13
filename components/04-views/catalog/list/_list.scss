@@ -7,6 +7,8 @@ $catalog-list__sidebar-border         : 1px solid $gray-lighter !default;
 
 $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
 
+$catalog-list__item-padding           : $spacer--medium 0 0 0 !default;
+
 .catalog-list {
     margin: $catalog-list__margin;
     display: flex;
@@ -36,7 +38,7 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
             border-top: $catalog-list__border;
         }
         &:first-of-type {
-            padding-top: $spacer--medium;
+            padding: $catalog-list__item-padding;
         }
         &:last-child {
             border-bottom: $catalog-list__border;

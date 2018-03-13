@@ -5,7 +5,7 @@ $catalog-grid-item__font-size               : $font-size-small !default;
 $catalog-grid-item__font-size\@large        : $font-size-base !default;
 $catalog-grid-item__line-height             : 1.5 !default;
 
-$catalog-grid-item__badge-top-position      : 16px !default;
+$catalog-grid-item__badge-top-position      : $spacer--medium !default;
 $catalog-grid-item__badge-left-position     : 0 !default;
 $catalog-grid-item__badge-padding           : 5px 12px !default;
 $catalog-grid-item__badge-bg-color          : $color-primary !default;
@@ -24,6 +24,8 @@ $catalog-grid-item__primary-padding         : 0 $spacer !default;
 
 $catalog-grid-item__action-size             : 48px !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
+$catalog-grid-item__action-icon-transition  : $transition-base !default;
+$catalog-grid-item__action-icon-fill        : $green !default;
 
 .catalog-grid-item {
     position: relative;
@@ -191,13 +193,13 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         &:hover,
         &:focus {
             .icon {
-                fill: $green;
+                fill: $catalog-grid-item__action-icon-fill;
             }
         }
         .icon {
             width: $catalog-grid-item__action-icon-size;
             height: $catalog-grid-item__action-icon-size;
-            transition: $transition-base;
+            transition: $catalog-grid-item__action-icon-transition;
         }
     }
 }
