@@ -32,6 +32,8 @@ $minicart-product__attributes-list-color          : $gray-dark !default;
 
 $minicart-product__action-width                   : 50% !default;
 $minicart-product__action-button-bg               : transparent !default;
+$minicart-product__action-icon-size               : 24px !default;
+$minicart-product__action-icon-padding            : 2px !default;
 $minicart-product__action-icon-color              : $gray !default;
 $minicart-product__action-icon-color--active      : $color-primary !default;
 
@@ -164,9 +166,9 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     }
 
     &__button-icon {
-        height: 24px;
-        width: 24px;
-        padding: 2px;
+        height: $minicart-product__action-icon-size;
+        width: $minicart-product__action-icon-size;
+        padding: $minicart-product__action-icon-padding;
         fill: $minicart-product__action-icon-color;
         &:focus,
         &:hover {
