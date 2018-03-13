@@ -1,126 +1,129 @@
-{{ render '@header' }}
+<div class="page-wrapper">
+    {{ render '@header' }}
 
-<div class="product-view container">
-    {{render '@breadcrumbs' }}
+    <div class="product-view container">
+        {{render '@breadcrumbs' }}
 
-    <div class="product-view__wrapper">
-        <div class="product-view__gallery">
-            {{ render '@gallery' }}
-        </div>
-
-        <div class="product-view__main-details">
-            <h1 class="heading heading--first-level product-view__title">
-                {{{ title }}}
-            </h1>
-
-            <span class="product-view__sku">
-                {{{ sku.label }}} {{{ sku.value }}}
-            </span>
-
-            <span class="product-view__price">
-                {{ render (component price.content) price.contentContext }}
-            </span>
-
-            <div class="
-                     product-view__stock-status
-                     {{#if stock.outOfStock}}
-                         product-view__stock-status--out-of-stock
-                     {{/if}}
-                     {{#if stock.alert}}
-                         product-view__stock-status--alert
-                     {{/if}}
-            ">
-                {{{ stock.html }}}
+        <div class="product-view__wrapper">
+            <div class="product-view__gallery">
+                {{ render '@gallery' }}
             </div>
 
-            <div class="product-view__rating">
-                <div class="product-view__rating-rates">
-                    {{ render '@rating--rate' }}
-                    {{#if rating.parenthesis}}
-                        (
-                    {{/if}}
-                    <a href="{{ rating.href }}"
-                       class="product-view__link product-view__link--rating {{ rating.class }}"
-                    >
-                        {{{ rating.value }}}
-                    </a>
-                    {{#if rating.parenthesis}}
-                        )
-                    {{/if}}
+            <div class="product-view__main-details">
+                <h1 class="heading heading--first-level product-view__title">
+                    {{{ title }}}
+                </h1>
+
+                <span class="product-view__sku">
+                    {{{ sku.label }}} {{{ sku.value }}}
+                </span>
+
+                <span class="product-view__price">
+                    {{ render (component price.content) price.contentContext }}
+                </span>
+
+                <div class="
+                        product-view__stock-status
+                        {{#if stock.outOfStock}}
+                            product-view__stock-status--out-of-stock
+                        {{/if}}
+                        {{#if stock.alert}}
+                            product-view__stock-status--alert
+                        {{/if}}
+                ">
+                    {{{ stock.html }}}
                 </div>
-                <div class="product-view__rating-actions">
-                    <a href="{{ addReview.href }}"
-                       class="
-                           product-view__link
-                           product-view__link--add-review
-                           {{ addReview.class }}
-                       "
-                   >
-                        {{ addReview.text }}
-                    </a>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="product-view__secondary-details">
-
-            <div class="product-view__description">
-                {{{ description }}}
-            </div>
-
-            <div class="product-view__options">
-                {{#each options as |option|}}
-                    {{> '@swatch' option}}
-                {{/each}}
-            </div>
-
-            <div class="product-view__main-actions">
-                <div class="product-view__qty">
-                    <label class="{{ qty.label.class }}"
-                           for="qty.field.input.id"
-                    >
-                        {{ qty.label.text }}
-                    </label>
-                    {{render '@quantity-update' qty.field}}
-                </div>
-                <div class="product-view__action-elements">
-                    <div class="product-view__add-to-cart">
-                        {{> '@button' button }}
+                <div class="product-view__rating">
+                    <div class="product-view__rating-rates">
+                        {{ render '@rating--rate' }}
+                        {{#if rating.parenthesis}}
+                            (
+                        {{/if}}
+                        <a href="{{ rating.href }}"
+                        class="product-view__link product-view__link--rating {{ rating.class }}"
+                        >
+                            {{{ rating.value }}}
+                        </a>
+                        {{#if rating.parenthesis}}
+                            )
+                        {{/if}}
                     </div>
-                    <div class="product-view__extra-actions">
-                        {{#each extraActions as |action|}}
-                            <{{tag}} class="product-view__action product-view__action--{{tag}} {{ action.class }}">
-                                {{ render '@icon' action.icon}}
-                            </{{tag}}>
-                        {{/each}}
+                    <div class="product-view__rating-actions">
+                        <a href="{{ addReview.href }}"
+                        class="
+                            product-view__link
+                            product-view__link--add-review
+                            {{ addReview.class }}
+                        "
+                    >
+                            {{ addReview.text }}
+                        </a>
                     </div>
                 </div>
-
             </div>
-            <div class="product-view__information">
-                {{ render '@brief-info' briefInfo }}
+
+
+            <div class="product-view__secondary-details">
+
+                <div class="product-view__description">
+                    {{{ description }}}
+                </div>
+
+                <div class="product-view__options">
+                    {{#each options as |option|}}
+                        {{> '@swatch' option}}
+                    {{/each}}
+                </div>
+
+                <div class="product-view__main-actions">
+                    <div class="product-view__qty">
+                        <label class="{{ qty.label.class }}"
+                            for="qty.field.input.id"
+                        >
+                            {{ qty.label.text }}
+                        </label>
+                        {{render '@quantity-update' qty.field}}
+                    </div>
+                    <div class="product-view__action-elements">
+                        <div class="product-view__add-to-cart">
+                            {{> '@button' button }}
+                        </div>
+                        <div class="product-view__extra-actions">
+                            {{#each extraActions as |action|}}
+                                <{{tag}} class="product-view__action product-view__action--{{tag}} {{ action.class }}">
+                                    {{ render '@icon' action.icon}}
+                                </{{tag}}>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                </div>
+                <div class="product-view__information">
+                    {{ render '@brief-info' briefInfo }}
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="product-view__tabs">
-        {{ render '@tab' tab }}
-    </div>
+        <div class="product-view__tabs">
+            {{ render '@tab' tab }}
+        </div>
 
-    <div class="product-view__slider">
-        <h3 class="heading">
-            {{ relatedProducts.heading }}
-        </h3>
-        {{render '@slider' relatedProducts.slider }}
-    </div>
+        <div class="product-view__slider">
+            <h3 class="heading">
+                {{ relatedProducts.heading }}
+            </h3>
+            {{render '@slider' relatedProducts.slider }}
+        </div>
 
-    <div class="product-view__slider">
-        <h3 class="heading">
-            {{ upsellProducts.heading }}
-        </h3>
-        {{render '@slider' upsellProducts.slider }}
+        <div class="product-view__slider">
+            <h3 class="heading">
+                {{ upsellProducts.heading }}
+            </h3>
+            {{render '@slider' upsellProducts.slider }}
+        </div>
+        {{render '@additional-content' additionalContent}}
     </div>
-    {{render '@additional-content' additionalContent}}
 </div>
+
 {{ render '@footer' }}

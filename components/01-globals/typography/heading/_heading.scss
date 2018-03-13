@@ -1,18 +1,21 @@
 $headings-margin                 : 0 0 0.5em 0 !default;
+$headings-margin--page           : $spacer--medium 0 !default;
+
 $headings-font-family            : $font-family-base !default;
 $headings-font-weight            : 700 !default;
 $headings-line-height            : $font-line-height !default;
 $headings-color                  : $color-secondary !default;
 
 $headings-text-transform         : none !default;
+$headings-text-transform--page   : uppercase !default;
+
+$heading-font-size--page         : 24px !default;
 $heading-font-size--first-level  : 18px !default;
 $heading-font-size--second-level : 18px !default;
 $heading-font-size--third-level  : 14px !default;
 $heading-font-size--fourth-level : 14px !default;
 $heading-font-size--fifth-level  : 12px !default;
 $heading-font-size--sixth-level  : 12px !default;
-
-$heading-margin--page            : $spacer--medium 0 !default;
 
 .heading {
     margin: $headings-margin;
@@ -45,8 +48,11 @@ $heading-margin--page            : $spacer--medium 0 !default;
     &--sixth-level {
         font-size: $heading-font-size--sixth-level;
     }
+
     &--page {
-        margin: $heading-margin--page;
+        margin: $headings-margin--page;
+        font-size: $heading-font-size--page;
+        text-transform: $headings-text-transform--page;
     }
 }
 

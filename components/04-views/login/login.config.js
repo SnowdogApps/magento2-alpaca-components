@@ -16,15 +16,15 @@ module.exports = {
     signInInfo: 'If you have an account, sign in with your email address.',
     createAccountInfo: 'Creating an account has many benefits: check out faster, keep more than one address, track orders and more.',
     email: {
-      attribute: '',
+      attributes: '',
       class: 'login__input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Email',
         hidden: false
       },
       field: {
-        attribute: '',
+        attributes: '',
         class: '',
         id: 'email',
         name: 'email',
@@ -33,15 +33,15 @@ module.exports = {
       }
     },
     password: {
-      attribute: '',
+      attributes: '',
       class: 'login__input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Password',
         hidden: false
       },
       field: {
-        attribute: 'aria-required="true" autocomplete="off"',
+        attributes: 'aria-required="true" autocomplete="off"',
         class: '',
         id: 'password',
         name: 'password',

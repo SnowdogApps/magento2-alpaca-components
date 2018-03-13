@@ -1,17 +1,17 @@
-$select__margin            : $spacer !default;
-$select__padding           : 0 $spacer--large 0 $spacer--medium !default;
-$select__border            : 1px solid $form-elements-border-color !default;
-$select__spacing           : 40px !default;
-$select__border-radius     : 20px !default;
-$select__field-background  : $white !default;
-$select__input-border-color: $form-elements-border-color !default;
+$select__margin                          : $spacer !default;
+$select__padding                         : 0 $spacer--medium 0 $spacer--medium !default;
+$select__border                          : 1px solid $form-elements-border-color !default;
+$select__spacing                         : 40px !default;
+$select__border-radius                   : 20px !default;
+$select__field-background                : $white !default;
+$select__input-border-color              : $form-elements-border-color !default;
+$select__field-list-border-radius--single: 20px !default;
 
 .select {
     margin-bottom: $select__margin;
 
     &__field {
         position: relative;
-        background: $select__field-background;
 
         &--native {
             width: 100%;
@@ -32,6 +32,7 @@ $select__input-border-color: $form-elements-border-color !default;
     }
 
     &__field-list {
+        background: $select__field-background;
         &--single {
             height: $select__spacing;
             line-height: $select__spacing;
@@ -47,6 +48,7 @@ $select__input-border-color: $form-elements-border-color !default;
         }
     }
 }
+
 // Choices.js lib styles overwrites
 .choices {
     &.is-open {
@@ -54,6 +56,8 @@ $select__input-border-color: $form-elements-border-color !default;
             &--single {
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
+                border-top-left-radius: $select__field-list-border-radius--single;
+                border-top-right-radius: $select__field-list-border-radius--single;
                 border-bottom: 0;
             }
         }
@@ -65,6 +69,10 @@ $select__input-border-color: $form-elements-border-color !default;
         .is-open & {
             border-radius: 0 0 $select__border-radius $select__border-radius;
             border-color: $select__input-border-color;
+        }
+
+        & .choices__item--selectable {
+            padding-right: $spacer--medium;
         }
     }
 }
