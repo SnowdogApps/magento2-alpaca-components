@@ -28,6 +28,9 @@ $minicart-product__attributes-button-font-size    : $font-size-small !default;
 $minicart-product__attributes-list-padding        : $spacer 0 0 0 !default;
 $minicart-product__attributes-list-color          : $gray-dark !default;
 
+$minicart-product__price-color                    : $color-secondary !default;
+$minicart-product__price-font-weight              : $font-weight-bold !default;
+
 $minicart-product__action-button-bg               : transparent !default;
 $minicart-product__action-icon-size               : 24px !default;
 $minicart-product__action-icon-padding            : 2px !default;
@@ -105,7 +108,8 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
 
     &__price {
         width: 100%;
-        font-weight: $font-weight-bold;
+        font-weight: $minicart-product__price-font-weight;
+        color: $minicart-product__price-color;
     }
 
     &__bottom {

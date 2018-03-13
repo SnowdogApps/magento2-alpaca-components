@@ -10,6 +10,7 @@ $minicart-content__total-margin             : $spacer--medium 0 !default;
 $minicart-content__total-padding            : 0 $spacer--medium !default;
 
 $minicart-content__summary-font-weight      : $font-weight-bold !default;
+$minicart-content__summary-color            : $color-secondary !default;
 
 $minicart-content__actions-padding          : 0 $spacer--medium !default;
 
@@ -61,10 +62,11 @@ $minicart-content__products-list-margin     : $spacer 0 0 0 !default;
 
     &__summary {
         text-align: right;
+    }
 
-        &-value {
-            font-weight: $minicart-content__summary-font-weight;
-        }
+    &__summary-value {
+        font-weight: $minicart-content__summary-font-weight;
+        color: $minicart-content__summary-color;
     }
 
     &__actions {
