@@ -8,8 +8,6 @@ $minicart-product__info-padding                   : 0 0 0 $spacer--medium !defau
 
 $minicart-product__name-line-height               : 1.15 !default;
 
-$minicart-product__qty-width                      : 45% !default;
-
 $minicart-product__update-width                   : 90px !default;
 $minicart-product__update-height                  : 32px !default;
 $minicart-product__update-padding                 : 0 $spacer !default;
@@ -20,7 +18,7 @@ $minicart-product__input-padding                  : $spacer 0 !default;
 $minicart-product__field-width                    : 56px !default;
 $minicart-product__field-height                   : 32px !default;
 $minicart-product__field-padding                  : $spacer !default;
-$minicart-product__field-margin                   : 0 0 0 3px !default;
+$minicart-product__field-margin                   : 0 0 0 $spacer !default;
 
 $minicart-product__attributes-button-color        : $blue !default;
 $minicart-product__attributes-button-color--active: $color-primary !default;
@@ -30,7 +28,6 @@ $minicart-product__attributes-button-font-size    : $font-size-small !default;
 $minicart-product__attributes-list-padding        : $spacer 0 0 0 !default;
 $minicart-product__attributes-list-color          : $gray-dark !default;
 
-$minicart-product__action-width                   : 50% !default;
 $minicart-product__action-button-bg               : transparent !default;
 $minicart-product__action-icon-size               : 24px !default;
 $minicart-product__action-icon-padding            : 2px !default;
@@ -121,8 +118,6 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        flex: 1 $minicart-product__qty-width;
-        max-width: $minicart-product__qty-width;
     }
 
     &__update {
@@ -151,7 +146,6 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     &__actions {
         display: flex;
         justify-content: flex-end;
-        width: $minicart-product__action-width;
     }
 
     &__button {
