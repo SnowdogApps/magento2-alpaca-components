@@ -10,7 +10,6 @@
             >
                 <a {{{ itemAttributes }}}
                    class="dropdown-list__label {{ class }}"
-                   aria-label="{{ title }}"
                    {{#if id }}
                         data-dropdown="{{ id }}"
                         aria-controls="{{ id }}"
@@ -44,7 +43,6 @@
                             >
                                 <a {{{ itemAttributes }}}
                                    class="dropdown-list__inner-label {{ class }}"
-                                   aria-label="{{ itemName }}"
                                    {{#if id }}
                                         data-dropdown="{{ id }}"
                                    {{/if}}

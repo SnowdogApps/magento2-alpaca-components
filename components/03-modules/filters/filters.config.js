@@ -125,28 +125,28 @@ module.exports = {
       options: [
         {
           text: 'XS',
-          ariaLabel: 'Placeholder for aria-label',
+          ariaLabel: 'Select size XS',
           href: '#'
         },
         {
           class: 'filter__swatch-option--active',
           text: 'S',
-          ariaLabel: 'Placeholder for aria-label',
+          ariaLabel: 'Select size S',
           href: '#'
         },
         {
           text: 'M',
-          ariaLabel: 'Placeholder for aria-label',
+          ariaLabel: 'Select size M',
           href: '#'
         },
         {
           text: 'L',
-          ariaLabel: 'Placeholder for aria-label',
+          ariaLabel: 'Select size L',
           href: '#'
         },
         {
           text: 'XL',
-          ariaLabel: 'Placeholder for aria-label',
+          ariaLabel: 'Select size XL',
           href: '#'
         }
       ]
@@ -166,28 +166,28 @@ module.exports = {
           class: 'filter__color-option--active',
           attributes: 'style="background: #000"',
           label: 'Black',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Select color black'
         },
         {
           href: '#',
           class: 'filter__color-option',
           attributes: 'style="background: red"',
           label: 'Red',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Select color red'
         },
         {
           href: '#',
           class: 'filter__color-option',
           attributes: 'style="background: #5cb85c"',
           label: 'Green',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Select color green'
         },
         {
           href: '#',
           class: 'filter__color-option',
           attributes: 'style="background: #0275d8"',
           label: 'Blue',
-          ariaLabel: 'Placeholder for aria-label'
+          ariaLabel: 'Select color blue'
         }
       ]
     },
