@@ -41,12 +41,12 @@ module.exports = {
     qtyInput: {
       class: 'input--inline minicart-product__qty-input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Qty:',
         class: 'minicart-product__qty-label'
       },
       field: {
-        attribute: 'type="number" value="1"',
+        attributes: 'type="number" value="1"',
         class: 'minicart-product__qty-input',
         placeholder: 'Qty'
       }

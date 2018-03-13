@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Filters module.
 - Modal module
 - Working js for Quantity-update
+- Sticky footer
 
 ### Changed
 - Rating - use svg icons as css background with svg-uri for encoding uri

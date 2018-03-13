@@ -10,7 +10,7 @@ module.exports = {
       href: '',
       icon: {
         iconId: 'grid',
-        svgClass: 'toolbar__mode-icon toolbar__mode-icon--active',
+        class: 'toolbar__mode-icon toolbar__mode-icon--active',
         title: 'Grid view'
       }
     },
@@ -18,14 +18,14 @@ module.exports = {
       href: '',
       icon: {
         iconId: 'list',
-        svgClass: 'toolbar__mode-icon',
+        class: 'toolbar__mode-icon',
         title: 'List view'
       }
     },
     sortBy: {
       class: 'toolbar__sorter-wrapper',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Sort By',
         class: 'toolbar__sorter-label'
       },
@@ -49,7 +49,7 @@ module.exports = {
       select: {
         class: 'toolbar__limiter-wrapper',
         label: {
-          attribute: '',
+          attributes: '',
           text: 'Show',
           class: 'toolbar__limiter-label'
         },
@@ -73,7 +73,7 @@ module.exports = {
           },
         ]
       },
-      suffix: 'per page'
+      suffix: ''
     }
   }
 }
