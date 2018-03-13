@@ -27,16 +27,19 @@ $dashboard__content-width--medium: calc(#{100% / 4 * 3} - #{(4 - 3) * $grid__gut
 
     &__sidebar {
         @include mq($screen-m) {
-            flex-basis: $dashboard__sidebar-width--medium;
-            max-width: $dashboard__sidebar-width--medium;
+            @include isIE() {
+                max-width: $dashboard__sidebar-width--medium;
+            }
         }
     }
 
     &__content {
         @include mq($screen-m) {
-            flex-basis: $dashboard__content-width--medium;
-            max-width: $dashboard__content-width--medium;
             padding-top: $dashboard-padding;
+
+            @include isIE() {
+                max-width: $dashboard__content-width--medium;
+            }
         }
     }
 
