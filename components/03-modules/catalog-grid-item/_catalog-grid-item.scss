@@ -30,6 +30,8 @@ $catalog-grid-item__action-icon-size        : 24px !default;
 $catalog-grid-item__action-icon-transition  : $transition-base !default;
 $catalog-grid-item__action-icon-fill        : $green !default;
 
+$catalog-gird-item__price-margin            : 0 0 $spacer 0 !default;
+
 .catalog-grid-item {
     position: relative;
     display: block;
@@ -106,11 +108,12 @@ $catalog-grid-item__action-icon-fill        : $green !default;
     }
 
     &__price {
+        padding: $catalog-grid-item__padding;
+        margin: $catalog-gird-item__price-margin;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
         font-weight: $catalog-grid-item__font-weight;
         white-space: nowrap;
-        padding: $catalog-grid-item__padding;
 
         @include mq($screen-xxl) {
             font-size: $catalog-grid-item__font-size\@large;
