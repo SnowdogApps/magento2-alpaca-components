@@ -2,11 +2,11 @@ module.exports = {
   title: 'Filters',
   context: {
     tag: 'div',
-    activeFiltersHeading: 'Active filters:',
-    allFiltersHeading: 'All filters:',
-    switcher: {
-      textHidden: 'Show Filters',
-      textDisplay: 'Hide Filters'
+    activeFiltersHeading: 'Now Shopping by',
+    allFiltersHeading: 'Shopping Options',
+    switcherIcon: {
+      class: 'filters__switcher-icon',
+      iconId: 'angle-down'
     },
     activeFilters: {
       clearHref: '#',
@@ -106,6 +106,12 @@ module.exports = {
               placeholder: '',
               value: '1000'
             }
+          },
+          apply: {
+            class: 'button--secondary range-filter__button',
+            tag: 'button',
+            text: 'Apply',
+            attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"'
           },
           script: true,
           showFloat: 0

@@ -4,14 +4,20 @@ $filters__heading-margin             : 0 !default;
 $filters__heading-margin\@medium     : 0 0 $spacer--medium 0 !default;
 $filters__switcher-margin            : $spacer 0 0 0 !default;
 $filters__switcher-padding           : 0 !default;
-$filters__switcher-border            : 2px solid $color-primary !default;
+$filters__switcher-border            : 1px solid $gray-lighter !default;
 $filters__switcher-border-radius     : 0 !default;
 $filters__switcher-background-color  : $bg-color-base !default;
-$filters__switcher-color             : $color-primary !default;
-$filters__switcher-font-size         : $font-size-base !default;
-$filters__switcher-font-weight       : $font-weight-bold !default;
+$filters__switcher-color             : $color-secondary !default;
+$filters__switcher-font-size         : $font-size-large !default;
+$filters__switcher-font-family       : $font-family-base !default;
+$filters__switcher-transition        : $transition-base !default;
+$filters__switcher-fill              : $green !default;
 $filters__switcher-size              : 48px !default;
-$filters__list-margin                : $spacer--medium 0 0 0 !default;
+$filters__switcher-icon-margin       : $spacer !default;
+$filters__switcher-icon-padding      : 0 5px !default;
+$filters__divider-margin             : 0 0 $spacer--medium 0 !default;
+$filters__active-margin              : 0 0 $spacer--medium 0 !default;
+
 .filters {
     &__heading {
         font-weight: $filters__heading-font-weight;
@@ -28,19 +34,21 @@ $filters__list-margin                : $spacer--medium 0 0 0 !default;
         }
     }
     &__switcher {
-        display: block;
-        text-align: center;
+        display: flex;
+        align-items: center;
         height: $filters__switcher-size;
         min-width: 100%;
         margin: $filters__switcher-margin;
         padding: $filters__switcher-padding;
-        border: $filters__switcher-border;
+        border: none;
+        border-top: $filters__switcher-border;
         border-radius: $filters__switcher-border-radius;
         background-color: $filters__switcher-background-color;
         color: $filters__switcher-color;
         font-size: $filters__switcher-font-size;
-        font-weight: $filters__switcher-font-weight;
+        font-family: $filters__switcher-font-family;
         text-decoration: none;
+        text-align: left;
 
         &:hover,
         &:focus {
@@ -54,13 +62,31 @@ $filters__list-margin                : $spacer--medium 0 0 0 !default;
         }
     }
 
+    &__switcher-icon {
+        margin-left: $filters__switcher-icon-margin;
+        padding: $filters__switcher-icon-padding;
+        transition: $filters__switcher-transition;
+
+        &--active {
+            fill: $filters__switcher-fill;
+            transform: rotate(180deg);
+        }
+    }
+
     &__list {
-        margin: $filters__list-margin;
         &--mobile-hidden {
             display: none;
             @include mq($screen-m) {
                 display: block;
             }
         }
+    }
+
+    &__active {
+        margin: $filters__active-margin;
+    }
+
+    &__divider {
+        margin: $filters__divider-margin;
     }
 }

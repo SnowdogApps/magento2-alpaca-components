@@ -1,11 +1,11 @@
 <div class="toolbar {{ class }}" {{{ attributes }}}>
     <div class="toolbar__mode">
-        <a href="{{grid.href}}" class="toolbar__mode-link">
+        <button type="button" class="toolbar__mode-button">
            {{ render '@icon' grid.icon }}
-        </a>
-        <a href="{{list.href}}" class="toolbar__mode-link">
+        </button>
+        <button type="button" class="toolbar__mode-button">
            {{ render '@icon' list.icon }}
-        </a>
+        </button>
     </div>
     <div class="toolbar__sorter">
         {{render '@select' sortBy }}
