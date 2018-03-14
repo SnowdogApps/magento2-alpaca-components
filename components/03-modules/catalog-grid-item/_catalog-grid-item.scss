@@ -26,11 +26,17 @@ $catalog-grid-item__rating-margin           : $spacer 0 !default;
 $catalog-grid-item__primary-padding         : 0 $spacer !default;
 
 $catalog-grid-item__action-size             : 48px !default;
+$catalog-grid-item__action-padding          : 0 !default;
+$catalog-grid-item__action-background       : transparent !default;
+$catalog-grid-item__action-border           : none !default;
+$catalog-grid-item__action-cursor           : pointer !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
 $catalog-grid-item__action-icon-transition  : $transition-base !default;
 $catalog-grid-item__action-icon-fill        : $green !default;
 
-$catalog-gird-item__price-margin            : 0 0 $spacer 0 !default;
+$catalog-grid-item__price-margin            : 0 0 $spacer 0 !default;
+
+$catalog-gird-item__primary-form-margin     : 0 !default;
 
 .catalog-grid-item {
     position: relative;
@@ -109,7 +115,7 @@ $catalog-gird-item__price-margin            : 0 0 $spacer 0 !default;
 
     &__price {
         padding: $catalog-grid-item__padding;
-        margin: $catalog-gird-item__price-margin;
+        margin: $catalog-grid-item__price-margin;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
         font-weight: $catalog-grid-item__font-weight;
@@ -160,7 +166,7 @@ $catalog-gird-item__price-margin            : 0 0 $spacer 0 !default;
     }
 
     &__primary-form {
-        margin: 0;
+        margin: $catalog-gird-item__primary-form-margin;
         @include mq($screen-m) {
             flex: 1;
         }
@@ -192,10 +198,10 @@ $catalog-gird-item__price-margin            : 0 0 $spacer 0 !default;
         justify-content: center;
         height: $catalog-grid-item__action-size;
         width: $catalog-grid-item__action-size;
-        padding: 0;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        padding: $catalog-grid-item__action-padding;
+        background: $catalog-grid-item__action-background;
+        border: $catalog-grid-item__action-border;
+        cursor: $catalog-grid-item__action-cursor;
         &:hover,
         &:focus {
             .icon {

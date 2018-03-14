@@ -30,6 +30,8 @@ $toolbar__sorter-padding               : 8px 0 !default;
 $toolbar__sorter-width                 : 200px !default;
 $toolbar__limiter-width                : 72px !default;
 $toolbar__select-margin                : 0 !default;
+$toolbar__select-height                : 32px !default;
+$toolbar__select-font-family           : $font-family-base !default;
 $toolbar__select-single-border-radius  : $spacer--medium $spacer--medium 0 0 !default;
 $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !default;
 
@@ -153,16 +155,16 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
     &__sorter-select,
     &__limiter-select {
-        height: 32px;
-        font-family: $font-family-base;
+        height: $toolbar__select-height;
+        font-family: $toolbar__select-font-family;
         @include mq($screen_m) {
-            width: 200px;
+            width: $toolbar__sorter-width;
         }
     }
 
     &__limiter-select {
         @include mq($screen_m) {
-            width: 72px;
+            width: $toolbar__limiter-width;
         }
     }
 

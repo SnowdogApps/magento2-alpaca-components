@@ -1,6 +1,7 @@
 $range__padding               : $spacer 0 0 0 !default;
 $range__margin                : 0 0 $spacer--medium 0 !default;
 $range__height                : 8px !default;
+$range__input-margin          : 0 !default;
 $range__connect-border-radius : 0 !default;
 $range__handler-width         : 24px !default;
 $range__handler-height        : 24px !default;
@@ -17,6 +18,7 @@ $range__track-box-shadow      : none !default;
 $range__dash-padding          : 0 $spacer--medium 0 $spacer !default;
 $range__suffix-padding        : 0 $spacer !default;
 $range__button-padding        : 0 $spacer--extra-large !default;
+$range__button-margin         : 0 0 $spacer--medium 0 !default;
 
 .range-filter {
     padding: $range__padding;
@@ -42,10 +44,10 @@ $range__button-padding        : 0 $spacer--extra-large !default;
     &__input {
         width: auto;
         flex-grow: 1;
-        margin-bottom: 0;
+        margin: $range__input-margin;
     }
     &__button {
-        margin: $range__margin;
+        margin: $range__button-margin;
         padding: $range__button-padding;
     }
 }
