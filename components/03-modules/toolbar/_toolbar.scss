@@ -1,33 +1,37 @@
-$toolbar__border                   : 1px solid $gray-light !default;
-$toolbar__dropdown-icon-area-border: none !default;
-$toolbar__dropdown-icon-area-size  : 32px !default;
-$toolbar__dropdown-icon-color      : $gray !default;
-$toolbar__dropdown-icon-size       : 12px !default;
-$toolbar__dropdown-icon-area-margin: 0 !default;
-$toolbar__dropdown-icon-area-right : 0 !default;
-$toolbar__dropdown-icon-area-top   : 2px !default;
-$toolbar__offset                   : $spacer !default;
-$toolbar__secondary-text-color     : $gray !default;
-$toolbar__icon-color               : $gray-light !default;
-$toolbar__icon-color--active       : $black !default;
-$toolbar__mode-icon-area-size      : 48px !default;
-$toolbar__mode-icon-margin         : 0 auto !default;
-$toolbar__mode-icon-padding        : 0 !default;
-$toolbar__mode-icon-border         : none !default;
-$toolbar__mode-icon-background     : none !default;
-$toolbar__mode-icon-cursor         : pointer !default;
-$toolbar__mode-icon-size           : 18px !default;
-$toolbar__mode-margin-right        : $spacer !default;
-$toolbar__select-border            : 1px solid $gray-light !default;
-$toolbar__select-border-radius     : $form-elements-radius !default;
-$toolbar__select-padding-right     : $spacer--medium !default;
-$toolbar__select-field-item-color  : $gray-darker !default;
-$toolbar__select-field-item-height : 32px !default;
-$toolbar__sorter-border-top        : 1px solid $gray-light !default;
-$toolbar__sorter-padding           : 8px 0 !default;
-$toolbar__sorter-width             : 200px !default;
-$toolbar__limiter-width            : 72px !default;
-$toolbar__select-margin            : 0 !default;
+$toolbar__border                       : 1px solid $gray-light !default;
+$toolbar__dropdown-icon-area-border    : none !default;
+$toolbar__dropdown-icon-area-size      : 32px !default;
+$toolbar__dropdown-icon-color          : $gray !default;
+$toolbar__dropdown-icon-size           : 12px !default;
+$toolbar__dropdown-icon-area-margin    : 0 !default;
+$toolbar__dropdown-icon-area-right     : 0 !default;
+$toolbar__dropdown-icon-area-top       : 0 !default;
+$toolbar__offset                       : $spacer !default;
+$toolbar__secondary-text-color         : $gray !default;
+$toolbar__icon-color                   : $gray-light !default;
+$toolbar__icon-color--active           : $black !default;
+$toolbar__mode-icon-area-size          : 48px !default;
+$toolbar__mode-icon-margin             : 0 auto !default;
+$toolbar__mode-icon-padding            : 0 !default;
+$toolbar__mode-icon-border             : none !default;
+$toolbar__mode-icon-background         : none !default;
+$toolbar__mode-icon-cursor             : pointer !default;
+$toolbar__mode-icon-size               : 18px !default;
+$toolbar__mode-margin-right            : $spacer !default;
+$toolbar__select-border                : 1px solid $gray-light !default;
+$toolbar__select-border-radius         : $form-elements-radius !default;
+$toolbar__select-padding-right         : $spacer--medium !default;
+$toolbar__select-field-item-color      : $gray-darker !default;
+$toolbar__select-field-list-height     : 32px !default;
+$toolbar__select-field-list-z-index    : 4 !default;
+$toolbar__select-field-item-height     : 30px !default;
+$toolbar__sorter-border-top            : 1px solid $gray-light !default;
+$toolbar__sorter-padding               : 8px 0 !default;
+$toolbar__sorter-width                 : 200px !default;
+$toolbar__limiter-width                : 72px !default;
+$toolbar__select-margin                : 0 !default;
+$toolbar__select-single-border-radius  : $spacer--medium $spacer--medium 0 0 !default;
+$toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !default;
 
 .toolbar {
     position: relative;
@@ -123,8 +127,9 @@ $toolbar__select-margin            : 0 !default;
             }
         }
         .select__field-list {
+            z-index: $toolbar__select-field-list-z-index;
             &--single {
-                height: $toolbar__select-field-item-height;
+                height: $toolbar__select-field-list-height;
                 border: $toolbar__select-border;
                 border-radius: $toolbar__select-border-radius;
                 padding-right: $toolbar__select-padding-right;
@@ -192,6 +197,14 @@ $toolbar__select-margin            : 0 !default;
         }
     }
     .choices {
+        &.is-open {
+            .select__field-list--single {
+                border-radius: $toolbar__select-single-border-radius;
+            }
+            .choices__list--dropdown {
+                border-radius: $toolbar__select-dropdown-border-radius;
+            }
+        }
         &.is-open:after,
         &:after {
             top: $toolbar__dropdown-icon-area-top;
