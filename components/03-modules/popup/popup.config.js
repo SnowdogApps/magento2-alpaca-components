@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     class: '',
-    popupId: 'popup-1',
+    popupId: 'popup-minicart',
     content: 'button',
     popupTrigger: true,
     buttonClose: {

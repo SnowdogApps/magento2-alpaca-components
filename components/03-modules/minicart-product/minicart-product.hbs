@@ -4,7 +4,9 @@
     </div>
     <div class="minicart-product__info">
         <h3 class="minicart-product__name">
-            {{ productName }}
+            <a class="link link--invert minicart-product__link" href="#">
+                {{ productName }}
+            </a>
         </h3>
         {{#if configurable }}
             {{ render '@dropdown-list' attributes }}
@@ -14,7 +16,10 @@
         </div>
         <div class="minicart-product__bottom">
             <div class="minicart-product__qty">
-                {{ productQty }}
+                {{ render '@input' productQty }}
+                {{#if updateQty }}
+                    {{ render '@button' updateQty }}
+                {{/if}}
             </div>
             <div class="minicart-product__actions">
                 {{ render '@button--icon' editIcon }}
