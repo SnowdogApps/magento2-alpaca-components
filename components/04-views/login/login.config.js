@@ -1,6 +1,18 @@
 module.exports = {
   context: {
-    title: 'Customer login',
+    mainHeading: {
+      tag: 'h1',
+      class: 'heading heading--page',
+      text: 'Customer login'
+    },
+    formHeading: {
+      tag: 'h3',
+      text: 'Registered Customer'
+    },
+    linkHeading: {
+      tag: 'h3',
+      text: 'Registered Customer'
+    },
     signInInfo: 'If you have an account, sign in with your email address.',
     createAccountInfo: 'Creating an account has many benefits: check out faster, keep more than one address, track orders and more.',
     email: {
@@ -43,8 +55,8 @@ module.exports = {
       text: 'Sign in'
     },
     createAccountButton: {
-      class: 'login__button',
-      tag: 'button',
+      class: 'button--link login__button login__button--create-accunt',
+      tag: 'a',
       text: 'Create an Account'
     },
     forgetPassword: {
@@ -87,10 +99,5 @@ module.exports = {
       ],
       alt: 'Description of image'
     }
-  },
-  variants: [
-    {
-      name: 'without-banner',
-    }
-  ]
+  }
 };
