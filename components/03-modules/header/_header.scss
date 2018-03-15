@@ -1,119 +1,80 @@
-$header__margin                : 4px 0 !default;
-$header__margin--xl            : 0 !default;
-$header__border-color          : $gray !default;
-$header__font-size             : $font-size-small !default;
-$header__button-size           : 48px !default;
-$header__icon-size             : 24px !default;
-$header__icon-padding          : 2px !default;
-$header__icon-color            : $gray-dark !default;
+$header__border-color                  : $gray-light !default;
+
+$header__wrapper-padding               : 0 !default;
+$header__wrapper-padding--medium       : 12px 0 !default;
+
+$header__logo-padding                  : 12px 0 12px $spacer !default;
+$header__logo-padding--medium          : 0 0 0 $spacer !default;
+
+$header__menu-trigger-size             : 48px !default;
+
+$header__buttons-width                 : calc(100% - 48px)  !default;
+$header__buttons-width--medium         : calc(4 * 48px + 3 * #{$spacer}) !default;
+$header__buttons-width--extra-large    : calc(4 * 48px + 3 * #{$spacer--medium}) !default;
+
+$header__search-wrapper-padding        : 0 0 0 24px !default;
+$header__search-wrapper-padding--medium: 0 24px !default;
 
 .header {
     position: relative;
-    border-bottom: 1px solid $header__border-color;
 
     &__wrapper {
+        position: relative;
         justify-content: space-between;
         display: flex;
         flex-flow: row wrap;
-        margin: $header__margin--xl;
-        @include mq($screen-xl) {
-            margin: $header__margin;
+        padding: $header__wrapper-padding;
+        border-bottom: 1px solid $header__border-color;
+        @include mq($screen-m) {
+            padding: $header__wrapper-padding--medium;
         }
     }
 
     &__logo {
-        order: 2;
-        margin-left: 8px;
-        @include mq($screen-xl) {
-            margin: 0 auto 0 0;
-        }
-    }
-
-    &__featured-info {
-        display: none;
-        flex-direction: row;
         order: 3;
-        margin-right: 16px;
-        margin-left: auto;
-        @include mq($screen-xl) {
-            display: flex;
-        }
-    }
-
-    &__icons {
-        display: flex;
-        order: 3;
-        flex: 1 65%;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: flex-end;
-        @include mq($screen-s) {
-            flex: 1 70%;
-        }
+        padding: $header__logo-padding;
+        border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
-            order: 4;
-            flex: 1 168px;
-            max-width: 168px;
+            padding: $header__logo-padding--medium;
+            border-top: none;
         }
-        @include mq($screen-xl) {
-            flex: 1 48px;
-            max-width: 48px;
-        }
-
-        &-item {
-            margin-right: 8px;
-            padding: $header__font-size;
-            @include mq($screen-xl) {
-                display: none;
-            }
-        }
-    }
-
-    &__icon {
-        display: block;
-        width: $header__icon-size;
-        height: $header__icon-size;
-        padding: $header__icon-padding;
-        fill: $header__icon-color;
-        cursor: pointer;
     }
 
     &__menu-trigger {
         display: flex;
-        flex: 1 20%;
-        order: 4;
-        height: 49px;
-        border-top: 1px solid $header__border-color;
-        @include mq($screen-m) {
-            order: 1;
-            flex: 1 $header__button-size;
-            height: $header__button-size;
-            max-width: $header__button-size;
-            border-top: none;
-        }
+        order: 1;
+        flex: 1 $header__menu-trigger-size;
+        height: $header__menu-trigger-size;
+        max-width: $header__menu-trigger-size;
+        border-top: none;
         @include mq($screen-xl) {
             display: none;
+        }
+
+        &--active {
+            .header-button__icon--open {
+                display: none;
+            }
+            .header-button__icon--close {
+                display: block;
+            }
         }
     }
 
     &__search-wrapper {
         display: flex;
         flex-flow: column nowrap;
-        flex: 1 70%;
+        flex: 1 50%;
         order: 5;
         justify-content: center;
-        width: 100%;
+        padding: $header__search-wrapper-padding;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
             order: 3;
-            flex: 1 300px;
             flex-direction: column;
             justify-content: center;
+            padding: $header__search-wrapper-padding--medium;
             border-top: none;
-        }
-        @include mq($screen-xl) {
-            max-width: 300px;
-            margin-right: 24px;
         }
     }
 
@@ -121,7 +82,30 @@ $header__icon-color            : $gray-dark !default;
         position: relative;
     }
 
-    &--menu-open {
-        overflow: visible;
+    &__minicart-content {
+        top: calc(100% - 1px);
+        &.popup {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        order: 2;
+        flex: 1 $header__buttons-width;
+        max-width: $header__buttons-width;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        @include mq($screen-m) {
+            order: 4;
+            flex: 1 $header__buttons-width--medium;
+            max-width: $header__buttons-width--medium;
+        }
+        @include mq($screen-xl) {
+            flex: 1 $header__buttons-width--extra-large;
+            max-width: $header__buttons-width--extra-large;
+        }
     }
 }

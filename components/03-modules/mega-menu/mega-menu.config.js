@@ -16,25 +16,25 @@ module.exports = {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               }
             ]
           },
@@ -47,25 +47,25 @@ module.exports = {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: 'mega-menu__inner-item mega-menu__inner-item--level2',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               }
             ]
           }
@@ -91,25 +91,25 @@ module.exports = {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               }
             ]
           },
@@ -122,25 +122,25 @@ module.exports = {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               },
               {
                 class: '',
                 text: 'Lorem ipsum',
                 link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
+                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
               }
             ]
           }

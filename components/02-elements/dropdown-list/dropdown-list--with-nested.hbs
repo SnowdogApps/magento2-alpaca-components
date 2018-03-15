@@ -9,8 +9,7 @@
                 "
             >
                 <a {{{ itemAttributes }}}
-                   class="dropdown-list__label"
-                   aria-label="{{ title }}"
+                   class="dropdown-list__label {{ class }}"
                    {{#if id }}
                         data-dropdown="{{ id }}"
                         aria-controls="{{ id }}"
@@ -18,9 +17,7 @@
                 >
                     {{ title }}
                     {{#if collapse }}
-                        <svg class="dropdown-list__icon">
-                            <use xlink:href="{{ svg 'angle-down' }}"></use>
-                        </svg>
+                        {{ render '@icon' collapse }}
                     {{/if}}
                 </a>
 
@@ -45,8 +42,7 @@
                                 "
                             >
                                 <a {{{ itemAttributes }}}
-                                   class="dropdown-list__inner-label"
-                                   aria-label="{{ itemName }}"
+                                   class="dropdown-list__inner-label {{ class }}"
                                    {{#if id }}
                                         data-dropdown="{{ id }}"
                                    {{/if}}
@@ -55,9 +51,7 @@
                                     {{ itemName }}
 
                                     {{#if collapse }}
-                                        <svg class="dropdown-list__icon dropdown-list__icon--inner">
-                                            <use xlink:href="{{ svg 'angle-down' }}"></use>
-                                        </svg>
+                                        {{ render '@icon' collapse }}
                                     {{/if}}
                                 </a>
 

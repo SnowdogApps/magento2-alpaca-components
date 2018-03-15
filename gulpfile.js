@@ -13,6 +13,7 @@ const autoprefixer = require('autoprefixer'),
       logger       = fractal.cli.console,
       mandelbrot   = require('@frctl/mandelbrot'),
       notify       = require('gulp-notify'),
+      path         = require('path'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
       reporter     = require('postcss-reporter'),
@@ -57,6 +58,7 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
     sync: true,
     port: 4000
   });
+
   server.on('error', err => logger.error(err.message));
 
   return server.start().then(() => {
@@ -64,12 +66,15 @@ gulp.task('fractal:start', ['inheritance', 'svg-sprite', 'sass', 'watch'], () =>
   });
 });
 
+
 gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
   const builder = fractal.web.builder();
 
-  builder.on('progress', (completed, total) => {
-    return logger.update(`Exported ${completed} of ${total} items`, 'info');
-  });
+  if (!util.env.ci) {
+    builder.on('progress', (completed, total) => {
+      return logger.update(`Exported ${completed} of ${total} items`, 'info');
+    });
+  }
 
   builder.on('error', err => logger.error(err.message));
 
@@ -79,6 +84,11 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
 });
 
 // Gulp tasks
+gulp.task('a11y', () => {
+  fractal.components.set('default.preview', '@a11y-tests');
+  runSequence('fractal:start');
+});
+
 gulp.task('watch', () => {
   gulp.watch([
     fractal.components.get('path') + '/**/*.scss',
@@ -235,22 +245,23 @@ gulp.task('inheritance', done => {
         );
       }
     });
-
   if (fs.existsSync('./modules.json')) {
     const modules = require('./modules.json');
 
     // Go through array of module paths
-    modules.forEach(path => {
+    modules.forEach(src => {
+      src = path.resolve(src);
+
       // Find all module files
       globby
         .sync([
-          path + '/' + components + '/**',
-          path + '/' + docs + '/**',
-          path + '/' + static + '/**'
+          src + '/' + components + '/**',
+          src + '/' + docs + '/**',
+          src + '/' + static + '/**'
         ], { nodir: true })
         .forEach(file => {
-          const srcPath = __dirname + '/' + file,
-                destPath = srcPath.replace(path, 'build');
+          const srcPath = path.resolve(file),
+                destPath = srcPath.replace(src, path.resolve('build'));
 
           // Symlink all module files to build dir
           if (util.env.ci) {

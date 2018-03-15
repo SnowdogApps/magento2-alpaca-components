@@ -1,29 +1,31 @@
-{{ render '@header' }}
+<div class="page-wrapper">
+    {{ render '@header' }}
 
-<div class="dashboard container">
-    <div class="grid">
-        <div class="grid__column grid__column--1-4 dashboard__sidebar">
-            {{ render '@dashboard-nav' }}
-        </div>
-
-        <div class="grid__column grid__column--3-4 dashboard__content">
-            <h2 class="heading heading--fourth-level dashboard__title">
-                {{ title }}
-            </h2>
-
-            <div class="grid">
-                {{> '@information' info }}
+    <div class="dashboard container">
+        <div class="grid">
+            <div class="grid__column grid__column--1-4 dashboard__sidebar">
+                {{ render '@dashboard-nav' }}
             </div>
 
-            {{> '@input' contactEmailAddress }}
+            <div class="grid__column grid__column--3-4 dashboard__content">
+                <h2 class="heading heading--fourth-level dashboard__title">
+                    {{ title }}
+                </h2>
 
-            {{> '@dashboard-form' form }}
+                <div class="grid">
+                    {{> '@information' info }}
+                </div>
 
-            {{> '@action' addReturnItem }}
+                {{> '@input' contactEmailAddress }}
 
-            {{> '@input--textarea' comments }}
+                {{> '@dashboard-form' form }}
 
-            {{> '@action' action }}
+                {{> '@action' addReturnItem }}
+
+                {{> '@input--textarea' comments }}
+
+                {{> '@action' action }}
+            </div>
         </div>
     </div>
 </div>

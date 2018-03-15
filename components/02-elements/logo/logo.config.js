@@ -1,4 +1,12 @@
 module.exports = {
   title: 'Logo',
-  class: ''
+  context: {
+    class: '',
+    ariaLabel: 'Homepage',
+    imageAlt: 'Alpaca Logo',
+    imageAttributes: '',
+    imageClass: '',
+    imageSrc: '/images/logo/alpaca.svg',
+    href: '#'
+  }
 };

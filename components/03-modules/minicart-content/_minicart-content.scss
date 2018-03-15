@@ -1,6 +1,5 @@
-$minicart-content__font-size                : $font-size-small !default;
-$minicart-content__font-size--large         : $font-size-base !default;
-$minicart-content__border                   : 1px solid $gray !default;
+$minicart-content__font-size                : $font-size-base !default;
+$minicart-content__border                   : 1px solid $gray-light !default;
 
 $minicart-content__top-bar-height           : 8px !default;
 $minicart-content__top-bar-background       : $gray-light !default;
@@ -11,6 +10,7 @@ $minicart-content__total-margin             : $spacer--medium 0 !default;
 $minicart-content__total-padding            : 0 $spacer--medium !default;
 
 $minicart-content__summary-font-weight      : $font-weight-bold !default;
+$minicart-content__summary-color            : $color-secondary !default;
 
 $minicart-content__actions-padding          : 0 $spacer--medium !default;
 
@@ -19,9 +19,10 @@ $minicart-content__edit-font-weight         : $font-weight-bold !default;
 $minicart-content__edit-text-decoration     : none !default;
 
 $minicart-content__products-list-padding    : 0 $spacer--medium !default;
-$minicart-content__products-list-margin     : $spacer--medium 0 0 0 !default;
+$minicart-content__products-list-margin     : $spacer 0 0 0 !default;
 
 .minicart-content {
+    height: auto !important;
     max-height: calc(100vh - 90px);
     font-size: $minicart-content__font-size;
     overflow-y: auto;
@@ -56,25 +57,20 @@ $minicart-content__products-list-margin     : $spacer--medium 0 0 0 !default;
 
         &-counter {
             align-self: flex-start;
-            font-size: $minicart-content__font-size--large;
         }
     }
 
     &__summary {
         text-align: right;
-        font-size: $minicart-content__font-size--large;
+    }
 
-        &-value {
-            font-weight: $minicart-content__summary-font-weight;
-        }
+    &__summary-value {
+        font-weight: $minicart-content__summary-font-weight;
+        color: $minicart-content__summary-color;
     }
 
     &__actions {
         padding: $minicart-content__actions-padding;
-    }
-
-    &__checkout {
-        font-size: $minicart-content__font-size;
     }
 
     &__edit {

@@ -1,6 +1,6 @@
-# Alpaca Components
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/SnowdogApps/magento2-alpaca-components.svg)](https://greenkeeper.io/)
+
+# Alpaca Components
 [Design system](https://www.uxpin.com/studio/blog/design-systems-vs-pattern-libraries-vs-style-guides-whats-difference/) created to speed up the process of working with design on Magento 2 stores, by creating each UI element, module, and view in an simplified, front-end developer friendly, environment.
 
 Magento 2 experience isn't required to work with this code.
@@ -20,3 +20,8 @@ Components documentation is built on top of [Fractal.js](http://fractal.build/gu
 
 ## Preview / Demo
 - Develop branch - https://alpaca-components-staging.herokuapp.com/
+
+## Accessibility tests
+- `gulp a11y` - run local development server with accessibility tests
+- if on some view there is no a11y message, please go to the component's config and comment line:
+`preview: '@docs-only-styles',` - server restart not needed

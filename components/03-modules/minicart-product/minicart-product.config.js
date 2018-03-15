@@ -7,17 +7,42 @@ module.exports = {
     },
     productName: 'Some product name',
     productPrice: '$85.00',
-    productQty: 'Qty: 32',
+    productQty: {
+      class: 'input--inline minicart-product__input',
+      label: {
+        class: 'minicart-product__label',
+        text: 'Qty:',
+        hidden: false
+      },
+      field: {
+        attributes: 'aria-label="Change the quantity" min="1"',
+        class: 'minicart-product__field',
+        id: 'mini-qty',
+        name: 'mini-qty',
+        placeholder: '32',
+        type: 'text'
+      }
+    },
+    updateQty: {
+      tag: 'button',
+      text: 'Update',
+      class: 'button--secondary minicart-product__update',
+      attributes: 'type="button"'
+    },
     attributes: {
+      script: true,
       class: 'minicart-product__attributes',
       dropdowns: [
         {
           itemTag: 'button',
           class: 'minicart-product__attributes-button',
           itemAttributes: 'aria-expanded="false" aria-controls="see-details"',
-          title: 'See details',
+          title: 'See Details',
           id: 'see-details',
-          collapse: true,
+          collapse: {
+            class: 'dropdown-list__icon',
+            iconId: 'angle-down'
+          },
           contentElement: 'list--description',
           contentContext: {
             listTag: 'ul',
@@ -40,12 +65,12 @@ module.exports = {
     qtyInput: {
       class: 'input--inline minicart-product__qty-input',
       label: {
-        attribute: '',
+        attributes: '',
         text: 'Qty:',
         class: 'minicart-product__qty-label'
       },
       field: {
-        attribute: 'type="number" value="1"',
+        attributes: 'type="number" value="1"',
         class: 'minicart-product__qty-input',
         placeholder: 'Qty'
       }

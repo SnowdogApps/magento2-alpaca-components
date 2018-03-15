@@ -1,0 +1,29 @@
+<div class="page-wrapper">
+    {{ render '@header' }}
+
+    <main class="container">
+        {{ render '@breadcrumbs' }}
+        <div class="catalog-list">
+            <div class="catalog-list__sidebar">
+                {{ render '@filters' }}
+            </div>
+            <div class="catalog-list__products">
+                {{ render '@toolbar' }}
+                <ul class="catalog-grid">
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' }}
+                </ul>
+                {{ render '@pager' }}
+            </div>
+        </div>
+    </main>
+</div>
+
+{{ render '@footer' }}
