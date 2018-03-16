@@ -96,7 +96,6 @@ module.exports = {
     },
     password: {
       attributes: '',
-      class: 'registration__input registration__input--password',
       label: {
         attributes: '',
         text: 'Password',
@@ -129,11 +128,8 @@ module.exports = {
       }
     },
     passwordStrength: {
-      class: 'registration__password-strength password-strength--none',
       text: 'Password Strength:',
-      noPassword: 'No Password',
-      strengthProgressClass: 'registration__password-strength-progress',
-      strengthIndicatorClass: 'registration__password-strength-indicator'
+      noPassword: 'No Password'
     },
     registrationButton: {
       tag: 'button',
