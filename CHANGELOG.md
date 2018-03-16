@@ -29,6 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Update accessibility features in `file-upload` component
 - Login page, removed tabs and set two columns
 - Aria-label values
+- Registration view
 
 ### Removed
 - Old catalog product modules and catalog views
