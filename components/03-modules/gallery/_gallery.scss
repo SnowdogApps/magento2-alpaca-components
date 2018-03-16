@@ -90,7 +90,7 @@ $gallery__thumb-width--large               : 80px !default;
         height: $gallery__thumb-arrow-height;
         display: flex;
         justify-content: center;
-        align-content: center;
+        align-items: center;
         margin: 0 auto;
         &:hover {
             cursor: pointer;
@@ -113,5 +113,20 @@ $gallery__thumb-width--large               : 80px !default;
         position: absolute;
         left: $gallery__label-offset-left;
         top: $gallery__label-offset-top;
+    }
+
+    &-placeholder {
+        position: relative;
+
+        & .loader {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 64px;
+            height: 64px;
+            margin: auto;
+        }
     }
 }
