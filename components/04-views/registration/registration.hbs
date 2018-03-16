@@ -20,7 +20,7 @@
                     >
                         {{ personalSection.legend.text }}
                     </legend>
-
+                    {{ render '@divider' headingDivider }}
                     {{ render '@input' firstName }}
                     {{ render '@input' lastName }}
                     {{ render '@checkbox' newsletterCheckbox }}
@@ -41,6 +41,7 @@
                     >
                         {{ signInSection.legend.text }}
                     </legend>
+                    {{ render '@divider' headingDivider }}
                     {{ render '@input' email }}
                     <div class="registration__input">
                         {{ render '@input' password }}

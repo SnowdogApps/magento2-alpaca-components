@@ -5,6 +5,9 @@ module.exports = {
       class: 'heading heading--page',
       text: 'Create new customer account'
     },
+    headingDivider: {
+      class: 'registration__divider'
+    },
     personalSection: {
       fieldset: {
         attributes: '',
