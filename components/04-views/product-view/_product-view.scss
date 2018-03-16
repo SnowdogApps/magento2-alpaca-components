@@ -147,6 +147,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         }
     }
 
+    &__form {
+        width: 100%;
+    }
+
     &__gallery {
         order: $product-view__order-gallery;
         width: 100%;
@@ -178,9 +182,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     &__secondary-details {
-        order: $product-view__order-secondary-details;
         display: flex;
         flex-wrap: wrap;
+        order: $product-view__order-secondary-details;
+        width: 100%;
         @include mq($screen-m) {
             display: block;
             width: $product-view__col-right-width;
