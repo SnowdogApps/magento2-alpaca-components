@@ -25,6 +25,12 @@ $icon__inactive-color           : '#c2c1df' !default;
                 display: block;
             }
         }
+
+        &--active {
+            ~ .rating__rate-item span:before {
+                display: block;
+            }
+        }
     }
     &__star {
         position: relative;
@@ -79,12 +85,14 @@ $icon__inactive-color           : '#c2c1df' !default;
                 display: none;
             }
             .rating__star--rate:hover &,
-            .rating__star--rate:focus & {
+            .rating__star--rate:focus &,
+            .rating__rate-item--active & {
                 display: block;
             }
 
             .rating__star--rate:hover &,
-            .rating__star--rate:focus & {
+            .rating__star--rate:focus &,
+            .rating__rate-item--active & {
                 display: block;
             }
         }
