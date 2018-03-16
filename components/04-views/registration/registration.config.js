@@ -1,6 +1,10 @@
 module.exports = {
   context: {
-    title: 'Create new customer account',
+    mainHeading: {
+      tag: 'h1',
+      class: 'heading heading--page',
+      text: 'Create new customer account'
+    },
     personalSection: {
       fieldset: {
         attributes: '',
