@@ -13,22 +13,25 @@ $icon__inactive-color           : '#c2c1df' !default;
         display: flex;
         justify-content: center;
         align-items: center;
-        direction: rtl;
     }
+
+    &:hover,
+    &:focus {
+        .rating__rate-item span:before,
+        .rating__rate-item--active span:before {
+            display: block;
+        }
+    }
+
     &__rate-item {
         position: relative;
         flex: 1 0 $rating__item-size;
         overflow: hidden;
+
         &:hover,
         &:focus {
             ~ .rating__rate-item span:before {
-                display: block;
-            }
-        }
-
-        &--active {
-            ~ .rating__rate-item span:before {
-                display: block;
+                display: none;
             }
         }
     }
