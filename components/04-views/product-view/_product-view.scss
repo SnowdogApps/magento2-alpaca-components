@@ -115,6 +115,17 @@ $product-view__slider-heading-text-transform            : uppercase !default;
 $product-view__tabs-margin-bottom                       : 14px !default;
 $product-view__tabs-margin-bottom\@medium               : 72px !default;
 
+$product-view__additional-content-margin-bottom\@medium : 72px !default;
+
+$product-view__review-item-padding                      : $spacer--large 0 !default;
+$product-view__review-item-border                       : 1px solid $gray-light !default;
+$product-view__review-details-margin-bottom             : $spacer--medium !default;
+$product-view__review-author-margin-bottom              : $spacer !default;
+$product-view__review-date-margin-bottom                : $spacer !default;
+$product-view__review-date-font-size                    : $font-size-small !default;
+$product-view__review-date-color                        : $gray-light !default;
+$product-view__review-content-title-font-weight         : $font-weight-bold !default;
+
 $product-view__wrapper-margin-bottom                    : $spacer--large !default;
 $product-view__wrapper-margin-bottom\@medium            : 40px !default;
 
@@ -499,16 +510,16 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
 
     &__review-item {
         width: 100%;
-        padding: $spacer--large 0;
-        border-top: 1px solid $gray-light;
+        padding: $product-view__review-item-padding;
+        border-top: $product-view__review-item-border;
 
         &:last-child {
-            border-bottom: 1px solid $gray-light;
+            border-bottom: $product-view__review-item-border;
         }
     }
 
     &__review-details {
-        margin-bottom: $spacer--medium;
+        margin-bottom: $product-view__review-details-margin-bottom;
 
         @include mq($screen-m) {
             margin-bottom: 0;
@@ -516,17 +527,17 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     &__review-author {
-        margin-bottom: $spacer;
+        margin-bottom: $product-view__review-author-margin-bottom ;
     }
 
     &__review-date {
-        margin-bottom: $spacer;
-        font-size: $font-size-small;
-        color: $gray-light;
+        margin-bottom: $product-view__review-date-margin-bottom;
+        font-size: $product-view__review-date-font-size;
+        color: $product-view__review-date-color;
     }
 
     &__review-content-title {
-        font-weight: $font-weight-bold;
+        font-weight: $product-view__review-content-title-font-weight;
     }
 
     &__review-title {
