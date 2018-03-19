@@ -491,6 +491,49 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         }
     }
 
+    &__review {
+        @include mq($screen-m) {
+            width: 430px;
+        }
+    }
+
+    &__review-item {
+        width: 100%;
+        padding: $spacer--large 0;
+        border-top: 1px solid $gray-light;
+
+        &:last-child {
+            border-bottom: 1px solid $gray-light;
+        }
+    }
+
+    &__review-details {
+        margin-bottom: $spacer--medium;
+
+        @include mq($screen-m) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__review-author {
+        margin-bottom: $spacer;
+    }
+
+    &__review-date {
+        margin-bottom: $spacer;
+        font-size: $font-size-small;
+        color: $gray-light;
+    }
+
+    &__review-content-title {
+        font-weight: $font-weight-bold;
+    }
+
+    &__review-title {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
     &__slider {
         margin-bottom: $product-view__slider-margin-bottom;
         @include mq($screen-m) {
