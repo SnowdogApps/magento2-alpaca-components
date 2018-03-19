@@ -573,8 +573,11 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
 
     &__additional-content {
         display: none;
+
         @include mq($screen-m) {
             display: block;
+            margin-bottom: $product-view__additional-content-margin-bottom\@medium;
+
         }
     }
     &__grid-item {
