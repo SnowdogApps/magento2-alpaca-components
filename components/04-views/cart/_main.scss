@@ -6,16 +6,23 @@ $cart__bottom-margin  : 0 !default;
 $cart__bottom-padding : $spacer 0 0 0 !default;
 
 .cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: ($cart__margin * 2);
     &__main-col {
-        @include mq($screen-s, 1024px) {
-            flex-basis: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        @include mq(1024px) {
+            @include grid-column-width(4, 6);
         }
     }
 
     &__summary-col {
-        @include mq($screen-s, 1024px) {
-            flex-basis: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        @include mq(1024px) {
+            @include grid-column-width(2, 6);
         }
     }
 
