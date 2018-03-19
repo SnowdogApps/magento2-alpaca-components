@@ -63,8 +63,7 @@ $icon__inactive-color           : '#c2c1df' !default;
 
     &:hover,
     &:focus {
-        .rating__rate-item span:before,
-        .rating__rate-item--active span:before {
+        .rating__rate-item span:before{
             display: block;
         }
     }
@@ -133,12 +132,6 @@ $icon__inactive-color           : '#c2c1df' !default;
             .rating__star--rate & {
                 display: none;
             }
-            .rating__star--rate:hover &,
-            .rating__star--rate:focus &,
-            .rating__rate-item--active & {
-                display: block;
-            }
-
             .rating__star--rate:hover &,
             .rating__star--rate:focus &,
             .rating__rate-item--active & {
