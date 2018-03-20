@@ -86,11 +86,11 @@ $gallery__thumb-width--large               : 80px !default;
         }
     }
     &__thumb-arr {
-        width: $gallery__thumb-arrow-width;
-        height: $gallery__thumb-arrow-height;
-        display: flex;
+        display: flex !important;
         justify-content: center;
         align-items: center;
+        width: $gallery__thumb-arrow-width;
+        height: $gallery__thumb-arrow-height;
         margin: 0 auto;
         &:hover {
             cursor: pointer;
