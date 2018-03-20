@@ -97,7 +97,8 @@ $swatch__option-image-margin--small  : $spacer !default;
             margin-right: 0;
         }
 
-        &--active {
+        &--active,
+        &.selected {
             border-color: $swatch__option-border-color--active;
         }
     }
