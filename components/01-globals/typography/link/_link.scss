@@ -15,6 +15,7 @@ $link__color-hover--invert: $blue !default;
     font-family: $link__font-family;
     font-weight: $link__font-weight;
     line-height: $link__line-height;
+    text-decoration: none;
 
     &:hover,
     &:focus {
@@ -27,6 +28,15 @@ $link__color-hover--invert: $blue !default;
         &:hover,
         &:focus {
             color: $link__color-hover--invert;
+        }
+    }
+
+    &--secondary {
+        color: $gray-lighter;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
         }
     }
 
