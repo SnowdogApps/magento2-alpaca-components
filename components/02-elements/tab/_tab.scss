@@ -87,6 +87,16 @@ $tab__icon-size                       : 48px !default;
                 fill: $tab__icon-color--active;
             }
         }
+
+        .counter {
+            &:before {
+                content: "(";
+            }
+
+            &:after {
+                content: ")";
+            }
+        }
     }
     
     &__icon {
