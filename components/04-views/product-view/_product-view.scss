@@ -128,8 +128,8 @@ $product-view__review-date-color                        : $gray-light !default;
 $product-view__review-content-title-font-weight         : $font-weight-bold !default;
 $product-view__review-product-name-font-weight          : $font-weight-bold !default;
 
-$product-view__wrapper-margin-bottom                    : $spacer--large !default;
-$product-view__wrapper-margin-bottom\@medium            : 40px !default;
+$product-view__wrapper-margin                           : $spacer--large 0 !default;
+$product-view__wrapper-margin\@medium                   : 40px 0 !default;
 
 .product-view {
     display: flex;
@@ -152,11 +152,11 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: $product-view__wrapper-margin-bottom;
+        margin: $product-view__wrapper-margin;
 
         @include mq($screen-m) {
             display: block;
-            margin-bottom: $product-view__wrapper-margin-bottom\@medium;
+            margin: $product-view__wrapper-margin\@medium;
         }
     }
 
