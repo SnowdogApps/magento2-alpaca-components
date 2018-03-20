@@ -23,6 +23,9 @@ module.exports = {
   },
   variants: [
     {
+      name: 'clean'
+    },
+    {
       name: 'horizontal',
       context: {
         class: 'list--horizontal'
