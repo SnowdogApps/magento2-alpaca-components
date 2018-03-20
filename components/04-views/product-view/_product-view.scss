@@ -37,6 +37,7 @@ $product-view__description-padding\@medium              : $spacer--medium 0 !def
 $product-view__description-border-top                   : 1px solid $gray-light !default;
 $product-view__description-border-bottom                : 1px solid $gray-light !default;
 $product-view__description-line-height                  : 1.7 !default;
+$product-view__description-title-font-weight            : $font-weight-bold !default;
 
 
 
@@ -125,6 +126,7 @@ $product-view__review-date-margin-bottom                : $spacer !default;
 $product-view__review-date-font-size                    : $font-size-small !default;
 $product-view__review-date-color                        : $gray-light !default;
 $product-view__review-content-title-font-weight         : $font-weight-bold !default;
+$product-view__review-product-name-font-weight          : $font-weight-bold !default;
 
 $product-view__wrapper-margin-bottom                    : $spacer--large !default;
 $product-view__wrapper-margin-bottom\@medium            : 40px !default;
@@ -244,6 +246,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             padding: $product-view__description-padding\@medium;
             margin: $product-view__description-margin\@medium;
         }
+    }
+
+    &__description-title {
+        font-weight: $product-view__description-title-font-weight;
     }
 
     &__options {
@@ -543,6 +549,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     &__review-title {
         margin-bottom: 0;
         text-transform: uppercase;
+    }
+
+    &__review-product-name {
+        font-weight: $product-view__review-product-name-font-weight;
     }
 
     &__slider {
