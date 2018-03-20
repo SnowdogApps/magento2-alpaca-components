@@ -10,12 +10,12 @@ $icon__inactive-color           : '#c2c1df' !default;
 
 .rating {
     width: $rating__size;
-    cursor: pointer;
 
     &--rate {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
 
     &--review {
