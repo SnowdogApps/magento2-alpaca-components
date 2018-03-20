@@ -22,11 +22,11 @@ $icon__inactive-color           : '#c2c1df' !default;
         width: $rating__size--review;
         margin-bottom: $rating__margin--review;
 
-        & .rating__rate-item {
+        .rating__rate-item {
             flex: 1 0 $rating__item-size--review;
         }
 
-        & .rating__star {
+        .rating__star {
             height: $rating__item-size--review;
             width: $rating__size--review;
 
@@ -45,7 +45,7 @@ $icon__inactive-color           : '#c2c1df' !default;
             }
         }
 
-        & .rating__indicator {
+        .rating__indicator {
             height: $rating__item-size--review;
             width: $rating__size--review;
 
