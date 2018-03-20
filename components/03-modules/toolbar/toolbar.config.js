@@ -1,5 +1,9 @@
 module.exports = {
   context: {
+    showMode: true,
+    showSorter: true,
+    showAmount: true,
+    showLimit: true,
     amount: {
       prefix: 'Items',
       currentRange: '1-9',
@@ -75,5 +79,34 @@ module.exports = {
       },
       suffix: ''
     }
-  }
+  },
+  variants: [
+    {
+      name: 'pager',
+      context: {
+        showPager: true,
+        pager: {
+          arrowLeftVisible: false,
+          arrowRightVisible: true,
+          pages: [
+            {
+              pageNo: 1,
+              class: 'link--invert',
+              active: false
+            },
+            {
+              pageNo: 2,
+              class: 'link--invert',
+              active: false
+            },
+            {
+              pageNo: 3,
+              class: 'link--invert',
+              active: false
+            }
+          ]
+        }
+      }
+    }
+  ]
 }

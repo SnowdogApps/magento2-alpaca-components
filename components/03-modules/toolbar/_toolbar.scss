@@ -27,10 +27,10 @@ $toolbar__sorter-padding           : 8px 0 !default;
     flex: 0 0 auto;
     align-items: left;
     justify-content: space-between;
-    flex-direction: column;
+    flex-wrap: wrap;
+
     @include mq($screen-m) {
         align-items: center;
-        flex-direction: row;
         justify-content: flex-start;
     }
 
@@ -40,6 +40,10 @@ $toolbar__sorter-padding           : 8px 0 !default;
     &__sorter {
         flex: 0 0 auto;
         align-items: center;
+    }
+
+    &__pager {
+        width: 100%;
     }
 
     &__amount {
@@ -55,6 +59,18 @@ $toolbar__sorter-padding           : 8px 0 !default;
             // sass-lint:enable no-css-comments
             justify-content: center;
             display: flex;
+        }
+
+        &--visible {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            padding: $spacer 0;
+
+            @include mq($screen-m) {
+                flex: 1 0 0;
+            }
         }
     }
 
@@ -158,6 +174,17 @@ $toolbar__sorter-padding           : 8px 0 !default;
             top: auto;
             right: auto;
             width: auto;
+        }
+
+        &--relative {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: flex-end;
+
+            @include mq($screen-m) {
+                padding: $spacer 0;
+            }
         }
     }
 
