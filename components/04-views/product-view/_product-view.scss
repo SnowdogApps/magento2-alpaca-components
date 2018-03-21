@@ -96,9 +96,8 @@ $product-view__stock-color--alert                       : $red !default;
 $product-view__stock-font-weight\@medium                : $font-weight-bold !default;
 
 $product-view__swatch-margin-bottom                     : $spacer--medium !default;
-$product-view__swatch-option-height                     : 32px !default;
+$product-view__swatch-option-spacing                    : 48px !default;
 $product-view__swatch-option-height--attributes         : 64px !default;
-$product-view__swatch-option-width                      : 32px !default;
 $product-view__swatch-option-width--attributes          : 54px !default;
 $product-view__swatch-option-margin-right               : $spacer--medium !default;
 $product-view__swatch-option-title-font-size            : $font-size-base !default;
@@ -113,8 +112,8 @@ $product-view__slider-heading-font-size                 : 24px !default;
 $product-view__slider-heading-font-size-weight          : $font-weight-bold;
 $product-view__slider-heading-text-transform            : uppercase !default;
 
-$product-view__tabs-margin-bottom                       : 14px !default;
-$product-view__tabs-margin-bottom\@medium               : 72px !default;
+$product-view__tabs-margin                              : 0 (-$spacer) 14px (-$spacer) !default;
+$product-view__tabs-margin\@medium                      : 0 0 72px 0 !default;
 
 $product-view__additional-content-margin-bottom\@medium : 72px !default;
 
@@ -261,8 +260,8 @@ $product-view__wrapper-margin\@medium                   : 40px 0 !default;
     }
 
     .swatch__option {
-        width: $product-view__swatch-option-width;
-        height: $product-view__swatch-option-height;
+        width: $product-view__swatch-option-spacing;
+        height: $product-view__swatch-option-spacing;
         margin-right: $product-view__swatch-option-margin-right;
         min-height: 0;
         min-width: 0;
@@ -276,9 +275,9 @@ $product-view__wrapper-margin\@medium                   : 40px 0 !default;
         font-weight: $product-view__swatch-option-title-font-weight;
     }
     &__tabs {
-        margin-bottom: $product-view__tabs-margin-bottom;
+        margin: $product-view__tabs-margin;
         @include mq($screen-m) {
-            margin-bottom: $product-view__tabs-margin-bottom\@medium;
+            margin: $product-view__tabs-margin\@medium;
         }
     }
     &__tab {
