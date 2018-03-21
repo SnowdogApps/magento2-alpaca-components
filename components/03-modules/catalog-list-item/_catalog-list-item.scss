@@ -66,13 +66,13 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
             flex: 1 $catalog-list-item__image-width\@medium;
             height: $catalog-list-item__image-height\@medium;
         }
-    }
 
-    &__image {
-        width: $catalog-list-item__image-width;
-        mix-blend-mode: multiply;
-        @include mq($screen-m) {
-            width: $catalog-list-item__image-width\@medium;
+        .image {
+            width: $catalog-list-item__image-width;
+            mix-blend-mode: multiply;
+            @include mq($screen-m) {
+                width: $catalog-list-item__image-width\@medium;
+            }
         }
     }
 

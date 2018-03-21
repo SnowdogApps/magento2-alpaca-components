@@ -68,10 +68,10 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
 
     &__image-wrapper {
         background: #f9f9f9;
-    }
 
-    &__image {
-        mix-blend-mode: multiply;
+        .image {
+            mix-blend-mode: multiply;
+        }
     }
 
     &__main {

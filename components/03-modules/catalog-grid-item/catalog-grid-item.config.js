@@ -10,7 +10,6 @@ module.exports = {
       }
     },
     image: {
-      class: 'catalog-grid-item__image',
       dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
