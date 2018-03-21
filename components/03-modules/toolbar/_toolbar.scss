@@ -39,7 +39,6 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     position: relative;
     display: flex;
     flex: 0 0 auto;
-    align-items: left;
     justify-content: space-between;
     flex-wrap: wrap;
 
@@ -84,6 +83,14 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
             @include mq($screen-m) {
                 flex: 1 0 0;
+            }
+
+            @include isIE() {
+                flex-grow: 0;
+
+                @include mq($screen-m) {
+                    flex-grow: 1;
+                }
             }
         }
     }
