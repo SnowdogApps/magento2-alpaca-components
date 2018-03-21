@@ -194,7 +194,7 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
 
     &__secondary-action {
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: center;
         height: $catalog-grid-item__action-size;
         width: $catalog-grid-item__action-size;
