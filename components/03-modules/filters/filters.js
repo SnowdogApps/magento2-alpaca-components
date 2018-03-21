@@ -4,6 +4,7 @@
   const filters = {
     init() {
       this.switcher = document.querySelector('.filters__switcher');
+      this.icon = document.querySelector('.filters__switcher-icon');
       this.filters  = document.querySelector('.filters__list');
       this.switcher.addEventListener('click', this.toggle.bind(this));
     },
@@ -19,12 +20,12 @@
     },
     show() {
       this.filters.classList.remove('filters__list--mobile-hidden');
-      this.switcher.innerText = this.switcher.dataset.stateDisplayText;
+      this.icon.classList.add('filters__switcher-icon--active');
       this.switcher.dataset.stateCurrent = 'display'
     },
     hide() {
       document.querySelector('.filters__list').classList.add('filters__list--mobile-hidden');
-      this.switcher.innerText = this.switcher.dataset.stateHiddenText;
+      this.icon.classList.remove('filters__switcher-icon--active');
       this.switcher.dataset.stateCurrent = 'hidden';
     }
   };

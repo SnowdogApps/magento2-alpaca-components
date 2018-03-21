@@ -9,15 +9,9 @@
         </div>
     </a>
 
-    <section class="
-                 catalog-grid-item__flex-wrapper
-                 catalog-grid-item__main
-             "
-    >
+    <section class="catalog-grid-item__main">
         <h2 class="catalog-grid-item__name">
-            <a href="#"
-               class="catalog-grid-item__link"
-            >
+            <a href="#" class="catalog-grid-item__link">
                 {{ name }}
             </a>
         </h2>
@@ -27,22 +21,19 @@
     </section>
 
     <section class="catalog-grid-item__details">
-        <div class="catalog-grid-item__flex-wrapper">
-            <div class="
-                     catalog-grid-item__name
-                     catalog-grid-item__name--one-line
-                 "
-            >
-                <a href="#"
-                   class="catalog-grid-item__link"
-                >
-                    {{ name }}
-                </a>
-            </div>
-
-            <div class="catalog-grid-item__price">
-                {{ render (component price.name) price.context }}
-            </div>
+        <div
+            class="
+                catalog-grid-item__name
+                catalog-grid-item__name--one-line
+            "
+        >
+            <a href="#" class="catalog-grid-item__link">
+                {{ name }}
+            </a>
+        </div>
+        {{ render '@rating' rating merge=true }}
+        <div class="catalog-grid-item__price">
+            {{ render (component price.name) price.context }}
         </div>
 
         <div class="catalog-grid-item__options">
@@ -52,7 +43,9 @@
         </div>
 
         <div class="catalog-grid-item__actions">
-            {{ render '@button' primaryAction }}
+            <form action="#" class="catalog-grid-item__primary-form">
+                {{ render '@button' primaryAction }}
+            </form>
 
             <button class="catalog-grid-item__secondary-action">
                 {{ render '@icon' secondaryActions.0.icon }}

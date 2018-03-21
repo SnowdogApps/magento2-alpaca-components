@@ -4,9 +4,15 @@ $catalog-grid-item__padding                 : 0 !default;
 $catalog-grid-item__font-size               : $font-size-small !default;
 $catalog-grid-item__font-size\@large        : $font-size-base !default;
 $catalog-grid-item__line-height             : 1.5 !default;
+$catalog-grid-item__font-weight             : $font-weight-bold !default;
+$catalog-grid-item__padding                 : 0 0 $spacer 0 !default;
 
-$catalog-grid-item__badge-left-position     : 0 !default;
 $catalog-grid-item__badge-top-position      : $spacer--medium !default;
+$catalog-grid-item__badge-left-position     : 0 !default;
+$catalog-grid-item__badge-padding           : 5px 12px !default;
+$catalog-grid-item__badge-bg-color          : $color-primary !default;
+$catalog-grid-item__badge-font-size         : $font-size-small !default;
+$catalog-grid-item__badge-border-radius     : 0 !default;
 
 $catalog-grid-item__content-bg-color        : $white !default;
 $catalog-grid-item__content-padding         : $spacer !default;
@@ -15,8 +21,22 @@ $catalog-grid-item__content-padding\@medium : $spacer--medium !default;
 $catalog-grid-item__name-color              : $font-color-base !default;
 $catalog-grid-item__name-font-weight        : $font-weight-normal !default;
 
-$catalog-grid-item__action-size             : 32px !default;
+$catalog-grid-item__rating-margin           : $spacer 0 !default;
+
+$catalog-grid-item__primary-padding         : 0 $spacer !default;
+
+$catalog-grid-item__action-size             : 48px !default;
+$catalog-grid-item__action-padding          : 0 !default;
+$catalog-grid-item__action-background       : transparent !default;
+$catalog-grid-item__action-border           : none !default;
+$catalog-grid-item__action-cursor           : pointer !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
+$catalog-grid-item__action-icon-transition  : $transition-base !default;
+$catalog-grid-item__action-icon-fill        : $green !default;
+
+$catalog-grid-item__price-margin            : 0 0 $spacer 0 !default;
+
+$catalog-gird-item__primary-form-margin     : 0 !default;
 
 .catalog-grid-item {
     position: relative;
@@ -24,9 +44,11 @@ $catalog-grid-item__action-icon-size        : 24px !default;
     padding: $catalog-grid-item__padding;
     overflow: hidden;
 
-    &:hover {
-        .catalog-grid-item__details {
-            transform: translateY(-100%);
+    @include mq($screen-m) {
+        &:hover {
+            .catalog-grid-item__details {
+                transform: translateY(-100%);
+            }
         }
     }
 
@@ -34,6 +56,10 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         position: absolute;
         top: $catalog-grid-item__badge-top-position;
         left: $catalog-grid-item__badge-left-position;
+        border-radius: $catalog-grid-item__badge-border-radius;
+        padding: $catalog-grid-item__badge-padding;
+        font-size: $catalog-grid-item__badge-font-size;
+        background-color: $catalog-grid-item__badge-bg-color;
     }
 
     &__link {
@@ -48,16 +74,12 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         mix-blend-mode: multiply;
     }
 
-    &__flex-wrapper {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-    }
-
     &__main {
+        display: none;
         padding: $catalog-grid-item__content-padding;
         background: $catalog-grid-item__content-bg-color;
         @include mq($screen-m) {
+            display: block;
             padding: $catalog-grid-item__content-padding\@medium;
         }
     }
@@ -66,7 +88,6 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         font-weight: $catalog-grid-item__name-font-weight;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
-        padding-right: $catalog-grid-item__base-spacing;
         margin: 0;
 
         @include mq($screen-xxl) {
@@ -88,12 +109,16 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         }
     }
 
+    &__rating {
+        margin: $catalog-grid-item__rating-margin;
+    }
+
     &__price {
-        padding-left: $catalog-grid-item__base-spacing;
+        padding: $catalog-grid-item__padding;
+        margin: $catalog-grid-item__price-margin;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
-        font-weight: $font-weight-bold;
-        text-align: right;
+        font-weight: $catalog-grid-item__font-weight;
         white-space: nowrap;
 
         @include mq($screen-xxl) {
@@ -115,16 +140,14 @@ $catalog-grid-item__action-icon-size        : 24px !default;
     }
 
     &__details {
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        top: 100%;
-        width: 100%;
         padding: $catalog-grid-item__content-padding;
         background: $catalog-grid-item__content-bg-color;
         transition: $transition-base;
 
         @include mq($screen-m) {
+            position: absolute;
+            top: 100%;
+            width: 100%;
             padding: $catalog-grid-item__content-padding\@medium;
         }
     }
@@ -142,10 +165,31 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         width: 100%;
     }
 
+    &__primary-form {
+        margin: $catalog-gird-item__primary-form-margin;
+        @include mq($screen-m) {
+            flex: 1;
+        }
+    }
+
     &__primary-action {
-        height: $catalog-grid-item__action-size;
-        margin-right: $catalog-grid-item__base-spacing;
-        padding: 0 $spacer--large;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: $catalog-grid-item__primary-padding;
+    }
+
+    &__cart-icon {
+        @include mq($screen-m) {
+            display: none;
+        }
+    }
+
+    &__cart-text {
+        display: none;
+        @include mq($screen-m) {
+            display: block;
+        }
     }
 
     &__secondary-action {
@@ -154,14 +198,20 @@ $catalog-grid-item__action-icon-size        : 24px !default;
         justify-content: center;
         height: $catalog-grid-item__action-size;
         width: $catalog-grid-item__action-size;
-        margin-left: $catalog-grid-item__base-spacing;
-        padding: 0;
-        background: transparent;
-        border: none;
-        cursor: pointer;
+        padding: $catalog-grid-item__action-padding;
+        background: $catalog-grid-item__action-background;
+        border: $catalog-grid-item__action-border;
+        cursor: $catalog-grid-item__action-cursor;
+        &:hover,
+        &:focus {
+            .icon {
+                fill: $catalog-grid-item__action-icon-fill;
+            }
+        }
         .icon {
             width: $catalog-grid-item__action-icon-size;
             height: $catalog-grid-item__action-icon-size;
+            transition: $catalog-grid-item__action-icon-transition;
         }
     }
 }

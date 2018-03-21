@@ -1,7 +1,10 @@
 module.exports = {
   context: {
-    clearHref: '#',
-    clearText: 'Clear',
+    clear: {
+      href: '#',
+      text: 'Clear',
+      title: 'Clear all filters',
+    },
     filters: [
       {
         label: 'Label',

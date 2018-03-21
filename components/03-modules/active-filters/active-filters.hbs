@@ -1,23 +1,27 @@
-<ul class="active-filters list {{class}}">
+<ul class="active-filters list {{ class }}">
     {{# each filters }}
-        <li class="active-filters__item list__item {{class}}">
-            <button type="button"
-                    class="active-filters__remove {{class}}"
-                    aria-label="{{ariaLabel}}"
+        <li class="active-filters__item list__item {{ class }}">
+            <a
+                href="#"
+                class="active-filters__remove {{ class }}"
+                aria-label="{{ ariaLabel }}"
+                title="{{ ariaLabel }}"
             >
                 {{ render '@icon' icon }}
-            </button>
+            </a>
             <span class="active-filters__label">
-                {{label}}&nbsp;:&nbsp;
+                {{ label }} :&nbsp;
             </span>
             <span class="active-filters__value">
-                {{value}}
+                {{ value }}
             </span>
         </li>
     {{/each}}
-    <a href="{{clearHref}}"
-       class="active-filters__clear-all {{clearClass}}"
+    <a
+        href="{{ clear.href }}"
+        class="active-filters__clear-all {{ clear.class }}"
+        title="{{ clear.title }}"
     >
-        {{clearText}}
+        {{ clear.text }}
     </a>
 </ul>
