@@ -221,4 +221,23 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             background-position: center center;
         }
     }
+
+    .pager {
+        display: none;
+    }
+
+    ~ .toolbar {
+        border-bottom: 0;
+        .pager {
+            display: block;
+        }
+        .toolbar {
+            &__mode,
+            &__sorter,
+            &__amount,
+            &__limiter {
+                display: none;
+            }
+        }
+    }
 }
