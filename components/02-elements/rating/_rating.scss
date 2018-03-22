@@ -6,7 +6,8 @@ $rating__item-size--review      : $rating__size--review / 5 !default;
 $icon__active-color             : '#fab216' !default;
 $icon__active-color--with-border: '#fab216' !default;
 $icon__inactive-color           : '#c2c1df' !default;
-
+$rating__error-margin-bottom    : $spacer !default;
+$rating__error-color            : $red !default;
 
 .rating {
     width: $rating__size;
@@ -180,5 +181,19 @@ $icon__inactive-color           : '#c2c1df' !default;
                 text-indent: 10000px;
             }
         }
+    }
+
+    &__error {
+        display: none;
+        color: $rating__error-color;
+        margin-bottom: $rating__error-margin-bottom;
+
+        &--visible {
+            display: block;
+        }
+    }
+
+    .mage-error {
+        display: none !important;
     }
 }

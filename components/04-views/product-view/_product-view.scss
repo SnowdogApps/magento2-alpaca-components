@@ -51,6 +51,9 @@ $product-view__extra-actions-padding                    : 0 $spacer !default;
 $product-view__add-to-cart-margin                       : 0 0 $product-view__extra-actions-margin-bottom\@medium 0 !default;
 $product-view__add-to-cart-margin\@large                : 0 $product-view__add-to-cart-margin-right $product-view__extra-actions-margin-bottom\@large 0 !default;
 
+$product-view__add-to-cart-btn-min-width                : 150px !default;
+$product-view__add-to-cart-btn-padding\@large           : 0 $spacer--large !default;
+
 $product-view__gallery-bottom-border                    : 1px solid $gray !default;
 $product-view__gallery-bottom-border\@medium            : none !default;
 $product-view__gallery-margin-bottom                    : $spacer--medium !default;
@@ -87,7 +90,7 @@ $product-view__rating-margin\@medium                    : 0 !default;
 $product-view__rating-text-color                        : $gray-dark !default;
 $product-view__rating-value-font-size                   : $font-size-base;
 
-$product-view__sku-color                                : $gray-dark !default;
+$product-view__sku-color                                : $gray !default;
 $product-view__sku-margin-bottom                        : $spacer--medium !default;
 $product-view__sku-margin-bottom\@medium                : $spacer !default;
 $product-view__sku-padding-right                        : 55% !default;
@@ -423,8 +426,10 @@ $product-view__wrapper-margin\@medium                   : 40px 0 !default;
     &__add-to-cart-btn {
         flex: 1 0 auto;
         width: 100%;
+        min-width: $product-view__add-to-cart-btn-min-width;
+
         @include mq($screen-l) {
-            padding: 0 $spacer--large;
+            padding: $product-view__add-to-cart-btn-padding\@large;
         }
     }
 

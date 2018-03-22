@@ -31,6 +31,7 @@ $swatch__option-image-margin--small  : $spacer !default;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
     }
 
     &__tooltip,
