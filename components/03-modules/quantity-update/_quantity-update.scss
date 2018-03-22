@@ -26,7 +26,7 @@ $quantity-updater__icon-spacing                      : 12px !default;
         height: $quantity-update__input-width;
         color: $quantity-update__input-color;
         text-align: center;
-        -webkit-appearance: none;
+        appearance: none;
 
         &:focus {
             outline: none;

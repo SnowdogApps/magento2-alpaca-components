@@ -78,7 +78,8 @@ $gallery__thumb-width--large               : 80px !default;
             width: $gallery__thumb-width--large;
             height: $gallery__thumb-height--large;
         }
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
         }
         &--active {
@@ -92,7 +93,8 @@ $gallery__thumb-width--large               : 80px !default;
         width: $gallery__thumb-arrow-width;
         height: $gallery__thumb-arrow-height;
         margin: 0 auto;
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
         }
     }
@@ -118,7 +120,7 @@ $gallery__thumb-width--large               : 80px !default;
     &-placeholder {
         position: relative;
 
-        & .loader {
+        .loader {
             position: absolute;
             left: 0;
             right: 0;
