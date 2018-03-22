@@ -1,4 +1,4 @@
-$message__padding            : $spacer $spacer--medium !default;
+$message__padding            : $spacer $spacer--extra-large !default;
 $message__margin-base        : $spacer--medium !default;
 $message__font-size          : $font-size-small !default;
 $message__transition         : $transition-base !default;
@@ -12,12 +12,10 @@ $message__border             : 1px solid $blue !default;
 $message__border--success    : 1px solid $color-primary !default;
 $message__border--error      : 1px solid $red !default;
 $message__border-radius      : 24px !default;
-$message__icon-flex          : 1 0 $spacer--medium !default;
 $message__icon-spacer        : $spacer--medium !default;
 $message__icon-fill          : $blue !default;
 $message__icon-fill--success : $color-primary !default;
 $message__icon-fill--error   : $red !default;
-$message__text-flex          : 1 0 calc(100% - #{$spacer--medium}) !default;
 
 .message {
     position: relative;
@@ -30,46 +28,41 @@ $message__text-flex          : 1 0 calc(100% - #{$spacer--medium}) !default;
     background-color: $message__background;
     border: $message__border;
     border-radius: $message__border-radius;
+    color: $message__color;
     font-size: $message__font-size;
     transition: $message__transition;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: $message__icon-spacer;
+        top: 0;
+        bottom: 0;
+        height: $message__icon-spacer;
+        width: $message__icon-spacer;
+        margin: auto;
+        background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill}" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm.667 10H6.333V9h1.334v1.333zm0-2.666H6.333v-4h1.334v4z"/></svg>');
+        background-repeat: no-repeat;
+        background-size: $message__icon-spacer;
+    }
 
     &--success {
         background-color: $message__background--success;
         border: $message__border--success;
+        color: $message__color--success;
 
-        .message__text {
-            color: $message__color--success;
-        }
-
-        .message__icon {
-            fill: $message__icon-fill--success;
+        &:after {
+            background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill--success}" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm-1.333 10L2.333 7l.94-.94 2.394 2.387 5.06-5.06.94.946-6 6z"/></svg>');
         }
     }
 
     &--error {
         background-color: $message__background--error;
         border: $message__border--error;
+        color: $message__color--error;
 
-        .message__text {
-            color: $message__color--error;
+        &:after {
+            background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill--error}" d="M.667 13h14.666L8 .333.667 13zm8-2H7.333V9.667h1.334V11zm0-2.667H7.333V5.667h1.334v2.666z"/></svg>');
         }
-
-        .message__icon {
-            fill: $message__icon-fill--error;
-        }
-    }
-
-    &__text {
-        flex: $message__text-flex;
-        color: $message__color;
-        margin-bottom: 0;
-    }
-
-    &__icon {
-        width: $message__icon-spacer;
-        height: $message__icon-spacer;
-        flex: $message__icon-flex;
-        fill: $message__icon-fill;
-        margin-right: $message__margin-base;
     }
 }

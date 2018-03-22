@@ -3,23 +3,20 @@ module.exports = {
   context: {
     class: '',
     attributes: '',
-    text: 'You added Jacket to your shopping cart.',
-    icon: 'warning'
+    text: 'You added Jacket to your shopping cart.'
   },
   variants: [
     {
       name: 'success',
       context: {
-        class: 'message--success',
-        icon: 'check'
+        class: 'message--success'
       }
     },
     {
       name: 'error',
       context: {
         class: 'message--error',
-        text: 'Please specify product\'s required options(s).',
-        icon: 'error'
+        text: 'Please specify product\'s required options(s).'
       }
     }
   ]
