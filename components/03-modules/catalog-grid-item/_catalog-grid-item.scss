@@ -32,7 +32,8 @@ $catalog-grid-item__action-border           : none !default;
 $catalog-grid-item__action-cursor           : pointer !default;
 $catalog-grid-item__action-icon-size        : 24px !default;
 $catalog-grid-item__action-icon-transition  : $transition-base !default;
-$catalog-grid-item__action-icon-fill        : $green !default;
+$catalog-grid-item__action-icon-fill        : $gray-darker !default;
+$catalog-grid-item__action-icon-fill-hover  : $green !default;
 
 $catalog-grid-item__price-margin            : 0 0 $spacer 0 !default;
 
@@ -196,22 +197,25 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
         display: flex;
         align-content: center;
         justify-content: center;
-        height: $catalog-grid-item__action-size;
-        width: $catalog-grid-item__action-size;
-        padding: $catalog-grid-item__action-padding;
-        background: $catalog-grid-item__action-background;
-        border: $catalog-grid-item__action-border;
-        cursor: $catalog-grid-item__action-cursor;
-        &:hover,
-        &:focus {
-            .icon {
+        .button {
+            height: $catalog-grid-item__action-size;
+            width: $catalog-grid-item__action-size;
+            padding: $catalog-grid-item__action-padding;
+            background: $catalog-grid-item__action-background;
+            border: $catalog-grid-item__action-border;
+            cursor: $catalog-grid-item__action-cursor;
+            &:hover,
+            &:focus {
+                .button__icon {
+                    fill: $catalog-grid-item__action-icon-fill-hover;
+                }
+            }
+            .button__icon {
+                width: $catalog-grid-item__action-icon-size;
+                height: $catalog-grid-item__action-icon-size;
+                transition: $catalog-grid-item__action-icon-transition;
                 fill: $catalog-grid-item__action-icon-fill;
             }
-        }
-        .icon {
-            width: $catalog-grid-item__action-icon-size;
-            height: $catalog-grid-item__action-icon-size;
-            transition: $catalog-grid-item__action-icon-transition;
         }
     }
 }
