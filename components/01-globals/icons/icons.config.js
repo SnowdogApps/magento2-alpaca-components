@@ -43,6 +43,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'check',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'checked',
         class: 'icons__single-icon'
       },
@@ -64,6 +68,10 @@ module.exports = {
       },
       {
         iconId: 'edit',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'error',
         class: 'icons__single-icon'
       },
       {
@@ -156,6 +164,10 @@ module.exports = {
       },
       {
         iconId: 'user',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'warning',
         class: 'icons__single-icon'
       },
       {
