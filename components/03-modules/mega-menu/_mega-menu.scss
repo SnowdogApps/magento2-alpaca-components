@@ -34,6 +34,7 @@ $mega-menu__dropdown-max-width        : 850px !default;
     }
 
     &__list {
+        position: relative;
         display: flex;
         flex-wrap: nowrap;
         justify-content: $mega-menu__justify-content;
@@ -79,19 +80,17 @@ $mega-menu__dropdown-max-width        : 850px !default;
     }
 
     &__inner-list {
-        display: none;
         padding: $mega-menu__dropdown-padding;
         background-color: $mega-menu__dropdown-background-color;
         box-shadow: $mega-menu__dropdown-box-shadow;
-        position: absolute;
-        top: 100%;
-        left: 0;
         list-style: none;
-        z-index: 2;
-        @include mq($screen-l) {
-            max-width: $mega-menu__dropdown-max-width;
-            right: 0;
-            margin: auto;
+
+        &--level1 {
+            display: none;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            width: 100%;
         }
     }
 
