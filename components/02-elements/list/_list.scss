@@ -22,8 +22,8 @@ $list__width--image               : 16px !default;
 // Divided
 $list__border--divider            : 1px solid $gray-dark !default;
 
-//Default
-$list__item-padding--default      : 0 0 $spacer--medium $spacer--large !default;
+// Native
+$list__item-padding--native       : 0 0 $spacer--medium $spacer--large !default;
 
 .list {
     margin: $list__margin;
@@ -140,6 +140,24 @@ $list__item-padding--default      : 0 0 $spacer--medium $spacer--large !default;
         display: inline-block;
     }
 
+    &--native {
+        .list__item {
+            position: relative;
+            padding: $list__item-padding--native;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 12px;
+                width: $spacer;
+                height: $spacer;
+                background-color: $color-primary;
+                border-radius: 4px;
+            }
+        }
+    }
+
     &__item {
         display: list-item;
         padding: $list__item-padding;
@@ -150,10 +168,6 @@ $list__item-padding--default      : 0 0 $spacer--medium $spacer--large !default;
 
         &:last-child {
             padding-bottom: 0;
-        }
-
-        &:before {
-            display: none;
         }
     }
 
@@ -173,25 +187,5 @@ $list__item-padding--default      : 0 0 $spacer--medium $spacer--large !default;
 
     &__content {
         padding-left: $list__content-padding;
-    }
-}
-
-ul {
-    @extend .list;
-
-    li {
-        position: relative;
-        padding: $list__item-padding--default;
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: 5px;
-            left: 12px;
-            width: $spacer;
-            height: $spacer;
-            background-color: $color-primary;
-            border-radius: 4px;
-        }
     }
 }

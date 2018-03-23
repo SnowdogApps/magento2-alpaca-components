@@ -23,7 +23,10 @@ module.exports = {
   },
   variants: [
     {
-      name: 'clean'
+      name: 'native',
+      context: {
+        class: 'list--native'
+      }
     },
     {
       name: 'horizontal',
