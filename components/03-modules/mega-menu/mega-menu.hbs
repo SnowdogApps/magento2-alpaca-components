@@ -1,20 +1,22 @@
 <div class="mega-menu">
-    <ul class="mega-menu__wrapper container">
+    <ul class="mega-menu__list container">
         {{#each list}}
             <li class="mega-menu__item {{ class }}">
                 <a href="{{{ link }}}" class="mega-menu__link">
                     {{ text }}
                 </a>
                 {{#if nestedList}}
-                    <ul class="
-                            mega-menu__dropdown
-                            mega-menu__dropdown--level1
+                    <ul
+                        class="
+                            mega-menu__inner-list
+                            mega-menu__inner-list--level1
                         "
                     >
                         {{#each nestedList}}
-                            <li class="
-                                    mega-menu__dropdown-item
-                                    mega-menu__dropdown-item--level1
+                            <li
+                                class="
+                                    mega-menu__inner-item
+                                    mega-menu__inner-item--level1
                                     {{#if modifier}}
                                         {{modifier}}
                                     {{/if}}
@@ -36,15 +38,13 @@
                             </li>
                         {{/each}}
 
-                        <li class="
-                                mega-menu__dropdown-item
-                                mega-menu__dropdown-item--image
+                        <li
+                            class="
+                                mega-menu__inner-item
+                                mega-menu__inner-item--image
                             "
                         >
-                            {{> '@image'
-                                src="/images/banner/banner-480_480.png"
-                                additionalClasses="mega-menu__image"
-                            }}
+                            {{> '@image' src="/images/banner/banner-480_480.png" additionalClasses="mega-menu__image" }}
                         </li>
                     </ul>
                 {{/if}}
