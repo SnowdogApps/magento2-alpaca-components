@@ -39,10 +39,6 @@ $pager__link-fill                           : $green !default;
             margin-right: 0;
         }
 
-        &:before {
-            display: none;
-        }
-
         &--current {
             position: relative;
             &:after {

@@ -48,10 +48,6 @@ $mega-menu__dropdown-max-width        : 850px !default;
                 display: flex;
             }
         }
-
-        &:before {
-            display: none;
-        }
     }
 
     &__link {
@@ -105,10 +101,6 @@ $mega-menu__dropdown-max-width        : 850px !default;
             &--image {
                 flex: 3;
                 padding: $mega-menu__dropdown-padding;
-            }
-
-            &:before {
-                display: none;
             }
         }
     }
