@@ -7,8 +7,12 @@ $breadcrumbs__color--active      : $blue !default;
 $breadcrumbs__font-family--active: $font-family-base !default;
 
 .breadcrumbs {
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
+
+    @include mq($screen-m) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     &__item {
         display: flex;
