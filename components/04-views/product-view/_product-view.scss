@@ -1,4 +1,4 @@
-$product-view__action-elements-margin-top               : 28px !default;
+$product-view__action-elements-margin-top\@small        : 28px !default;
 $product-view__action-elements-margin-top\@large        : 0 !default;
 
 $product-view__action-icon-color                        : $gray-darker !default;
@@ -82,7 +82,7 @@ $product-view__price-font-weight                        : $font-weight-bold !def
 // values should match product-view__title to align vertically on desktop
 $product-view__product-rating-line-height               : 1.5em !default;
 
-$product-view__qty-margin-right                         : $spacer--medium !default;
+$product-view__qty-margin-right\@small                  : $spacer--medium !default;
 
 $product-view__rating-link-color                        : $gray-dark !default;
 $product-view__rating-margin                            : 0 0 14px 0 !default;
@@ -394,7 +394,7 @@ $product-view__wrapper-margin\@medium                   : 40px 0 !default;
         justify-content: center;
         flex: 0 0 auto;
         padding: $product-view__extra-actions-padding;
-        margin-bottom: $product-view__extra-actions-margin-bottom;
+
         @include mq($screen-l) {
             margin-bottom: $product-view__extra-actions-margin-bottom\@large;
             padding: 0;
@@ -402,20 +402,29 @@ $product-view__wrapper-margin\@medium                   : 40px 0 !default;
     }
 
     &__qty {
+        flex-basis: 100%;
         margin-bottom: $product-view__extra-actions-margin-bottom;
-        flex: 0 0 auto;
-        margin-right: $product-view__qty-margin-right;
+
+        @include mq($screen-s) {
+            flex: 0 0 auto;
+            margin-right: $product-view__qty-margin-right\@small;
+        }
+
         @include mq($screen-l) {
             margin-bottom: $product-view__extra-actions-margin-bottom\@large;
         }
     }
 
     &__action-elements {
-        margin-top: $product-view__action-elements-margin-top;
         flex-flow: column;
         flex: 1 0 auto;
         justify-content: space-between;
         display: flex;
+
+        @include mq($screen-s) {
+            margin-top: $product-view__action-elements-margin-top\@small;
+        }
+
         @include mq($screen-l) {
             margin-top: $product-view__action-elements-margin-top\@large;
             flex-flow: row nowrap;
