@@ -90,6 +90,7 @@ $mega-menu__dropdown-max-width        : 850px !default;
             position: absolute;
             top: calc(100% + 1px);
             left: 0;
+            z-index: 2;
             width: 100%;
         }
     }
@@ -99,8 +100,13 @@ $mega-menu__dropdown-max-width        : 850px !default;
         padding: $mega-menu__dropdown-item-padding;
 
         &--image {
-            flex: 3;
+            display: flex;
+            flex-basis: 100%;
+            justify-content: flex-end;
             padding: $mega-menu__dropdown-padding;
+            img {
+                width: auto;
+            }
         }
     }
 }
