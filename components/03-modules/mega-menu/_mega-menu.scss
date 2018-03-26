@@ -104,6 +104,7 @@ $mega-menu__dropdown-max-width        : 850px !default;
         &:focus,
         &:hover {
             text-decoration: $mega-menu__text-decoration;
+            color: $color-primary;
         }
     }
 
@@ -115,5 +116,10 @@ $mega-menu__dropdown-max-width        : 850px !default;
         font-weight: $mega-menu__link-inner-font-weight;
         color: $gray-darker;
         text-decoration: none;
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $color-primary;
+        }
     }
 }
