@@ -1,32 +1,34 @@
 <div class="mega-menu">
     <ul class="mega-menu__list container">
         {{#each list}}
-            <li class="mega-menu__item {{ class }}">
-                <a href="{{{ link }}}" class="mega-menu__link">
+            <li class="{{ class }}">
+                <a href="{{ link }}" class="mega-menu__link">
                     {{ text }}
                 </a>
                 {{#if nestedList}}
                     <ul class="mega-menu__inner-list mega-menu__inner-list--level1">
-                        {{#each nestedList as |item|}}
+                        {{#each nestedList as |item| }}
                             <li class="{{ item.class }}">
-                                <a
-                                    href="{{{ item.link }}}"
-                                    class="{{ item.linkClass }}"
-                                >
-                                    {{ item.heading }}
-                                </a>
-                                {{render '@list--link' item.list merge=true}}
+                                {{#if item.image}}
+                                    <a
+                                        class="{{ item.linkClass }}"
+                                        href="{{ item.link }}"
+                                    >
+                                        {{ render '@image' }}
+                                    </a>
+                                {{else}}
+                                    <a
+                                        href="{{{ item.link }}}"
+                                        class="{{ item.linkClass }}"
+                                    >
+                                        {{ item.heading }}
+                                    </a>
+                                    {{#if item.list}}
+                                        {{ render '@list--link' item.list merge=true }}
+                                    {{/if}}
+                                {{/if}}
                             </li>
                         {{/each}}
-
-                        <li
-                            class="
-                                mega-menu__inner-item
-                                mega-menu__inner-item--image
-                            "
-                        >
-                            {{ render '@image' }}
-                        </li>
                     </ul>
                 {{/if}}
             </li>
