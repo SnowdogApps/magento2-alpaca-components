@@ -15,7 +15,6 @@ module.exports = {
       field: {
         id: 'email',
         name: 'email',
-        placeholder: '',
         type: 'email'
       }
     },
@@ -28,19 +27,19 @@ module.exports = {
       },
       reload: {
         tag: 'button',
+        class: 'button--secondary',
         attributes: 'type="button"',
         text: 'Reload Captcha'
       },
       field: {
+        class: 'forgot-password__captcha-field',
         label: {
           text: 'Please type the letters below',
           hidden: false
         },
         field: {
-          class: 'forgot-password__captcha-field',
           id: 'captcha',
           name: 'captcha',
-          placeholder: '',
           type: 'text'
         }
       },
