@@ -7,6 +7,7 @@ module.exports = {
     },
     info: 'Please enter your email address below to receive a password reset link.',
     email: {
+      class: 'forgot-password__email',
       label: {
         text: 'Email',
         hidden: false
@@ -19,18 +20,34 @@ module.exports = {
       }
     },
     captcha: {
+      image: {
+        class: 'forgot-password__image',
+        src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+        dataSrc: '/images/banner/banner-992_254.png',
+        alt: 'Please type the letters below'
+      },
+      reload: {
+        tag: 'button',
+        attributes: 'type="button"',
+        text: 'Reload Captcha'
+      },
       field: {
-        class: 'login__input',
         label: {
           text: 'Please type the letters below',
           hidden: false
         },
         field: {
+          class: 'forgot-password__captcha-field',
           id: 'captcha',
           name: 'captcha',
           placeholder: '',
           type: 'text'
         }
+      },
+      submit: {
+        tag: 'button',
+        attributes: 'type="submit"',
+        text: 'Reset My Password'
       }
     }
   }
