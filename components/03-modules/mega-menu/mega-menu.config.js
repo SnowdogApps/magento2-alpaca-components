@@ -9,65 +9,43 @@ module.exports = {
         nestedList: [
           {
             class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+            linkClass: 'mega-menu__link mega-menu__link--inner-heading',
             heading: 'Example',
             link: '/example',
-            elements: [
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              }
-            ]
+            list: {
+              elements: [
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Lorem ipsum1',
+                  link: '/lorem-ipsum',
+                  linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Lorem ipsum',
+                  link: '/lorem-ipsum',
+                  linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Lorem ipsum',
+                  link: '/lorem-ipsum',
+                  linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Lorem ipsum',
+                  link: '/lorem-ipsum',
+                  linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
+                }
+              ]
+            }
           },
           {
             class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+            linkClass: 'mega-menu__link mega-menu__link--inner-heading',
             heading: 'Example',
             link: '/example',
-            elements: [
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              }
-            ]
           }
         ],
         imageTitle: 'Lorem Ipsum',
@@ -76,81 +54,6 @@ module.exports = {
       {
         text: 'Accessories',
         link: '/accessories'
-      },
-      {
-        class: 'mega-menu__item--parent',
-        text: 'TBD',
-        link: '/tbd',
-        nestedList: [
-          {
-            class: '',
-            heading: 'Example',
-            link: '/example',
-            elements: [
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              }
-            ]
-          },
-          {
-            class: '',
-            heading: 'Example1',
-            link: '/example1',
-            elements: [
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner link--invert'
-              }
-            ]
-          }
-        ],
-        imageTitle: 'Lorem Ipsum',
-        secondImageTitle: 'lorem ipsum'
-      },
-      {
-        text: 'Sale',
-        link: '/sale'
       },
       {
         text: 'World of',

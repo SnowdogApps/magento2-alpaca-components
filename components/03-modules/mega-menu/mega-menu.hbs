@@ -6,35 +6,16 @@
                     {{ text }}
                 </a>
                 {{#if nestedList}}
-                    <ul
-                        class="
-                            mega-menu__inner-list
-                            mega-menu__inner-list--level1
-                        "
-                    >
-                        {{#each nestedList}}
-                            <li
-                                class="
-                                    mega-menu__inner-item
-                                    mega-menu__inner-item--level1
-                                    {{#if modifier}}
-                                        {{modifier}}
-                                    {{/if}}
-                                "
-                            >
-                                <a href="{{{ link }}}"
-                                   class="
-                                       mega-menu__link
-                                       mega-menu__link--inner-heading
-                                   "
+                    <ul class="mega-menu__inner-list mega-menu__inner-list--level1">
+                        {{#each nestedList as |item|}}
+                            <li class="{{ item.class }}">
+                                <a
+                                    href="{{{ item.link }}}"
+                                    class="{{ item.linkClass }}"
                                 >
-                                    {{ heading }}
+                                    {{ item.heading }}
                                 </a>
-
-                                {{> '@list--link'
-                                    listTag="ul"
-                                    elementTag="li"
-                                }}
+                                {{render '@list--link' item.list merge=true}}
                             </li>
                         {{/each}}
 
@@ -44,7 +25,7 @@
                                 mega-menu__inner-item--image
                             "
                         >
-                            {{> '@image' src="/images/banner/banner-480_480.png" additionalClasses="mega-menu__image" }}
+                            {{ render '@image' }}
                         </li>
                     </ul>
                 {{/if}}
