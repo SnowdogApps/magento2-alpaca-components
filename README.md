@@ -1,4 +1,5 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/SnowdogApps/magento2-alpaca-components.svg)](https://greenkeeper.io/)
+![Browser Status](https://badges.herokuapp.com/browsers?googlechrome=63,64,65,66,67&firefox=58,59&safari=11&iphone=11.2&android=64&iexplore=11&microsoftedge=16)
 
 # Alpaca Components
 [Design system](https://www.uxpin.com/studio/blog/design-systems-vs-pattern-libraries-vs-style-guides-whats-difference/) created to speed up the process of working with design on Magento 2 stores, by creating each UI element, module, and view in an simplified, front-end developer friendly, environment.
