@@ -43,6 +43,11 @@ $brief-info__title-margin-bottom                           : 0 !default;
     &__heading {
         width: 100%;
         margin: $brief-info__heading-margin;
+        text-align: center;
+
+        @include mq($screen-m) {
+            text-align: left;
+        }
     }
 
     &__item {
