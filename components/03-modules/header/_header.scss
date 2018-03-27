@@ -40,27 +40,6 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         }
     }
 
-    &__menu-trigger {
-        display: flex;
-        order: 1;
-        flex: 1 $header__menu-trigger-size;
-        height: $header__menu-trigger-size;
-        max-width: $header__menu-trigger-size;
-        border-top: none;
-        @include mq($screen-xl) {
-            display: none;
-        }
-
-        &--active {
-            .header-button__icon--open {
-                display: none;
-            }
-            .header-button__icon--close {
-                display: block;
-            }
-        }
-    }
-
     &__search-wrapper {
         display: flex;
         flex-flow: column nowrap;
