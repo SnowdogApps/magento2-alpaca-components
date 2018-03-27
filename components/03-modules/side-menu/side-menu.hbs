@@ -1,5 +1,9 @@
 <div class="side-menu {{ class }}">
-    <button class="side-menu__trigger" type="button">
+    <button
+        type="button"
+        class="side-menu__trigger"
+        aria-label="Side menu open"
+    >
         {{ render '@icon' sideMenuIconOpen }}
         <span class="side-menu__trigger-text">
             Menu
@@ -7,7 +11,11 @@
     </button>
     <div class="side-menu__content">
         <div class="side-menu__trigger-wrapper">
-            <button class="side-menu__trigger" type="button">
+            <button
+                type="button"
+                class="side-menu__trigger"
+                aria-label="Side menu close"
+            >
                 {{ render '@icon' sideMenuIconClose }}
                 <span class="header-button__text">
                     Menu
