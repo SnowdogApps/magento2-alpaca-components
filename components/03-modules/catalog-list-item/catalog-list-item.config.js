@@ -10,7 +10,6 @@ module.exports = {
       }
     },
     image: {
-      class: 'catalog-list-item__image',
       dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
@@ -37,17 +36,17 @@ module.exports = {
     buttonWishlist: {
       tag: 'button',
       text: '',
-      class: 'button--icon catalog-list-item__actions-secondary-button',
+      class: 'button--icon',
       iconId: 'heart',
-      iconClass: 'button__icon catalog-list-item__actions-secondary-button-icon',
+      iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Add to wishlist"'
     },
     buttonCompare: {
       tag: 'button',
       text: '',
-      class: 'button--icon catalog-list-item__actions-secondary-button',
+      class: 'button--icon',
       iconId: 'compare',
-      iconClass: 'button__icon catalog-list-item__actions-secondary-button-icon',
+      iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Add to compare"'
     }
   },

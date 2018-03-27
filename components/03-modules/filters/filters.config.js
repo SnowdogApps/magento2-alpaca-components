@@ -8,42 +8,6 @@ module.exports = {
       class: 'filters__switcher-icon',
       iconId: 'angle-down'
     },
-    activeFilters: {
-      clearHref: '#',
-      clearText: 'Clear All',
-      filters: [
-        {
-          iconId: 'close',
-          label: 'Label',
-          value: 'Value',
-          ariaLabel: 'Disable filter',
-          icon: {
-            iconId: 'close',
-            class: 'active-filters__remove-icon'
-          }
-        },
-        {
-          iconId: 'close',
-          label: 'Label',
-          value: 'Value',
-          ariaLabel: 'Disable filter',
-          icon: {
-            iconId: 'close',
-            class: 'active-filters__remove-icon'
-          }
-        },
-        {
-          iconId: 'close',
-          label: 'Label',
-          value: 'Value',
-          ariaLabel: 'Disable filter',
-          icon: {
-            iconId: 'close',
-            class: 'active-filters__remove-icon'
-          }
-        }
-      ]
-    },
     divider: {
       class: 'filters__divider'
     },
