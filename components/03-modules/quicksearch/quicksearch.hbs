@@ -15,7 +15,7 @@
                     </a>
                     <div class="quicksearch__product-details">
                         <a
-                            href=""
+                            href="#"
                             class="link link--invert quicksearch__product-link"
                         >
                             {{ render '@heading' name }}
@@ -29,7 +29,7 @@
             {{#each category }}
                 <li class="quicksearch__category">
                     <a
-                        href=""
+                        href="#"
                         class="link link--invert quicksearch__category-link"
                     >
                         {{ render '@heading' name }}
@@ -39,4 +39,7 @@
             {{/each }}
         </ul>
     </div>
+    <a href="#" class="link link--invert quicksearch__more-link">
+        {{ more }}
+    </a>
 </div>

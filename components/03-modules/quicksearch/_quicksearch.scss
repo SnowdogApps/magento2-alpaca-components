@@ -1,38 +1,44 @@
-$quicksearch__width                     : 688px !default;
-$quicksearch__padding                   : 0 $spacer--medium !default;
-$quicksearch__box-shadow                : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
-$quicksearch__results-padding           : $spacer--medium 0 !default;
-$quicksearch__results-margin            : 0 !default;
-$quicksearch__results-border            : 1px solid $gray-light !default;
-$quicksearch__typed-font-weight         : $font-weight-bold !default;
-$quicksearch__close-fill                : $color-secondary !default;
-$quicksearch__close-background          : transparent !default;
-$quicksearch__close-border              : 0 !default;
-$quicksearch__close-size                : $spacer--medium !default;
-$quicksearch__content-padding           : $spacer 0 !default;
-$quicksearch__content-border-bottom     : 1px solid $gray-light !default;
-$quicksearch__list-margin               : 0 !default;
-$quicksearch__list-padding              : 0 !default;
-$quicksearch__category-padding          : $spacer 0 !default;
-$quicksearch__category-list-padding-left: $spacer--medium !default;
-$quicksearch__product-border            : 1px solid $gray-light !default;
-$quicksearch__product-border--last      : 0 !default;
-$quicksearch__product-padding           : $spacer 0 !default;
-$quicksearch__product-image-max-size    : 72px !default;
-$quicksearch__product-image-mix         : multiply !default;
-$quicksearch__product-price-font-weight : $font-weight-bold !default;
-$quicksearch__product-name-margin       : 0 !default;
-$quicksearch__product-name-padding      : $spacer 0 !default;
-$quicksearch__product-name-color        : inherit !default;
-$quicksearch__product-name-font-weight  : $font-weight-normal !default;
-$quicksearch__category-name-color       : inherit !default;
+$quicksearch__width                        : 688px !default;
+$quicksearch__padding                      : 0 $spacer--medium !default;
+$quicksearch__box-shadow                   : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
+$quicksearch__results-padding              : $spacer--medium 0 !default;
+$quicksearch__results-margin               : 0 !default;
+$quicksearch__results-border               : 1px solid $gray-light !default;
+$quicksearch__typed-font-weight            : $font-weight-bold !default;
+$quicksearch__close-fill                   : $color-secondary !default;
+$quicksearch__close-background             : transparent !default;
+$quicksearch__close-border                 : 0 !default;
+$quicksearch__close-size                   : $spacer--medium !default;
+$quicksearch__content-padding              : $spacer 0 !default;
+$quicksearch__content-border-bottom        : 1px solid $gray-light !default;
+$quicksearch__list-margin                  : 0 !default;
+$quicksearch__list-padding                 : 0 !default;
+$quicksearch__category-padding             : $spacer 0 !default;
+$quicksearch__category-list-padding        : $spacer 0 0 0 !default;
+$quicksearch__category-list-padding\@medium: 0 0 0 $spacer--medium !default;
+$quicksearch__product-border               : 1px solid $gray-light !default;
+$quicksearch__product-border--last         : 0 !default;
+$quicksearch__product-padding              : $spacer 0 !default;
+$quicksearch__product-image-max-size       : 72px !default;
+$quicksearch__product-image-mix            : multiply !default;
+$quicksearch__product-price-font-weight    : $font-weight-bold !default;
+$quicksearch__product-name-margin          : 0 !default;
+$quicksearch__product-name-padding         : $spacer 0 !default;
+$quicksearch__product-name-color           : inherit !default;
+$quicksearch__product-name-font-weight     : $font-weight-normal !default;
+$quicksearch__category-name-color          : inherit !default;
+$quicksearch__more-link-padding            : $spacer--medium 0 !default;
+$quicksearch__more-link-text-align         : center !default;
+$quicksearch__more-link-font-weight        : $font-weight-bold !default;
 
 .quicksearch {
     position: relative;
     display: none;
-    width: $quicksearch__width;
     padding: $quicksearch__padding;
     box-shadow: $quicksearch__box-shadow;
+    @include mq($screen-m) {
+        width: $quicksearch__width;
+    }
     &--visible {
         display: block;
     }
@@ -67,9 +73,11 @@ $quicksearch__category-name-color       : inherit !default;
     }
 
     &__content {
-        display: flex;
         padding: $quicksearch__content-padding;
         border-bottom: $quicksearch__content-border-bottom;
+        @include mq($screen-m) {
+            display: flex;
+        }
     }
 
     &__product-list,
@@ -85,15 +93,20 @@ $quicksearch__category-name-color       : inherit !default;
 
     &__category-list {
         flex: 1;
-        padding-left: $quicksearch__category-list-padding-left;
+        padding: $quicksearch__category-list-padding;
+        @include mq($screen-m) {
+            padding: $quicksearch__category-list-padding\@medium;
+        }
     }
 
     &__product {
         display: flex;
         padding: $quicksearch__product-padding;
         border-bottom: $quicksearch__product-border;
-        &:last-child {
-            border-bottom: $quicksearch__product-border--last;
+        @include mq($screen-m) {
+            &:last-child {
+                border-bottom: $quicksearch__product-border--last;
+            }
         }
     }
 
@@ -127,5 +140,13 @@ $quicksearch__category-name-color       : inherit !default;
 
     &__category-name {
         color: $quicksearch__category-name-color;
+    }
+
+    &__more-link {
+        display: block;
+        padding: $quicksearch__more-link-padding;
+        text-align: $quicksearch__more-link-text-align;
+        font-weight: $quicksearch__more-link-font-weight;
+        text-decoration: none;
     }
 }

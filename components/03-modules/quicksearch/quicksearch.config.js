@@ -61,7 +61,7 @@ module.exports = {
       {
         name: {
           class: 'quicksearch__category-name',
-          tag: 'h2',
+          tag: 'h3',
           text: 'Category name'
         },
         items: '598 item(s)'
@@ -69,7 +69,7 @@ module.exports = {
       {
         name: {
           class: 'quicksearch__category-name',
-          tag: 'h2',
+          tag: 'h3',
           text: 'Category name'
         },
         items: '598 item(s)'
@@ -77,7 +77,7 @@ module.exports = {
       {
         name: {
           class: 'quicksearch__category-name',
-          tag: 'h2',
+          tag: 'h3',
           text: 'Category name'
         },
         items: '598 item(s)'
@@ -85,11 +85,12 @@ module.exports = {
       {
         name: {
           class: 'quicksearch__category-name',
-          tag: 'h2',
+          tag: 'h3',
           text: 'Category name'
         },
         items: '598 item(s)'
-      },
-    ]
+      }
+    ],
+    more: 'See All'
   }
 }
