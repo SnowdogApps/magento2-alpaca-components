@@ -1,6 +1,22 @@
 <div class="side-menu {{ class }}">
+    <button class="side-menu__trigger" type="button">
+        {{ render '@icon' sideMenuIconOpen }}
+        <span class="side-menu__trigger-text">
+            Menu
+        </span>
+    </button>
     <div class="side-menu__content">
+        <div class="side-menu__trigger-wrapper">
+            <button class="side-menu__trigger" type="button">
+                {{ render '@icon' sideMenuIconClose }}
+                <span class="header-button__text">
+                    Menu
+                </span>
+            </button>
+        </div>
         {{ render '@dropdown-list--with-nested' }}
     </div>
-    <div class="side-menu__bg"></div>
+    <div class="side-menu__overlay"></div>
 </div>
+
+<script src="{{static 'side-menu.js'}}" defer></script>

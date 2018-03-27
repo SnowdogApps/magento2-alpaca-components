@@ -11,17 +11,70 @@ $side-menu__link-color-hover: $gray;
 $side-menu__border          : 1px solid rgba(0, 0, 0, 0.09);
 
 .side-menu {
+    @include mq($screen-xl) {
+        display: none;
+    }
+
     &--is-open {
         .side-menu__content {
             opacity: 1;
             transform: $side-menu__transform--open;
         }
 
-        .side-menu__bg {
+        .side-menu__overlay {
             width: 100%;
             opacity: 1;
         }
     }
+
+    &__trigger-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid $gray-light;
+    }
+
+    &__trigger {
+        height: $header-button__size;
+        min-width: $header-button__size;
+        display: flex;
+        margin: 0;
+        padding: $header-button__padding;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: #fff;
+        font-family: $header-button__text-font-family;
+        @include mq($screen-xl) {
+            margin: $header-button__margin--extra-large;
+        }
+
+        &:focus,
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__trigger-text {
+        font-size: $header-button__text-font-size;
+        line-height: $header-button__text-line-height;
+        text-align: center;
+        color: $header-button__text-font-color;
+    }
+
+    &__trigger-icon {
+        width: $header-button__icon-size--small;
+        height: $header-button__icon-size--small;
+        margin: $header-button__icon-margin;
+        padding: $header-button__icon-padding;
+        fill: $header-button__icon-color;
+        @include mq($screen-m) {
+            margin: $header-button__icon-margin--medium;
+        }
+    }
+
     &__content {
         position: fixed;
         top: $side-menu__top;
@@ -33,6 +86,7 @@ $side-menu__border          : 1px solid rgba(0, 0, 0, 0.09);
         max-height: 100vh;
         padding: $side-menu__padding;
         z-index: 100;
+        overflow-y: scroll;
         background: $side-menu__background;
         box-shadow: $side-menu__box-shadow;
         opacity: 1;
@@ -76,11 +130,12 @@ $side-menu__border          : 1px solid rgba(0, 0, 0, 0.09);
         }
     }
 
-    &__bg {
+    &__overlay {
         position: fixed;
         top: 0;
         bottom: 0;
-        z-index: 1;
+        left: 0;
+        z-index: 2;
         background-color: rgba(0, 0, 0, 0.5);
         opacity: 0;
         transition: width 0.2s ease, opacity 0.5s ease;
