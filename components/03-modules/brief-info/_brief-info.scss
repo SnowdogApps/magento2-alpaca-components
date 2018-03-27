@@ -1,5 +1,4 @@
-$brief-info__padding                                       : $spacer--medium 0 0 !default;
-$brief-info__padding\@medium                               : 23px 0 32px !default;
+$brief-info__padding\@medium                               : $spacer--large 0 $spacer--large !default;
 $brief-info__border                                        : 1px $gray-light solid !default;
 $brief-info__content-text-align                            : center !default;
 $brief-info__content-text-align\@medium                    : left !default;
@@ -22,7 +21,7 @@ $brief-info__link-font-size                                : $font-size-small !d
 $brief-info__link-font-weight                              : $font-weight-bold !default;
 $brief-info__link-text-decoration                          : none !default;
 $brief-info__title-font-size                               : $font-size-small !default;
-$brief-info__title-font-size\@large                        : $font-size-base !default
+$brief-info__title-font-size\@large                        : $font-size-base !default;
 $brief-info__title-font-weight                             : $font-weight-normal !default;
 $brief-info__title-line-height                             : 1em !default;
 $brief-info__title-text-transform                          : uppercase !default;
@@ -33,7 +32,6 @@ $brief-info__title-margin-bottom                           : 0 !default;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: $brief-info__padding;
     @include mq($screen-m) {
         border-top: $brief-info__border;
         padding: $brief-info__padding\@medium;
@@ -41,9 +39,13 @@ $brief-info__title-margin-bottom                           : 0 !default;
     }
 
     &__heading {
-        text-align: center;
         width: 100%;
         margin: $brief-info__heading-margin;
+        text-align: center;
+
+        @include mq($screen-m) {
+            text-align: left;
+        }
     }
 
     &__item {
