@@ -18,7 +18,8 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          tag: 'h2',
+          class: 'quicksearch__product-name',
+          tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
       },
@@ -28,7 +29,8 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          tag: 'h2',
+          class: 'quicksearch__product-name',
+          tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
       },
@@ -38,7 +40,8 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          tag: 'h2',
+          class: 'quicksearch__product-name',
+          tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
       },
@@ -48,10 +51,45 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          tag: 'h2',
+          class: 'quicksearch__product-name',
+          tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
       }
+    ],
+    category: [
+      {
+        name: {
+          class: 'quicksearch__category-name',
+          tag: 'h2',
+          text: 'Category name'
+        },
+        items: '598 item(s)'
+      },
+      {
+        name: {
+          class: 'quicksearch__category-name',
+          tag: 'h2',
+          text: 'Category name'
+        },
+        items: '598 item(s)'
+      },
+      {
+        name: {
+          class: 'quicksearch__category-name',
+          tag: 'h2',
+          text: 'Category name'
+        },
+        items: '598 item(s)'
+      },
+      {
+        name: {
+          class: 'quicksearch__category-name',
+          tag: 'h2',
+          text: 'Category name'
+        },
+        items: '598 item(s)'
+      },
     ]
   }
 }

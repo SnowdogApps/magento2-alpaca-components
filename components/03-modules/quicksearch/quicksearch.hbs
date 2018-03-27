@@ -14,7 +14,10 @@
                         {{ render '@image' image }}
                     </a>
                     <div class="quicksearch__product-details">
-                        <a href="" class="quickserach__product-name">
+                        <a
+                            href=""
+                            class="link link--invert quicksearch__product-link"
+                        >
                             {{ render '@heading' name }}
                         </a>
                         {{ render '@price--with-special-price' }}
@@ -23,7 +26,17 @@
             {{/each }}
         </ul>
         <ul class="quicksearch__category-list">
-            <li>Category</li>
+            {{#each category }}
+                <li class="quicksearch__category">
+                    <a
+                        href=""
+                        class="link link--invert quicksearch__category-link"
+                    >
+                        {{ render '@heading' name }}
+                    </a>
+                    {{ items }}
+                </li>
+            {{/each }}
         </ul>
     </div>
 </div>
