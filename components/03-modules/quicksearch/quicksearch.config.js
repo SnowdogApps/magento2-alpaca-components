@@ -19,10 +19,8 @@ module.exports = {
         },
         name: {
           tag: 'h2',
-          class: '',
           text: 'Lorem Ipsum is simply dummy...'
-        },
-        price: '$1684.00'
+        }
       },
       {
         image: {
@@ -31,10 +29,8 @@ module.exports = {
         },
         name: {
           tag: 'h2',
-          class: '',
           text: 'Lorem Ipsum is simply dummy...'
-        },
-        price: '$1684.00'
+        }
       },
       {
         image: {
@@ -43,10 +39,8 @@ module.exports = {
         },
         name: {
           tag: 'h2',
-          class: '',
           text: 'Lorem Ipsum is simply dummy...'
-        },
-        price: '$1684.00'
+        }
       },
       {
         image: {
@@ -55,10 +49,8 @@ module.exports = {
         },
         name: {
           tag: 'h2',
-          class: '',
           text: 'Lorem Ipsum is simply dummy...'
-        },
-        price: '$1684.00'
+        }
       }
     ]
   }
