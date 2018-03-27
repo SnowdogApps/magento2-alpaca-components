@@ -60,13 +60,10 @@ $header-button__counter-dot-bg-color: $white !default;
         @include mq($screen-m) {
             margin: $header-button__icon-margin--medium;
         }
+
         &--small {
             width: $header-button__icon-size--small;
             height: $header-button__icon-size--small;
-        }
-
-        &--close {
-            display: none;
         }
     }
 
