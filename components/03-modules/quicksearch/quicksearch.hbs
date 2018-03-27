@@ -1,0 +1,29 @@
+<div class="quicksearch quicksearch--visible">
+    {{ render '@button--icon' close }}
+    <p class="quicksearch__results">
+        {{ results.text }}
+        <span class="quicksearch__typed">
+            {{ results.typed }}
+        </span>
+    </p>
+    <div class="quicksearch__content">
+        <ul class="quicksearch__product-list">
+            {{#each product }}
+                <li class="quicksearch__product">
+                    <a href="#" class="quicksearch__product-image-wrapper">
+                        {{ render '@image' image }}
+                    </a>
+                    <div class="quicksearch__product-details">
+                        <a href="" class="quickserach__product-name">
+                            {{ render '@heading' name }}
+                        </a>
+                        {{ price }}
+                    </div>
+                </li>
+            {{/each }}
+        </ul>
+        <ul class="quicksearch__category-list">
+            <li>Category</li>
+        </ul>
+    </div>
+</div>
