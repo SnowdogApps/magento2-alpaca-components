@@ -38,18 +38,22 @@ module.exports = {
       iconId: 'shopping-cart',
       iconClass: 'icon catalog-grid-item__cart-icon'
     },
-    secondaryActions: [
-      {
-        icon: {
-          iconId: 'heart'
-        }
+    secondaryActions: {
+      wishlist: {
+        tag: 'button',
+        class: 'button--icon',
+        iconId: 'heart',
+        iconClass: 'button__icon',
+        attributes: 'type="button" aria-label="Add to Wish List"',
       },
-      {
-        icon: {
-          iconId: 'compare'
-        }
+      compare: {
+        tag: 'button',
+        class: 'button--icon',
+        iconId: 'compare',
+        iconClass: 'button__icon',
+        attributes: 'type="button" aria-label="Add to compare"',
       }
-    ],
+    },
     swatches: [
       {
         name: 'swatch',

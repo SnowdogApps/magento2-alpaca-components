@@ -48,12 +48,8 @@
             </form>
 
             <div class="catalog-grid-item__secondary-action">
-                <button class="button button--icon">
-                    {{ render '@icon' secondaryActions.0.icon }}
-                </button>
-                <button class="button button--icon">
-                    {{ render '@icon' secondaryActions.1.icon }}
-                </button>
+                {{ render '@button--icon' secondaryActions.wishlist }}
+                {{ render '@button--icon' secondaryActions.compare }}
             </div>
         </div>
     </section>
