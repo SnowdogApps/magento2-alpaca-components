@@ -20,6 +20,7 @@ $quicksearch__list-padding                 : 0 !default;
 $quicksearch__category-padding             : $spacer 0 !default;
 $quicksearch__category-list-padding        : $spacer 0 0 0 !default;
 $quicksearch__category-list-padding\@medium: 0 0 0 $spacer--medium !default;
+$quicksearch__manufacturer-list-padding-top: $spacer--medium !default;
 $quicksearch__product-border               : 1px solid $gray-light !default;
 $quicksearch__product-border--last         : 0 !default;
 $quicksearch__product-padding              : $spacer 0 !default;
@@ -93,7 +94,8 @@ $quicksearch__more-link-font-weight        : $font-weight-bold !default;
     }
 
     &__product-list,
-    &__category-list {
+    &__category-list,
+    &__manufacturer-list {
         margin: $quicksearch__list-margin;
         padding: $quicksearch__list-padding;
         list-style-type: none;
@@ -103,7 +105,11 @@ $quicksearch__more-link-font-weight        : $font-weight-bold !default;
         flex: 2;
     }
 
-    &__category-list {
+    &__manufacturer-list {
+        padding-top: $quicksearch__manufacturer-list-padding-top;
+    }
+
+    &__categories-column {
         flex: 1;
         padding: $quicksearch__category-list-padding;
         @include mq($screen-m) {
@@ -135,7 +141,8 @@ $quicksearch__more-link-font-weight        : $font-weight-bold !default;
     }
 
     &__product-link,
-    &__category-link {
+    &__category-link,
+    &__manufacturer-link {
         text-decoration: none;
     }
 
@@ -146,11 +153,13 @@ $quicksearch__more-link-font-weight        : $font-weight-bold !default;
         font-weight: $quicksearch__product-name-font-weight;
     }
 
-    &__category {
+    &__category,
+    &__manufacturer {
         padding: $quicksearch__category-padding;
     }
 
-    &__category-name {
+    &__category-name,
+    &__manufacturer-name {
         color: $quicksearch__category-name-color;
     }
 

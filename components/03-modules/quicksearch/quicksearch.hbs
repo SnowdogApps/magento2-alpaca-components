@@ -26,19 +26,34 @@
                     </li>
                 {{/each }}
             </ul>
-            <ul class="quicksearch__category-list">
-                {{#each category }}
-                    <li class="quicksearch__category">
-                        <a
-                            href="#"
-                            class="link link--invert quicksearch__category-link"
-                        >
-                            {{ render '@heading' name }}
-                        </a>
-                        {{ items }}
-                    </li>
-                {{/each }}
-            </ul>
+            <div class="quicksearch__categories-column">
+                <ul class="quicksearch__category-list">
+                    {{#each category }}
+                        <li class="quicksearch__category">
+                            <a
+                                href="#"
+                                class="link link--invert quicksearch__category-link"
+                            >
+                                {{ render '@heading' name }}
+                            </a>
+                            {{ items }}
+                        </li>
+                    {{/each }}
+                </ul>
+                <ul class="quicksearch__manufacturer-list">
+                    {{#each manufacturer }}
+                        <li class="quicksearch__manufacturer">
+                            <a
+                                href="#"
+                                class="link link--invert quicksearch__manufacturer-link"
+                            >
+                                {{ render '@heading' name }}
+                            </a>
+                            {{ items }}
+                        </li>
+                    {{/each }}
+                </ul>
+            </div>
         </div>
         <a href="#" class="link link--invert quicksearch__more-link">
             {{ more }}

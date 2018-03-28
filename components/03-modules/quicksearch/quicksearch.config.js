@@ -81,12 +81,38 @@ module.exports = {
           text: 'Category name'
         },
         items: '598 item(s)'
+      }
+    ],
+    manufacturer: [
+      {
+        name: {
+          class: 'quicksearch__manufacturer-name',
+          tag: 'h3',
+          text: 'Manufacturer name'
+        },
+        items: '598 item(s)'
       },
       {
         name: {
-          class: 'quicksearch__category-name',
+          class: 'quicksearch__manufacturer-name',
           tag: 'h3',
-          text: 'Category name'
+          text: 'Manufacturer name'
+        },
+        items: '598 item(s)'
+      },
+      {
+        name: {
+          class: 'quicksearch__manufacturer-name',
+          tag: 'h3',
+          text: 'Manufacturer name'
+        },
+        items: '598 item(s)'
+      },
+      {
+        name: {
+          class: 'quicksearch__manufacturer-name',
+          tag: 'h3',
+          text: 'Manufacturer name'
         },
         items: '598 item(s)'
       }
