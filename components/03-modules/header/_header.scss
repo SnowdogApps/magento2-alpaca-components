@@ -17,6 +17,10 @@ $header__search-wrapper-padding--medium: 0 24px !default;
 
 .header {
     position: relative;
+    border-bottom: 1px solid $header__border-color;
+    @include mq($screen-l) {
+        border-bottom: none;
+    }
 
     &__wrapper {
         position: relative;
@@ -24,9 +28,12 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         display: flex;
         flex-flow: row wrap;
         padding: $header__wrapper-padding;
-        border-bottom: 1px solid $header__border-color;
         @include mq($screen-m) {
             padding: $header__wrapper-padding--medium;
+        }
+
+        @include mq($screen-l) {
+            border-bottom: 1px solid $header__border-color;
         }
     }
 
