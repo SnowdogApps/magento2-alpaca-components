@@ -1,45 +1,47 @@
-<div class="quicksearch quicksearch--visible">
-    {{ render '@button--icon' close }}
-    <p class="quicksearch__results">
-        {{ results.text }}
-        <span class="quicksearch__typed">
-            {{ results.typed }}
-        </span>
-    </p>
-    <div class="quicksearch__content">
-        <ul class="quicksearch__product-list">
-            {{#each product }}
-                <li class="quicksearch__product">
-                    <a href="#" class="quicksearch__product-image-wrapper">
-                        {{ render '@image' image }}
-                    </a>
-                    <div class="quicksearch__product-details">
+<div class="quicksearch__wrapper">
+    <div class="quicksearch quicksearch--visible">
+        {{ render '@button--icon' close }}
+        <p class="quicksearch__results">
+            {{ results.text }}
+            <span class="quicksearch__typed">
+                {{ results.typed }}
+            </span>
+        </p>
+        <div class="quicksearch__content">
+            <ul class="quicksearch__product-list">
+                {{#each product }}
+                    <li class="quicksearch__product">
+                        <a href="#" class="quicksearch__product-image-wrapper">
+                            {{ render '@image' image }}
+                        </a>
+                        <div class="quicksearch__product-details">
+                            <a
+                                href="#"
+                                class="link link--invert quicksearch__product-link"
+                            >
+                                {{ render '@heading' name }}
+                            </a>
+                            {{ render '@price--with-special-price' }}
+                        </div>
+                    </li>
+                {{/each }}
+            </ul>
+            <ul class="quicksearch__category-list">
+                {{#each category }}
+                    <li class="quicksearch__category">
                         <a
                             href="#"
-                            class="link link--invert quicksearch__product-link"
+                            class="link link--invert quicksearch__category-link"
                         >
                             {{ render '@heading' name }}
                         </a>
-                        {{ render '@price--with-special-price' }}
-                    </div>
-                </li>
-            {{/each }}
-        </ul>
-        <ul class="quicksearch__category-list">
-            {{#each category }}
-                <li class="quicksearch__category">
-                    <a
-                        href="#"
-                        class="link link--invert quicksearch__category-link"
-                    >
-                        {{ render '@heading' name }}
-                    </a>
-                    {{ items }}
-                </li>
-            {{/each }}
-        </ul>
+                        {{ items }}
+                    </li>
+                {{/each }}
+            </ul>
+        </div>
+        <a href="#" class="link link--invert quicksearch__more-link">
+            {{ more }}
+        </a>
     </div>
-    <a href="#" class="link link--invert quicksearch__more-link">
-        {{ more }}
-    </a>
 </div>

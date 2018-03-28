@@ -1,5 +1,9 @@
-$quicksearch__width                        : 688px !default;
+$quicksearch__top                          : calc(100% + 1px) !default;
+$quicksearch__left                         : -$spacer--medium !default;
+$quicksearch__width                        : 100% !default;
+$quicksearch__width\@medium                : 688px !default;
 $quicksearch__padding                      : 0 $spacer--medium !default;
+$quicksearch__background                   : $white !default;
 $quicksearch__box-shadow                   : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
 $quicksearch__results-padding              : $spacer--medium 0 !default;
 $quicksearch__results-margin               : 0 !default;
@@ -32,15 +36,23 @@ $quicksearch__more-link-text-align         : center !default;
 $quicksearch__more-link-font-weight        : $font-weight-bold !default;
 
 .quicksearch {
-    position: relative;
+    position: absolute;
+    top: $quicksearch__top;
     display: none;
+    width: $quicksearch__width;
     padding: $quicksearch__padding;
+    background: $quicksearch__background;
     box-shadow: $quicksearch__box-shadow;
     @include mq($screen-m) {
-        width: $quicksearch__width;
+        left: $quicksearch__left;
+        width: $quicksearch__width\@medium;
     }
     &--visible {
         display: block;
+    }
+
+    &__wrapper {
+        position: relative;
     }
 
     &__results {
