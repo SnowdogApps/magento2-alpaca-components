@@ -1,6 +1,6 @@
 $mega-menu__margin                        : 0 !default;
 $mega-menu__border-bottom                 : 1px solid $gray-light !default;
-$mega-menu__font-color                    : $font-color-base !default;
+$mega-menu__font-color                    : $gray-darker !default;
 $mega-menu__font-weight                   : $font-weight-bold !default;
 $mega-menu__font-size                     : $font-size-base !default;
 $mega-menu__font-size--large              : 16px !default;
@@ -34,7 +34,7 @@ $mega-menu__inner-link-color--active      : $color-primary !default;
 .mega-menu {
     display: none;
     background: $mega-menu__background-color;
-    color: $gray-darker;
+    color: $mega-menu__font-color;
     position: relative;
     margin: $mega-menu__margin;
     border-bottom: $mega-menu__border-bottom;
