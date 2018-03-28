@@ -1,40 +1,39 @@
-$quicksearch__top                          : calc(100% + 1px) !default;
-$quicksearch__left                         : -$spacer--medium !default;
-$quicksearch__width                        : 100% !default;
-$quicksearch__width\@medium                : 688px !default;
-$quicksearch__padding                      : 0 $spacer--medium !default;
-$quicksearch__background                   : $white !default;
-$quicksearch__box-shadow                   : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
-$quicksearch__results-padding              : $spacer--medium 0 !default;
-$quicksearch__results-margin               : 0 !default;
-$quicksearch__results-border               : 1px solid $gray-light !default;
-$quicksearch__typed-font-weight            : $font-weight-bold !default;
-$quicksearch__close-fill                   : $color-secondary !default;
-$quicksearch__close-background             : transparent !default;
-$quicksearch__close-border                 : 0 !default;
-$quicksearch__close-size                   : $spacer--medium !default;
-$quicksearch__content-padding              : $spacer 0 !default;
-$quicksearch__content-border-bottom        : 1px solid $gray-light !default;
-$quicksearch__list-margin                  : 0 !default;
-$quicksearch__list-padding                 : 0 !default;
-$quicksearch__category-padding             : $spacer 0 !default;
-$quicksearch__category-list-padding        : $spacer 0 0 0 !default;
-$quicksearch__category-list-padding\@medium: 0 0 0 $spacer--medium !default;
-$quicksearch__manufacturer-list-padding-top: $spacer--medium !default;
-$quicksearch__product-border               : 1px solid $gray-light !default;
-$quicksearch__product-border--last         : 0 !default;
-$quicksearch__product-padding              : $spacer 0 !default;
-$quicksearch__product-image-max-size       : 72px !default;
-$quicksearch__product-image-mix            : multiply !default;
-$quicksearch__product-price-font-weight    : $font-weight-bold !default;
-$quicksearch__product-name-margin          : 0 !default;
-$quicksearch__product-name-padding         : $spacer 0 !default;
-$quicksearch__product-name-color           : inherit !default;
-$quicksearch__product-name-font-weight     : $font-weight-normal !default;
-$quicksearch__category-name-color          : inherit !default;
-$quicksearch__more-link-padding            : $spacer--medium 0 !default;
-$quicksearch__more-link-text-align         : center !default;
-$quicksearch__more-link-font-weight        : $font-weight-bold !default;
+$quicksearch__top                              : calc(100% + 1px) !default;
+$quicksearch__left                             : -$spacer--medium !default;
+$quicksearch__width                            : 100% !default;
+$quicksearch__width\@medium                    : 688px !default;
+$quicksearch__padding                          : 0 $spacer--medium !default;
+$quicksearch__background                       : $white !default;
+$quicksearch__box-shadow                       : 0 4px 6px 0 rgba(57, 50, 67, 0.3) !default;
+$quicksearch__results-padding                  : $spacer--medium 0 !default;
+$quicksearch__results-margin                   : 0 !default;
+$quicksearch__results-border                   : 1px solid $gray-light !default;
+$quicksearch__typed-font-weight                : $font-weight-bold !default;
+$quicksearch__close-fill                       : $color-secondary !default;
+$quicksearch__close-background                 : transparent !default;
+$quicksearch__close-border                     : 0 !default;
+$quicksearch__close-size                       : $spacer--medium !default;
+$quicksearch__content-padding                  : $spacer 0 !default;
+$quicksearch__content-border-bottom            : 1px solid $gray-light !default;
+$quicksearch__list-margin                      : 0 !default;
+$quicksearch__list-padding                     : 0 !default;
+$quicksearch__list-padding-top--below          : $spacer--medium !default;
+$quicksearch__category-padding                 : $spacer 0 !default;
+$quicksearch__categories-column-padding        : $spacer 0 0 0 !default;
+$quicksearch__categories-column-padding\@medium: 0 0 0 $spacer--medium !default;
+$quicksearch__product-border                   : 1px solid $gray-light !default;
+$quicksearch__product-border--last             : 0 !default;
+$quicksearch__product-padding                  : $spacer 0 !default;
+$quicksearch__product-image-max-size           : 72px !default;
+$quicksearch__product-image-mix                : multiply !default;
+$quicksearch__product-price-font-weight        : $font-weight-bold !default;
+$quicksearch__name-margin                      : 0 !default;
+$quicksearch__name-padding                     : $spacer 0 !default;
+$quicksearch__name-color                       : inherit !default;
+$quicksearch__name-font-weight                 : $font-weight-normal !default;
+$quicksearch__more-link-padding                : $spacer--medium 0 !default;
+$quicksearch__more-link-text-align             : center !default;
+$quicksearch__more-link-font-weight            : $font-weight-bold !default;
 
 .quicksearch {
     position: absolute;
@@ -93,27 +92,23 @@ $quicksearch__more-link-font-weight        : $font-weight-bold !default;
         }
     }
 
-    &__product-list,
-    &__category-list,
-    &__manufacturer-list {
+    &__list {
         margin: $quicksearch__list-margin;
         padding: $quicksearch__list-padding;
         list-style-type: none;
-    }
-
-    &__product-list {
-        flex: 2;
-    }
-
-    &__manufacturer-list {
-        padding-top: $quicksearch__manufacturer-list-padding-top;
+        &--column {
+            flex: 2;
+        }
+        &--below {
+            padding-top: $quicksearch__list-padding-top--below;
+        }
     }
 
     &__categories-column {
         flex: 1;
-        padding: $quicksearch__category-list-padding;
+        padding: $quicksearch__categories-column-padding;
         @include mq($screen-m) {
-            padding: $quicksearch__category-list-padding\@medium;
+            padding: $quicksearch__categories-column-padding\@medium;
         }
     }
 
@@ -140,27 +135,22 @@ $quicksearch__more-link-font-weight        : $font-weight-bold !default;
         mix-blend-mode: $quicksearch__product-image-mix;
     }
 
-    &__product-link,
-    &__category-link,
-    &__manufacturer-link {
+    &__link {
         text-decoration: none;
     }
 
-    &__product-name {
-        margin: $quicksearch__product-name-margin;
-        padding: $quicksearch__product-name-padding;
-        color: $quicksearch__product-name-color;
-        font-weight: $quicksearch__product-name-font-weight;
+    &__name {
+        color: $quicksearch__name-color;
+        &--thin {
+            margin: $quicksearch__name-margin;
+            padding: $quicksearch__name-padding;
+            font-weight: $quicksearch__name-font-weight;
+        }
     }
 
     &__category,
     &__manufacturer {
         padding: $quicksearch__category-padding;
-    }
-
-    &__category-name,
-    &__manufacturer-name {
-        color: $quicksearch__category-name-color;
     }
 
     &__more-link {

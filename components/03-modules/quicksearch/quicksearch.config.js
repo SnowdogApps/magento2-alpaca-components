@@ -18,7 +18,7 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          class: 'quicksearch__product-name',
+          class: 'quicksearch__name quicksearch__name--thin',
           tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
@@ -29,7 +29,7 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          class: 'quicksearch__product-name',
+          class: 'quicksearch__name quicksearch__name--thin',
           tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
@@ -40,7 +40,7 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          class: 'quicksearch__product-name',
+          class: 'quicksearch__name quicksearch__name--thin',
           tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
@@ -51,7 +51,7 @@ module.exports = {
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
         name: {
-          class: 'quicksearch__product-name',
+          class: 'quicksearch__name quicksearch__name--thin',
           tag: 'h3',
           text: 'Lorem Ipsum is simply dummy...'
         }
@@ -60,7 +60,7 @@ module.exports = {
     category: [
       {
         name: {
-          class: 'quicksearch__category-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Category name'
         },
@@ -68,7 +68,7 @@ module.exports = {
       },
       {
         name: {
-          class: 'quicksearch__category-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Category name'
         },
@@ -76,7 +76,7 @@ module.exports = {
       },
       {
         name: {
-          class: 'quicksearch__category-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Category name'
         },
@@ -86,7 +86,7 @@ module.exports = {
     manufacturer: [
       {
         name: {
-          class: 'quicksearch__manufacturer-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Manufacturer name'
         },
@@ -94,7 +94,7 @@ module.exports = {
       },
       {
         name: {
-          class: 'quicksearch__manufacturer-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Manufacturer name'
         },
@@ -102,7 +102,7 @@ module.exports = {
       },
       {
         name: {
-          class: 'quicksearch__manufacturer-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Manufacturer name'
         },
@@ -110,7 +110,7 @@ module.exports = {
       },
       {
         name: {
-          class: 'quicksearch__manufacturer-name',
+          class: 'quicksearch__name',
           tag: 'h3',
           text: 'Manufacturer name'
         },
