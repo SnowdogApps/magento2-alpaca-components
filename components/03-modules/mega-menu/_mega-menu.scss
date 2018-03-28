@@ -13,6 +13,7 @@ $mega-menu__list-background-color         : $white !default;
 $mega-menu__inner-list-padding            : 0 !default;
 $mega-menu__inner-list-background-color   : $white !default;
 $mega-menu__inner-list-box-shadow--level1 : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
+$mega-menu__inner-list-border--level1     : 1px solid $gray-light !default;
 
 $mega-menu__inner-item-padding--parent    : $spacer--large 0 $spacer--large ($spacer--large * 2) !default;
 $mega-menu__inner-item-padding--image     : 0 0 0 112px !default;
@@ -23,12 +24,12 @@ $mega-menu__link-color                    : $gray-darker !default;
 $mega-menu__link-color--active            : $color-primary !default;
 $mega-menu__link-text-decoration          : none !default;
 
-$mega-menu__link-inner-margin             : 0 !default;
-$mega-menu__link-inner-padding            : 0 !default;
-$mega-menu__link-inner-font-weight        : $font-weight-normal !default;
-$mega-menu__link-inner-text-decoration    : none !default;
-$mega-menu__link-inner-color              : $gray-darker !default;
-$mega-menu__link-inner-color--active      : $color-primary !default;
+$mega-menu__inner-link-margin             : 0 !default;
+$mega-menu__inner-link-padding            : 0 !default;
+$mega-menu__inner-link-font-weight        : $font-weight-normal !default;
+$mega-menu__inner-link-text-decoration    : none !default;
+$mega-menu__inner-link-color              : $gray-darker !default;
+$mega-menu__inner-link-color--active      : $color-primary !default;
 
 .mega-menu {
     display: none;
@@ -58,10 +59,11 @@ $mega-menu__link-inner-color--active      : $color-primary !default;
         &--level1 {
             display: none;
             position: absolute;
-            top: calc(100% + 1px);
+            top: 100%;
             left: 0;
             z-index: 2;
             width: 100%;
+            border-top: $mega-menu__inner-list-border--level1;
             box-shadow: $mega-menu__inner-list-box-shadow--level1;
         }
     }
@@ -113,17 +115,17 @@ $mega-menu__link-inner-color--active      : $color-primary !default;
     }
 
     &__inner-link {
-        margin: $mega-menu__link-inner-margin;
-        padding: $mega-menu__link-inner-padding;
+        margin: $mega-menu__inner-link-margin;
+        padding: $mega-menu__inner-link-padding;
         white-space: nowrap;
         font-size: $mega-menu__font-size;
-        font-weight: $mega-menu__link-inner-font-weight;
-        color: $mega-menu__link-inner-color;
-        text-decoration: $mega-menu__link-inner-text-decoration;
+        font-weight: $mega-menu__inner-link-font-weight;
+        color: $mega-menu__inner-link-color;
+        text-decoration: $mega-menu__inner-link-text-decoration;
         &:focus,
         &:hover {
-            text-decoration: $mega-menu__link-inner-text-decoration;
-            color: $mega-menu__link-inner-color--active;
+            text-decoration: $mega-menu__inner-link-text-decoration;
+            color: $mega-menu__inner-link-color--active;
         }
     }
 }
