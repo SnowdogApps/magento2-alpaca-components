@@ -60,14 +60,6 @@ module.exports = {
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Search"',
     },
-    sideMenuIcon: {
-      iconId: 'mobile-menu',
-      class: 'header-button__icon header-button__icon--small header-button__icon--open'
-    },
-    sideMenuIconClose: {
-      iconId: 'close',
-      class: 'header-button__icon header-button__icon--small header-button__icon--close'
-    },
     minicartTrigger: {
       icon: {
         iconId: 'shopping-cart',

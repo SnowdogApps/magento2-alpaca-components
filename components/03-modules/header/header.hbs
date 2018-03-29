@@ -2,17 +2,7 @@
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
-            <div class="header__menu-trigger">
-                <button class="header-button--side-menu header-button header-button--reset-margin"
-                        type="button"
-                >
-                    {{ render '@icon' sideMenuIcon }}
-                    {{ render '@icon' sideMenuIconClose }}
-                    <span class="header-button__text">
-                        Menu
-                    </span>
-                </button>
-            </div>
+            {{ render '@side-menu' }}
             <div class="header__buttons">
                 {{#each buttons as |item| }}
                     <a class="header-button {{ item.class }}"
@@ -52,8 +42,5 @@
             </div>
         </div>
     </div>
-    {{ render '@side-menu' }}
 </header>
 {{ render '@mega-menu' }}
-
-<script src="{{static 'header.js'}}" defer></script>
