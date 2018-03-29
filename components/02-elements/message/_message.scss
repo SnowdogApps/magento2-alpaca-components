@@ -1,53 +1,68 @@
+$message__padding            : $spacer $spacer--extra-large !default;
+$message__margin-base        : $spacer--medium !default;
 $message__font-size          : $font-size-small !default;
 $message__transition         : $transition-base !default;
-$message__background         : $gray !default;
-$message__background--success: $green !default;
-$message__background--error  : $red !default;
-$message__color              : $white !default;
-$message__padding-base       : 15px !default;
-$message__margin-base        : 15px !default;
-$message__after-height       : 100% !default;
-$message__after-width        : 30px !default;
-$message__icon--success      : "\2713" !default;
-$message__icon--error        : "\2715" !default;
+$message__background         : rgba($blue, 0.05) !default;
+$message__background--success: rgba($color-primary, 0.05) !default;
+$message__background--error  : rgba($red, 0.05) !default;
+$message__color              : $blue !default;
+$message__color--success     : $gray !default;
+$message__color--error       : $red !default;
+$message__border             : 1px solid $blue !default;
+$message__border--success    : 1px solid $color-primary !default;
+$message__border--error      : 1px solid $red !default;
+$message__border-radius      : 24px !default;
+$message__icon-spacer        : $spacer--medium !default;
+$message__icon-fill          : $blue !default;
+$message__icon-fill--success : $color-primary !default;
+$message__icon-fill--error   : $red !default;
 
 .message {
-    background-color: $message__background;
-    color: $message__color;
     position: relative;
-    padding: 5px ($message__padding-base * 2);
-    margin-bottom: $message__margin-base;
-    font-size: $message__font-size;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     width: 100%;
+    padding: $message__padding;
+    margin-bottom: $message__margin-base;
+    background-color: $message__background;
+    border: $message__border;
+    border-radius: $message__border-radius;
+    color: $message__color;
+    font-size: $message__font-size;
     transition: $message__transition;
 
     &:after {
+        content: "";
         position: absolute;
-        display: flex;
-        left: 0;
+        left: $message__icon-spacer;
         top: 0;
-        align-items: center;
-        justify-content: center;
-        height: $message__after-height;
-        width: $message__after-width;
-        color: $message__color;
+        bottom: 0;
+        height: $message__icon-spacer;
+        width: $message__icon-spacer;
+        margin: auto;
+        background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill}" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm.667 10H6.333V9h1.334v1.333zm0-2.666H6.333v-4h1.334v4z"/></svg>');
+        background-repeat: no-repeat;
+        background-size: $message__icon-spacer;
     }
 
     &--success {
         background-color: $message__background--success;
-        color: rgba($message__color, 0.9);
+        border: $message__border--success;
+        color: $message__color--success;
 
         &:after {
-            content: $message__icon--success;
+            background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill--success}" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm-1.333 10L2.333 7l.94-.94 2.394 2.387 5.06-5.06.94.946-6 6z"/></svg>');
         }
     }
 
     &--error {
         background-color: $message__background--error;
-        color: rgba($message__color, 0.9);
+        border: $message__border--error;
+        color: $message__color--error;
 
         &:after {
-            content: $message__icon--error;
+            background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill--error}" d="M.667 13h14.666L8 .333.667 13zm8-2H7.333V9.667h1.334V11zm0-2.667H7.333V5.667h1.334v2.666z"/></svg>');
         }
     }
 }
