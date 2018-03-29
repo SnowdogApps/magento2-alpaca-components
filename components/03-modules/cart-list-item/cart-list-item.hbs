@@ -1,0 +1,25 @@
+<div class="cart-list-item">
+    <div class="cart-list-item__image">
+        {{ render '@image' productImage }}
+    </div>
+    <div class="cart-list-item__info">
+        <div class="cart-list-item__data">
+            <a href="#" class="link link--invert cart-list-item__name">
+                {{ productName }}
+            </a>
+            <div class="cart-list-item__details">
+                <div class="cart-list-item__qty">
+                    {{ render '@input' qtyInput }}
+                </div>
+                <div class="cart-list-item__price">
+                    {{ productPrice }}
+                </div>
+            </div>
+            {{ render '@list--description' attributes }}
+        </div>
+        <div class="cart-list-item__actions">
+            {{ render '@button--icon' editIcon }}
+            {{ render '@button--icon' removeIcon }}
+        </div>
+    </div>
+</div>

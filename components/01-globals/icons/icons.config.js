@@ -43,6 +43,10 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'check',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'checked',
         class: 'icons__single-icon'
       },
@@ -64,6 +68,10 @@ module.exports = {
       },
       {
         iconId: 'edit',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'error',
         class: 'icons__single-icon'
       },
       {
@@ -127,6 +135,14 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'shield',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'shipping-time-truck',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'shopping-cart',
         class: 'icons__single-icon'
       },
@@ -135,11 +151,23 @@ module.exports = {
         class: 'icons__single-icon'
       },
       {
+        iconId: 'star',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'star-border',
+        class: 'icons__single-icon'
+      },
+      {
         iconId: 'twitter',
         class: 'icons__single-icon'
       },
       {
         iconId: 'user',
+        class: 'icons__single-icon'
+      },
+      {
+        iconId: 'warning',
         class: 'icons__single-icon'
       },
       {

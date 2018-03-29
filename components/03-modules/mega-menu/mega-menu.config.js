@@ -3,154 +3,163 @@ module.exports = {
   context: {
     list: [
       {
-        class: 'mega-menu__item--parent',
+        class: 'mega-menu__item mega-menu__item--parent',
         text: 'Furniture',
         link: '/furniture',
         nestedList: [
           {
-            class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+            class: 'mega-menu__inner-item mega-menu__inner-item--level1 mega-menu__inner-item--parent',
+            linkClass: 'mega-menu__inner-link',
             heading: 'Example',
             link: '/example',
-            elements: [
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              }
-            ]
+            list: {
+              class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+              elements: [
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category long name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                }
+              ]
+            }
           },
           {
-            class: 'mega-menu__inner-list mega-menu__inner-list--level2',
-            heading: 'Example',
+            class: 'mega-menu__inner-item mega-menu__inner-item--level1 mega-menu__inner-item--parent',
+            linkClass: 'mega-menu__inner-link',
+            heading: 'Example2',
             link: '/example',
-            elements: [
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: 'mega-menu__inner-item mega-menu__inner-item--level2',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              }
-            ]
+            list: {
+              class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+              elements: [
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category long very name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category long very name',
+                  linkClass: 'mega-menu__inner-link'
+                }
+              ]
+            }
+          },
+          {
+            class: 'mega-menu__inner-item mega-menu__inner-item--level1 mega-menu__inner-item--parent',
+            linkClass: 'mega-menu__inner-link',
+            heading: 'Example3',
+            link: '/example',
+            list: {
+              class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+              elements: [
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category long very name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category long very name',
+                  linkClass: 'mega-menu__inner-link'
+                }
+              ]
+            }
+          },
+          {
+            class: 'mega-menu__inner-item mega-menu__inner-item--level1 mega-menu__inner-item--parent',
+            linkClass: 'mega-menu__inner-link',
+            heading: 'Example long name',
+            link: '/example',
+            list: {
+              class: 'mega-menu__inner-list mega-menu__inner-list--level2',
+              elements: [
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  text: 'Category long very name',
+                  linkClass: 'mega-menu__inner-link'
+                },
+                {
+                  class: 'mega-menu__inner-item mega-menu__inner-item--level2',
+                  linkClass: 'mega-menu__inner-link'
+                }
+              ]
+            }
+          },
+          {
+            image: true,
+            class: 'mega-menu__inner-item mega-menu__inner-item--level1 mega-menu__inner-item--image',
+            linkClass: 'mega-menu__inner-link',
+            link: '#',
           }
-        ],
-        imageTitle: 'Lorem Ipsum',
-        secondImageTitle: 'lorem ipsum'
+        ]
       },
       {
         text: 'Accessories',
         link: '/accessories'
-      },
-      {
-        class: 'mega-menu__item--parent',
-        text: 'TBD',
-        link: '/tbd',
-        nestedList: [
-          {
-            class: '',
-            heading: 'Example',
-            link: '/example',
-            elements: [
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              }
-            ]
-          },
-          {
-            class: '',
-            heading: 'Example1',
-            link: '/example1',
-            elements: [
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              },
-              {
-                class: '',
-                text: 'Lorem ipsum',
-                link: '/lorem-ipsum',
-                linkClass: 'mega-menu__link mega-menu__link--inner'
-              }
-            ]
-          }
-        ],
-        imageTitle: 'Lorem Ipsum',
-        secondImageTitle: 'lorem ipsum'
-      },
-      {
-        text: 'Sale',
-        link: '/sale'
       },
       {
         text: 'World of',

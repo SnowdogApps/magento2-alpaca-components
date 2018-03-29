@@ -1,17 +1,19 @@
 module.exports = {
   context: {
-    attribute: '',
+    attributes: '',
     class: '',
     label: {
-      attribute: '',
-      text: 'Label text'
+      attributes: '',
+      text: 'Label text',
+      hidden: false
     },
     field: {
-      attribute: '',
+      attributes: '',
       class: '',
       id: 'field-id',
       name: 'field-name',
-      placeholder: 'First and last name'
+      placeholder: 'First and last name',
+      type: 'text'
     }
   },
   variants: [

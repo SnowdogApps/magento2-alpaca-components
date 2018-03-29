@@ -1,19 +1,21 @@
-{{ render '@header' }}
+<div class="page-wrapper">
+    {{ render '@header' }}
 
-<div class="dashboard container">
-    <div class="grid">
-        <div class="grid__column grid__column--1-4 dashboard__sidebar">
-            {{ render '@dashboard-nav' }}
-        </div>
+    <div class="dashboard container">
+        <div class="grid">
+            <div class="grid__column grid__column--1-4 dashboard__sidebar">
+                {{ render '@dashboard-nav' }}
+            </div>
 
-        <div class="grid__column grid__column--3-4 dashboard__content">
-            {{> '@information' info }}
+            <div class="grid__column grid__column--3-4 dashboard__content">
+                {{> '@information' info }}
 
-            {{> '@dashboard-table' points }}
+                {{> '@dashboard-table' points }}
 
-            {{> '@dashboard-form' form }}
+                {{> '@dashboard-form' form }}
 
-            {{> '@action' buttons }}
+                {{> '@action' buttons }}
+            </div>
         </div>
     </div>
 </div>
