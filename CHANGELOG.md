@@ -31,6 +31,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Login page, removed tabs and set two columns
 - Aria-label values
 - Registration view
+- Simplify filters, remove unnecessary code from config
+- Update toolbar styles
 
 ### Removed
 - Old catalog product modules and catalog views

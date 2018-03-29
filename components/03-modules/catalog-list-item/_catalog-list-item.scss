@@ -34,10 +34,10 @@ $catalog-list-item__price-font-weight                            : $font-weight-
 $catalog-list-item__actions-margin                               : $spacer 0 !default;
 $catalog-list-item__actions-primary-margin\@medium               : $spacer 0 0 0 !default;
 $catalog-list-item__actions-primary-button-width                 : 112px !default;
-$catalog-list-item__actions-primary-button-width\@medium         : auto !default;
+$catalog-list-item__actions-primary-button-width\@medium         : 175px !default;
 $catalog-list-item__actions-primary-button-height                : 32px !default;
 $catalog-list-item__actions-primary-button-height\@medium        : 48px !default;
-$catalog-list-item__actions-primary-button-padding\@medium       : 0 45px !default;
+$catalog-list-item__actions-primary-button-padding\@medium       : 0 $spacer !default;
 
 $catalog-list-item__actions-secondary-margin                     : 0 0 0 $spacer--medium !default;
 $catalog-list-item__actions-secondary-margin\@medium             : 0 !default;
@@ -66,13 +66,13 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
             flex: 1 $catalog-list-item__image-width\@medium;
             height: $catalog-list-item__image-height\@medium;
         }
-    }
 
-    &__image {
-        width: $catalog-list-item__image-width;
-        mix-blend-mode: multiply;
-        @include mq($screen-m) {
-            width: $catalog-list-item__image-width\@medium;
+        .image {
+            width: $catalog-list-item__image-width;
+            mix-blend-mode: multiply;
+            @include mq($screen-m) {
+                width: $catalog-list-item__image-width\@medium;
+            }
         }
     }
 
@@ -185,27 +185,27 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
             justify-content: flex-start;
             margin: $catalog-list-item__actions-secondary-margin\@medium;
         }
-    }
 
-    &__actions-secondary-button {
-        width: $catalog-list-item__actions-secondary-button-width;
-        min-width: $catalog-list-item__actions-secondary-button-width;
-        height: $catalog-list-item__actions-secondary-button-height;
-        border: none;
-        border-radius: 0;
-        background-color: transparent;
-        @include mq($screen-m) {
-            margin: $catalog-list-item__actions-secondary-button-margin\@medium;
-            width: $catalog-list-item__actions-secondary-button-width\@medium;
-            height: $catalog-list-item__actions-secondary-button-height\@medium;
-        }
-
-        &:hover,
-        &:focus {
+        .button {
+            width: $catalog-list-item__actions-secondary-button-width;
+            min-width: $catalog-list-item__actions-secondary-button-width;
+            height: $catalog-list-item__actions-secondary-button-height;
+            border: none;
+            border-radius: 0;
             background-color: transparent;
+            @include mq($screen-m) {
+                margin: $catalog-list-item__actions-secondary-button-margin\@medium;
+                width: $catalog-list-item__actions-secondary-button-width\@medium;
+                height: $catalog-list-item__actions-secondary-button-height\@medium;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+            }
         }
 
-        &-icon {
+        .button__icon {
             width: $catalog-list-item__actions-secondary-button-icon-width;
             height: $catalog-list-item__actions-secondary-button-icon-height;
             fill: $catalog-list-item__actions-secondary-button-icon-fill;
