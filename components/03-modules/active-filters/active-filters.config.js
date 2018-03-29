@@ -2,7 +2,7 @@ module.exports = {
   context: {
     clear: {
       href: '#',
-      text: 'Clear',
+      text: 'Clear all',
       title: 'Clear all filters',
     },
     filters: [
