@@ -14,10 +14,35 @@ module.exports = {
       text: 'Go to Checkout'
     },
     products: [
-      {},
+      {
+        productQty: {
+          field: {
+            id: 'mini-qty-1'
+          }
+        },
+        attributes: {
+          dropdowns: [
+            {
+              id: 'see-details-1'
+            }
+          ]
+        }
+      },
       {
         productName: 'Some product 2 name',
-        updateQty: false
+        updateQty: false,
+        productQty: {
+          field: {
+            id: 'mini-qty-2'
+          }
+        },
+        attributes: {
+          dropdowns: [
+            {
+              id: 'see-details-2'
+            }
+          ]
+        }
       }
     ]
   }
