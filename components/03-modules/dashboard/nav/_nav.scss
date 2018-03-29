@@ -73,22 +73,22 @@ $dashboard-nav-margin : 15px !default;
     &__link {
         display: block;
         padding: 15px;
-        color: $gray-dark;
-
-        &:hover {
-            text-decoration: none;
-            color: $gray-dark;
-        }
     }
 
     // This class is changing by Magento
     .current {
+        position: relative;
+        padding: $dashboard-nav-padding $dashboard-nav-padding $dashboard-nav-padding ($dashboard-nav-padding * 2);
+        margin-left: -$dashboard-nav-margin;
         border-left: 2px solid $red;
         color: $red;
-        position: relative;
 
         &:hover {
             background-color: initial;
+        }
+
+        & > a {
+            padding: 0;
         }
     }
 
@@ -98,7 +98,17 @@ $dashboard-nav-margin : 15px !default;
         @extend .dashboard-nav__item;
     }
 
+    .nav.item.current {
+        @extend .current;
+    }
+
+    .nav.item.current {
+        & > a {
+            color: $red;
+        }
+    }
+
     .nav.item > a {
-        @extend .dashboard-nav__link;
+        @extend .link--invert;
     }
 }

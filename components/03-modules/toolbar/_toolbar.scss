@@ -1,18 +1,55 @@
-$toolbar__offset               : $spacer !default;
-$toolbar__secondary-text-color : #a09fa6 !default;
-$toolbar__icon-color           : #a09fa6 !default;
-$toolbar__icon-color--active   : $black !default;
-$toolbar__sorter-label-offset  : $spacer !default;
-$toolbar__select-border        : 1px solid $black !default;
-$toolbar__select-border-radius : 0 !default;
-$toolbar__select-border--hidden: none !default;
+$toolbar__border                       : 1px solid $gray-light !default;
+$toolbar__dropdown-icon-area-border    : none !default;
+$toolbar__dropdown-icon-area-size      : 32px !default;
+$toolbar__dropdown-icon-color          : $gray !default;
+$toolbar__dropdown-icon-size           : 12px !default;
+$toolbar__dropdown-icon-area-margin    : 0 !default;
+$toolbar__dropdown-icon-area-right     : 0 !default;
+$toolbar__dropdown-icon-area-top       : 0 !default;
+$toolbar__offset                       : $spacer !default;
+$toolbar__secondary-text-color         : $gray !default;
+$toolbar__icon-color                   : $gray-light !default;
+$toolbar__icon-color--active           : $black !default;
+$toolbar__mode-icon-area-size          : 48px !default;
+$toolbar__mode-icon-margin             : 0 auto !default;
+$toolbar__mode-icon-padding            : 0 !default;
+$toolbar__mode-icon-border             : none !default;
+$toolbar__mode-icon-background         : none !default;
+$toolbar__mode-icon-cursor             : pointer !default;
+$toolbar__mode-icon-size               : 18px !default;
+$toolbar__mode-margin-right            : $spacer !default;
+$toolbar__select-border                : 1px solid $gray-light !default;
+$toolbar__select-border-radius         : $form-elements-radius !default;
+$toolbar__select-padding-right         : $spacer--medium !default;
+$toolbar__select-field-item-color      : $gray-darker !default;
+$toolbar__select-field-list-height     : 32px !default;
+$toolbar__select-field-list-z-index    : 4 !default;
+$toolbar__select-field-item-height     : 30px !default;
+$toolbar__sorter-border-top            : 1px solid $gray-light !default;
+$toolbar__sorter-padding               : 8px 0 !default;
+$toolbar__sorter-width                 : 200px !default;
+$toolbar__sorter-icon-wrapper-cursor   : pointer !default;
+$toolbar__sorter-icon-size             : 18px !default;
+$toolbar__sorter-icon-margin           : $spacer !default;
+$toolbar__sorter-icon-fill             : $gray !default;
+$toolbar__limiter-width                : 72px !default;
+$toolbar__select-margin                : 0 !default;
+$toolbar__select-height                : 32px !default;
+$toolbar__select-font-family           : $font-family-base !default;
+$toolbar__select-single-border-radius  : $spacer--medium $spacer--medium 0 0 !default;
+$toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !default;
 
 .toolbar {
+    position: relative;
     display: flex;
     flex: 0 0 auto;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
+    flex-direction: column;
+    border-bottom: $toolbar__border;
     @include mq($screen-m) {
+        align-items: center;
+        flex-direction: row;
         justify-content: flex-start;
     }
 
@@ -45,90 +82,133 @@ $toolbar__select-border--hidden: none !default;
     }
 
     &__sorter {
-        width: 75%;
+        border-top: $toolbar__sorter-border-top;
+        padding: $toolbar__sorter-padding;
+        width: 100%;
         @include mq($screen-m) {
             width: auto;
+            border-top: none;
+            padding: 0;
         }
     }
 
     &__mode {
-        display: none;
-        @include mq($screen-m) {
-            display: flex;
-            flex: 0 0 auto;
-        }
+        display: flex;
+        flex: 0 0 auto;
+        margin-right: $toolbar__mode-margin-right;
     }
 
     &__mode-icon {
-        width: 20px;
-        height: 20px;
-        padding: 4px;
         display: block;
-        margin: 0 auto;
+        width: $toolbar__mode-icon-size;
+        height: $toolbar__mode-icon-size;
+        padding: $toolbar__mode-icon-padding;
+        margin: $toolbar__mode-icon-margin;
         fill: $toolbar__icon-color;
         &--active {
             fill: $toolbar__icon-color--active;
         }
     }
 
-    &__mode-link {
-        padding: 12px;
-        height: 48px;
-        width: 48px;
+    &__mode-button {
+        height: $toolbar__mode-icon-area-size;
+        width: $toolbar__mode-icon-area-size;
         display: flex;
         justify-content: center;
         align-items: center;
+        background: $toolbar__mode-icon-background;
+        border: $toolbar__mode-icon-border;
+        cursor: $toolbar__mode-icon-cursor;
     }
 
     &__sorter-wrapper,
     &__limiter-wrapper {
-        margin-bottom: 0;
-        @include mq($screen-m) {
-            display: flex;
-            align-items: center;
-            .choices {
-                flex-grow: 1;
+        margin: $toolbar__select-margin;
+        display: flex;
+        align-items: center;
+        .choices {
+            flex-grow: 1;
+            @include mq($screen_m) {
+                width: $toolbar__sorter-width;
             }
         }
         .select__field-list {
-            border: $toolbar__select-border;
-            border-radius: $toolbar__select-border-radius;
-            @include mq($screen-m) {
-                border: none;
-            }
-        }
-        .choices__list--dropdown {
-            .select__field-item {
-                padding-right: 0;
+            z-index: $toolbar__select-field-list-z-index;
+            &--single {
+                height: $toolbar__select-field-list-height;
+                border: $toolbar__select-border;
+                border-radius: $toolbar__select-border-radius;
+                padding-right: $toolbar__select-padding-right;
             }
         }
     }
 
     &__limiter-wrapper {
-        margin-bottom: 0;
-        @include mq($screen-m) {
-            margin-right: $toolbar__offset;
+        .choices {
+            @include mq($screen_m) {
+                width: $toolbar__limiter-width;
+            }
+        }
+    }
+
+    .select__field-item {
+        color: $toolbar__select-field-item-color;
+        height: $toolbar__select-field-item-height;
+        line-height: $toolbar__select-field-item-height;
+    }
+
+    &__sorter-select,
+    &__limiter-select {
+        height: $toolbar__select-height;
+        font-family: $toolbar__select-font-family;
+        @include mq($screen_m) {
+            width: $toolbar__sorter-width;
+        }
+    }
+
+    &__limiter-select {
+        @include mq($screen_m) {
+            width: $toolbar__limiter-width;
         }
     }
 
     &__sorter-label,
     &__limiter-label {
-        @media (max-width: $screen-m - 1) {
-            @include visually-hidden;
-        }
-        @include mq($screen-m) {
-            color: $toolbar__secondary-text-color;
-            margin-bottom: 0;
-            margin-right:  $toolbar__offset;
-        }
+        color: $toolbar__secondary-text-color;
+        margin-bottom: 0;
+        margin-right:  $toolbar__offset;
+    }
+
+    &__sorter-label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sorter-icon-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: $toolbar__sorter-icon-wrapper-cursor;
+    }
+
+    &__sorter-icon {
+        width: $toolbar__sorter-icon-size;
+        height: $toolbar__sorter-icon-size;
+        margin: $toolbar__sorter-icon-margin;
+        fill: $toolbar__sorter-icon-fill;
     }
 
     &__limiter {
+        position: absolute;
+        right: 0;
+        top: 8px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         width: 20%;
         @include mq($screen-m) {
+            position: relative;
+            top: auto;
+            right: auto;
             width: auto;
         }
     }
@@ -138,6 +218,48 @@ $toolbar__select-border--hidden: none !default;
         @include mq($screen-m) {
             color: $toolbar__secondary-text-color;
             display: block;
+        }
+    }
+    .choices {
+        &.is-open {
+            .select__field-list--single {
+                border-radius: $toolbar__select-single-border-radius;
+            }
+            .choices__list--dropdown {
+                border-radius: $toolbar__select-dropdown-border-radius;
+            }
+        }
+        &.is-open:after,
+        &:after {
+            top: $toolbar__dropdown-icon-area-top;
+            right: $toolbar__dropdown-icon-area-right;
+            width: $toolbar__dropdown-icon-area-size;
+            height: $toolbar__dropdown-icon-area-size;
+            margin: $toolbar__dropdown-icon-area-margin;
+            border: $toolbar__dropdown-icon-area-border;
+            background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path d="M12 2L10.59.59 6 5.17 1.41.59 0 2l6 6z" fill="#{$toolbar__dropdown-icon-color}" /></svg>');
+            background-size: $toolbar__dropdown-icon-size;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    .pager {
+        display: none;
+    }
+
+    ~ .toolbar {
+        border-bottom: 0;
+        .pager {
+            display: block;
+        }
+        .toolbar {
+            &__mode,
+            &__sorter,
+            &__amount,
+            &__limiter {
+                display: none;
+            }
         }
     }
 }

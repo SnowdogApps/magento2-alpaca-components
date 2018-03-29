@@ -1,0 +1,32 @@
+<{{{ tag }}} class="catalog-list-item {{ class }}">
+    <a href="#" class="catalog-list-item__image-wrapper catalog-list-item__link">
+        {{ render '@image' image }}
+    </a>
+    <div class="catalog-list-item__main">
+        {{#if badge}}
+            {{ render (component badge.name) badge.context }}
+        {{/if}}
+        <div class="catalog-list-item__details">
+            <h2 class="catalog-list-item__name">
+                <a href="#" class="catalog-list-item__link">
+                    {{ name }}
+                </a>
+            </h2>
+            <div class="catalog-list-item__reviews">
+                {{ render '@rating' }}
+            </div>
+        </div>
+        <div class="catalog-list-item__price">
+            {{ render (component price.name) price.context }}
+        </div>
+        <div class="catalog-list-item__actions">
+            <div class="catalog-list-item__actions-primary">
+                {{ render '@button' addToCartButton }}
+            </div>
+            <div class="catalog-list-item__actions-secondary">
+                {{ render '@button--icon' buttonWishlist }}
+                {{ render '@button--icon' buttonCompare }}
+            </div>
+        </div>
+    </div>
+</{{{ tag }}}>

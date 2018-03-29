@@ -1,22 +1,22 @@
 <div class="toolbar {{ class }}" {{{ attributes }}}>
-    <div class="toolbar__mode grid__column">
-        <a href="{{grid.href}}" class="toolbar__mode-link">
+    <div class="toolbar__mode">
+        <button type="button" class="toolbar__mode-button">
            {{ render '@icon' grid.icon }}
-        </a>
-        <a href="{{list.href}}" class="toolbar__mode-link">
+        </button>
+        <button type="button" class="toolbar__mode-button">
            {{ render '@icon' list.icon }}
-        </a>
+        </button>
     </div>
-    <div class="toolbar__sorter grid__column">
+    <div class="toolbar__sorter">
         {{render '@select' sortBy }}
     </div>
-    <div class="toolbar__amount grid__column">
+    <div class="toolbar__amount">
         <span class="toolbar__amount-content">
             {{ amount.prefix }} {{ amount.currentRange }} {{ amount.preposition }}
             {{ amount.total }}
         </span>
     </div>
-    <div class="toolbar__limiter grid__column">
+    <div class="toolbar__limiter">
         {{> '@select' limiter.select }}
         <span class="toolbar__limiter-suffix">
             {{ limiter.suffix }}

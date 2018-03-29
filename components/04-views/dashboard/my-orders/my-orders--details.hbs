@@ -1,40 +1,42 @@
-{{ render '@header' }}
+<div class="page-wrapper">
+    {{ render '@header' }}
 
-<div class="dashboard container">
-    <div class="grid">
-        <div class="grid__column grid__column--1-4 dashboard__sidebar">
-            {{ render '@dashboard-nav' }}
-        </div>
-
-        <div class="grid__column grid__column--3-4 dashboard__content">
-
-            <div class="dashboard__handler">
-                <h3 class="heading heading--third-level dashboard__title--wrapped">
-                    {{ orderNumber }}
-                </h3>
-
-                <span class="dashboard__status">
-                    {{ orderStatus }}
-                </span>
+    <div class="dashboard container">
+        <div class="grid">
+            <div class="grid__column grid__column--1-4 dashboard__sidebar">
+                {{ render '@dashboard-nav' }}
             </div>
 
-            {{> '@action' orderActions }}
+            <div class="grid__column grid__column--3-4 dashboard__content">
 
-            {{> '@dashboard-table' itemsOrdered }}
+                <div class="dashboard__handler">
+                    <h3 class="heading heading--third-level dashboard__title--wrapped">
+                        {{ orderNumber }}
+                    </h3>
 
-            {{> '@dashboard-table' invoice }}
+                    <span class="dashboard__status">
+                        {{ orderStatus }}
+                    </span>
+                </div>
 
-            {{> '@dashboard-table' orderShipment }}
+                {{> '@action' orderActions }}
 
-            <h2 class="heading heading--fifth-level dashboard__title">
-                {{ orderInfoTitle }}
-            </h2>
+                {{> '@dashboard-table' itemsOrdered }}
 
-            <div class="grid">
-                {{> '@information' orderInfo }}
+                {{> '@dashboard-table' invoice }}
+
+                {{> '@dashboard-table' orderShipment }}
+
+                <h2 class="heading heading--fifth-level dashboard__title">
+                    {{ orderInfoTitle }}
+                </h2>
+
+                <div class="grid">
+                    {{> '@information' orderInfo }}
+                </div>
+
+                {{> '@action' action }}
             </div>
-
-            {{> '@action' action }}
         </div>
     </div>
 </div>

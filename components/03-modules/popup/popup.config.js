@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     class: '',
-    popupId: 'popup-1',
+    popupId: 'popup-minicart',
     content: 'button',
     popupTrigger: true,
     buttonClose: {
@@ -11,6 +11,7 @@ module.exports = {
       iconId: 'close',
       iconClass: 'button__icon popup__close-button-icon',
       attributes: 'type="button" aria-label="close popup button, click to close the popup"'
-    }
+    },
+    script: true
   }
 };

@@ -3,13 +3,13 @@ module.exports = {
   context: {
     class: '',
     attributes: '',
-    text: 'You added Jacket to your shopping cart.',
+    text: 'You added Jacket to your shopping cart.'
   },
   variants: [
     {
       name: 'success',
       context: {
-        class: 'message--success',
+        class: 'message--success'
       }
     },
     {

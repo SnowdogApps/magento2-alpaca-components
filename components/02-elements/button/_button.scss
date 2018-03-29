@@ -10,16 +10,16 @@ $button__outline                    : none !default;
 $button__font-family                : $font-family-base !default;
 $button__font-weight                : $font-weight-bold !default;
 $button__font-size                  : $font-size-base !default;
-$button__font-color                 : $white !default;
+$button__font-color                 : $black !default;
 $button__font-color-hover           : $color-primary !default;
 $button__transition                 : $transition-base !default;
 
 // Secondary
-$button__border--secondary          : 1px solid $color-primary !default;
+$button__border--secondary          : 2px solid $color-primary !default;
 $button__border-hover--secondary    : $color-primary !default;
 $button__background--secondary      : $white !default;
 $button__background-hover--secondary: $color-primary !default;
-$button__font-color--secondary      : $color-primary !default;
+$button__font-color--secondary      : $gray-darker !default;
 $button__font-color-hover--secondary: $gray-dark !default;
 
 // Icon
@@ -37,7 +37,8 @@ $button__background-hover--icon     : $gray-dark !default;
 $button__width--fluid               : 100% !default;
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
     cursor: pointer;
     height: $button__height;
     min-width: $button__width;
@@ -60,7 +61,6 @@ $button__width--fluid               : 100% !default;
     }
 
     &--link {
-        display: inline-flex;
         align-items: center;
         text-decoration: none;
 
@@ -85,6 +85,7 @@ $button__width--fluid               : 100% !default;
     }
 
     &--icon {
+        align-items: center;
         padding: $button__padding--icon;
         border: $button__border--icon;
         background: $button__background--icon;
