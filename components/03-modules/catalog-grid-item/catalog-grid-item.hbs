@@ -47,13 +47,19 @@
                 {{ render '@button' primaryAction }}
             </form>
 
-            <button class="catalog-grid-item__secondary-action">
-                {{ render '@icon' secondaryActions.0.icon }}
-            </button>
+            <div class="catalog-grid-item__secondary-action">
+                {{
+                    render '@button--icon'
+                    secondaryActions.wishlist
+                    merge=true
+                }}
 
-            <button class="catalog-grid-item__secondary-action">
-                {{ render '@icon' secondaryActions.1.icon }}
-            </button>
+                {{
+                    render '@button--icon'
+                    secondaryActions.compare
+                    merge=true
+                }}
+            </div>
         </div>
     </section>
 </{{{ tag }}}>
