@@ -1,22 +1,26 @@
-$header__border-color                  : $gray-light !default;
+$header__border-color                   : $gray-light !default;
 
-$header__wrapper-padding               : 0 !default;
-$header__wrapper-padding--medium       : 12px 0 !default;
+$header__wrapper-padding                : 0 !default;
+$header__wrapper-padding\@medium        : 12px 0 !default;
 
-$header__logo-padding                  : 12px 0 12px $spacer !default;
-$header__logo-padding--medium          : 0 0 0 $spacer !default;
+$header__logo-padding                   : 12px 0 12px $spacer !default;
+$header__logo-padding\@medium           : 0 0 0 $spacer !default;
 
-$header__menu-trigger-size             : 48px !default;
+$header__menu-trigger-size              : 48px !default;
 
-$header__buttons-width                 : calc(100% - 48px)  !default;
-$header__buttons-width--medium         : calc(4 * 48px + 3 * #{$spacer}) !default;
-$header__buttons-width--extra-large    : calc(4 * 48px + 3 * #{$spacer--medium}) !default;
+$header__buttons-width                  : calc(100% - 48px)  !default;
+$header__buttons-width\@medium          : calc(4 * 48px + 3 * #{$spacer}) !default;
+$header__buttons-width\@extra-large     : calc(4 * 48px + 3 * #{$spacer--medium}) !default;
 
-$header__search-wrapper-padding        : 0 0 0 24px !default;
-$header__search-wrapper-padding--medium: 0 24px !default;
+$header__search-wrapper-padding         : 0 0 0 24px !default;
+$header__search-wrapper-padding\@medium : 0 24px !default;
 
 .header {
     position: relative;
+    border-bottom: 1px solid $header__border-color;
+    @include mq($screen-l) {
+        border-bottom: none;
+    }
 
     &__wrapper {
         position: relative;
@@ -24,9 +28,12 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         display: flex;
         flex-flow: row wrap;
         padding: $header__wrapper-padding;
-        border-bottom: 1px solid $header__border-color;
         @include mq($screen-m) {
-            padding: $header__wrapper-padding--medium;
+            padding: $header__wrapper-padding\@medium;
+        }
+
+        @include mq($screen-l) {
+            border-bottom: 1px solid $header__border-color;
         }
     }
 
@@ -35,29 +42,8 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         padding: $header__logo-padding;
         border-top: 1px solid $header__border-color;
         @include mq($screen-m) {
-            padding: $header__logo-padding--medium;
+            padding: $header__logo-padding\@medium;
             border-top: none;
-        }
-    }
-
-    &__menu-trigger {
-        display: flex;
-        order: 1;
-        flex: 1 $header__menu-trigger-size;
-        height: $header__menu-trigger-size;
-        max-width: $header__menu-trigger-size;
-        border-top: none;
-        @include mq($screen-xl) {
-            display: none;
-        }
-
-        &--active {
-            .header-button__icon--open {
-                display: none;
-            }
-            .header-button__icon--close {
-                display: block;
-            }
         }
     }
 
@@ -73,7 +59,7 @@ $header__search-wrapper-padding--medium: 0 24px !default;
             order: 3;
             flex-direction: column;
             justify-content: center;
-            padding: $header__search-wrapper-padding--medium;
+            padding: $header__search-wrapper-padding\@medium;
             border-top: none;
         }
     }
@@ -100,12 +86,13 @@ $header__search-wrapper-padding--medium: 0 24px !default;
         justify-content: flex-end;
         @include mq($screen-m) {
             order: 4;
-            flex: 1 $header__buttons-width--medium;
-            max-width: $header__buttons-width--medium;
+            flex: 1 $header__buttons-width\@medium;
+            max-width: $header__buttons-width\@medium;
         }
+
         @include mq($screen-xl) {
-            flex: 1 $header__buttons-width--extra-large;
-            max-width: $header__buttons-width--extra-large;
+            flex: 1 $header__buttons-width\@extra-large;
+            max-width: $header__buttons-width\@extra-large;
         }
     }
 }

@@ -1,51 +1,103 @@
-$mega-menu__margin                    : 0 !default;
-$mega-menu__border-bottom             : 1px solid $gray-light !default;
-$mega-menu__font-color                : $font-color-base !default;
-$mega-menu__font-weight               : $font-weight-bold !default;
-$mega-menu__font-size                 : $font-size-base !default;
-$mega-menu__font-size--large          : 16px !default;
-$mega-menu__text-decoration           : none !default;
-$mega-menu__background-color          : $white !default;
-$mega-menu__container-background-color: $white !default;
-$mega-menu__justify-content           : flex-start !default;
+$mega-menu__margin                           : 0 !default;
+$mega-menu__border-bottom                    : 1px solid $gray-light !default;
+$mega-menu__font-color                       : $gray-darker !default;
+$mega-menu__font-weight                      : $font-weight-bold !default;
+$mega-menu__font-size                        : $font-size-base !default;
+$mega-menu__font-size--large                 : 16px !default;
+$mega-menu__background-color                 : $white !default;
 
-$mega-menu__link-padding              : 12px $spacer--medium !default;
-$mega-menu__link-margin               : 0 $spacer--medium !default;
+$mega-menu__list-padding                     : 0 !default;
+$mega-menu__list-justify-content             : flex-start !default;
+$mega-menu__list-background-color            : $white !default;
 
-$mega-menu__link-inner-margin         : 0 !default;
-$mega-menu__link-inner-padding        : 0 !default;
-$mega-menu__link-inner-font-weight    : $font-weight-normal !default;
+$mega-menu__inner-list-padding               : 0 !default;
+$mega-menu__inner-list-background-color      : $white !default;
+$mega-menu__inner-list-box-shadow--level1    : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
+$mega-menu__inner-list-border--level1        : 1px solid $gray-light !default;
 
-$mega-menu__dropdown-padding          : 0 0 0 112px !default;
-$mega-menu__dropdown-box-shadow       : 0 4px 6px 0 rgba(51, 51, 51, 0.3) !default;
-$mega-menu__dropdown-background-color : $white !default;
-$mega-menu__dropdown-item-padding     : 68px $spacer--large 0 0 !default;
-$mega-menu__dropdown-max-width        : 850px !default;
+$mega-menu__inner-item-padding--parent       : $spacer--large 0 $spacer--large ($spacer--large * 2) !default;
+$mega-menu__inner-item-padding--parent-child : 0 !default;
+$mega-menu__inner-item-maargin--parent-child : 0 0 $spacer--medium !default;
+
+$mega-menu__inner-item-padding--image        : 0 0 0 112px !default;
+
+$mega-menu__link-padding                     : 12px $spacer--medium !default;
+$mega-menu__link-margin                      : 0 $spacer--medium !default;
+$mega-menu__link-color                       : $gray-darker !default;
+$mega-menu__link-color--active               : $color-primary !default;
+$mega-menu__link-text-decoration             : none !default;
+
+$mega-menu__inner-link-margin                : 0 !default;
+$mega-menu__inner-link-padding               : 0 !default;
+$mega-menu__inner-link-font-weight           : $font-weight-normal !default;
+$mega-menu__inner-link-text-decoration       : none !default;
+$mega-menu__inner-link-color                 : $gray-darker !default;
+$mega-menu__inner-link-color--active         : $color-primary !default;
 
 .mega-menu {
     display: none;
     background: $mega-menu__background-color;
     color: $mega-menu__font-color;
     position: relative;
-    margin-bottom: $mega-menu__margin;
+    margin: $mega-menu__margin;
     border-bottom: $mega-menu__border-bottom;
     @include mq($screen-xl) {
         display: block;
     }
 
-    &__wrapper {
+    &__list {
+        position: relative;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: $mega-menu__justify-content;
-        padding: 0;
+        justify-content: $mega-menu__list-justify-content;
+        padding: $mega-menu__list-padding;
         list-style: none;
-        background-color: $mega-menu__container-background-color;
+        background-color: $mega-menu__list-background-color;
+    }
+
+    &__inner-list {
+        padding: $mega-menu__inner-list-padding;
+        background-color: $mega-menu__inner-list-background-color;
+        list-style: none;
+        &--level1 {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            border-top: $mega-menu__inner-list-border--level1;
+            box-shadow: $mega-menu__inner-list-box-shadow--level1;
+        }
     }
 
     &__item {
         &--parent {
-            &:hover .mega-menu__dropdown--level1 {
+            &:hover .mega-menu__inner-list--level1 {
                 display: flex;
+            }
+        }
+    }
+
+    &__inner-item {
+        &--parent {
+            padding: $mega-menu__inner-item-padding--parent;
+            & > .mega-menu__inner-link {
+                display: block;
+                margin: $mega-menu__inner-item-maargin--parent-child;
+                padding:  $mega-menu__inner-item-padding--parent-child;
+                font-size: $mega-menu__font-size;
+                font-weight: $mega-menu__font-weight;
+            }
+        }
+
+        &--image {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: flex-end;
+            padding: $mega-menu__inner-item-padding--image;
+            img {
+                width: auto;
             }
         }
     }
@@ -56,52 +108,27 @@ $mega-menu__dropdown-max-width        : 850px !default;
         padding: $mega-menu__link-padding;
         font-size: $mega-menu__font-size--large;
         font-weight: $mega-menu__font-weight;
-        color: $mega-menu__font-color;
-        text-decoration: $mega-menu__text-decoration;
-
+        color: $mega-menu__link-color;
+        text-decoration: $mega-menu__link-text-decoration;
         &:focus,
         &:hover {
-            text-decoration: $mega-menu__text-decoration;
-        }
-
-        &--inner {
-            margin: $mega-menu__link-inner-margin;
-            padding: $mega-menu__link-inner-padding;
-            font-size: $mega-menu__font-size;
-            font-weight: $mega-menu__link-inner-font-weight;
-        }
-
-        &--inner-heading {
-            margin: 0 0 $spacer--medium;
-            padding: 0;
-            font-size: $mega-menu__font-size;
+            text-decoration: $mega-menu__link-text-decoration;
+            color: $mega-menu__link-color--active;
         }
     }
 
-    &__dropdown {
-        display: none;
-        padding: $mega-menu__dropdown-padding;
-        background-color: $mega-menu__dropdown-background-color;
-        box-shadow: $mega-menu__dropdown-box-shadow;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        list-style: none;
-        z-index: 2;
-        @include mq($screen-l) {
-            max-width: $mega-menu__dropdown-max-width;
-            right: 0;
-            margin: auto;
-        }
-
-        &-item {
-            flex: 1;
-            padding: $mega-menu__dropdown-item-padding;
-
-            &--image {
-                flex: 3;
-                padding: $mega-menu__dropdown-padding;
-            }
+    &__inner-link {
+        margin: $mega-menu__inner-link-margin;
+        padding: $mega-menu__inner-link-padding;
+        white-space: nowrap;
+        font-size: $mega-menu__font-size;
+        font-weight: $mega-menu__inner-link-font-weight;
+        color: $mega-menu__inner-link-color;
+        text-decoration: $mega-menu__inner-link-text-decoration;
+        &:focus,
+        &:hover {
+            text-decoration: $mega-menu__inner-link-text-decoration;
+            color: $mega-menu__inner-link-color--active;
         }
     }
 }

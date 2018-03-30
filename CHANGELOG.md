@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Yarn lock file
+
+## [0.6.0] - 30.03.2018
 ### Added
 - New list variant
 - Global focus style
@@ -17,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Working js for Quantity-update
 - Sticky footer
 - Minicart
+- Forgot password view
 
 ### Changed
 - Product view adjustements
@@ -35,6 +40,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Login page, removed tabs and set two columns
 - Aria-label values
 - Registration view
+- Simplify filters
+- Remove unnecessary code from config
+- Update toolbar styles
+- Mega menu module to fit Snowdog Menu Module
+- Side menu module to fit Snowdog Menu Module
 
 ### Removed
 - Old catalog product modules and catalog views
