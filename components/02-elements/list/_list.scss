@@ -13,8 +13,7 @@ $list__padding--horizontal: 10px !default;
 $list__padding--horizontal\@medium: 10px !default;
 
 // With icon
-$list__padding--with-icon: 10px !default;
-$list__icon-size--icon    : 30px !default;
+$list__padding--with-icon: 12px !default;
 
 // With image
 $list__width--image       : 16px !default;
@@ -82,11 +81,6 @@ $list__border--divider    : 1px solid $gray-dark !default;
         }
         .list__icon-link {
             padding: $list__padding--with-icon;
-        }
-        .list__icon {
-            fill: $list__icon-color;
-            width: $list__icon-size--icon;
-            height: $list__icon-size--icon;
         }
     }
 

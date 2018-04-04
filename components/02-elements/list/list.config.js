@@ -40,15 +40,15 @@ module.exports = {
         class: 'list--with-icon',
         elements: [
           {
-            icon: 'facebook',
+            iconId: 'facebook',
             iconLink: '#'
           },
           {
-            icon: 'twitter',
+            iconId: 'twitter',
             iconLink: '#'
           },
           {
-            icon: 'linkedin',
+            iconId: 'linkedin',
             iconLink: '#'
           }
         ]
