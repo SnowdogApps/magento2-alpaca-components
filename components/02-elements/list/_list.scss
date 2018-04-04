@@ -1,25 +1,25 @@
-$list__style              : none !default;
-$list__margin             : 0 !default;
-$list__padding            : 0 !default;
-$list__item-padding       : 5px 0 !default;
-$list__content-padding    : 10px !default;
-$list__label-padding      : 0 5px 5px 0 !default;
-$list__icon-color         : $white !default;
+$list__style                       : none !default;
+$list__margin                      : 0 !default;
+$list__padding                     : 0 !default;
+$list__item-padding                : 5px 0 !default;
+$list__content-padding             : 10px !default;
+$list__label-padding               : 0 5px 5px 0 !default;
+$list__icon-color                  : $white !default;
 
 // Horizontal
-$list__padding--horizontal: 10px !default;
+$list__padding--horizontal         : 10px !default;
 
 // Horizontal\@medium
-$list__padding--horizontal\@medium: 10px !default;
+$list__padding--horizontal\@medium : 10px !default;
 
 // With icon
-$list__padding--with-icon: 12px !default;
+$list__padding--with-icon          : 12px !default;
 
 // With image
-$list__width--image       : 16px !default;
+$list__width--image                : 16px !default;
 
 // Divided
-$list__border--divider    : 1px solid $gray-dark !default;
+$list__border--divider             : 1px solid $gray-dark !default;
 
 .list {
     margin: $list__margin;
