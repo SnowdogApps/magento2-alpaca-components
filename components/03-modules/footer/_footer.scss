@@ -19,6 +19,8 @@ $footer__bottom-bar-font-size          : $font-size-small !default;
 $footer__social-handl-margin           : 0 0 $spacer 0 !default;
 $footer__social-handl-margin\@medium   : 0 !default;
 
+$footer__social-list-item-color        : $white !default;
+
 $footer__copywrite-padding             : $spacer--medium;
 
 $footer__scroll-top-top                : -24px !default;
@@ -138,7 +140,7 @@ $footer__icon-fill-hover               : $color-primary !default;
     }
 
     &__social-list-item {
-        fill: $white;
+        fill: $footer__social-list-item-color;
     }
 
     &__copyright {
