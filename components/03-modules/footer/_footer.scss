@@ -16,8 +16,12 @@ $footer__bottom-bar-background\@large  : $gray-darkest !default;
 $footer__bottom-bar-color              : $gray-lighter !default;
 $footer__bottom-bar-font-size          : $font-size-small !default;
 
-$footer__copywrite-padding-left\@medium: $spacer;
-$footer__copywrite-padding-left\@large : $spacer--medium;
+$footer__social-handl-margin           : 0 0 $spacer 0 !default;
+$footer__social-handl-margin\@medium   : 0 !default;
+
+$footer__social-icon-color             : $white !default;
+
+$footer__copywrite-padding             : $spacer--medium;
 
 $footer__scroll-top-top                : -24px !default;
 $footer__icon-size                     : 13px !default;
@@ -115,14 +119,14 @@ $footer__icon-fill-hover               : $color-primary !default;
     }
 
     &__social-handler {
-        margin-bottom: $footer__padding;
+        margin: $footer__social-handl-margin;
 
         @include mq($screen-m) {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
             order: 1;
-            margin: 0;
+            margin: $footer__social-handl-margin\@medium;
         }
     }
 
@@ -135,18 +139,15 @@ $footer__icon-fill-hover               : $color-primary !default;
         }
     }
 
+    &__social-icon {
+        fill: $footer__social-icon-color;
+    }
+
     &__copyright {
         display: block;
+        padding: $footer__copywrite-padding;
         font-size: $footer__bottom-bar-font-size;
         text-align: center;
-
-        @include mq($screen-m) {
-            padding-left: $footer__copywrite-padding-left\@medium;
-        }
-
-        @include mq($screen-l) {
-            padding-left: $footer__copywrite-padding-left\@large;
-        }
     }
 
     &__scroll-top {
