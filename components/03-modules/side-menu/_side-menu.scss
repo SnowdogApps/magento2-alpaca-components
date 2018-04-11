@@ -117,7 +117,7 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
         top: 0;
         bottom: 0;
         left: 0;
-        z-index: 2;
+        z-index: 5;
         background-color: $side-menu__overlay-background-color;
         @include mq($screen-xl) {
             display: none;
