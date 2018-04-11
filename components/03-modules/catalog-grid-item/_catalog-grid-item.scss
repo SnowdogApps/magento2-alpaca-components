@@ -224,7 +224,7 @@ $catalog-grid-item__swatch-image-height     : 40px !default;
 
     &__secondary-action {
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: center;
         .button {
             height: $catalog-grid-item__action-size;

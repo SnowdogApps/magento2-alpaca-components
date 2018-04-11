@@ -1,13 +1,12 @@
-$link__color              : $color-primary !default;
+$link__color              : $blue !default;
 $link__decoration         : underline !default;
 $link__font-family        : $font-family-base !default;
 $link__font-weight        : $font-weight-normal !default;
 $link__color-hover        : $color-secondary !default;
-$link__decoration-hover   : underline !default;
 $link__line-height        : $font-line-height !default;
 $link__transition         : $transition-base !default;
 $link__color--invert      : $gray-darker !default;
-$link__color-hover--invert: $color-primary !default;
+$link__color-hover--invert: $blue !default;
 
 .link {
     color: $link__color;
@@ -16,11 +15,11 @@ $link__color-hover--invert: $color-primary !default;
     font-family: $link__font-family;
     font-weight: $link__font-weight;
     line-height: $link__line-height;
+    text-decoration: none;
 
     &:hover,
     &:focus {
         color: $link__color-hover;
-        text-decoration: $link__decoration-hover;
     }
 
     &--invert {
@@ -29,6 +28,15 @@ $link__color-hover--invert: $color-primary !default;
         &:hover,
         &:focus {
             color: $link__color-hover--invert;
+        }
+    }
+
+    &--secondary {
+        color: $gray-lighter;
+
+        &:hover,
+        &:focus {
+            color: $color-primary;
         }
     }
 

@@ -23,6 +23,12 @@ module.exports = {
   },
   variants: [
     {
+      name: 'native',
+      context: {
+        class: 'list--native'
+      }
+    },
+    {
       name: 'horizontal',
       context: {
         class: 'list--horizontal'

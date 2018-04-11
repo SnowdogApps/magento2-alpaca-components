@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.6.0] - 30.03.2018
 ### Added
+- New list variant
 - Global focus style
 - Catalog list item module
 - Catalog grid item module
@@ -23,6 +24,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Forgot password view
 
 ### Changed
+- Product view adjustements
+- Links color and styles
+- Brief-info styles
+- Review start refactor
 - Rating - use svg icons as css background with svg-uri for encoding uri
 - Footer component design
 - Global variables

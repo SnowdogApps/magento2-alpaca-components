@@ -350,18 +350,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action',
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -451,18 +447,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -545,18 +537,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -639,18 +627,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -733,18 +717,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -827,18 +807,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -948,18 +924,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -1049,18 +1021,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -1143,18 +1111,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -1237,18 +1201,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -1331,18 +1291,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',
@@ -1425,18 +1381,14 @@ module.exports = {
                 text: 'Add to Cart',
                 class: 'button catalog-grid-item__primary-action'
               },
-              secondaryActions: [
-                {
-                  icon: {
-                    iconId: 'heart'
-                  }
+              secondaryActions: {
+                wishlist: {
+                  iconId: 'heart'
                 },
-                {
-                  icon: {
-                    iconId: 'compare'
-                  }
+                compare: {
+                  iconId: 'compare'
                 }
-              ],
+              },
               swatches: [
                 {
                   name: 'swatch',

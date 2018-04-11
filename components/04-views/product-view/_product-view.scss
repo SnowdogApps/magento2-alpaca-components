@@ -1,7 +1,9 @@
-$product-view__action-elements-margin-top               : 28px !default;
+$product-view__action-elements-margin-top\@small        : 28px !default;
 $product-view__action-elements-margin-top\@large        : 0 !default;
 
 $product-view__action-icon-color                        : $gray-darker !default;
+$product-view__action-icon-color-hover                  : $color-primary !default;
+$product-view__action-icon-transition                   : $transition-base !default;
 $product-view__action-icon-compare-padding              : 16px 16px !default;
 $product-view__action-icon-compare-width                : 16px !default;
 $product-view__action-icon-compare-height               : 16px !default;
@@ -37,6 +39,7 @@ $product-view__description-padding\@medium              : $spacer--medium 0 !def
 $product-view__description-border-top                   : 1px solid $gray-light !default;
 $product-view__description-border-bottom                : 1px solid $gray-light !default;
 $product-view__description-line-height                  : 1.7 !default;
+$product-view__description-title-font-weight            : $font-weight-bold !default;
 
 
 
@@ -47,6 +50,9 @@ $product-view__extra-actions-padding                    : 0 $spacer !default;
 
 $product-view__add-to-cart-margin                       : 0 0 $product-view__extra-actions-margin-bottom\@medium 0 !default;
 $product-view__add-to-cart-margin\@large                : 0 $product-view__add-to-cart-margin-right $product-view__extra-actions-margin-bottom\@large 0 !default;
+
+$product-view__add-to-cart-btn-min-width                : 150px !default;
+$product-view__add-to-cart-btn-padding\@large           : 0 $spacer--large !default;
 
 $product-view__gallery-bottom-border                    : 1px solid $gray !default;
 $product-view__gallery-bottom-border\@medium            : none !default;
@@ -76,7 +82,7 @@ $product-view__price-font-weight                        : $font-weight-bold !def
 // values should match product-view__title to align vertically on desktop
 $product-view__product-rating-line-height               : 1.5em !default;
 
-$product-view__qty-margin-right                         : $spacer--medium !default;
+$product-view__qty-margin-right\@small                  : $spacer--medium !default;
 
 $product-view__rating-link-color                        : $gray-dark !default;
 $product-view__rating-margin                            : 0 0 14px 0 !default;
@@ -84,7 +90,7 @@ $product-view__rating-margin\@medium                    : 0 !default;
 $product-view__rating-text-color                        : $gray-dark !default;
 $product-view__rating-value-font-size                   : $font-size-base;
 
-$product-view__sku-color                                : $gray-dark !default;
+$product-view__sku-color                                : $gray !default;
 $product-view__sku-margin-bottom                        : $spacer--medium !default;
 $product-view__sku-margin-bottom\@medium                : $spacer !default;
 $product-view__sku-padding-right                        : 55% !default;
@@ -95,9 +101,8 @@ $product-view__stock-color--alert                       : $red !default;
 $product-view__stock-font-weight\@medium                : $font-weight-bold !default;
 
 $product-view__swatch-margin-bottom                     : $spacer--medium !default;
-$product-view__swatch-option-height                     : 32px !default;
+$product-view__swatch-option-spacing                    : 48px !default;
 $product-view__swatch-option-height--attributes         : 64px !default;
-$product-view__swatch-option-width                      : 32px !default;
 $product-view__swatch-option-width--attributes          : 54px !default;
 $product-view__swatch-option-margin-right               : $spacer--medium !default;
 $product-view__swatch-option-title-font-size            : $font-size-base !default;
@@ -112,11 +117,23 @@ $product-view__slider-heading-font-size                 : 24px !default;
 $product-view__slider-heading-font-size-weight          : $font-weight-bold;
 $product-view__slider-heading-text-transform            : uppercase !default;
 
-$product-view__tabs-margin-bottom                       : 14px !default;
-$product-view__tabs-margin-bottom\@medium               : 72px !default;
+$product-view__tabs-margin                              : 0 (-$spacer) 14px (-$spacer) !default;
+$product-view__tabs-margin\@medium                      : 0 0 72px 0 !default;
 
-$product-view__wrapper-margin-bottom                    : $spacer--large !default;
-$product-view__wrapper-margin-bottom\@medium            : 40px !default;
+$product-view__additional-content-margin-bottom\@medium : 72px !default;
+
+$product-view__review-item-padding                      : $spacer--large 0 !default;
+$product-view__review-item-border                       : 1px solid $gray-light !default;
+$product-view__review-details-margin-bottom             : $spacer--medium !default;
+$product-view__review-author-margin-bottom              : $spacer !default;
+$product-view__review-date-margin-bottom                : $spacer !default;
+$product-view__review-date-font-size                    : $font-size-small !default;
+$product-view__review-date-color                        : $gray-light !default;
+$product-view__review-content-title-font-weight         : $font-weight-bold !default;
+$product-view__review-product-name-font-weight          : $font-weight-bold !default;
+
+$product-view__wrapper-margin                           : $spacer--large 0 !default;
+$product-view__wrapper-margin\@medium                   : 40px 0 !default;
 
 .product-view {
     display: flex;
@@ -139,12 +156,16 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: $product-view__wrapper-margin-bottom;
+        margin: $product-view__wrapper-margin;
 
         @include mq($screen-m) {
             display: block;
-            margin-bottom: $product-view__wrapper-margin-bottom\@medium;
+            margin: $product-view__wrapper-margin\@medium;
         }
+    }
+
+    &__form {
+        width: 100%;
     }
 
     &__gallery {
@@ -178,9 +199,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     &__secondary-details {
-        order: $product-view__order-secondary-details;
         display: flex;
         flex-wrap: wrap;
+        order: $product-view__order-secondary-details;
+        width: 100%;
         @include mq($screen-m) {
             display: block;
             width: $product-view__col-right-width;
@@ -230,6 +252,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         }
     }
 
+    &__description-title {
+        font-weight: $product-view__description-title-font-weight;
+    }
+
     &__options {
         width: 100%;
     }
@@ -239,8 +265,8 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     .swatch__option {
-        width: $product-view__swatch-option-width;
-        height: $product-view__swatch-option-height;
+        width: $product-view__swatch-option-spacing;
+        height: $product-view__swatch-option-spacing;
         margin-right: $product-view__swatch-option-margin-right;
         min-height: 0;
         min-width: 0;
@@ -254,9 +280,9 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         font-weight: $product-view__swatch-option-title-font-weight;
     }
     &__tabs {
-        margin-bottom: $product-view__tabs-margin-bottom;
+        margin: $product-view__tabs-margin;
         @include mq($screen-m) {
-            margin-bottom: $product-view__tabs-margin-bottom\@medium;
+            margin: $product-view__tabs-margin\@medium;
         }
     }
     &__tab {
@@ -318,14 +344,15 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
             display: block;
             top: 0;
             text-align: right;
-            line-height: $product-view__product-rating-line-height;
             font-size: $product-view__product-rating-line-height;
         }
     }
 
     &__rating-rates {
         width: 50%;
+        flex: 1 0 auto;
         font-size: $product-view__rating-value-font-size;
+
         @include mq($screen-m) {
             width: auto;
             display: flex;
@@ -335,13 +362,11 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     &__rating-actions {
-        width: 48%;
-        float: right;
+        width: 50%;
+        flex: 1 0 auto;
         text-align: right;
-        //for what sake can't we use max-width for upper propreties?
-        // now I need to reset them :(
+
         @include mq($screen-m) {
-            float: none;
             width: auto;
         }
     }
@@ -369,7 +394,7 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         justify-content: center;
         flex: 0 0 auto;
         padding: $product-view__extra-actions-padding;
-        margin-bottom: $product-view__extra-actions-margin-bottom;
+
         @include mq($screen-l) {
             margin-bottom: $product-view__extra-actions-margin-bottom\@large;
             padding: 0;
@@ -377,20 +402,29 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     }
 
     &__qty {
+        flex-basis: 100%;
         margin-bottom: $product-view__extra-actions-margin-bottom;
-        flex: 0 0 auto;
-        margin-right: $product-view__qty-margin-right;
+
+        @include mq($screen-s) {
+            flex: 0 0 auto;
+            margin-right: $product-view__qty-margin-right\@small;
+        }
+
         @include mq($screen-l) {
             margin-bottom: $product-view__extra-actions-margin-bottom\@large;
         }
     }
 
     &__action-elements {
-        margin-top: $product-view__action-elements-margin-top;
         flex-flow: column;
         flex: 1 0 auto;
         justify-content: space-between;
         display: flex;
+
+        @include mq($screen-s) {
+            margin-top: $product-view__action-elements-margin-top\@small;
+        }
+
         @include mq($screen-l) {
             margin-top: $product-view__action-elements-margin-top\@large;
             flex-flow: row nowrap;
@@ -401,8 +435,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
     &__add-to-cart-btn {
         flex: 1 0 auto;
         width: 100%;
+        min-width: $product-view__add-to-cart-btn-min-width;
+
         @include mq($screen-l) {
-            padding: 0 $spacer--large;
+            padding: $product-view__add-to-cart-btn-padding\@large;
         }
     }
 
@@ -423,6 +459,10 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         padding: 0;
         &:hover {
             cursor: pointer;
+
+            .icon {
+                fill: $product-view__action-icon-color-hover;
+            }
         }
         &:last-child {
             margin-right: 0;
@@ -434,6 +474,7 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         }
         .icon {
             fill: $product-view__action-icon-color;
+            transition: $product-view__action-icon-transition;
         }
         &--wishlist {
             padding: $product-view__action-icon-wishlist-padding;
@@ -487,6 +528,53 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
         }
     }
 
+    &__review {
+        @include mq($screen-m) {
+            width: 430px;
+        }
+    }
+
+    &__review-item {
+        width: 100%;
+        padding: $product-view__review-item-padding;
+        border-top: $product-view__review-item-border;
+
+        &:last-child {
+            border-bottom: $product-view__review-item-border;
+        }
+    }
+
+    &__review-details {
+        margin-bottom: $product-view__review-details-margin-bottom;
+
+        @include mq($screen-m) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__review-author {
+        margin-bottom: $product-view__review-author-margin-bottom;
+    }
+
+    &__review-date {
+        margin-bottom: $product-view__review-date-margin-bottom;
+        font-size: $product-view__review-date-font-size;
+        color: $product-view__review-date-color;
+    }
+
+    &__review-content-title {
+        font-weight: $product-view__review-content-title-font-weight;
+    }
+
+    &__review-title {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    &__review-product-name {
+        font-weight: $product-view__review-product-name-font-weight;
+    }
+
     &__slider {
         margin-bottom: $product-view__slider-margin-bottom;
         @include mq($screen-m) {
@@ -515,8 +603,11 @@ $product-view__wrapper-margin-bottom\@medium            : 40px !default;
 
     &__additional-content {
         display: none;
+
         @include mq($screen-m) {
             display: block;
+            margin-bottom: $product-view__additional-content-margin-bottom\@medium;
+
         }
     }
     &__grid-item {
