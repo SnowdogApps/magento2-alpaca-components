@@ -13,13 +13,13 @@ $quicksearch__box-shadow                       : 0 4px 6px 0 rgba(57, 50, 67, 0.
 $quicksearch__results-padding                  : $spacer--medium 0 !default;
 $quicksearch__results-margin                   : 0 !default;
 $quicksearch__results-border                   : 1px solid $gray-light !default;
+$quicksearch__empty-margin                     : $spacer 0 !default;
 $quicksearch__typed-font-weight                : $font-weight-bold !default;
 $quicksearch__close-fill                       : $color-secondary !default;
 $quicksearch__close-background                 : transparent !default;
 $quicksearch__close-border                     : 0 !default;
 $quicksearch__close-size                       : $spacer--medium !default;
 $quicksearch__content-padding                  : $spacer 0 !default;
-$quicksearch__content-border-bottom            : 1px solid $gray-light !default;
 $quicksearch__list-margin                      : 0 !default;
 $quicksearch__list-padding                     : 0 !default;
 $quicksearch__list-padding-top--below          : $spacer--medium !default;
@@ -37,6 +37,7 @@ $quicksearch__name-padding                     : $spacer 0 !default;
 $quicksearch__name-color                       : inherit !default;
 $quicksearch__name-font-weight                 : $font-weight-normal !default;
 $quicksearch__more-link-padding                : $spacer--medium 0 !default;
+$quicksearch__more-link-border-top             : 1px solid $gray-light !default;
 $quicksearch__more-link-text-align             : center !default;
 $quicksearch__more-link-font-weight            : $font-weight-bold !default;
 
@@ -73,6 +74,10 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
         border-bottom: $quicksearch__results-border;
     }
 
+    &__empty {
+        margin: $quicksearch__empty-margin;
+    }
+
     &__typed {
         font-weight: $quicksearch__typed-font-weight;
     }
@@ -98,7 +103,6 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
 
     &__content {
         padding: $quicksearch__content-padding;
-        border-bottom: $quicksearch__content-border-bottom;
         @include mq($screen-m) {
             display: flex;
         }
@@ -168,6 +172,7 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
     &__more-link {
         display: block;
         padding: $quicksearch__more-link-padding;
+        border-top: $quicksearch__more-link-border-top;
         text-align: $quicksearch__more-link-text-align;
         font-weight: $quicksearch__more-link-font-weight;
         text-decoration: none;

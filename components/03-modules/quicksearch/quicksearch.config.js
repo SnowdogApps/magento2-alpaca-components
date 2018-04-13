@@ -4,6 +4,10 @@ module.exports = {
       text: 'Results for your request:',
       typed: 'Ni'
     },
+    noresults: {
+      visible: false,
+      text: 'No search results found.'
+    },
     close: {
       tag: 'button',
       class: 'button--icon quicksearch__close-button',

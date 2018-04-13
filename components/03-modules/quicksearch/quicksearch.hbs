@@ -8,6 +8,11 @@
             </span>
         </p>
         <div class="quicksearch__content">
+            {{#if noresults.visible }}
+                <p class="quicksearch__empty">
+                    {{ noresults.text }}
+                </p>
+            {{/if }}
             <ul class="quicksearch__list quicksearch__list--column">
                 {{#each product }}
                     <li class="quicksearch__product">
