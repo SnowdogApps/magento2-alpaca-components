@@ -1,4 +1,4 @@
-$quicksearch__top                              : calc(100% - #{$spacer}) !default;
+$quicksearch__top                              : calc(100% - #{$spacer} + 1px) !default;
 $quicksearch__top\@medium                      : calc(100% + 1px) !default;
 $quicksearch__left                             : 0 !default;
 $quicksearch__left\@medium                     : auto !default;
