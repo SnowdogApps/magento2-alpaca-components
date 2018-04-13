@@ -45,6 +45,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     flex: 0 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: $toolbar__border;
 
     @include mq($screen-m) {
         align-items: center;
