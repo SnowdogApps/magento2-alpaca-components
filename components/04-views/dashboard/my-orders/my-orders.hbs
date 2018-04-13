@@ -10,7 +10,7 @@
             <div class="grid__column grid__column--3-4 dashboard__content">
                 {{ render '@dashboard-table' }}
 
-                {{ render '@dashboard-toolbar' }}
+                {{ render '@toolbar--pager' toolbar merge=true }}
 
                 {{> '@action' action }}
             </div>

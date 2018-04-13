@@ -78,7 +78,8 @@ $gallery__thumb-width--large               : 80px !default;
             width: $gallery__thumb-width--large;
             height: $gallery__thumb-height--large;
         }
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
         }
         &--active {
@@ -86,13 +87,14 @@ $gallery__thumb-width--large               : 80px !default;
         }
     }
     &__thumb-arr {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
         width: $gallery__thumb-arrow-width;
         height: $gallery__thumb-arrow-height;
-        display: flex;
-        justify-content: center;
-        align-content: center;
         margin: 0 auto;
-        &:hover {
+        &:hover,
+        &:focus {
             cursor: pointer;
         }
     }
@@ -113,5 +115,20 @@ $gallery__thumb-width--large               : 80px !default;
         position: absolute;
         left: $gallery__label-offset-left;
         top: $gallery__label-offset-top;
+    }
+
+    &-placeholder {
+        position: relative;
+
+        .loader {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 64px;
+            height: 64px;
+            margin: auto;
+        }
     }
 }

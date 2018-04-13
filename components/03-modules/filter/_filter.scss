@@ -72,7 +72,8 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         }
     }
 
-    &__color {
+    &__color,
+    &__swatch-wrapper {
         display: flex;
         flex-flow: row wrap;
     }

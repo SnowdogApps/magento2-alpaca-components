@@ -28,6 +28,10 @@ $toolbar__select-field-item-height     : 30px !default;
 $toolbar__sorter-border-top            : 1px solid $gray-light !default;
 $toolbar__sorter-padding               : 8px 0 !default;
 $toolbar__sorter-width                 : 200px !default;
+$toolbar__sorter-icon-wrapper-cursor   : pointer !default;
+$toolbar__sorter-icon-size             : 18px !default;
+$toolbar__sorter-icon-margin           : $spacer !default;
+$toolbar__sorter-icon-fill             : $gray !default;
 $toolbar__limiter-width                : 72px !default;
 $toolbar__select-margin                : 0 !default;
 $toolbar__select-height                : 32px !default;
@@ -39,13 +43,11 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     position: relative;
     display: flex;
     flex: 0 0 auto;
-    align-items: left;
     justify-content: space-between;
-    flex-direction: column;
-    border-bottom: $toolbar__border;
+    flex-wrap: wrap;
+
     @include mq($screen-m) {
         align-items: center;
-        flex-direction: row;
         justify-content: flex-start;
     }
 
@@ -55,6 +57,10 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     &__sorter {
         flex: 0 0 auto;
         align-items: center;
+    }
+
+    &__pager {
+        width: 100%;
     }
 
     &__amount {
@@ -70,6 +76,26 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             // sass-lint:enable no-css-comments
             justify-content: center;
             display: flex;
+        }
+
+        &--visible {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: center;
+            padding: $spacer 0;
+
+            @include mq($screen-m) {
+                flex: 1 0 0;
+            }
+
+            @include isIE() {
+                flex-grow: 0;
+
+                @include mq($screen-m) {
+                    flex-grow: 1;
+                }
+            }
         }
     }
 
@@ -175,6 +201,24 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         margin-right:  $toolbar__offset;
     }
 
+    &__sorter-label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sorter-icon-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: $toolbar__sorter-icon-wrapper-cursor;
+    }
+
+    &__sorter-icon {
+        width: $toolbar__sorter-icon-size;
+        height: $toolbar__sorter-icon-size;
+        margin: $toolbar__sorter-icon-margin;
+        fill: $toolbar__sorter-icon-fill;
+    }
+
     &__limiter {
         position: absolute;
         right: 0;
@@ -188,6 +232,17 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             top: auto;
             right: auto;
             width: auto;
+        }
+
+        &--relative {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: flex-end;
+
+            @include mq($screen-m) {
+                padding: $spacer 0;
+            }
         }
     }
 
@@ -219,6 +274,25 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             background-size: $toolbar__dropdown-icon-size;
             background-repeat: no-repeat;
             background-position: center center;
+        }
+    }
+
+    .pager {
+        display: none;
+    }
+
+    ~ .toolbar {
+        border-bottom: 0;
+        .pager {
+            display: block;
+        }
+        .toolbar {
+            &__mode,
+            &__sorter,
+            &__amount,
+            &__limiter {
+                display: none;
+            }
         }
     }
 }

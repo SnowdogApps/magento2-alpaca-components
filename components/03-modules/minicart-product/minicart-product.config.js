@@ -30,7 +30,6 @@ module.exports = {
       attributes: 'type="button"'
     },
     attributes: {
-      script: true,
       class: 'minicart-product__attributes',
       dropdowns: [
         {
