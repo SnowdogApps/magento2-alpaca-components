@@ -13,11 +13,12 @@ $filter__label-padding                     : $spacer--medium 0 !default;
 // Color
 $filter__color-option-width                : 56px !default;
 $filter__color-option-height               : 80px !default;
+$filter__color-option-border               : 2px solid transparent !default;
 $filter__color-option-after-top            : 4px !default;
 $filter__color-option-after-left           : 8px !default;
 $filter__color-option-after-size           : 40px !default;
 $filter__color-option-after-border-radius  : 100% !default;
-$filter__color-option-after-border         : 2px solid $color-primary !default;
+$filter__color-option-after-border-color   : $color-primary !default;
 $filter__color-sample-size                 : 32px !default;
 $filter__color-sample-margin               : $spacer !default;
 $filter__color-sample-border               : 1px solid $gray-lighter;
@@ -98,6 +99,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
             width: $filter__color-option-after-size;
             height: $filter__color-option-after-size;
             background-color: transparent;
+            border: $filter__color-option-border;
             border-radius: $filter__color-option-after-border-radius;
             transition: $filter__transition;
         }
@@ -107,7 +109,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         &:focus {
             text-decoration: none;
             &:after {
-                border: $filter__color-option-after-border;
+                border-color: $filter__color-option-after-border-color;
             }
         }
     }
