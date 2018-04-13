@@ -134,6 +134,9 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      name: 'with-details'
     }
   ]
 };

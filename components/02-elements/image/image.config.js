@@ -29,6 +29,14 @@ module.exports = {
         ],
         alt: 'image alt text'
       }
+    },
+    {
+      name: 'link',
+      context: {
+        isLink: true,
+        link: '#',
+        imageLinkClass: ''
+      }
     }
   ]
 };

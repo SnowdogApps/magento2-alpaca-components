@@ -1,7 +1,16 @@
-<img
-    class="image lazyload {{ class }}"
-    src="{{ src }}"
-    data-src="{{ dataSrc }}"
-    alt="{{ alt }}"
-    {{ attributes }}
->
+{{#if isLink}}
+    <a
+        class="link {{ imageLinkClass }}"
+        href="{{ link }}"
+    >
+{{/if}}
+    <img
+        class="image lazyload {{ class }}"
+        src="{{ src }}"
+        data-src="{{ dataSrc }}"
+        alt="{{ alt }}"
+        {{ attributes }}
+    >
+{{#if isLink}}
+    </a>
+{{/if}}

@@ -44,6 +44,14 @@ module.exports = {
             class: 'product-item__button action__button'
           }
         },
+        itemImage: {
+          src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+          dataSrc: '/images/banner/banner-480_480.png',
+          alt: 'image alt text',
+          isLink: true,
+          link: '#',
+          imageLinkClass: ''
+        },
         textarea: {
           class: 'dashboard__input',
           field: {

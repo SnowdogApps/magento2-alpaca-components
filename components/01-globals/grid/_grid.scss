@@ -11,6 +11,10 @@ $grid__side-gutter: false !default;
         margin-right: -($grid__gutter / 2);
     }
 
+    &--align-start {
+        justify-content: flex-start;
+    }
+
     &__column {
         flex: 1 0 100%;
         @if ($grid__gutter > 0) {
