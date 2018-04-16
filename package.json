@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "@frctl/fractal": "~1.1.7",
-    "autoprefixer": "~8.2.0",
+    "autoprefixer": "~8.3.0",
     "eslint-config-idiomatic": "~4.0.0",
     "fs-extra": "~5.0.0",
     "globby": "~8.0.0",
