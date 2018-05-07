@@ -3,7 +3,7 @@ $tab__border-width--large             : 8px !default;
     
 // title
 $tab__title-padding                   : $spacer--medium !default;
-$tab__title-border                    : $tab__border-width solid $gray-lightest !default;
+$tab__title-border                    : $tab__border-width solid $gray-light !default;
 $tab__title-border--large             : $tab__border-width--large solid $gray-lightest !default;
 $tab__title-border--large-active      : $tab__border-width--large solid $color-primary !default;
 $tab__title-color                     : $gray !default;
@@ -16,7 +16,7 @@ $tab__title-background--active        : $gray-lightest !default;
 $tab__title-background--large-active  : $gray-lightest !default;
 
 // content
-$tab__content-padding                 : $spacer--medium $spacer--large !default;
+$tab__content-padding                 : $spacer--medium !default;
 $tab__content-padding--large          : $spacer--large $spacer--extra-large !default;
 
 // icon
@@ -54,7 +54,6 @@ $tab__icon-size                       : 48px !default;
             order: -1;
             border-top: none;
             border-bottom : $tab__title-border--large;
-            font-weight: $tab__title-font-weight--large;
         }
         
         .tab__icon {
@@ -85,6 +84,16 @@ $tab__icon-size                       : 48px !default;
             .tab__icon {
                 transform: rotateX(180deg);
                 fill: $tab__icon-color--active;
+            }
+        }
+
+        .counter {
+            &:before {
+                content: "(";
+            }
+
+            &:after {
+                content: ")";
             }
         }
     }

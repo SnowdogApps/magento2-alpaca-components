@@ -4,9 +4,9 @@
     </{{heading.tag}}>
     {{#each items as |item|}}
     <div class="brief-info__item">
-        <i class="brief-info__icon-wrapper {{ item.iconWrapperClass }}">
+        <span class="brief-info__icon-wrapper {{ item.iconWrapperClass }}">
             {{ render '@icon' item.icon }}
-        </i>
+        </span>
         <div class="brief-info__content">
             <{{ item.title.tag }}
                 {{{ item.title.attributes }}}

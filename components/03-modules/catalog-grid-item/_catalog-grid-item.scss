@@ -14,8 +14,15 @@ $catalog-grid-item__badge-bg-color          : $color-primary !default;
 $catalog-grid-item__badge-font-size         : $font-size-small !default;
 $catalog-grid-item__badge-border-radius     : 0 !default;
 
-$catalog-grid-item__image-min-height        : 300px !default;
 $catalog-grid-item__image-wrapper-background: #f9f9f9 !default;
+
+$catalog-grid-item__image-margin            : 0 auto !default;
+$catalog-grid-item__image-width             : auto !default;
+$catalog-grid-item__image-width--lazyload   : 100% !default;
+$catalog-grid-item__image-height            : auto !default;
+
+$catalog-grid-item__loader-height           : 180px !default;
+$catalog-grid-item__loader-height\@medium   : 260px !default;
 
 $catalog-grid-item__content-bg-color        : $white !default;
 $catalog-grid-item__content-padding         : $spacer !default;
@@ -79,12 +86,23 @@ $catalog-grid-item__swatch-image-height     : 40px !default;
 
     &__image-wrapper {
         background: $catalog-grid-item__image-wrapper-background;
-        @include mq($screen-m) {
-            min-height: $catalog-grid-item__image-min-height;
-        }
 
         .image {
+            margin: $catalog-grid-item__image-margin;
+            width: $catalog-grid-item__image-width;
+            height: $catalog-grid-item__image-height;
             mix-blend-mode: multiply;
+            &.swatch-option-loading {
+                height: $catalog-grid-item__loader-height;
+                @include mq($screen-m) {
+                    height: $catalog-grid-item__loader-height\@medium;
+                }
+            }
+        }
+
+        .lazyload,
+        .lazyloading {
+            width: $catalog-grid-item__image-width--lazyload;
         }
     }
 
@@ -224,7 +242,7 @@ $catalog-grid-item__swatch-image-height     : 40px !default;
 
     &__secondary-action {
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: center;
         .button {
             height: $catalog-grid-item__action-size;
