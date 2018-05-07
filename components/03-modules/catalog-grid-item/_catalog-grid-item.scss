@@ -18,6 +18,7 @@ $catalog-grid-item__image-wrapper-background: #f9f9f9 !default;
 
 $catalog-grid-item__image-margin            : 0 auto !default;
 $catalog-grid-item__image-width             : auto !default;
+$catalog-grid-item__image-width--lazyload   : 100% !default;
 $catalog-grid-item__image-height            : auto !default;
 
 $catalog-grid-item__loader-height           : 180px !default;
@@ -101,7 +102,7 @@ $catalog-grid-item__swatch-image-height     : 40px !default;
 
         .lazyload,
         .lazyloading {
-            width: 100%;
+            width: $catalog-grid-item__image-width--lazyload;
         }
     }
 
