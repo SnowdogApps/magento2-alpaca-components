@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Yarn lock file
 
+### Changed
+- Swatches styles
+- Catalog item styles
+- Filters media query size
+
 ## [0.6.0] - 30.03.2018
 ### Added
 - New list variant
