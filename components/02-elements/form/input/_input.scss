@@ -36,6 +36,7 @@ $input__min-height--textarea         : 100px !default;
         }
 
         &--textarea {
+            display: block;
             border-radius: $input__field-border-radius--textarea;
             min-width: 100%;
             max-width: 100%;
