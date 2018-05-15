@@ -7,6 +7,7 @@ $compare__cell-padding             : $spacer--medium !default;
 $compare__cell-min-width           : 160px !default;
 $compare__image-size               : auto !default;
 $compare__image-max-size           : 100% !default;
+$compare__price-font-weight        : $font-weight-bold !default;
 $compare__form-margin              : 0 !default;
 $compare__cart-padding             : 0 !default;
 $compare__cart-padding\@medium     : 0 $spacer--medium !default;
@@ -44,16 +45,20 @@ $compare__wishlist-icon-transition : $transition-base !default;
         border-bottom: $compare__border;
     }
 
-    &__image {
+    .image {
         width: $compare__image-size;
         height: $compare__image-size;
         max-width: $compare__image-max-size;
         max-height: $compare__image-max-size;
     }
 
+    .price {
+        font-weight: $font-weight-bold;
+    }
+
     &__link,
     &__rating,
-    &__price {
+    .price {
         display: block;
         margin-bottom: $compare__attributes-margin-bottom;
     }
