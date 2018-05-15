@@ -31,7 +31,14 @@ module.exports = {
           class: 'button--icon compare__wishlist',
           iconId: 'heart',
           iconClass: 'button__icon compare__wishlist-icon',
-          attributes: 'type="button" aria-label="Add to Wish List"',
+          attributes: 'type="button" aria-label="Add to Wish List"'
+        },
+        remove: {
+          tag: 'button',
+          class: 'button--icon compare__remove',
+          iconId: 'remove',
+          iconClass: 'button__icon compare__remove-icon',
+          attributes: 'type="button" aria-label="Remove from Wish List"'
         }
       },
       {
@@ -60,7 +67,14 @@ module.exports = {
           class: 'button--icon compare__wishlist',
           iconId: 'heart',
           iconClass: 'button__icon compare__wishlist-icon',
-          attributes: 'type="button" aria-label="Add to Wish List"',
+          attributes: 'type="button" aria-label="Add to Wish List"'
+        },
+        remove: {
+          tag: 'button',
+          class: 'button--icon compare__remove',
+          iconId: 'remove',
+          iconClass: 'button__icon compare__remove-icon',
+          attributes: 'type="button" aria-label="Remove from Wish List"'
         }
       }
     ],

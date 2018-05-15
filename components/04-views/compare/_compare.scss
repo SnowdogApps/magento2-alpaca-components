@@ -86,7 +86,8 @@ $compare__wishlist-icon-transition : $transition-base !default;
         }
     }
 
-    &__wishlist {
+    &__wishlist,
+    &__remove {
         height: $compare__wishlist-size;
         width: $compare__wishlist-size;
         padding: $compare__wishlist-padding;
@@ -97,13 +98,15 @@ $compare__wishlist-icon-transition : $transition-base !default;
         &:hover,
         &:focus {
             background: $compare__wishlist-background;
-            .compare__wishlist-icon {
+            .compare__wishlist-icon,
+            .compare__remove-icon {
                 fill: $compare__wishlist-icon-fill--hover;
             }
         }
     }
 
-    &__wishlist-icon {
+    &__wishlist-icon,
+    &__remove-icon {
         fill: $compare__wishlist-icon-fill;
         width: $compare__wishlist-icon-size;
         height: $compare__wishlist-icon-size;
