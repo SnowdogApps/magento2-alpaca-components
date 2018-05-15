@@ -1,0 +1,38 @@
+$compare__border          : 1px solid $gray-lighter !default;
+$compare__margin-bottom   : $spacer--medium !default;
+$compare__label-background: #f7f7f9 !default;
+$compare__label-padding   : $spacer--medium !default;
+$compare__cell-padding    : $spacer--medium !default;
+$compare__cell-min-width  : 160px !default;
+
+.compare {
+    margin-bottom: $compare__margin-bottom;
+    overflow-x: auto;
+
+    &__table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: $compare__border;
+    }
+
+    &__label {
+        padding: $compare__label-padding;
+        background-color: $compare__label-background;
+        border-bottom: $compare__border;
+    }
+
+    &__cell {
+        position: relative;
+        padding: $compare__cell-padding;
+        min-width: $compare__cell-min-width;
+        border-left: $compare__border;
+        border-bottom: $compare__border;
+    }
+
+    &__image {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

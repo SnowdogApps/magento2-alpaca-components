@@ -1,0 +1,50 @@
+<div class="page-wrapper">
+    {{ render '@header' }}
+
+    <div class="container">
+        {{ render '@heading' heading}}
+        <div class="compare">
+            <table class="compare__table">
+                <thead>
+                    <tr>
+                        <th class="compare__label">
+                            Product
+                        </th>
+                        {{#each products}}
+                            <td class="compare__cell">
+                                <a href="#">
+                                    {{ render '@image' img }}
+                                </a>
+                                <a href="#">
+                                    {{ name }}
+                                </a>
+                                <div>
+                                    {{ rating }}
+                                </div>
+                                <div>
+                                    {{ price }}
+                                </div>
+                            </td>
+                        {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each attributes}}
+                        <tr>
+                            <th class="compare__label">
+                                {{ label }}
+                            </th>
+                            {{#each products}}
+                                <td class="compare__cell">
+                                    {{ this }}
+                                </td>
+                            {{/each}}
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{{ render '@footer' }}
