@@ -7,24 +7,60 @@ module.exports = {
     products: [
       {
         name: 'Affirm Water Bottle',
-        rating: '60%',
-        price: '$7.0',
         img: {
           class: 'compare__image',
           src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
           dataSrc: '/images/banner/banner-480_480.png',
           alt: 'Affirm Water Bottle'
+        },
+        rating: {
+          class: 'compare__rating'
+        },
+        price: {
+          class: 'compare__price'
+        },
+        cart: {
+          tag: 'button',
+          text: '<span class="compare__cart-text">Add to Cart</span>',
+          class: 'button button--secondary compare__cart',
+          iconId: 'shopping-cart',
+          iconClass: 'icon compare__cart-icon'
+        },
+        wishlist: {
+          tag: 'button',
+          class: 'button--icon compare__wishlist',
+          iconId: 'heart',
+          iconClass: 'button__icon compare__wishlist-icon',
+          attributes: 'type="button" aria-label="Add to Wish List"',
         }
       },
       {
         name: 'Aim Analog Watch',
-        rating: '80%',
-        price: '$45.0',
         img: {
           class: 'compare__image',
           src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
           dataSrc: '/images/banner/banner-480_480.png',
           alt: 'Aim Analog Watch'
+        },
+        rating: {
+          class: 'compare__rating'
+        },
+        price: {
+          class: 'compare__price'
+        },
+        cart: {
+          tag: 'button',
+          text: '<span class="compare__cart-text">Add to Cart</span>',
+          class: 'button button--secondary compare__cart',
+          iconId: 'shopping-cart',
+          iconClass: 'icon compare__cart-icon'
+        },
+        wishlist: {
+          tag: 'button',
+          class: 'button--icon compare__wishlist',
+          iconId: 'heart',
+          iconClass: 'button__icon compare__wishlist-icon',
+          attributes: 'type="button" aria-label="Add to Wish List"',
         }
       }
     ],

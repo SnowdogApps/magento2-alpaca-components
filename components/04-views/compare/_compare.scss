@@ -1,9 +1,24 @@
-$compare__border          : 1px solid $gray-lighter !default;
-$compare__margin-bottom   : $spacer--medium !default;
-$compare__label-background: #f7f7f9 !default;
-$compare__label-padding   : $spacer--medium !default;
-$compare__cell-padding    : $spacer--medium !default;
-$compare__cell-min-width  : 160px !default;
+$compare__border                   : 1px solid $gray-lighter !default;
+$compare__margin-bottom            : $spacer--medium !default;
+$compare__label-background         : #f7f7f9 !default;
+$compare__label-padding            : $spacer--medium !default;
+$compare__attributes-margin-bottom : $spacer !default;
+$compare__cell-padding             : $spacer--medium !default;
+$compare__cell-min-width           : 160px !default;
+$compare__image-size               : auto !default;
+$compare__image-max-size           : 100% !default;
+$compare__form-margin              : 0 !default;
+$compare__cart-padding             : 0 !default;
+$compare__cart-padding\@medium     : 0 $spacer--medium !default;
+$compare__wishlist-size            : 48px !default;
+$compare__wishlist-padding         : 0 !default;
+$compare__wishlist-background      : transparent !default;
+$compare__wishlist-border          : none !default;
+$compare__wishlist-cursor          : pointer !default;
+$compare__wishlist-icon-size       : 18px !default;
+$compare__wishlist-icon-fill       : $color-secondary !default;
+$compare__wishlist-icon-fill--hover: $color-primary !default;
+$compare__wishlist-icon-transition : $transition-base !default;
 
 .compare {
     margin-bottom: $compare__margin-bottom;
@@ -30,9 +45,68 @@ $compare__cell-min-width  : 160px !default;
     }
 
     &__image {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
+        width: $compare__image-size;
+        height: $compare__image-size;
+        max-width: $compare__image-max-size;
+        max-height: $compare__image-max-size;
+    }
+
+    &__link,
+    &__rating,
+    &__price {
+        display: block;
+        margin-bottom: $compare__attributes-margin-bottom;
+    }
+
+    &__buttons-container {
+        display: flex;
+    }
+
+    &__form {
+        margin: $compare__form-margin;
+    }
+
+    &__cart {
+        padding: $compare__cart-padding;
+        @include mq($screen-m) {
+            padding: $compare__cart-padding\@medium;
+        }
+    }
+
+    &__cart-text {
+        display: none;
+        @include mq($screen-m) {
+            display: inline;
+        }
+    }
+
+    &__cart-icon {
+        @include mq($screen-m) {
+            display: none;
+        }
+    }
+
+    &__wishlist {
+        height: $compare__wishlist-size;
+        width: $compare__wishlist-size;
+        padding: $compare__wishlist-padding;
+        background: $compare__wishlist-background;
+        border: $compare__wishlist-border;
+        cursor: $compare__wishlist-cursor;
+
+        &:hover,
+        &:focus {
+            background: $compare__wishlist-background;
+            .compare__wishlist-icon {
+                fill: $compare__wishlist-icon-fill--hover;
+            }
+        }
+    }
+
+    &__wishlist-icon {
+        fill: $compare__wishlist-icon-fill;
+        width: $compare__wishlist-icon-size;
+        height: $compare__wishlist-icon-size;
+        transition: $compare__wishlist-icon-transition;
     }
 }
