@@ -91,6 +91,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     &__buttons-container {
         display: flex;
+        justify-content: center;
         @include mq($screen-m) {
             flex-wrap: wrap;
         }
