@@ -10,6 +10,8 @@ $toolbar__offset                       : $spacer !default;
 $toolbar__secondary-text-color         : $gray !default;
 $toolbar__icon-color                   : $gray-light !default;
 $toolbar__icon-color--active           : $black !default;
+$toolbar__icon-color--hover            : $color-primary !default;
+$toolbar__mode-icon-transition         : $transition-base !default;
 $toolbar__mode-icon-area-size          : 48px !default;
 $toolbar__mode-icon-margin             : 0 auto !default;
 $toolbar__mode-icon-padding            : 0 !default;
@@ -128,6 +130,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         padding: $toolbar__mode-icon-padding;
         margin: $toolbar__mode-icon-margin;
         fill: $toolbar__icon-color;
+        transition: $toolbar__mode-icon-transition;
         &--active {
             fill: $toolbar__icon-color--active;
         }
@@ -142,6 +145,13 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         background: $toolbar__mode-icon-background;
         border: $toolbar__mode-icon-border;
         cursor: $toolbar__mode-icon-cursor;
+
+        &:hover,
+        &:focus {
+            .toolbar__mode-icon {
+                fill: $toolbar__icon-color--hover;
+            }
+        }
     }
 
     &__sorter-wrapper,

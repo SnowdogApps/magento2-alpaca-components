@@ -1,11 +1,19 @@
 <div class="toolbar {{ class }}" {{{ attributes }}}>
     {{#if showMode }}
         <div class="toolbar__mode">
-            <a href="{{grid.href}}" class="toolbar__mode-button">
-            {{ render '@icon' grid.icon }}
+            <a
+                href="{{grid.href}}"
+                class="toolbar__mode-button"
+                aria-label="Change to grid view"
+            >
+                {{ render '@icon' grid.icon }}
             </a>
-            <a href="{{list.href}}" class="toolbar__mode-button">
-            {{ render '@icon' list.icon }}
+            <a
+                href="{{list.href}}"
+                class="toolbar__mode-button"
+                aria-label="Change to list view"
+            >
+                {{ render '@icon' list.icon }}
             </a>
         </div>
     {{/if}}
