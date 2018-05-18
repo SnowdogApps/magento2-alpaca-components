@@ -1,23 +1,20 @@
 <footer class="footer {{ class }}" {{{ attributes }}}>
-
     <div class="footer__handler {{ handlerClass }}">
     {{ render '@button--icon' scrollToTop }}
         <section class="footer__newsletter">
             {{ render '@newsletter' }}
         </section>
-
         <section class="footer__links">
             {{ render '@dropdown-list' linkList }}
         </section>
     </div>
-
     <section class="footer__bottom-bar {{ bottomBar.class }}" {{{ bottomBar.attributes }}}>
         <div class="footer__bottom-bar-handler {{ bottomBar.handlerClass }}">
             <div class="footer__social-handler {{ bottomBar.socialHandler }}">
                 <span class="footer__social-list-subtitle">
                     {{ socialListSubtitle }}
                 </span>
-                {{ render '@list--icon' socialIconList }}
+                {{ render '@list--icon' socialIconList merge=true }}
             </div>
 
             <small class="footer__copyright">
@@ -25,6 +22,7 @@
             </small>
         </div>
     </section>
+    {{ render '@cookie-message' }}
 </footer>
 
 <script src="{{ static 'footer.js' }}"></script>

@@ -1,28 +1,87 @@
 $rating__size                   : 96px !default;
 $rating__item-size              : $rating__size / 5 !default;
+$rating__size--review           : 200px !default;
+$rating__margin--review         : $spacer--medium !default;
+$rating__item-size--review      : $rating__size--review / 5 !default;
 $icon__active-color             : '#fab216' !default;
 $icon__active-color--with-border: '#fab216' !default;
 $icon__inactive-color           : '#c2c1df' !default;
-
+$rating__error-margin-bottom    : $spacer !default;
+$rating__error-color            : $red !default;
 
 .rating {
     width: $rating__size;
-    cursor: pointer;
 
     &--rate {
         display: flex;
         justify-content: center;
         align-items: center;
-        direction: rtl;
+        cursor: pointer;
     }
+
+    &--review {
+        width: $rating__size--review;
+        margin-bottom: $rating__margin--review;
+
+        .rating__rate-item {
+            flex: 1 0 $rating__item-size--review;
+        }
+
+        .rating__star {
+            height: $rating__item-size--review;
+            width: $rating__size--review;
+
+            &--rate {
+                width: $rating__item-size--review;
+            }
+
+            &:before {
+                width: $rating__size--review;
+                height: $rating__item-size--review;
+                background-size: $rating__item-size--review;
+
+                @include isIE() {
+                    background-size: $rating__item-size--review 100%;
+                }
+            }
+
+            &--single {
+                width: $rating__item-size--review;
+            }
+        }
+
+        .rating__indicator {
+            height: $rating__item-size--review;
+            width: $rating__size--review;
+
+            &:before {
+                height: $rating__item-size--review;
+                background-size: $rating__item-size--review;
+            }
+
+            &:after {
+                height: $rating__item-size--review;
+                background-size: $rating__item-size--review;
+            }
+        }
+    }
+
+    &:hover,
+    &:focus {
+        .rating__rate-item span:before {
+            display: block;
+        }
+    }
+
     &__rate-item {
         position: relative;
         flex: 1 0 $rating__item-size;
         overflow: hidden;
+
         &:hover,
         &:focus {
             ~ .rating__rate-item span:before {
-                display: block;
+                display: none;
             }
         }
     }
@@ -47,6 +106,11 @@ $icon__inactive-color           : '#c2c1df' !default;
             background-repeat: repeat-x;
             background-position: left center;
             background-size: $rating__item-size;
+
+            @include isIE() {
+                height: 100%;
+                background-size: $rating__item-size 100%;
+            }
         }
         &--single {
             width: $rating__item-size;
@@ -75,16 +139,19 @@ $icon__inactive-color           : '#c2c1df' !default;
             background-position: left center;
             background-size: $rating__item-size;
             text-indent: 10000px;
+
+            @include isIE() {
+                width: 100%;
+                height: 100%;
+                background-size: $rating__item-size 100%;
+            }
+
             .rating__star--rate & {
                 display: none;
             }
             .rating__star--rate:hover &,
-            .rating__star--rate:focus & {
-                display: block;
-            }
-
-            .rating__star--rate:hover &,
-            .rating__star--rate:focus & {
+            .rating__star--rate:focus &,
+            .rating__rate-item--active & {
                 display: block;
             }
         }
@@ -102,10 +169,31 @@ $icon__inactive-color           : '#c2c1df' !default;
             background-repeat: repeat-x;
             background-size: $rating__item-size;
             background-position: left center;
+
+            @include isIE() {
+                width: 100%;
+                height: 100%;
+                background-size: $rating__item-size 100%;
+            }
+
             .rating__star--rate & {
                 display: none;
                 text-indent: 10000px;
             }
         }
+    }
+
+    &__error {
+        display: none;
+        color: $rating__error-color;
+        margin-bottom: $rating__error-margin-bottom;
+
+        &--visible {
+            display: block;
+        }
+    }
+
+    .mage-error {
+        display: none !important;
     }
 }

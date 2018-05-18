@@ -43,13 +43,12 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     position: relative;
     display: flex;
     flex: 0 0 auto;
-    align-items: left;
     justify-content: space-between;
-    flex-direction: column;
+    flex-wrap: wrap;
     border-bottom: $toolbar__border;
+
     @include mq($screen-m) {
         align-items: center;
-        flex-direction: row;
         justify-content: flex-start;
     }
 
@@ -59,6 +58,10 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     &__sorter {
         flex: 0 0 auto;
         align-items: center;
+    }
+
+    &__pager {
+        width: 100%;
     }
 
     &__amount {
@@ -74,6 +77,26 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             // sass-lint:enable no-css-comments
             justify-content: center;
             display: flex;
+        }
+
+        &--visible {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: flex-start;
+            padding: $spacer 0;
+
+            @include mq($screen-m) {
+                flex: 1 0 0;
+            }
+
+            @include isIE() {
+                flex-grow: 0;
+
+                @include mq($screen-m) {
+                    flex-grow: 1;
+                }
+            }
         }
     }
 
@@ -210,6 +233,14 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             top: auto;
             right: auto;
             width: auto;
+        }
+
+        &--relative {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: flex-end;
+            padding: $spacer 0;
         }
     }
 
