@@ -6,6 +6,7 @@ $catalog-list-item__image-width                                  : 96px !default
 $catalog-list-item__image-width\@medium                          : 208px !default;
 $catalog-list-item__image-height                                 : 120px !default;
 $catalog-list-item__image-height\@medium                         : 258px !default;
+$catalog-list-item__image-height--inner                          : auto !default;
 
 $catalog-list-item__badge-top-position\@medium                   : 24px !default;
 $catalog-list-item__badge-left-position\@medium                  : 0 !default;
@@ -69,6 +70,7 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
 
         .image {
             width: $catalog-list-item__image-width;
+            height: $catalog-list-item__image-height--inner;
             mix-blend-mode: multiply;
             @include mq($screen-m) {
                 width: $catalog-list-item__image-width\@medium;

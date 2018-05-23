@@ -132,8 +132,8 @@ $product-view__review-date-color                        : $gray-light !default;
 $product-view__review-content-title-font-weight         : $font-weight-bold !default;
 $product-view__review-product-name-font-weight          : $font-weight-bold !default;
 
-$product-view__wrapper-margin                           : $spacer--large 0 !default;
-$product-view__wrapper-margin\@medium                   : 40px 0 !default;
+$product-view__wrapper-margin                           : $spacer--medium 0 $spacer--large 0 !default;
+$product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
 .product-view {
     display: flex;
@@ -350,13 +350,13 @@ $product-view__wrapper-margin\@medium                   : 40px 0 !default;
 
     &__rating-rates {
         width: 50%;
+        display: flex;
         flex: 1 0 auto;
+        align-items: center;
         font-size: $product-view__rating-value-font-size;
 
         @include mq($screen-m) {
             width: auto;
-            display: flex;
-            align-items: center;
             justify-content: flex-end;
         }
     }

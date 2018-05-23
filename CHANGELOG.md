@@ -5,8 +5,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Compare view
+
+### Changed
+- Product page styles
+
+## [0.7.2] - 07.05.2018
 ### Fixed
 - Yarn lock file
+
+### Changed
+- Swatches styles
+- Catalog item styles
+- Filters media query size
 
 ## [0.6.0] - 30.03.2018
 ### Added

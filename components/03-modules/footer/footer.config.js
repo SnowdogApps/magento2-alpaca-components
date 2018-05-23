@@ -205,27 +205,31 @@ module.exports = {
       class: 'list--with-icon list--horizontal footer__social-list',
       elements: [
         {
-          icon: 'youtube',
-          class: 'footer__social-list-item',
-          iconClass: 'footer__social-icon',
+          icon: {
+            iconId: 'youtube',
+            class: 'footer__social-icon',
+          },
           linkAttributes: 'aria-label="Go to Alpaca Youtube Channel"'
         },
         {
-          icon: 'facebook',
-          class: 'footer__social-list-item',
-          iconClass: 'footer__social-icon',
+          icon: {
+            iconId: 'facebook',
+            class: 'footer__social-icon',
+          },
           linkAttributes: 'aria-label="Go to Alpaca Facebook Page"'
         },
         {
-          icon: 'instagram',
-          class: 'footer__social-list-item',
-          iconClass: 'footer__social-icon',
+          icon: {
+            iconId: 'instagram',
+            class: 'footer__social-icon',
+          },
           linkAttributes: 'aria-label="Check Alpaca on Instagram"'
         },
         {
-          icon: 'google-plus',
-          class: 'footer__social-list-item',
-          iconClass: 'footer__social-icon',
+          icon: {
+            iconId: 'google-plus',
+            class: 'footer__social-icon',
+          },
           linkAttributes: 'aria-label="Find Alpaca on Google Plus"'
         }
       ]
