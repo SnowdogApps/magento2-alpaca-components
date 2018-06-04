@@ -65,17 +65,6 @@
         </div>
 
         <div class="product-view__secondary-details">
-
-            <div class="product-view__description">
-                {{{ description }}}
-            </div>
-
-            <div class="product-view__options">
-                {{#each options as |option|}}
-                    {{> '@swatch' option}}
-                {{/each}}
-            </div>
-
             <div class="product-view__main-actions">
                 <div class="product-view__qty">
                     <label class="{{ qty.label.class }}"
@@ -99,6 +88,7 @@
                 </div>
 
             </div>
+
             <div class="product-view__information">
                 {{ render '@brief-info' briefInfo }}
             </div>
@@ -121,7 +111,6 @@
             </h3>
             {{render '@slider' upsellProducts.slider }}
         </div>
-        {{render '@additional-content' additionalContent merge=true }}
     </div>
 </div>
 

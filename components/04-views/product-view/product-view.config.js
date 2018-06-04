@@ -1460,5 +1460,15 @@ module.exports = {
         alt: 'image alt text'
       }
     }
-  }
+  },
+  variants: [
+    {
+      name: 'bundle',
+      context: {
+        price: {
+          content: 'price--from'
+        }
+      }
+    }
+  ]
 };
