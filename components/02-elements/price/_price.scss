@@ -13,5 +13,12 @@ $price__font-weight--old   : $font-weight-normal !default;
         &--special {
             color: $price__special-price-color;
         }
+        &--from {
+            display: block;
+        }
+    }
+
+    &__text {
+        font-weight: $price__font-weight--old;
     }
 }

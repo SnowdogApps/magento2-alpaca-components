@@ -33,5 +33,16 @@ module.exports = {
         },
       }
     },
+    {
+      name: 'from',
+      context: {
+        fromPriceClass: 'price__value--from',
+        toPriceClass: 'price__value--from',
+        textBeforeFromPrice: 'From',
+        textBeforeToPrice: 'To',
+        fromPrice: '61.00',
+        toPrice: '79.00',
+      }
+    }
   ]
 }
