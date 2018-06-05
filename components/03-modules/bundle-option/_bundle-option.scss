@@ -1,0 +1,11 @@
+$bundle-option__title-margin: $spacer--medium !default;
+
+.bundle-option {
+    &__title {
+        margin-bottom: $bundle-option__title-margin;
+    }
+
+    &__input-field {
+        max-width: 100px;
+    }
+}
