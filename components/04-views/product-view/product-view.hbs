@@ -22,7 +22,8 @@
                     {{ render (component price.content) price.contentContext }}
                 </span>
 
-                <div class="
+                <div
+                    class="
                         product-view__stock-status
                         {{#if stock.outOfStock}}
                             product-view__stock-status--out-of-stock
@@ -30,7 +31,8 @@
                         {{#if stock.alert}}
                             product-view__stock-status--alert
                         {{/if}}
-                ">
+                    "
+                >
                     {{{ stock.html }}}
                 </div>
 
@@ -40,8 +42,13 @@
                         {{#if rating.parenthesis}}
                             (
                         {{/if}}
-                        <a href="{{ rating.href }}"
-                        class="product-view__link product-view__link--rating {{ rating.class }}"
+                        <a
+                            href="{{ rating.href }}"
+                            class="
+                                product-view__link
+                                product-view__link--rating
+                                {{ rating.class }}
+                            "
                         >
                             {{{ rating.value }}}
                         </a>
@@ -50,13 +57,14 @@
                         {{/if}}
                     </div>
                     <div class="product-view__rating-actions">
-                        <a href="{{ addReview.href }}"
-                        class="
-                            product-view__link
-                            product-view__link--add-review
-                            {{ addReview.class }}
-                        "
-                    >
+                        <a
+                            href="{{ addReview.href }}"
+                            class="
+                                product-view__link
+                                product-view__link--add-review
+                                {{ addReview.class }}
+                            "
+                        >
                             {{ addReview.text }}
                         </a>
                     </div>
@@ -78,7 +86,8 @@
 
                 <div class="product-view__main-actions">
                     <div class="product-view__qty">
-                        <label class="{{ qty.label.class }}"
+                        <label
+                            class="{{ qty.label.class }}"
                             for="qty.field.input.id"
                         >
                             {{ qty.label.text }}
@@ -91,13 +100,18 @@
                         </div>
                         <div class="product-view__extra-actions">
                             {{#each extraActions as |action|}}
-                                <{{tag}} class="product-view__action product-view__action--{{tag}} {{ action.class }}">
+                                <{{tag}}
+                                    class="
+                                        product-view__action
+                                        product-view__action--{{tag}}
+                                        {{ action.class }}
+                                    "
+                                >
                                     {{ render '@icon' action.icon}}
                                 </{{tag}}>
                             {{/each}}
                         </div>
                     </div>
-
                 </div>
                 <div class="product-view__information">
                     {{ render '@brief-info' briefInfo }}
