@@ -70,42 +70,76 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-view__secondary-details">
-            <div class="product-view__main-actions">
-                <div class="product-view__qty">
-                    <label
-                        class="{{ qty.label.class }}"
-                        for="qty.field.input.id"
-                    >
-                        {{ qty.label.text }}
-                    </label>
-                    {{render '@quantity-update' qty.field}}
+            <div class="product-view__secondary-details">
+                <div
+                    class="
+                        product-view__description
+                        product-view__description-bundle
+                    "
+                >
+                    {{{ description }}}
                 </div>
-                <div class="product-view__action-elements">
-                    <div class="product-view__add-to-cart">
-                        {{> '@button' button }}
+
+                <div class="product-view__customization">
+                    {{#each customizations as |customize| }}
+                        <div class="product-view__customization-element">
+                            {{ render '@bundle-option' options }}
+                        </div>
+                    {{/each}}
+                </div>
+
+                <div class="product-view__main-actions">
+                    <div class="product-view__qty">
+                        <label
+                            class="{{ qty.label.class }}"
+                            for="qty.field.input.id"
+                        >
+                            {{ qty.label.text }}
+                        </label>
+                        {{render '@quantity-update' qty.field}}
                     </div>
-                    <div class="product-view__extra-actions">
-                        {{#each extraActions as |action|}}
-                            <{{tag}}
-                                class="
-                                    product-view__action
-                                    product-view__action--{{tag}}
-                                    {{ action.class }}
-                                "
-                            >
-                                {{ render '@icon' action.icon}}
-                            </{{tag}}>
+                    <div class="product-view__action-elements">
+                        <div class="product-view__add-to-cart">
+                            {{> '@button' button }}
+                        </div>
+                        <div class="product-view__extra-actions">
+                            {{#each extraActions as |action|}}
+                                <{{tag}}
+                                    class="
+                                        product-view__action
+                                        product-view__action--{{tag}}
+                                        {{ action.class }}
+                                    "
+                                >
+                                    {{ render '@icon' action.icon}}
+                                </{{tag}}>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-view__summary">
+                    <div class="product-view__summary-title">
+                        {{ summaryTitle }}
+                    </div>
+
+                    <ul class="product-view__summary-list list">
+                        {{#each summaries as |summary|}}
+                            <li class="product-view__summary-item list__item">
+                                <span class="product-view__summary-item-title">
+                                    {{ summary.title }}
+                                </span>
+
+                                {{ summary.item }}
+                            </li>
                         {{/each}}
-                    </div>
+                    </ul>
                 </div>
 
-            </div>
-
-            <div class="product-view__information">
-                {{ render '@brief-info' briefInfo }}
+                <div class="product-view__information">
+                    {{ render '@brief-info' briefInfo }}
+                </div>
             </div>
         </div>
 

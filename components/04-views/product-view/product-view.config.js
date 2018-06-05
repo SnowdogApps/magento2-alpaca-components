@@ -1467,7 +1467,59 @@ module.exports = {
       context: {
         price: {
           content: 'price--from'
-        }
+        },
+        description: '<span class="product-view__description-title">Customize Ingrid Running Jacket with Long Sleaves</span>',
+        customizations: [
+          {
+            options: {
+              title: {
+                message: 'Choose first option',
+                tag: 'h4'
+              },
+              fields: [
+                {
+                  content: 'radio',
+                  config: {
+                    name: 'bundleOption1'
+                  }
+                }
+              ]
+            }
+          },
+          {
+            options: {
+              title: {
+                message: 'Fill second option',
+                tag: 'h4'
+              },
+              fields: [
+                {
+                  content: 'input',
+                  config: {
+                    label: {
+                      text: 'Add your text on shirt',
+                    },
+                    field: {
+                      placeholder: 'i.e. I X Y L L'
+                    },
+                    name: 'bundleOption2'
+                  }
+                }
+              ],
+            }
+          }
+        ],
+        summaryTitle: 'Summary',
+        summaries: [
+          {
+            title: 'First option:',
+            item: '1x Choosen Item'
+          },
+          {
+            title: 'Second option:',
+            item : 'TEXT: QWE'
+          }
+        ]
       }
     }
   ]
