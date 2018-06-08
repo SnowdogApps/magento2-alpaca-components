@@ -1,4 +1,7 @@
-<div class="breadcrumbs {{ class }}" {{{ attributes }}}>
+<div class="breadcrumbs {{ class }}" {{{ attributes }}}
+    aria-label="{{ ariaLabel }}"
+    role="navigation"
+>
     {{#each categories}}
         {{#if @last}}
             <span class="breadcrumbs__item"

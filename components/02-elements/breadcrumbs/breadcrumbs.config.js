@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    ariaLabel: 'Breadcrumbs',
     categories: [
       {
         name: 'Home',
