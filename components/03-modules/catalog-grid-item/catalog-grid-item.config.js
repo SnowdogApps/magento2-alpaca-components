@@ -10,6 +10,7 @@ module.exports = {
       }
     },
     image: {
+      wrapperClass: 'catalog-grid-item__image-wrapper',
       dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
