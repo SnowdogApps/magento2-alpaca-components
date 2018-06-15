@@ -2,9 +2,23 @@
     display: block;
     width: 100%;
     max-width: 100%;
+    transition: $transition-fade;
+
+    &.lazyload,
+    &.lazyloading {
+        opacity: 0;
+    }
+
+    &.lazyloaded {
+        opacity: 1;
+    }
 }
 
 img,
 picture {
     @extend .image;
+}
+
+.lazyload-wrapper {
+    background: $gray-lightest;
 }
