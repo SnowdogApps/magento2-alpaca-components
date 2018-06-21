@@ -432,7 +432,8 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         }
     }
 
-    &__add-to-cart-btn {
+    &__add-to-cart-btn,
+    &__update-cart-btn {
         flex: 1 0 auto;
         width: 100%;
         min-width: $product-view__add-to-cart-btn-min-width;
@@ -442,7 +443,8 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         }
     }
 
-    &__add-to-cart {
+    &__add-to-cart,
+    &__update-cart {
         width: 100%;
         margin: $product-view__add-to-cart-margin;
         @include mq($screen-l) {
