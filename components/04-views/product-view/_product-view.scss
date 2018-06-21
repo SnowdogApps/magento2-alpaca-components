@@ -274,6 +274,10 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
             width: $product-view__swatch-option-width--attributes;
             height: $product-view__swatch-option-height--attributes;
         }
+        &.color {
+            width: $product-view__swatch-option-spacing;
+            height: $product-view__swatch-option-spacing;
+        }
     }
     &__swatch-option-title {
         font-size: $product-view__swatch-option-title-font-size;
