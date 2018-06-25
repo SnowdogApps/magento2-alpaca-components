@@ -21,8 +21,7 @@ $catalog-grid-item__image-width             : auto !default;
 $catalog-grid-item__image-width--lazyload   : 100% !default;
 $catalog-grid-item__image-height            : auto !default;
 
-$catalog-grid-item__loader-height           : 180px !default;
-$catalog-grid-item__loader-height\@medium   : 260px !default;
+$catalog-grid-item__loader-margin-top       : 30% !default;
 
 $catalog-grid-item__content-bg-color        : $white !default;
 $catalog-grid-item__content-padding         : $spacer !default;
@@ -92,17 +91,15 @@ $catalog-grid-item__swatch-image-height     : 40px !default;
             width: $catalog-grid-item__image-width;
             height: $catalog-grid-item__image-height;
             mix-blend-mode: multiply;
-            &.swatch-option-loading {
-                height: $catalog-grid-item__loader-height;
-                @include mq($screen-m) {
-                    height: $catalog-grid-item__loader-height\@medium;
-                }
-            }
         }
 
         .lazyload,
         .lazyloading {
             width: $catalog-grid-item__image-width--lazyload;
+        }
+
+        .loader__circle {
+            margin-top: $catalog-grid-item__loader-margin-top;
         }
     }
 
