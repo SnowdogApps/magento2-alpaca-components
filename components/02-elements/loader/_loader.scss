@@ -1,0 +1,39 @@
+$loader__size                : 100% !default;
+$loader__circle-size         : 80px !default;
+$loader__circle-border       : 8px solid $gray-lighter !default;
+$loader__circle-border-top   : 8px solid $blue !default;
+$loader__circle-border-radius: 50% !default;
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: $loader__size;
+    height: $loader__size;
+    background-color: inherit;
+
+    &--visible {
+        display: block;
+    }
+
+    &__circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: $loader__circle-size;
+        height: $loader__circle-size;
+        margin: auto;
+        border: $loader__circle-border;
+        border-top: $loader__circle-border-top;
+        border-radius: $loader__circle-border-radius;
+        animation: rotate 1.5s infinite linear;
+    }
+}
