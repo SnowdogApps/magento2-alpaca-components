@@ -10,7 +10,7 @@
     "fs-extra": "~5.0.0",
     "globby": "~8.0.0",
     "gulp": "~3.9.1",
-    "gulp-eslint": "~4.0.0",
+    "gulp-eslint": "~5.0.0",
     "gulp-if": "~2.0.2",
     "gulp-logger": "^0.0.2",
     "gulp-notify": "~3.2.0",
