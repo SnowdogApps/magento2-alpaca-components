@@ -5,8 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Compare view
+- Loader element
 
-## [0.7.2] - 07.05.2018
+### Changed
+- Product page styles
+
+## [0.7.3] - 07.05.2018
 ### Fixed
 - Yarn lock file
 
