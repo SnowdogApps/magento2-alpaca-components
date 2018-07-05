@@ -83,7 +83,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             display: flex;
             flex: 0 0 auto;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             padding: $spacer 0;
 
             @include mq($screen-m) {
@@ -240,10 +240,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             flex: 0 0 auto;
             align-items: center;
             justify-content: flex-end;
-
-            @include mq($screen-m) {
-                padding: $spacer 0;
-            }
+            padding: $spacer 0;
         }
     }
 
