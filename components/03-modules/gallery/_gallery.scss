@@ -87,7 +87,7 @@ $gallery__thumb-width--large               : 80px !default;
         }
     }
     &__thumb-arr {
-        display: flex !important;
+        display: flex !important; // sass-lint:disable-line no-important
         justify-content: center;
         align-items: center;
         width: $gallery__thumb-arrow-width;
