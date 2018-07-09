@@ -1,7 +1,7 @@
 $dashboard-margin                : 30px !default;
 $dashboard-padding               : 15px !default;
-$dashboard__sidebar-width--medium: calc(#{100% / 4} - #{(4 - 1) * $grid__gutter / 4}) !default;
-$dashboard__content-width--medium: calc(#{100% / 4 * 3} - #{(4 - 3) * $grid__gutter / 4}) !default;
+$dashboard__sidebar-width--medium: calc(25% - 3 * #{$grid__gutter} / 4) !default;
+$dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
 
 .dashboard {
     &__sidebar,
