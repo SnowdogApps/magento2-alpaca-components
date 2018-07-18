@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Product page styles
+- Gallery loader styles
 
 ## [0.7.3] - 09.07.2018
 ### Fixed
