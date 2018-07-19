@@ -9,6 +9,9 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
 
 $catalog-list__item-padding           : $spacer--medium 0 $spacer 0 !default;
 
+$catalog-list__loader-border-color    : $white !default;
+$catalog-list__loader-border-top-color: $green !default;
+
 .catalog-list {
     margin: $catalog-list__margin;
     display: flex;
@@ -46,7 +49,7 @@ $catalog-list__item-padding           : $spacer--medium 0 $spacer 0 !default;
     }
 
     .loader__circle {
-        border-color: $white;
-        border-top-color: $green;
+        border-color: $catalog-list__loader-border-color;
+        border-top-color: $catalog-list__loader-border-top-color;
     }
 }
