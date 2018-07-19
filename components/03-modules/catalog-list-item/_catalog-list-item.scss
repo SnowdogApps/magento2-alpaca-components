@@ -4,8 +4,6 @@ $catalog-list-item__font-size\@medium                            : 14px !default
 
 $catalog-list-item__image-width                                  : 96px !default;
 $catalog-list-item__image-width\@medium                          : 208px !default;
-$catalog-list-item__image-height                                 : 120px !default;
-$catalog-list-item__image-height\@medium                         : 258px !default;
 $catalog-list-item__image-height--inner                          : auto !default;
 
 $catalog-list-item__badge-top-position\@medium                   : 24px !default;
@@ -60,13 +58,7 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
     overflow: hidden;
 
     &__image-wrapper {
-        flex: 1 $catalog-list-item__image-width;
-        height: $catalog-list-item__image-height;
         background: #f9f9f9;
-        @include mq($screen-m) {
-            flex: 1 $catalog-list-item__image-width\@medium;
-            height: $catalog-list-item__image-height\@medium;
-        }
 
         .image {
             width: $catalog-list-item__image-width;
