@@ -28,6 +28,12 @@ $breadcrumbs__font-size          : $font-size-small !default;
             color: $breadcrumbs__color;
         }
 
+        &:first-of-type {
+            .breadcrumbs__link {
+                padding-left: 0;
+            }
+        }
+
         &:last-child {
             align-items: center;
             padding: $breadcrumbs__padding;
@@ -46,10 +52,6 @@ $breadcrumbs__font-size          : $font-size-small !default;
         padding: $breadcrumbs__padding;
         font-family: $breadcrumbs__font-family;
         text-decoration: none;
-
-        &:first-child {
-            padding-left: 0;
-        }
     }
 
     + .page-main {
