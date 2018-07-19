@@ -58,8 +58,6 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
     overflow: hidden;
 
     &__image-wrapper {
-        background: #f9f9f9;
-
         .image {
             width: $catalog-list-item__image-width;
             height: $catalog-list-item__image-height--inner;
