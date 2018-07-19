@@ -1,8 +1,9 @@
 $loader__size                : 100% !default;
 $loader__circle-size         : 80px !default;
-$loader__circle-border       : 8px solid $gray-lighter !default;
-$loader__circle-border-top   : 8px solid $blue !default;
+$loader__circle-border       : 8px solid $gray-lightest !default;
+$loader__circle-border-top   : 8px solid $green !default;
 $loader__circle-border-radius: 50% !default;
+$loader__circle-animation    : rotate 1s infinite linear !default;
 
 @keyframes rotate {
     0% {transform: rotate(0deg);}
@@ -34,6 +35,6 @@ $loader__circle-border-radius: 50% !default;
         border: $loader__circle-border;
         border-top: $loader__circle-border-top;
         border-radius: $loader__circle-border-radius;
-        animation: rotate 1.5s infinite linear;
+        animation: $loader__circle-animation;
     }
 }
