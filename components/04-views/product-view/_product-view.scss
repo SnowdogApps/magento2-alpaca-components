@@ -101,10 +101,7 @@ $product-view__stock-color--alert                       : $red !default;
 $product-view__stock-font-weight\@medium                : $font-weight-bold !default;
 
 $product-view__swatch-margin-bottom                     : $spacer--medium !default;
-$product-view__swatch-option-spacing                    : 48px !default;
-$product-view__swatch-option-height--attributes         : 64px !default;
-$product-view__swatch-option-width--attributes          : 54px !default;
-$product-view__swatch-option-margin-right               : $spacer--medium !default;
+$product-view__swatch-option-spacing                    : 40px !default;
 $product-view__swatch-option-title-font-size            : $font-size-base !default;
 $product-view__swatch-option-title-font-weight          : $font-weight-bold !default;
 
@@ -262,27 +259,17 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
     .swatch {
         margin-bottom: $product-view__swatch-margin-bottom;
+        &__option {
+            min-width: $product-view__swatch-option-spacing;
+            min-height: $product-view__swatch-option-spacing;
+        }
     }
 
-    .swatch__option {
-        width: $product-view__swatch-option-spacing;
-        height: $product-view__swatch-option-spacing;
-        margin-right: $product-view__swatch-option-margin-right;
-        min-height: 0;
-        min-width: 0;
-        &--attributes {
-            width: $product-view__swatch-option-width--attributes;
-            height: $product-view__swatch-option-height--attributes;
-        }
-        &--color {
-            width: $product-view__swatch-option-spacing;
-            height: $product-view__swatch-option-spacing;
-        }
-    }
     &__swatch-option-title {
         font-size: $product-view__swatch-option-title-font-size;
         font-weight: $product-view__swatch-option-title-font-weight;
     }
+
     &__tabs {
         margin: $product-view__tabs-margin;
         @include mq($screen-m) {
