@@ -17,8 +17,8 @@ $product-view__action-icon-wishlist-width               : 20px !default;
 $product-view__action-item-size                         : 48px !default;
 $product-view__action-item-spacing                      : $spacer !default;
 
-$product-view__add-review-link-font-size                : $font-size-base;
-$product-view__add-review-link-font-size\@medium        : $font-size-small;
+$product-view__add-review-link-font-size                : $font-size-base !default;
+$product-view__add-review-link-font-size\@medium        : $font-size-small !default;
 
 $product-view__add-to-cart-margin-right                 : $spacer--medium !default;
 
@@ -27,10 +27,10 @@ $product-view__base-elements-vertical-spacing           : $spacer !default;
 $product-view__title-font-size                          : $font-size-large !default;
 
 $product-view__col-base-spacing                         : $spacer--medium !default;
-$product-view__col-base-reduce-width                    : $product-view__col-base-spacing / 2;
-$product-view__col-left-base-width                      : 50%;
+$product-view__col-base-reduce-width                    : $product-view__col-base-spacing / 2 !default;
+$product-view__col-left-base-width                      : 50% !default;
 $product-view__col-left-width                           : calc(#{$product-view__col-left-base-width} - #{$product-view__col-base-reduce-width}) !default;
-$product-view__col-right-base-width                     : 100% - #{$product-view__col-left-base-width};
+$product-view__col-right-base-width                     : 100% - #{$product-view__col-left-base-width} !default;
 $product-view__col-right-width                          : calc(#{$product-view__col-right-base-width} - #{$product-view__col-base-reduce-width}) !default;
 
 $product-view__description-color                        : $gray-darker !default;
@@ -90,7 +90,7 @@ $product-view__rating-link-color                        : $gray-dark !default;
 $product-view__rating-margin                            : 0 0 14px 0 !default;
 $product-view__rating-margin\@medium                    : 0 !default;
 $product-view__rating-text-color                        : $gray-dark !default;
-$product-view__rating-value-font-size                   : $font-size-base;
+$product-view__rating-value-font-size                   : $font-size-base !default;
 
 $product-view__sku-color                                : $gray !default;
 $product-view__sku-margin-bottom                        : $spacer--medium !default;
