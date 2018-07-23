@@ -61,6 +61,29 @@ module.exports = {
         context: {
           options: [
             {
+              text: 'XS'
+            },
+            {
+              class: 'selected',
+              text: 'S'
+            },
+            {
+              text: 'M'
+            },
+            {
+              text: 'L'
+            },
+            {
+              text: 'XL'
+            }
+          ]
+        }
+      },
+      {
+        name: 'swatch',
+        context: {
+          options: [
+            {
               optionClass: 'swatch__option--image',
               attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
             },
@@ -76,29 +99,6 @@ module.exports = {
             {
               optionClass: 'swatch__option--image',
               attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-            }
-          ]
-        }
-      },
-      {
-        name: 'swatch',
-        context: {
-          options: [
-            {
-              text: 'XS'
-            },
-            {
-              class: 'selected',
-              text: 'S'
-            },
-            {
-              text: 'M'
-            },
-            {
-              text: 'L'
-            },
-            {
-              text: 'XL'
             }
           ]
         }
