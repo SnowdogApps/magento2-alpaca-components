@@ -6,8 +6,10 @@
     {{/if}}
 
     {{#each options }}
-        <div class="swatch__option {{ this.class }}" {{{ this.attributes }}}>
-            {{ this.text }}
+        <div class="swatch__container {{ this.class }}">
+            <div class="swatch__option" {{{ this.attributes }}}>
+                {{ this.text }}
+            </div>
         </div>
     {{/each }}
 </div>

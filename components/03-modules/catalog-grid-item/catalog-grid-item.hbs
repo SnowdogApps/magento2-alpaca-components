@@ -36,7 +36,9 @@
 
         <div class="catalog-grid-item__options">
             {{#each swatches as |swatch|}}
-                {{ render (component swatch.name) swatch.context }}
+                <div class="swatch__wrapper">
+                    {{ render (component swatch.name) swatch.context }}
+                </div>
             {{/each}}
         </div>
 

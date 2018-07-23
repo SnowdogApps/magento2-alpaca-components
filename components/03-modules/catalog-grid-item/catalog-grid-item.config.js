@@ -59,7 +59,6 @@ module.exports = {
       {
         name: 'swatch',
         context: {
-          class: 'swatch--small swatch--image',
           options: [
             {
               attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
@@ -68,7 +67,7 @@ module.exports = {
               attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
             },
             {
-              class: 'swatch__option--active',
+              class: 'selected',
               attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
             },
             {
@@ -80,15 +79,12 @@ module.exports = {
       {
         name: 'swatch',
         context: {
-          class: 'swatch--small',
-          attributes: '',
-          titleClass: '',
           options: [
             {
               text: 'XS'
             },
             {
-              class: 'swatch__option--active',
+              class: 'selected',
               text: 'S'
             },
             {

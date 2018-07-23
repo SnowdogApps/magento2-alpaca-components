@@ -19,6 +19,11 @@
         <div class="catalog-list-item__price">
             {{ render (component price.name) price.context }}
         </div>
+        <div class="catalog-grid-item__options">
+            {{#each swatches as |swatch|}}
+                {{ render (component swatch.name) swatch.context }}
+            {{/each}}
+        </div>
         <div class="catalog-list-item__actions">
             <div class="catalog-list-item__actions-primary">
                 {{ render '@button' addToCartButton }}

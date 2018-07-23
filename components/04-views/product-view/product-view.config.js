@@ -97,19 +97,16 @@ module.exports = {
         },
         options: [
           {
-            class: 'swatch__option--attributes',
             attributes: 'style="background: url(../../images/swatch/swatch-orange.jpg); background-size: cover; background-position: center center;"'
           },
           {
-            class: 'swatch__option--attributes',
             attributes: 'style="background: url(../../images/swatch/swatch-green.jpg); background-size: cover; background-position: center center;"'
           },
           {
-            class: 'swatch__option--attributes swatch__option--active',
+            class: 'selected',
             attributes: 'style="background: url(../../images/swatch/swatch-red.jpg); background-size: cover; background-position: center center;"'
           },
           {
-            class: 'swatch__option--attributes',
             attributes: 'style="background: url(../../images/swatch/swatch-white.jpg); background-size: cover; background-position: center center;"'
           }
         ]
@@ -130,7 +127,7 @@ module.exports = {
             text: 'XS'
           },
           {
-            class: 'swatch__option--active',
+            class: 'selected',
             attributes: '',
             text: 'S'
           },

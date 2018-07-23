@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     tag: 'section',
-    class: '',
+    class: 'catalog-list__item',
     badge: {
       name: 'badge--new',
       context: {
@@ -29,6 +29,50 @@ module.exports = {
         }
       }
     },
+    swatches: [
+      {
+        name: 'swatch',
+        class: 'swatch__wrapper',
+        context: {
+          options: [
+            {
+              text: 'XS'
+            },
+            {
+              class: 'selected',
+              text: 'S'
+            },
+            {
+              text: 'M'
+            },
+            {
+              text: 'L'
+            },
+            {
+              text: 'XL'
+            }
+          ]
+        }
+      },
+      {
+        name: 'swatch',
+        class: 'swatch__wrapper',
+        context: {
+          options: [
+            {
+              attributes: 'style="background: #000000"'
+            },
+            {
+              attributes: 'style="background: #8f8f8f"'
+            },
+            {
+              class: 'selected',
+              attributes: 'style="background: #eb6703"'
+            }
+          ]
+        }
+      }
+    ],
     addToCartButton: {
       tag: 'button',
       text: 'Add to Cart',
