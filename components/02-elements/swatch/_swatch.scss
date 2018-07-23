@@ -4,6 +4,7 @@ $swatch__title-margin-bottom         : $spacer !default;
 $swatch__title-font-size             : $font-size-base !default;
 
 $swatch__option-size                 : 24px !default;
+$swatch__option-size--image          : 32px !default;
 $swatch__option-margin               : $spacer--medium !default;
 $swatch__option-background           : $white !default;
 $swatch__option-color                : $gray-dark !default;
@@ -61,5 +62,11 @@ $swatch__option-border-color--active : $color-primary !default;
         min-height: $swatch__option-size;
         background-color: $swatch__option-background;
         color: $swatch__option-color;
+
+        &--image {
+            min-height: $swatch__option-size--image;
+            background-size: cover;
+            background-position: center;
+        }
     }
 }

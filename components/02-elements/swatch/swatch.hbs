@@ -7,7 +7,10 @@
 
     {{#each options }}
         <div class="swatch__container {{ this.class }}">
-            <div class="swatch__option" {{{ this.attributes }}}>
+            <div
+                class="swatch__option {{ this.optionClass}}"
+                {{{ this.attributes }}}
+            >
                 {{ this.text }}
             </div>
         </div>
