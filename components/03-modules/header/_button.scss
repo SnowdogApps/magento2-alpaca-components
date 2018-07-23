@@ -7,6 +7,8 @@ $header-button__icon-margin         : 0 0 2px 0 !default;
 $header-button__icon-margin--medium : 0 0 4px 0 !default;
 $header-button__icon-padding        : 0 0 4px 0 !default;
 $header-button__icon-color          : $gray-darker !default;
+$header-button__icon-color--hover   : $color-primary !default;
+$header-button__transition          : $transition-base !default;
 
 $header-button__text-font-family    : $font-family-base !default;
 $header-button__text-font-color     : $gray !default;
@@ -46,6 +48,9 @@ $header-button__counter-dot-bg-color: $white !default;
     &:focus,
     &:hover {
         text-decoration: none;
+        .header-button__icon {
+            fill: $header-button__icon-color--hover;
+        }
     }
 
     &--reset-margin {
@@ -56,6 +61,7 @@ $header-button__counter-dot-bg-color: $white !default;
         margin: $header-button__icon-margin;
         padding: $header-button__icon-padding;
         fill: $header-button__icon-color;
+        transition: $header-button__transition;
         @include mq($screen-m) {
             margin: $header-button__icon-margin--medium;
         }
