@@ -50,11 +50,6 @@ $catalog-grid-item__price-margin            : 0 0 $spacer 0 !default;
 
 $catalog-gird-item__primary-form-margin     : 0 !default;
 
-$catalog-grid-item__swatch-size             : 32px !default;
-$catalog-grid-item__swatch-border-color     : $color-primary !default;
-$catalog-grid-item__swatch-image-width      : 32px !default;
-$catalog-grid-item__swatch-image-height     : 40px !default;
-
 .catalog-grid-item {
     position: relative;
     display: block;
@@ -184,22 +179,6 @@ $catalog-grid-item__swatch-image-height     : 40px !default;
     &__options {
         .swatch {
             margin: $catalog-grid-item__base-spacing 0;
-            &__wrapper {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            &__option {
-                min-width: $catalog-grid-item__swatch-size;
-                min-height: $catalog-grid-item__swatch-size;
-
-                &.image {
-                    width: $catalog-grid-item__swatch-image-width;
-                    height: $catalog-grid-item__swatch-image-height;
-                }
-            }
-            .selected {
-                border-color: $catalog-grid-item__swatch-border-color;
-            }
         }
     }
 
