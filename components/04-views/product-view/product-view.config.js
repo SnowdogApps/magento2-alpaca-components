@@ -87,38 +87,7 @@ module.exports = {
     },
     options: [
       {
-        class: '',
-        attributes: '',
-        titleClass: '',
-        heading: {
-          tag: 'span',
-          text: 'Color',
-          class: 'product-view__swatch-option-title'
-        },
-        options: [
-          {
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg)"'
-          },
-          {
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg)"'
-          },
-          {
-            class: 'selected',
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg)"'
-          },
-          {
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg)"'
-          }
-        ]
-      },
-      {
         class: 'product-view__swatch-option',
-        attributes: '',
-        titleClass: '',
         heading: {
           tag: 'span',
           text: 'Size',
@@ -152,6 +121,32 @@ module.exports = {
           }
         ]
       },
+      {
+        heading: {
+          tag: 'span',
+          text: 'Color',
+          class: 'product-view__swatch-option-title'
+        },
+        options: [
+          {
+            optionClass: 'swatch__option--image',
+            attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg)"'
+          },
+          {
+            optionClass: 'swatch__option--image',
+            attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg)"'
+          },
+          {
+            optionClass: 'swatch__option--image',
+            attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg)"'
+          },
+          {
+            class: 'selected',
+            optionClass: 'swatch__option--image',
+            attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg)"'
+          }
+        ]
+      }
     ],
     listIcon: {
       listTag: 'ul',
