@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Product page styles
+- Gallery loader styles
 - Swatch refactored
 - Page title and breadcrumbs styles
 
