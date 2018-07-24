@@ -20,9 +20,8 @@
             {{ render (component price.name) price.context }}
         </div>
         <div class="catalog-grid-item__options">
-            {{#each swatches as |swatch|}}
-                {{ render (component swatch.name) swatch.context }}
-            {{/each}}
+            {{ render '@swatch' }}
+            {{ render '@swatch--image' }}
         </div>
         <div class="catalog-list-item__actions">
             <div class="catalog-list-item__actions-primary">

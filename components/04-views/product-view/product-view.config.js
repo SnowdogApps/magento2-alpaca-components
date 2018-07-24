@@ -85,69 +85,22 @@ module.exports = {
       attributes: 'type="button"',
       text: 'Add to Cart'
     },
-    options: [
-      {
-        class: 'product-view__swatch-option',
+    swatch: {
+      size: {
         heading: {
           tag: 'span',
-          text: 'Size',
-          class: 'product-view__swatch-option-title'
-        },
-        options: [
-          {
-            class: '',
-            attributes: '',
-            text: 'XS'
-          },
-          {
-            class: 'selected',
-            attributes: '',
-            text: 'S'
-          },
-          {
-            class: '',
-            attributes: '',
-            text: 'M'
-          },
-          {
-            class: '',
-            attributes: '',
-            text: 'L'
-          },
-          {
-            class: '',
-            attributes: '',
-            text: 'XL'
-          }
-        ]
+          class: 'swatch__title product-view__swatch-option-title',
+          text: 'Size'
+        }
       },
-      {
+      color: {
         heading: {
           tag: 'span',
-          text: 'Color',
-          class: 'product-view__swatch-option-title'
-        },
-        options: [
-          {
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg)"'
-          },
-          {
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg)"'
-          },
-          {
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg)"'
-          },
-          {
-            class: 'selected',
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg)"'
-          }
-        ]
+          class: 'swatch__title product-view__swatch-option-title',
+          text: 'Color'
+        }
       }
-    ],
+    },
     listIcon: {
       listTag: 'ul',
       elementTag: 'li',

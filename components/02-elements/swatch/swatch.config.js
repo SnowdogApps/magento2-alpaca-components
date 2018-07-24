@@ -1,11 +1,8 @@
 module.exports = {
   context: {
-    class: '',
-    attributes: '',
-    heading: {
-      tag: 'h5',
-      class: '',
-      text: 'Size'
+    heading: false,
+    wrapper: {
+      attributes: 'aria-label="Size" tabindex="0"',
     },
     options: [
       {
@@ -31,21 +28,28 @@ module.exports = {
       name: 'image',
       context: {
         heading: false,
+        wrapper: {
+          attributes: 'aria-label="Color" tabindex="0"',
+        },
         options: [
           {
+            color: 'Orange',
             optionClass: 'swatch__option--image',
             attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
           },
           {
+            color: 'Green',
             optionClass: 'swatch__option--image',
             attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
           },
           {
+            color: 'Red',
             class: 'selected',
             optionClass: 'swatch__option--image',
             attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
           },
           {
+            color: 'White',
             optionClass: 'swatch__option--image',
             attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
           }

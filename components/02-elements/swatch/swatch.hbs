@@ -1,18 +1,30 @@
-<div class="swatch {{ class }}" {{{ attributes }}}>
+<div class="swatch {{ class }}">
     {{#if heading}}
         <{{{ heading.tag }}} class="swatch__title {{ heading.class }}">
             {{ heading.text }}
         </{{{ heading.tag }}}>
     {{/if}}
 
-    {{#each options }}
-        <div class="swatch__container {{ this.class }}">
+    {{#if wrapper}}
+        <div class="swatch__wrapper" {{{ wrapper.attributes }}}>
+    {{/if}}
+        {{#each options }}
             <div
-                class="swatch__option {{ this.optionClass}}"
-                {{{ this.attributes }}}
+                class="swatch__container {{ this.class }}"
+                tabindex="0"
+                {{#if this.color }}
+                    aria-label="{{ this.color }}"
+                {{/if}}
             >
-                {{ this.text }}
+                <div
+                    class="swatch__option {{ this.optionClass}}"
+                    {{{ this.attributes }}}
+                >
+                    {{ this.text }}
+                </div>
             </div>
+        {{/each }}
+    {{#if wrapper}}
         </div>
-    {{/each }}
+    {{/if}}
 </div>

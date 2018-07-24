@@ -262,17 +262,17 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
     &__options {
         width: 100%;
-    }
 
-    .swatch {
-        margin-bottom: $product-view__swatch-margin-bottom;
-        &__option {
-            min-width: $product-view__swatch-option-spacing;
-            min-height: $product-view__swatch-option-spacing;
-            &--image {
-                @include mq($screen-l) {
-                    min-width: $product-view__swatch-option-image-width;
-                    min-height: $product-view__swatch-option-image-height;
+        .swatch {
+            margin-bottom: $product-view__swatch-margin-bottom;
+            &__option {
+                min-width: $product-view__swatch-option-spacing;
+                min-height: $product-view__swatch-option-spacing;
+                &--image {
+                    @include mq($screen-l) {
+                        min-width: $product-view__swatch-option-image-width;
+                        min-height: $product-view__swatch-option-image-height;
+                    }
                 }
             }
         }

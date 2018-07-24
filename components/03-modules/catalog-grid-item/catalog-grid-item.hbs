@@ -35,11 +35,8 @@
         </div>
 
         <div class="catalog-grid-item__options">
-            {{#each swatches as |swatch|}}
-                <div class="swatch__wrapper">
-                    {{ render (component swatch.name) swatch.context }}
-                </div>
-            {{/each}}
+            {{ render '@swatch' }}
+            {{ render '@swatch--image' }}
         </div>
 
         <div class="catalog-grid-item__actions">
