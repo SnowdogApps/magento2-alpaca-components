@@ -87,7 +87,7 @@ $gallery__thumb-width--large               : 80px !default;
         }
     }
     &__thumb-arr {
-        display: flex !important;
+        display: flex !important; // sass-lint:disable-line no-important
         justify-content: center;
         align-items: center;
         width: $gallery__thumb-arrow-width;
@@ -121,14 +121,7 @@ $gallery__thumb-width--large               : 80px !default;
         position: relative;
 
         .loader {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 64px;
-            height: 64px;
-            margin: auto;
+            position: static;
         }
     }
 }
