@@ -17,7 +17,8 @@ module.exports = {
         id: 'dropdown-1',
         collapse: {
           class: 'dropdown-list__icon',
-          iconId: 'angle-down'
+          iconId: 'angle-down',
+          iconTitle: 'Arrow down'
         },
         contentElement: 'image'
       },
@@ -29,7 +30,8 @@ module.exports = {
         id: 'dropdown-2',
         collapse: {
           class: 'dropdown-list__icon',
-          iconId: 'angle-down'
+          iconId: 'angle-down',
+          iconTitle: 'Arrow down'
         },
         contentElement: 'paragraph'
       },
@@ -41,7 +43,8 @@ module.exports = {
         id: 'dropdown-3',
         collapse: {
           class: 'dropdown-list__icon',
-          iconId: 'angle-down'
+          iconId: 'angle-down',
+          iconTitle: 'Arrow down'
         },
         contentElement: 'image'
       },
@@ -53,7 +56,8 @@ module.exports = {
         id: 'dropdown-4',
         collapse: {
           class: 'dropdown-list__icon',
-          iconId: 'angle-down'
+          iconId: 'angle-down',
+          iconTitle: 'Arrow down'
         },
         contentElement: 'paragraph'
       }
@@ -97,7 +101,8 @@ module.exports = {
             itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
             collapse: {
               class: 'dropdown-list__icon',
-              iconId: 'angle-down'
+              iconId: 'angle-down',
+              iconTitle: 'Arrow Down'
             },
             listNested: [
               {
@@ -107,7 +112,8 @@ module.exports = {
                 id: 'dropdown-1-1',
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down'
+                  iconId: 'angle-down',
+                  iconTitle: 'Arrow Down'
                 },
                 sublist: [
                   {
@@ -139,7 +145,8 @@ module.exports = {
                 id: 'dropdown-1-2',
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down'
+                  iconId: 'angle-down',
+                  iconTitle: 'Arrow Down'
                 },
                 sublist: [
                   {
@@ -181,7 +188,8 @@ module.exports = {
             id: 'dropdown-2',
             collapse: {
               class: 'dropdown-list__icon',
-              iconId: 'angle-down'
+              iconId: 'angle-down',
+              iconTitle: 'Arrow Down'
             },
             listNested: [
               {
@@ -206,7 +214,8 @@ module.exports = {
             id: 'dropdown-3',
             collapse: {
               class: 'dropdown-list__icon',
-              iconId: 'angle-down'
+              iconId: 'angle-down',
+              iconTitle: 'Arrow Down'
             },
             listNested: [
               {
@@ -216,7 +225,8 @@ module.exports = {
                 id: 'dropdown-3-1',
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down'
+                  iconId: 'angle-down',
+                  iconTitle: 'Arrow Down'
                 },
                 sublist: [
                   {
@@ -244,7 +254,8 @@ module.exports = {
                 id: 'dropdown-3-2',
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down'
+                  iconId: 'angle-down',
+                  iconTitle: 'Arrow Down'
                 },
                 sublist: [
                   {
@@ -286,7 +297,8 @@ module.exports = {
                 id: 'dropdown-3-3',
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down'
+                  iconId: 'angle-down',
+                  iconTitle: 'Arrow Down'
                 },
                 sublist: [
                   {
@@ -303,7 +315,8 @@ module.exports = {
                 id: 'dropdown-3-4',
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down'
+                  iconId: 'angle-down',
+                  iconTitle: 'Arrow Down'
                 },
                 sublist: [
                   {

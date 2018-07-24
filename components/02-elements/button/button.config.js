@@ -14,6 +14,7 @@ module.exports = {
         text: '',
         class: 'button--icon',
         iconId: 'arrow-left',
+        iconTitle: 'Arrow left',
         iconClass: 'button__icon',
         attributes: 'type="button" aria-label="button arrow left"'
       }

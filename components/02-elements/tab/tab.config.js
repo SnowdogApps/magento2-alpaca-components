@@ -3,7 +3,8 @@ module.exports = {
     script: true,
     icon: {
       class: 'tab__icon',
-      iconId: 'angle-down'
+      iconId: 'angle-down',
+      iconTitle: 'Arrow Down'
     },
     tabs: [
       {

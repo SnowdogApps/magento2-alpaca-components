@@ -68,14 +68,16 @@ module.exports = {
           class: 'button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled',
           attributes: 'type="button" aria-label="Decrease the quantity"',
           iconClass: 'button__icon quantity-update__icon',
-          iconId: 'minus'
+          iconId: 'minus',
+          iconTitle: 'Minus mark'
         },
         plusQtyButton: {
           tag: 'button',
           class: 'button--icon quantity-update__button quantity-update__button--plus',
           attributes: 'type="button" aria-label="Increase the quantity"',
           iconClass: 'button__icon quantity-update__icon',
-          iconId: 'plus'
+          iconId: 'plus',
+          iconTitle: 'Plus mark',
         }
       },
     },
@@ -180,6 +182,7 @@ module.exports = {
         class: 'product-view__action--wishlist',
         icon: {
           iconId: 'heart',
+          iconTitle: 'Heart',
           title: 'Add to wishlist',
           svgClass: 'product-view__action-icon'
         },
@@ -189,6 +192,7 @@ module.exports = {
         class: 'product-view__action--compare',
         icon: {
           iconId: 'compare',
+          iconTitle: 'Compare',
           title: 'Add to compare',
           svgClass: 'product-view__action-icon'
         },
@@ -199,6 +203,7 @@ module.exports = {
         icon: {
           class: 'product-view__icon-envelope',
           iconId: 'envelope',
+          iconTitle: 'Envelope',
           title: 'Send email to a friend',
           svgClass: 'product-view__action-icon product-view__icon-envelope'
         },
@@ -211,7 +216,8 @@ module.exports = {
       class: 'product-view__tab',
       icon: {
         class: 'tab__icon',
-        iconId: 'angle-down'
+        iconId: 'angle-down',
+        iconTitle: 'Arrow down'
       },
       tabs: [
         {
@@ -306,6 +312,7 @@ module.exports = {
           text: '',
           class: 'button--icon slider__navigation-icon slider__prev',
           iconId: 'angle-left',
+          iconTitle: 'Arrow left',
           iconClass: 'button__icon slider__icon',
           attributes: 'type="button" aria-label="Previous slide"'
         },
@@ -314,6 +321,7 @@ module.exports = {
           text: '',
           class: 'button--icon slider__navigation-icon slider__next',
           iconId: 'angle-right',
+          iconTitle: 'Arrow right',
           iconClass: 'button__icon slider__icon',
           attributes: 'type="button" aria-label="Next slide"'
         },
@@ -352,10 +360,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -449,10 +459,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -539,10 +551,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -629,10 +643,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -719,10 +735,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -809,10 +827,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -880,6 +900,7 @@ module.exports = {
           text: '',
           class: 'button--icon slider__navigation-icon slider__prev',
           iconId: 'angle-left',
+          iconTitle: 'Arrow left',
           iconClass: 'button__icon slider__icon',
           attributes: 'type="button" aria-label="Previous slide"'
         },
@@ -888,6 +909,7 @@ module.exports = {
           text: '',
           class: 'button--icon slider__navigation-icon slider__next',
           iconId: 'angle-right',
+          iconTitle: 'Arrow right',
           iconClass: 'button__icon slider__icon',
           attributes: 'type="button" aria-label="Next slide"'
         },
@@ -926,10 +948,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -1023,10 +1047,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -1113,10 +1139,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -1203,10 +1231,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -1293,10 +1323,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
@@ -1383,10 +1415,12 @@ module.exports = {
               },
               secondaryActions: {
                 wishlist: {
-                  iconId: 'heart'
+                  iconId: 'heart',
+                  iconTitle: 'Heart'
                 },
                 compare: {
-                  iconId: 'compare'
+                  iconId: 'compare',
+                  iconTitle: 'Compare'
                 }
               },
               swatches: [
