@@ -4,7 +4,7 @@ module.exports = {
   context: {
     tag: 'button',
     class: '',
-    attributes: 'type="button" aria-label="button"',
+    attributes: 'type="button"',
     text: 'I am a button'
   },
   variants: [
@@ -16,7 +16,7 @@ module.exports = {
         iconId: 'arrow-left',
         iconTitle: 'Arrow left',
         iconClass: 'button__icon',
-        attributes: 'type="button" aria-label="button arrow left"'
+        attributes: 'type="button" aria-label="click to do something"'
       }
     },
     {
@@ -31,7 +31,7 @@ module.exports = {
       context: {
         tag: 'a',
         class: 'button--link',
-        attributes: 'href="#" aria-label="button"',
+        attributes: 'href="#" title="I am a link button"',
         text: 'I am a link button'
       }
     },
