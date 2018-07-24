@@ -7,9 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Compare view
+- Loader element
+- Hover effect to header buttons
 
 ### Changed
 - Product page styles
+- Gallery loader styles
+- Swatch refactored
+- Page title and breadcrumbs styles
+
+## [0.7.3] - 09.07.2018
+### Fixed
+- CSS Lint errors
 
 ## [0.7.2] - 07.05.2018
 ### Fixed
