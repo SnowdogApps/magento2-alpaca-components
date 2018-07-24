@@ -1,25 +1,26 @@
-<div
+<ol
     class="breadcrumbs {{ class }}" {{{ attributes }}}
     aria-label="{{ ariaLabel }}"
     role="navigation"
 >
     {{#each categories}}
         {{#if @last}}
-            <span
+            <li
                 class="breadcrumbs__item"
                 tabindex="0"
             >
                 {{ name }}
-            </span>
+            </li>
         {{else}}
-            <span class="breadcrumbs__item">
+            <li class="breadcrumbs__item">
                 <a
                     href="{{ href }}"
                     class="{{ linkClass }}"
                 >
                     {{ name }}
                 </a>
-            </span>
+            </li>
         {{/if}}
     {{/each}}
 </div>
+
