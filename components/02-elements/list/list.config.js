@@ -108,6 +108,7 @@ module.exports = {
     {
       name: 'description',
       context: {
+        attributes: 'title="Alpaca description list"',
         elements: [
           {
             label: 'Lorem ipsum',
