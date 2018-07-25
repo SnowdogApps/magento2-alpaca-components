@@ -63,17 +63,13 @@
     }
 
     &__item-actions {
+        margin-bottom: $spacer;
         order: 2;
+        padding-top: $spacer;
 
         &--to-cart {
             order: 3;
             flex-basis: 100%;
-
-            padding-top: $spacer;
-
-            @include mq($screen-m) {
-                padding-top: $spacer--medium;
-            }
         }
     }
 
@@ -82,11 +78,15 @@
         margin-bottom: 0;
     }
 
-    &__qty {
-        margin-bottom: 0;
+    &__remove {
+       margin-left: $spacer;
     }
 
     &__input {
         margin: 0;
+    }
+
+    .action {
+        padding-top: 16px;
     }
 }

@@ -11,7 +11,7 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline wishlist__qty',
+          class: 'input--inline',
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
@@ -25,19 +25,22 @@ module.exports = {
         },
         editIcon: {
           tag: 'a',
-          attributes: 'href="#" aria-label="edit product in your shopping cart"',
-          text: '',
-          class: 'button--icon cart-list-item__actions-item',
+          attributes: 'href="#" aria-label="Edit product parameters"',
+          class: 'button--icon',
           iconClass: 'button__icon',
           iconId: 'edit'
         },
         removeIcon: {
           tag: 'button',
-          attributes: 'href="#" aria-label="remove this product from your shopping cart"',
-          text: '',
-          class: 'button--icon cart-list-item__actions-item',
-          iconClass: 'button__icon',
+          attributes: 'href="#" aria-label="Remove product from wishlist"',
+          class: 'button--icon wishlist__remove',
+          iconClass: 'button__icon ',
           iconId: 'remove'
+        },
+        addToCart: {
+          tag: 'button',
+          text: 'Add to Cart',
+          class: 'wishlist__button'
         }
       },
       {
@@ -50,7 +53,7 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline wishlist__qty',
+          class: 'input--inline',
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
@@ -64,19 +67,22 @@ module.exports = {
         },
         editIcon: {
           tag: 'a',
-          attributes: 'href="#" aria-label="edit product in your shopping cart"',
-          text: '',
-          class: 'button--icon cart-list-item__actions-item',
+          attributes: 'href="#" aria-label="Edit product parameters"',
+          class: 'button--icon',
           iconClass: 'button__icon',
           iconId: 'edit'
         },
         removeIcon: {
           tag: 'button',
-          attributes: 'href="#" aria-label="remove this product from your shopping cart"',
-          text: '',
-          class: 'button--icon cart-list-item__actions-item',
+          attributes: 'href="#" aria-label="Remove product from wishlist"',
+          class: 'button--icon wishlist__remove',
           iconClass: 'button__icon',
           iconId: 'remove'
+        },
+        addToCart: {
+          tag: 'button',
+          text: 'Add to Cart',
+          class: 'wishlist__button'
         }
       }
     ],
