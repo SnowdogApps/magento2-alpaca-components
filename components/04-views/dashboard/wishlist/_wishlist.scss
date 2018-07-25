@@ -1,5 +1,11 @@
 .wishlist {
     &__item {
+        margin-bottom: 16px;
+
+        @include mq($screen-s) {
+            padding: 0 16px;
+        }
+
         .price-box {
             padding: 0 $spacer;
 
