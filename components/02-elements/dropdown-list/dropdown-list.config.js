@@ -18,7 +18,8 @@ module.exports = {
         collapse: {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
-          iconTitle: 'Arrow down'
+          iconTitle: 'Arrow down',
+          attributes: 'aria-hidden="true"'
         },
         contentElement: 'image'
       },
@@ -31,7 +32,8 @@ module.exports = {
         collapse: {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
-          iconTitle: 'Arrow down'
+          iconTitle: 'Arrow down',
+          attributes: 'aria-hidden="true"'
         },
         contentElement: 'paragraph'
       },
@@ -44,7 +46,8 @@ module.exports = {
         collapse: {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
-          iconTitle: 'Arrow down'
+          iconTitle: 'Arrow down',
+          attributes: 'aria-hidden="true"'
         },
         contentElement: 'image'
       },
@@ -57,7 +60,8 @@ module.exports = {
         collapse: {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
-          iconTitle: 'Arrow down'
+          iconTitle: 'Arrow down',
+          attributes: 'aria-hidden="true"'
         },
         contentElement: 'paragraph'
       }
@@ -102,7 +106,8 @@ module.exports = {
             collapse: {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
-              iconTitle: 'Arrow Down'
+              iconTitle: 'Arrow Down',
+              attributes: 'aria-hidden="true"'
             },
             listNested: [
               {
@@ -113,7 +118,8 @@ module.exports = {
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
                   iconId: 'angle-down',
-                  iconTitle: 'Arrow Down'
+                  iconTitle: 'Arrow Down',
+                  attributes: 'aria-hidden="true"'
                 },
                 sublist: [
                   {
@@ -146,7 +152,8 @@ module.exports = {
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
                   iconId: 'angle-down',
-                  iconTitle: 'Arrow Down'
+                  iconTitle: 'Arrow Down',
+                  attributes: 'aria-hidden="true"'
                 },
                 sublist: [
                   {
@@ -189,7 +196,8 @@ module.exports = {
             collapse: {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
-              iconTitle: 'Arrow Down'
+              iconTitle: 'Arrow Down',
+              attributes: 'aria-hidden="true"'
             },
             listNested: [
               {
@@ -215,7 +223,8 @@ module.exports = {
             collapse: {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
-              iconTitle: 'Arrow Down'
+              iconTitle: 'Arrow Down',
+              attributes: 'aria-hidden="true"'
             },
             listNested: [
               {
@@ -226,7 +235,8 @@ module.exports = {
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
                   iconId: 'angle-down',
-                  iconTitle: 'Arrow Down'
+                  iconTitle: 'Arrow Down',
+                  attributes: 'aria-hidden="true"'
                 },
                 sublist: [
                   {
@@ -255,7 +265,8 @@ module.exports = {
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
                   iconId: 'angle-down',
-                  iconTitle: 'Arrow Down'
+                  iconTitle: 'Arrow Down',
+                  attributes: 'aria-hidden="true"'
                 },
                 sublist: [
                   {
@@ -298,7 +309,8 @@ module.exports = {
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
                   iconId: 'angle-down',
-                  iconTitle: 'Arrow Down'
+                  iconTitle: 'Arrow Down',
+                  attributes: 'aria-hidden="true"'
                 },
                 sublist: [
                   {
@@ -316,7 +328,8 @@ module.exports = {
                 collapse: {
                   class: 'dropdown-list__icon dropdown-list__icon--inner',
                   iconId: 'angle-down',
-                  iconTitle: 'Arrow Down'
+                  iconTitle: 'Arrow Down',
+                  attributes: 'aria-hidden="true"'
                 },
                 sublist: [
                   {
