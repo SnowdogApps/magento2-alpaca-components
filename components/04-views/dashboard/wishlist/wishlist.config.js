@@ -1,59 +1,9 @@
 module.exports = {
   context: {
-    actions: {
-      sides: [
-        {
-          action: [
-            {
-              button: true,
-              title: 'Update Wish List'
-            },
-            {
-              button: true,
-              title: 'Share Wish List'
-            },
-            {
-              button: true,
-              title: 'Add All to Cart'
-            }
-          ]
-        },
-        {
-          action: [
-            {
-              title: 'Back'
-            }
-          ]
-        }
-      ]
-    },
     wishlistItems: [
       {
-        item: {
-          tag: 'div',
-          class: 'dashboard__product',
-          name: 'Some product name',
-          price: '210$',
-          type: 'some attribute text',
-          image: {
-            src: '/images/product/product-img-230_180.png'
-          },
-          button: {
-            tag: 'button',
-            text: 'Add to Cart',
-            class: 'product-item__button action__button'
-          }
-        },
-        itemImage: {
-          src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
-          dataSrc: '/images/banner/banner-480_480.png',
-          alt: 'image alt text',
-          isLink: true,
-          link: '#',
-          imageLinkClass: ''
-        },
         textarea: {
-          class: 'dashboard__input',
+          class: 'wishlist__input',
           field: {
             id: 'comment',
             name: 'comment',
@@ -61,7 +11,7 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline dashboard__input',
+          class: 'input--inline wishlist__qty',
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
@@ -69,46 +19,30 @@ module.exports = {
           field: {
             id: 'qty',
             name: 'qty',
+            type: 'number',
             class: 'dashboard__field-qty'
           }
         },
-        itemAction: {
-          sides: [
-            {
-              action: [
-                {
-                  title: 'Edit'
-                }
-              ]
-            },
-            {
-              action: [
-                {
-                  title: 'Remove Item'
-                }
-              ]
-            }
-          ]
+        editIcon: {
+          tag: 'a',
+          attributes: 'href="#" aria-label="edit product in your shopping cart"',
+          text: '',
+          class: 'button--icon cart-list-item__actions-item',
+          iconClass: 'button__icon',
+          iconId: 'edit'
+        },
+        removeIcon: {
+          tag: 'button',
+          attributes: 'href="#" aria-label="remove this product from your shopping cart"',
+          text: '',
+          class: 'button--icon cart-list-item__actions-item',
+          iconClass: 'button__icon',
+          iconId: 'remove'
         }
       },
       {
-        item: {
-          tag: 'div',
-          class: 'dashboard__product',
-          name: 'Some product name',
-          price: '210$',
-          type: 'some attribute text',
-          image: {
-            src: '/images/product/product-img-230_180.png'
-          },
-          button: {
-            tag: 'button',
-            text: 'Add to Cart',
-            class: 'product-item__button action__button'
-          }
-        },
         textarea: {
-          class: 'dashboard__input',
+          class: 'wishlist__input',
           field: {
             id: 'comment',
             name: 'comment',
@@ -116,7 +50,7 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline dashboard__input',
+          class: 'input--inline wishlist__qty',
           label: {
             text: 'Qty:',
             class: 'dashboard__label'
@@ -124,27 +58,43 @@ module.exports = {
           field: {
             id: 'qty',
             name: 'qty',
+            type: 'number',
             class: 'dashboard__field-qty'
           }
         },
-        itemAction: {
-          sides: [
-            {
-              action: [
-                {
-                  title: 'Edit'
-                }
-              ]
-            },
-            {
-              action: [
-                {
-                  title: 'Remove Item'
-                }
-              ]
-            }
-          ]
+        editIcon: {
+          tag: 'a',
+          attributes: 'href="#" aria-label="edit product in your shopping cart"',
+          text: '',
+          class: 'button--icon cart-list-item__actions-item',
+          iconClass: 'button__icon',
+          iconId: 'edit'
+        },
+        removeIcon: {
+          tag: 'button',
+          attributes: 'href="#" aria-label="remove this product from your shopping cart"',
+          text: '',
+          class: 'button--icon cart-list-item__actions-item',
+          iconClass: 'button__icon',
+          iconId: 'remove'
         }
+      }
+    ],
+    actions: [
+      {
+        tag: 'button',
+        text: 'Update Wish List',
+        class: 'button--secondary action__button'
+      },
+      {
+        tag: 'button',
+        text: 'Share Wish List',
+        class: 'button--secondary action__button'
+      },
+      {
+        tag: 'button',
+        text: 'Add All to Cart',
+        class: 'button--secondary action__button'
       }
     ]
   }

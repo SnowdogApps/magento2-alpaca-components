@@ -3,7 +3,7 @@
         margin-bottom: 16px;
 
         @include mq($screen-s) {
-            padding: 0 16px;
+            padding: 0 24px;
         }
 
         .price-box {
@@ -83,8 +83,10 @@
     }
 
     &__qty {
-        order: 1;
         margin-bottom: 0;
-        flex-basis: calc(100% - 116px);
+    }
+
+    &__input {
+        margin: 0;
     }
 }

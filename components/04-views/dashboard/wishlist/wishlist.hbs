@@ -8,20 +8,26 @@
             </div>
 
             <div class="grid__column grid__column--3-4 dashboard__content">
-                <div class="grid grid--align-start wishlist-items">
+                <div class="grid grid--align-start">
                     {{#each wishlistItems}}
-                        <div class="dashboard__wishlist-item grid__column grid__column--1-3">
+                        <div class="wishlist__item grid__column grid__column--1-3">
                             {{ render '@catalog-grid-item' }}
+                            {{ render '@input--textarea' textarea }}
 
-                            {{> '@input--textarea' textarea }}
-
-                            {{> '@input--inline' qty }}
-
-                            {{> '@action' itemAction }}
+                            <div class="wishlist__item-inner">
+                                {{ render '@input--inline' qty }}
+                                <div class="wishlist__item-actions">
+                                    {{ render '@button--icon' editIcon }}
+                                    {{ render '@button--icon' removeIcon }}
+                                </div>
+                            </div>
                         </div>
                     {{/each}}
-
-                    {{> '@action' actions }}
+                </div>
+                <div class="wishlist__actions">
+                    {{#each actions}}
+                        {{render '@button--secondary' this}}
+                    {{/each}}
                 </div>
             </div>
         </div>
