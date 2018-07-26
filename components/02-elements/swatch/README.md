@@ -2,7 +2,7 @@
 
 Swatches require following aria structure to be accessible for assistive technology and keyboard:
 
-1. Swarches wrapper `.swatch__wrapper` should have following aria attributes:
+1. Swatches wrapper `.swatch__wrapper` should have following aria attributes:
     * `role="listbox` to easy list swatch's options
     * `aria-activedescendant` with value of selected swatch option
     * `tabindex="0"` to make element focusable
@@ -15,4 +15,3 @@ Swatches require following aria structure to be accessible for assistive technol
     * `aria-label` with value of the name/label of swatch option if the swatch option is not a text but graphic element - icon or image (color option - ex: "Green")
     * `aria-describedby` with value of the listbox label/heading if exist
     * `aria-selected` with value `true` if the option was selected
-
