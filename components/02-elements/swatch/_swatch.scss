@@ -22,7 +22,7 @@ $swatch__option-border-color--active : $color-primary !default;
         width: 100%;
     }
 
-    &__container {
+    &__option-container {
         box-sizing: border-box;
         border: $swatch__option-border;
         margin-right: $swatch__option-margin;
