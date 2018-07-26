@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    script: true,
     heading: false,
     wrapper: {
       attributes: 'aria-label="Size" tabindex="0" aria-activedescendant="opt-size-s" aria-required="true" role="listbox" aria-invalid="false"'
