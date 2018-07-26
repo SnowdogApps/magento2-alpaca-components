@@ -172,6 +172,94 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      name: 'color',
+      context: {
+        heading: false,
+        wrapper: {
+          attributes: 'aria-label="Color" tabindex="0" aria-activedescendant="opt-color-red-3" aria-required="true" role="listbox" aria-invalid="false"'
+        },
+        options: [
+          {
+            id: 'opt-color-orange-1',
+            attributes: 'aria-label="Orange" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              attributes: 'style="background-color: #ffa500"'
+            }
+          },
+          {
+            id: 'opt-color-green-2',
+            attributes: 'aria-label="Green" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              attributes: 'style="background-color: #00ff00"'
+            }
+          },
+          {
+            id: 'opt-color-red-3',
+            class: 'selected',
+            attributes: 'aria-label="Red" tabindex="0" role="option" aria-selected="true"',
+            option: {
+              attributes: 'style="background-color: #ff0000"'
+            }
+          },
+          {
+            id: 'opt-color-black-4',
+            attributes: 'aria-label="White" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              attributes: 'style="background-color: #000000"'
+            }
+          }
+        ]
+      }
+    },
+    {
+      name: 'color with label',
+      context: {
+        heading: {
+          id: 'option-label-color-1',
+          tag: 'span',
+          text: 'Label'
+        },
+        wrapper: {
+          attributes: 'aria-label="Color" tabindex="0" aria-activedescendant="opt-color-red-3" aria-required="true" role="listbox" aria-invalid="false"'
+        },
+        options: [
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-orange-1',
+            attributes: 'aria-label="Orange" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              attributes: 'style="background-color: #ffa500"'
+            }
+          },
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-green-2',
+            attributes: 'aria-label="Green" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              attributes: 'style="background-color: #00ff00"'
+            }
+          },
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-red-3',
+            class: 'selected',
+            attributes: 'aria-label="Red" tabindex="0" role="option" aria-selected="true"',
+            option: {
+              attributes: 'style="background-color: #ff0000"'
+            }
+          },
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-black-4',
+            attributes: 'aria-label="White" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              attributes: 'style="background-color: #000000"'
+            }
+          }
+        ]
+      }
     }
   ]
 }
