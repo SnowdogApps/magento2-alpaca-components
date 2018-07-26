@@ -6,7 +6,6 @@ $swatch__title-font-size             : $font-size-base !default;
 $swatch__option-size                 : 40px !default;
 $swatch__option-size--image          : 48px !default;
 $swatch__option-margin               : $spacer !default;
-$swatch__option-margin\@small        : $spacer--medium !default;
 $swatch__option-background           : $white !default;
 $swatch__option-color                : $gray-dark !default;
 $swatch__option-border               : 4px solid $white !default;
@@ -37,10 +36,6 @@ $swatch__option-border-color--active : $color-primary !default;
 
         &:last-child {
             margin-right: 0;
-        }
-
-        @include mq($screen-s) {
-            margin-right: $swatch__option-margin\@small;
         }
 
         &.selected {
