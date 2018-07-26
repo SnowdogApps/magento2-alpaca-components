@@ -88,14 +88,12 @@ module.exports = {
     swatch: {
       size: {
         heading: {
-          tag: 'span',
           class: 'product-view__swatch-option-title',
           text: 'Size'
         }
       },
       color: {
         heading: {
-          tag: 'span',
           class: 'product-view__swatch-option-title',
           text: 'Color'
         }

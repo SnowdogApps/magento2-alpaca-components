@@ -120,6 +120,58 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      name: 'image with label',
+      context: {
+        heading: {
+          id: 'option-label-color-1',
+          tag: 'span',
+          text: 'Label'
+        },
+        wrapper: {
+          attributes: 'aria-label="Color" tabindex="0" aria-activedescendant="opt-color-red-3" aria-required="true" role="listbox" aria-invalid="false"'
+        },
+        options: [
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-orange-1',
+            attributes: 'aria-label="Orange" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg)"'
+            }
+          },
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-green-2',
+            attributes: 'aria-label="Green" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg)"'
+            }
+          },
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-red-3',
+            class: 'selected',
+            attributes: 'aria-label="Red" tabindex="0" role="option" aria-selected="true"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg)"'
+            }
+          },
+          {
+            headingId: 'option-label-color-1',
+            id: 'opt-color-white-4',
+            attributes: 'aria-label="White" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg)"'
+            }
+          }
+        ]
+      }
     }
   ]
 }
