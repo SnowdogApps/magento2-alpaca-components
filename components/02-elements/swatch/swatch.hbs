@@ -11,14 +11,15 @@
         {{#each options }}
             <div
                 class="swatch__container {{ this.class }}"
-                tabindex="0"
-                {{#if this.color }}
-                    aria-label="{{ this.color }}"
-                {{/if}}
             >
                 <div
                     class="swatch__option {{ this.optionClass}}"
+                    id="{{this.id}}"
+                    tabindex="0"
                     {{{ this.attributes }}}
+                    {{#if this.color }}
+                        aria-label="{{ this.color }}"
+                    {{/if}}
                 >
                     {{ this.text }}
                 </div>

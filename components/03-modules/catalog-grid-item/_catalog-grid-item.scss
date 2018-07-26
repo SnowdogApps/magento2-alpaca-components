@@ -57,6 +57,7 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
     overflow: hidden;
 
     @include mq($screen-m) {
+        &:focus,
         &:hover {
             .catalog-grid-item__details {
                 transform: translateY(-100%);
