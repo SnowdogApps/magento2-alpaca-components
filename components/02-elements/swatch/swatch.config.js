@@ -2,30 +2,34 @@ module.exports = {
   context: {
     heading: false,
     wrapper: {
-      attributes: 'aria-label="Size" tabindex="0"',
+      attributes: 'aria-label="Size" tabindex="0"'
     },
     options: [
       {
-        text: 'XS',
-        id: 'opt-size-xs'
+        id: 'opt-size-xs',
+        attributes: 'tabindex="0" role="option" aria-selected="false"',
+        text: 'XS'
       },
       {
-        class: 'selected',
-        text: 'S',
         id: 'opt-size-s',
-        attributes: 'aria-selected="true"'
+        attributes: 'tabindex="0" role="option" aria-selected="true"',
+        class: 'selected',
+        text: 'S'
       },
       {
-        text: 'M',
-        id: 'opt-size-m'
+        id: 'opt-size-m',
+        attributes: 'tabindex="0" role="option" aria-selected="false"',
+        text: 'M'
       },
       {
-        text: 'L',
-        id: 'opt-size-l'
+        id: 'opt-size-l',
+        attributes: 'tabindex="0" role="option" aria-selected="false"',
+        text: 'L'
       },
       {
-        text: 'XL',
-        id: 'opt-size-xl'
+        id: 'opt-size-xl',
+        attributes: 'tabindex="0" role="option" aria-selected="false"',
+        text: 'XL'
       }
     ]
   },
@@ -35,33 +39,41 @@ module.exports = {
       context: {
         heading: false,
         wrapper: {
-          attributes: 'aria-label="Color" tabindex="0" aria-activedescendant="opt-color-red-3" aria-required="true" role="listbox" aria-invalid="false"',
+          attributes: 'aria-label="Color" tabindex="0" aria-activedescendant="opt-color-red-3" aria-required="true" role="listbox" aria-invalid="false"'
         },
         options: [
           {
-            color: 'Orange',
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"',
-            id: 'opt-color-orange-1'
+            id: 'opt-color-orange-1',
+            attributes: 'aria-label="Orange" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg)"'
+            }
           },
           {
-            color: 'Green',
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"',
-            id: 'opt-color-green-2'
+            id: 'opt-color-green-2',
+            attributes: 'aria-label="Green" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg)"'
+            }
           },
           {
-            color: 'Red',
+            id: 'opt-color-red-3',
             class: 'selected',
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);" aria-selected="true"',
-            id: 'opt-color-red-3'
+            attributes: 'aria-label="Red" tabindex="0" role="option" aria-selected="true"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg)"'
+            }
           },
           {
-            color: 'White',
-            optionClass: 'swatch__option--image',
-            attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"',
-            id: 'opt-color-white-4'
+            id: 'opt-color-white-4',
+            attributes: 'aria-label="White" tabindex="0" role="option" aria-selected="false"',
+            option: {
+              class: 'swatch__option--image',
+              attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg)"'
+            }
           }
         ]
       }
