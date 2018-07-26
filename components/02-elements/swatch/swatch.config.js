@@ -2,7 +2,7 @@ module.exports = {
   context: {
     heading: false,
     wrapper: {
-      attributes: 'aria-label="Size" tabindex="0"'
+      attributes: 'aria-label="Size" tabindex="0" aria-activedescendant="opt-size-s" aria-required="true" role="listbox" aria-invalid="false"'
     },
     options: [
       {
@@ -34,6 +34,49 @@ module.exports = {
     ]
   },
   variants: [
+    {
+      name: 'with label',
+      context: {
+        heading: {
+          id: 'option-label-size-1',
+          tag: 'span',
+          text: 'Label'
+        },
+        options: [
+          {
+            headingId: 'option-label-size-1',
+            id: 'opt-size-xs',
+            attributes: 'tabindex="0" role="option" aria-selected="false"',
+            text: 'XS'
+          },
+          {
+            headingId: 'option-label-size-1',
+            id: 'opt-size-s',
+            attributes: 'tabindex="0" role="option" aria-selected="true"',
+            class: 'selected',
+            text: 'S'
+          },
+          {
+            headingId: 'option-label-size-1',
+            id: 'opt-size-m',
+            attributes: 'tabindex="0" role="option" aria-selected="false"',
+            text: 'M'
+          },
+          {
+            headingId: 'option-label-size-1',
+            id: 'opt-size-l',
+            attributes: 'tabindex="0" role="option" aria-selected="false"',
+            text: 'L'
+          },
+          {
+            headingId: 'option-label-size-1',
+            id: 'opt-size-xl',
+            attributes: 'tabindex="0" role="option" aria-selected="false"',
+            text: 'XL'
+          }
+        ]
+      }
+    },
     {
       name: 'image',
       context: {
