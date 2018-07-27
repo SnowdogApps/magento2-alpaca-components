@@ -1,0 +1,31 @@
+<div class="sidebar-block">
+    <p class="sidebar-block__heading">
+        <span class="sidebar-block__title">
+            {{ title }}
+        </span>
+        <span class="sidebar-block__counter">
+            {{ qty }}
+        </span>
+    </p>
+    <ol class="list sidebar-block__list">
+        {{#each product}}
+            <li class="sidebar-block__item">
+                <a
+                    href="#"
+                    class="sidebar-block__remove"
+                    aria-label="{{ iconLabel }}"
+                    title="{{ iconLabel }}"
+                >
+                    {{ render '@icon' icon }}
+                </a>
+                <a class="link sidebar-block__link" href="#">
+                    {{ name }}
+                </a>
+            </li>
+        {{/each}}
+    </ol>
+    <div class="sidebar-block__actions">
+        {{ render '@button--link' }}
+        {{ render '@button--link' }}
+    </div>
+</div>
