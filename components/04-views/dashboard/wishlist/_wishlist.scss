@@ -3,7 +3,7 @@
         margin-bottom: 16px;
 
         @include mq($screen-s) {
-            padding: 0 24px;
+            padding: 0 16px;
         }
 
         .price-box {
@@ -62,6 +62,21 @@
         }
     }
 
+    &__label {
+        margin: 0 $spacer 0 0;
+    }
+
+    &__qty {
+        flex: 1;
+        min-width: 120px;
+        max-width: 200px;
+    }
+
+    &__field-qty {
+        margin-right: $spacer;
+        text-align: right;
+    }
+
     &__item-actions {
         margin-bottom: $spacer;
         order: 2;
@@ -82,7 +97,7 @@
        margin-left: $spacer;
     }
 
-    &__input {
+    &__comment {
         margin: 0;
     }
 

@@ -3,7 +3,7 @@ module.exports = {
     wishlistItems: [
       {
         textarea: {
-          class: 'wishlist__input',
+          class: 'wishlist__comment',
           field: {
             id: 'comment',
             name: 'comment',
@@ -11,16 +11,16 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline',
+          class: 'input--inline wishlist__qty',
           label: {
             text: 'Qty:',
-            class: 'dashboard__label'
+            class: 'wishlist__label'
           },
           field: {
             id: 'qty',
             name: 'qty',
             type: 'number',
-            class: 'dashboard__field-qty'
+            class: 'wishlist__field-qty'
           }
         },
         editIcon: {
@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         textarea: {
-          class: 'wishlist__input',
+          class: 'wishlist__comment',
           field: {
             id: 'comment',
             name: 'comment',
@@ -53,16 +53,16 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline',
+          class: 'input--inline wishlist__qty',
           label: {
             text: 'Qty:',
-            class: 'dashboard__label'
+            class: 'wishlist__label'
           },
           field: {
             id: 'qty',
             name: 'qty',
             type: 'number',
-            class: 'dashboard__field-qty'
+            class: 'wishlist__field-qty'
           }
         },
         editIcon: {
