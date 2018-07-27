@@ -1,89 +1,120 @@
+$wishlist__item-margin-bottom    : $spacer--medium !default;
+$wishlist__item-padding          : 0 $spacer--medium !default;
+$wishlist__price-padding         : 0 $spacer $spacer !default;
+$wishlist__price-padding\@medium : 0 $spacer--medium $spacer !default;
+$wishlist__price-margin          : 0 !default;
+$wishlist__price-font-weight     : $font-weight-bold !default;
+$wishlist__name-padding          : $spacer $spacer 0 $spacer !default;
+$wishlist__name-padding\@medium  : $spacer $spacer--medium 0 $spacer--medium !default;
+$wishlist__name-margin           : 0 !default;
+$wishlist__name-link-color       : $gray-darkest !default;
+$wishlist__name-link-font-size   : $font-size-small !default;
+$wishlist__name-link-line-height : 1.5 !default;
+$wishlist__inner-padding         : $spacer 0 !default;
+$wishlist__inner-padding\@medium : $spacer--medium 0 !default;
+$wishlist__label-margin          : 0 $spacer 0 0 !default;
+$wishlist__qty-min-width         : 120px !default;
+$wishlist__qty-max-width         : 200px !default;
+$wishlist__field-qty-margin-right: $spacer !default;
+$wishlist__field-qty-text-align  : right !default;
+$wishlist__actions-margin-bottom : $spacer !default;
+$wishlist__to-cart-flex-basis    : 100% !default;
+$wishlist__to-cart-padding-top   : $spacer !default;
+$wishlist__button-width          : 100% !default;
+$wishlist__button-margin-bottom  : 0% !default;
+$wishlist__remove-margin-left    : $spacer !default;
+$wishlist__comment-margin        : 0 !default;
+$wishlist__action-padding-top    : $spacer--medium !default;
+
 .wishlist {
     &__item {
-        margin-bottom: 16px;
-
+        margin-bottom: $wishlist__item-margin-bottom;
         @include mq($screen-s) {
-            padding: 0 16px;
+            padding: $wishlist__item-padding;
         }
 
         .price-box {
-            padding: 0 $spacer;
-
+            padding: $wishlist__price-padding;
+            font-weight: $wishlist__price-font-weight;
             @include mq($screen-m) {
-                padding: 0 $spacer--medium;
+                padding: $wishlist__price-padding\@medium;
             }
+        }
+
+        .price-as-configured {
+            margin: $wishlist__price-margin;
+            font-weight: $wishlist__price-font-weight;
         }
     }
 
     &__item-name {
         display: block;
-        padding: $spacer $spacer 0 $spacer;
-        margin: 0;
+        padding: $wishlist__name-padding;
+        margin: $wishlist__name-margin;
 
         @include mq($screen-m) {
-            padding-left: $spacer--medium;
-            padding-right: $spacer--medium;
+            padding: $wishlist__name-padding\@medium;
         }
     }
 
     &__item-name-link {
         display: block;
-        color: $gray-darkest;
-        font-size: $font-size-small;
-        line-height: 1.5;
+        color: $wishlist__name-link-color;
+        font-size: $wishlist__name-link-font-size;
+        line-height: $wishlist__name-link-line-height;
     }
 
     &__item-inner {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: $spacer 0;
+        padding: $wishlist__inner-padding;
 
         @include mq($screen-m) {
-            padding: $spacer--medium 0;
+            padding: $wishlist__inner-padding\@medium;
         }
     }
 
     &__label {
-        margin: 0 $spacer 0 0;
+        margin: $wishlist__label-margin;
     }
 
     &__qty {
         flex: 1;
-        min-width: 120px;
-        max-width: 200px;
+        min-width: $wishlist__qty-min-width;
+        max-width: $wishlist__qty-max-width;
     }
 
     &__field-qty {
-        margin-right: $spacer;
-        text-align: right;
+        margin-right: $wishlist__field-qty-margin-right;
+        text-align: $wishlist__field-qty-text-align;
     }
 
     &__item-actions {
-        margin-bottom: $spacer;
         order: 2;
+        margin-bottom: $wishlist__actions-margin-bottom;
 
         &--to-cart {
             order: 3;
-            flex-basis: 100%;
-            padding-top: $spacer;
+            flex-basis: $wishlist__to-cart-flex-basis;
+            padding-top: $wishlist__to-cart-padding-top;
         }
     }
 
     &__button {
-        width: 100%;
-        margin-bottom: 0;
+        width: $wishlist__button-width;
+        margin-bottom: $wishlist__button-margin-bottom;
     }
 
     &__remove {
-       margin-left: $spacer;
+       margin-left: $wishlist__remove-margin-left;
     }
 
     &__comment {
-        margin: 0;
+        margin: $wishlist__comment-margin;
     }
 
     .action {
-        padding-top: 16px;
+        padding-top: $wishlist__action-padding-top;
     }
 }
