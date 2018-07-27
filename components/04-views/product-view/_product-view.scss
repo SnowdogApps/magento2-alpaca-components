@@ -54,6 +54,8 @@ $product-view__add-to-cart-margin\@large                : 0 $product-view__add-t
 $product-view__add-to-cart-btn-min-width                : 150px !default;
 $product-view__add-to-cart-btn-padding\@large           : 0 $spacer--large !default;
 
+$product-view__update-wishlist-btn-width                : auto !default;
+
 $product-view__gallery-bottom-border                    : 1px solid $gray !default;
 $product-view__gallery-bottom-border\@medium            : none !default;
 $product-view__gallery-margin-bottom                    : $spacer--medium !default;
@@ -448,6 +450,10 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
             flex: 0 0 auto;
             margin: $product-view__add-to-cart-margin\@large;
         }
+    }
+
+    &__update-wishlist {
+        width: $product-view__update-wishlist-btn-width;
     }
 
     &__action {
