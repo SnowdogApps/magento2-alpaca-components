@@ -1,9 +1,4 @@
-{{#if isLink}}
-    <a
-        class="link {{ imageLinkClass }}"
-        href="{{ link }}"
-    >
-{{/if}}
+<div class="lazyload-wrapper {{ wrapperClass }}">
     <img
         class="image lazyload {{ class }}"
         src="{{ src }}"
@@ -11,6 +6,4 @@
         alt="{{ alt }}"
         {{ attributes }}
     >
-{{#if isLink}}
-    </a>
-{{/if}}
+</div>
