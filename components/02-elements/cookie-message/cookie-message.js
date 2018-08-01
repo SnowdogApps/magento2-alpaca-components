@@ -15,7 +15,10 @@ class CookieMessage {
     localStorage.setItem(dataType, 'closed');
     // after closing message box move focus on first focusable element on the page
     if (focusable.length) {
-      focusable[0].focus();
+      let firstFocusable = [ ...focusable].find(el => {
+        return el.offsetParent !== null
+      })
+      firstFocusable.focus();
     }
   }
   setListeners() {

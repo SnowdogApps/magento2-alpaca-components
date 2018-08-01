@@ -2,8 +2,8 @@ module.exports = {
   context: {
     closeIcon: 'close',
     text: 'Subscribe and get 10$ for Shopping!',
-    class: '',
-    attributes: '',
+    class: 'marketing-bar--closed',
+    attributes: 'data-type="marketing-bar"',
     closeButton: {
       tag: 'button',
       text: '',
