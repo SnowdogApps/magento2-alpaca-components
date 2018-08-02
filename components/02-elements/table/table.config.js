@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    captionText: 'This text should explain what kind of data this table presents. Can be also a longer text with inline HTML elements inside',
     mainTags: [
       {
         mainTag: 'thead',
@@ -9,15 +10,18 @@ module.exports = {
             childTags: [
               {
                 childTag: 'th',
-                content: 'Example heading'
+                content: 'Example heading',
+                childTagAttributes: 'scope="col"'
               },
               {
                 childTag: 'th',
-                content: 'Example heading'
+                content: 'Example heading',
+                childTagAttributes: 'scope="col"'
               },
               {
                 childTag: 'th',
-                content: 'Example heading'
+                content: 'Example heading',
+                childTagAttributes: 'scope="col"'
               }
             ]
           },

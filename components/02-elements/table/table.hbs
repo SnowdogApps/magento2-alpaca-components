@@ -1,6 +1,11 @@
 <table class="table {{ class }}" {{{ additionalAttributes }}}>
+    {{#if captionText}}
+        <caption class="table__caption">
+            {{ captionText }}
+        </caption>
+    {{/if}}
     {{#each mainTags }}
-        <{{{ mainTag }}}>
+        <{{{ mainTag }}} {{{mainAttributes}}}>
             {{#each rowTags}}
                 <{{{ rowTag }}} {{ rowTagAttributes }}>
                     {{#each childTags}}
