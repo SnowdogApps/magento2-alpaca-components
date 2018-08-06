@@ -1,4 +1,9 @@
-<table class="table {{ class }}" {{{ additionalAttributes }}}>
+<table
+    class="table {{ class }}"
+    tabindex="0"
+    role="table"
+    {{{ additionalAttributes }}}
+>
     {{#if captionText}}
         <caption class="table__caption">
             {{ captionText }}
@@ -7,7 +12,7 @@
     {{#each mainTags }}
         <{{{ mainTag }}} {{{mainAttributes}}}>
             {{#each rowTags}}
-                <{{{ rowTag }}} {{ rowTagAttributes }}>
+                <{{{ rowTag }}} {{{ rowTagAttributes }}}>
                     {{#each childTags}}
                         <{{{ childTag }}}
                              class="{{ childTagClasses }}"
