@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     tag: 'section',
-    class: '',
+    class: 'catalog-list__item',
     badge: {
       name: 'badge--new',
       context: {

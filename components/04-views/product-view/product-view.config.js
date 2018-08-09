@@ -85,73 +85,20 @@ module.exports = {
       attributes: 'type="button"',
       text: 'Add to Cart'
     },
-    options: [
-      {
-        class: '',
-        attributes: '',
-        titleClass: '',
+    swatch: {
+      size: {
         heading: {
-          tag: 'span',
-          text: 'Color',
-          class: 'product-view__swatch-option-title'
-        },
-        options: [
-          {
-            class: 'swatch__option--attributes',
-            attributes: 'style="background: url(../../images/swatch/swatch-orange.jpg); background-size: cover; background-position: center center;"'
-          },
-          {
-            class: 'swatch__option--attributes',
-            attributes: 'style="background: url(../../images/swatch/swatch-green.jpg); background-size: cover; background-position: center center;"'
-          },
-          {
-            class: 'swatch__option--attributes swatch__option--active',
-            attributes: 'style="background: url(../../images/swatch/swatch-red.jpg); background-size: cover; background-position: center center;"'
-          },
-          {
-            class: 'swatch__option--attributes',
-            attributes: 'style="background: url(../../images/swatch/swatch-white.jpg); background-size: cover; background-position: center center;"'
-          }
-        ]
+          class: 'product-view__swatch-option-title',
+          text: 'Size'
+        }
       },
-      {
-        class: 'product-view__swatch-option',
-        attributes: '',
-        titleClass: '',
+      color: {
         heading: {
-          tag: 'span',
-          text: 'Size',
-          class: 'product-view__swatch-option-title'
-        },
-        options: [
-          {
-            class: '',
-            attributes: '',
-            text: 'XS'
-          },
-          {
-            class: 'swatch__option--active',
-            attributes: '',
-            text: 'S'
-          },
-          {
-            class: '',
-            attributes: '',
-            text: 'M'
-          },
-          {
-            class: '',
-            attributes: '',
-            text: 'L'
-          },
-          {
-            class: '',
-            attributes: '',
-            text: 'XL'
-          }
-        ]
-      },
-    ],
+          class: 'product-view__swatch-option-title',
+          text: 'Color'
+        }
+      }
+    },
     listIcon: {
       listTag: 'ul',
       elementTag: 'li',
