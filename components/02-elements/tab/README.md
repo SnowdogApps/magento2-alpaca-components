@@ -4,7 +4,7 @@
 Our components is accordion on mobile and tabs on wider screens, so we have to implement a11y feature to be used in both cases:
 * use `role="widget"` on tab element
 * use `buttons` elements as a Labels/headings of tabs
-* Buttons should have following aria ttributes:
+* Buttons should have following aria attributes:
     * `aria-expanded` - set to `true` if tab is open, to `false` when it's closed
     * `aria-controls` where value it's an `id` of content tab element
     * `aria-selected` set to `false` when tab is closed and to `true` if it's open
