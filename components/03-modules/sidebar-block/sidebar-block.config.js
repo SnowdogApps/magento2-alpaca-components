@@ -48,19 +48,69 @@ module.exports = {
         title: 'My Wish List',
         compareLink: false,
         clearLink: false,
-        addToCart: {
-          tag: 'button',
-          class: 'sidebar-block__action',
-          attributes: 'type="button"',
-          text: 'Add to Cart'
-        },
-        removeFromWishlist: {
-          tag: 'a',
-          class: 'button--link sidebar-block__action',
-          attributes: 'href="#"',
-          text: 'Remove this item'
-        }
-      },
+        product: [
+          {
+            name: 'Chaz Kangeroo Hoodie',
+            iconLabel: 'Remove product from compare',
+            icon: {
+              iconId: 'close',
+              class: 'sidebar-block__remove-icon'
+            },
+            addToCart: {
+              tag: 'button',
+              class: 'button--secondary sidebar-block__action',
+              attributes: 'type="button"',
+              text: 'Add to Cart'
+            },
+            removeFromWishlist: {
+              tag: 'a',
+              class: 'button--link button--secondary sidebar-block__action',
+              attributes: 'href="#"',
+              text: 'Remove this item'
+            }
+          },
+          {
+            name: 'Bruno Compete Hoodie',
+            iconLabel: 'Remove product from compare',
+            icon: {
+              iconId: 'close',
+              class: 'sidebar-block__remove-icon'
+            },
+            addToCart: {
+              tag: 'button',
+              class: 'button--secondary sidebar-block__action',
+              attributes: 'type="button"',
+              text: 'Add to Cart'
+            },
+            removeFromWishlist: {
+              tag: 'a',
+              class: 'button--link button--secondary sidebar-block__action',
+              attributes: 'href="#"',
+              text: 'Remove this item'
+            }
+          },
+          {
+            name: 'Hero Hoodie',
+            iconLabel: 'Remove product from compare',
+            icon: {
+              iconId: 'close',
+              class: 'sidebar-block__remove-icon'
+            },
+            addToCart: {
+              tag: 'button',
+              class: 'button--secondary sidebar-block__action',
+              attributes: 'type="button"',
+              text: 'Add to Cart'
+            },
+            removeFromWishlist: {
+              tag: 'a',
+              class: 'button--link button--secondary sidebar-block__action',
+              attributes: 'href="#"',
+              text: 'Remove this item'
+            }
+          }
+        ]
+      }
     }
   ]
 };

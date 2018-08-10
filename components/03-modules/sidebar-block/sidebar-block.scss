@@ -1,14 +1,18 @@
-$sidebar-block__heading-margin-bottom: $spacer !default;
-$sidebar-block__padding              : $spacer--medium 0 !default;
-$sidebar-block__title-font-weight    : $font-weight-bold !default;
-$sidebar-block__list-margin-bottom   : $spacer !default;
-$sidebar-block__remove-padding       : $spacer--medium !default;
-$sidebar-block__remove-margin-right  : $spacer !default;
-$sidebar-block__remove-icon-margin   : 0 auto !default;
-$sidebar-block__remove-icon-padding  : 0 !default;
-$sidebar-block__icon-fill            : $red !default;
-$sidebar-block__icon-size            : $spacer--medium !default;
-$sidebar-block__action-margin-left   : $spacer !default;
+$sidebar-block__heading-margin-bottom      : $spacer !default;
+$sidebar-block__padding                    : $spacer--medium 0 !default;
+$sidebar-block__title-font-weight          : $font-weight-bold !default;
+$sidebar-block__list-margin-bottom         : $spacer !default;
+$sidebar-block__item-margin-bottom         : $spacer !default;
+$sidebar-block__remove-padding             : $spacer--medium !default;
+$sidebar-block__remove-margin-right        : $spacer !default;
+$sidebar-block__remove-icon-margin         : 0 auto !default;
+$sidebar-block__remove-icon-padding        : 0 !default;
+$sidebar-block__icon-fill                  : $red !default;
+$sidebar-block__icon-size                  : $spacer--medium !default;
+$sidebar-block__action-margin-left         : $spacer !default;
+$sidebar-block__wishlist-item-margin-bottom: $spacer--large !default;
+$sidebar-block__product-image-width        : 100px !default;
+$sidebar-block__product-info-margin-left   : $spacer--medium !default;
 
 .sidebar-block {
     padding: $sidebar-block__padding;
@@ -30,6 +34,9 @@ $sidebar-block__action-margin-left   : $spacer !default;
     &__item {
         display: flex;
         align-items: center;
+        &--wishlist {
+            margin-bottom: $sidebar-block__item-margin-bottom;
+        }
     }
 
     &__remove {
@@ -50,5 +57,17 @@ $sidebar-block__action-margin-left   : $spacer !default;
         &:not(:first-child) {
             margin-left: $sidebar-block__action-margin-left;
         }
+    }
+
+    &__wishlist-item {
+        margin-bottom: $sidebar-block__wishlist-item-margin-bottom;
+    }
+
+    &__product-image {
+        width: $sidebar-block__product-image-width;
+    }
+
+    &__product-info {
+        margin-left: $sidebar-block__product-info-margin-left;
     }
 }
