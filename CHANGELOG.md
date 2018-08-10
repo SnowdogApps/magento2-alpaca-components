@@ -9,12 +9,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Compare view
 - Loader element
 - Hover effect to header buttons
+- README files for elements with accessibility information
 
 ### Changed
 - Product page styles
 - Gallery loader styles
 - Swatch refactored
 - Page title and breadcrumbs styles
+- Global & Elements accessibility improvements (svg, typography, cookies, messages, pager, price, tabs, table, rating, dropdown-list-medium)
 
 ## [0.7.3] - 09.07.2018
 ### Fixed
