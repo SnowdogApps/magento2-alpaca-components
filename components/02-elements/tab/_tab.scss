@@ -62,6 +62,7 @@ $tab__icon-size                       : 48px !default;
 
         .tab__icon {
             fill: $tab__icon-color;
+            pointer-events: none;
         }
 
         &--active {
