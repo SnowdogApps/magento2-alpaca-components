@@ -1,15 +1,14 @@
 $wishlist__item-margin-bottom    : $spacer--medium !default;
 $wishlist__item-padding          : 0 $spacer--medium !default;
 $wishlist__price-padding         : 0 $spacer $spacer !default;
-$wishlist__price-padding\@medium : 0 $spacer--medium $spacer !default;
 $wishlist__price-margin          : 0 !default;
 $wishlist__price-font-weight     : $font-weight-bold !default;
 $wishlist__name-padding          : $spacer $spacer 0 $spacer !default;
-$wishlist__name-padding\@medium  : $spacer $spacer--medium 0 $spacer--medium !default;
 $wishlist__name-margin           : 0 !default;
 $wishlist__name-link-color       : $gray-darkest !default;
 $wishlist__name-link-font-size   : $font-size-small !default;
 $wishlist__name-link-line-height : 1.5 !default;
+$wishlist__options-margin        : 0 $spacer !default;
 $wishlist__inner-padding         : $spacer 0 !default;
 $wishlist__inner-padding\@medium : $spacer--medium 0 !default;
 $wishlist__label-margin          : 0 $spacer 0 0 !default;
@@ -36,14 +35,15 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         .price-box {
             padding: $wishlist__price-padding;
             font-weight: $wishlist__price-font-weight;
-            @include mq($screen-m) {
-                padding: $wishlist__price-padding\@medium;
-            }
         }
 
         .price-as-configured {
             margin: $wishlist__price-margin;
             font-weight: $wishlist__price-font-weight;
+        }
+
+        .image {
+            mix-blend-mode: multiply;
         }
     }
 
@@ -51,10 +51,6 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         display: block;
         padding: $wishlist__name-padding;
         margin: $wishlist__name-margin;
-
-        @include mq($screen-m) {
-            padding: $wishlist__name-padding\@medium;
-        }
     }
 
     &__item-name-link {
@@ -62,6 +58,10 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         color: $wishlist__name-link-color;
         font-size: $wishlist__name-link-font-size;
         line-height: $wishlist__name-link-line-height;
+    }
+
+    &__options {
+        margin: $wishlist__options-margin;
     }
 
     &__item-inner {
