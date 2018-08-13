@@ -8,9 +8,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Compare view
 - Loader element
+- Hover effect to header buttons
+- Accessibility for swatches and toolbar
+- Swatch color variant
 
 ### Changed
 - Product page styles
+- Gallery loader styles
+- Swatch refactored
+- Page title and breadcrumbs styles
+- Catalog grid item adjustments
 
 ## [0.7.3] - 09.07.2018
 ### Fixed

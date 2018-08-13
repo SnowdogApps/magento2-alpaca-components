@@ -121,14 +121,7 @@ $gallery__thumb-width--large               : 80px !default;
         position: relative;
 
         .loader {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            width: 64px;
-            height: 64px;
-            margin: auto;
+            position: static;
         }
     }
 }
