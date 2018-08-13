@@ -7,6 +7,7 @@ module.exports = {
     },
     items: [
       {
+        iconLabel: 'Delivery truck',
         iconWrapperClass: 'brief-info__icon-wrapper--delivery-truck',
         icon: {
           class: 'brief-info__icon brief-info__icon--delivery-truck',
@@ -25,6 +26,7 @@ module.exports = {
         }
       },
       {
+        iconLabel: 'Curved arrows',
         icon: {
           class: 'brief-info__icon',
           iconId: 'curved-arrows',
@@ -43,6 +45,7 @@ module.exports = {
       },
       {
         class: 'brief-info__icon brief-info__icon--shield',
+        iconLabel: 'Shield',
         icon: {
           class: 'brief-info__icon',
           iconId: 'shield',

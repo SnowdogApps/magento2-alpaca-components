@@ -71,9 +71,8 @@
                 </div>
 
                 <div class="product-view__options">
-                    {{#each options as |option|}}
-                        {{> '@swatch' option}}
-                    {{/each}}
+                    {{ render '@swatch--with-label' swatch.size merge=true }}
+                    {{ render '@swatch--image-with-label' swatch.color merge=true }}
                 </div>
 
                 <div class="product-view__main-actions">

@@ -1,5 +1,6 @@
 $catalog-grid-item__base-spacing            : $spacer !default;
 $catalog-grid-item__padding                 : 0 !default;
+$catalog-grid-item__border                  : 1px solid $gray-lightest !default;
 
 $catalog-grid-item__font-size               : $font-size-small !default;
 $catalog-grid-item__font-size\@large        : $font-size-base !default;
@@ -25,12 +26,12 @@ $catalog-grid-item__loader-margin-top       : 30% !default;
 
 $catalog-grid-item__content-bg-color        : $white !default;
 $catalog-grid-item__content-padding         : $spacer !default;
-$catalog-grid-item__content-padding\@medium : $spacer $spacer--medium !default;
 
-$catalog-grid-item__main-padding            : $spacer $spacer--medium !default;
+$catalog-grid-item__main-padding            : $spacer !default;
 
 $catalog-grid-item__name-color              : $font-color-base !default;
 $catalog-grid-item__name-font-weight        : $font-weight-normal !default;
+$catalog-grid-item__name-margin-botttom     : $spacer !default;
 
 $catalog-grid-item__rating-margin           : $spacer 0 !default;
 
@@ -46,17 +47,17 @@ $catalog-grid-item__action-icon-transition  : $transition-base !default;
 $catalog-grid-item__action-icon-fill        : $gray-darker !default;
 $catalog-grid-item__action-icon-fill-hover  : $green !default;
 
-$catalog-grid-item__price-margin            : 0 0 $spacer 0 !default;
-
 $catalog-gird-item__primary-form-margin     : 0 !default;
 
 .catalog-grid-item {
     position: relative;
     display: block;
+    border: $catalog-grid-item__border;
     padding: $catalog-grid-item__padding;
     overflow: hidden;
 
     @include mq($screen-m) {
+        &:focus,
         &:hover {
             .catalog-grid-item__details {
                 transform: translateY(-100%);
@@ -111,7 +112,7 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
         font-weight: $catalog-grid-item__name-font-weight;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
-        margin: 0;
+        margin-bottom: $catalog-grid-item__name-margin-botttom;
 
         @include mq($screen-xxl) {
             font-size: $catalog-grid-item__font-size\@large;
@@ -138,7 +139,6 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
 
     &__price {
         padding: $catalog-grid-item__padding;
-        margin: $catalog-grid-item__price-margin;
         font-size: $catalog-grid-item__font-size;
         line-height: $catalog-grid-item__line-height;
         font-weight: $catalog-grid-item__font-weight;
@@ -171,7 +171,6 @@ $catalog-gird-item__primary-form-margin     : 0 !default;
             position: absolute;
             top: 100%;
             width: 100%;
-            padding: $catalog-grid-item__content-padding\@medium;
         }
 
     }
