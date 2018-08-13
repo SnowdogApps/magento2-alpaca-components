@@ -109,7 +109,13 @@ module.exports = {
               text: 'Remove this item'
             }
           }
-        ]
+        ],
+        goToWishlist: {
+          tag: 'a',
+          class: 'button button--link',
+          attributes: 'href="#"',
+          text: 'Go to Wish List'
+        }
       }
     }
   ]

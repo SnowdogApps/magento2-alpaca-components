@@ -3,6 +3,9 @@ $sidebar-block__padding                    : $spacer--medium 0 !default;
 $sidebar-block__title-font-weight          : $font-weight-bold !default;
 $sidebar-block__list-margin-bottom         : $spacer !default;
 $sidebar-block__item-margin-bottom         : $spacer !default;
+$sidebar-block__index-margin               : 0 $spacer !default;
+$sidebar-block__index-font-weight          : $font-weight-bold !default;
+$sidebar-block__index-min-width            : $spacer--medium !default;
 $sidebar-block__remove-padding             : $spacer--medium !default;
 $sidebar-block__remove-margin-right        : $spacer !default;
 $sidebar-block__remove-icon-margin         : 0 auto !default;
@@ -11,8 +14,10 @@ $sidebar-block__icon-fill                  : $red !default;
 $sidebar-block__icon-size                  : $spacer--medium !default;
 $sidebar-block__action-margin-left         : $spacer !default;
 $sidebar-block__wishlist-item-margin-bottom: $spacer--large !default;
-$sidebar-block__product-image-width        : 100px !default;
+$sidebar-block__product-image-max-width    : 72px !default;
 $sidebar-block__product-info-margin-left   : $spacer--medium !default;
+$sidebar-block__price-margin               : 0 !default;
+$sidebar-block__price-font-weight          : $font-weight-bold !default;
 
 .sidebar-block {
     padding: $sidebar-block__padding;
@@ -29,11 +34,19 @@ $sidebar-block__product-info-margin-left   : $spacer--medium !default;
 
     &__list {
         margin-bottom: $sidebar-block__list-margin-bottom;
+        counter-reset: sidebarIndex;
     }
 
     &__item {
         display: flex;
         align-items: center;
+        &:before {
+            content: counter(sidebarIndex) ".";
+            counter-increment: sidebarIndex;
+            margin: $sidebar-block__index-margin;
+            min-width: $sidebar-block__index-min-width;
+            font-weight: $sidebar-block__index-font-weight;
+        }
         &--wishlist {
             margin-bottom: $sidebar-block__item-margin-bottom;
         }
@@ -64,10 +77,15 @@ $sidebar-block__product-info-margin-left   : $spacer--medium !default;
     }
 
     &__product-image {
-        width: $sidebar-block__product-image-width;
+        width: $sidebar-block__product-image-max-width;
     }
 
     &__product-info {
         margin-left: $sidebar-block__product-info-margin-left;
+    }
+
+    .price-as-configured {
+        margin: $sidebar-block__price-margin;
+        font-weight: $sidebar-block__price-font-weight;
     }
 }
