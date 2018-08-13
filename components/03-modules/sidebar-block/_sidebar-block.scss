@@ -22,6 +22,9 @@ $sidebar-block__price-font-weight          : $font-weight-bold !default;
 
 .sidebar-block {
     padding: $sidebar-block__padding;
+    &--hidden {
+        display: none;
+    }
 
     &__heading {
         display: flex;
