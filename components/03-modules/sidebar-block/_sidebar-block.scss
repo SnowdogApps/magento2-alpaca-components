@@ -19,6 +19,7 @@ $sidebar-block__product-info-margin-left   : $spacer--medium !default;
 $sidebar-block__checkbox-margin            : $spacer $spacer $spacer--medium !default;
 $sidebar-block__price-margin               : 0 !default;
 $sidebar-block__price-font-weight          : $font-weight-bold !default;
+$sidebar-block__message-margin             : 0 !default;
 
 .sidebar-block {
     padding: $sidebar-block__padding;
@@ -95,5 +96,9 @@ $sidebar-block__price-font-weight          : $font-weight-bold !default;
     .price-as-configured {
         margin: $sidebar-block__price-margin;
         font-weight: $sidebar-block__price-font-weight;
+    }
+
+    .message {
+        margin: $sidebar-block__message-margin;
     }
 }
