@@ -40,6 +40,9 @@ $sidebar-block__message-margin             : 0 !default;
     &__list {
         margin-bottom: $sidebar-block__list-margin-bottom;
         counter-reset: sidebarIndex;
+        &--hidden {
+            display: none;
+        }
     }
 
     &__item {
@@ -91,6 +94,10 @@ $sidebar-block__message-margin             : 0 !default;
 
     &__checkbox {
         margin: $sidebar-block__checkbox-margin;
+    }
+
+    &__hidden {
+        display: none;
     }
 
     .price-as-configured {
