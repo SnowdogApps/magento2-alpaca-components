@@ -5,6 +5,7 @@ module.exports = {
       tag: 'button',
       class: 'footer__scroll-top',
       iconId: 'arrow-up',
+      iconTitle: 'Arrow up',
       iconClass: 'footer__icon',
       attributes: 'type="button" aria-label="Scroll to top"'
     },
@@ -22,7 +23,8 @@ module.exports = {
           id: 'dropdown-help',
           collapse: {
             class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down'
+            iconId: 'angle-down',
+            iconTitle: 'Arrow down'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -70,7 +72,8 @@ module.exports = {
           id: 'dropdown-info',
           collapse: {
             class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down'
+            iconId: 'angle-down',
+            iconTitle: 'Arrow down'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -112,7 +115,8 @@ module.exports = {
           id: 'dropdown-worth',
           collapse: {
             class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down'
+            iconId: 'angle-down',
+            iconTitle: 'Arrow down'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -154,7 +158,8 @@ module.exports = {
           id: 'dropdown-alpaca',
           collapse: {
             class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down'
+            iconId: 'angle-down',
+            iconTitle: 'Arrow down'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -207,6 +212,7 @@ module.exports = {
         {
           icon: {
             iconId: 'youtube',
+            iconTitle: 'Youtube logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Go to Alpaca Youtube Channel"'
@@ -214,6 +220,7 @@ module.exports = {
         {
           icon: {
             iconId: 'facebook',
+            iconTitle: 'Facebook logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Go to Alpaca Facebook Page"'
@@ -221,6 +228,7 @@ module.exports = {
         {
           icon: {
             iconId: 'instagram',
+            iconTitle: 'Instagram logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Check Alpaca on Instagram"'
@@ -228,6 +236,7 @@ module.exports = {
         {
           icon: {
             iconId: 'google-plus',
+            iconTitle: 'Google plus logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Find Alpaca on Google Plus"'
