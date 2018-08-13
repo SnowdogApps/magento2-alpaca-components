@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Hover effect to header buttons
 - Accessibility for swatches and toolbar
 - Swatch color variant
+- README files for elements with accessibility information
 
 ### Changed
 - Product page styles
@@ -18,6 +19,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Swatch refactored
 - Page title and breadcrumbs styles
 - Catalog grid item adjustments
+- Global & Elements accessibility improvements (svg, typography, cookies, messages, pager, price, tabs, table, rating, dropdown-list-medium)
 
 ## [0.7.3] - 09.07.2018
 ### Fixed

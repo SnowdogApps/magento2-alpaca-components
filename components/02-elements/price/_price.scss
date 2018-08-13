@@ -12,6 +12,9 @@ $price__font-weight--old   : $font-weight-normal !default;
         }
         &--special {
             color: $price__special-price-color;
+            & > ins {
+                text-decoration: none;
+            }
         }
     }
 }

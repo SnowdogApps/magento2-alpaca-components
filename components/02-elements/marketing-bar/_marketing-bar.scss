@@ -22,6 +22,9 @@ $marketing-bar__button-icon-padding : 2px !default;
     @include mq($screen-m) {
         text-align: center;
     }
+    &--closed {
+        display: none;
+    }
 
     &__container {
         position: relative;

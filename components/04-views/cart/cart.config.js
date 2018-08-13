@@ -9,7 +9,8 @@ module.exports = {
       title: 'Apply Discount Code',
       icon: {
         class: 'discount__title-icon',
-        iconId: 'arrow-down'
+        iconId: 'arrow-down',
+        iconTitle: 'Arrow down'
       },
       button: {
         tag: 'button',
@@ -70,6 +71,7 @@ module.exports = {
           text: '',
           class: 'button--icon products-list-item__actions-button',
           iconId: 'edit',
+          iconTitle: 'Edit pencil',
           iconClass: 'button__icon'
         },
         buttonRemove: {
@@ -77,6 +79,7 @@ module.exports = {
           text: '',
           class: 'button--icon products-list-item__actions-button',
           iconId: 'remove',
+          iconTitle: 'Trash bin',
           iconClass: 'button__icon'
         }
       },
@@ -120,6 +123,7 @@ module.exports = {
           text: '',
           class: 'button--icon products-list-item__actions-button',
           iconId: 'edit',
+          iconTitle: 'Edit pencil',
           iconClass: 'button__icon'
         },
         buttonRemove: {
@@ -127,6 +131,7 @@ module.exports = {
           text: '',
           class: 'button--icon products-list-item__actions-button',
           iconId: 'remove',
+          iconTitle: 'Trash bin',
           iconClass: 'button__icon'
         }
       }
