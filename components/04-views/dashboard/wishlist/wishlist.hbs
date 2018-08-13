@@ -16,7 +16,14 @@
                 <div class="grid grid--align-start">
                     {{#each wishlistItems}}
                         <div class="wishlist__item grid__column grid__column--1-3">
-                            {{ render '@catalog-grid-item' }}
+                            <a href="#" title="{{ product.name.text }}">
+                                {{ render '@image' product.image }}
+                            </a>
+                            <h2 class="wishlist__item-name">
+                                {{ render '@link' product.name }}
+                            </h2>
+                            {{ render '@price' product.price merge=true }}
+
                             {{ render '@input--textarea' textarea }}
 
                             <div class="wishlist__item-inner">

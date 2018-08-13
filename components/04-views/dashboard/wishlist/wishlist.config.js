@@ -2,6 +2,20 @@ module.exports = {
   context: {
     wishlistItems: [
       {
+        product: {
+          image: {
+            dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+          },
+          name: {
+            href: '#',
+            class: 'wishlist__item-name-link',
+            text: 'Chaz Kangeroo Hoodie'
+          },
+          price: {
+            class: 'price-box',
+            regularPriceClass: 'price-as-configured'
+          }
+        },
         textarea: {
           class: 'wishlist__comment',
           field: {
@@ -44,6 +58,20 @@ module.exports = {
         }
       },
       {
+        product: {
+          image: {
+            dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+          },
+          name: {
+            href: '#',
+            class: 'wishlist__item-name-link',
+            text: 'Bruno Compete Hoodie'
+          },
+          price: {
+            class: 'price-box',
+            regularPriceClass: 'price-as-configured'
+          }
+        },
         textarea: {
           class: 'wishlist__comment',
           field: {
