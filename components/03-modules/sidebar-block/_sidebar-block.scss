@@ -16,6 +16,7 @@ $sidebar-block__action-margin-left         : $spacer !default;
 $sidebar-block__wishlist-item-margin-bottom: $spacer--large !default;
 $sidebar-block__product-image-max-width    : 72px !default;
 $sidebar-block__product-info-margin-left   : $spacer--medium !default;
+$sidebar-block__checkbox-margin            : $spacer $spacer $spacer--medium !default;
 $sidebar-block__price-margin               : 0 !default;
 $sidebar-block__price-font-weight          : $font-weight-bold !default;
 
@@ -82,6 +83,10 @@ $sidebar-block__price-font-weight          : $font-weight-bold !default;
 
     &__product-info {
         margin-left: $sidebar-block__product-info-margin-left;
+    }
+
+    &__checkbox {
+        margin: $sidebar-block__checkbox-margin;
     }
 
     .price-as-configured {

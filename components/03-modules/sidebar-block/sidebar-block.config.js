@@ -117,6 +117,61 @@ module.exports = {
           text: 'Go to Wish List'
         }
       }
+    },
+    {
+      name: 'Recently ordered',
+      context: {
+        title: 'Recently Ordered',
+        compareLink: false,
+        clearLink: false,
+        product: [
+          {
+            name: 'Chaz Kangeroo Hoodie',
+            checkbox: {
+              id: 'reorder-item-1',
+              class: 'sidebar-block__checkbox',
+              name: 'order-items',
+              label: {
+                text: 'Add to Cart'
+              }
+            }
+          },
+          {
+            name: 'Bruno Compete Hoodie',
+            checkbox: {
+              id: 'reorder-item-2',
+              class: 'sidebar-block__checkbox',
+              name: 'order-items',
+              label: {
+                text: 'Add to Cart'
+              }
+            }
+          },
+          {
+            name: 'Hero Hoodie',
+            checkbox: {
+              id: 'reorder-item-3',
+              class: 'sidebar-block__checkbox',
+              name: 'order-items',
+              label: {
+                text: 'Add to Cart'
+              }
+            }
+          }
+        ],
+        addToCart: {
+          tag: 'button',
+          class: 'sidebar-block__action',
+          attributes: 'type="button"',
+          text: 'Add to Cart'
+        },
+        viewAll: {
+          tag: 'a',
+          class: 'button--link sidebar-block__action',
+          attributes: 'href="#"',
+          text: 'View All'
+        }
+      }
     }
   ]
 };
