@@ -102,6 +102,10 @@ module.exports = {
         text: 'Add All to Cart',
         class: 'button--secondary action__button'
       }
-    ]
+    ],
+    backLink: {
+      text: 'Back',
+      title: 'Back to My Account'
+    }
   }
 }
