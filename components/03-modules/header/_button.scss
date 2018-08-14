@@ -89,6 +89,9 @@ $header-button__counter-dot-bg-color: $white !default;
         text-align: center;
         color: $header-button__counter-color;
         background-color: $header-button__counter-background;
+        &--hidden {
+            display: none;
+        }
         @include mq($screen-m) {
             top: $header-button__counter-top--medium;
         }
