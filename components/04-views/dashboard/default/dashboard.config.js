@@ -1,63 +1,6 @@
 module.exports = {
   context: {
     title: 'My dashboard',
-    wishlist: {
-      title: 'My Wish List',
-      items: {
-        class: 'sidebar-nav-list__list',
-        elementTag: 'li',
-        listTag: 'ol',
-        elements: [
-          {
-            text: 'One product in wishlist'
-          }
-        ]
-      },
-      buttons: {
-        sides: [
-          {
-            action: [
-              {
-                title: 'Remove All'
-              }
-            ]
-          }
-        ]
-      }
-    },
-    recentlyOrdered: {
-      title: 'Recently Ordered',
-      items: {
-        class: 'sidebar-nav-list__list',
-        listTag: 'ol',
-        elementTag: 'li',
-        elements: [
-          {
-            text: 'First item',
-          }
-        ],
-      },
-      buttons: {
-        sides: [
-          {
-            action: [
-              {
-                button: true,
-                class: 'sidebar-nav-list__button',
-                title: 'Add to Cart'
-              }
-            ]
-          },
-          {
-            action: [
-              {
-                title: 'View All'
-              }
-            ]
-          }
-        ]
-      }
-    },
     account: {
       title: 'Account Information',
       informations: [

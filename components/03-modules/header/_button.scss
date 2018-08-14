@@ -28,6 +28,7 @@ $header-button__counter-dot-size    : 2px !default;
 $header-button__counter-dot-bg-color: $white !default;
 
 .header-button {
+    position: relative;
     height: $header-button__size;
     min-width: $header-button__size;
     display: flex;
