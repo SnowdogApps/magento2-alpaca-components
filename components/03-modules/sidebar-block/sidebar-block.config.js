@@ -4,27 +4,51 @@ module.exports = {
     qty: '3 items',
     product: [
       {
-        name: 'Chaz Kangeroo Hoodie',
-        iconLabel: 'Remove product from compare',
-        icon: {
+        productName: {
+          class: 'sidebar-block__link',
+          href: '#',
+          text: 'Chaz Kangeroo Hoodie'
+        },
+        removeButton: {
+          tag: 'button',
+          attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
+          text: '',
+          class: 'sidebar-block__remove',
+          iconClass: 'icon sidebar-block__remove-icon',
           iconId: 'close',
-          class: 'sidebar-block__remove-icon'
+          iconTitle: 'Close'
         }
       },
       {
-        name: 'Bruno Compete Hoodie',
-        iconLabel: 'Remove product from compare',
-        icon: {
+        productName: {
+          class: 'sidebar-block__link',
+          href: '#',
+          text: 'Bruno Compete Hoodie'
+        },
+        removeButton: {
+          tag: 'button',
+          attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
+          text: '',
+          class: 'sidebar-block__remove',
+          iconClass: 'icon sidebar-block__remove-icon',
           iconId: 'close',
-          class: 'sidebar-block__remove-icon'
+          iconTitle: 'Close'
         }
       },
       {
-        name: 'Hero Hoodie',
-        iconLabel: 'Remove product from compare',
-        icon: {
+        productName: {
+          class: 'sidebar-block__link',
+          href: '#',
+          text: 'Hero Hoodie'
+        },
+        removeButton: {
+          tag: 'button',
+          attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
+          text: '',
+          class: 'sidebar-block__remove',
+          iconClass: 'icon sidebar-block__remove-icon',
           iconId: 'close',
-          class: 'sidebar-block__remove-icon'
+          iconTitle: 'Close'
         }
       }
     ],
