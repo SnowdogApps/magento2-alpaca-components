@@ -8,6 +8,7 @@ $catalog-grid-item__font-weight               : $font-weight-bold !default;
 
 $catalog-grid-item__badge-top-position        : $spacer--medium !default;
 $catalog-grid-item__badge-left-position       : 0 !default;
+$catalog-grid-item__badge-z-index             : 1 !default;
 $catalog-grid-item__badge-padding             : 5px 12px !default;
 $catalog-grid-item__badge-bg-color            : $color-primary !default;
 $catalog-grid-item__badge-font-size           : $font-size-small !default;
@@ -81,6 +82,7 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
         position: absolute;
         top: $catalog-grid-item__badge-top-position;
         left: $catalog-grid-item__badge-left-position;
+        z-index: $catalog-grid-item__badge-z-index;
         border-radius: $catalog-grid-item__badge-border-radius;
         padding: $catalog-grid-item__badge-padding;
         font-size: $catalog-grid-item__badge-font-size;
@@ -151,19 +153,6 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
 
         @include mq($screen-xxl) {
             font-size: $catalog-grid-item__font-size\@large;
-        }
-    }
-
-    &__old-price {
-        @include mq($screen-m) {
-            display: block;
-            margin-right: 0;
-        }
-    }
-
-    &__special-price {
-        @include mq($screen-m) {
-            display: block;
         }
     }
 

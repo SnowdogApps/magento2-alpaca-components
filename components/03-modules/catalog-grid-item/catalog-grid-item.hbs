@@ -18,7 +18,7 @@
         </h2>
 
         <div class="catalog-grid-item__price">
-            {{ render '@price' }}
+            {{ render (component price.name) price.context }}
         </div>
 
         {{ render '@rating' rating merge=true }}
