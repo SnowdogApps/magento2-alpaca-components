@@ -101,12 +101,14 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
     }
 
     &__image-wrapper {
-        &:after {
-            content: "";
-            display: block;
-            height: $catalog-grid-item__content-height;
-            @include mq($screen-xxl) {
-                height: $catalog-grid-item__content-height\@large;
+        @include mq($screen-m) {
+            &:after {
+                content: "";
+                display: block;
+                height: $catalog-grid-item__content-height;
+                @include mq($screen-xxl) {
+                    height: $catalog-grid-item__content-height\@large;
+                }
             }
         }
 
