@@ -1,8 +1,12 @@
+$image__width                   : 100% !default;
+$image__transition              : $transition-fade !default;
+$image__wrapper-background-color: $white !default;
+
 .image {
     display: block;
-    width: 100%;
-    max-width: 100%;
-    transition: $transition-fade;
+    width: $image__width;
+    max-width: $image__width;
+    transition: $image__transition;
 
     &.lazyload,
     &.lazyloading {
@@ -21,5 +25,5 @@ picture {
 
 .lazyload-wrapper {
     position: relative;
-    background: $gray-lightest;
+    background-color: $image__wrapper-background-color;
 }

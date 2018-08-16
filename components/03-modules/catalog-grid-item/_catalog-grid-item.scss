@@ -14,7 +14,6 @@ $catalog-grid-item__badge-bg-color            : $color-primary !default;
 $catalog-grid-item__badge-font-size           : $font-size-small !default;
 $catalog-grid-item__badge-border-radius       : 0 !default;
 
-$catalog-grid-item__image-wrapper-background  : $white !default;
 $catalog-grid-item__image-margin              : 0 auto !default;
 $catalog-grid-item__image-width               : auto !default;
 $catalog-grid-item__image-width--lazyload     : 100% !default;
@@ -109,10 +108,6 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
             @include mq($screen-xxl) {
                 height: $catalog-grid-item__content-height\@large;
             }
-        }
-
-        .lazyload-wrapper {
-            background-color: $catalog-grid-item__image-wrapper-background;
         }
 
         .image {
