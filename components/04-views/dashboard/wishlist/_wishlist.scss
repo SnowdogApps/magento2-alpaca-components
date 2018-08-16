@@ -118,7 +118,7 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         margin: $wishlist__comment-margin;
     }
 
-    .action {
+    &__action {
         padding-top: $wishlist__action-padding-top;
     }
 }

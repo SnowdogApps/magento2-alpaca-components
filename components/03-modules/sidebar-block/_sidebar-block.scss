@@ -11,7 +11,7 @@ $sidebar-block__remove-margin-right        : $spacer !default;
 $sidebar-block__remove-icon-margin         : 0 auto !default;
 $sidebar-block__remove-icon-padding        : 0 !default;
 $sidebar-block__icon-fill                  : $red !default;
-$sidebar-block__icon-size                  : $spacer--medium !default;
+$sidebar-block__icon-size                  : 16px !default;
 $sidebar-block__action-margin-left         : $spacer !default;
 $sidebar-block__wishlist-item-margin-bottom: $spacer--large !default;
 $sidebar-block__product-image-max-width    : 72px !default;
@@ -100,12 +100,12 @@ $sidebar-block__message-margin             : 0 !default;
         display: none;
     }
 
+    &__message {
+        margin: $sidebar-block__message-margin;
+    }
+
     .price-as-configured {
         margin: $sidebar-block__price-margin;
         font-weight: $sidebar-block__price-font-weight;
-    }
-
-    .message {
-        margin: $sidebar-block__message-margin;
     }
 }
