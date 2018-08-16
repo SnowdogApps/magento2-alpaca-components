@@ -34,7 +34,7 @@ $catalog-grid-item__content-height            : 60px !default;
 $catalog-grid-item__content-height\@large     : 66px !default;
 $catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
 $catalog-grid-item__content-translateY\@large : translateY(-$catalog-grid-item__content-height\@large) !default;
-$catalog-grid-item__content-translateY--active: translateY(calc(-100% + 1px)) !default;
+$catalog-grid-item__content-translateY--active: translateY(-100%) !default;
 
 $catalog-grid-item__name-color                : $font-color-base !default;
 $catalog-grid-item__name-font-weight          : $font-weight-normal !default;
