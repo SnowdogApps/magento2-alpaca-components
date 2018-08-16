@@ -59,14 +59,16 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
     overflow: hidden;
 
     &__image-wrapper {
-        background-color: $catalog-list-item__image-wrapper-background;
-
         .image {
             width: $catalog-list-item__image-width;
             height: $catalog-list-item__image-height--inner;
             @include mq($screen-m) {
                 width: $catalog-list-item__image-width\@medium;
             }
+        }
+
+        .lazyload-wrapper {
+            background-color: $catalog-list-item__image-wrapper-background;
         }
     }
 

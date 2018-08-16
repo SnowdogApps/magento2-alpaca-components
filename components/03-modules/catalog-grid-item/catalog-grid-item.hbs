@@ -4,7 +4,9 @@
     {{/if}}
 
     <a href="#" class="catalog-grid-item__link">
-        {{ render '@image' image merge=true }}
+        <div class="catalog-grid-item__image-wrapper">
+            {{ render '@image' image merge=true }}
+        </div>
     </a>
 
     <section class="catalog-grid-item__details">
