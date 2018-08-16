@@ -26,6 +26,10 @@ $wishlist__comment-margin        : 0 !default;
 $wishlist__action-padding-top    : $spacer--medium !default;
 
 .wishlist {
+    &__grid {
+        justify-content: flex-start;
+    }
+
     &__item {
         margin-bottom: $wishlist__item-margin-bottom;
         @include mq($screen-s) {
@@ -110,7 +114,7 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         margin: $wishlist__comment-margin;
     }
 
-    .action {
+    &__action {
         padding-top: $wishlist__action-padding-top;
     }
 }

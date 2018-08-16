@@ -46,7 +46,7 @@ module.exports = {
         },
         removeIcon: {
           tag: 'button',
-          attributes: 'href="#" aria-label="Remove product from wishlist"',
+          attributes: 'type="button" aria-label="Remove product from wishlist"',
           class: 'button--icon wishlist__remove',
           iconClass: 'button__icon ',
           iconId: 'remove'

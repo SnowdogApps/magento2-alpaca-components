@@ -10,17 +10,8 @@
     <ol class="list sidebar-block__list">
         {{#each product}}
             <li class="sidebar-block__item">
-                <a
-                    href="#"
-                    class="sidebar-block__remove"
-                    aria-label="{{ iconLabel }}"
-                    title="{{ iconLabel }}"
-                >
-                    {{ render '@icon' icon }}
-                </a>
-                <a class="link sidebar-block__link" href="#">
-                    {{ name }}
-                </a>
+                {{ render '@button--icon' removeButton }}
+                {{ render '@link' productName }}
             </li>
         {{/each}}
     </ol>
