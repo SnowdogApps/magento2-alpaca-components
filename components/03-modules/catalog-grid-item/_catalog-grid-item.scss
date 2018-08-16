@@ -101,8 +101,6 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
     }
 
     &__image-wrapper {
-        background: $catalog-grid-item__image-wrapper-background;
-
         &:after {
             content: "";
             display: block;
@@ -110,6 +108,10 @@ $catalog-grid-item__action-icon-fill-hover    : $green !default;
             @include mq($screen-xxl) {
                 height: $catalog-grid-item__content-height\@large;
             }
+        }
+
+        .lazyload-wrapper {
+            background-color: $catalog-grid-item__image-wrapper-background;
         }
 
         .image {
