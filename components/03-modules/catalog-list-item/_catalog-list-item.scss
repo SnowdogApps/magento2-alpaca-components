@@ -2,6 +2,7 @@ $catalog-list-item__padding                                      : $spacer 0 !de
 $catalog-list-item__font-size                                    : 12px !default;
 $catalog-list-item__font-size\@medium                            : 14px !default;
 
+$catalog-list-item__image-wrapper-background                     : $white !default;
 $catalog-list-item__image-width                                  : 96px !default;
 $catalog-list-item__image-width\@medium                          : 208px !default;
 $catalog-list-item__image-height--inner                          : auto !default;
@@ -58,10 +59,11 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
     overflow: hidden;
 
     &__image-wrapper {
+        background-color: $catalog-list-item__image-wrapper-background;
+
         .image {
             width: $catalog-list-item__image-width;
             height: $catalog-list-item__image-height--inner;
-            mix-blend-mode: multiply;
             @include mq($screen-m) {
                 width: $catalog-list-item__image-width\@medium;
             }
