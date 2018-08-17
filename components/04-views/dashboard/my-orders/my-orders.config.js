@@ -445,21 +445,25 @@ module.exports = {
         orderInfo: {
           informations: [
             {
+              headingTag: 'h4',
               title: 'Shipping Address',
               class: 'grid__column grid__column--1-4',
               text: 'Lorem Ipsum Shipping Address example 1'
             },
             {
+              headingTag: 'h4',
               title: 'Shipping Method',
               class: 'grid__column grid__column--1-4',
               text: 'United Parcel Service - Ground'
             },
             {
+              headingTag: 'h4',
               title: 'Billing Address',
               class: 'grid__column grid__column--1-4',
               text: 'Lorem Ipsum Billing Address example 1'
             },
             {
+              headingTag: 'h4',
               title: 'Payment Method',
               class: 'grid__column grid__column--1-4',
               text: 'Check / Money order'
