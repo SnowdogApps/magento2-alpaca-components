@@ -12,6 +12,12 @@ module.exports = {
       ]
     },
     toolbar: {
+      amount: {
+        class: 'toolbar__amount--visible'
+      },
+      limiter: {
+        class: 'toolbar__limiter--relative'
+      },
       showMode: false,
       showSorter: false,
       showAmount: true,

@@ -25,7 +25,7 @@
     {{/if}}
 
     {{#if showAmount }}
-        <div class="toolbar__amount">
+        <div class="{{ amount.class }}">
             <span class="toolbar__amount-content">
                 {{ amount.prefix }} {{ amount.currentRange }} {{ amount.preposition }}
                 {{ amount.total }}
@@ -34,7 +34,7 @@
     {{/if}}
 
     {{#if showLimit }}
-        <div class="toolbar__limiter">
+        <div class="{{ limiter.class }}">
             {{> '@select' limiter.select }}
             <span class="toolbar__limiter-suffix">
                 {{ limiter.suffix }}
