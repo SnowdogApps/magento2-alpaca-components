@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Swatch color variant
 - README files for elements with accessibility information
 - Sidebar block module for compare, wishlist and recent orders
+- Margin to notification
+- Modifier to swatch option for white color
 
 ### Changed
 - Product page styles
@@ -23,9 +25,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Global & Elements accessibility improvements (svg, typography, cookies, messages, pager, price, tabs, table, rating, dropdown-list-medium)
 - Link refactored
 - Moved wishlist component from modules to dashboard views
+- Catalog items improvements
+- 4 columns grid to fix sidebar size in my account
 
 ### Removed
 - sidebar-nav-list module
+- mix-blend-mode from product images
 
 ## [0.7.3] - 09.07.2018
 ### Fixed
