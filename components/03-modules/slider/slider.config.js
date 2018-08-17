@@ -7,6 +7,7 @@ module.exports = {
       text: '',
       class: 'button--icon slider__navigation-icon slider__prev',
       iconId: 'angle-left',
+      iconTitle: 'Arrow left',
       iconClass: 'button__icon slider__icon',
       attributes: 'type="button" aria-label="Previous slide"'
     },
@@ -15,6 +16,7 @@ module.exports = {
       text: '',
       class: 'button--icon slider__navigation-icon slider__next',
       iconId: 'angle-right',
+      iconTitle: 'Arrow right',
       iconClass: 'button__icon slider__icon',
       attributes: 'type="button" aria-label="Next slide"'
     },

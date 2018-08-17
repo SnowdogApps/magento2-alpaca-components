@@ -5,7 +5,8 @@
         dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
         openClass             = 'dropdown-list__item--open',
         contentClass          = 'dropdown-list__content',
-        mq                    = '(min-width: 768px)';
+        mq                    = '(min-width: 768px)',
+        dropdownMediumOpen    = [ ...document.querySelectorAll('.dropdown-list--is-open\\@screen-m')];
 
   function setAriaAttributes(label, content, expanded) {
     if (expanded) {
@@ -16,6 +17,11 @@
       label.setAttribute('aria-expanded', 'true');
       content.setAttribute('aria-hidden', 'false');
     }
+  }
+  function removeAriaAttributes(label, content) {
+    label.removeAttribute('aria-expanded');
+    content.setAttribute('aria-hidden', 'false');
+    label.disabled = true;
   }
 
   function isMediumOpen(dropdownBlock) {
@@ -29,12 +35,13 @@
     if (window.matchMedia(mq).matches) {
       dropdownContent.style.height = 'auto';
       dropdownItem.classList.remove(openClass);
-      setAriaAttributes(item, dropdownContent, true);
+      removeAriaAttributes(item, dropdownContent);
     }
     else {
       dropdownContent.style.height = 0;
       dropdownItem.classList.remove(openClass);
       setAriaAttributes(item, dropdownContent, false);
+      item.disabled = false;
     }
   }
 
@@ -56,25 +63,31 @@
         setAriaAttributes(item, dropdownContent, false);
       }
     }
-    else {
-      dropdownContent.style.height = 'auto';
-      dropdownItem.classList.remove(openClass);
-      setAriaAttributes(item, dropdownContent, false);
+  }
+
+  function setMediumOpen() {
+    if (dropdownMediumOpen.length) {
+      let dropdownItems =  [];
+      dropdownMediumOpen.forEach(
+        key => dropdownItems.push(...key.querySelectorAll(dropdownCollapseLabel))
+      )
+      dropdownItems.forEach(key => resetMqMediumOpen(key));
     }
   }
 
-  dropdownItem.forEach(
-    key => key.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleContent(key, false);
-    }, false)
-  );
+  function init() {
+    dropdownItem.forEach(
+      key => key.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleContent(key, false);
+      }, false)
+    );
+    setMediumOpen();
+  }
+
+  init();
 
   window.addEventListener('resize', () => {
-    const dropdownMediumOpen = document.querySelector('.dropdown-list--is-open\\@screen-m');
-    if (dropdownMediumOpen) {
-      const dropdownItems =  [ ...dropdownMediumOpen.querySelectorAll(dropdownCollapseLabel)];
-      dropdownItems.forEach(key => resetMqMediumOpen(key));
-    }
+    setMediumOpen();
   });
 })();

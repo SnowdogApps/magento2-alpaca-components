@@ -14,6 +14,7 @@ module.exports = {
       href: '',
       icon: {
         iconId: 'grid',
+        iconTitle: 'Grid',
         class: 'toolbar__mode-icon toolbar__mode-icon--active',
         title: 'Grid view'
       }
@@ -22,6 +23,7 @@ module.exports = {
       href: '',
       icon: {
         iconId: 'list',
+        iconTitle: 'List',
         class: 'toolbar__mode-icon',
         title: 'List view'
       }

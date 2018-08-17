@@ -40,7 +40,8 @@ module.exports = {
           id: 'see-details',
           collapse: {
             class: 'dropdown-list__icon',
-            iconId: 'angle-down'
+            iconId: 'angle-down',
+            iconTitle: 'Arrow down'
           },
           contentElement: 'list--description',
           contentContext: {
@@ -80,7 +81,8 @@ module.exports = {
       text: '',
       class: 'button--icon minicart-product__button',
       iconClass: 'button__icon minicart-product__button-icon',
-      iconId: 'edit'
+      iconId: 'edit',
+      iconTitle: 'Edit pencil'
     },
     removeIcon: {
       tag: 'a',
@@ -88,7 +90,8 @@ module.exports = {
       text: '',
       class: 'button--icon minicart-product__button',
       iconClass: 'button__icon minicart-product__button-icon',
-      iconId: 'remove'
+      iconId: 'remove',
+      iconTitle: 'Trash bin'
     },
     configurable: true
   }

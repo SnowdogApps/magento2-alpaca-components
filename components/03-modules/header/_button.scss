@@ -28,6 +28,7 @@ $header-button__counter-dot-size    : 2px !default;
 $header-button__counter-dot-bg-color: $white !default;
 
 .header-button {
+    position: relative;
     height: $header-button__size;
     min-width: $header-button__size;
     display: flex;
@@ -88,6 +89,9 @@ $header-button__counter-dot-bg-color: $white !default;
         text-align: center;
         color: $header-button__counter-color;
         background-color: $header-button__counter-background;
+        &--hidden {
+            display: none;
+        }
         @include mq($screen-m) {
             top: $header-button__counter-top--medium;
         }
