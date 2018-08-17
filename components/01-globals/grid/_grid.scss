@@ -39,9 +39,6 @@ $grid__side-gutter: false !default;
 
         // 4 cols
         &--1-4 {
-            @include mq($screen-s) {
-                @include grid-column-width(2, 4);
-            }
             @include mq($screen-m) {
                 @include grid-column-width(1, 4);
             }
