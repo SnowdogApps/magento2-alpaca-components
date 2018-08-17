@@ -490,21 +490,25 @@ module.exports = {
         info: {
           informations: [
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Order Id',
               text: '#0000003'
             },
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Email',
               text: 'test@test.com'
             },
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Order Shipping Address',
               text: 'Lorem ipsmum example order shipping address'
             },
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Customer Name',
               text: 'Test Test'
