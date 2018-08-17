@@ -9,6 +9,7 @@ $swatch__option-margin               : $spacer !default;
 $swatch__option-background           : $white !default;
 $swatch__option-color                : $gray-dark !default;
 $swatch__option-border               : 4px solid $white !default;
+$swatch__option-border--white        : 1px solid $gray-lighter !default;
 $swatch__option-border-color-hover   : $color-primary !default;
 $swatch__option-border-color--active : $color-primary !default;
 
@@ -67,6 +68,10 @@ $swatch__option-border-color--active : $color-primary !default;
             min-height: $swatch__option-size--image;
             background-size: cover;
             background-position: top center;
+        }
+
+        &--white {
+            border: $swatch__option-border--white;
         }
     }
 }
