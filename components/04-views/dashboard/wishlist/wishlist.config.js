@@ -1,51 +1,23 @@
 module.exports = {
   context: {
-    actions: {
-      sides: [
-        {
-          action: [
-            {
-              button: true,
-              title: 'Update Wish List'
-            },
-            {
-              button: true,
-              title: 'Share Wish List'
-            },
-            {
-              button: true,
-              title: 'Add All to Cart'
-            }
-          ]
-        },
-        {
-          action: [
-            {
-              title: 'Back'
-            }
-          ]
-        }
-      ]
-    },
     wishlistItems: [
       {
-        item: {
-          tag: 'div',
-          class: 'dashboard__product',
-          name: 'Some product name',
-          price: '210$',
-          type: 'some attribute text',
+        product: {
           image: {
-            src: '/images/product/product-img-230_180.png'
+            dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
           },
-          button: {
-            tag: 'button',
-            text: 'Add to Cart',
-            class: 'product-item__button action__button'
+          name: {
+            href: '#',
+            class: 'wishlist__item-name-link',
+            text: 'Chaz Kangeroo Hoodie'
+          },
+          price: {
+            class: 'price-box',
+            regularPriceClass: 'price-as-configured'
           }
         },
         textarea: {
-          class: 'dashboard__input',
+          class: 'wishlist__comment',
           field: {
             id: 'comment',
             name: 'comment',
@@ -53,54 +25,55 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline dashboard__input',
+          class: 'input--inline wishlist__qty',
           label: {
             text: 'Qty:',
-            class: 'dashboard__label'
+            class: 'wishlist__label'
           },
           field: {
             id: 'qty',
             name: 'qty',
-            class: 'dashboard__field-qty'
+            type: 'number',
+            class: 'wishlist__field-qty'
           }
         },
-        itemAction: {
-          sides: [
-            {
-              action: [
-                {
-                  title: 'Edit'
-                }
-              ]
-            },
-            {
-              action: [
-                {
-                  title: 'Remove Item'
-                }
-              ]
-            }
-          ]
+        editIcon: {
+          tag: 'a',
+          attributes: 'href="#" aria-label="Edit product parameters"',
+          class: 'button--icon',
+          iconClass: 'button__icon',
+          iconId: 'edit'
+        },
+        removeIcon: {
+          tag: 'button',
+          attributes: 'type="button" aria-label="Remove product from wishlist"',
+          class: 'button--icon wishlist__remove',
+          iconClass: 'button__icon ',
+          iconId: 'remove'
+        },
+        addToCart: {
+          tag: 'button',
+          text: 'Add to Cart',
+          class: 'wishlist__button'
         }
       },
       {
-        item: {
-          tag: 'div',
-          class: 'dashboard__product',
-          name: 'Some product name',
-          price: '210$',
-          type: 'some attribute text',
+        product: {
           image: {
-            src: '/images/product/product-img-230_180.png'
+            dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
           },
-          button: {
-            tag: 'button',
-            text: 'Add to Cart',
-            class: 'product-item__button action__button'
+          name: {
+            href: '#',
+            class: 'wishlist__item-name-link',
+            text: 'Bruno Compete Hoodie'
+          },
+          price: {
+            class: 'price-box',
+            regularPriceClass: 'price-as-configured'
           }
         },
         textarea: {
-          class: 'dashboard__input',
+          class: 'wishlist__comment',
           field: {
             id: 'comment',
             name: 'comment',
@@ -108,36 +81,59 @@ module.exports = {
           }
         },
         qty: {
-          class: 'input--inline dashboard__input',
+          class: 'input--inline wishlist__qty',
           label: {
             text: 'Qty:',
-            class: 'dashboard__label'
+            class: 'wishlist__label'
           },
           field: {
             id: 'qty',
             name: 'qty',
-            class: 'dashboard__field-qty'
+            type: 'number',
+            class: 'wishlist__field-qty'
           }
         },
-        itemAction: {
-          sides: [
-            {
-              action: [
-                {
-                  title: 'Edit'
-                }
-              ]
-            },
-            {
-              action: [
-                {
-                  title: 'Remove Item'
-                }
-              ]
-            }
-          ]
+        editIcon: {
+          tag: 'a',
+          attributes: 'href="#" aria-label="Edit product parameters"',
+          class: 'button--icon',
+          iconClass: 'button__icon',
+          iconId: 'edit'
+        },
+        removeIcon: {
+          tag: 'button',
+          attributes: 'href="#" aria-label="Remove product from wishlist"',
+          class: 'button--icon wishlist__remove',
+          iconClass: 'button__icon',
+          iconId: 'remove'
+        },
+        addToCart: {
+          tag: 'button',
+          text: 'Add to Cart',
+          class: 'wishlist__button'
         }
       }
-    ]
+    ],
+    actions: [
+      {
+        tag: 'button',
+        text: 'Update Wish List',
+        class: 'button--secondary action__button'
+      },
+      {
+        tag: 'button',
+        text: 'Share Wish List',
+        class: 'button--secondary action__button'
+      },
+      {
+        tag: 'button',
+        text: 'Add All to Cart',
+        class: 'button--secondary action__button'
+      }
+    ],
+    backLink: {
+      text: 'Back',
+      title: 'Back to My Account'
+    }
   }
 }
