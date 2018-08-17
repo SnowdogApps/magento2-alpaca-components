@@ -10,7 +10,6 @@ $swatch__option-background           : $white !default;
 $swatch__option-color                : $gray-dark !default;
 $swatch__option-border               : 4px solid $white !default;
 $swatch__option-border--white        : 1px solid $gray-lighter !default;
-$swatch__option-border-color-hover   : $color-primary !default;
 $swatch__option-border-color--active : $color-primary !default;
 
 .swatch {
@@ -31,16 +30,16 @@ $swatch__option-border-color--active : $color-primary !default;
         cursor: pointer;
 
         &:hover,
-        &:focus {
-            border-color: $swatch__option-border-color-hover;
+        &:focus,
+        &.selected {
+            border-color: $swatch__option-border-color--active;
+            .swatch__option--white {
+                border: 0;
+            }
         }
 
         &:last-child {
             margin-right: 0;
-        }
-
-        &.selected {
-            border-color: $swatch__option-border-color--active;
         }
     }
 
