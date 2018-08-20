@@ -6,7 +6,8 @@ module.exports = {
     allFiltersHeading: 'Shopping Options',
     switcherIcon: {
       class: 'filters__switcher-icon',
-      iconId: 'angle-down'
+      iconId: 'angle-down',
+      iconTitle: 'Arrow down'
     },
     divider: {
       class: 'filters__divider'
@@ -20,6 +21,7 @@ module.exports = {
       text: '',
       icon: {
         iconId: 'angle-down',
+        iconTitle: 'Arrow down',
         class: 'dropdown-list__icon'
       },
       componentObject: {
@@ -90,6 +92,7 @@ module.exports = {
       text: '',
       icon: {
         iconId: 'angle-down',
+        iconTitle: 'Arrow down',
         class: 'dropdown-list__icon'
       },
       options: [
@@ -128,6 +131,7 @@ module.exports = {
       text: '',
       icon: {
         iconId: 'angle-down',
+        iconTitle: 'Arrow down',
         class: 'dropdown-list__icon'
       },
       options: [
@@ -166,6 +170,7 @@ module.exports = {
       title: 'Checkbox',
       icon: {
         iconId: 'angle-down',
+        iconTitle: 'Arrow down',
         class: 'dropdown-list__icon'
       },
       checkboxes: [

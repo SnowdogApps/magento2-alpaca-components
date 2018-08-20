@@ -3,26 +3,14 @@ $swatch__transition                  : $transition-base !default;
 $swatch__title-margin-bottom         : $spacer !default;
 $swatch__title-font-size             : $font-size-base !default;
 
-$swatch__option-size                 : 48px !default;
-$swatch__option-margin               : $spacer--medium !default;
-
+$swatch__option-size                 : 40px !default;
+$swatch__option-size--image          : 48px !default;
+$swatch__option-margin               : $spacer !default;
 $swatch__option-background           : $white !default;
 $swatch__option-color                : $gray-dark !default;
-
 $swatch__option-border               : 4px solid $white !default;
 $swatch__option-border-color-hover   : $color-primary !default;
 $swatch__option-border-color--active : $color-primary !default;
-
-$swatch__option-image-width\@medium  : 42px !default;
-$swatch__option-image-height\@medium : 48px !default;
-
-$swatch__option-image-width\@large   : 54px !default;
-$swatch__option-image-height\@large  : 64px !default;
-
-$swatch__option-size--small          : 32px !default;
-$swatch__option-image-width--small   : 32px !default;
-$swatch__option-image-height--small  : 40px !default;
-$swatch__option-image-margin--small  : $spacer !default;
 
 .swatch {
     display: flex;
@@ -34,40 +22,30 @@ $swatch__option-image-margin--small  : $spacer !default;
         width: 100%;
     }
 
+    &__option-container {
+        box-sizing: border-box;
+        border: $swatch__option-border;
+        margin-right: $swatch__option-margin;
+        transition: $swatch__transition;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            border-color: $swatch__option-border-color-hover;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.selected {
+            border-color: $swatch__option-border-color--active;
+        }
+    }
+
     &__tooltip,
     &__selected-option {
         display: none;
-    }
-
-    &--image {
-        .swatch__option {
-            background-size: cover;
-            background-position: center center;
-
-            @include mq($screen-m) {
-                min-width: $swatch__option-image-width\@medium;
-                min-height: $swatch__option-image-height\@medium;
-            }
-
-            @include mq($screen-l) {
-                min-width: $swatch__option-image-width\@large;
-                min-height: $swatch__option-image-height\@large;
-            }
-        }
-    }
-
-    &--small {
-        .swatch__option {
-            min-width: $swatch__option-size--small;
-            min-height: $swatch__option-size--small;
-        }
-        &.swatch--image {
-            .swatch__option {
-                min-width: $swatch__option-image-width--small;
-                min-height: $swatch__option-image-height--small;
-                margin-right: $swatch__option-image-margin--small;
-            }
-        }
     }
 
     &__title {
@@ -82,25 +60,13 @@ $swatch__option-image-margin--small  : $spacer !default;
         align-items: center;
         min-width: $swatch__option-size;
         min-height: $swatch__option-size;
-        margin-right: $swatch__option-margin;
-        border: $swatch__option-border;
         background-color: $swatch__option-background;
         color: $swatch__option-color;
-        transition: $swatch__transition;
-        cursor: pointer;
 
-        &:hover,
-        &:focus {
-            border-color: $swatch__option-border-color-hover;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &--active,
-        &.selected {
-            border-color: $swatch__option-border-color--active;
+        &--image {
+            min-height: $swatch__option-size--image;
+            background-size: cover;
+            background-position: top center;
         }
     }
 }

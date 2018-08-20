@@ -7,9 +7,29 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Compare view
+- Loader element
+- Hover effect to header buttons
+- Accessibility for swatches and toolbar
+- Swatch color variant
+- README files for elements with accessibility information
+- Sidebar block module for compare, wishlist and recent orders
 
 ### Changed
 - Product page styles
+- Gallery loader styles
+- Swatch refactored
+- Page title and breadcrumbs styles
+- Catalog grid item adjustments
+- Global & Elements accessibility improvements (svg, typography, cookies, messages, pager, price, tabs, table, rating, dropdown-list-medium)
+- Link refactored
+- Moved wishlist component from modules to dashboard views
+
+### Removed
+- sidebar-nav-list module
+
+## [0.7.3] - 09.07.2018
+### Fixed
+- CSS Lint errors
 
 ## [0.7.2] - 07.05.2018
 ### Fixed

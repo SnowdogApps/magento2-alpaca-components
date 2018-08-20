@@ -10,6 +10,7 @@ module.exports = {
       }
     },
     image: {
+      wrapperClass: 'catalog-grid-item__image-wrapper',
       dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
@@ -36,6 +37,7 @@ module.exports = {
       text: '<span class="catalog-grid-item__cart-text">Add to Cart</span>',
       class: 'button button--secondary catalog-grid-item__primary-action',
       iconId: 'shopping-cart',
+      iconTitle: 'Shopping cart',
       iconClass: 'icon catalog-grid-item__cart-icon'
     },
     secondaryActions: {
@@ -43,6 +45,7 @@ module.exports = {
         tag: 'button',
         class: 'button--icon',
         iconId: 'heart',
+        iconTitle: 'Heart',
         iconClass: 'button__icon',
         attributes: 'type="button" aria-label="Add to Wish List"',
       },
@@ -50,59 +53,11 @@ module.exports = {
         tag: 'button',
         class: 'button--icon',
         iconId: 'compare',
+        iconTitle: 'Compare',
         iconClass: 'button__icon',
         attributes: 'type="button" aria-label="Add to compare"',
       }
-    },
-    swatches: [
-      {
-        name: 'swatch',
-        context: {
-          class: 'swatch--small swatch--image',
-          options: [
-            {
-              attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-            },
-            {
-              attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-            },
-            {
-              class: 'swatch__option--active',
-              attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-            },
-            {
-              attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-            }
-          ]
-        }
-      },
-      {
-        name: 'swatch',
-        context: {
-          class: 'swatch--small',
-          attributes: '',
-          titleClass: '',
-          options: [
-            {
-              text: 'XS'
-            },
-            {
-              class: 'swatch__option--active',
-              text: 'S'
-            },
-            {
-              text: 'M'
-            },
-            {
-              text: 'L'
-            },
-            {
-              text: 'XL'
-            }
-          ]
-        }
-      }
-    ]
+    }
   },
   variants: [
     {

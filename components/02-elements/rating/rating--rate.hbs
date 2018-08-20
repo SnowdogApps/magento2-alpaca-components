@@ -1,27 +1,124 @@
-<div class="rating rating--rate {{ class }}" {{{ attributes }}}>
-    <div class="rating__rate-item {{ rateItem.class }}" {{{ rateItem.attributes }}}>
-        <div class="rating__star rating__star--rate {{ star.class }}" {{{ star.attributes }}}>
-            <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+<fieldset class="fieldset">
+    <legend id="rating-field-label">Your rating</legend>
+    <div
+        class="rating rating--rate {{ class }}"
+        role="listbox"
+        aria-required="true"
+        aria-labelledby="rating-field-label"
+        {{{ attributes }}}
+    >
+        <div
+            class="rating__rate-item {{ rateItem.class }}"
+            role="option"
+            aria-selected="false"
+            {{{ rateItem.attributes }}}
+        >
+            <label
+                for="Rating_1"
+                class="rating__star rating__star--rate {{ star.class }}"
+                aria-label="Rate option, 1 of 5. Click to vote"
+                {{{ star.attributes }}}
+            >
+                <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+            </label>
+            <input
+                type="radio"
+                name="ratings[4]"
+                id="Rating_1"
+                value="16"
+                class="radio__field"
+            >
+        </div>
+        <div
+            class="rating__rate-item {{ rateItem.class }}"
+            role="option"
+            aria-selected="false"
+            {{{ rateItem.attributes }}}
+        >
+            <label
+                for="Rating_2"
+                class="rating__star rating__star--rate {{ star.class }}"
+                aria-label="Rate option, 2 of 5. Click to vote"
+                {{{ star.attributes }}}
+            >
+                <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+            </label>
+            <input
+                type="radio"
+                name="ratings[4]"
+                id="Rating_2"
+                value="16"
+                class="radio__field"
+            >
+        </div>
+        <div
+            class="rating__rate-item {{ rateItem.class }}"
+            role="option"
+            aria-selected="false"
+            {{{ rateItem.attributes }}}
+        >
+            <label
+                for="Rating_3"
+                class="rating__star rating__star--rate {{ star.class }}"
+                aria-label="Rate option, 3 of 5. Click to vote"
+                {{{ star.attributes }}}
+            >
+                <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+            </label>
+            <input
+                type="radio"
+                name="ratings[4]"
+                id="Rating_3"
+                value="16"
+                class="radio__field"
+            >
+        </div>
+        <div
+            class="rating__rate-item {{ rateItem.class }}"
+            role="option"
+            aria-selected="false"
+            {{{ rateItem.attributes }}}
+        >
+            <label
+                for="Rating_4"
+                class="rating__star rating__star--rate {{ star.class }}"
+                aria-label="Rate option, 4 of 5. Click to vote"
+                {{{ star.attributes }}}
+            >
+                <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+            </label>
+            <input
+                type="radio"
+                name="ratings[4]"
+                id="Rating_4"
+                value="16"
+                class="radio__field"
+            >
+        </div>
+        <div
+            class="rating__rate-item {{ rateItem.class }}"
+            role="option"
+            aria-selected="false"
+            {{{ rateItem.attributes }}}
+        >
+            <label
+                for="Rating_5"
+                class="rating__star rating__star--rate {{ star.class }}"
+                aria-label="Rate option, 4 of 5. Click to vote"
+                {{{ star.attributes }}}
+            >
+                <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+            </label>
+            <input
+                type="radio"
+                name="ratings[4]"
+                id="Rating_5"
+                value="16"
+                class="radio__field"
+            >
         </div>
     </div>
-    <div class="rating__rate-item {{ rateItem.class }}" {{{ rateItem.attributes }}}>
-        <div class="rating__star rating__star--rate {{ star.class }}" {{{ star.attributes }}}>
-            <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
-        </div>
-    </div>
-    <div class="rating__rate-item {{ rateItem.class }}" {{{ rateItem.attributes }}}>
-        <div class="rating__star rating__star--rate {{ star.class }}" {{{ star.attributes }}}>
-            <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
-        </div>
-    </div>
-    <div class="rating__rate-item {{ rateItem.class }}" {{{ rateItem.attributes }}}>
-        <div class="rating__star rating__star--rate {{ star.class }}" {{{ star.attributes }}}>
-            <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
-        </div>
-    </div>
-    <div class="rating__rate-item {{ rateItem.class }}" {{{ rateItem.attributes }}}>
-        <div class="rating__star rating__star--rate {{ star.class }}" {{{ star.attributes }}}>
-            <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
-        </div>
-    </div>
-</div>
+</fieldset>
+{{#if script}}
+    <script src="{{static 'rating-rate.js' }}"></script>
+{{/if}}

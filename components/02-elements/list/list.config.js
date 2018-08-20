@@ -47,19 +47,22 @@ module.exports = {
         elements: [
           {
             icon: {
-              iconId: 'facebook'
+              iconId: 'facebook',
+              iconTitle: 'Facebook logo'
             },
             iconItemLink: '#'
           },
           {
             icon: {
-              iconId: 'twitter'
+              iconId: 'twitter',
+              iconTitle: 'Twitter logo'
             },
             iconItemLink: '#'
           },
           {
             icon: {
-              iconId: 'linkedin'
+              iconId: 'linkedin',
+              iconTitle: 'LinkedIn logo'
             },
             iconItemLink: '#'
           }
@@ -105,6 +108,7 @@ module.exports = {
     {
       name: 'description',
       context: {
+        attributes: 'title="Alpaca description list"',
         elements: [
           {
             label: 'Lorem ipsum',

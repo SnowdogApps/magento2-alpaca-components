@@ -1,5 +1,5 @@
 <{{{ tag }}} class="catalog-list-item {{ class }}">
-    <a href="#" class="catalog-list-item__image-wrapper catalog-list-item__link">
+    <a href="#" class="catalog-list-item__link">
         {{ render '@image' image }}
     </a>
     <div class="catalog-list-item__main">
@@ -18,6 +18,10 @@
         </div>
         <div class="catalog-list-item__price">
             {{ render (component price.name) price.context }}
+        </div>
+        <div class="catalog-grid-item__options">
+            {{ render '@swatch' }}
+            {{ render '@swatch--image' }}
         </div>
         <div class="catalog-list-item__actions">
             <div class="catalog-list-item__actions-primary">
