@@ -75,8 +75,8 @@ module.exports = {
           name: 'price--with-special-price',
           context: {
             oldPriceClass: 'catalog-grid-item__old-price',
-            regularPrice: '400.00',
-            specialPrice: '999.99',
+            regularPrice: '1000.00',
+            specialPrice: '899.99',
             specialPriceClass: 'catalog-grid-item__special-price',
             prefix: {
               tag: '',
