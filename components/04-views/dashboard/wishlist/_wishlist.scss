@@ -45,10 +45,6 @@ $wishlist__action-padding-top    : $spacer--medium !default;
             margin: $wishlist__price-margin;
             font-weight: $wishlist__price-font-weight;
         }
-
-        .image {
-            mix-blend-mode: multiply;
-        }
     }
 
     &__item-name {

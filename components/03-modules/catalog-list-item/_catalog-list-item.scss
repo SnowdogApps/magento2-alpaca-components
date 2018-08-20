@@ -61,7 +61,6 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
         .image {
             width: $catalog-list-item__image-width;
             height: $catalog-list-item__image-height--inner;
-            mix-blend-mode: multiply;
             @include mq($screen-m) {
                 width: $catalog-list-item__image-width\@medium;
             }

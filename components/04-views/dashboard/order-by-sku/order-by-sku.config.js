@@ -61,6 +61,7 @@ module.exports = {
     uploadInfo: {
       informations: [
         {
+          headingTag: 'h4',
           title: 'Attention',
           text: 'File extension allowed: *.csv. Your CSV file must include "sku" and "qty" columns.'
         }

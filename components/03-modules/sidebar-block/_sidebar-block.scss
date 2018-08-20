@@ -1,4 +1,6 @@
-$sidebar-block__padding                    : $spacer--medium 0 $spacer--large !default;
+$sidebar-block__padding                    : 0 0 $spacer--large !default;
+$sidebar-block__min-height                 : 150px !default;
+$sidebar-block__min-height--loaded         : auto !default;
 $sidebar-block__heading-margin-bottom      : $spacer !default;
 $sidebar-block__title-font-weight          : $font-weight-bold !default;
 $sidebar-block__list-margin-bottom         : $spacer !default;
@@ -24,9 +26,16 @@ $sidebar-block__price-font-weight          : $font-weight-bold !default;
 $sidebar-block__message-margin             : 0 !default;
 
 .sidebar-block {
+    position: relative;
     padding: $sidebar-block__padding;
+    min-height: $sidebar-block__min-height;
+
     &--hidden {
         display: none;
+    }
+
+    &--loaded {
+        min-height: $sidebar-block__min-height--loaded;
     }
 
     &__heading {
