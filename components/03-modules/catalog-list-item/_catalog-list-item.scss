@@ -1,6 +1,8 @@
 $catalog-list-item__padding                                      : $spacer 0 !default;
 $catalog-list-item__font-size                                    : 12px !default;
 $catalog-list-item__font-size\@medium                            : 14px !default;
+$catalog-list-item__font-size--main                              : 14px !default;
+$catalog-list-item__font-size--main\@medium                      : 16px !default;
 
 $catalog-list-item__image-width                                  : 96px !default;
 $catalog-list-item__image-width\@medium                          : 208px !default;
@@ -110,10 +112,10 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
     &__name {
         margin: $catalog-list-item__name-margin;
         font-weight: $catalog-list-item__name-font-weight;
-        font-size: $catalog-list-item__font-size;
+        font-size: $catalog-list-item__font-size--main;
         @include mq($screen-m) {
             margin: $catalog-list-item__name-margin\@medium;
-            font-size: $catalog-list-item__font-size\@medium;
+            font-size: $catalog-list-item__font-size--main\@medium;
         }
 
         .link {
@@ -131,13 +133,13 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
 
     &__price {
         margin: $catalog-list-item__price-margin;
-        font-size: $catalog-list-item__font-size;
+        font-size: $catalog-list-item__font-size--main;
         font-weight: $catalog-list-item__price-font-weight;
         white-space: nowrap;
 
         @include mq($screen-m) {
             margin: $catalog-list-item__price-margin\@medium;
-            font-size: $catalog-list-item__font-size\@medium;
+            font-size: $catalog-list-item__font-size--main\@medium;
         }
     }
 
