@@ -18,6 +18,7 @@ module.exports = {
     product: [
       {
         image: {
+          wrapperClass: 'quicksearch__product-image-wrapper',
           class: 'quicksearch__product-image',
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
@@ -29,6 +30,7 @@ module.exports = {
       },
       {
         image: {
+          wrapperClass: 'quicksearch__product-image-wrapper',
           class: 'quicksearch__product-image',
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
@@ -40,6 +42,7 @@ module.exports = {
       },
       {
         image: {
+          wrapperClass: 'quicksearch__product-image-wrapper',
           class: 'quicksearch__product-image',
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },
@@ -51,6 +54,7 @@ module.exports = {
       },
       {
         image: {
+          wrapperClass: 'quicksearch__product-image-wrapper',
           class: 'quicksearch__product-image',
           dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
         },

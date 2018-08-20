@@ -29,12 +29,13 @@ $quicksearch__categories-column-padding\@medium: 0 0 0 $spacer--medium !default;
 $quicksearch__product-border                   : 1px solid $gray-light !default;
 $quicksearch__product-border--last             : 0 !default;
 $quicksearch__product-padding                  : $spacer 0 !default;
-$quicksearch__product-image-max-size           : 72px !default;
-$quicksearch__product-image-mix                : multiply !default;
+$quicksearch__product-image-size               : 72px !default;
+$quicksearch__product-image-margin-right       : $spacer !default;
 $quicksearch__product-price-font-weight        : $font-weight-bold !default;
 $quicksearch__name-margin                      : 0 !default;
 $quicksearch__name-padding                     : $spacer 0 !default;
 $quicksearch__name-color                       : inherit !default;
+$quicksearch__name-font-size                   : 16px !default;
 $quicksearch__name-font-weight                 : $font-weight-normal !default;
 $quicksearch__more-link-padding                : $spacer--medium 0 !default;
 $quicksearch__more-link-border-top             : 1px solid $gray-light !default;
@@ -140,15 +141,13 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
     }
 
     &__product-image-wrapper {
-        display: flex;
-        margin-right: $spacer;
-        background: $gray-lightest;
+        min-width: $quicksearch__product-image-size;
+        min-height: $quicksearch__product-image-size;
+        margin-right: $quicksearch__product-image-margin-right;
     }
 
     &__product-image {
-        max-width: $quicksearch__product-image-max-size;
-        max-height: $quicksearch__product-image-max-size;
-        mix-blend-mode: $quicksearch__product-image-mix;
+        max-width: $quicksearch__product-image-size;
     }
 
     &__link {
@@ -157,6 +156,7 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
 
     &__name {
         color: $quicksearch__name-color;
+        font-size: $quicksearch__name-font-size;
         &--thin {
             margin: $quicksearch__name-margin;
             padding: $quicksearch__name-padding;
