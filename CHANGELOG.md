@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Sidebar block module for compare, wishlist and recent orders
 - Margin to notification
 - Modifier to swatch option for white color
+- Quicksearch module
 
 ### Changed
 - Product page styles
