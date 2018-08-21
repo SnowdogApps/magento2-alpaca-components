@@ -1,8 +1,8 @@
 $catalog-grid-item__base-spacing              : $spacer !default;
 $catalog-grid-item__padding                   : 0 !default;
 $catalog-grid-item__border                    : 1px solid $gray-lightest !default;
-$catalog-grid-item__font-size                 : $font-size-small !default;
-$catalog-grid-item__font-size\@large          : $font-size-base !default;
+$catalog-grid-item__font-size                 : $font-size-base !default;
+$catalog-grid-item__font-size\@large          : 16px !default;
 $catalog-grid-item__line-height               : 1.5 !default;
 $catalog-grid-item__font-weight               : $font-weight-bold !default;
 
@@ -30,8 +30,8 @@ $catalog-grid-item__link-text-overflow        : ellipsis !default;
 $catalog-grid-item__content-bg-color          : $white !default;
 $catalog-grid-item__content-padding           : $spacer !default;
 $catalog-grid-item__content-width             : 100% !default;
-$catalog-grid-item__content-height            : 60px !default;
-$catalog-grid-item__content-height\@large     : 66px !default;
+$catalog-grid-item__content-height            : 67px !default;
+$catalog-grid-item__content-height\@large     : 73px !default;
 $catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
 $catalog-grid-item__content-translateY\@large : translateY(-$catalog-grid-item__content-height\@large) !default;
 $catalog-grid-item__content-translateY--active: translateY(-100%) !default;
