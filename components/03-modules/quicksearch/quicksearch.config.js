@@ -13,6 +13,7 @@ module.exports = {
       class: 'button--icon quicksearch__close-button',
       iconId: 'close',
       iconClass: 'button__icon quicksearch__close-icon',
+      iconTitle: 'Close',
       attributes: 'type="button" aria-label="Close quicksearch"',
     },
     product: [
@@ -125,6 +126,10 @@ module.exports = {
         items: '598 item(s)'
       }
     ],
-    more: 'See All'
+    more: {
+      class: 'link--invert quicksearch__more-link',
+      href: '#',
+      text: 'See All'
+    }
   }
 }

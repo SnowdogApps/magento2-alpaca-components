@@ -16,13 +16,14 @@
             <ul class="quicksearch__list quicksearch__list--column">
                 {{#each product }}
                     <li class="quicksearch__product">
-                        <a href="#">
+                        <a href="#" title="{{ name.text }}">
                             {{ render '@image' image }}
                         </a>
                         <div class="quicksearch__product-details">
                             <a
                                 href="#"
                                 class="link link--invert quicksearch__link"
+                                title="{{ name.text }}"
                             >
                                 {{ render '@heading' name }}
                             </a>
@@ -38,6 +39,7 @@
                             <a
                                 href="#"
                                 class="link link--invert quicksearch__link"
+                                title="{{ name.text }}"
                             >
                                 {{ render '@heading' name }}
                             </a>
@@ -51,6 +53,7 @@
                             <a
                                 href="#"
                                 class="link link--invert quicksearch__link"
+                                title="{{ name.text }}"
                             >
                                 {{ render '@heading' name }}
                             </a>
@@ -60,8 +63,6 @@
                 </ul>
             </div>
         </div>
-        <a href="#" class="link link--invert quicksearch__more-link">
-            {{ more }}
-        </a>
+        {{ render '@link' more }}
     </div>
 </div>
