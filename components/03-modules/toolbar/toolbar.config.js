@@ -5,6 +5,7 @@ module.exports = {
     showAmount: true,
     showLimit: true,
     amount: {
+      class: 'toolbar__amount',
       prefix: 'Items',
       currentRange: '1-9',
       preposition: 'of',
@@ -52,6 +53,7 @@ module.exports = {
       ]
     },
     limiter: {
+      class: 'toolbar__limiter',
       select: {
         class: 'toolbar__limiter-wrapper',
         label: {

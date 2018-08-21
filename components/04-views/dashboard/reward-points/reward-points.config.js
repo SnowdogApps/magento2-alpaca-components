@@ -3,10 +3,12 @@ module.exports = {
     info: {
       informations: [
         {
+          headingTag: 'h4',
           title: 'Reward points balance Information',
           text: 'Your balance is 0 Reward points.'
         },
         {
+          headingTag: 'h4',
           class: 'dashboard__item',
           text: 'Current exchange rates: None'
         }
