@@ -2,6 +2,8 @@ $rating-base-margin             : 15px !default;
 $review__fieldset-margin-bottom : $spacer--large !default;
 $review__field-margin           : 0 !default;
 $review__fieldset-padding-top   : $spacer !default;
+$review__rating-margin-bottom   : $spacer !default;
+$review__amount-margin-left     : $spacer !default;
 
 .review {
     &__divider {
@@ -30,5 +32,14 @@ $review__fieldset-padding-top   : $spacer !default;
 
     &__field {
         margin-bottom: $review__field-margin;
+    }
+
+    &__rating {
+        display: flex;
+        margin-bottom: $review__rating-margin-bottom;
+    }
+
+    &__amount {
+        margin-left: $review__amount-margin-left;
     }
 }

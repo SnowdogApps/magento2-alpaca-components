@@ -1,7 +1,8 @@
 module.exports = {
   context: {
     rating: {
-      ariaLabel: 'Average rating 60%',
+      ariaLabel: 'Your rating 60%',
+      title: 'Your rating 60%',
       star: {
         attributes: 'style="width: 60%"'
       }
@@ -14,10 +15,16 @@ module.exports = {
     {
       name: 'add',
       context: {
-        reviewAmountLink: '#',
-        reviewAmount: '2 Reviews',
-        addYourLink: '#',
-        addYour: 'Add Your Review'
+        amount: {
+          class: 'review__amount',
+          href: '#',
+          text: '(2)',
+          title: '2 reviews',
+        },
+        addReview: {
+          href: '#',
+          text: 'Add Your Review',
+        }
       }
     }
   ]
