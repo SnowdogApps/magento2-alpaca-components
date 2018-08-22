@@ -9,10 +9,10 @@ $input__margin-bottom                : $spacer !default;
 $input__placeholder-color            : $gray !default;
 $input__label-margin-right           : $spacer--medium !default;
 $input__min-height--textarea         : 100px !default;
-$input__date-background-image        : url("../images/icons/calendar.svg") !important;
-$input__date-background-size         : 25px 25px !important;
-$input__date-background-repeat       : no-repeat !important;
-$input__date-background-position     : center center !important;
+$input__date-background-image        : url("../images/icons/calendar.svg") !important; // sass-lint:disable-line no-important
+$input__date-background-size         : 25px 25px !important; // sass-lint:disable-line no-important
+$input__date-background-repeat       : no-repeat !important; // sass-lint:disable-line no-important
+$input__date-background-position     : center center !important; // sass-lint:disable-line no-important
 
 .input {
     margin-bottom: $input__margin-bottom;
