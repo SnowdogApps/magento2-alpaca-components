@@ -1,10 +1,13 @@
 module.exports = {
   context: {
     rating: {
-      ariaLabel: 'Your rating 60%',
-      title: 'Your rating 60%',
-      star: {
-        attributes: 'style="width: 60%"'
+      label: 'Average rating:',
+      stars: {
+        ariaLabel: 'Your rating: 60%',
+        title: 'Your rating: 60%',
+        star: {
+          attributes: 'style="width: 60%"'
+        }
       }
     },
     title: 'Lorem Ipsum',

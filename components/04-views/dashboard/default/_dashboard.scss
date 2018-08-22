@@ -1,4 +1,5 @@
-$dashboard-margin                : $spacer--medium 0 $spacer--large !default;
+$dashboard-margin-base           : $spacer--medium 0 $spacer--large !default;
+$dashboard-margin                : $spacer--large !default;
 $dashboard-padding               : $spacer--medium !default;
 $dashboard__sidebar-width--medium: calc(25% - 3 * #{$grid__gutter} / 4) !default;
 $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
@@ -7,7 +8,7 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
     &__sidebar,
     &__content {
         @include mq($screen-m) {
-            margin: $dashboard-margin;
+            margin: $dashboard-margin-base;
             padding: 0 $dashboard-padding;
         }
 
