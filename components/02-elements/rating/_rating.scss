@@ -1,8 +1,8 @@
 $rating__size                   : 96px !default;
 $rating__item-size              : $rating__size / 5 !default;
-$rating__size--review           : 200px !default;
-$rating__margin--review         : $spacer--medium !default;
-$rating__item-size--review      : $rating__size--review / 5 !default;
+$rating__size--rate             : 250px !default;
+$rating__margin--rate           : $spacer--medium !default;
+$rating__item-size--rate        : $rating__size--rate / 5 !default;
 $icon__active-color             : '#fab216' !default;
 $icon__active-color--with-border: '#fab216' !default;
 $icon__inactive-color           : '#c2c1df' !default;
@@ -12,59 +12,6 @@ $rating__error-color            : $red !default;
 .rating {
     width: $rating__size;
 
-    &--rate {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    &--review {
-        width: $rating__size--review;
-        margin-bottom: $rating__margin--review;
-
-        .rating__rate-item {
-            flex: 1 0 $rating__item-size--review;
-        }
-
-        .rating__star {
-            height: $rating__item-size--review;
-            width: $rating__size--review;
-
-            &--rate {
-                width: $rating__item-size--review;
-            }
-
-            &:before {
-                width: $rating__size--review;
-                height: $rating__item-size--review;
-                background-size: $rating__item-size--review;
-
-                @include isIE() {
-                    background-size: $rating__item-size--review 100%;
-                }
-            }
-
-            &--single {
-                width: $rating__item-size--review;
-            }
-        }
-
-        .rating__indicator {
-            height: $rating__item-size--review;
-            width: $rating__size--review;
-
-            &:before {
-                height: $rating__item-size--review;
-                background-size: $rating__item-size--review;
-            }
-
-            &:after {
-                height: $rating__item-size--review;
-                background-size: $rating__item-size--review;
-            }
-        }
-    }
 
     &:hover,
     &:focus {
@@ -89,9 +36,7 @@ $rating__error-color            : $red !default;
         position: relative;
         height: $rating__item-size;
         width: $rating__size;
-        &--rate {
-            width: $rating__item-size;
-        }
+
         &:before { // inactive
             position: absolute;
             bottom: 0;
@@ -195,5 +140,57 @@ $rating__error-color            : $red !default;
 
     .mage-error {
         display: none !important; // sass-lint:disable-line no-important
+    }
+    &--rate {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $rating__size--rate;
+        margin-bottom: $rating__margin--rate;
+
+        .rating__rate-item {
+            flex: 1 0 $rating__item-size--rate;
+        }
+
+        .rating__star {
+            height: $rating__item-size--rate;
+            width: $rating__item-size--rate;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+
+            &:before {
+                width: $rating__item-size--rate;
+                height: $rating__item-size--rate;
+                background-size: $rating__item-size--rate;
+
+                @include isIE() {
+                    background-size: $rating__item-size--rate 100%;
+                }
+            }
+
+            &--single {
+                width: $rating__item-size--rate;
+            }
+        }
+        .radio__field {
+            width: 1px;
+            height: 1px;
+        }
+
+        .rating__indicator {
+            height: $rating__item-size--rate;
+            width: $rating__item-size--rate;
+
+            &:before {
+                height: $rating__item-size--rate;
+                background-size: $rating__item-size--rate;
+            }
+
+            &:after {
+                height: $rating__item-size--rate;
+                background-size: $rating__item-size--rate;
+            }
+        }
     }
 }

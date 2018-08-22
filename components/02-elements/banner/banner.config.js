@@ -1,6 +1,7 @@
 module.exports = {
   context: {
     link: '#',
+    attributes: 'aria-label="descriptive text about banner action and / or image"',
     image: {
       defaultSrc: '/images/banner/banner-320_176.jpg',
       sources: [

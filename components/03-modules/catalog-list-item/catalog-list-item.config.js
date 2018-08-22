@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     tag: 'section',
-    class: '',
+    class: 'catalog-list__item',
     badge: {
       name: 'badge--new',
       context: {
@@ -10,6 +10,7 @@ module.exports = {
       }
     },
     image: {
+      wrapperClass: 'catalog-list-item__image-wrapper',
       dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
     },
     name: 'Some product name - very long name because that\'s important',
@@ -38,6 +39,7 @@ module.exports = {
       text: '',
       class: 'button--icon',
       iconId: 'heart',
+      iconTitle: 'Heart',
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Add to wishlist"'
     },
@@ -46,6 +48,7 @@ module.exports = {
       text: '',
       class: 'button--icon',
       iconId: 'compare',
+      iconTitle: 'Compare',
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Add to compare"'
     }

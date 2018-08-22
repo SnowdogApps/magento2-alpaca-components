@@ -4,42 +4,28 @@
     {{/if}}
 
     <a href="#" class="catalog-grid-item__link">
-        <div class="catalog-grid-item__image-wrapper">
-            {{ render '@image' image merge=true }}
-        </div>
+        {{ render '@image' image merge=true }}
     </a>
 
-    <section class="catalog-grid-item__main">
+    <section class="catalog-grid-item__details">
         <h2 class="catalog-grid-item__name">
-            <a href="#" class="catalog-grid-item__link">
+            <a
+                href="#"
+                class="catalog-grid-item__link catalog-grid-item__link--name"
+            >
                 {{ name }}
             </a>
         </h2>
-        <div class="catalog-grid-item__price">
-            {{ render (component price.name) price.context }}
-        </div>
-    </section>
 
-    <section class="catalog-grid-item__details">
-        <div
-            class="
-                catalog-grid-item__name
-                catalog-grid-item__name--one-line
-            "
-        >
-            <a href="#" class="catalog-grid-item__link">
-                {{ name }}
-            </a>
-        </div>
-        {{ render '@rating' rating merge=true }}
         <div class="catalog-grid-item__price">
             {{ render (component price.name) price.context }}
         </div>
+
+        {{ render '@rating' rating merge=true }}
 
         <div class="catalog-grid-item__options">
-            {{#each swatches as |swatch|}}
-                {{ render (component swatch.name) swatch.context }}
-            {{/each}}
+            {{ render '@swatch' }}
+            {{ render '@swatch--image' }}
         </div>
 
         <div class="catalog-grid-item__actions">

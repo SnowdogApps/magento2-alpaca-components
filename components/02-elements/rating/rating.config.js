@@ -1,5 +1,6 @@
 module.exports = {
   context: {
+    ariaLabel: 'Average rating 72%',
     star: {
       attributes: 'style="width: 72%"'
     }
@@ -8,7 +9,7 @@ module.exports = {
     {
       name: 'rate',
       context: {
-        ratingScore: '71%',
+        script: true,
         star: {
           attributes: ''
         }

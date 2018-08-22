@@ -6,6 +6,9 @@
         <div class="catalog-list">
             <div class="catalog-list__sidebar">
                 {{ render '@filters' }}
+                {{ render '@sidebar-block' }}
+                {{ render '@sidebar-block--recently-ordered' }}
+                {{ render '@sidebar-block--wishlist' }}
             </div>
             <div class="catalog-list__products">
                 {{ render '@toolbar' }}

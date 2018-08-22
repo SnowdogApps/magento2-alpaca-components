@@ -1,4 +1,4 @@
-<div class="pager {{ class }}">
+<nav class="pager {{ class }}" {{{attributes}}}>
     <ul class="pager__list">
         <li class="pager__item">
             <a href="#"
@@ -6,7 +6,7 @@
                aria-label="{{ ariaLabelLeft }}"
                {{#unless arrowLeftActive}}disabled{{/unless}}
             >
-                <svg class="pager__icon">
+                <svg class="pager__icon" aria-hidden="true">
                     <use xlink:href="{{ svg 'arrow-left' }}"></use>
                 </svg>
             </a>
@@ -14,7 +14,11 @@
 
         {{#each pages as |page|}}
             {{#if this.active}}
-                <li class="pager__item pager__item--current">
+                <li
+                    class="pager__item pager__item--current"
+                    aria-current="page"
+                    aria-label="Page {{ pageNo }}, current page"
+                >
                     {{ pageNo }}
                 </li>
             {{else}}
@@ -35,10 +39,10 @@
                aria-label="{{ ariaLabelRight }}"
                {{#unless arrowRightActive}}disabled{{/unless}}
             >
-                <svg class="pager__icon">
+                <svg class="pager__icon" aria-hidden="true">
                     <use xlink:href="{{ svg 'arrow-right' }}"></use>
                 </svg>
             </a>
         </li>
     </ul>
-</div>
+</nav>
