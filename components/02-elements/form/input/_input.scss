@@ -9,6 +9,10 @@ $input__margin-bottom                : $spacer !default;
 $input__placeholder-color            : $gray !default;
 $input__label-margin-right           : $spacer--medium !default;
 $input__min-height--textarea         : 100px !default;
+$input__date-background-image        : url("../images/icons/calendar.svg") !default;
+$input__date-background-size         : 25px 25px !default;
+$input__date-background-repeat       : no-repeat !default;
+$input__date-background-position     : center center !default;
 
 .input {
     margin-bottom: $input__margin-bottom;
@@ -43,6 +47,27 @@ $input__min-height--textarea         : 100px !default;
             min-height: $input__min-height--textarea;
             padding: $input__field-padding--textarea;
             line-height: $input__field-line-height--textarea;
+        }
+    }
+
+    .ui-datepicker-trigger {
+        @extend .button;
+        @extend .button--icon;
+        background-image: $input__date-background-image;
+        background-size: $input__date-background-size;
+        background-repeat: $input__date-background-repeat;
+        background-position: $input__date-background-position;
+
+        &:hover,
+        &:focus {
+            background-image: $input__date-background-image;
+            background-size: $input__date-background-size;
+            background-repeat: $input__date-background-repeat;
+            background-position: $input__date-background-position;
+        }
+
+        span {
+            display: none;
         }
     }
 }

@@ -117,23 +117,28 @@ module.exports = {
     {
       name: 'details',
       context: {
-        title: 'Review Details',
+        title: {
+          tag: 'h2',
+          class: 'heading--fourth-level dashboard__title',
+          text: 'Review Details'
+        },
         product: {
           tag: 'div',
           class: 'dashboard__product',
-          name: 'Some product name',
           image: {
-            src: '/images/product/product-img-230_180.png'
+            dataSrc: '/images/catalog-grid-item/product-1_320_312.jpg'
+          },
+          name: {
+            tag: 'h2',
+            class: 'product-reviews__name',
+            text: 'Juno Jacket'
           }
         },
-        review: {
-          class: 'dashboard__item',
-          reviewAmountLink: '#',
-          reviewAmount: '2 Reviews',
-          addYourLink: '#',
-          addYour: 'Add Your Review'
-        },
-        yourReview: 'Your review',
+        yourReview: {
+          tag: 'h2',
+          class: 'heading--fourth-level dashboard__title',
+          text: 'Your review'
+        }
       }
     }
   ]
