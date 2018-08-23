@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     rating: {
-      label: 'Average rating:',
+      label: 'Your rating:',
       stars: {
         ariaLabel: 'Your rating: 60%',
         title: 'Your rating: 60%',

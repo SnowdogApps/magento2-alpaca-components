@@ -120,7 +120,7 @@ module.exports = {
         title: {
           tag: 'h2',
           class: 'heading--fourth-level dashboard__title',
-          text: 'My Product Reviews'
+          text: 'Review Details'
         },
         product: {
           tag: 'div',
@@ -130,6 +130,7 @@ module.exports = {
           },
           name: {
             tag: 'h2',
+            class: 'product-reviews__name',
             text: 'Juno Jacket'
           }
         },
