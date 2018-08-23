@@ -82,11 +82,13 @@ $product-view__price-font-size                          : $font-size-large !defa
 $product-view__price-font-weight                        : $font-weight-bold !default;
 
 // values should match product-view__title to align vertically on desktop
-$product-view__product-rating-line-height               : 1.5em !default;
-
 $product-view__qty-margin-right\@small                  : $spacer--medium !default;
 
 $product-view__rating-link-color                        : $gray-dark !default;
+$product-view__rating-width                             : 100% !default;
+$product-view__rating-width\@medium                     : 45% !default;
+$product-view__rating-top                               : 0 !default;
+$product-view__rating-right                             : 0 !default;
 $product-view__rating-margin                            : 0 0 14px 0 !default;
 $product-view__rating-margin\@medium                    : 0 !default;
 $product-view__rating-text-color                        : $gray-dark !default;
@@ -296,19 +298,6 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         }
     }
 
-    &__rating {
-        width: 100%;
-        margin: $product-view__rating-margin;
-        @include clearfix;
-        @include mq($screen-m) {
-            position: absolute;
-            right: 0;
-            width: 45%;
-            text-align: right;
-            margin: $product-view__rating-margin\@medium;
-        }
-    }
-
     &__stock-status {
         color: $product-view__stock-color;
         width: 50%;
@@ -335,13 +324,17 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
     &__rating {
         color: $product-view__rating-text-color;
+        width: $product-view__rating-width;
         display: flex;
+        margin: $product-view__rating-margin;
         justify-content: space-between;
         @include mq($screen-m) {
-            display: block;
-            top: 0;
-            text-align: right;
-            font-size: $product-view__product-rating-line-height;
+            position: absolute;
+            top: $product-view__rating-top;
+            right: $product-view__rating-right;
+            width: $product-view__rating-width\@medium;
+            justify-content: flex-end;
+            margin: $product-view__rating-margin\@medium;
         }
     }
 

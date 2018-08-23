@@ -1,0 +1,7 @@
+$input__error-color     : $color-danger !default;
+$input__error-margin-top: $spacer !default;
+
+.mage-error {
+    margin-top: $input__error-margin-top;
+    color: $input__error-color;
+}

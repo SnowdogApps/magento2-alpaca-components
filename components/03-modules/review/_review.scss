@@ -1,7 +1,11 @@
-$rating-base-margin             : 15px !default;
+$rating-base-margin             : $spacer--medium !default;
+$rating__description-margin     : $spacer 0 !default;
 $review__fieldset-margin-bottom : $spacer--large !default;
 $review__field-margin           : 0 !default;
 $review__fieldset-padding-top   : $spacer !default;
+$review__rating-margin-bottom   : $spacer !default;
+$review__amount-margin-left     : $spacer !default;
+$review__label-margin-right     : $spacer !default;
 
 .review {
     &__divider {
@@ -20,7 +24,7 @@ $review__fieldset-padding-top   : $spacer !default;
 
     &__description {
         vertical-align: middle;
-        margin-right: $rating-base-margin;
+        margin: $rating__description-margin;
     }
 
     &__fieldset {
@@ -30,5 +34,21 @@ $review__fieldset-padding-top   : $spacer !default;
 
     &__field {
         margin-bottom: $review__field-margin;
+    }
+
+    &__rating {
+        display: flex;
+        margin-bottom: $review__rating-margin-bottom;
+        &--average {
+            align-items: center;
+        }
+    }
+
+    &__rating-label {
+        margin-right: $review__label-margin-right;
+    }
+
+    &__amount {
+        margin-left: $review__amount-margin-left;
     }
 }

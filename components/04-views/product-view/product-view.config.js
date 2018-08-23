@@ -33,17 +33,6 @@ module.exports = {
     price: {
       content: 'price--with-special-price'
     },
-    rating: {
-      class: '',
-      href: '#',
-      value: '34',
-      parenthesis: true
-    },
-    addReview: {
-      text: 'Add Your Review',
-      href: '#',
-      class: ''
-    },
     stock: {
       html: 'In stock - only 5 left',
       outOfStock: false,
