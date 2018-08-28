@@ -1,10 +1,11 @@
 <div class="review {{ class }}" {{{ attributes }}}>
     <div class="review__divider">
-        <span class="review__description">
-            Rating:
-        </span>
-
-        {{> '@rating--summary' rating }}
+        <div class="review__rating review__rating--average">
+            <span class="review__rating-label">
+                {{ rating.label }}
+            </span>
+            {{ render '@rating' rating.stars }}
+        </div>
     </div>
 
     <h3 class="heading heading--fourth-level review__title">

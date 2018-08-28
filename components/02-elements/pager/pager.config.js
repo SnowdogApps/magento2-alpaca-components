@@ -1,6 +1,7 @@
 module.exports = {
   collated: true,
   context: {
+    attributes: 'role="navigation" aria-label="Pagination navigation"',
     arrowLeftActive: false,
     arrowRightActive: true,
     ariaLabelLeft: 'Link to previous page, disabled',

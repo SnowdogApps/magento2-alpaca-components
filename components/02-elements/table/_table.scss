@@ -25,6 +25,10 @@ $table__background-even--clean   : $white !default;
     border-spacing: 0;
     font-size: $table__font-size;
 
+    &__caption {
+        @include visually-hidden();
+    }
+
     thead {
         tr {
             padding: 0;

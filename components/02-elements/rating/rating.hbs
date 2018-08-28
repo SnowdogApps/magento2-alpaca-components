@@ -1,5 +1,15 @@
-<div class="rating {{ class }}" {{{ attributes }}}>
-    <div class="rating__star {{ star.class }}" {{{ star.attributes }}}>
+<div
+    class="rating {{ class }}"
+    aria-label="{{ ariaLabel }}"
+    title="{{ title }}"
+    tabindex="0"
+    {{{ attributes }}}
+>
+    <div
+        class="rating__star {{ star.class }}"
+        aria-hidden="true"
+        {{{ star.attributes }}}
+    >
         <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
     </div>
 </div>

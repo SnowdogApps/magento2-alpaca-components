@@ -37,6 +37,7 @@ module.exports = {
       text: '<span class="catalog-grid-item__cart-text">Add to Cart</span>',
       class: 'button button--secondary catalog-grid-item__primary-action',
       iconId: 'shopping-cart',
+      iconTitle: 'Shopping cart',
       iconClass: 'icon catalog-grid-item__cart-icon'
     },
     secondaryActions: {
@@ -44,6 +45,7 @@ module.exports = {
         tag: 'button',
         class: 'button--icon',
         iconId: 'heart',
+        iconTitle: 'Heart',
         iconClass: 'button__icon',
         attributes: 'type="button" aria-label="Add to Wish List"',
       },
@@ -51,6 +53,7 @@ module.exports = {
         tag: 'button',
         class: 'button--icon',
         iconId: 'compare',
+        iconTitle: 'Compare',
         iconClass: 'button__icon',
         attributes: 'type="button" aria-label="Add to compare"',
       }
@@ -72,8 +75,8 @@ module.exports = {
           name: 'price--with-special-price',
           context: {
             oldPriceClass: 'catalog-grid-item__old-price',
-            regularPrice: '400.00',
-            specialPrice: '999.99',
+            regularPrice: '1000.00',
+            specialPrice: '899.99',
             specialPriceClass: 'catalog-grid-item__special-price',
             prefix: {
               tag: '',

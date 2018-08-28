@@ -11,14 +11,16 @@ module.exports = {
       class: 'button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled',
       attributes: 'type="button" aria-label="Decrease the quantity"',
       iconClass: 'button__icon quantity-update__icon',
-      iconId: 'minus'
+      iconId: 'minus',
+      iconTitle: 'Minus mark'
     },
     plusQtyButton: {
       tag: 'button',
       class: 'button--icon quantity-update__button quantity-update__button--plus',
       attributes: 'type="button" aria-label="Increase the quantity"',
       iconClass: 'button__icon quantity-update__icon',
-      iconId: 'plus'
+      iconId: 'plus',
+      iconTitle: 'Plus mark'
     },
     script: true
   }

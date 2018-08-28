@@ -5,12 +5,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Rating stars
+
+## Fixed
+- Review module and review details view
+
+## [0.8.0] - 22.08.2018
 ### Added
 - Compare view
 - Loader element
 - Hover effect to header buttons
 - Accessibility for swatches and toolbar
 - Swatch color variant
+- README files for elements with accessibility information
+- Sidebar block module for compare, wishlist and recent orders
+- Margin to notification
+- Modifier to swatch option for white color
+- Quicksearch module
 
 ### Changed
 - Product page styles
@@ -18,6 +30,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Swatch refactored
 - Page title and breadcrumbs styles
 - Catalog grid item adjustments
+- Global & Elements accessibility improvements (svg, typography, cookies, messages, pager, price, tabs, table, rating, dropdown-list-medium)
+- Link refactored
+- Moved wishlist component from modules to dashboard views
+- Catalog items improvements
+- 4 columns grid to fix sidebar size in my account
+
+### Removed
+- sidebar-nav-list module
+- mix-blend-mode from product images
 
 ## [0.7.3] - 09.07.2018
 ### Fixed
