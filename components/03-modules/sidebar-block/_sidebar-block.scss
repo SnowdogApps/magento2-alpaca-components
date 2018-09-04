@@ -1,8 +1,10 @@
 $sidebar-block__padding                    : 0 0 $spacer--large !default;
 $sidebar-block__min-height                 : 150px !default;
 $sidebar-block__min-height--loaded         : auto !default;
-$sidebar-block__heading-margin-bottom      : $spacer !default;
-$sidebar-block__title-font-weight          : $font-weight-bold !default;
+$sidebar-block__heading-margin-bottom      : $spacer--medium !default;
+$sidebar-block__title-font-weight          : $font-weight-normal !default;
+$sidebar-block__title-margin-bottom        : 0 !default;
+$sidebar-block__divider-margin-bottom      : $spacer--medium !default;
 $sidebar-block__list-margin-bottom         : $spacer !default;
 $sidebar-block__item-margin-bottom         : $spacer !default;
 $sidebar-block__index-margin               : 0 $spacer !default;
@@ -41,11 +43,17 @@ $sidebar-block__message-margin             : 0 !default;
     &__heading {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-bottom: $sidebar-block__heading-margin-bottom;
     }
 
     &__title {
         font-weight: $sidebar-block__title-font-weight;
+        margin-bottom: $sidebar-block__title-margin-bottom;
+    }
+
+    &__divider {
+        margin-bottom: $sidebar-block__divider-margin-bottom;
     }
 
     &__list {
