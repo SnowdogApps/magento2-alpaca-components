@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Rating stars
+- Error styles
+- Sidebar blocks heading
 
 ## Fixed
 - Review module and review details view
