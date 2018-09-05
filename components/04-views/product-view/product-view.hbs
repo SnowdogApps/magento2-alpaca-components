@@ -35,31 +35,7 @@
                 </div>
 
                 <div class="product-view__rating">
-                    <div class="product-view__rating-rates">
-                        {{ render '@rating' }}
-                        {{#if rating.parenthesis}}
-                            (
-                        {{/if}}
-                        <a href="{{ rating.href }}"
-                        class="product-view__link product-view__link--rating {{ rating.class }}"
-                        >
-                            {{{ rating.value }}}
-                        </a>
-                        {{#if rating.parenthesis}}
-                            )
-                        {{/if}}
-                    </div>
-                    <div class="product-view__rating-actions">
-                        <a href="{{ addReview.href }}"
-                        class="
-                            product-view__link
-                            product-view__link--add-review
-                            {{ addReview.class }}
-                        "
-                    >
-                            {{ addReview.text }}
-                        </a>
-                    </div>
+                    {{ render '@review--add' }}
                 </div>
             </div>
 

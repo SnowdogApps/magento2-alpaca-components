@@ -8,17 +8,24 @@
             </div>
 
             <div class="grid__column grid__column--3-4 dashboard__content">
-                <h2 class="heading heading--fourth-level dashboard__title">
-                    {{ title }}
-                </h2>
+                {{ render '@heading' title }}
 
-                {{ render '@product' product }}
+                <a
+                    href="#"
+                    class="product-reviews__image"
+                    title="{{ product.name.text }}"
+                >
+                    {{ render '@image' product.image }}
+                </a>
 
-                {{ render '@review--add' review }}
+                <div class="product-reviews__details">
+                    <a href="#" title="{{ product.name.text }}">
+                        {{ render '@heading' product.name }}
+                    </a>
+                    {{ render '@review--add' }}
+                </div>
 
-                <h3 class="heading heading--fifth-level dashboard__title">
-                    {{ yourReview }}
-                </h3>
+                {{ render '@heading' yourReview }}
 
                 {{ render '@review' }}
             </div>
