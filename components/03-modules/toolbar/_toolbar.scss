@@ -161,7 +161,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         align-items: center;
         .choices {
             flex-grow: 1;
-            @include mq($screen_m) {
+            @include mq($screen-m) {
                 width: $toolbar__sorter-width;
             }
         }
@@ -178,7 +178,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
     &__limiter-wrapper {
         .choices {
-            @include mq($screen_m) {
+            @include mq($screen-m) {
                 width: $toolbar__limiter-width;
             }
         }
