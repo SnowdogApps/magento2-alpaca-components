@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Rating stars
 - Error styles
 
+## [0.9.1] - 06.09.2018
+### Changed
+- Yarn locak file
+
 ## [0.9.0] - 05.09.2018
 ### Added
 - Question mark icon
