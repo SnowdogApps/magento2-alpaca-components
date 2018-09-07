@@ -53,6 +53,10 @@ $catalog-list-item__actions-secondary-button-icon-height         : 12px !default
 $catalog-list-item__actions-secondary-button-icon-height\@medium : 18px !default;
 $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker !default;
 
+$catalog-list-item__stock-status-font-weight                     : $font-weight-bold !default;
+$catalog-list-item__stock-status-color--in-stock                 : $color-success !default;
+$catalog-list-item__stock-status-color--out-of-stock             : $color-danger !default;
+
 .catalog-list-item {
     position: relative;
     display: flex;
@@ -206,6 +210,18 @@ $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker 
                 width: $catalog-list-item__actions-secondary-button-icon-width\@medium;
                 height: $catalog-list-item__actions-secondary-button-icon-height\@medium;
             }
+        }
+    }
+
+    &__stock-status {
+        font-weight: $catalog-list-item__stock-status-font-weight;
+
+        &--in-stock {
+            color: $catalog-list-item__stock-status-color--in-stock;
+        }
+
+        &--out-of-stock {
+            color: $catalog-list-item__stock-status-color--out-of-stock;
         }
     }
 }

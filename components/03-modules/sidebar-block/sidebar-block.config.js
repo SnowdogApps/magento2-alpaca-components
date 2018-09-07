@@ -1,7 +1,14 @@
 module.exports = {
   context: {
-    title: 'Compare Products',
+    title: {
+      tag: 'h2',
+      class: 'heading--first-level sidebar-block__title',
+      text: 'Compare Products',
+    },
     qty: '3 items',
+    divider: {
+      class: 'sidebar-block__divider'
+    },
     product: [
       {
         productName: {
@@ -69,7 +76,11 @@ module.exports = {
     {
       name: 'Wishlist',
       context: {
-        title: 'My Wish List',
+        title: {
+          tag: 'h2',
+          class: 'heading--first-level sidebar-block__title',
+          text: 'My Wish List',
+        },
         compareLink: false,
         clearLink: false,
         product: [
@@ -145,7 +156,11 @@ module.exports = {
     {
       name: 'Recently ordered',
       context: {
-        title: 'Recently Ordered',
+        title: {
+          tag: 'h2',
+          class: 'heading--first-level sidebar-block__title',
+          text: 'Recently Ordered',
+        },
         compareLink: false,
         clearLink: false,
         product: [
