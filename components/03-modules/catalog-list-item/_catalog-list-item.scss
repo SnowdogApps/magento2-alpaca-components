@@ -1,4 +1,5 @@
 $catalog-list-item__padding                                      : $spacer 0 !default;
+$catalog-list-item__border                                       : 1px solid $gray-light !default;
 $catalog-list-item__font-size                                    : 12px !default;
 $catalog-list-item__font-size\@medium                            : 14px !default;
 $catalog-list-item__font-size--main                              : 14px !default;
@@ -62,6 +63,10 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
     display: flex;
     padding: $catalog-list-item__padding;
     overflow: hidden;
+    border-bottom: $catalog-list-item__border;
+    &:first-child {
+        border-top: $catalog-list-item__border;
+    }
 
     &__image-wrapper {
         .image {
