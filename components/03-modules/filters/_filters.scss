@@ -16,6 +16,10 @@ $filters__switcher-size              : 48px !default;
 $filters__switcher-icon-margin       : $spacer !default;
 $filters__switcher-icon-padding      : 0 5px !default;
 $filters__list-margin                : 0 0 $spacer--medium 0 !default;
+$filters__category-list-margin       : 0 0 $spacer 0 !default;
+$filters__link-padding-top           : $spacer !default;
+$filters__link-color                 : $color-secondary !default;
+$filters__link-text-decoration       : underline !default;
 $filters__divider-margin             : 0 0 $spacer--medium 0 !default;
 $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
@@ -81,6 +85,21 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
             @include mq($screen-l) {
                 display: block;
             }
+        }
+    }
+
+    &__category-list {
+        margin: $filters__category-list-margin;
+        cursor: default;
+    }
+
+    &__link {
+        display: block;
+        padding-bottom: $filters__link-padding-top;
+        color: $filters__link-color;
+        &:hover,
+        &:focus {
+            text-decoration: $filters__link-text-decoration;
         }
     }
 

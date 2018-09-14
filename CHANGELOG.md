@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Class for hiding column name in menu
+- Category block styles in catalog view
 
 ### Changed
 - Rating stars
