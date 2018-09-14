@@ -42,5 +42,8 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
 
     &__sidebar-additional {
         order: 2;
+        @include mq($screen-l) {
+            clear: left;
+        }
     }
 }
