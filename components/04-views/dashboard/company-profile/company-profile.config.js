@@ -52,72 +52,80 @@ module.exports = {
       name: 'edit',
       title: 'Add/Edit',
       context: {
-        contactInfo: {
-          title: 'Contact Information',
-          class: 'grid__column grid__column--1-2 dashboard__form',
-          fields: [
-            {
-              input: {
-                class: 'dashboard__input',
-                field: {
-                  id: 'firstName',
-                  name: 'firstName',
-                  placeholder: 'First Name'
-                }
-              }
-            },
-            {
-              input: {
-                class: 'dashboard__input',
-                field: {
-                  id: 'lastName',
-                  name: 'lastName',
-                  placeholder: 'Last Name'
-                }
-              }
-            },
-            {
-              input: {
-                class: 'dashboard__input',
-                field: {
-                  id: 'company',
-                  name: 'company',
-                  placeholder: 'Company'
-                }
-              }
-            },
-            {
-              input: {
-                class: 'dashboard__input',
-                field: {
-                  id: 'phoneNumber',
-                  name: 'phoneNumber',
-                  placeholder: 'Phone Number'
-                }
-              }
-            },
-            {
-              input: {
-                class: 'dashboard__input',
-                field: {
-                  id: 'fax',
-                  name: 'fax',
-                  placeholder: 'Fax'
-                }
-              }
-            }
-          ]
+        mainTitle: {
+          text: 'Company profile',
+          tag: 'h1',
+          class: 'heading heading--page'
         },
-        address: {
-          title: 'Address',
-          class: 'grid__column grid__column--1-2 dashboard__form',
+        form: {
+          title: 'Account Information',
           fields: [
             {
               input: {
                 class: 'dashboard__input',
+                label: {
+                  attributes: 'for="company-name"',
+                  text: 'Company Name',
+                },
                 field: {
-                  id: 'address',
-                  name: 'address',
+                  id: 'company-name',
+                  name: 'company-name',
+                  placeholder: 'Company Name'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard__input',
+                label: {
+                  attributes: 'for="company-email"',
+                  text: 'Company Email',
+                },
+                field: {
+                  id: 'company-email',
+                  name: 'company-email',
+                  placeholder: 'Company Email'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard__input',
+                label: {
+                  attributes: 'for="tax-id"',
+                  text: 'VAT/TAX ID',
+                },
+                field: {
+                  id: 'tax-id',
+                  name: 'tax-id',
+                  placeholder: 'VAT/TAX ID'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard__input',
+                label: {
+                  attributes: 'for="e-seller"',
+                  text: 'Re-seller ID',
+                },
+                field: {
+                  id: 're-seller',
+                  name: 're-seller',
+                  placeholder: 'Re-seller ID'
+                }
+              }
+            },
+            {
+              input: {
+                class: 'dashboard__input',
+                label: {
+                  attributes: 'for="street-address"',
+                  text: 'Street Address',
+                },
+                field: {
+                  id: 'street-address',
+                  name: 'street-address',
                   placeholder: 'Street Address'
                 }
               }
@@ -125,30 +133,14 @@ module.exports = {
             {
               input: {
                 class: 'dashboard__input',
-                field: {
-                  id: 'address2',
-                  name: 'address2',
-                  placeholder: 'Street Address vol.2'
-                }
-              }
-            },
-            {
-              input: {
-                class: 'dashboard__input',
+                label: {
+                  attributes: 'for="city"',
+                  text: 'City',
+                },
                 field: {
                   id: 'city',
                   name: 'city',
                   placeholder: 'City'
-                }
-              }
-            },
-            {
-              input: {
-                class: 'dashboard__input',
-                field: {
-                  id: 'zipCode',
-                  name: 'zipCode',
-                  placeholder: 'Zip/Postal Code'
                 }
               }
             }
@@ -156,62 +148,20 @@ module.exports = {
           selects: [
             {
               select: {
-                class: 'dashboard__address dashboard-form__select',
+                class: 'dashboard-form__select',
                 label: {
-                  text: 'State/Province',
+                  text: 'Country',
                 },
                 options: [
                   {
-                    value: 'example1',
-                    text: 'Example State 1'
+                    value: 'usa',
+                    text: 'USA'
                   },
                   {
-                    value: 'example2',
-                    text: 'Example state 2'
-                  },
-                  {
-                    value: 'example3',
-                    text: 'Example state 3'
+                    value: 'poland',
+                    text: 'Poland'
                   }
                 ]
-              }
-            },
-            {
-              select: {
-                class: 'dashboard__address dashboard-form__select',
-                label: {
-                  text: 'Country'
-                },
-                options: [
-                  {
-                    value: 'example1',
-                    text: 'Example country 1'
-                  },
-                  {
-                    value: 'example2',
-                    text: 'Example country 2'
-                  },
-                  {
-                    value: 'example3',
-                    text: 'Example country 3'
-                  }
-                ]
-              }
-            }
-          ],
-          checkboxes: [
-            {
-              checkbox: {
-                class: 'dashboard-form__divider',
-                id: 'defaultBillingAddress',
-                label: 'Use as my default billing address'
-              }
-            },
-            {
-              checkbox: {
-                class: 'dashboard-form__divider',
-                id: 'defaultShippingAddress',
-                label: 'Use as my default shipping address'
               }
             }
           ]
