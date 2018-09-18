@@ -23,6 +23,10 @@ $list__border--divider             : 1px solid $gray-dark !default;
 
 $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default;
 
+// Nested
+$list__margin-nested               : 0 0 0 $spacer--large !default;
+$list__margin-nested-second-level  : 0 0 0 #{$spacer--large * 2} !default;
+
 .list {
     margin: $list__margin;
     padding: $list__padding;
@@ -149,6 +153,14 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
                 border-radius: 4px;
             }
         }
+    }
+
+    &--nested {
+        margin: $list__margin-nested;
+    }
+
+    &--nested-second-level {
+        margin: $list__margin-nested-second-level;
     }
 
     &__item {
