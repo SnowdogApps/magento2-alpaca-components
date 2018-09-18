@@ -35,6 +35,7 @@ $toolbar__sorter-icon-size             : 18px !default;
 $toolbar__sorter-icon-margin           : $spacer !default;
 $toolbar__sorter-icon-fill             : $gray !default;
 $toolbar__limiter-width                : 72px !default;
+$toolbar__limiter-margin\@medium       : $spacer 0 !default;
 $toolbar__select-margin                : 0 !default;
 $toolbar__select-height                : 32px !default;
 $toolbar__select-font-family           : $font-family-base !default;
@@ -161,7 +162,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         align-items: center;
         .choices {
             flex-grow: 1;
-            @include mq($screen_m) {
+            @include mq($screen-m) {
                 width: $toolbar__sorter-width;
             }
         }
@@ -178,7 +179,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
 
     &__limiter-wrapper {
         .choices {
-            @include mq($screen_m) {
+            @include mq($screen-m) {
                 width: $toolbar__limiter-width;
             }
         }
@@ -243,6 +244,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             top: auto;
             right: auto;
             width: auto;
+            margin: $toolbar__limiter-margin\@medium;
         }
 
         &--relative {

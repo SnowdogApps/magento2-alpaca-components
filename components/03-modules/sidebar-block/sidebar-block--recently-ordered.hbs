@@ -1,9 +1,8 @@
 <div class="sidebar-block">
-    <p class="sidebar-block__heading">
-        <span class="sidebar-block__title">
-            {{ title }}
-        </span>
-    </p>
+    <div class="sidebar-block__heading">
+        {{ render '@heading' title }}
+    </div>
+    {{ render '@divider' divider }}
     <ol class="list sidebar-block__list">
         {{#each product}}
             <li>
