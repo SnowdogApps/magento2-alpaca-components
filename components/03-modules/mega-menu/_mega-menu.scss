@@ -131,4 +131,10 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
             color: $mega-menu__inner-link-color--active;
         }
     }
+
+    &__column-hidden {
+        > .mega-menu__inner-link {
+            display: none;
+        }
+    }
 }
