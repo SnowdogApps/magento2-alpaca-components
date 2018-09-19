@@ -248,6 +248,10 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         }
 
         &--relative {
+            position: relative;
+            top: auto;
+            right: auto;
+            width: auto;
             display: flex;
             flex: 0 0 auto;
             align-items: center;

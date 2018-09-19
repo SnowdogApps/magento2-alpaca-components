@@ -1,6 +1,11 @@
 .title-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    @include mq($screen_m) {
+        flex-direction: row;
+    }
 
     &__actions {
         display: flex;
