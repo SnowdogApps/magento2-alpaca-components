@@ -1,0 +1,7 @@
+$roles-and-permissions__margin: $spacer--medium 0 !default;
+
+.roles-and-permissions {
+    &__actions {
+        margin: $roles-and-permissions__margin;
+    }
+}
