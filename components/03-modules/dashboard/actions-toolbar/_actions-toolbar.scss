@@ -1,0 +1,11 @@
+$dashboard-actions-toolbar__margin      : 0 $spacer 0 0 !default;
+$dashboard-actions-toolbar__item-margin : 0 $spacer 0 0 !default;
+
+.dashboard-actions-toolbar {
+    display: flex;
+    margin: $dashboard-actions-toolbar__margin;
+
+    &__item {
+        margin: $dashboard-actions-toolbar__item-margin;
+    }
+}
