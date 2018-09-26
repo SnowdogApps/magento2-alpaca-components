@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.10.1] - 26.09.2018
+### Fixed
+- Catalog grid on IE
+
 ## [0.10.0] - 18.09.2018
 ### Added
 - Class for hiding column name in menu

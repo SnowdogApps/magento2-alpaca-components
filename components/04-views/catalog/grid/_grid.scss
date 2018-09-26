@@ -15,4 +15,9 @@ $catalog-grid__border : 1px solid $gray-light !default;
     @include mq($screen-m) {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    @include isIE() {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

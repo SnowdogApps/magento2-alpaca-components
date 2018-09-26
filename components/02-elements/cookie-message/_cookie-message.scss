@@ -10,10 +10,10 @@ $cookie-message__close-color            : $gray !default;
 $cookie-message__close-size             : 48px !default;
 $cookie-message__close-font-weight      : $font-weight-bold !default;
 $cookie-message__close-padding          : 0 $spacer--medium 0 0 !default;
-$cookie-message__close-padding--small   : 0 $spacer--medium 0 $spacer default;
+$cookie-message__close-padding--small   : 0 $spacer--medium 0 $spacer !default;
 $cookie-message__close-icon-fill        : $gray !default;
 $cookie-message__close-icon-size        : 14px !default;
-$cookie-message__close-icon-margin-left : $spacer;
+$cookie-message__close-icon-margin-left : $spacer !default;
 
 .cookie-message {
     display: none;
@@ -31,6 +31,7 @@ $cookie-message__close-icon-margin-left : $spacer;
         align-items: center;
         min-width: 100%;
         text-align: center;
+
         @include mq($screen-s) {
             flex-wrap: nowrap;
             justify-content: space-between;
