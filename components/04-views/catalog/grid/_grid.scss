@@ -17,6 +17,7 @@ $catalog-grid__border : 1px solid $gray-light !default;
     }
 
     @include isIE() {
-        @include clearfix;
+        display: flex;
+        flex-wrap: wrap;
     }
 }

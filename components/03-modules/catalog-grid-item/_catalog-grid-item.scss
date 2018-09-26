@@ -69,7 +69,6 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     overflow: hidden;
 
     @include isIE() {
-        float: left;
         margin: $catalog-grid-item__IE-margin;
         width: $catalog-grid-item__IE-width;
 
