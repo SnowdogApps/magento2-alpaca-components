@@ -35,10 +35,12 @@ $breadcrumbs__font-size          : $font-size-small !default;
         }
 
         &:last-child {
-            align-items: center;
-            padding: $breadcrumbs__padding;
-            font-family: $breadcrumbs__font-family--active;
-            color: $breadcrumbs__color--active;
+            &:not(:first-child) {
+                align-items: center;
+                padding: $breadcrumbs__padding;
+                font-family: $breadcrumbs__font-family--active;
+                color: $breadcrumbs__color--active;
+            }
 
             &:after {
                 display: none;
@@ -54,7 +56,7 @@ $breadcrumbs__font-size          : $font-size-small !default;
         text-decoration: none;
     }
 
-    + .page-main {
+    & + .page-main {
         .heading--page {
             margin-top: 0;
         }
