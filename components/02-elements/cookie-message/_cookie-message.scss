@@ -31,6 +31,7 @@ $cookie-message__close-icon-margin-left : $spacer !default;
         align-items: center;
         min-width: 100%;
         text-align: center;
+
         @include mq($screen-s) {
             flex-wrap: nowrap;
             justify-content: space-between;
