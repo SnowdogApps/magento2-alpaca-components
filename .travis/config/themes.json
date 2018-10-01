@@ -1,0 +1,7 @@
+{
+  "alpaca": {
+    "src": "docs",
+    "dest": "pub/static/frontend/Snowdog/alpaca",
+    "locale": ["pl_PL"]
+  }
+}

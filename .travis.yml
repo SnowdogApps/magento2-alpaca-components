@@ -1,13 +1,33 @@
 language: node_js
 node_js: 6
+sudo: required
+dist: trusty
 cache:
   yarn: true
   directories:
     - node_modules
+env:
+  global:
+    - CONFIG_PATH=".travis/config"
+    - DEV_TOOLS_PATH="dev/tools/frontools"
+    - TEMP_PATH="var/view_preprocessed/frontools/frontend/Snowdog"
+before_install:
+  - sudo apt-get update && sudo apt-get install -y php php-cli php-mbstring unzip
+  - curl -sS https://getcomposer.org/installer -o composer-setup.php
+install:
+  - sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+before_script:
+- composer config minimum-stability dev
+- composer config prefer-stable true
+- composer config repositories.snowdog composer https://repo.snowdog.pro/
+- composer require snowdog/frontools
+- composer update --no-dev --no-interaction --prefer-dist --no-progress
+- mkdir -p $DEV_TOOLS_PATH && cp -R $CONFIG_PATH $DEV_TOOLS_PATH
+- mkdir -p $TEMP_PATH && cp -R ./components $TEMP_PATH
+- cd vendor/snowdog/frontools
+- yarn && gulp setup
 script:
-  - gulp js-lint --ci
-  - gulp sass-lint --ci
-  - gulp sass --ci
-  - gulp css-lint --ci
-  - gulp svg-sprite
-  - gulp fractal:build
+- gulp inheritance --theme alpaca
+- gulp sasslint --theme alpaca --ci
+- gulp styles --theme alpaca --ci --pipeline
+- gulp csslint --theme alpaca --ci
