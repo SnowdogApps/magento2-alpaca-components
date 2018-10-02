@@ -178,6 +178,20 @@ $rating__error-color            : $red !default;
             width: 1px;
             height: 1px;
             bottom: 0;
+            &:focus {
+                opacity: 1;
+                height: 0;
+                outline: none;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: -57px;
+                    width: 42px;
+                    height: 45px;
+                    border: 2px dashed $blue;
+                }
+            }
         }
 
         .rating__indicator {
