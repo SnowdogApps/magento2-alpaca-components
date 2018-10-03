@@ -52,6 +52,7 @@ module.exports = {
         class: 'search-form__input',
         id: 'search',
         name: 'search',
+        type: 'search',
         placeholder: 'Search entire store here...'
       }
     },
