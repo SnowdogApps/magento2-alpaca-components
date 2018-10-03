@@ -7,6 +7,7 @@ $review__summary-max-width\@large : 300px;
 
 
 .review {
+    width: 100%;
     @include mq($screen-m) {
         display: flex;
         flex-flow: row nowrap;
@@ -93,6 +94,13 @@ $review__summary-max-width\@large : 300px;
         font-size: $font-size-small;
         text-decoration: underline;
         letter-spacing: 2px;
+        margin-right: $spacer;
+        @include mq($screen-m) {
+            margin-right: 0;
+        }
+        &-text {
+            display: none;
+        }
     }
     &__summary-add {
         text-decoration: underline;
@@ -101,9 +109,6 @@ $review__summary-max-width\@large : 300px;
         @include mq($screen-m) {
             flex-basis: 100%;
         }
-    }
-    &__form-link {
-        font-size: $font-size-small;
     }
 }
 

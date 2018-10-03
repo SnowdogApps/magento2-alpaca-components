@@ -182,11 +182,12 @@ $rating__error-color            : $red !default;
                 opacity: 1;
                 height: 0;
                 outline: none;
+                appearance: none;
                 &:before {
                     content: '';
                     display: block;
                     position: absolute;
-                    top: -57px;
+                    top: -48px;
                     width: 42px;
                     height: 45px;
                     border: 2px dashed $blue;
