@@ -7,9 +7,15 @@
 >
     <div
         class="rating__star {{ star.class }}"
-        aria-hidden="true"
+        role="presentation"
         {{{ star.attributes }}}
     >
-        <span class="rating__indicator {{ indicator.class }}" {{{ indicator.attributes }}}></span>
+        <span
+            class="
+                rating__indicator
+                {{ indicator.class }}
+            "
+            {{{ indicator.attributes }}}
+        ></span>
     </div>
 </div>
