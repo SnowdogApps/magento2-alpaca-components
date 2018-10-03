@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - refactor rating & review on product page, a11y
+### Removed
+- Useless table element sass extends
 
 ## [0.10.1] - 26.09.2018
 ### Fixed
