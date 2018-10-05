@@ -126,7 +126,12 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         }
     }
 
+    &__image {
+        mix-blend-mode: multiply;
+    }
+
     &__image-wrapper {
+        background: $gray-lightest;
         @include mq($screen-m) {
             &:after {
                 content: "";

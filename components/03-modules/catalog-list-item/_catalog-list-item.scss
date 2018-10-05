@@ -68,7 +68,12 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         border-top: $catalog-list-item__border;
     }
 
+    &__image {
+        mix-blend-mode: multiply;
+    }
+
     &__image-wrapper {
+        background: $gray-lightest;
         .image {
             width: $catalog-list-item__image-width;
             height: $catalog-list-item__image-height--inner;
