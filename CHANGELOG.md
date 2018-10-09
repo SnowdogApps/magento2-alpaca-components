@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 - Useless table element sass extends
 ### Fixed
-- `z-index` value for mobile menu
+- `z-index` value for mega menu
 
 ## [0.10.1] - 26.09.2018
 ### Fixed
