@@ -12,6 +12,7 @@ module.exports = {
         ariaLabel: 'Disable filter',
         icon: {
           iconId: 'close',
+          iconTitle: 'Close',
           class: 'active-filters__remove-icon'
         }
       },
@@ -21,6 +22,7 @@ module.exports = {
         ariaLabel: 'Disable filter',
         icon: {
           iconId: 'close',
+          iconTitle: 'Close',
           class: 'active-filters__remove-icon'
         }
       },
@@ -30,6 +32,7 @@ module.exports = {
         ariaLabel: 'Disable filter',
         icon: {
           iconId: 'close',
+          iconTitle: 'Close',
           class: 'active-filters__remove-icon'
         }
       }

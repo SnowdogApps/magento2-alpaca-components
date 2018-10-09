@@ -1,7 +1,7 @@
 module.exports = {
   context: {
     tag: 'section',
-    class: '',
+    class: 'catalog-list__item',
     badge: {
       name: 'badge--new',
       context: {
@@ -39,6 +39,7 @@ module.exports = {
       text: '',
       class: 'button--icon',
       iconId: 'heart',
+      iconTitle: 'Heart',
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Add to wishlist"'
     },
@@ -47,6 +48,7 @@ module.exports = {
       text: '',
       class: 'button--icon',
       iconId: 'compare',
+      iconTitle: 'Compare',
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Add to compare"'
     }

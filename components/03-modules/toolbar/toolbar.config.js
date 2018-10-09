@@ -5,6 +5,7 @@ module.exports = {
     showAmount: true,
     showLimit: true,
     amount: {
+      class: 'toolbar__amount',
       prefix: 'Items',
       currentRange: '1-9',
       preposition: 'of',
@@ -14,6 +15,7 @@ module.exports = {
       href: '',
       icon: {
         iconId: 'grid',
+        iconTitle: 'Grid',
         class: 'toolbar__mode-icon toolbar__mode-icon--active',
         title: 'Grid view'
       }
@@ -22,6 +24,7 @@ module.exports = {
       href: '',
       icon: {
         iconId: 'list',
+        iconTitle: 'List',
         class: 'toolbar__mode-icon',
         title: 'List view'
       }
@@ -50,6 +53,7 @@ module.exports = {
       ]
     },
     limiter: {
+      class: 'toolbar__limiter',
       select: {
         class: 'toolbar__limiter-wrapper',
         label: {

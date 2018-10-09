@@ -7,6 +7,7 @@ module.exports = {
     text: 'content-text',
     icon: {
       iconId: 'angle-down',
+      iconTitle: 'Arrow down',
       class: 'dropdown-list__icon'
     }
   },

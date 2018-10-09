@@ -1,17 +1,18 @@
-<div class="review--add {{ class }}" {{{ attributes }}}>
-    <div class="review__divider">
-        {{ render '@rating--summary' rating }}
-    </div>
-
-    <div class="review__divider">
-        <a href="{{ reviewAmountLink }}" class="link review__link {{ reviewAmountClass }}">
-            {{ reviewAmount }}
-        </a>
-    </div>
-
-    <div class="review__divider">
-        <a href="{{ addYourLink }}" class="link review__link {{ addYourClass }}">
-            {{ addYour }}
-        </a>
-    </div>
+<div class="review review--add {{ class }}" {{{ attributes }}}>
+        <h3 class="review__title">
+            {{ addTitle }}:
+            <span class="review__title-product">
+                {{ productTitle }}
+            </span>
+        </h3>
+        {{ render '@rating--rate' rate merge=true }}
+        <fieldset class="fieldset review__fieldset">
+            {{ render '@input' nickname }}
+            {{ render '@input' summary }}
+            {{ render '@input--textarea' textReview }}
+            {{ render '@button' submitReview merge=true }}
+            <p class="review__required-info">
+                * Required fields
+            </p>
+        </fieldset>
 </div>

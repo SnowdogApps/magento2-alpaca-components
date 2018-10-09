@@ -12,6 +12,12 @@ module.exports = {
       ]
     },
     toolbar: {
+      amount: {
+        class: 'toolbar__amount--visible'
+      },
+      limiter: {
+        class: 'toolbar__limiter--relative'
+      },
       showMode: false,
       showSorter: false,
       showAmount: true,
@@ -439,21 +445,25 @@ module.exports = {
         orderInfo: {
           informations: [
             {
+              headingTag: 'h4',
               title: 'Shipping Address',
               class: 'grid__column grid__column--1-4',
               text: 'Lorem Ipsum Shipping Address example 1'
             },
             {
+              headingTag: 'h4',
               title: 'Shipping Method',
               class: 'grid__column grid__column--1-4',
               text: 'United Parcel Service - Ground'
             },
             {
+              headingTag: 'h4',
               title: 'Billing Address',
               class: 'grid__column grid__column--1-4',
               text: 'Lorem Ipsum Billing Address example 1'
             },
             {
+              headingTag: 'h4',
               title: 'Payment Method',
               class: 'grid__column grid__column--1-4',
               text: 'Check / Money order'
@@ -480,21 +490,25 @@ module.exports = {
         info: {
           informations: [
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Order Id',
               text: '#0000003'
             },
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Email',
               text: 'test@test.com'
             },
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Order Shipping Address',
               text: 'Lorem ipsmum example order shipping address'
             },
             {
+              headingTag: 'h4',
               class: 'grid__column grid__column--1-2',
               title: 'Customer Name',
               text: 'Test Test'
