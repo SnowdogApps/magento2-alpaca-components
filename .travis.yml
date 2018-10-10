@@ -12,7 +12,7 @@ env:
     - DEV_TOOLS_PATH="dev/tools/frontools"
     - TEMP_PATH="var/view_preprocessed/frontools/frontend/Snowdog"
 before_install:
-  - sudo apt-get update && sudo apt-get install -y php php-cli php-mbstring unzip
+  - sudo apt-get install -y php5 php5-cli unzip
   - curl -sS https://getcomposer.org/installer -o composer-setup.php
 install:
   - sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
