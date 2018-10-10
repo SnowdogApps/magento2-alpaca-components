@@ -19,7 +19,6 @@ install:
 before_script:
 - composer config minimum-stability dev
 - composer config prefer-stable true
-- composer config repositories.snowdog composer https://repo.snowdog.pro/
 - composer require snowdog/frontools
 - composer update --no-dev --no-interaction --prefer-dist --no-progress
 - mkdir -p $DEV_TOOLS_PATH && cp -R $CONFIG_PATH $DEV_TOOLS_PATH
