@@ -10,8 +10,16 @@ $breadcrumbs__font-size          : $font-size-small !default;
     display: none;
 
     @include mq($screen-m) {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+    }
+
+    &__list {
+        @include mq($screen-m) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     &__item {
