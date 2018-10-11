@@ -1,54 +1,114 @@
-$rating-base-margin             : $spacer--medium !default;
-$rating__description-margin     : $spacer 0 !default;
-$review__fieldset-margin-bottom : $spacer--large !default;
-$review__field-margin           : 0 !default;
-$review__fieldset-padding-top   : $spacer !default;
-$review__rating-margin-bottom   : $spacer !default;
-$review__amount-margin-left     : $spacer !default;
-$review__label-margin-right     : $spacer !default;
+$rating__margin                   : $spacer--medium !default;
+$review__field-margin             : 0 !default;
+$review__fieldset-max-width       : 430px;
+$review__info-column-width        : 20%;
+$review__decsription-column-width : 80%;
+$review__summary-max-width\@large : 300px;
+
 
 .review {
-    &__divider {
-        margin-bottom: $rating-base-margin;
-    }
-
-    &__title {
-        margin-bottom: $rating-base-margin;
-        font-size: 18px;
-    }
-
-    &__date {
-        color: $gray-light;
-        font-size: $font-size-small;
-    }
-
-    &__description {
-        vertical-align: middle;
-        margin: $rating__description-margin;
-    }
-
-    &__fieldset {
-        margin-bottom: $review__fieldset-margin-bottom;
-        padding-top: $review__fieldset-padding-top;
-    }
-
-    &__field {
-        margin-bottom: $review__field-margin;
-    }
-
-    &__rating {
+    width: 100%;
+    @include mq($screen-m) {
         display: flex;
-        margin-bottom: $review__rating-margin-bottom;
-        &--average {
-            align-items: center;
+        flex-flow: row nowrap;
+    }
+    &--add {
+        @include mq($screen-m) {
+            display: block;
+        }
+    }
+    &--summary {
+        @include mq($screen-m) {
+            display: block;
+        }
+        .rating {
+            margin-right: $spacer;
         }
     }
 
-    &__rating-label {
-        margin-right: $review__label-margin-right;
+    &__details {
+        width: 100%;
+        @include mq($screen-m) {
+            &:first-child {
+                width: $review__info-column-width;
+            }
+            &:last-child {
+                width: 8$review__decsription-column-width;
+            }
+        }
     }
-
+    &__author,
+    &__date,
+    &__title,
+    &__rating,
+    &__rating-legend {
+        margin-bottom: $rating__margin;
+    }
+    &__title {
+        font-size: $font-size-base;
+        font-weight: $font-weight-base;
+        text-transform: uppercase;
+    }
+    &__title-product {
+        display: block;
+        margin: $spacer 0;
+        text-transform: none;
+        font-weight: bold;
+    }
+    &__author {
+        font-weight: $font-weight-base;
+    }
+    &__date {
+        display: block;
+        color: $gray;
+        font-size: $font-size-small;
+    }
+    &__fieldset {
+        max-width: 430px;
+    }
+    &__field {
+        margin-bottom: $spacer--extra-large;
+    }
+    &__submit-btn {
+        width: 100%;
+        @include mq($screen-m) {
+            width: auto;
+        }
+    }
+    &__required-info {
+        margin-top: $spacer--large;
+        font-size: $font-size-small;
+    }
+    &__summary-handle {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        @include mq($screen-m) {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            width: auto;
+            max-width: $review__summary-max-width\@large;
+        }
+    }
     &__amount {
-        margin-left: $review__amount-margin-left;
+        font-size: $font-size-small;
+        text-decoration: underline;
+        letter-spacing: 2px;
+        margin-right: $spacer;
+        @include mq($screen-m) {
+            margin-right: 0;
+        }
+        &-text {
+            display: none;
+        }
+    }
+    &__summary-add {
+        text-decoration: underline;
+        flex-grow: 1;
+        text-align: right;
+        @include mq($screen-m) {
+            flex-basis: 100%;
+        }
     }
 }
+

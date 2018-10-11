@@ -204,8 +204,6 @@ $table__background-even--clean   : $white !default;
     }
 
     &--clean {
-        @extend .table;
-
         margin: 0;
         border: 0;
         border-radius: 0;
@@ -217,13 +215,7 @@ $table__background-even--clean   : $white !default;
             }
         }
 
-        tr {
-            @extend tr;
-        }
-
         th {
-            @extend th;
-
             border-bottom: 0;
             border-right: 0;
             background: $table__th-background--clean;
@@ -232,8 +224,6 @@ $table__background-even--clean   : $white !default;
         }
 
         td {
-            @extend td;
-
             border-bottom: 0;
             border-right: 0;
             background: $table__th-background--clean;

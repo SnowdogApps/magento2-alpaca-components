@@ -1,0 +1,18 @@
+<section class="product-review">
+    <h2 class="product-review__title">
+        {{ title }}
+    </h2>
+    <div class="product-review__summary">
+        {{ render '@review--summary' summary merge=true }}
+    </div>
+    <div class="product-review__reviews">
+        <ul class="list">
+            {{#each reviews }}
+                <li class="list__item">
+                    {{ render '@review--default' this }}
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+    {{ render '@review--add' }}
+</section>
