@@ -86,4 +86,5 @@ $swatch__option-image-width--small\@large
 
 ## Accessibility
 You can run `gulp a11y` to run dev server with accessibility tests enabled.
+
 If on some view there is no a11y message, please go to the component config and comment out `preview: '@docs-only-styles'`
