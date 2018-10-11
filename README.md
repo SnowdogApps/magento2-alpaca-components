@@ -19,8 +19,8 @@ https://alpaca-components-staging.herokuapp.com/
 ## How to create a components library on top of Alpaca
 It's necessary only to work outside the Magento.
 1. Copy-paste `package.json`, `gulpfile.js`, `.eslintignore`, `.eslintrc`, `.sass-lint.yml`, `.stylelintrc`, `.gitignore` files to the new project
-2. Create `modules.json` file with an array containing the paths to the parent components libraries.
-   In most cases it will something like this:
+2. Create `modules.json` file with an array of paths to parent components libraries.
+   In most cases it will look like this:
    ```json
    ["../../snowdog/module-alpaca-components"]
    ```
