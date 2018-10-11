@@ -5,10 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Styles for 2 column layouts
+
 ### Changed
-- refactor rating & review on product page, a11y
+- Refactor rating & review on product page, a11y
+
 ### Removed
 - Useless table element sass extends
+
 ### Fixed
 - `z-index` value for mega menu
 
