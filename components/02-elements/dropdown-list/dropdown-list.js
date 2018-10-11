@@ -1,14 +1,16 @@
-'use-strict';
+'use strict';
 
-(function DropdownList() {
-  const dropdownCollapseLabel = '.dropdown-list__item--collapse .dropdown-list__label',
-        dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
-        openClass             = 'dropdown-list__item--open',
-        contentClass          = 'dropdown-list__content',
-        mq                    = '(min-width: 768px)',
-        dropdownMediumOpen    = [ ...document.querySelectorAll('.dropdown-list--is-open\\@screen-m')];
+class DropdownList {
+  constructor() {
+    this.dropdownCollapseLabel = '.dropdown-list__item--collapse > .dropdown-list__label';
+    this.dropdownItem = [...document.querySelectorAll(this.dropdownCollapseLabel)];
+    this.contentClass = 'dropdown-list__content';
+    this.mq = '(min-width: 768px)';
+    this.dropdownMediumOpen = [...document.querySelectorAll('.dropdown-list--is-open\\@screen-m')];
+    this.init();
+  }
 
-  function setAriaAttributes(label, content, expanded) {
+  setAriaAttributes(label, content, expanded) {
     if (expanded) {
       label.setAttribute('aria-expanded', 'false');
       content.setAttribute('aria-hidden', 'true');
@@ -18,76 +20,104 @@
       content.setAttribute('aria-hidden', 'false');
     }
   }
-  function removeAriaAttributes(label, content) {
+
+  removeAriaAttributes(label, content) {
     label.removeAttribute('aria-expanded');
     content.setAttribute('aria-hidden', 'false');
     label.disabled = true;
   }
 
-  function isMediumOpen(dropdownBlock) {
-    return (dropdownBlock.classList.contains('dropdown-list--is-open@screen-m')) && window.matchMedia(mq).matches;
+  isMediumOpen(dropdownBlock) {
+    return (dropdownBlock.classList.contains('dropdown-list--is-open@screen-m')) && window.matchMedia(this.mq).matches;
   }
 
-  function resetMqMediumOpen(item) {
-    const dropdownItem = item.parentNode,
-          dropdownContent = dropdownItem.querySelector(`.${contentClass}`);
+  resetMqMediumOpen(item) {
+    const dropdownItem    = item.parentNode,
+          dropdownContent = dropdownItem.querySelector(`.${this.contentClass}`);
 
-    if (window.matchMedia(mq).matches) {
+    if (window.matchMedia(this.mq).matches) {
       dropdownContent.style.height = 'auto';
-      dropdownItem.classList.remove(openClass);
-      removeAriaAttributes(item, dropdownContent);
+      this.removeAriaAttributes(item, dropdownContent);
     }
     else {
       dropdownContent.style.height = 0;
-      dropdownItem.classList.remove(openClass);
-      setAriaAttributes(item, dropdownContent, false);
+      this.setAriaAttributes(item, dropdownContent, true);
       item.disabled = false;
     }
   }
 
-  function toggleContent(item) {
-    const dropdownId      = item.dataset.dropdown,
+  getContentHeight(item) {
+    return [...item.children]
+      .map(elem => elem.clientHeight)
+      .reduce((a, b) => a + b, 0);
+  }
+
+  closeInnerdDropdowns(item) {
+    const subDropDowns = [...item.querySelectorAll(`${this.dropdownCollapseLabel}[aria-expanded="true"]`)];
+    subDropDowns.forEach(key => {
+      const dropdownId      = key.getAttribute('aria-controls'),
+            dropdownItem    = key.parentNode,
+            dropdownContent = dropdownItem.querySelector(`.${this.contentClass}[data-content="${dropdownId}"]`);
+      this.setAriaAttributes(key, dropdownContent, true);
+      dropdownContent.style.height = 0;
+    });
+  }
+
+  toggleContent(item) {
+    const dropdownId      = item.getAttribute('aria-controls'),
           dropdownItem    = item.parentNode,
-          dropdownContent = dropdownItem.querySelector(`.${contentClass}[data-content="${dropdownId}"]`),
+          dropdownContent = dropdownItem.querySelector(`.${this.contentClass}[data-content="${dropdownId}"]`),
           dropdownBlock   = item.closest('.dropdown-list');
 
-    if (!isMediumOpen(dropdownBlock)) {
+    if (!this.isMediumOpen(dropdownBlock)) {
       if (dropdownContent.clientHeight > 0) {
-        dropdownContent.style.height = 0;
-        dropdownItem.classList.remove(openClass);
-        setAriaAttributes(item, dropdownContent, true);
+        const sectionHeight     = this.getContentHeight(dropdownContent),
+              elementTransition = dropdownContent.style.transition;
+        dropdownContent.style.transition = '';
+        this.setAriaAttributes(item, dropdownContent, true);
+        requestAnimationFrame(() => {
+          dropdownContent.style.height = sectionHeight + 'px';
+          dropdownContent.style.transition = elementTransition;
+          requestAnimationFrame(() => {
+            dropdownContent.style.height = 0 + 'px';
+            this.closeInnerdDropdowns(dropdownContent);
+          });
+        });
       }
       else {
-        dropdownContent.style.height = 'auto';
-        dropdownItem.classList.add(openClass);
-        setAriaAttributes(item, dropdownContent, false);
+        const openedDropdowns = [...document.querySelectorAll('.dropdown-list__content[aria-hidden="false"]')];
+        dropdownContent.style.height = this.getContentHeight(dropdownContent);
+        openedDropdowns.map(openedDropdown => {
+          openedDropdown.style.height = 'auto';
+        });
+        this.setAriaAttributes(item, dropdownContent, false);
       }
     }
   }
 
-  function setMediumOpen() {
-    if (dropdownMediumOpen.length) {
-      let dropdownItems =  [];
-      dropdownMediumOpen.forEach(
-        key => dropdownItems.push(...key.querySelectorAll(dropdownCollapseLabel))
-      )
-      dropdownItems.forEach(key => resetMqMediumOpen(key));
+  setMediumOpen() {
+    if (this.dropdownMediumOpen.length) {
+      let dropdownItems = [];
+      this.dropdownMediumOpen.forEach(
+        key => dropdownItems.push(...key.querySelectorAll(this.dropdownCollapseLabel))
+      );
+      dropdownItems.forEach(key => this.resetMqMediumOpen(key));
     }
   }
 
-  function init() {
-    dropdownItem.forEach(
+  init() {
+    this.dropdownItem.forEach(
       key => key.addEventListener('click', (e) => {
         e.preventDefault();
-        toggleContent(key, false);
+        this.toggleContent(key);
       }, false)
     );
-    setMediumOpen();
+    this.setMediumOpen();
+
+    window.addEventListener('resize', () => {
+      this.setMediumOpen();
+    });
   }
+}
 
-  init();
-
-  window.addEventListener('resize', () => {
-    setMediumOpen();
-  });
-})();
+new DropdownList();
