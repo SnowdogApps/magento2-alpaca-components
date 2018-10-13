@@ -1,12 +1,14 @@
 'use strict';
 
 class DropdownList {
-  constructor() {
+  constructor(element) {
+    this.element = element;
     this.dropdownCollapseLabel = '.dropdown-list__item--collapse > .dropdown-list__label';
-    this.dropdownItem = [...document.querySelectorAll(this.dropdownCollapseLabel)];
+    this.dropdownItem = [...this.element.querySelectorAll(this.dropdownCollapseLabel)];
     this.contentClass = 'dropdown-list__content';
     this.mq = '(min-width: 768px)';
-    this.dropdownMediumOpen = [...document.querySelectorAll('.dropdown-list--is-open\\@screen-m')];
+    this.mqClass = 'dropdown-list--is-open@screen-m';
+    this.dropdownMediumOpen = this.element.classList.contains(this.mqClass);
     this.init();
   }
 
@@ -49,7 +51,7 @@ class DropdownList {
   getContentHeight(item) {
     return [...item.children]
       .map(elem => elem.clientHeight)
-      .reduce((a, b) => a + b, 0);
+      .reduce((a, b) => a + b, 0) + 'px';
   }
 
   closeInnerdDropdowns(item) {
@@ -76,7 +78,7 @@ class DropdownList {
         dropdownContent.style.transition = '';
         this.setAriaAttributes(item, dropdownContent, true);
         requestAnimationFrame(() => {
-          dropdownContent.style.height = sectionHeight + 'px';
+          dropdownContent.style.height = sectionHeight;
           dropdownContent.style.transition = elementTransition;
           requestAnimationFrame(() => {
             dropdownContent.style.height = 0 + 'px';
@@ -96,11 +98,8 @@ class DropdownList {
   }
 
   setMediumOpen() {
-    if (this.dropdownMediumOpen.length) {
-      let dropdownItems = [];
-      this.dropdownMediumOpen.forEach(
-        key => dropdownItems.push(...key.querySelectorAll(this.dropdownCollapseLabel))
-      );
+    if (this.dropdownMediumOpen) {
+      let dropdownItems = [...this.element.querySelectorAll(this.dropdownCollapseLabel)];
       dropdownItems.forEach(key => this.resetMqMediumOpen(key));
     }
   }
@@ -120,4 +119,4 @@ class DropdownList {
   }
 }
 
-new DropdownList();
+new DropdownList(document.querySelector('.dropdown-list'));
