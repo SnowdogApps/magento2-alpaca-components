@@ -4,7 +4,7 @@
 ## Introduction
 Components library of Alpaca [design system](https://www.uxpin.com/studio/blog/design-systems-vs-pattern-libraries-vs-style-guides-whats-difference/) created to speed up the process of working with design on Magento 2 stores, by creating each UI element, module, and view in a simplified, front-end developer friendly, environment.
 
-Everything is built on top of [Fractal.js](http://fractal.build/guide).
+This components liblary is built on top of [Fractal.js](http://fractal.build/guide).
 
 Magento 2 experience isn't required to work with this code.
 
@@ -51,13 +51,13 @@ Components are divided into 4 groups:
 ### Naming
 * Group name needs to be plural
 * Component name needs to be singular
-* Follow Single Responsibility Principle
 * Component name shouldn't be related to any project or place in the layout
    - Bad: `filters`
    - Good: `dropdown-list` or `collapsible-list`
-* Avoid using `box`, `block`, `item`, `info`, `text`, `cms` in component names
-* Avoid generous names like `info-box`
+* Avoid using `box`, `block`, `item`, `info`, `text`, `cms`, especialy combined together, for example `info-box`
 * Avoid naming two components in similar way i.e. `cms-subcategories` and `cms-subcategory`
+
+### Colors
 * By default alpaca components uses up to 7 step grayscale
 
 ### SASS Variables naming
