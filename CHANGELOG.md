@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 15.10.2018
+### Added
+- Better docs
+
 ## [0.10.2] - 11.10.2018
 ### Added
 - Styles for 2 column layouts
