@@ -35,6 +35,7 @@ $toolbar__sorter-icon-size             : 18px !default;
 $toolbar__sorter-icon-margin           : $spacer !default;
 $toolbar__sorter-icon-fill             : $gray !default;
 $toolbar__limiter-width                : 72px !default;
+$toolbar__limiter-margin\@medium       : $spacer 0 !default;
 $toolbar__select-margin                : 0 !default;
 $toolbar__select-height                : 32px !default;
 $toolbar__select-font-family           : $font-family-base !default;
@@ -69,14 +70,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
     &__amount {
         display: none;
         @include mq($screen-m) {
-            // It's related to IE10/11 bug, which is solved by adding unit to flex-basis
-            // Detailed description:
-            // https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
-            // sass-lint:disable no-css-comments
-            /* stylelint-disable length-zero-no-unit */
-            flex: 1 0 0;
-            /* stylelint-enable length-zero-no-unit */
-            // sass-lint:enable no-css-comments
+            flex: 1;
             justify-content: center;
             display: flex;
         }
@@ -243,6 +237,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
             top: auto;
             right: auto;
             width: auto;
+            margin: $toolbar__limiter-margin\@medium;
         }
 
         &--relative {

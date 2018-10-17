@@ -6,16 +6,50 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.0] - 15.10.2018
+### Added
+- Better docs
+
+## [0.10.2] - 11.10.2018
+### Added
+- Styles for 2 column layouts
+
+### Changed
+- Refactor rating & review on product page, a11y
+
+### Removed
+- Useless table element sass extends
+
+### Fixed
+- `z-index` value for mega menu
+
+## [0.10.1] - 26.09.2018
+### Fixed
+- Catalog grid on IE
+
+## [0.10.0] - 18.09.2018
+### Added
+- Class for hiding column name in menu
+- Category block styles in catalog view
+
+### Changed
+- Rating stars
+- Error styles
+- Catalog structure
+
+### Fixed
+- Qty validation error styles
+
 ## [0.9.1] - 06.09.2018
 ### Changed
-- Yarn locak file
+- Yarn lock file
 
 ## [0.9.0] - 05.09.2018
 ### Added
 - Question mark icon
 
 ### Changed
-- Rating stars
+- Sidebar blocks heading
 
 ### Fixed
 - Review module and review details view
