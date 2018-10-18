@@ -6,8 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
-- refactor rating & review on product page, a11y
-- refactor dropdown list and nested list
+- Refactor rating & review on product page, a11y
+- Refactor dropdown list and nested list
 
 ### Removed
 - Useless table element sass extends
