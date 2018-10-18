@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.1] - 18.10.2018
+### Changed
+- Circle CI tests setup
+
 ## [1.0.0] - 15.10.2018
 ### Added
 - Better docs
