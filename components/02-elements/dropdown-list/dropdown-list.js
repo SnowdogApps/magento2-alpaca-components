@@ -81,7 +81,7 @@ class DropdownList {
           dropdownContent.style.height = sectionHeight;
           dropdownContent.style.transition = elementTransition;
           requestAnimationFrame(() => {
-            dropdownContent.style.height = 0 + 'px';
+            dropdownContent.style.height = 0;
             this.closeInnerdDropdowns(dropdownContent);
           });
         });
