@@ -1,0 +1,7 @@
+{
+  "alpaca": {
+    "src": "vendor/snowdog/module-alpaca-components",
+    "dest": "pub/static/frontend/Snowdog/alpaca-components",
+    "locale": ["en_US"]
+  }
+}
