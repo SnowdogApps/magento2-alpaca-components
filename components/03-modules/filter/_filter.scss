@@ -1,41 +1,82 @@
-$filter__transition                        : $transition-base !default;
+$filter__transition                               : $transition-base !default;
+
+// Category
+$filter__category-list-margin                     : 0 0 $spacer 0 !default;
+$filter__category-list-margin--nested             : 0 0 0 $spacer--large !default;
+$filter__category-list-margin--nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
+$filter__category-link-padding                    : 14px 0 !default;
+$filter__category-link-color                      : $color-secondary !default;
+$filter__category-link-text-decoration            : underline !default;
+
 // Swatch
-$filter__swatch-margin                     : 0 0 $spacer--medium 0 !default;
-$filter__swatch-option-size                : 48px !default;
-$filter__swatch-option-margin              : $spacer--medium !default;
-$filter__swatch-option-background          : $white !default;
-$filter__swatch-option-color               : $gray-dark !default;
-$filter__swatch-option-border              : 3px solid $white !default;
-$filter__swatch-option-border-color-hover  : $color-primary !default;
-$filter__swatch-option-border-color--active: $color-primary !default;
+$filter__swatch-margin                            : 0 0 $spacer--medium 0 !default;
+$filter__swatch-option-size                       : 48px !default;
+$filter__swatch-option-margin                     : $spacer--medium !default;
+$filter__swatch-option-background                 : $white !default;
+$filter__swatch-option-color                      : $gray-dark !default;
+$filter__swatch-option-border                     : 3px solid $white !default;
+$filter__swatch-option-border-color-hover         : $color-primary !default;
+$filter__swatch-option-border-color--active       : $color-primary !default;
+
 // Label
-$filter__label-padding                     : $spacer--medium 0 !default;
+$filter__label-padding                            : $spacer--medium 0 !default;
+
 // Color
-$filter__color-option-width                : 56px !default;
-$filter__color-option-height               : 80px !default;
-$filter__color-option-border               : 2px solid transparent !default;
-$filter__color-option-after-top            : 4px !default;
-$filter__color-option-after-left           : 8px !default;
-$filter__color-option-after-size           : 40px !default;
-$filter__color-option-after-border-radius  : 100% !default;
-$filter__color-option-after-border-color   : $color-primary !default;
-$filter__color-sample-size                 : 32px !default;
-$filter__color-sample-margin               : $spacer !default;
-$filter__color-sample-border               : 1px solid $gray-lighter;
-$filter__color-sample-border-radius        : 100% !default;
-$filter__color-label-font-size             : $font-size-small !default;
-$filter__color-label-color                 : $gray-darkest !default;
+$filter__color-option-width                       : 56px !default;
+$filter__color-option-height                      : 80px !default;
+$filter__color-option-border                      : 2px solid transparent !default;
+$filter__color-option-after-top                   : 4px !default;
+$filter__color-option-after-left                  : 8px !default;
+$filter__color-option-after-size                  : 40px !default;
+$filter__color-option-after-border-radius         : 100% !default;
+$filter__color-option-after-border-color          : $color-primary !default;
+$filter__color-sample-size                        : 32px !default;
+$filter__color-sample-margin                      : $spacer !default;
+$filter__color-sample-border                      : 1px solid $gray-lighter !default;
+$filter__color-sample-border-radius               : 100% !default;
+$filter__color-label-font-size                    : $font-size-small !default;
+$filter__color-label-color                        : $gray-darkest !default;
+
 // Show-all
-$filter__show-all-height                   : 48px !default;
-$filter__show-all-font-size                : $font-size-small !default;
+$filter__show-all-height                          : 48px !default;
+$filter__show-all-font-size                       : $font-size-small !default;
+
 // Divider
-$filter__divider-border-top                : 1px solid $gray-light !default;
+$filter__divider-border-top                       : 1px solid $gray-light !default;
+
 // Range
-$filter__range-margin                      : 0 0 $spacer--medium 0 !default;
+$filter__range-margin                             : 0 0 $spacer--medium 0 !default;
 
 .filter {
     &__label {
         padding: $filter__label-padding;
+    }
+
+    &__category-list {
+        margin: $filter__category-list-margin;
+
+        &--nested {
+            margin: $filter__category-list-margin--nested;
+        }
+
+        &--nested-second-level {
+            margin: $filter__category-list-margin--nested-second-level;
+        }
+    }
+
+    &__category-item {
+        padding: 0;
+    }
+
+    &__category-link {
+        display: block;
+        padding: $filter__category-link-padding;
+        color: $filter__category-link-color;
+
+        &:hover,
+        &:focus {
+            text-decoration: $filter__category-link-text-decoration;
+        }
     }
 
     &__swatch {

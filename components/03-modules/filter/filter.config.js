@@ -60,7 +60,7 @@ module.exports = {
           {
             class: 'filter__swatch-option--active',
             text: 'S',
-            ariaLabel: 'Select size s',
+            ariaLabel: 'Select size S',
             href: '#'
           },
           {
@@ -131,7 +131,7 @@ module.exports = {
           name: 'range',
           config: {
             attributes: '',
-            class: '',
+            class: 'filter__range',
             filter: {
               wrapperClass: '',
               input: {
@@ -177,10 +177,10 @@ module.exports = {
               }
             },
             apply: {
-              tag: 'button',
               class: 'button--secondary range-filter__button',
-              attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"',
-              text: 'Apply'
+              tag: 'button',
+              text: 'Apply',
+              attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"'
             },
             script: true,
             showFloat: 0
@@ -188,5 +188,44 @@ module.exports = {
         }
       }
     },
+    {
+      name: 'category',
+      context: {
+        text: '',
+        title: 'Category',
+        id: 'category',
+        categories: {
+          class: 'filter__category-list',
+          listTag: 'ul',
+          elementTag: 'li',
+          elements: [
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Jackets',
+              link: '#'
+            },
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Hoodies & Sweatshirts',
+              link: '#'
+            },
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Tees',
+              link: '#'
+            },
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Tanks',
+              link: '#'
+            }
+          ]
+        }
+      }
+    }
   ]
 };
