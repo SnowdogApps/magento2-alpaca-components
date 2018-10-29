@@ -167,6 +167,9 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         .dropdown-list--inner {
             .dropdown-list__item {
                 border-bottom: $dropdown-list__item-border--inner-level2;
+                &:last-child {
+                    border-bottom: none;
+                }
             }
         }
     }
