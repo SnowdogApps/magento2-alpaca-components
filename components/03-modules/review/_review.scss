@@ -19,7 +19,8 @@ $review__summary-max-width\@large : 300px;
     }
     &--summary {
         @include mq($screen-m) {
-            display: block;
+            display: flex;
+            justify-content: flex-end;
         }
         .rating {
             margin-right: $spacer;
