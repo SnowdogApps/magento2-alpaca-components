@@ -39,7 +39,7 @@ $review__summary-max-width\@large : 300px;
             }
 
             &:last-child {
-                width: 8$review__decsription-column-width;
+                width: $review__decsription-column-width;
             }
         }
     }
