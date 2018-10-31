@@ -1,9 +1,9 @@
-$rating__margin                   : $spacer--medium !default;
-$review__field-margin             : 0 !default;
-$review__fieldset-max-width       : 430px;
-$review__info-column-width        : 20%;
-$review__decsription-column-width : 80%;
-$review__summary-max-width\@large : 300px;
+$rating__margin                  : $spacer--medium !default;
+$review__field-margin            : 0 !default;
+$review__fieldset-max-width      : 430px !default;
+$review__info-column-width       : 20% !default;
+$review__decsription-column-width: 80% !default;
+$review__summary-max-width\@large: 300px !default;
 
 .review {
     width: 100%;
@@ -39,7 +39,7 @@ $review__summary-max-width\@large : 300px;
             }
 
             &:last-child {
-                width: 8$review__decsription-column-width;
+                width: $review__decsription-column-width;
             }
         }
     }
