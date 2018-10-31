@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - review alignment
 
+### Changed
+- Refactor dropdown list and nested list
+
 ## [1.0.1] - 18.10.2018
 ### Changed
 - Circle CI tests setup
