@@ -1,0 +1,42 @@
+.email-to-friend {
+    max-width: 500px;
+
+    &__sender-wrapper {
+        margin-bottom: $spacer--medium;
+    }
+
+    &__fieldset {
+        margin-bottom: $spacer--large;
+    }
+
+    &__inner-fieldset {
+        margin-top: $spacer--large;
+    }
+
+    &__options {
+        .fields {
+            &:not(.additional) {
+                .email-to-friend__inner-fieldset {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &__message {
+        resize: vertical;
+    }
+
+    &__remove {
+        margin-bottom: $spacer--medium;
+    }
+
+    &__back {
+        margin-left: $spacer--medium;
+        cursor: pointer;
+    }
+
+    &__submit {
+        margin-bottom: $spacer--large;
+    }
+}
