@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         itemTag: 'button',
-        itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
+        itemAttributes: 'aria-expanded="false"',
         title: 'dropdown title',
         class: 'link--invert',
         id: 'dropdown-1',
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         itemTag: 'button',
-        itemAttributes: 'aria-expanded="false" aria-controls="dropdown-2"',
+        itemAttributes: 'aria-expanded="false"',
         class: 'link--invert',
         title: 'some longer longer and longer dropdown title',
         id: 'dropdown-2',
@@ -39,7 +39,7 @@ module.exports = {
       },
       {
         itemTag: 'button',
-        itemAttributes: 'aria-expanded="false" aria-controls="dropdown-3"',
+        itemAttributes: 'aria-expanded="false"',
         title: 'dropdown title',
         class: 'link--invert',
         id: 'dropdown-3',
@@ -53,7 +53,7 @@ module.exports = {
       },
       {
         itemTag: 'button',
-        itemAttributes: 'aria-expanded="false" aria-controls="dropdown-4"',
+        itemAttributes: 'aria-expanded="false"',
         title: 'dropdown title',
         class: 'link--invert',
         id: 'dropdown-4',
@@ -87,6 +87,12 @@ module.exports = {
       }
     },
     {
+      name: 'inner',
+      context: {
+        class: 'dropdown-list--inner'
+      }
+    },
+    {
       name: 'with-nested',
       context: {
         class: 'dropdown-list--with-nested',
@@ -102,94 +108,122 @@ module.exports = {
             title: 'dropdown title',
             id: 'dropdown-1',
             class: 'link--invert',
-            itemAttributes: 'aria-expanded="false" aria-controls="dropdown-1"',
+            itemAttributes: 'aria-expanded="false"',
             collapse: {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
               iconTitle: 'Arrow Down',
               attributes: 'aria-hidden="true"'
             },
-            listNested: [
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-1-1"',
-                id: 'dropdown-1-1',
-                collapse: {
-                  class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down',
-                  iconTitle: 'Arrow Down',
-                  attributes: 'aria-hidden="true"'
-                },
-                sublist: [
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+            contentElement: 'dropdown-list',
+            contentContext: {
+              class: 'dropdown-list--inner',
+              dropdowns: [
+                {
+                  itemTag: 'a',
+                  itemAttributes: 'href="#" aria-expanded="false"',
+                  title: 'Item name',
+                  id: 'dropdown-1-1',
+                  collapse: {
+                    class: 'dropdown-list__icon',
+                    iconId: 'angle-down',
+                    iconTitle: 'Arrow Down',
+                    attributes: 'aria-hidden="true"'
                   },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+                  contentElement: 'dropdown-list',
+                  contentContext: {
+                    class: 'dropdown-list--inner',
+                    dropdowns: [
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#" aria-expanded="false"',
+                        id: 'dropdown-1-2',
+                        collapse: {
+                          class: 'dropdown-list__icon',
+                          iconId: 'angle-down',
+                          iconTitle: 'Arrow Down',
+                          attributes: 'aria-hidden="true"'
+                        },
+                        contentElement: 'dropdown-list',
+                        contentContext: {
+                          class: 'dropdown-list--inner',
+                          dropdowns: [
+                            {
+                              itemTag: 'a',
+                              title: 'sub sublist item name',
+                              itemAttributes: 'href="#"'
+                            },
+                            {
+                              itemTag: 'a',
+                              title: 'sub sublist item name',
+                              itemAttributes: 'href="#"'
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      }
+                    ]
                   }
-                ]
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-1-2"',
-                id: 'dropdown-1-2',
-                collapse: {
-                  class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down',
-                  iconTitle: 'Arrow Down',
-                  attributes: 'aria-hidden="true"'
                 },
-                sublist: [
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#" aria-expanded="false"',
+                  id: 'dropdown-1-2',
+                  collapse: {
+                    class: 'dropdown-list__icon',
+                    iconId: 'angle-down',
+                    iconTitle: 'Arrow Down',
+                    attributes: 'aria-hidden="true"'
                   },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+                  contentElement: 'dropdown-list',
+                  contentContext: {
+                    class: 'dropdown-list--inner',
+                    dropdowns: [
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      }
+                    ]
                   },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  }
-                ]
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#"',
-                sublist: false
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#"',
-                sublist: false
-              }
-            ]
+                },
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#"',
+                },
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#"',
+                }
+              ]
+            }
           },
           {
             itemTag: 'a',
-            itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-2"',
+            itemAttributes: 'href="#" aria-expanded="false"',
             title: 'dropdown title',
             class: 'link--invert',
             id: 'dropdown-2',
@@ -199,24 +233,26 @@ module.exports = {
               iconTitle: 'Arrow Down',
               attributes: 'aria-hidden="true"'
             },
-            listNested: [
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#"',
-                sublist: false
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#"',
-                sublist: false
-              }
-            ]
+            contentElement: 'dropdown-list',
+            contentContext: {
+              class: 'dropdown-list--inner',
+              dropdowns: [
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#"',
+                },
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#"',
+                }
+              ]
+            }
           },
           {
             itemTag: 'a',
-            itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3"',
+            itemAttributes: 'href="#" aria-expanded="false"',
             title: 'dropdown title',
             class: 'link--invert',
             id: 'dropdown-3',
@@ -226,120 +262,139 @@ module.exports = {
               iconTitle: 'Arrow Down',
               attributes: 'aria-hidden="true"'
             },
-            listNested: [
-              {
-                itemTag: 'a',
-                itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-1"',
-                itemName: 'Item name',
-                id: 'dropdown-3-1',
-                collapse: {
-                  class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down',
-                  iconTitle: 'Arrow Down',
-                  attributes: 'aria-hidden="true"'
-                },
-                sublist: [
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+            contentElement: 'dropdown-list',
+            contentContext: {
+              class: 'dropdown-list--inner',
+              dropdowns: [
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  id: 'dropdown-3-1',
+                  itemAttributes: 'href="#" aria-expanded="false"',
+                  collapse: {
+                    class: 'dropdown-list__icon',
+                    iconId: 'angle-down',
+                    iconTitle: 'Arrow Down',
+                    attributes: 'aria-hidden="true"'
                   },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+                  contentElement: 'dropdown-list',
+                  contentContext: {
+                    class: 'dropdown-list--inner',
+                    dropdowns: [
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      }
+                    ]
                   }
-                ]
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#"',
-                sublist: false
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-2"',
-                id: 'dropdown-3-2',
-                collapse: {
-                  class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down',
-                  iconTitle: 'Arrow Down',
-                  attributes: 'aria-hidden="true"'
                 },
-                sublist: [
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  },
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
-                  }
-                ]
-              },
-              {
-                itemTag: 'a',
-                itemName: 'Item name',
-                itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-3"',
-                id: 'dropdown-3-3',
-                collapse: {
-                  class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down',
-                  iconTitle: 'Arrow Down',
-                  attributes: 'aria-hidden="true"'
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#"',
                 },
-                sublist: [
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#" aria-expanded="false"',
+                  id: 'dropdown-3-2',
+                  collapse: {
+                    class: 'dropdown-list__icon',
+                    iconId: 'angle-down',
+                    iconTitle: 'Arrow Down',
+                    attributes: 'aria-hidden="true"'
+                  },
+                  contentElement: 'dropdown-list',
+                  contentContext: {
+                    class: 'dropdown-list--inner',
+                    dropdowns: [
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      },
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      }
+                    ]
                   }
-                ]
-              },
-              {
-                itemTag: 'a',
-                itemName: 'item name',
-                itemAttributes: 'href="#" aria-expanded="false" aria-controls="dropdown-3-4"',
-                id: 'dropdown-3-4',
-                collapse: {
-                  class: 'dropdown-list__icon dropdown-list__icon--inner',
-                  iconId: 'angle-down',
-                  iconTitle: 'Arrow Down',
-                  attributes: 'aria-hidden="true"'
                 },
-                sublist: [
-                  {
-                    itemTag: 'a',
-                    itemName: 'sublist item name',
-                    itemAttributes: 'href="#"'
+                {
+                  itemTag: 'a',
+                  title: 'Item name',
+                  itemAttributes: 'href="#" aria-expanded="false"',
+                  id: 'dropdown-3-3',
+                  collapse: {
+                    class: 'dropdown-list__icon',
+                    iconId: 'angle-down',
+                    iconTitle: 'Arrow Down',
+                    attributes: 'aria-hidden="true"'
+                  },
+                  contentElement: 'dropdown-list',
+                  contentContext: {
+                    class: 'dropdown-list--inner',
+                    dropdowns: [
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      }
+                    ]
                   }
-                ]
-              }
-            ]
+                },
+                {
+                  itemTag: 'a',
+                  title: 'item name',
+                  itemAttributes: 'href="#" aria-expanded="false"',
+                  id: 'dropdown-3-4',
+                  collapse: {
+                    class: 'dropdown-list__icon',
+                    iconId: 'angle-down',
+                    iconTitle: 'Arrow Down',
+                    attributes: 'aria-hidden="true"'
+                  },
+                  contentElement: 'dropdown-list',
+                  contentContext: {
+                    class: 'dropdown-list--inner',
+                    dropdowns: [
+                      {
+                        itemTag: 'a',
+                        title: 'sublist item name',
+                        itemAttributes: 'href="#"'
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
           }
         ]
       }
