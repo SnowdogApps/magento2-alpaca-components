@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Refactor dropdown list and nested list
 
+### Removed
+- Wrong z-index from rating stars
+
 ## [1.0.1] - 18.10.2018
 ### Changed
 - Circle CI tests setup
