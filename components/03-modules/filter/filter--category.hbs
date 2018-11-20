@@ -1,7 +1,8 @@
 <li class="dropdown-list__item dropdown-list__item--collapse filter">
     <div
         class="dropdown-list__label filter__label"
-        data-dropdown="{{ id }}"
+        aria-controls="{{ id }}"
+        aria-expanded="false"
     >
         {{ title }}
         {{ render '@icon' icon }}

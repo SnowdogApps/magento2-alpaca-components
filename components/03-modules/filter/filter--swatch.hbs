@@ -1,22 +1,25 @@
-<li class="filter dropdown-list__item  dropdown-list__item--collapse">
-    <div class="filter__label dropdown-list__label"
-         data-dropdown="{{ id }}"
+<li class="dropdown-list__item dropdown-list__item--collapse filter">
+    <div
+        class="filter__label dropdown-list__label"
+        aria-controls="{{ id }}"
+        aria-expanded="false"
     >
         {{ title }}
-
         {{ render '@icon' icon }}
     </div>
-    <div id="{{ id }}"
-         class="filter__content dropdown-list__content"
-         data-content="{{ id }}"
-         aria-hidden="true"
+    <div
+        id="{{ id }}"
+        class="dropdown-list__content filter__content"
+        data-content="{{ id }}"
+        aria-hidden="true"
     >
         <div class="filter__swatch {{ class }}" {{{ attributes }}}>
             {{#each options }}
-                <a href="{{ href }}"
-                   class="filter__swatch-option {{ class }}"
-                   aria-label="{{ ariaLabel }}"
-                   {{{ attributes }}}
+                <a
+                    href="{{ href }}"
+                    class="filter__swatch-option {{ class }}"
+                    aria-label="{{ ariaLabel }}"
+                    {{{ attributes }}}
                 >
                     {{ text }}
                 </a>

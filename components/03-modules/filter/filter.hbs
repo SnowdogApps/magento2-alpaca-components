@@ -1,23 +1,21 @@
-<li class="dropdown-list__item dropdown-list__item--collapse filter {{class}}">
-    <div class="dropdown-list__label filter__label"
-         data-dropdown="{{id}}"
+<li class="dropdown-list__item dropdown-list__item--collapse filter">
+    <div
+        class="dropdown-list__label filter__label"
+        aria-controls="{{ id }}"
+        aria-expanded="false"
     >
-        {{title}}
-
+        {{ title }}
         {{ render '@icon' icon }}
     </div>
-    <div id="{{id}}"
-         class="dropdown-list__content filter__content"
-         data-content="{{id}}"
-         aria-hidden="true"
+    <div
+        id="{{ id }}"
+        class="dropdown-list__content filter__content"
+        data-content="{{ id }}"
+        aria-hidden="true"
     >
-        {{ text }}
-
-        {{# if componentObject }}
-            {{ render (component componentObject.name) componentObject.config }}
-        {{/if}}
-
+        {{#each checkboxes }}
+            {{render '@checkbox--link' this }}
+        {{/each }}
         <div class="filter__divider"></div>
     </div>
 </li>
-

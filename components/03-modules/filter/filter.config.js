@@ -1,10 +1,7 @@
 module.exports = {
   preview: '@docs-only-styles',
+  default: 'checkbox',
   context: {
-    content: 'Content',
-    id: 'default',
-    title: 'Default',
-    text: 'content-text',
     icon: {
       iconId: 'angle-down',
       iconTitle: 'Arrow down',
@@ -13,7 +10,8 @@ module.exports = {
   },
   variants: [
     {
-      name: 'Checkbox',
+      name: 'checkbox',
+      label: 'Checkbox',
       context: {
         text: '',
         title: 'Checkbox',
