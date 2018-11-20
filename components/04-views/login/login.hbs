@@ -45,6 +45,14 @@
                 </p>
                 {{ render '@button' createAccountButton }}
             </div>
+            <div class="grid__column login__company-column">
+                {{ render '@heading' linkCompanyHeading }}
+                {{ render '@divider' }}
+                <p class="login__info">
+                    {{ createCompanyAccountInfo }}
+                </p>
+                {{ render '@button' createCompanyAccountButton }}
+            </div>
         </div>
     </div>
 </div>
