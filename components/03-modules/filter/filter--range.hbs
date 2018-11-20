@@ -13,7 +13,10 @@
         data-content="{{ id }}"
         aria-hidden="true"
     >
-        {{ render '@list--link' categories }}
+        {{ text }}
+        {{#if componentObject }}
+            {{ render (component componentObject.name) componentObject.config }}
+        {{/if }}
         <div class="filter__divider"></div>
     </div>
 </li>

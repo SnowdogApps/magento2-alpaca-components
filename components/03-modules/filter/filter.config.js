@@ -13,7 +13,6 @@ module.exports = {
       name: 'checkbox',
       label: 'Checkbox',
       context: {
-        text: '',
         title: 'Checkbox',
         id: 'checkbox',
         checkboxes: [
@@ -46,9 +45,6 @@ module.exports = {
       context: {
         id: 'swatch',
         title: 'Swatch',
-        class: '',
-        attributes: '',
-        text: '',
         options: [
           {
             text: 'XS',
@@ -84,9 +80,6 @@ module.exports = {
       context: {
         id: 'color',
         title: 'Color',
-        text: '',
-        name: 'color',
-        class: '',
         options: [
           {
             href: '#',
@@ -124,7 +117,6 @@ module.exports = {
       context: {
         id: 'range',
         title: 'Range',
-        text: '',
         componentObject: {
           name: 'range',
           config: {
