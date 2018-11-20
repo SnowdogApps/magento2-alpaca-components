@@ -10,9 +10,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Review alignment
+- Alignment for buttons
+- Alignment for quick search input (Safari issue)
 
 ### Changed
 - Refactor dropdown list and nested list
+
+### Removed
+- Wrong z-index from rating stars
 
 ## [1.0.1] - 18.10.2018
 ### Changed
