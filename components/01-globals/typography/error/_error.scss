@@ -18,6 +18,7 @@ div {
 }
 
 input,
+textarea,
 select {
     &.mage-error {
         border-color: $input__error-color;

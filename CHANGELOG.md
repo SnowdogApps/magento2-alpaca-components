@@ -6,6 +6,46 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `email-to-friend` view
+
+### Fixed
+- Review alignment
+- Alignment for buttons
+- Alignment for quick search input (Safari issue)
+
+### Changed
+- Refactor dropdown list and nested list
+
+### Removed
+- Wrong z-index from rating stars
+
+## [1.0.1] - 18.10.2018
+### Changed
+- Circle CI tests setup
+
+## [1.0.0] - 15.10.2018
+### Added
+- Better docs
+
+## [0.10.2] - 11.10.2018
+### Added
+- Styles for 2 column layouts
+
+### Changed
+- Refactor rating & review on product page, a11y
+
+### Removed
+- Useless table element sass extends
+
+### Fixed
+- `z-index` value for mega menu
+
+## [0.10.1] - 26.09.2018
+### Fixed
+- Catalog grid on IE
+
+## [0.10.0] - 18.09.2018
+### Added
 - Class for hiding column name in menu
 - Category block styles in catalog view
 

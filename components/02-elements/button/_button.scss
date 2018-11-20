@@ -39,6 +39,7 @@ $button__width--fluid               : 100% !default;
 .button {
     display: inline-flex;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
     height: $button__height;
     min-width: $button__width;
