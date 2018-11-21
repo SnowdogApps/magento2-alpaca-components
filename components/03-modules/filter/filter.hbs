@@ -1,4 +1,4 @@
-<li class="dropdown-list__item dropdown-list__item--collapse filter">
+<li class="dropdown-list__item dropdown-list__item--collapse filter {{ class }}">
     <div
         class="dropdown-list__label filter__label"
         aria-controls="{{ id }}"
@@ -13,9 +13,13 @@
         data-content="{{ id }}"
         aria-hidden="true"
     >
-        {{#each checkboxes }}
-            {{render '@checkbox--link' this }}
-        {{/each }}
+        <ul class="list">
+            {{#each checkboxes }}
+                <li>
+                    {{render '@checkbox--link' this }}
+                </li>
+            {{/each }}
+        </ul>
         <div class="filter__divider"></div>
     </div>
 </li>

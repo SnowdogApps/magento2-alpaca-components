@@ -13,7 +13,7 @@
         data-content="{{ id }}"
         aria-hidden="true"
     >
-        <div class="filter__swatch {{ class }}" {{{ attributes }}}>
+        <ul class="list filter__swatch" {{{ attributes }}}>
             {{#each options }}
                 <a
                     href="{{ href }}"
@@ -24,7 +24,7 @@
                     {{ text }}
                 </a>
             {{/each }}
-        </div>
+        </ul>
         <div class="filter__divider"></div>
     </div>
 </li>
