@@ -15,14 +15,16 @@
     >
         <ul class="list filter__swatch" {{{ attributes }}}>
             {{#each options }}
-                <a
-                    href="{{ href }}"
-                    class="filter__swatch-option {{ class }}"
-                    aria-label="{{ ariaLabel }}"
-                    {{{ attributes }}}
-                >
-                    {{ text }}
-                </a>
+                <li class="filter__swatch-item">
+                    <a
+                        href="{{ href }}"
+                        class="filter__swatch-option {{ class }}"
+                        aria-label="{{ ariaLabel }}"
+                        {{{ attributes }}}
+                    >
+                        {{ text }}
+                    </a>
+                </li>
             {{/each }}
         </ul>
         <div class="filter__divider"></div>

@@ -85,13 +85,20 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         margin: $filter__swatch-margin;
     }
 
+    &__swatch-item {
+        margin-right: $filter__swatch-option-margin;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
     &__swatch-option {
         display: flex;
         justify-content: center;
         align-items: center;
         min-width: $filter__swatch-option-size;
         min-height: $filter__swatch-option-size;
-        margin-right: $filter__swatch-option-margin;
         border: $filter__swatch-option-border;
         background-color: $filter__swatch-option-background;
         color: $filter__swatch-option-color;
@@ -103,10 +110,6 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         &:focus {
             text-decoration: none;
             border-color: $filter__swatch-option-border-color-hover;
-        }
-
-        &:last-child {
-            margin-right: 0;
         }
 
         &--active {
