@@ -13,7 +13,11 @@ module.exports = {
       name: 'checkbox',
       label: 'Checkbox',
       context: {
-        title: 'Checkbox',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Checkbox'
+        },
         id: 'checkbox',
         checkboxes: [
           {
@@ -44,7 +48,11 @@ module.exports = {
       name: 'swatch',
       context: {
         id: 'swatch',
-        title: 'Swatch',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Swatch'
+        },
         options: [
           {
             text: 'XS',
@@ -79,7 +87,11 @@ module.exports = {
       name: 'color',
       context: {
         id: 'color',
-        title: 'Color',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Color'
+        },
         options: [
           {
             href: '#',
@@ -116,7 +128,11 @@ module.exports = {
       name: 'range',
       context: {
         id: 'range',
-        title: 'Range',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Range'
+        },
         componentObject: {
           name: 'range',
           config: {
@@ -181,8 +197,11 @@ module.exports = {
     {
       name: 'category',
       context: {
-        text: '',
-        title: 'Category',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Category'
+        },
         id: 'category',
         categories: {
           class: 'filter__category-list',

@@ -1,8 +1,7 @@
 <div class="filters {{ class }}" {{{ attributes }}}>
-    <h1 class="filters__heading">
+    <h2 class="filters__heading">
         {{ activeFiltersHeading }}
-    </h1>
-
+    </h2>
     {{> '@divider' divider}}
 
     <div class="filters__active">
@@ -27,9 +26,9 @@
         "
         {{{ dropdownList.attributes }}}
     >
-        <h1 class="filters__heading filters__heading--mobile-hidden">
+        <h2 class="filters__heading filters__heading--mobile-hidden">
             {{ allFiltersHeading }}
-        </h1>
+        </h2>
         {{> '@divider' divider }}
         <ul class="dropdown-list__list">
             {{ render '@filter--category' }}

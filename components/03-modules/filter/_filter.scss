@@ -47,6 +47,12 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         padding: $filter__label-padding;
     }
 
+    &__label-title {
+        margin: 0;
+        text-transform: inherit;
+        color: inherit;
+    }
+
     &__category-list {
         margin: $filter__category-list-margin;
 
