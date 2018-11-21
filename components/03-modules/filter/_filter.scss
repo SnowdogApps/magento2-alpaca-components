@@ -9,9 +9,8 @@ $filter__category-link-color                      : $color-secondary !default;
 $filter__category-link-text-decoration            : underline !default;
 
 // Swatch
-$filter__swatch-margin                            : 0 0 $spacer--medium 0 !default;
+$filter__swatch-margin                            : 0 $spacer--medium $spacer--medium 0 !default;
 $filter__swatch-option-size                       : 48px !default;
-$filter__swatch-option-margin                     : $spacer--medium !default;
 $filter__swatch-option-background                 : $white !default;
 $filter__swatch-option-color                      : $gray-dark !default;
 $filter__swatch-option-border                     : 3px solid $white !default;
@@ -36,10 +35,6 @@ $filter__color-sample-border                      : 1px solid $gray-lighter !def
 $filter__color-sample-border-radius               : 100% !default;
 $filter__color-label-font-size                    : $font-size-small !default;
 $filter__color-label-color                        : $gray-darkest !default;
-
-// Show-all
-$filter__show-all-height                          : 48px !default;
-$filter__show-all-font-size                       : $font-size-small !default;
 
 // Divider
 $filter__divider-border-top                       : 1px solid $gray-light !default;
@@ -79,14 +74,13 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         }
     }
 
-    &__swatch {
+    &__list {
         display: flex;
         flex-wrap: wrap;
-        margin: $filter__swatch-margin;
     }
 
     &__swatch-item {
-        margin-right: $filter__swatch-option-margin;
+        margin: $filter__swatch-margin;
 
         &:last-child {
             margin-right: 0;
@@ -115,12 +109,6 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         &--active {
             border-color: $filter__swatch-option-border-color--active;
         }
-    }
-
-    &__color,
-    &__swatch-wrapper {
-        display: flex;
-        flex-flow: row wrap;
     }
 
     &__color-option {
