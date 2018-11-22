@@ -3,15 +3,25 @@
 
     <div class="dashboard container">
         <div class="grid">
-            <div class="grid__column grid__column--1-4 dashboard__sidebar">
+            <div
+                class="
+                    grid__column
+                    grid__column--1-4
+                    dashboard__sidebar
+                "
+            >
                 {{ render '@dashboard-nav' }}
             </div>
 
-            <div class="grid__column grid__column--3-4 dashboard__content">
+            <div
+                class="
+                    grid__column
+                    grid__column--3-4
+                    dashboard__content
+                "
+            >
                 {{ render '@dashboard-table' }}
-
                 {{ render '@toolbar--pager' toolbar merge=true }}
-
                 {{> '@action' action }}
             </div>
         </div>
