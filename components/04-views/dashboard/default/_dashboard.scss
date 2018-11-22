@@ -1,46 +1,9 @@
-$dashboard-margin-base           : $spacer--medium 0 $spacer--large !default;
-$dashboard-margin                : $spacer--large !default;
-$dashboard-padding               : $spacer--medium !default;
-$dashboard__sidebar-width--medium: calc(25% - 3 * #{$grid__gutter} / 4) !default;
-$dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
+$dashboard-margin : $spacer--large !default;
+$dashboard-padding: $spacer--medium !default;
 
 .dashboard {
-    &__sidebar,
-    &__content {
-        @include mq($screen-m) {
-            margin: $dashboard-margin-base;
-            padding: 0 $dashboard-padding;
-        }
-
-        &:first-child {
-            @include mq($screen-m) {
-                padding-left: 5px;
-            }
-        }
-
-        &:last-child {
-            @include mq($screen-m) {
-                padding-right: 5px;
-            }
-        }
-
-    }
-
-    &__sidebar {
-        @include mq($screen-m) {
-            @include isIE() {
-                max-width: $dashboard__sidebar-width--medium;
-            }
-        }
-    }
-
-    &__content {
-        @include mq($screen-m) {
-            @include isIE() {
-                max-width: $dashboard__content-width--medium;
-            }
-        }
-    }
+    margin-top: $spacer--medium;
+    margin-bottom: $spacer--medium;
 
     &__actions {
         justify-content: space-between;
