@@ -1,4 +1,4 @@
-$dashboard-table-margin: 30px !default;
+$dashboard-table-margin: $spacer--medium !default;
 
 .dashboard-table {
     overflow: hidden;
@@ -27,9 +27,10 @@ $dashboard-table-margin: 30px !default;
         overflow-x: auto;
     }
 
-    &__table {
-        margin: 0;
-    }
+    // tmp - to check
+    // &__table {
+    //     margin: 0;
+    // }
 
     &__link {
         display: inline-flex;

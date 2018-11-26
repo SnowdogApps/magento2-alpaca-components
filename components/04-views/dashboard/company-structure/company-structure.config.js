@@ -7,48 +7,49 @@ module.exports = {
         class: 'heading heading--page'
       }
     },
-    businessStructure: {
-      title: 'Business Structure',
-      informations: [
+    businessStructureHeading: {
+      tag: 'h3',
+      text: 'Business Structure',
+      class: 'dashboard__title'
+    },
+    businessStructureActions: {
+      class: 'roles-and-permissions__actions',
+      buttons: [
         {
-          actions: {
-            sides: [
-              {
-                action: [
-                  {
-                    button: true,
-                    class: 'button--secondary company-structure__action-button',
-                    title: 'Expand All'
-                  },
-                  {
-                    button: true,
-                    class: 'button--secondary company-structure__action-button',
-                    title: 'Collapse All'
-                  },
-                  {
-                    button: true,
-                    class: 'button--secondary company-structure__action-button',
-                    title: 'Add User'
-                  },
-                  {
-                    button: true,
-                    class: 'button--secondary company-structure__action-button',
-                    title: 'Add Team'
-                  },
-                  {
-                    button: true,
-                    class: 'button--secondary company-structure__action-button',
-                    title: 'Edit Selected'
-                  },
-                  {
-                    button: true,
-                    class: 'button--secondary company-structure__action-button',
-                    title: 'Delete Selected'
-                  }
-                ]
-              }
-            ]
-          }
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Expand All'
+        },
+        {
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Collapse All'
+        },
+        {
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Add User'
+        },
+        {
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Add Team'
+        },
+        {
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Edit Selected'
+        },
+        {
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Delete Selected'
         }
       ]
     }
