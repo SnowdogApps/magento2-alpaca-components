@@ -7,27 +7,20 @@ module.exports = {
         class: 'heading heading--page'
       }
     },
-    filters: {
-      informations: [
+    filtersActions: {
+      class: 'company-users__filters',
+      buttons: [
         {
-          actions: {
-            sides: [
-              {
-                action: [
-                  {
-                    button: true,
-                    class: 'button--secondary',
-                    title: 'Show inactive users'
-                  },
-                  {
-                    button: true,
-                    class: 'button--secondary',
-                    title: 'Show all users'
-                  }
-                ]
-              }
-            ]
-          }
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Show inactive users'
+        },
+        {
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Show all users'
         }
       ]
     },

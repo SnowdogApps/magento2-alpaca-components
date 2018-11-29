@@ -13,7 +13,7 @@ module.exports = {
       class: 'dashboard__title'
     },
     businessStructureActions: {
-      class: 'roles-and-permissions__actions',
+      class: 'company-structure__actions',
       buttons: [
         {
           tag: 'button',

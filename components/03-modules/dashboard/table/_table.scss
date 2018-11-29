@@ -27,10 +27,9 @@ $dashboard-table-margin: $spacer--medium !default;
         overflow-x: auto;
     }
 
-    // tmp - to check
-    // &__table {
-    //     margin: 0;
-    // }
+    &__table {
+        margin: 0;
+    }
 
     &__link {
         display: inline-flex;
