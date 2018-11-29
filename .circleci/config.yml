@@ -14,7 +14,7 @@ jobs:
       - run: mkdir -p dev/tools/frontools
       - run: cp -r $CONFIG_PATH dev/tools/frontools
       - run: sudo npm install -g gulp-cli
-      - run: cd vendor/snowdog/frontools && yarn && gulp setup
+      - run: cd vendor/snowdog/frontools && yarn --ignore-engines && gulp setup
       - run: cd tools && gulp inheritance
       - run: cd tools && gulp sasslint --ci
       - run: cd tools && gulp styles --ci --pipeline
