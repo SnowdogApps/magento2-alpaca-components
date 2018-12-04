@@ -12,6 +12,11 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
     flex-wrap: wrap;
     margin-right: $grid__gutter-compensation;
     margin-left: $grid__gutter-compensation;
+
+    &--no-margins {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .row.reverse {
