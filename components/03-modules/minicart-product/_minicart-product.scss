@@ -50,10 +50,9 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         border-bottom: none;
     }
 
-    &__image,
-    .product-image-wrapper {
+    &__image {
         img {
-            width: $minicart-product__image-width;
+            width: 100%;
             max-width: $minicart-product__image-width;
             height: auto;
         }
