@@ -6,7 +6,7 @@
     </div>
 
     <div class="container cart">
-        <div class="cart__main-col">
+        <div class="col-xs-12 col-lg-9">
             <form class="cart__products-list">
                 {{#each productlist as |item| }}
                     {{ render '@cart-list-item' }}
@@ -36,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <div class="cart__summary-col">
+        <div class="col-xs-12 col-lg-3">
             <div class="cart-summary">
                 <div class="cart-summary__item">
                     <h2>Summary</h2>
@@ -62,7 +62,7 @@
                     {{/each}}
                 </div>
                 <div class="cart-summary__item cart-totals">
-                    <div class="cart-totals__row">
+                    <div class="row row--no-margins between-xs cart-totals__row">
                         <div class="cart-totals__row-label">
                             Subtotal
                         </div>
@@ -70,7 +70,7 @@
                             $34.00
                         </div>
                     </div>
-                    <div class="cart-totals__row">
+                    <div class="row row--no-margins between-xs cart-totals__row">
                         <div class="cart-totals__row-label">
                             Tax
                         </div>
@@ -78,7 +78,7 @@
                             $00.00
                         </div>
                     </div>
-                    <div class="cart-totals__row">
+                    <div class="row row--no-margins between-xs cart-totals__row">
                         <div class="cart-totals__row-label">
                             Next long row here
                         </div>
@@ -86,7 +86,15 @@
                             $00.00
                         </div>
                     </div>
-                    <div class="cart-totals__row cart-totals__row--summary">
+                    <div
+                        class="
+                            row
+                            row--no-margins
+                            between-xs
+                            cart-totals__row
+                            cart-totals__row--summary
+                        "
+                    >
                         <div class="
                                  cart-totals__row-label
                                  cart-totals__row-label--total

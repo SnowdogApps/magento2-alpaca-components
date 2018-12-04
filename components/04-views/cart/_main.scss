@@ -10,21 +10,6 @@ $cart__bottom-padding : $spacer 0 0 0 !default;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: ($cart__margin * 2);
-    &__main-col {
-        flex-basis: 100%;
-        max-width: 100%;
-        @include mq(1024px) {
-            @include grid-column-width(4, 6);
-        }
-    }
-
-    &__summary-col {
-        flex-basis: 100%;
-        max-width: 100%;
-        @include mq(1024px) {
-            @include grid-column-width(2, 6);
-        }
-    }
 
     &__bottom {
         display: flex;
