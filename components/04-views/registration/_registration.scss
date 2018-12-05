@@ -1,7 +1,5 @@
 $registration__padding-top                                  : $spacer--medium !default;
 
-$registration__divider-margin                               : 0 0 $spacer--large 0 !default;
-
 $registration__content-margin                               : 0 0 $spacer--extra-large !default;
 
 $registration__input-margin                                 : 0 0 $spacer--medium !default;
@@ -25,8 +23,6 @@ $registration__newsletter-checkbox-label-line-height        : 48px !default;
 $registration__newsletter-checkbox-icon-clickable-area      : 48px !default;
 $registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold !default;
 
-$registration__password-color                               : $gray !default;
-$registration__password-bg-color                            : transparent !default;
 $registration__password-margin                              : 0 !default;
 
 .registration {
