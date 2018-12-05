@@ -34,6 +34,7 @@ $cart-list-item__actions-item-margin       : 0 0 0 $spacer !default;
     border-bottom: $cart-list-item__border;
 
     &__image {
+        flex: 0 0 $cart-list-item__image-width;
         padding: $cart-list-item__image-padding;
     }
 
