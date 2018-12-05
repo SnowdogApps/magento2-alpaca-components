@@ -7,8 +7,6 @@ $registration__input-margin                                 : 0 0 $spacer--mediu
 $registration__pasword-wrapper-margin                       : 0 0 $spacer--medium !default;
 
 $registration__fieldset-margin                              : 0 0 $spacer--medium !default;
-$registration__fieldset-min-width\@medium                   : 600px !default;
-$registration__fieldset-width\@medium                       : 50% !default;
 
 $registration__legend-font-size                             : $font-size-base;
 $registration__legend-font-weight                           : $font-weight-bold;
@@ -51,10 +49,6 @@ $registration__password-margin                              : 0 !default;
 
     &__fieldset {
         margin: $registration__fieldset-margin;
-        @include mq($screen-m) {
-            min-width: $registration__fieldset-min-width\@medium;
-            width: $registration__fieldset-width\@medium;
-        }
     }
 
     &__newsletter-checkbox {
