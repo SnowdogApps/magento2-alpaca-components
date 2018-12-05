@@ -3,8 +3,8 @@
 
     <div class="container">
         {{ render '@heading' mainHeading }}
-        <div class="grid login">
-            <div class="grid__column grid__column--1-2 login__form-column">
+        <div class="row login">
+            <div class="col-xs-12 col-md-6 login__form-column">
                 {{ render '@heading' formHeading }}
                 {{ render '@divider' }}
                 <p class="login__info">
@@ -37,7 +37,7 @@
                     </div>
                 </form>
             </div>
-            <div class="grid__column grid__column--1-2 login__link-column">
+            <div class="col-xs-12 col-md-6 login__link-column">
                 {{ render '@heading' linkHeading }}
                 {{ render '@divider' }}
                 <p class="login__info">
