@@ -1,4 +1,4 @@
-$cart__margin         : $spacer--medium !default;
+$cart__margin         : $spacer--large !default;
 $cart__border         : 1px solid $gray-lighter !default;
 
 $cart__bottom-margin  : 0 !default;
@@ -6,9 +6,7 @@ $cart__bottom-padding : $spacer 0 0 0 !default;
 
 .cart {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: ($cart__margin * 2);
+    margin-bottom: $cart__margin;
 
     &__bottom {
         display: flex;

@@ -3,121 +3,121 @@
 
     <div class="container">
         {{ render '@heading' mainHeading }}
-    </div>
 
-    <div class="container cart">
-        <div class="col-xs-12 col-lg-9">
-            <form class="cart__products-list">
-                {{#each productlist as |item| }}
-                    {{ render '@cart-list-item' }}
-                {{/each}}
-                <div class="cart-actions">
-                    {{ render '@button--link' buttonContinueShipping }}
-                    {{ render '@button--secondary' buttonUpdateCart }}
-                    {{ render '@button' buttonClearCart }}
-                </div>
-            </form>
-            <div class="grid cart__bottom">
-                <div class="discount">
-                    <div class="discount__title">
-                        <span class="discount__title-text">
-                            {{ discount.title }}
-                        </span>
-                        {{ render '@icon' discount.icon }}
+        <div class="row cart">
+            <div class="col-xs-12 col-lg-9">
+                <form class="cart__products-list">
+                    {{#each productlist as |item| }}
+                        {{ render '@cart-list-item' }}
+                    {{/each}}
+                    <div class="cart-actions">
+                        {{ render '@button--link' buttonContinueShipping }}
+                        {{ render '@button--secondary' buttonUpdateCart }}
+                        {{ render '@button' buttonClearCart }}
                     </div>
-                    <div class="discount__content">
-                        <form>
-                            <div class="discount__controls">
-                                {{ render '@input' discount.input }}
-                                {{ render '@button' discount.button }}
-                            </div>
-                        </form>
+                </form>
+                <div class="grid cart__bottom">
+                    <div class="discount">
+                        <div class="discount__title">
+                            <span class="discount__title-text">
+                                {{ discount.title }}
+                            </span>
+                            {{ render '@icon' discount.icon }}
+                        </div>
+                        <div class="discount__content">
+                            <form>
+                                <div class="discount__controls">
+                                    {{ render '@input' discount.input }}
+                                    {{ render '@button' discount.button }}
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-lg-3">
-            <div class="cart-summary">
-                <div class="cart-summary__item">
-                    <h2>Summary</h2>
-                </div>
-                <div class="cart-summary__item">
-                    {{ render '@select' }}
-                </div>
-                <div class="cart-summary__item">
-                    {{ render '@select' }}
-                </div>
-                <div class="cart-summary__item">
-                    {{ render '@input' }}
-                </div>
-                <div class="cart-summary__item">
-                    {{ render '@input' }}
-                </div>
-                <div class="cart-summary__item cart-summary__shipping-methods">
-                    {{#each shippingMethods as |shippingMethod| }}
-                        <div class="cart-summary__shipping-methods-heading">
-                            {{ shippingMethod.heading }}
-                        </div>
-                        {{ render '@radio' shippingMethod }}
-                    {{/each}}
-                </div>
-                <div class="cart-summary__item cart-totals">
-                    <div class="row row--no-margins between-xs cart-totals__row">
-                        <div class="cart-totals__row-label">
-                            Subtotal
-                        </div>
-                        <div class="cart-totals__row-value">
-                            $34.00
-                        </div>
+            <div class="col-xs-12 col-lg-3">
+                <div class="cart-summary">
+                    <div class="cart-summary__item">
+                        <h2>Summary</h2>
                     </div>
-                    <div class="row row--no-margins between-xs cart-totals__row">
-                        <div class="cart-totals__row-label">
-                            Tax
-                        </div>
-                        <div class="cart-totals__row-value">
-                            $00.00
-                        </div>
+                    <div class="cart-summary__item">
+                        {{ render '@select' }}
                     </div>
-                    <div class="row row--no-margins between-xs cart-totals__row">
-                        <div class="cart-totals__row-label">
-                            Next long row here
-                        </div>
-                        <div class="cart-totals__row-value">
-                            $00.00
-                        </div>
+                    <div class="cart-summary__item">
+                        {{ render '@select' }}
                     </div>
-                    <div
-                        class="
-                            row
-                            row--no-margins
-                            between-xs
-                            cart-totals__row
-                            cart-totals__row--summary
-                        "
-                    >
-                        <div class="
-                                 cart-totals__row-label
-                                 cart-totals__row-label--total
-                             "
+                    <div class="cart-summary__item">
+                        {{ render '@input' }}
+                    </div>
+                    <div class="cart-summary__item">
+                        {{ render '@input' }}
+                    </div>
+                    <div class="cart-summary__item cart-summary__shipping-methods">
+                        {{#each shippingMethods as |shippingMethod| }}
+                            <div class="cart-summary__shipping-methods-heading">
+                                {{ shippingMethod.heading }}
+                            </div>
+                            {{ render '@radio' shippingMethod }}
+                        {{/each}}
+                    </div>
+                    <div class="cart-summary__item cart-totals">
+                        <div class="row row--no-margins between-xs cart-totals__row">
+                            <div class="cart-totals__row-label">
+                                Subtotal
+                            </div>
+                            <div class="cart-totals__row-value">
+                                $34.00
+                            </div>
+                        </div>
+                        <div class="row row--no-margins between-xs cart-totals__row">
+                            <div class="cart-totals__row-label">
+                                Tax
+                            </div>
+                            <div class="cart-totals__row-value">
+                                $00.00
+                            </div>
+                        </div>
+                        <div class="row row--no-margins between-xs cart-totals__row">
+                            <div class="cart-totals__row-label">
+                                Next long row here
+                            </div>
+                            <div class="cart-totals__row-value">
+                                $00.00
+                            </div>
+                        </div>
+                        <div
+                            class="
+                                row
+                                row--no-margins
+                                between-xs
+                                cart-totals__row
+                                cart-totals__row--summary
+                            "
                         >
-                            Order Total
-                        </div>
-                        <div class="
-                                 cart-totals__row-value
-                                 cart-totals__row-value--total
-                             "
-                        >
-                            $34.00
+                            <div class="
+                                    cart-totals__row-label
+                                    cart-totals__row-label--total
+                                "
+                            >
+                                Order Total
+                            </div>
+                            <div class="
+                                    cart-totals__row-value
+                                    cart-totals__row-value--total
+                                "
+                            >
+                                $34.00
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="cart-summary__item">
-                    {{ render '@button--fluid' buttonCheckout }}
-                </div>
-                <div class="cart-summary__item">
-                    <a class="cart-summary__multiple-addresses" href="#">
-                        Check Out with Multiple Addresses
-                    </a>
+                    <div class="cart-summary__item">
+                        {{ render '@button--fluid' buttonCheckout }}
+                    </div>
+                    <div class="cart-summary__item">
+                        <a class="cart-summary__multiple-addresses" href="#">
+                            Check Out with Multiple Addresses
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
