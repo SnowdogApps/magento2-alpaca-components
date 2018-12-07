@@ -20,7 +20,8 @@ $checkbox__color--fake          : $gray-dark !default;
         text-decoration: none;
         color: $checkbox__color--fake;
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
