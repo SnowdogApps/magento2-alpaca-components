@@ -45,6 +45,12 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 .filter {
     &__label {
         padding: $filter__label-padding;
+
+        &:focus {
+            .filter__label-title {
+                color: $color-primary;
+            }
+        }
     }
 
     &__label-title {
