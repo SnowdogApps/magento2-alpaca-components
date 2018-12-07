@@ -256,7 +256,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         overflow: hidden;
         transition: $dropdown-list__transition-height;
         &[aria-hidden="true"] {
-            height: 0;
+            display: none;
         }
     }
 
