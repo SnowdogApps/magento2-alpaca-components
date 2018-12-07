@@ -5,6 +5,8 @@ $active-filters__remove-background   : none !default;
 $active-filters__remove-icon-margin  : 0 auto !default;
 $active-filters__remove-icon-padding : 0 !default;
 $active-filters__icon-fill           : $red !default;
+$active-filters__icon-fill--hover    : $color-secondary !default;
+$active-filters__icon-transition     : $transition-base !default;
 $active-filters__icon-size           : $font-size-base !default;
 $active-filters__label-font-weight   : $font-weight-bold !default;
 $active-filters__clear-border-size   : 2px !default;
@@ -35,6 +37,13 @@ $active-filters__clear-color\@medium : $color-secondary !default;
         background: $active-filters__remove-background;
         cursor: pointer;
         word-break: break-all;
+
+        &:hover,
+        &:focus {
+            .active-filters__remove-icon {
+                fill: $active-filters__icon-fill--hover;
+            }
+        }
     }
 
     &__remove-icon {
@@ -44,6 +53,7 @@ $active-filters__clear-color\@medium : $color-secondary !default;
         width: $active-filters__icon-size;
         height: $active-filters__icon-size;
         fill: $active-filters__icon-fill;
+        transition: $active-filters__icon-transition;
     }
 
     &__label {
