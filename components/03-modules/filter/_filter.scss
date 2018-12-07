@@ -9,7 +9,9 @@ $filter__category-link-color                      : $color-secondary !default;
 $filter__category-link-text-decoration            : underline !default;
 
 // Swatch
-$filter__swatch-margin                            : 0 $spacer--medium $spacer--medium 0 !default;
+$filter__swatch-size\@large                       : 25% !default;
+$filter__swatch-margin                            : 0 $spacer $spacer--medium $spacer !default;
+$filter__swatch-margin\@large                     : 0 0 $spacer--medium 0 !default;
 $filter__swatch-option-size                       : 48px !default;
 $filter__swatch-option-background                 : $white !default;
 $filter__swatch-option-color                      : $gray-dark !default;
@@ -21,6 +23,8 @@ $filter__swatch-option-border-color--active       : $color-primary !default;
 $filter__label-padding                            : $spacer--medium 0 !default;
 
 // Color
+$filter__color-padding                            : 0 $spacer !default;
+$filter__color-size\@large                        : 25% !default;
 $filter__color-option-width                       : 56px !default;
 $filter__color-option-height                      : 80px !default;
 $filter__color-option-border                      : 2px solid transparent !default;
@@ -46,6 +50,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
     &__label {
         padding: $filter__label-padding;
 
+        &:hover,
         &:focus {
             .filter__label-title {
                 color: $color-primary;
@@ -57,6 +62,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         margin: 0;
         text-transform: inherit;
         color: inherit;
+        transition: $filter__transition;
     }
 
     &__category-list {
@@ -94,8 +100,11 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
     &__swatch-item {
         margin: $filter__swatch-margin;
 
-        &:last-child {
-            margin-right: 0;
+        @include mq($screen-l) {
+            display: flex;
+            justify-content: center;
+            flex-basis: $filter__swatch-size\@large;
+            margin: $filter__swatch-margin\@large;
         }
     }
 
@@ -120,6 +129,16 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 
         &--active {
             border-color: $filter__swatch-option-border-color--active;
+        }
+    }
+
+    &__color-item {
+        padding: $filter__color-padding;
+
+        @include mq($screen-l) {
+            display: flex;
+            justify-content: center;
+            flex-basis: $filter__color-size\@large;
         }
     }
 
@@ -152,6 +171,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         &:hover,
         &:focus {
             text-decoration: none;
+
             &:after {
                 border-color: $filter__color-option-after-border-color;
             }

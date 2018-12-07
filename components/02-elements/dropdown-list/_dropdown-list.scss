@@ -200,7 +200,6 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         width: 100%;
         padding: 0;
         font-size: $dropdown-list__font-size;
-        cursor: pointer;
 
         &--collapse {
             .dropdown-list__label {
