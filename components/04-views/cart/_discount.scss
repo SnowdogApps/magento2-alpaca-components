@@ -21,9 +21,6 @@ $discount__button-padding           : 0 21px !default;
     flex-basis: 100%;
     margin-bottom: $discount__margin;
     padding: 0;
-    @include mq($screen-m) {
-        @include grid-column-width(1, 2);
-    }
 
     &.active {
         .discount__title-icon {
