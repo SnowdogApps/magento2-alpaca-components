@@ -9,7 +9,7 @@ module.exports = {
       {
         label: 'Label',
         value: 'Value',
-        ariaLabel: 'Disable filter Value',
+        ariaLabel: 'Disable filter: Value',
         icon: {
           iconId: 'close',
           iconTitle: 'Close',
@@ -19,7 +19,7 @@ module.exports = {
       {
         label: 'Label',
         value: 'Value',
-        ariaLabel: 'Disable filter Value',
+        ariaLabel: 'Disable filter: Value',
         icon: {
           iconId: 'close',
           iconTitle: 'Close',
@@ -29,7 +29,7 @@ module.exports = {
       {
         label: 'Label',
         value: 'Value',
-        ariaLabel: 'Disable filter Value',
+        ariaLabel: 'Disable filter: Value',
         icon: {
           iconId: 'close',
           iconTitle: 'Close',
