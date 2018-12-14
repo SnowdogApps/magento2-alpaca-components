@@ -124,20 +124,13 @@ module.exports = {
       }
     },
     actions: {
-      informations: [
+      class: 'company-users__actions',
+      buttons: [
         {
-          actions: {
-            sides: [
-              {
-                action: [
-                  {
-                    button: true,
-                    title: 'Add new user'
-                  }
-                ]
-              }
-            ]
-          }
+          tag: 'button',
+          class: 'dashboard-actions-toolbar__item button--secondary',
+          attributes: 'type="button"',
+          text: 'Add new user'
         }
       ]
     }
