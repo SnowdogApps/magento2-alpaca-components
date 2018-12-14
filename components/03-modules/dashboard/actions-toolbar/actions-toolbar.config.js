@@ -2,7 +2,6 @@ module.exports = {
   label: 'Actions toolbar',
   name: 'dashboard-actions-toolbar',
   context: {
-    class: '',
     buttons: [
       {
         tag: 'button',
