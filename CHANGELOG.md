@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Review alignment
 - Alignment for buttons
 - Alignment for quick search input (Safari issue)
+- Input text on safari browsers
 
 ### Changed
 - Refactor dropdown list and nested list
