@@ -1,0 +1,17 @@
+<div class="page-wrapper">
+    {{ render '@header' }}
+
+    <div class="container">
+        {{ render '@heading' mainHeading }}
+        <form class="confirmation-link">
+            <p>
+                {{ info }}
+            </p>
+            {{ render '@input' email }}
+            {{ render '@button' submit }}
+            {{ render '@link' back }}
+        </form>
+    </div>
+</div>
+
+{{ render '@footer' }}
