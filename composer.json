@@ -4,6 +4,6 @@
     "license": "MIT",
     "type": "magento2-module",
     "require-dev": {
-        "snowdog/frontools": "^1.5"
+        "snowdog/frontools": "^1.6"
     }
 }
