@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - `email-to-friend` view
 - `confirmation-link` view
+- Support for escape key in dropdown script
 
 ### Fixed
 - Review alignment

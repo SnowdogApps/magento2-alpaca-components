@@ -34,6 +34,18 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
             }
         }
     }
+
+    &__skip-button {
+        @include visually-hidden($usePseudo: true);
+        transition: none;
+
+        &:focus {
+            height: 48px;
+            padding: 0 $spacer--medium;
+            margin-bottom: $spacer;
+        }
+    }
+
     &__switcher {
         display: flex;
         align-items: center;
