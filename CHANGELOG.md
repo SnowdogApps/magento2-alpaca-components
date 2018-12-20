@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Refactor dropdown list and nested list
+- Refactor filters and accessibility improvements
 
 ### Removed
 - Wrong z-index from rating stars
