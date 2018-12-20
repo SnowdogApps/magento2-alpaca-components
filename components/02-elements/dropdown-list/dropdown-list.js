@@ -78,7 +78,7 @@ class DropdownList {
       }, false);
 
       [key, dropdownContent].forEach(el => el.addEventListener('keydown', e => {
-        if (e.key === "Escape") {
+        if (e.key === 'Escape') {
           this.toggleContent(key, dropdownContent, true);
         }
       }));

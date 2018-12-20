@@ -6,7 +6,7 @@ module.exports = {
     skip: {
       tag: 'button',
       class: 'button button--secondary filters__skip-button',
-      attributes: 'id="skip-to-products" type="button"',
+      attributes: 'type="button"',
       text: 'Skip to products'
     },
     allFiltersHeading: 'Shopping Options',
