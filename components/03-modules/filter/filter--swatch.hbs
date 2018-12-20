@@ -1,7 +1,7 @@
 <li class="dropdown-list__item dropdown-list__item--collapse filter {{ class }}">
     <button
         type="button"
-        class="filter__label dropdown-list__label"
+        class="dropdown-list__label filter__label"
         aria-controls="{{ id }}"
         aria-expanded="false"
     >
@@ -11,7 +11,6 @@
     <div
         id="{{ id }}"
         class="dropdown-list__content filter__content"
-        data-content="{{ id }}"
         aria-hidden="true"
     >
         <ul class="list filter__list" {{{ attributes }}}>
