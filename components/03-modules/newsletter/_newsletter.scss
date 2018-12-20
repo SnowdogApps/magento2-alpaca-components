@@ -14,6 +14,7 @@ $newsletter__bottom-gap                 : $spacer--medium !default;
 $newsletter__button-padding             : 21px !default;
 $newsletter__checkbox-bg-color          : $white !default;
 $newsletter__checkbox-label-padding-left: 24px !default;
+$newsletter__checkbox-label-padding-top : 0 !default;
 $newsletter__checkbox-label-line-height : $font-line-height !default;
 $newsletter__checkbox-icon-border-radius: 2px !default;
 $newsletter__checkbox-icon-size         : 18px !default;
@@ -87,6 +88,7 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         line-height: $newsletter__checkbox-label-line-height;
         text-align: left;
         padding-left: $newsletter__checkbox-label-padding-left;
+        padding-top: $newsletter__checkbox-label-padding-top;
         color: $newsletter__checkbox-label-color;
         &:before {
             top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label

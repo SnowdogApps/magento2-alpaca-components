@@ -2,6 +2,9 @@ $filters__heading-font-weight        : $font-weight-bold !default;
 $filters__heading-font-weight\@medium: $font-weight-normal !default;
 $filters__heading-margin             : 0 !default;
 $filters__heading-margin\@medium     : 0 0 $spacer--medium 0 !default;
+$filters__skip-button-height         : 48px !default;
+$filters__skip-button-padding        : 0 $spacer--medium !default;
+$filters__skip-button-margin-bottom  : $spacer !default;
 $filters__switcher-margin            : $spacer 0 0 0 !default;
 $filters__switcher-padding           : 0 !default;
 $filters__switcher-border            : 1px solid $gray-lighter !default;
@@ -40,9 +43,9 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
         transition: none;
 
         &:focus {
-            height: 48px;
-            padding: 0 $spacer--medium;
-            margin-bottom: $spacer;
+            height: $filters__skip-button-height;
+            padding: $filters__skip-button-padding;
+            margin-bottom: $filters__skip-button-margin-bottom;
         }
     }
 
