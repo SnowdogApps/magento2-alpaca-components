@@ -1,11 +1,11 @@
-<a href="#">
-    Link
-</a>
-
-<a href="#" class="link link--invert">
-    Link
-</a>
-
-<a href="#" class="link--secondary">
-    Link
+<a
+    class="link {{ class }}"
+    href="{{ href }}"
+    {{#if title}}
+        title="{{ title }}"
+    {{else}}
+        title="{{ text }}"
+    {{/if}}
+>
+    {{ text }}
 </a>

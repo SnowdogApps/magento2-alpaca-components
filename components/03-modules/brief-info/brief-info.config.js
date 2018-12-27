@@ -7,10 +7,12 @@ module.exports = {
     },
     items: [
       {
+        iconLabel: 'Delivery truck',
         iconWrapperClass: 'brief-info__icon-wrapper--delivery-truck',
         icon: {
           class: 'brief-info__icon brief-info__icon--delivery-truck',
           iconId: 'shipping-time-truck',
+          iconTitle: 'Delivery truck with clock'
         },
         link: {
           class: '',
@@ -24,9 +26,11 @@ module.exports = {
         }
       },
       {
+        iconLabel: 'Curved arrows',
         icon: {
           class: 'brief-info__icon',
-          iconId: 'curved-arrows'
+          iconId: 'curved-arrows',
+          iconTitle: 'Curved 2 arrows in form of circle',
         },
         link: {
           class: '',
@@ -41,9 +45,11 @@ module.exports = {
       },
       {
         class: 'brief-info__icon brief-info__icon--shield',
+        iconLabel: 'Shield',
         icon: {
           class: 'brief-info__icon',
-          iconId: 'shield'
+          iconId: 'shield',
+          iconTitle: 'Shield',
         },
         link: {
           class: '',

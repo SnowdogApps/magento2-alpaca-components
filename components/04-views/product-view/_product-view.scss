@@ -17,19 +17,21 @@ $product-view__action-icon-wishlist-width              : 20px !default;
 $product-view__action-item-size                        : 48px !default;
 $product-view__action-item-spacing                     : $spacer !default;
 
-$product-view__add-review-link-font-size               : $font-size-base;
-$product-view__add-review-link-font-size\@medium       : $font-size-small;
+$product-view__add-review-link-font-size                : $font-size-base !default;
+$product-view__add-review-link-font-size\@medium        : $font-size-small !default;
 
 $product-view__add-to-cart-margin-right                : $spacer--medium !default;
 
 $product-view__base-elements-vertical-spacing          : $spacer !default;
 
-$product-view__col-base-spacing                        : $spacer--medium !default;
-$product-view__col-base-reduce-width                   : $product-view__col-base-spacing / 2;
-$product-view__col-left-base-width                     : 50%;
-$product-view__col-left-width                          : calc(#{$product-view__col-left-base-width} - #{$product-view__col-base-reduce-width}) !default;
-$product-view__col-right-base-width                    : 100% - #{$product-view__col-left-base-width};
-$product-view__col-right-width                         : calc(#{$product-view__col-right-base-width} - #{$product-view__col-base-reduce-width}) !default;
+$product-view__title-font-size                          : $font-size-large !default;
+
+$product-view__col-base-spacing                         : $spacer--medium !default;
+$product-view__col-base-reduce-width                    : $product-view__col-base-spacing / 2 !default;
+$product-view__col-left-base-width                      : 50% !default;
+$product-view__col-left-width                           : calc(#{$product-view__col-left-base-width} - #{$product-view__col-base-reduce-width}) !default;
+$product-view__col-right-base-width                     : 100% - #{$product-view__col-left-base-width} !default;
+$product-view__col-right-width                          : calc(#{$product-view__col-right-base-width} - #{$product-view__col-base-reduce-width}) !default;
 
 $product-view__description-color                       : $gray-darker !default;
 $product-view__description-margin                      : 0 $spacer--medium $spacer--medium !default;
@@ -63,6 +65,14 @@ $product-view__add-to-cart-margin\@large               : 0 $product-view__add-to
 
 $product-view__add-to-cart-btn-min-width               : 150px !default;
 $product-view__add-to-cart-btn-padding\@large          : 0 $spacer--large !default;
+$product-view__update-wishlist-btn-width                : auto !default;
+
+$product-view__gallery-bottom-border                    : 1px solid $gray !default;
+$product-view__gallery-bottom-border\@medium            : none !default;
+$product-view__gallery-margin-bottom                    : $spacer--medium !default;
+$product-view__gallery-margin-bottom\@medium            : 0 !default;
+$product-view__gallery-padding-bottom                   : $spacer !default;
+$product-view__gallery-padding-bottom\@medium           : 0 !default;
 
 $product-view__gallery-bottom-border                   : 1px solid $gray !default;
 $product-view__gallery-bottom-border\@medium           : none !default;
@@ -94,11 +104,15 @@ $product-view__product-rating-line-height              : 1.5em !default;
 
 $product-view__qty-margin-right\@small                 : $spacer--medium !default;
 
-$product-view__rating-link-color                       : $gray-dark !default;
-$product-view__rating-margin                           : 0 0 14px 0 !default;
-$product-view__rating-margin\@medium                   : 0 !default;
-$product-view__rating-text-color                       : $gray-dark !default;
-$product-view__rating-value-font-size                  : $font-size-base;
+$product-view__rating-link-color                        : $gray-dark !default;
+$product-view__rating-width                             : 100% !default;
+$product-view__rating-width\@medium                     : 45% !default;
+$product-view__rating-top                               : 0 !default;
+$product-view__rating-right                             : 0 !default;
+$product-view__rating-margin                            : 0 0 14px 0 !default;
+$product-view__rating-margin\@medium                    : 0 !default;
+$product-view__rating-text-color                        : $gray-dark !default;
+$product-view__rating-value-font-size                   : $font-size-base !default;
 
 $product-view__sku-color                               : $gray !default;
 $product-view__sku-margin-bottom                       : $spacer--medium !default;
@@ -110,13 +124,10 @@ $product-view__stock-color--out-of-stock               : $red !default;
 $product-view__stock-color--alert                      : $red !default;
 $product-view__stock-font-weight\@medium               : $font-weight-bold !default;
 
-$product-view__swatch-margin-bottom                    : $spacer--medium !default;
-$product-view__swatch-option-spacing                   : 48px !default;
-$product-view__swatch-option-height--attributes        : 64px !default;
-$product-view__swatch-option-width--attributes         : 54px !default;
-$product-view__swatch-option-margin-right              : $spacer--medium !default;
-$product-view__swatch-option-title-font-size           : $font-size-base !default;
-$product-view__swatch-option-title-font-weight         : $font-weight-bold !default;
+$product-view__swatch-margin-bottom                     : $spacer--medium !default;
+$product-view__swatch-margin-right                      : $spacer--medium !default;
+$product-view__swatch-option-title-font-size            : $font-size-base !default;
+$product-view__swatch-option-title-font-weight          : $font-weight-bold !default;
 
 $product-view__slider-add-to-cart-padding              : 0 $spacer--medium !default;
 $product-view__slider-margin-bottom                    : $spacer !default;
@@ -226,6 +237,11 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
         @include mq($screen-m) {
             padding-right: 55%;
         }
+        .heading--page {
+            margin: 0;
+            font-size: $product-view__title-font-size;
+            text-transform: inherit;
+        }
     }
 
     &__price {
@@ -308,27 +324,20 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
 
     &__options {
         width: 100%;
-    }
 
-    .swatch {
-        margin-bottom: $product-view__swatch-margin-bottom;
-    }
-
-    .swatch__option {
-        width: $product-view__swatch-option-spacing;
-        height: $product-view__swatch-option-spacing;
-        margin-right: $product-view__swatch-option-margin-right;
-        min-height: 0;
-        min-width: 0;
-        &--attributes {
-            width: $product-view__swatch-option-width--attributes;
-            height: $product-view__swatch-option-height--attributes;
+        .swatch {
+            margin-bottom: $product-view__swatch-margin-bottom;
+            &__option-container {
+                margin-right: $product-view__swatch-margin-right;
+            }
         }
     }
+
     &__swatch-option-title {
         font-size: $product-view__swatch-option-title-font-size;
         font-weight: $product-view__swatch-option-title-font-weight;
     }
+
     &__tabs {
         margin: $product-view__tabs-margin;
         @include mq($screen-m) {
@@ -346,19 +355,6 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
         padding: $product-view__information-padding;
         @include mq($screen-m) {
             padding: $product-view__information-padding\@medium;
-        }
-    }
-
-    &__rating {
-        width: 100%;
-        margin: $product-view__rating-margin;
-        @include clearfix;
-        @include mq($screen-m) {
-            position: absolute;
-            right: 0;
-            width: 45%;
-            text-align: right;
-            margin: $product-view__rating-margin\@medium;
         }
     }
 
@@ -388,13 +384,17 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
 
     &__rating {
         color: $product-view__rating-text-color;
+        width: $product-view__rating-width;
         display: flex;
+        margin: $product-view__rating-margin;
         justify-content: space-between;
         @include mq($screen-m) {
-            display: block;
-            top: 0;
-            text-align: right;
-            font-size: $product-view__product-rating-line-height;
+            position: absolute;
+            top: $product-view__rating-top;
+            right: $product-view__rating-right;
+            width: $product-view__rating-width\@medium;
+            justify-content: flex-end;
+            margin: $product-view__rating-margin\@medium;
         }
     }
 
@@ -482,7 +482,8 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
         }
     }
 
-    &__add-to-cart-btn {
+    &__add-to-cart-btn,
+    &__update-cart-btn {
         flex: 1 0 auto;
         width: 100%;
         min-width: $product-view__add-to-cart-btn-min-width;
@@ -492,7 +493,8 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
         }
     }
 
-    &__add-to-cart {
+    &__add-to-cart,
+    &__update-cart {
         width: 100%;
         margin: $product-view__add-to-cart-margin;
         @include mq($screen-l) {
@@ -500,6 +502,10 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
             flex: 0 0 auto;
             margin: $product-view__add-to-cart-margin\@large;
         }
+    }
+
+    &__update-wishlist {
+        width: $product-view__update-wishlist-btn-width;
     }
 
     &__action {
@@ -588,6 +594,10 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
         width: 100%;
         padding: $product-view__review-item-padding;
         border-top: $product-view__review-item-border;
+
+        &:first-child {
+            border-top: 0;
+        }
 
         &:last-child {
             border-bottom: $product-view__review-item-border;

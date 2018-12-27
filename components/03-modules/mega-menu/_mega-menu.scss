@@ -64,7 +64,7 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
             position: absolute;
             top: 100%;
             left: 0;
-            z-index: 2;
+            z-index: 4;
             width: 100%;
             border-top: $mega-menu__inner-list-border--level1;
             box-shadow: $mega-menu__inner-list-box-shadow--level1;
@@ -129,6 +129,12 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
         &:hover {
             text-decoration: $mega-menu__inner-link-text-decoration;
             color: $mega-menu__inner-link-color--active;
+        }
+    }
+
+    &__column-hidden {
+        > .mega-menu__inner-link {
+            display: none;
         }
     }
 }

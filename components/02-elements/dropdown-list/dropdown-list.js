@@ -1,13 +1,18 @@
-'use-strict';
+'use strict';
 
-(function DropdownList() {
-  const dropdownCollapseLabel = '.dropdown-list__item--collapse .dropdown-list__label',
-        dropdownItem          = [ ...document.querySelectorAll(dropdownCollapseLabel) ],
-        openClass             = 'dropdown-list__item--open',
-        contentClass          = 'dropdown-list__content',
-        mq                    = '(min-width: 768px)';
+class DropdownList {
+  constructor(element) {
+    this.element = element;
+    this.dropdownCollapseLabel = '.dropdown-list__item--collapse > .dropdown-list__label';
+    this.dropdownItem = [...this.element.querySelectorAll(this.dropdownCollapseLabel)];
+    this.contentClass = 'dropdown-list__content';
+    this.mq = '(min-width: 768px)';
+    this.mqClass = 'dropdown-list--is-open@screen-m';
+    this.dropdownMediumOpen = this.element.classList.contains(this.mqClass);
+    this.init();
+  }
 
-  function setAriaAttributes(label, content, expanded) {
+  setAriaAttributes(label, content, expanded) {
     if (expanded) {
       label.setAttribute('aria-expanded', 'false');
       content.setAttribute('aria-hidden', 'true');
@@ -18,63 +23,100 @@
     }
   }
 
-  function isMediumOpen(dropdownBlock) {
-    return (dropdownBlock.classList.contains('dropdown-list--is-open@screen-m')) && window.matchMedia(mq).matches;
+  removeAriaAttributes(label, content) {
+    label.removeAttribute('aria-expanded');
+    content.setAttribute('aria-hidden', 'false');
+    label.disabled = true;
   }
 
-  function resetMqMediumOpen(item) {
-    const dropdownItem = item.parentNode,
-          dropdownContent = dropdownItem.querySelector(`.${contentClass}`);
+  isMediumOpen(dropdownBlock) {
+    return (dropdownBlock.classList.contains('dropdown-list--is-open@screen-m')) && window.matchMedia(this.mq).matches;
+  }
 
-    if (window.matchMedia(mq).matches) {
+  resetMqMediumOpen(item) {
+    const dropdownItem    = item.parentNode,
+          dropdownContent = dropdownItem.querySelector(`.${this.contentClass}`);
+
+    if (window.matchMedia(this.mq).matches) {
       dropdownContent.style.height = 'auto';
-      dropdownItem.classList.remove(openClass);
-      setAriaAttributes(item, dropdownContent, true);
+      this.removeAriaAttributes(item, dropdownContent);
     }
     else {
       dropdownContent.style.height = 0;
-      dropdownItem.classList.remove(openClass);
-      setAriaAttributes(item, dropdownContent, false);
+      this.setAriaAttributes(item, dropdownContent, true);
+      item.disabled = false;
     }
   }
 
-  function toggleContent(item) {
-    const dropdownId      = item.dataset.dropdown,
+  getContentHeight(item) {
+    return [...item.children]
+      .map(elem => elem.clientHeight)
+      .reduce((a, b) => a + b, 0) + 'px';
+  }
+
+  closeInnerdDropdowns(item) {
+    const subDropDowns = [...item.querySelectorAll(`${this.dropdownCollapseLabel}[aria-expanded="true"]`)];
+    subDropDowns.forEach(key => {
+      const dropdownId      = key.getAttribute('aria-controls'),
+            dropdownItem    = key.parentNode,
+            dropdownContent = dropdownItem.querySelector(`.${this.contentClass}[data-content="${dropdownId}"]`);
+      this.setAriaAttributes(key, dropdownContent, true);
+      dropdownContent.style.height = 0;
+    });
+  }
+
+  toggleContent(item) {
+    const dropdownId      = item.getAttribute('aria-controls'),
           dropdownItem    = item.parentNode,
-          dropdownContent = dropdownItem.querySelector(`.${contentClass}[data-content="${dropdownId}"]`),
+          dropdownContent = dropdownItem.querySelector(`.${this.contentClass}[data-content="${dropdownId}"]`),
           dropdownBlock   = item.closest('.dropdown-list');
 
-    if (!isMediumOpen(dropdownBlock)) {
+    if (!this.isMediumOpen(dropdownBlock)) {
       if (dropdownContent.clientHeight > 0) {
-        dropdownContent.style.height = 0;
-        dropdownItem.classList.remove(openClass);
-        setAriaAttributes(item, dropdownContent, true);
+        const sectionHeight     = this.getContentHeight(dropdownContent),
+              elementTransition = dropdownContent.style.transition;
+        dropdownContent.style.transition = '';
+        this.setAriaAttributes(item, dropdownContent, true);
+        requestAnimationFrame(() => {
+          dropdownContent.style.height = sectionHeight;
+          dropdownContent.style.transition = elementTransition;
+          requestAnimationFrame(() => {
+            dropdownContent.style.height = 0;
+            this.closeInnerdDropdowns(dropdownContent);
+          });
+        });
       }
       else {
-        dropdownContent.style.height = 'auto';
-        dropdownItem.classList.add(openClass);
-        setAriaAttributes(item, dropdownContent, false);
+        const openedDropdowns = [...document.querySelectorAll('.dropdown-list__content[aria-hidden="false"]')];
+        dropdownContent.style.height = this.getContentHeight(dropdownContent);
+        openedDropdowns.map(openedDropdown => {
+          openedDropdown.style.height = 'auto';
+        });
+        this.setAriaAttributes(item, dropdownContent, false);
       }
-    }
-    else {
-      dropdownContent.style.height = 'auto';
-      dropdownItem.classList.remove(openClass);
-      setAriaAttributes(item, dropdownContent, false);
     }
   }
 
-  dropdownItem.forEach(
-    key => key.addEventListener('click', (e) => {
-      e.preventDefault();
-      toggleContent(key, false);
-    }, false)
-  );
-
-  window.addEventListener('resize', () => {
-    const dropdownMediumOpen = document.querySelector('.dropdown-list--is-open\\@screen-m');
-    if (dropdownMediumOpen) {
-      const dropdownItems =  [ ...dropdownMediumOpen.querySelectorAll(dropdownCollapseLabel)];
-      dropdownItems.forEach(key => resetMqMediumOpen(key));
+  setMediumOpen() {
+    if (this.dropdownMediumOpen) {
+      let dropdownItems = [...this.element.querySelectorAll(this.dropdownCollapseLabel)];
+      dropdownItems.forEach(key => this.resetMqMediumOpen(key));
     }
-  });
-})();
+  }
+
+  init() {
+    this.dropdownItem.forEach(
+      key => key.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.toggleContent(key);
+      }, false)
+    );
+    this.setMediumOpen();
+
+    window.addEventListener('resize', () => {
+      this.setMediumOpen();
+    });
+  }
+}
+
+new DropdownList(document.querySelector('.dropdown-list'));

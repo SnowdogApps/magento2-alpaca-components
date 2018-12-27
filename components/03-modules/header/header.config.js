@@ -8,6 +8,7 @@ module.exports = {
         class: 'header-button--reset-margin',
         icon: {
           iconId: 'heart',
+          iconTitle: 'Heart',
           class: 'header-button__icon'
         }
       },
@@ -17,6 +18,7 @@ module.exports = {
         class: '',
         icon: {
           iconId: 'phone',
+          iconTitle: 'Phone',
           class: 'header-button__icon'
         }
       },
@@ -26,6 +28,7 @@ module.exports = {
         class: '',
         icon: {
           iconId: 'account',
+          iconTitle: 'User\'s account',
           class: 'header-button__icon'
         }
       }
@@ -49,6 +52,7 @@ module.exports = {
         class: 'search-form__input',
         id: 'search',
         name: 'search',
+        type: 'search',
         placeholder: 'Search entire store here...'
       }
     },
@@ -57,12 +61,14 @@ module.exports = {
       text: '',
       class: 'button--icon search-form__button',
       iconId: 'search',
+      iconTitle: 'Search',
       iconClass: 'button__icon',
       attributes: 'type="button" aria-label="Search"',
     },
     minicartTrigger: {
       icon: {
         iconId: 'shopping-cart',
+        iconTitle: 'Shopping cart',
         class: 'header-button__icon'
       },
       text: 'Cart',

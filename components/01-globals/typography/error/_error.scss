@@ -1,0 +1,26 @@
+$input__error-color     : $color-danger !default;
+$input__error-margin-top: $spacer !default;
+
+div {
+    &.mage-error {
+        margin-top: $input__error-margin-top;
+        color: $input__error-color;
+    }
+
+    &.required {
+        label {
+            &:after {
+                content: '*';
+                color: $input__error-color;
+            }
+        }
+    }
+}
+
+input,
+textarea,
+select {
+    &.mage-error {
+        border-color: $input__error-color;
+    }
+}

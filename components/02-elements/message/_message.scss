@@ -1,3 +1,4 @@
+$message__margin-top         : $spacer--medium !default;
 $message__padding            : $spacer $spacer--extra-large !default;
 $message__margin-base        : $spacer--medium 0 0 0 !default;
 $message__margin-base\@medium: 0 0 $spacer--medium 0 !default;
@@ -32,6 +33,10 @@ $message__icon-fill--error   : $red !default;
     color: $message__color;
     font-size: $message__font-size;
     transition: $message__transition;
+
+    &:first-child {
+        margin-top: $message__margin-top;
+    }
 
     @include mq($screen-m) {
         margin: $message__margin-base\@medium;

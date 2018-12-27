@@ -1,7 +1,7 @@
 module.exports = {
   name: 'price',
   context: {
-    regularPrice: '1 400',
+    regularPrice: '1 400.00',
     specialPrice: '',
     prefix: {
       tag: '',
@@ -22,7 +22,7 @@ module.exports = {
           closingTag: '',
           text: '$'
         },
-        regularPrice: '1 400',
+        regularPrice: '1 400.00',
         regularPriceClass: '',
         specialPrice: '1 299.99',
         specialPriceClass: '',

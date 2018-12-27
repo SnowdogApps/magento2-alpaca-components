@@ -1,6 +1,6 @@
 $tab__border-width                    : 1px !default;
 $tab__border-width--large             : 8px !default;
-    
+
 // title
 $tab__title-padding                   : $spacer--medium !default;
 $tab__title-border                    : $tab__border-width solid $gray-light !default;
@@ -30,11 +30,14 @@ $tab__icon-size                       : 48px !default;
         display: flex;
         flex-flow: row wrap;
     }
-    
+
     &__title {
         position: relative;
+        display: block;
+        width: 100%;
         padding: $tab__title-padding;
-        border-top: $tab__title-border;
+        border: $tab__title-border;
+        border-width: $tab__border-width 0 0 0;
         background: $tab__title-background;
         text-align: center;
         font-weight: $tab__title-font-weight;
@@ -46,6 +49,7 @@ $tab__icon-size                       : 48px !default;
 
             @include mq($screen-l) {
                 border-bottom: $tab__title-border--large;
+                width: auto;
             }
         }
 
@@ -55,9 +59,10 @@ $tab__icon-size                       : 48px !default;
             border-top: none;
             border-bottom : $tab__title-border--large;
         }
-        
+
         .tab__icon {
             fill: $tab__icon-color;
+            pointer-events: none;
         }
 
         &--active {
@@ -65,7 +70,7 @@ $tab__icon-size                       : 48px !default;
             border-bottom: none;
             background: $tab__title-background--active;
             color: $tab__title-color--active;
-            
+
             &:nth-last-child(2) {
                 border: none;
 
@@ -73,14 +78,14 @@ $tab__icon-size                       : 48px !default;
                     border-bottom: $tab__title-border--large-active;
                 }
             }
-            
+
             @include mq($screen-l) {
                 border-bottom: $tab__title-border--large-active;
                 background-color: $tab__title-background--large-active;
                 font-weight: $tab__title-font-weight--large-active;
                 z-index: 2;
             }
-            
+
             .tab__icon {
                 transform: rotateX(180deg);
                 fill: $tab__icon-color--active;
@@ -97,7 +102,7 @@ $tab__icon-size                       : 48px !default;
             }
         }
     }
-    
+
     &__icon {
         position: absolute;
         right: 15px;
@@ -112,7 +117,7 @@ $tab__icon-size                       : 48px !default;
             display: none;
         }
     }
-    
+
     &__content {
         position: relative;
         display: none;

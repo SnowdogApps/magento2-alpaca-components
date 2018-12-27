@@ -6,10 +6,105 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `email-to-friend` view
+- `confirmation-link` view
+
+### Fixed
+- Review alignment
+- Alignment for buttons
+- Alignment for quick search input (Safari issue)
+- Input text on safari browsers
+
+### Changed
+- Refactor dropdown list and nested list
+
+### Removed
+- Wrong z-index from rating stars
+
+## [1.0.1] - 18.10.2018
+### Changed
+- Circle CI tests setup
+
+## [1.0.0] - 15.10.2018
+### Added
+- Better docs
+
+## [0.10.2] - 11.10.2018
+### Added
+- Styles for 2 column layouts
+
+### Changed
+- Refactor rating & review on product page, a11y
+
+### Removed
+- Useless table element sass extends
+
+### Fixed
+- `z-index` value for mega menu
+
+## [0.10.1] - 26.09.2018
+### Fixed
+- Catalog grid on IE
+
+## [0.10.0] - 18.09.2018
+### Added
+- Class for hiding column name in menu
+- Category block styles in catalog view
+
+### Changed
+- Rating stars
+- Error styles
+- Catalog structure
+
+### Fixed
+- Qty validation error styles
+
+## [0.9.1] - 06.09.2018
+### Changed
+- Yarn lock file
+
+## [0.9.0] - 05.09.2018
+### Added
+- Question mark icon
+
+### Changed
+- Sidebar blocks heading
+
+### Fixed
+- Review module and review details view
+
+## [0.8.0] - 22.08.2018
+### Added
 - Compare view
+- Loader element
+- Hover effect to header buttons
+- Accessibility for swatches and toolbar
+- Swatch color variant
+- README files for elements with accessibility information
+- Sidebar block module for compare, wishlist and recent orders
+- Margin to notification
+- Modifier to swatch option for white color
+- Quicksearch module
 
 ### Changed
 - Product page styles
+- Gallery loader styles
+- Swatch refactored
+- Page title and breadcrumbs styles
+- Catalog grid item adjustments
+- Global & Elements accessibility improvements (svg, typography, cookies, messages, pager, price, tabs, table, rating, dropdown-list-medium)
+- Link refactored
+- Moved wishlist component from modules to dashboard views
+- Catalog items improvements
+- 4 columns grid to fix sidebar size in my account
+
+### Removed
+- sidebar-nav-list module
+- mix-blend-mode from product images
+
+## [0.7.3] - 09.07.2018
+### Fixed
+- CSS Lint errors
 
 ## [0.7.2] - 07.05.2018
 ### Fixed

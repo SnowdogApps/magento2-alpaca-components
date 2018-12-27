@@ -22,7 +22,7 @@ $minicart-content__products-list-padding    : 0 $spacer--medium !default;
 $minicart-content__products-list-margin     : $spacer 0 0 0 !default;
 
 .minicart-content {
-    height: auto !important;
+    height: auto !important; // sass-lint:disable-line no-important
     max-height: calc(100vh - 90px);
     font-size: $minicart-content__font-size;
     overflow-y: auto;

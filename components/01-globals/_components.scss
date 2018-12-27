@@ -20,10 +20,12 @@
 @import '_container/container';
 @import 'grid/grid';
 @import 'icon/icon';
+@import 'layouts/layouts';
 
 // Typography
 @import '_fonts/fonts';
 @import 'typography/blockquote/blockquote';
+@import 'typography/error/error';
 @import 'typography/heading/heading';
 @import 'typography/label/label';
 @import 'typography/link/link';

@@ -37,37 +37,7 @@
                 </div>
 
                 <div class="product-view__rating">
-                    <div class="product-view__rating-rates">
-                        {{ render '@rating--rate' }}
-                        {{#if rating.parenthesis}}
-                            (
-                        {{/if}}
-                        <a
-                            href="{{ rating.href }}"
-                            class="
-                                product-view__link
-                                product-view__link--rating
-                                {{ rating.class }}
-                            "
-                        >
-                            {{{ rating.value }}}
-                        </a>
-                        {{#if rating.parenthesis}}
-                            )
-                        {{/if}}
-                    </div>
-                    <div class="product-view__rating-actions">
-                        <a
-                            href="{{ addReview.href }}"
-                            class="
-                                product-view__link
-                                product-view__link--add-review
-                                {{ addReview.class }}
-                            "
-                        >
-                            {{ addReview.text }}
-                        </a>
-                    </div>
+                    {{ render '@review--summary' }}
                 </div>
             </div>
 
@@ -78,9 +48,8 @@
                 </div>
 
                 <div class="product-view__options">
-                    {{#each options as |option|}}
-                        {{> '@swatch' option}}
-                    {{/each}}
+                    {{ render '@swatch--with-label' swatch.size merge=true }}
+                    {{ render '@swatch--image-with-label' swatch.color merge=true }}
                 </div>
 
                 <div class="product-view__main-actions">

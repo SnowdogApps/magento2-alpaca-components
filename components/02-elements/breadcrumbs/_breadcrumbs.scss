@@ -1,6 +1,5 @@
-$breadcrumbs__margin             : 8px !default;
-$breadcrumbs__padding            : 8px !default;
-$breadcrumbs__clickable-area     : 48px !default;
+$breadcrumbs__margin             : $spacer !default;
+$breadcrumbs__padding            : $spacer--medium $spacer !default;
 $breadcrumbs__color              : $gray-dark !default;
 $breadcrumbs__font-family        : $font-family-base !default;
 $breadcrumbs__color--active      : $blue !default;
@@ -11,14 +10,21 @@ $breadcrumbs__font-size          : $font-size-small !default;
     display: none;
 
     @include mq($screen-m) {
-        display: flex;
-        flex-wrap: wrap;
+        display: block;
+    }
+
+    &__list {
+        @include mq($screen-m) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     &__item {
         display: flex;
         align-items: stretch;
-        min-height: $breadcrumbs__clickable-area;
         color: $breadcrumbs__color;
         font-size: $breadcrumbs__font-size;
 
@@ -30,11 +36,19 @@ $breadcrumbs__font-size          : $font-size-small !default;
             color: $breadcrumbs__color;
         }
 
+        &:first-of-type {
+            .breadcrumbs__link {
+                padding-left: 0;
+            }
+        }
+
         &:last-child {
-            align-items: center;
-            padding: 0 $breadcrumbs__padding;
-            font-family: $breadcrumbs__font-family--active;
-            color: $breadcrumbs__color--active;
+            &:not(:first-child) {
+                align-items: center;
+                padding: $breadcrumbs__padding;
+                font-family: $breadcrumbs__font-family--active;
+                color: $breadcrumbs__color--active;
+            }
 
             &:after {
                 display: none;
@@ -45,8 +59,14 @@ $breadcrumbs__font-size          : $font-size-small !default;
     &__link {
         display: flex;
         align-items: center;
-        padding: 0 $breadcrumbs__padding;
+        padding: $breadcrumbs__padding;
         font-family: $breadcrumbs__font-family;
         text-decoration: none;
+    }
+
+    & + .page-main {
+        .heading--page {
+            margin-top: 0;
+        }
     }
 }

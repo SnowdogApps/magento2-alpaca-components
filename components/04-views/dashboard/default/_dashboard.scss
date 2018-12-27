@@ -1,13 +1,14 @@
-$dashboard-margin                : 30px !default;
-$dashboard-padding               : 15px !default;
-$dashboard__sidebar-width--medium: calc(#{100% / 4} - #{(4 - 1) * $grid__gutter / 4}) !default;
-$dashboard__content-width--medium: calc(#{100% / 4 * 3} - #{(4 - 3) * $grid__gutter / 4}) !default;
+$dashboard-margin-base           : $spacer--medium 0 $spacer--large !default;
+$dashboard-margin                : $spacer--large !default;
+$dashboard-padding               : $spacer--medium !default;
+$dashboard__sidebar-width--medium: calc(25% - 3 * #{$grid__gutter} / 4) !default;
+$dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
 
 .dashboard {
     &__sidebar,
     &__content {
         @include mq($screen-m) {
-            margin: $dashboard-margin 0;
+            margin: $dashboard-margin-base;
             padding: 0 $dashboard-padding;
         }
 
@@ -35,8 +36,6 @@ $dashboard__content-width--medium: calc(#{100% / 4 * 3} - #{(4 - 3) * $grid__gut
 
     &__content {
         @include mq($screen-m) {
-            padding-top: $dashboard-padding;
-
             @include isIE() {
                 max-width: $dashboard__content-width--medium;
             }
@@ -74,31 +73,6 @@ $dashboard__content-width--medium: calc(#{100% / 4 * 3} - #{(4 - 3) * $grid__gut
 
     &__item {
         margin-bottom: $dashboard-margin;
-    }
-
-    &__wishlist-handler {
-        justify-content: flex-start;
-        margin: 0;
-    }
-
-    &__wishlist-item {
-        margin-bottom: $dashboard-margin;
-
-        @include mq($screen-s) {
-            padding: 30px;
-        }
-
-        &:nth-child(odd) {
-            @include mq($screen-s) {
-                padding-left: 5px;
-            }
-        }
-
-        &:nth-child(even) {
-            @include mq($screen-s) {
-                padding-right: 5px;
-            }
-        }
     }
 
     &__form {
