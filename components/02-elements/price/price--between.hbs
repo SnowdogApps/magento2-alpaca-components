@@ -1,5 +1,5 @@
 <div class="price {{ class }} {{{ attributes }}}">
-    <span class="price__value {{ fromPriceClass }}">
+    <span class="price__value {{ priceClass }}">
         <span class="price__text">
             {{ textBeforeFromPrice }}
         </span>
@@ -22,7 +22,7 @@
         {{/if}}
     </span>
 
-    <span class="price__value {{ toPriceClass }}">
+    <span class="price__value {{ priceClass }}">
         <span class="price__text">
             {{ textBeforeToPrice }}
         </span>

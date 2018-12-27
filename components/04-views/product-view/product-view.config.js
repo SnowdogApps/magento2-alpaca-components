@@ -1435,10 +1435,7 @@ module.exports = {
     {
       name: 'bundle',
       context: {
-        price: {
-          content: 'price--from'
-        },
-        description: '<span class="product-view__description-title">Customize Ingrid Running Jacket with Long Sleaves</span>',
+        description: 'Customize Ingrid Running Jacket with Long Sleaves',
         customizations: [
           {
             options: {

@@ -34,10 +34,9 @@ module.exports = {
       }
     },
     {
-      name: 'from',
+      name: 'between',
       context: {
-        fromPriceClass: 'price__value--from',
-        toPriceClass: 'price__value--from',
+        priceClass: 'price__value--between',
         textBeforeFromPrice: 'From',
         textBeforeToPrice: 'To',
         fromPrice: '61.00',

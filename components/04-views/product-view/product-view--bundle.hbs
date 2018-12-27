@@ -19,7 +19,7 @@
                 </span>
 
                 <span class="product-view__price">
-                    {{ render (component price.content) price.contentContext }}
+                    {{ render '@price--between' }}
                 </span>
 
                 <div
@@ -78,7 +78,9 @@
                         product-view__description-bundle
                     "
                 >
-                    {{{ description }}}
+                    <span class="product-view__description-title">
+                        {{ description }}
+                    </span>
                 </div>
 
                 <div class="product-view__customization">
