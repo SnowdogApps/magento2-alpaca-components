@@ -56,7 +56,7 @@
                 <div class="product-view__customization">
                     {{#each customizations as |customize| }}
                         <div class="product-view__customization-element">
-                            {{ render '@bundle-option' options }}
+                            {{ render '@bundle-option' options merge=true }}
                         </div>
                     {{/each}}
                 </div>
@@ -92,10 +92,10 @@
                 </div>
 
                 <div class="product-view__summary">
+                    {{ render '@price' price merge=true }}
                     <div class="product-view__summary-title">
                         {{ summaryTitle }}
                     </div>
-
                     <ul class="product-view__summary-list list">
                         {{#each summaries as |summary|}}
                             <li class="product-view__summary-item list__item">

@@ -1439,16 +1439,9 @@ module.exports = {
         customizations: [
           {
             options: {
-              title: {
-                message: 'Choose first option',
-                tag: 'h4'
-              },
               fields: [
                 {
                   content: 'radio',
-                  config: {
-                    name: 'bundleOption1'
-                  }
                 }
               ]
             }
@@ -1456,35 +1449,84 @@ module.exports = {
           {
             options: {
               title: {
-                message: 'Fill second option',
+                message: 'Sprite Yoga Strap',
                 tag: 'h4'
               },
               fields: [
                 {
-                  content: 'input',
+                  content: 'checkbox',
                   config: {
+                    id: 'checkbox-1',
+                    name: 'checkbox-name-1',
                     label: {
-                      text: 'Add your text on shirt',
-                    },
-                    field: {
-                      placeholder: 'i.e. I X Y L L'
-                    },
-                    name: 'bundleOption2'
+                      text: '1 x Sprite Yoga Strap 6 foot',
+                    }
+                  }
+                },
+                {
+                  content: 'checkbox',
+                  config: {
+                    id: 'checkbox-2',
+                    name: 'checkbox-name-2',
+                    label: {
+                      text: '1 x Sprite Yoga Strap 8 foot',
+                    }
                   }
                 }
               ],
+              qty: false
             }
-          }
+          },
+          {
+            options: {
+              title: {
+                message: 'Sprite Foam Roller',
+                tag: 'h4'
+              },
+              fields: [
+                {
+                  content: 'select',
+                  config: {
+                    label: {
+                      class: 'label--hidden'
+                    },
+                    field: {
+                      class: ''
+                    },
+                    options: [{
+                        text: 'Sprite Foam Roller'
+                      },
+                      {
+                        text: 'Sprite Foam Roller S'
+                      },
+                      {
+                        text: 'Sprite Foam Roller XL',
+                        attributes: false
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
         ],
+        price: {
+          class: 'product-view__bundle-price',
+          regularPrice: '92.00',
+        },
         summaryTitle: 'Summary',
         summaries: [
           {
-            title: 'First option:',
-            item: '1x Choosen Item'
+            title: 'Sprite Stasis Ball:',
+            item: '1 x Sprite Stasis Ball 55 cm'
           },
           {
-            title: 'Second option:',
-            item : 'TEXT: QWE'
+            title: 'Sprite Yoga Strap:',
+            item: '1 x Sprite Yoga Strap 6 foot'
+          },
+          {
+            title: 'Sprite Foam Roller:',
+            item: '1 x Sprite Foam Roller'
           }
         ]
       }
