@@ -1,11 +1,14 @@
-{{#each grids as |grid|}}
-    <div class="grid">
-        {{#each grid}}
-            <div class="grid__column grid__column--{{this}}">
-                <div class="grid__content">
-                    {{this}}
+<h1>{{ title }}</h1>
+<div class="grid-container">
+    {{#each grids as |grid|}}
+        <div class="row {{ ../rowClass }}">
+            {{#each grid}}
+                <div class="{{this}}">
+                    <div class="row__content">
+                        {{ @index }}
+                    </div>
                 </div>
-            </div>
-        {{/each}}
-    </div>
-{{/each}}
+            {{/each}}
+        </div>
+    {{/each}}
+</div>
