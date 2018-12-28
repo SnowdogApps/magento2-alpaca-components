@@ -54,11 +54,11 @@
                 </div>
 
                 <div class="product-view__customization">
-                    {{#each customizations as |customize| }}
-                        <div class="product-view__customization-element">
-                            {{ render '@bundle-option' options merge=true }}
-                        </div>
-                    {{/each}}
+                    <div class="product-view__customization-element">
+                        {{ render '@bundle-option' }}
+                        {{ render '@bundle-option--checkbox' }}
+                        {{ render '@bundle-option--select' }}
+                    </div>
                 </div>
 
                 <div class="product-view__main-actions">

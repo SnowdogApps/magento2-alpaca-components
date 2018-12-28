@@ -5,7 +5,9 @@
         </{{{title.tag}}}>
     {{/if}}
 
-    {{ render '@radio' radio merge=true }}
+    {{#each checkboxes }}
+        {{ render '@checkbox' this merge=true }}
+    {{/each}}
 
     {{#if qty }}
         {{ render '@input' qty merge=true }}
