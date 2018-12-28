@@ -1,51 +1,11 @@
-$dashboard__margin-bottom        : $spacer--medium !default;
-$dashboard-margin-base           : $spacer--medium 0 $spacer--large !default;
-$dashboard-margin                : $spacer--large !default;
-$dashboard-padding               : $spacer--medium !default;
-$dashboard__title--margin        : 0 0 $spacer--medium 0 !default;
-$dashboard__title--padding       : 0 0 $spacer 0 !default;
-$dashboard__sidebar-width--medium: calc(25% - 3 * #{$grid__gutter} / 4) !default;
-$dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
+$dashboard__margin        : $spacer--large !default;
+$dashboard__padding       : $spacer--medium !default;
+$dashboard__title--margin : 0 0 $spacer--medium 0 !default;
+$dashboard__title--padding: 0 0 $spacer 0 !default;
 
 .dashboard {
-    margin-bottom: $dashboard__margin-bottom;
-
-    &__sidebar,
-    &__content {
-        @include mq($screen-m) {
-            margin: $dashboard-margin-base;
-            padding: 0 $dashboard-padding;
-        }
-
-        &:first-child {
-            @include mq($screen-m) {
-                padding-left: 5px;
-            }
-        }
-
-        &:last-child {
-            @include mq($screen-m) {
-                padding-right: 5px;
-            }
-        }
-
-    }
-
-    &__sidebar {
-        @include mq($screen-m) {
-            @include isIE() {
-                max-width: $dashboard__sidebar-width--medium;
-            }
-        }
-    }
-
-    &__content {
-        @include mq($screen-m) {
-            @include isIE() {
-                max-width: $dashboard__content-width--medium;
-            }
-        }
-    }
+    margin-top: $spacer--medium;
+    margin-bottom: $spacer--medium;
 
     &__actions {
         justify-content: space-between;
@@ -55,7 +15,7 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
-        margin-bottom: $dashboard-margin;
+        margin-bottom: $dashboard__margin;
     }
 
     &__title {
@@ -65,7 +25,7 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
 
         &--wrapped {
             margin-bottom: 0;
-            margin-right: $dashboard-margin;
+            margin-right: $dashboard__margin;
         }
     }
 
@@ -77,7 +37,7 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
     }
 
     &__item {
-        margin-bottom: $dashboard-margin;
+        margin-bottom: $dashboard__margin;
     }
 
     &__form {
@@ -109,7 +69,7 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
     }
 
     &__input {
-        margin-bottom: $dashboard-margin;
+        margin-bottom: $dashboard__margin;
     }
 
     &__label {
@@ -147,7 +107,7 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
         border-bottom: 0;
 
         &--current {
-            padding: $dashboard-padding;
+            padding: $dashboard__padding;
             background-color: $white;
 
             &:after {
@@ -163,6 +123,6 @@ $dashboard__content-width--medium: calc(75% - #{$grid__gutter} / 4) !default;
     }
 
     &__list-link {
-        padding: $dashboard-padding;
+        padding: $dashboard__padding;
     }
 }

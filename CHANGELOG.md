@@ -7,18 +7,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `email-to-friend` view
+- `confirmation-link` view
 - Support for B2B module
 
 ### Fixed
 - Review alignment
 - Alignment for buttons
 - Alignment for quick search input (Safari issue)
+- Input text on safari browsers
 
 ### Changed
 - Refactor dropdown list and nested list
 
 ### Removed
 - Wrong z-index from rating stars
+- Grid styles and references in modules and views
 
 ## [1.0.1] - 18.10.2018
 ### Changed

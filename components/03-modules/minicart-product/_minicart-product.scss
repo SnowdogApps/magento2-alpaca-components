@@ -25,7 +25,6 @@ $minicart-product__field-margin                   : 0 0 0 $spacer !default;
 $minicart-product__attributes-button-margin       : 0 !default;
 $minicart-product__attributes-button-padding      : 0 !default;
 $minicart-product__attributes-button-color        : $blue !default;
-$minicart-product__attributes-button-color--active: $color-primary !default;
 $minicart-product__attributes-button-bg-color     : $white !default;
 $minicart-product__attributes-button-font-family  : $font-family-base !default;
 $minicart-product__attributes-button-font-size    : $font-size-small !default;
@@ -55,9 +54,11 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
 
     &__image {
         width: $minicart-product__image-width;
+
         img {
             width: $minicart-product__image-width;
             max-width: $minicart-product__image-width;
+            height: auto;
         }
     }
 

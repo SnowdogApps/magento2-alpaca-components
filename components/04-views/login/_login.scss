@@ -4,8 +4,7 @@ $login__actions-margin                 : 0 0 $spacer--medium !default;
 
 $login__heading-margin                 : 0 0 $spacer--medium 0 !default;
 
-$login__form-column-padding\@medium    : $spacer--large !default;
-$login__link-column-padding\@medium    : $spacer--large !default;
+$login__column-padding                  : $spacer--large !default;
 
 $login__company-column-padding         : $spacer--medium $spacer 0 $spacer !default;
 $login__company-column-margin          : $spacer--large 0 0 0 !default;
@@ -45,20 +44,16 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
     &__form-column {
         flex-basis: 100%;
         max-width: 100%;
-
         @include mq($screen-m) {
-            @include grid-column-width(1, 2);
-            padding-right: $login__form-column-padding\@medium;
+            padding-right: $login__column-padding;
         }
     }
 
     &__link-column {
         flex-basis: 100%;
         max-width: 100%;
-
         @include mq($screen-m) {
-            @include grid-column-width(1, 2);
-            padding-left: $login__link-column-padding\@medium;
+            padding-left: $login__column-padding;
         }
     }
 

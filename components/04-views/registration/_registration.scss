@@ -1,7 +1,5 @@
 $registration__padding-top                                  : $spacer--medium !default;
 
-$registration__divider-margin                               : 0 0 $spacer--large 0 !default;
-
 $registration__content-margin                               : 0 0 $spacer--extra-large !default;
 
 $registration__input-margin                                 : 0 0 $spacer--medium !default;
@@ -9,8 +7,6 @@ $registration__input-margin                                 : 0 0 $spacer--mediu
 $registration__pasword-wrapper-margin                       : 0 0 $spacer--medium !default;
 
 $registration__fieldset-margin                              : 0 0 $spacer--medium !default;
-$registration__fieldset-min-width\@medium                   : 600px !default;
-$registration__fieldset-width\@medium                       : 50% !default;
 
 $registration__legend-font-size                             : $font-size-base;
 $registration__legend-font-weight                           : $font-weight-bold;
@@ -25,8 +21,6 @@ $registration__newsletter-checkbox-label-line-height        : 48px !default;
 $registration__newsletter-checkbox-icon-clickable-area      : 48px !default;
 $registration__newsletter-checkbox-checked-label-font-weight: $font-weight-bold !default;
 
-$registration__password-color                               : $gray !default;
-$registration__password-bg-color                            : transparent !default;
 $registration__password-margin                              : 0 !default;
 
 .registration {
@@ -55,10 +49,6 @@ $registration__password-margin                              : 0 !default;
 
     &__fieldset {
         margin: $registration__fieldset-margin;
-        @include mq($screen-m) {
-            min-width: $registration__fieldset-min-width\@medium;
-            width: $registration__fieldset-width\@medium;
-        }
     }
 
     &__newsletter-checkbox {
