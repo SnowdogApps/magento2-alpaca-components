@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 - Wrong z-index from rating stars
+- Grid styles and references in modules and views
 
 ## [1.0.1] - 18.10.2018
 ### Changed
