@@ -1,8 +1,10 @@
 <div class="radio">
     <fieldset class="radio__fieldset" aria-labelledby="{{ legendId }}">
-        <legend class="radio__legend" id="{{ legendId }}">
-            {{ legend }}
-        </legend>
+        {{#if legend }}
+            <legend class="radio__legend" id="{{ legendId }}">
+                {{ legend }}
+            </legend>
+        {{/if }}
         {{#each options}}
             <div class="radio__handler">
                 <input type="radio"

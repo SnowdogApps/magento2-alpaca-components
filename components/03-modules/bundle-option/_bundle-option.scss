@@ -1,11 +1,23 @@
-$bundle-option__title-margin: $spacer--medium !default;
+$bundle-option__title-margin         : $spacer--medium !default;
+$bundle-option__label-margin         : 0 !default;
+$bundle-option__input-field-max-width: 100px !default;
 
 .bundle-option {
     &__title {
         margin-bottom: $bundle-option__title-margin;
     }
 
+    &__input {
+        display: flex;
+        align-items: center;
+    }
+
+    &__label {
+        margin: $bundle-option__label-margin;
+    }
+
     &__input-field {
-        max-width: 100px;
+        max-width: $bundle-option__input-field-max-width;
+        margin-left: $spacer;
     }
 }
