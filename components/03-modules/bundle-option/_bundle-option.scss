@@ -8,6 +8,8 @@ $bundle-option__select-margin-bottom       : $spacer--medium !default;
 $bundle-option__qty-margin-bottom          : 0 !default;
 $bundle-option__qty-input-max-width        : 100px !default;
 $bundle-option__qty-input-margin-left      : $spacer !default;
+$bundle-option__qty-input-color--disabled  : $gray !default;
+$bundle-option__qty-input-cursor--disabled : default !default;
 
 .bundle-option {
     &__title {
@@ -44,5 +46,14 @@ $bundle-option__qty-input-margin-left      : $spacer !default;
     &__qty-input {
         max-width: $bundle-option__qty-input-max-width;
         margin-left: $bundle-option__qty-input-margin-left;
+
+        &:disabled {
+            color: $bundle-option__qty-input-color--disabled;
+
+            &:hover,
+            &:focus {
+                cursor: $bundle-option__qty-input-cursor--disabled;
+            }
+        }
     }
 }
