@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - `email-to-friend` view
 - `confirmation-link` view
+- `price--between` element variant
+- `bundle-option` module
+- `product-view--bundle` view variant
 
 ### Fixed
 - Review alignment
