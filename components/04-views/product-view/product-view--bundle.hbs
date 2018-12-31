@@ -90,7 +90,12 @@
                 </div>
 
                 <div class="product-view__summary">
-                    {{ render '@price' price merge=true }}
+                    <div class="product-view__summary-price">
+                        {{ render '@price' price merge=true }}
+                        <span class="product-view__summary-unit">
+                            {{ priceUnit }}
+                        </span>
+                    </div>
                     <div class="product-view__summary-title">
                         {{ summaryTitle }}
                     </div>

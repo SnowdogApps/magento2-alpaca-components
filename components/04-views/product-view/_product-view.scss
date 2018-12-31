@@ -52,6 +52,11 @@ $product-view__summary-border                          : 1px solid $gray-light !
 $product-view__summary-margin                          : 0 0 $spacer--large !default;
 $product-view__summary-title-font-weight               : $font-weight-bold !default;
 $product-view__summary-item-space                      : $spacer--medium !default;
+$product-view__summary-price-margin-bottom             : $spacer--medium !default;
+$product-view__summary-price-font-size                 : $font-size-large !default;
+$product-view__summary-price-font-weight               : $font-weight-bold !default;
+$product-view__summary-unit-padding-left               : 4px !default;
+$product-view__summary-unit-font-size                  : $font-size-base !default;
 
 $product-view__extra-actions-margin-bottom             : $spacer--medium !default;
 $product-view__extra-actions-margin-bottom\@medium     : $spacer !default;
@@ -89,8 +94,6 @@ $product-view__price-color                             : $gray-darker !default;
 $product-view__price-color--old                        : $gray !default;
 $product-view__price-font-size                         : $font-size-large !default;
 $product-view__price-font-weight                       : $font-weight-bold !default;
-
-$product-view__bundle-price-margin-bottom              : $spacer !default;
 
 $product-view__qty-margin-right\@small                 : $spacer--medium !default;
 
@@ -262,10 +265,6 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
         }
     }
 
-    &__bundle-price {
-        margin-bottom: $product-view__bundle-price-margin-bottom;
-    }
-
     &__description {
         order: 2;
         margin: $product-view__description-margin;
@@ -310,6 +309,19 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
             border-bottom: 0;
             margin: 0;
         }
+    }
+
+    &__summary-price {
+        display: flex;
+        align-items: center;
+        margin-bottom: $product-view__summary-price-margin-bottom;
+        font-weight: $product-view__summary-price-font-weight;
+        font-size: $product-view__summary-price-font-size;
+    }
+
+    &__summary-unit {
+        padding-left: $product-view__summary-unit-padding-left;
+        font-size: $product-view__summary-unit-font-size;
     }
 
     &__summary-title {

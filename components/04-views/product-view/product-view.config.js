@@ -1437,10 +1437,10 @@ module.exports = {
       context: {
         description: 'Customize Ingrid Running Jacket with Long Sleaves',
         price: {
-          class: 'product-view__bundle-price',
-          regularPrice: '92.00',
+          regularPrice: '92.00'
         },
-        summaryTitle: 'Summary',
+        priceUnit: '/ bundle',
+        summaryTitle: 'Summary:',
         summaries: [
           {
             title: 'Sprite Stasis Ball:',
