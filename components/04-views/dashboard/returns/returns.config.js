@@ -113,12 +113,12 @@ module.exports = {
           informations: [
             {
               title: 'Request Information',
-              class: 'grid__column grid__column--1-2',
+              class: 'col-sm-6',
               information: 'ID: 000000002 Order ID: 00000006 Date Request: 8/28/17 Email: qwe@qwe.com',
             },
             {
               title: 'Shipping Address',
-              class: 'grid__column grid__column--1-2',
+              class: 'col-sm-6',
               information: 'This is example shipping address T: 123 213 123',
             }
           ]
