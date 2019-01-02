@@ -6,7 +6,7 @@ module.exports = {
     informations: [
       {
         title: 'Contact information',
-        class: 'grid__column grid__column--1-4',
+        class: 'col-sm-3',
         information: 'qweqwe qwe qwe@qwe.com',
         actions: {
           links: [
@@ -21,7 +21,7 @@ module.exports = {
       },
       {
         title: 'Address second',
-        class: 'grid__column grid__column--1-4',
+        class: 'col-sm-3',
         information: 'Second address qwe@qwe.com',
         actions: {
           links: [
