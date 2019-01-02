@@ -25,7 +25,7 @@ module.exports = {
       informations: [
         {
           title: 'Default Billing Address',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 136 N. Bay Road',
           actions: {
             sides: [
@@ -41,7 +41,7 @@ module.exports = {
         },
         {
           title: 'Default Shipping address',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: '11233 Easer 53rd Ave, Suite 600 US',
           actions: {
             sides: [
@@ -61,7 +61,7 @@ module.exports = {
       title: 'Additional Addresses Entries',
       informations: [
         {
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 601 s Galves St New Orlean',
           actions: {
             sides: [
@@ -79,7 +79,7 @@ module.exports = {
           }
         },
         {
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'Delray Beach, Florida, 33444-1250',
           actions: {
             sides: [
@@ -97,7 +97,7 @@ module.exports = {
           }
         },
         {
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'San Antonio, Texas, 78215-1298 US',
           actions: {
             sides: [
@@ -115,7 +115,7 @@ module.exports = {
           }
         },
         {
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: '3848 Bryn Marw Drive University Park, Texas',
           actions: {
             sides: [
@@ -142,7 +142,7 @@ module.exports = {
       context: {
         contactInfo: {
           title: 'Contact Information',
-          class: 'grid__column grid__column--1-2 dashboard__form',
+          class: 'col-sm-6 dashboard__form',
           fields: [
             {
               input: {
@@ -198,7 +198,7 @@ module.exports = {
         },
         address: {
           title: 'Address',
-          class: 'grid__column grid__column--1-2 dashboard__form',
+          class: 'col-sm-6 dashboard__form',
           fields: [
             {
               input: {
@@ -292,14 +292,18 @@ module.exports = {
               checkbox: {
                 class: 'dashboard-form__divider',
                 id: 'defaultBillingAddress',
-                label: 'Use as my default billing address'
+                label: {
+                  text: 'Use as my default billing address'
+                }
               }
             },
             {
               checkbox: {
                 class: 'dashboard-form__divider',
                 id: 'defaultShippingAddress',
-                label: 'Use as my default shipping address'
+                label: {
+                  text: 'Use as my default shipping address'
+                }
               }
             }
           ]
