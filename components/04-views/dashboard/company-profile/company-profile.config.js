@@ -17,7 +17,7 @@ module.exports = {
       title: 'Account Information',
       informations: [
         {
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 136 N. Bay Road'
         }
       ]
@@ -26,7 +26,7 @@ module.exports = {
       title: 'Legal Address',
       informations: [
         {
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 601 s Galves St New Orlean'
         }
       ]
@@ -36,12 +36,12 @@ module.exports = {
       informations: [
         {
           title: 'Company Administrator',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 601 s Galves St New Orlean'
         },
         {
           title: 'Sales Representative',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 601 s Galves St New Orlean'
         }
       ]
