@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - `email-to-friend` view
 - `confirmation-link` view
+- `price--between` element variant
+- `bundle-option` module
+- `product-view--bundle` view variant
 
 ### Fixed
 - Review alignment
@@ -17,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Refactor dropdown list and nested list
+- Update dependencies to work with node lts v10.15.0
 
 ### Removed
 - Wrong z-index from rating stars

@@ -1430,5 +1430,32 @@ module.exports = {
         alt: 'image alt text'
       }
     }
-  }
+  },
+  variants: [
+    {
+      name: 'bundle',
+      context: {
+        description: 'Customize Ingrid Running Jacket with Long Sleaves',
+        price: {
+          regularPrice: '92.00'
+        },
+        priceUnit: '/ bundle',
+        summaryTitle: 'Summary:',
+        summaries: [
+          {
+            title: 'Sprite Stasis Ball:',
+            item: '1 x Sprite Stasis Ball 55 cm'
+          },
+          {
+            title: 'Sprite Yoga Strap:',
+            item: '1 x Sprite Yoga Strap 6 foot'
+          },
+          {
+            title: 'Sprite Foam Roller:',
+            item: '1 x Sprite Foam Roller'
+          }
+        ]
+      }
+    }
+  ]
 };

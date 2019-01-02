@@ -1,140 +1,153 @@
-$product-view__action-elements-margin-top\@small        : 28px !default;
-$product-view__action-elements-margin-top\@large        : 0 !default;
+$product-view__action-elements-margin-top\@small       : 28px !default;
+$product-view__action-elements-margin-top\@large       : 0 !default;
 
-$product-view__action-icon-color                        : $gray-darker !default;
-$product-view__action-icon-color-hover                  : $color-primary !default;
-$product-view__action-icon-transition                   : $transition-base !default;
-$product-view__action-icon-compare-padding              : 16px 16px !default;
-$product-view__action-icon-compare-width                : 16px !default;
-$product-view__action-icon-compare-height               : 16px !default;
-$product-view__action-icon-emailfriend-padding          : 16px 14px !default;
-$product-view__action-icon-emailfriend-height           : 16px !default;
-$product-view__action-icon-emailfriend-width            : 20px !default;
-$product-view__action-icon-wishlist-padding             : 15px 14px !default;
-$product-view__action-icon-wishlist-height              : 18px !default;
-$product-view__action-icon-wishlist-width               : 20px !default;
+$product-view__action-icon-color                       : $gray-darker !default;
+$product-view__action-icon-color-hover                 : $color-primary !default;
+$product-view__action-icon-transition                  : $transition-base !default;
+$product-view__action-icon-compare-padding             : 16px 16px !default;
+$product-view__action-icon-compare-width               : 16px !default;
+$product-view__action-icon-compare-height              : 16px !default;
+$product-view__action-icon-emailfriend-padding         : 16px 14px !default;
+$product-view__action-icon-emailfriend-height          : 16px !default;
+$product-view__action-icon-emailfriend-width           : 20px !default;
+$product-view__action-icon-wishlist-padding            : 15px 14px !default;
+$product-view__action-icon-wishlist-height             : 18px !default;
+$product-view__action-icon-wishlist-width              : 20px !default;
+$product-view__action-item-size                        : 48px !default;
+$product-view__action-item-spacing                     : $spacer !default;
 
-$product-view__action-item-size                         : 48px !default;
-$product-view__action-item-spacing                      : $spacer !default;
+$product-view__add-review-link-font-size               : $font-size-base !default;
+$product-view__add-review-link-font-size\@medium       : $font-size-small !default;
 
-$product-view__add-review-link-font-size                : $font-size-base !default;
-$product-view__add-review-link-font-size\@medium        : $font-size-small !default;
+$product-view__add-to-cart-margin-right                : $spacer--medium !default;
 
-$product-view__add-to-cart-margin-right                 : $spacer--medium !default;
+$product-view__base-elements-vertical-spacing          : $spacer !default;
 
-$product-view__base-elements-vertical-spacing           : $spacer !default;
+$product-view__title-font-size                         : $font-size-large !default;
 
-$product-view__title-font-size                          : $font-size-large !default;
+$product-view__col-base-spacing                        : $spacer--medium !default;
+$product-view__col-base-reduce-width                   : $product-view__col-base-spacing / 2 !default;
+$product-view__col-left-base-width                     : 50% !default;
+$product-view__col-left-width                          : calc(#{$product-view__col-left-base-width} - #{$product-view__col-base-reduce-width}) !default;
+$product-view__col-right-base-width                    : 100% - #{$product-view__col-left-base-width} !default;
+$product-view__col-right-width                         : calc(#{$product-view__col-right-base-width} - #{$product-view__col-base-reduce-width}) !default;
 
-$product-view__col-base-spacing                         : $spacer--medium !default;
-$product-view__col-base-reduce-width                    : $product-view__col-base-spacing / 2 !default;
-$product-view__col-left-base-width                      : 50% !default;
-$product-view__col-left-width                           : calc(#{$product-view__col-left-base-width} - #{$product-view__col-base-reduce-width}) !default;
-$product-view__col-right-base-width                     : 100% - #{$product-view__col-left-base-width} !default;
-$product-view__col-right-width                          : calc(#{$product-view__col-right-base-width} - #{$product-view__col-base-reduce-width}) !default;
+$product-view__description-color                       : $gray-darker !default;
+$product-view__description-margin                      : 0 $spacer--medium $spacer--medium !default;
+$product-view__description-margin\@medium              : 0 0 $spacer--large !default;
+$product-view__description-padding                     : $spacer--medium !default;
+$product-view__description-padding\@medium             : $spacer--medium 0 !default;
+$product-view__description-border-top                  : 1px solid $gray-light !default;
+$product-view__description-border-bottom               : 1px solid $gray-light !default;
+$product-view__description-line-height                 : 1.7 !default;
+$product-view__description-title-font-weight           : $font-weight-bold !default;
+$product-view__description-bundle-margin               : 0 !default;
+$product-view__description-bundle-padding              : $spacer--medium 0 !default;
 
-$product-view__description-color                        : $gray-darker !default;
-$product-view__description-margin                       : 0 $spacer--medium $spacer--medium !default;
-$product-view__description-margin\@medium               : 0 0 $spacer--large !default;
-$product-view__description-padding                      : $spacer--medium !default;
-$product-view__description-padding\@medium              : $spacer--medium 0 !default;
-$product-view__description-border-top                   : 1px solid $gray-light !default;
-$product-view__description-border-bottom                : 1px solid $gray-light !default;
-$product-view__description-line-height                  : 1.7 !default;
-$product-view__description-title-font-weight            : $font-weight-bold !default;
+$product-view__customization-space                     : $spacer--medium !default;
+$product-view__customization-border                    : 1px solid $gray-light !default;
 
-$product-view__extra-actions-margin-bottom              : $spacer--medium !default;
-$product-view__extra-actions-margin-bottom\@medium      : $spacer !default;
-$product-view__extra-actions-margin-bottom\@large       : 0 !default;
-$product-view__extra-actions-padding                    : 0 $spacer !default;
+$product-view__summary-padding                         : $spacer--medium 0 !default;
+$product-view__summary-border                          : 1px solid $gray-light !default;
+$product-view__summary-margin                          : 0 0 $spacer--large !default;
+$product-view__summary-title-font-weight               : $font-weight-bold !default;
+$product-view__summary-item-space                      : $spacer--medium !default;
+$product-view__summary-price-margin-bottom             : $spacer--medium !default;
+$product-view__summary-price-font-size                 : $font-size-large !default;
+$product-view__summary-price-font-weight               : $font-weight-bold !default;
+$product-view__summary-unit-padding-left               : 4px !default;
+$product-view__summary-unit-font-size                  : $font-size-base !default;
 
-$product-view__add-to-cart-margin                       : 0 0 $product-view__extra-actions-margin-bottom\@medium 0 !default;
-$product-view__add-to-cart-margin\@large                : 0 $product-view__add-to-cart-margin-right $product-view__extra-actions-margin-bottom\@large 0 !default;
+$product-view__extra-actions-margin-bottom             : $spacer--medium !default;
+$product-view__extra-actions-margin-bottom\@medium     : $spacer !default;
+$product-view__extra-actions-margin-bottom\@large      : 0 !default;
+$product-view__extra-actions-padding                   : 0 $spacer !default;
 
-$product-view__add-to-cart-btn-min-width                : 150px !default;
-$product-view__add-to-cart-btn-padding\@large           : 0 $spacer--large !default;
+$product-view__add-to-cart-margin                      : 0 0 $product-view__extra-actions-margin-bottom\@medium 0 !default;
+$product-view__add-to-cart-margin\@large               : 0 $product-view__add-to-cart-margin-right $product-view__extra-actions-margin-bottom\@large 0 !default;
+$product-view__add-to-cart-btn-min-width               : 150px !default;
+$product-view__add-to-cart-btn-padding\@large          : 0 $spacer--large !default;
 
-$product-view__update-wishlist-btn-width                : auto !default;
+$product-view__update-wishlist-btn-width               : auto !default;
 
-$product-view__gallery-bottom-border                    : 1px solid $gray !default;
-$product-view__gallery-bottom-border\@medium            : none !default;
-$product-view__gallery-margin-bottom                    : $spacer--medium !default;
-$product-view__gallery-margin-bottom\@medium            : 0 !default;
-$product-view__gallery-padding-bottom                   : $spacer !default;
-$product-view__gallery-padding-bottom\@medium           : 0 !default;
+$product-view__gallery-bottom-border                   : 1px solid $gray !default;
+$product-view__gallery-bottom-border\@medium           : none !default;
+$product-view__gallery-margin-bottom                   : $spacer--medium !default;
+$product-view__gallery-margin-bottom\@medium           : 0 !default;
+$product-view__gallery-padding-bottom                  : $spacer !default;
+$product-view__gallery-padding-bottom\@medium          : 0 !default;
 
-$product-view__information-padding                      : 0 20px !default;
-$product-view__information-padding\@medium              : 0 !default;
+$product-view__information-padding                     : 0 20px !default;
+$product-view__information-padding\@medium             : 0 !default;
 
-$product-view__main-actions-margin-bottom               : 23px !default;
+$product-view__main-actions-margin-bottom              : 23px !default;
 
-$product-view__main-details-bottom-spacing              : $spacer--medium !default;
+$product-view__main-details-bottom-spacing             : $spacer--medium !default;
 
-$product-view__order-gallery                            : 2 !default;
-$product-view__order-main-details                       : 1 !default;
-$product-view__order-secondary-details                  : 3 !default;
+$product-view__order-gallery                           : 2 !default;
+$product-view__order-main-details                      : 1 !default;
+$product-view__order-secondary-details                 : 3 !default;
 
-$product-view__price-bottom-margin                      : $spacer--medium !default;
-$product-view__price-bottom-margin\@medium              : 0 !default;
-$product-view__price-color                              : $gray-darker !default;
-$product-view__price-color--old                         : $gray !default;
-$product-view__price-font-size                          : $font-size-large !default;
-$product-view__price-font-weight                        : $font-weight-bold !default;
+$product-view__price-bottom-margin                     : $spacer--medium !default;
+$product-view__price-bottom-margin\@medium             : 0 !default;
+$product-view__price-color                             : $gray-darker !default;
+$product-view__price-color--old                        : $gray !default;
+$product-view__price-font-size                         : $font-size-large !default;
+$product-view__price-font-weight                       : $font-weight-bold !default;
 
-// values should match product-view__title to align vertically on desktop
-$product-view__qty-margin-right\@small                  : $spacer--medium !default;
+$product-view__qty-margin-right\@small                 : $spacer--medium !default;
 
-$product-view__rating-link-color                        : $gray-dark !default;
-$product-view__rating-width                             : 100% !default;
-$product-view__rating-width\@medium                     : 45% !default;
-$product-view__rating-top                               : 0 !default;
-$product-view__rating-right                             : 0 !default;
-$product-view__rating-margin                            : 0 0 14px 0 !default;
-$product-view__rating-margin\@medium                    : 0 !default;
-$product-view__rating-text-color                        : $gray-dark !default;
-$product-view__rating-value-font-size                   : $font-size-base !default;
+$product-view__rating-link-color                       : $gray-dark !default;
+$product-view__rating-width                            : 100% !default;
+$product-view__rating-width\@medium                    : 45% !default;
+$product-view__rating-top                              : 0 !default;
+$product-view__rating-right                            : 0 !default;
+$product-view__rating-margin                           : 0 0 14px 0 !default;
+$product-view__rating-margin\@medium                   : 0 !default;
+$product-view__rating-text-color                       : $gray-dark !default;
+$product-view__rating-value-font-size                  : $font-size-base !default;
 
-$product-view__sku-color                                : $gray !default;
-$product-view__sku-margin-bottom                        : $spacer--medium !default;
-$product-view__sku-margin-bottom\@medium                : $spacer !default;
-$product-view__sku-padding-right                        : 55% !default;
+$product-view__sku-color                               : $gray !default;
+$product-view__sku-margin-bottom                       : $spacer--medium !default;
+$product-view__sku-margin-bottom\@medium               : $spacer !default;
+$product-view__sku-padding-right                       : 55% !default;
 
-$product-view__stock-color                              : $gray-dark !default;
-$product-view__stock-color--out-of-stock                : $red !default;
-$product-view__stock-color--alert                       : $red !default;
-$product-view__stock-font-weight\@medium                : $font-weight-bold !default;
+$product-view__stock-color                             : $gray-dark !default;
+$product-view__stock-color--out-of-stock               : $red !default;
+$product-view__stock-color--alert                      : $red !default;
+$product-view__stock-font-weight\@medium               : $font-weight-bold !default;
 
-$product-view__swatch-margin-bottom                     : $spacer--medium !default;
-$product-view__swatch-margin-right                      : $spacer--medium !default;
-$product-view__swatch-option-title-font-size            : $font-size-base !default;
-$product-view__swatch-option-title-font-weight          : $font-weight-bold !default;
+$product-view__swatch-margin-bottom                    : $spacer--medium !default;
+$product-view__swatch-margin-right                     : $spacer--medium !default;
+$product-view__swatch-option-title-font-size           : $font-size-base !default;
+$product-view__swatch-option-title-font-weight         : $font-weight-bold !default;
 
-$product-view__slider-add-to-cart-padding               : 0 $spacer--medium !default;
-$product-view__slider-margin-bottom                     : $spacer !default;
-$product-view__slider-margin-bottom\@medium             : 72px !default;
-$product-view__slider-margin-bottom--last\@medium       : 56px !default;
-$product-view__slider-margin-bottom--last\@large        : 64px !default;
-$product-view__slider-heading-font-size                 : 24px !default;
-$product-view__slider-heading-font-size-weight          : $font-weight-bold;
-$product-view__slider-heading-text-transform            : uppercase !default;
+$product-view__slider-add-to-cart-padding              : 0 $spacer--medium !default;
+$product-view__slider-margin-bottom                    : $spacer !default;
+$product-view__slider-margin-bottom\@medium            : 72px !default;
+$product-view__slider-margin-bottom--last\@medium      : 56px !default;
+$product-view__slider-margin-bottom--last\@large       : 64px !default;
+$product-view__slider-heading-font-size                : 24px !default;
+$product-view__slider-heading-font-size-weight         : $font-weight-bold;
+$product-view__slider-heading-text-transform           : uppercase !default;
 
-$product-view__tabs-margin                              : 0 (-$spacer) 14px (-$spacer) !default;
-$product-view__tabs-margin\@medium                      : 0 0 72px 0 !default;
+$product-view__tabs-margin                             : 0 (-$spacer) 14px (-$spacer) !default;
+$product-view__tabs-margin\@medium                     : 0 0 72px 0 !default;
 
-$product-view__additional-content-margin-bottom\@medium : 72px !default;
+$product-view__additional-content-margin-bottom\@medium: 72px !default;
 
-$product-view__review-item-padding                      : $spacer--large 0 !default;
-$product-view__review-item-border                       : 1px solid $gray-light !default;
-$product-view__review-details-margin-bottom             : $spacer--medium !default;
-$product-view__review-author-margin-bottom              : $spacer !default;
-$product-view__review-date-margin-bottom                : $spacer !default;
-$product-view__review-date-font-size                    : $font-size-small !default;
-$product-view__review-date-color                        : $gray-light !default;
-$product-view__review-content-title-font-weight         : $font-weight-bold !default;
-$product-view__review-product-name-font-weight          : $font-weight-bold !default;
+$product-view__review-item-padding                     : $spacer--large 0 !default;
+$product-view__review-item-border                      : 1px solid $gray-light !default;
+$product-view__review-details-margin-bottom            : $spacer--medium !default;
+$product-view__review-author-margin-bottom             : $spacer !default;
+$product-view__review-date-margin-bottom               : $spacer !default;
+$product-view__review-date-font-size                   : $font-size-small !default;
+$product-view__review-date-color                       : $gray-light !default;
+$product-view__review-content-title-font-weight        : $font-weight-bold !default;
+$product-view__review-product-name-font-weight         : $font-weight-bold !default;
 
-$product-view__wrapper-margin                           : $spacer--medium 0 $spacer--large 0 !default;
-$product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
+$product-view__wrapper-margin                          : $spacer--medium 0 $spacer--large 0 !default;
+$product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
 
 .product-view {
     display: flex;
@@ -145,6 +158,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         overflow: hidden;
         padding-top: 624px / 640px * 100%;
         position: relative;
+
         img {
             position: absolute;
             top: 0;
@@ -175,6 +189,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         border-bottom: $product-view__gallery-bottom-border;
         padding-bottom: $product-view__gallery-padding-bottom;
         margin-bottom: $product-view__gallery-margin-bottom;
+
         @include mq($screen-m) {
             border-bottom: $product-view__gallery-bottom-border\@medium;
             padding-bottom: $product-view__gallery-padding-bottom\@medium;
@@ -190,6 +205,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         display: flex;
         flex-flow: row wrap;
         align-items: center;
+
         @include mq($screen-m) {
             display: block;
             position: relative;
@@ -204,6 +220,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         flex-wrap: wrap;
         order: $product-view__order-secondary-details;
         width: 100%;
+
         @include mq($screen-m) {
             display: block;
             width: $product-view__col-right-width;
@@ -214,9 +231,11 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
     &__title {
         width: 100%;
         margin-bottom: $product-view__base-elements-vertical-spacing;
+
         @include mq($screen-m) {
             padding-right: 55%;
         }
+
         .heading--page {
             margin: 0;
             font-size: $product-view__title-font-size;
@@ -229,14 +248,17 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         font-size: $product-view__price-font-size;
         font-weight: $product-view__price-font-weight;
         margin-bottom: $product-view__price-bottom-margin;
+
         @include mq($screen-m) {
             float: left;
             width: 100%;
             padding-right: 55%;
             margin-bottom: $product-view__price-bottom-margin\@medium;
         }
+
         .price__value {
             color: $product-view__price-color;
+
             &--old {
                 color: $product-view__price-color--old;
             }
@@ -252,14 +274,68 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         border-top: $product-view__description-border-top;
         border-bottom: $product-view__description-border-bottom;
         line-height: $product-view__description-line-height;
+
         @include mq($screen-m) {
             padding: $product-view__description-padding\@medium;
             margin: $product-view__description-margin\@medium;
         }
     }
 
+    &__description-bundle {
+        order: 0;
+        margin: $product-view__description-bundle-margin;
+        padding: $product-view__description-bundle-padding;
+    }
+
     &__description-title {
         font-weight: $product-view__description-title-font-weight;
+    }
+
+    &__customization {
+        width: 100%;
+        margin-bottom: $product-view__customization-space;
+        padding-bottom: $product-view__customization-space;
+        border-bottom: $product-view__customization-border;
+    }
+
+    &__summary {
+        width: 100%;
+        padding: $product-view__summary-padding;
+        margin: $product-view__summary-margin;
+        border-bottom: $product-view__summary-border;
+        border-top: $product-view__summary-border;
+
+        @include mq($screen-m) {
+            border-bottom: 0;
+            margin: 0;
+        }
+    }
+
+    &__summary-price {
+        display: flex;
+        align-items: center;
+        margin-bottom: $product-view__summary-price-margin-bottom;
+        font-weight: $product-view__summary-price-font-weight;
+        font-size: $product-view__summary-price-font-size;
+    }
+
+    &__summary-unit {
+        padding-left: $product-view__summary-unit-padding-left;
+        font-size: $product-view__summary-unit-font-size;
+    }
+
+    &__summary-title {
+        font-weight: $product-view__summary-title-font-weight;
+        margin-bottom: $product-view__summary-item-space;
+    }
+
+    &__summary-list {
+        padding-left: $product-view__summary-item-space;
+    }
+
+    &__summary-item-title {
+        display: block;
+        font-weight: $product-view__summary-title-font-weight;
     }
 
     &__options {
@@ -267,6 +343,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
         .swatch {
             margin-bottom: $product-view__swatch-margin-bottom;
+
             &__option-container {
                 margin-right: $product-view__swatch-margin-right;
             }
@@ -280,19 +357,23 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
     &__tabs {
         margin: $product-view__tabs-margin;
+
         @include mq($screen-m) {
             margin: $product-view__tabs-margin\@medium;
         }
     }
+
     &__tab {
         .tab__content {
             line-height: $product-view__description-line-height;
         }
     }
+
     &__information {
         order: 3;
         width: 100%;
         padding: $product-view__information-padding;
+
         @include mq($screen-m) {
             padding: $product-view__information-padding\@medium;
         }
@@ -303,6 +384,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         width: 50%;
         text-align: right;
         margin-bottom: $product-view__price-bottom-margin;
+
         @include mq($screen-m) {
             margin-bottom: 0;
             float: right;
@@ -314,9 +396,11 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
             bottom: 0;
             text-align: right;
         }
+
         &--out-of-stock {
             color: $product-view__stock-color--out-of-stock;
         }
+
         &--alert {
             color: $product-view__stock-color--alert;
         }
@@ -328,6 +412,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         display: flex;
         margin: $product-view__rating-margin;
         justify-content: space-between;
+
         @include mq($screen-m) {
             position: absolute;
             top: $product-view__rating-top;
@@ -368,6 +453,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         align-items: flex-start;
         margin-bottom: $product-view__main-actions-margin-bottom;
         flex-wrap: wrap;
+
         @include mq($screen-l) {
             flex-wrap: nowrap;
             align-items: flex-end;
@@ -437,6 +523,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
     &__update-cart {
         width: 100%;
         margin: $product-view__add-to-cart-margin;
+
         @include mq($screen-l) {
             width: auto;
             flex: 0 0 auto;
@@ -453,6 +540,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         width: $product-view__action-item-size;
         height: $product-view__action-item-size;
         padding: 0;
+
         &:hover {
             cursor: pointer;
 
@@ -460,34 +548,43 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
                 fill: $product-view__action-icon-color-hover;
             }
         }
+
         &:last-child {
             margin-right: 0;
         }
+
         &--button {
             box-shadow: none;
             background: transparent;
             border: none;
         }
+
         .icon {
             fill: $product-view__action-icon-color;
             transition: $product-view__action-icon-transition;
         }
+
         &--wishlist {
             padding: $product-view__action-icon-wishlist-padding;
+
             .icon {
                 width: $product-view__action-icon-wishlist-width;
                 height: $product-view__action-icon-wishlist-height;
             }
         }
+
         &--emailfriend {
             padding: $product-view__action-icon-emailfriend-padding;
+
             .icon {
                 width: $product-view__action-icon-emailfriend-width;
                 height: $product-view__action-icon-emailfriend-height;
             }
         }
+
         &--compare {
             padding: $product-view__action-icon-compare-padding;
+
             .icon {
                 width: $product-view__action-icon-compare-width;
                 height: $product-view__action-icon-compare-height;
@@ -500,13 +597,16 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         &--rating {
             text-decoration: none;
             color: $product-view__rating-link-color;
+
             &:hover {
                 cursor: pointer;
             }
         }
+
         &--add-review {
             text-decoration: none;
             font-size: $product-view__add-review-link-font-size;
+
             @include mq($screen-m) {
                 font-size: $product-view__add-review-link-font-size\@medium;
             }
@@ -517,6 +617,7 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
         width: 100%;
         color: $product-view__sku-color;
         margin-bottom: $product-view__sku-margin-bottom;
+
         @include mq($screen-m) {
             display: block;
             margin-bottom: $product-view__sku-margin-bottom\@medium;
@@ -577,17 +678,21 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
     &__slider {
         margin-bottom: $product-view__slider-margin-bottom;
+
         @include mq($screen-m) {
             margin-bottom: $product-view__slider-margin-bottom\@medium;
         }
+
         &:last-child {
             @include mq($screen-m) {
                 margin-bottom: $product-view__slider-margin-bottom--last\@medium;
             }
+
             @include mq($screen-l) {
                 margin-bottom: $product-view__slider-margin-bottom--last\@large;
             }
         }
+
         .heading {
             font-size: $product-view__slider-heading-font-size;
             font-weight: $product-view__slider-heading-font-size-weight;
@@ -610,11 +715,13 @@ $product-view__wrapper-margin\@medium                   : 0 0 40px 0 !default;
 
         }
     }
+
     &__grid-item {
         .catalog-grid-item__name {
             font-size: 12px;
             text-transform: initial;
         }
+
         .catalog-grid-item__primary-action {
             padding: $product-view__slider-add-to-cart-padding;
         }

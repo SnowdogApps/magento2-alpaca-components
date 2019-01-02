@@ -19,7 +19,7 @@
                 </span>
 
                 <span class="product-view__price">
-                    {{ render (component price.content) price.contentContext }}
+                    {{ render '@price--between' }}
                 </span>
 
                 <div
@@ -42,14 +42,21 @@
             </div>
 
             <div class="product-view__secondary-details">
-
-                <div class="product-view__description">
-                    {{{ description }}}
+                <div
+                    class="
+                        product-view__description
+                        product-view__description-bundle
+                    "
+                >
+                    <span class="product-view__description-title">
+                        {{ description }}
+                    </span>
                 </div>
 
-                <div class="product-view__options">
-                    {{ render '@swatch--with-label' swatch.size merge=true }}
-                    {{ render '@swatch--image-with-label' swatch.color merge=true }}
+                <div class="product-view__customization">
+                    {{ render '@bundle-option' }}
+                    {{ render '@bundle-option--checkbox' }}
+                    {{ render '@bundle-option--select' }}
                 </div>
 
                 <div class="product-view__main-actions">
@@ -81,6 +88,30 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="product-view__summary">
+                    <div class="product-view__summary-price">
+                        {{ render '@price' price merge=true }}
+                        <span class="product-view__summary-unit">
+                            {{ priceUnit }}
+                        </span>
+                    </div>
+                    <div class="product-view__summary-title">
+                        {{ summaryTitle }}
+                    </div>
+                    <ul class="product-view__summary-list list">
+                        {{#each summaries as |summary|}}
+                            <li class="product-view__summary-item list__item">
+                                <span class="product-view__summary-item-title">
+                                    {{ summary.title }}
+                                </span>
+
+                                {{ summary.item }}
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+
                 <div class="product-view__information">
                     {{ render '@brief-info' briefInfo }}
                 </div>
@@ -104,7 +135,6 @@
             </h3>
             {{render '@slider' upsellProducts.slider }}
         </div>
-        {{render '@additional-content' additionalContent merge=true }}
     </div>
 </div>
 

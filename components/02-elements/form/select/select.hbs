@@ -1,14 +1,16 @@
 <div class="select {{ class }}" {{{ attributes }}}>
-    <label class="label {{ label.class }}"
-           for="{{ field.id }}"
-           {{{ label.attributes }}}
+    <label
+        class="label {{ label.class }}"
+        for="{{ field.id }}"
+        {{{ label.attributes }}}
     >
         {{ label.text }}
     </label>
-    <select id="{{ field.id }}"
-            class="select__field {{ field.class }}"
-            name="{{ field.name }}"
-            {{{ field.attributes }}}
+    <select
+        id="{{ field.id }}"
+        class="select__field {{ field.class }}"
+        name="{{ field.name }}"
+        {{{ field.attributes }}}
     >
         {{#each options}}
             <option value="{{ value }}" {{ attributes }}>

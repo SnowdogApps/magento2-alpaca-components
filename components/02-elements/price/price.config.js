@@ -33,5 +33,15 @@ module.exports = {
         },
       }
     },
+    {
+      name: 'between',
+      context: {
+        priceClass: 'price__value--between',
+        textBeforeFromPrice: 'From',
+        textBeforeToPrice: 'To',
+        fromPrice: '61.00',
+        toPrice: '79.00',
+      }
+    }
   ]
 }
