@@ -1456,6 +1456,131 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      name: 'grouped',
+      context: {
+        productsTable: {
+          class: 'product-view__grouped-table',
+          captionText: 'Grouped product items',
+          mainTags: [
+            {
+              mainTag: 'thead',
+              rowTags: [
+                {
+                  rowTag: 'tr',
+                  rowTagAttributes: 'role="row"',
+                  childTags: [
+                    {
+                      childTag: 'th',
+                      content: 'Product Name',
+                      childTagAttributes: 'scope="col" role="columnheader"'
+                    },
+                    {
+                      childTag: 'th',
+                      childTagClasses: 'product-view__grouped-col-qty',
+                      content: 'Qty',
+                      childTagAttributes: 'scope="col" role="columnheader"'
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              mainTag: 'tbody',
+              rowTags: [
+                {
+                  rowTag: 'tr',
+                  rowTagAttributes: 'role="row"',
+                  childTags: [
+                    {
+                      childTag: 'td',
+                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      content: 'Sprite Yoga Strap 6 foot'
+                    },
+                    {
+                      childTag: 'td',
+                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      contentComponent: 'input',
+                      contentContext: {
+                        class: 'product-view__grouped-qty',
+                        label: {
+                          text: 'Qty',
+                          hidden: true
+                        },
+                        field: {
+                          id: 'field-id-1',
+                          name: 'field-name-1',
+                          type: 'number',
+                          attributes: 'min="0"'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  rowTag: 'tr',
+                  rowTagAttributes: 'role="row"',
+                  childTags: [
+                    {
+                      childTag: 'td',
+                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      content: 'Sprite Yoga Strap 8 foot'
+                    },
+                    {
+                      childTag: 'td',
+                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      contentComponent: 'input',
+                      contentContext: {
+                        class: 'product-view__grouped-qty',
+                        label: {
+                          text: 'Qty',
+                          hidden: true
+                        },
+                        field: {
+                          id: 'field-id-1',
+                          name: 'field-name-1',
+                          type: 'number',
+                          attributes: 'min="0"'
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  rowTag: 'tr',
+                  rowTagAttributes: 'role="row"',
+                  childTags: [
+                    {
+                      childTag: 'td',
+                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      content: 'Sprite Yoga Strap 10 foot'
+                    },
+                    {
+                      childTag: 'td',
+                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      contentComponent: 'input',
+                      contentContext: {
+                        class: 'product-view__grouped-qty',
+                        label: {
+                          text: 'Qty',
+                          hidden: true
+                        },
+                        field: {
+                          id: 'field-id-1',
+                          name: 'field-name-1',
+                          type: 'number',
+                          attributes: 'min="0"'
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ]
 };
