@@ -4,8 +4,6 @@ $login__actions-margin                 : 0 0 $spacer--medium !default;
 
 $login__heading-margin                 : 0 0 $spacer--medium 0 !default;
 
-$login__column-padding                  : $spacer--large !default;
-
 $login__company-column-padding         : $spacer--medium $spacer 0 $spacer !default;
 $login__company-column-margin          : $spacer--large 0 0 0 !default;
 $login__company-column-border-top      : 1px solid $gray-light !default;
@@ -41,23 +39,7 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
     padding-top: $login__padding-top;
     margin-bottom: $login__margin-bottom;
 
-    &__form-column {
-        flex-basis: 100%;
-        max-width: 100%;
-        @include mq($screen-m) {
-            padding-right: $login__column-padding;
-        }
-    }
-
-    &__link-column {
-        flex-basis: 100%;
-        max-width: 100%;
-        @include mq($screen-m) {
-            padding-left: $login__column-padding;
-        }
-    }
-
-    &__company-column {
+    &__company-wrapper {
         margin: $login__company-column-margin;
         padding: $login__company-column-padding;
         border-top: $login__company-column-border-top;
