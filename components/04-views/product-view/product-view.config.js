@@ -1512,7 +1512,7 @@ module.exports = {
                           id: 'field-id-1',
                           name: 'field-name-1',
                           type: 'number',
-                          attributes: 'min="0"'
+                          attributes: 'min="0" value="0"'
                         }
                       }
                     }
@@ -1541,7 +1541,7 @@ module.exports = {
                           id: 'field-id-1',
                           name: 'field-name-1',
                           type: 'number',
-                          attributes: 'min="0"'
+                          attributes: 'min="0" value="0"'
                         }
                       }
                     }
@@ -1570,7 +1570,7 @@ module.exports = {
                           id: 'field-id-1',
                           name: 'field-name-1',
                           type: 'number',
-                          attributes: 'min="0"'
+                          attributes: 'min="0" value="0"'
                         }
                       }
                     }
