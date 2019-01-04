@@ -1495,12 +1495,12 @@ module.exports = {
                   childTags: [
                     {
                       childTag: 'td',
-                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      childTagAttributes: 'data-th="Product Name:" role="gridcell"',
                       content: 'Sprite Yoga Strap 6 foot'
                     },
                     {
                       childTag: 'td',
-                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      childTagAttributes: 'data-th="Qty:" role="gridcell"',
                       contentComponent: 'input',
                       contentContext: {
                         class: 'product-view__grouped-qty',
@@ -1524,12 +1524,12 @@ module.exports = {
                   childTags: [
                     {
                       childTag: 'td',
-                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      childTagAttributes: 'data-th="Product Name:" role="gridcell"',
                       content: 'Sprite Yoga Strap 8 foot'
                     },
                     {
                       childTag: 'td',
-                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      childTagAttributes: 'data-th="Qty:" role="gridcell"',
                       contentComponent: 'input',
                       contentContext: {
                         class: 'product-view__grouped-qty',
@@ -1553,12 +1553,12 @@ module.exports = {
                   childTags: [
                     {
                       childTag: 'td',
-                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      childTagAttributes: 'data-th="Product Name:" role="gridcell"',
                       content: 'Sprite Yoga Strap 10 foot'
                     },
                     {
                       childTag: 'td',
-                      childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                      childTagAttributes: 'data-th="Qty:" role="gridcell"',
                       contentComponent: 'input',
                       contentContext: {
                         class: 'product-view__grouped-qty',
