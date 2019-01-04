@@ -1,12 +1,10 @@
 $title-wrapper__margin        : 0 0 $spacer--medium 0 !default;
-$title-wrapper__margin\@medium: 0 !default;
 
 .title-wrapper {
     margin: $title-wrapper__margin;
     flex-direction: column;
 
     @include mq($screen_m) {
-        margin: $title-wrapper__margin\@medium;
         flex-direction: row;
     }
 
