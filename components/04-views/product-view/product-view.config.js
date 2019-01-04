@@ -1496,7 +1496,7 @@ module.exports = {
                     {
                       childTag: 'td',
                       childTagAttributes: 'data-th="Product Name:" role="gridcell"',
-                      content: 'Sprite Yoga Strap 6 foot'
+                      content: '<span class="product-view__grouped-product-name">Sprite Yoga Strap 6 foot</span><span>$14.00</span>'
                     },
                     {
                       childTag: 'td',
@@ -1525,7 +1525,7 @@ module.exports = {
                     {
                       childTag: 'td',
                       childTagAttributes: 'data-th="Product Name:" role="gridcell"',
-                      content: 'Sprite Yoga Strap 8 foot'
+                      content: '<span class="product-view__grouped-product-name">Sprite Yoga Strap 8 foot</span><span>$17.00</span>'
                     },
                     {
                       childTag: 'td',
@@ -1554,7 +1554,7 @@ module.exports = {
                     {
                       childTag: 'td',
                       childTagAttributes: 'data-th="Product Name:" role="gridcell"',
-                      content: 'Sprite Yoga Strap 10 foot'
+                      content: '<span class="product-view__grouped-product-name">Sprite Yoga Strap 10 foot</span><span>$21.00</span>'
                     },
                     {
                       childTag: 'td',
