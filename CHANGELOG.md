@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `price--between` element variant
 - `bundle-option` module
 - `product-view--bundle` view variant
+- `product-view--grouped` view variant
 
 ### Fixed
 - Review alignment
