@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `bundle-option` module
 - `product-view--bundle` view variant
 - `product-view--grouped` view variant
+- Support for B2B module
 
 ### Fixed
 - Review alignment

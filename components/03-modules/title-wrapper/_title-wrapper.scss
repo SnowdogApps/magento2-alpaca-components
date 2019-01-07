@@ -1,0 +1,17 @@
+$title-wrapper__margin        : 0 0 $spacer--medium 0 !default;
+
+.title-wrapper {
+    margin: $title-wrapper__margin;
+    flex-direction: column;
+
+    @include mq($screen_m) {
+        flex-direction: row;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+

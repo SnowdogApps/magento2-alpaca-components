@@ -4,7 +4,7 @@
     <div class="container">
         {{ render '@heading' mainHeading }}
         <div class="row login">
-            <div class="col-xs-12 col-md-6 login__form-column">
+            <div class="col-xs-12 col-md-6">
                 {{ render '@heading' formHeading }}
                 {{ render '@divider' }}
                 <p class="login__info">
@@ -37,13 +37,23 @@
                     </div>
                 </form>
             </div>
-            <div class="col-xs-12 col-md-6 login__link-column">
+            <div class="col-xs-12 col-md-6">
                 {{ render '@heading' linkHeading }}
                 {{ render '@divider' }}
                 <p class="login__info">
                     {{ createAccountInfo }}
                 </p>
                 {{ render '@button' createAccountButton }}
+            </div>
+            <div class="col-xs-12">
+                <div class="login__company-wrapper"></div>
+                    {{ render '@heading' linkCompanyHeading }}
+                    {{ render '@divider' }}
+                    <p class="login__info">
+                        {{ createCompanyAccountInfo }}
+                    </p>
+                    {{ render '@button' createCompanyAccountButton }}
+                </div>
             </div>
         </div>
     </div>
