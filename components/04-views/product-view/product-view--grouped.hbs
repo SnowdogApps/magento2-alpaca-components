@@ -18,10 +18,6 @@
                     {{{ sku.label }}} {{{ sku.value }}}
                 </span>
 
-                <span class="product-view__price">
-                    {{ render (component price.content) price.contentContext }}
-                </span>
-
                 <div
                     class="
                         product-view__stock-status
@@ -42,26 +38,8 @@
             </div>
 
             <div class="product-view__secondary-details">
-
-                <div class="product-view__description">
-                    {{{ description }}}
-                </div>
-
-                <div class="product-view__options">
-                    {{ render '@swatch--with-label' swatch.size merge=true }}
-                    {{ render '@swatch--image-with-label' swatch.color merge=true }}
-                </div>
-
+                {{ render '@table' productsTable }}
                 <div class="product-view__main-actions">
-                    <div class="product-view__qty">
-                        <label
-                            class="{{ qty.label.class }}"
-                            for="qty.field.input.id"
-                        >
-                            {{ qty.label.text }}
-                        </label>
-                        {{render '@quantity-update' qty.field}}
-                    </div>
                     <div class="product-view__action-elements">
                         <div class="product-view__add-to-cart">
                             {{> '@button' button }}
