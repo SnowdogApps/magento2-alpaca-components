@@ -4,9 +4,7 @@ $side-menu__trigger-size                : 48px !default;
 $side-menu__trigger-margin              : 0 !default;
 $side-menu__trigger-padding             : 0 !default;
 $side-menu__trigger-border              : none !default;
-$side-menu__trigger-text-decoration     : none !default;
 $side-menu__trigger-background-color    : $white !default;
-$side-menu__trigger-cursor              : pointer !default;
 
 $side-menu__trigger-text-font-size      : 10px !default;
 $side-menu__trigger-text-line-height    : 10px !default;
@@ -21,7 +19,6 @@ $side-menu__trigger-icon-color          : $gray-darker !default;
 $side-menu__content-top                 : 0 !default;
 $side-menu__content-bottom              : 0 !default;
 $side-menu__content-right               : calc(100% + 2px) !default;
-$side-menu__content-width               : 100% !default;
 $side-menu__content-height              : 100% !default;
 $side-menu__content-max-width           : 280px !default;
 $side-menu__content-max-width\@medium   : 400px !default;

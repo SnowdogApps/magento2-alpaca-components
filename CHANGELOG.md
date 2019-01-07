@@ -6,6 +6,30 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1.0] - 07.01.2019
+### Added
+- `email-to-friend` view
+- `confirmation-link` view
+- `price--between` element variant
+- `bundle-option` module
+- `product-view--bundle` view variant
+- `product-view--grouped` view variant
+- Support for B2B module
+
+### Fixed
+- Review alignment
+- Alignment for buttons
+- Alignment for quick search input (Safari issue)
+- Input text on safari browsers
+
+### Changed
+- Refactor dropdown list and nested list
+- Update dependencies to work with node lts v10.15.0
+
+### Removed
+- Wrong z-index from rating stars
+- Grid styles and references in modules and views
+
 ## [1.0.1] - 18.10.2018
 ### Changed
 - Circle CI tests setup

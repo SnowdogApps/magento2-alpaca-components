@@ -11,9 +11,9 @@
                 <{{ itemTag }}
                    class="dropdown-list__label {{ class }}"
                    {{{ itemAttributes }}}
-                   {{#if id }}
-                        data-dropdown="{{ id }}"
-                   {{/if}}
+                    {{#if collapse }}
+                        aria-controls="{{ id }}"
+                    {{/if}}
                 >
                     {{ title }}
 

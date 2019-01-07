@@ -1,9 +1,9 @@
-<div class="dashboard-form {{ class }}">
-    <h5 class="heading heading--fifth-level dashboard-form__title">
+<form class="dashboard-form {{ class }}">
+    <h3 class="dashboard-form__title">
         {{ title }}
-    </h5>
+    </h3>
 
-    <div class="dashboard-form__divider {{ contentClass }}">
+    <fieldset class="fieldset dashboard-form__divider {{ contentClass }}">
         {{#each fields }}
             {{> '@input' input }}
         {{/each}}
@@ -40,7 +40,7 @@
                 {{> '@input' hiddenField }}
             {{/each}}
         </div>
-    </div>
-</div>
+    </fieldset>
+</form>
 
 <script src="{{ static '../dashboard-form/form.js' }}"></script>

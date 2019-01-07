@@ -18,7 +18,11 @@
                              class="{{ childTagClasses }}"
                              {{{ childTagAttributes }}}
                         >
-                            {{{ content }}}
+                            {{#if contentComponent }}
+                                {{ render (component contentComponent) contentContext }}
+                            {{else }}
+                                {{{ content }}}
+                            {{/if }}
                         </{{{ childTag }}}>
                     {{/each}}
                 </{{{ rowTag }}}>

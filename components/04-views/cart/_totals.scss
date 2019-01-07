@@ -10,8 +10,6 @@ $cart-totals__font-size--summary: $font-size-base !default;
     border-top: $cart-totals__border;
 
     &__row {
-        display: flex;
-        justify-content: space-between;
         padding-bottom: $cart-totals__margin;
         font-size: $cart-totals__font-size;
 

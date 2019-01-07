@@ -12,11 +12,17 @@ module.exports = {
     },
     linkHeading: {
       tag: 'h3',
-      text: 'Registered Customer',
+      text: 'New Customer',
+      class: 'login__heading'
+    },
+    linkCompanyHeading: {
+      tag: 'h3',
+      text: 'New Company Account',
       class: 'login__heading'
     },
     signInInfo: 'If you have an account, sign in with your email address.',
     createAccountInfo: 'Creating an account has many benefits: check out faster, keep more than one address, track orders and more.',
+    createCompanyAccountInfo: 'If you represent a company, you will want to use our company account area. Creating a company account provides all company members with access to B2B features like quoting, company users management, quick order, and more.',
     email: {
       attributes: '',
       class: 'login__input',
@@ -60,6 +66,11 @@ module.exports = {
       class: 'button--link login__button login__button--create-accunt',
       tag: 'a',
       text: 'Create an Account'
+    },
+    createCompanyAccountButton: {
+      class: 'button--link login__button',
+      tag: 'a',
+      text: 'Create a Company Account'
     },
     forgetPassword: {
       href: '#',

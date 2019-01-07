@@ -6,18 +6,15 @@ module.exports = {
     options: [
       {
         id: 'id1',
-        label: 'Option one',
-        class: ''
+        label: 'Option one'
       },
       {
         id: 'id2',
-        label: 'Option two',
-        class: ''
+        label: 'Option two'
       },
       {
         id: 'id3',
-        label: 'Options three',
-        class: ''
+        label: 'Options three'
       }
     ]
   }
