@@ -56,28 +56,23 @@ module.exports = {
         options: [
           {
             text: 'XS',
-            ariaLabel: 'Select size XS',
             href: '#'
           },
           {
             class: 'filter__swatch-option--active',
             text: 'S',
-            ariaLabel: 'Select size S',
             href: '#'
           },
           {
             text: 'M',
-            ariaLabel: 'Select size M',
             href: '#'
           },
           {
             text: 'L',
-            ariaLabel: 'Select size L',
             href: '#'
           },
           {
             text: 'XL',
-            ariaLabel: 'Select size XL',
             href: '#'
           }
         ]
@@ -97,29 +92,25 @@ module.exports = {
             href: '#',
             class: 'filter__color-option--active',
             attributes: 'style="background: #000"',
-            label: 'Black',
-            ariaLabel: 'Select color black'
+            label: 'Black'
           },
           {
             href: '#',
             class: 'filter__color-option',
             attributes: 'style="background: red"',
-            label: 'Red',
-            ariaLabel: 'Select color red'
+            label: 'Red'
           },
           {
             href: '#',
             class: 'filter__color-option',
             attributes: 'style="background: #5cb85c"',
-            label: 'Green',
-            ariaLabel: 'Select color green'
+            label: 'Green'
           },
           {
             href: '#',
             class: 'filter__color-option',
             attributes: 'style="background: #0275d8"',
-            label: 'Blue',
-            ariaLabel: 'Select color blue'
+            label: 'Blue'
           }
         ]
       }
