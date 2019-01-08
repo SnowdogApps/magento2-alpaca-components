@@ -6,7 +6,7 @@ module.exports = {
       informations: [
         {
           title: 'Contact information',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe qwe@qwe.com',
           actions: {
             sides: [
@@ -25,7 +25,7 @@ module.exports = {
         },
         {
           title: 'Newsletters',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'You don\'t subscribe to our newsletter.',
           actions: {
             sides: [
@@ -46,7 +46,7 @@ module.exports = {
       informations: [
         {
           title: 'Default Billing Address',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: 'qweqwe qwe 136 N. Bay Road',
           actions: {
             sides: [
@@ -62,7 +62,7 @@ module.exports = {
         },
         {
           title: 'Default Shipping address',
-          class: 'grid__column grid__column--1-2',
+          class: 'col-sm-6',
           information: '11233 Easer 53rd Ave, Suite 600 US',
           actions: {
             sides: [

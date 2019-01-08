@@ -447,25 +447,25 @@ module.exports = {
             {
               headingTag: 'h4',
               title: 'Shipping Address',
-              class: 'grid__column grid__column--1-4',
+              class: 'col-sm-3',
               text: 'Lorem Ipsum Shipping Address example 1'
             },
             {
               headingTag: 'h4',
               title: 'Shipping Method',
-              class: 'grid__column grid__column--1-4',
+              class: 'col-sm-3',
               text: 'United Parcel Service - Ground'
             },
             {
               headingTag: 'h4',
               title: 'Billing Address',
-              class: 'grid__column grid__column--1-4',
+              class: 'col-sm-3',
               text: 'Lorem Ipsum Billing Address example 1'
             },
             {
               headingTag: 'h4',
               title: 'Payment Method',
-              class: 'grid__column grid__column--1-4',
+              class: 'col-sm-3',
               text: 'Check / Money order'
             }
           ]
@@ -491,25 +491,25 @@ module.exports = {
           informations: [
             {
               headingTag: 'h4',
-              class: 'grid__column grid__column--1-2',
+              class: 'col-sm-6',
               title: 'Order Id',
               text: '#0000003'
             },
             {
               headingTag: 'h4',
-              class: 'grid__column grid__column--1-2',
+              class: 'col-sm-6',
               title: 'Email',
               text: 'test@test.com'
             },
             {
               headingTag: 'h4',
-              class: 'grid__column grid__column--1-2',
+              class: 'col-sm-6',
               title: 'Order Shipping Address',
               text: 'Lorem ipsmum example order shipping address'
             },
             {
               headingTag: 'h4',
-              class: 'grid__column grid__column--1-2',
+              class: 'col-sm-6',
               title: 'Customer Name',
               text: 'Test Test'
             }
@@ -529,7 +529,7 @@ module.exports = {
           fields: [
             {
               input: {
-                class: 'dashboard-form__divider grid__column grid__column--1-2',
+                class: 'dashboard-form__divider col-sm-6',
                 label: {
                   text: 'Quantity to Return'
                 },
@@ -544,7 +544,7 @@ module.exports = {
           selects: [
             {
               select: {
-                class: 'dashboard__address grid__column grid__column--1-2 dashboard-form__select',
+                class: 'dashboard__address col-sm-6 dashboard-form__select',
                 label: {
                   text: 'Item',
                 },
@@ -558,7 +558,7 @@ module.exports = {
             },
             {
               select: {
-                class: 'dashboard__address grid__column grid__column--1-2 dashboard-form__select',
+                class: 'dashboard__address col-sm-6 dashboard-form__select',
                 label: {
                   text: 'Resolution'
                 },
@@ -580,7 +580,7 @@ module.exports = {
             },
             {
               select: {
-                class: 'dashboard__adddress grid__column grid__column--1-2 dashboard-form__select',
+                class: 'dashboard__adddress col-sm-6 dashboard-form__select',
                 label: {
                   text: 'Item Condition'
                 },
@@ -602,7 +602,7 @@ module.exports = {
             },
             {
               select: {
-                class: 'dasboard__address grid__column grid__column--1-2',
+                class: 'dasboard__address col-sm-6',
                 label: {
                   text: 'Reasont to Return',
                 },

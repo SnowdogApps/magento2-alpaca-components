@@ -1,0 +1,7 @@
+$requisition-list-view__margin: 0 0 $spacer--medium 0 !default;
+
+.requisition-list-view {
+    &__description {
+        margin: $requisition-list-view__margin;
+    }
+}
