@@ -48,7 +48,7 @@ class DropdownList {
 
   toggleContent(trigger, dropdownContent, opening) {
     const dropdownBlock = trigger.closest('.dropdown-list'),
-          focusableElements = dropdownContent.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]');          ;
+          focusableElements = dropdownContent.querySelectorAll('button:not([disabled]), a[href], area[href] input:not([disabled]), select:not([disabled]), textarea:not([disabled]), *[tabindex]:not([tabindex="-1"]), object, embed, *[contenteditable]');
 
     if (!this.isMediumOpen(dropdownBlock)) {
       if (dropdownContent.clientHeight > 0) {
