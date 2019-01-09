@@ -2,6 +2,9 @@ $filters__heading-font-weight        : $font-weight-bold !default;
 $filters__heading-font-weight\@medium: $font-weight-normal !default;
 $filters__heading-margin             : 0 !default;
 $filters__heading-margin\@medium     : 0 0 $spacer--medium 0 !default;
+$filters__skip-button-height         : 48px !default;
+$filters__skip-button-padding        : 0 $spacer--medium !default;
+$filters__skip-button-margin-bottom  : $spacer !default;
 $filters__switcher-margin            : $spacer 0 0 0 !default;
 $filters__switcher-padding           : 0 !default;
 $filters__switcher-border            : 1px solid $gray-lighter !default;
@@ -16,10 +19,6 @@ $filters__switcher-size              : 48px !default;
 $filters__switcher-icon-margin       : $spacer !default;
 $filters__switcher-icon-padding      : 0 5px !default;
 $filters__list-margin                : 0 0 $spacer--medium 0 !default;
-$filters__category-list-margin       : 0 0 $spacer 0 !default;
-$filters__link-padding-top           : $spacer !default;
-$filters__link-color                 : $color-secondary !default;
-$filters__link-text-decoration       : underline !default;
 $filters__divider-margin             : 0 0 $spacer--medium 0 !default;
 $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
@@ -38,6 +37,18 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
             }
         }
     }
+
+    &__skip-button {
+        @include visually-hidden($usePseudo: true);
+        transition: none;
+
+        &:focus {
+            height: $filters__skip-button-height;
+            padding: $filters__skip-button-padding;
+            margin-bottom: $filters__skip-button-margin-bottom;
+        }
+    }
+
     &__switcher {
         display: flex;
         align-items: center;
@@ -85,21 +96,6 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
             @include mq($screen-l) {
                 display: block;
             }
-        }
-    }
-
-    &__category-list {
-        margin: $filters__category-list-margin;
-        cursor: default;
-    }
-
-    &__link {
-        display: block;
-        padding-bottom: $filters__link-padding-top;
-        color: $filters__link-color;
-        &:hover,
-        &:focus {
-            text-decoration: $filters__link-text-decoration;
         }
     }
 

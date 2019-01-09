@@ -1,6 +1,8 @@
 <div class="filters {{ class }}" {{{ attributes }}}>
-    <h1 class="filters__heading">{{ activeFiltersHeading }}</h1>
-
+    <h2 class="filters__heading">
+        {{ activeFiltersHeading }}
+    </h2>
+    {{ render '@button' skip }}
     {{> '@divider' divider}}
 
     <div class="filters__active">
@@ -16,22 +18,28 @@
         {{ render '@icon' switcherIcon }}
     </button>
 
-    <div class="filters__list filters__list--mobile-hidden dropdown-list
-                {{ dropdownList.class }}
-               "
-         {{{ dropdownList.attributes }}}
+    <div
+        class="
+            filters__list
+            filters__list--mobile-hidden
+            dropdown-list
+            {{ dropdownList.class }}
+        "
+        {{{ dropdownList.attributes }}}
     >
-        <h1 class="filters__heading filters__heading--mobile-hidden">
+        <h2 class="filters__heading filters__heading--mobile-hidden">
             {{ allFiltersHeading }}
-        </h1>
+        </h2>
         {{> '@divider' divider }}
         <ul class="dropdown-list__list">
-            {{> '@filter--checkbox' checkbox }}
-            {{> '@filter--swatch' swatch }}
-            {{> '@filter--color' color }}
-            {{> '@filter--range' range }}
+            {{ render '@filter--category' }}
+            {{ render '@filter--checkbox' }}
+            {{ render '@filter--swatch' }}
+            {{ render '@filter--color' }}
+            {{ render '@filter--range' }}
         </ul>
     </div>
-
 </div>
+
 <script src="{{static '../filters/filters.js'}}"></script>
+<script src="{{static '../dropdown-list/dropdown-list.js'}}"></script>

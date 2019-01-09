@@ -1,10 +1,7 @@
 module.exports = {
   preview: '@docs-only-styles',
+  default: 'checkbox',
   context: {
-    content: 'Content',
-    id: 'default',
-    title: 'Default',
-    text: 'content-text',
     icon: {
       iconId: 'angle-down',
       iconTitle: 'Arrow down',
@@ -13,10 +10,14 @@ module.exports = {
   },
   variants: [
     {
-      name: 'Checkbox',
+      name: 'checkbox',
+      label: 'Checkbox',
       context: {
-        text: '',
-        title: 'Checkbox',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Checkbox'
+        },
         id: 'checkbox',
         checkboxes: [
           {
@@ -47,35 +48,31 @@ module.exports = {
       name: 'swatch',
       context: {
         id: 'swatch',
-        title: 'Swatch',
-        class: '',
-        attributes: '',
-        text: '',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Swatch'
+        },
         options: [
           {
             text: 'XS',
-            ariaLabel: 'Select size XS',
             href: '#'
           },
           {
             class: 'filter__swatch-option--active',
             text: 'S',
-            ariaLabel: 'Select size s',
             href: '#'
           },
           {
             text: 'M',
-            ariaLabel: 'Select size M',
             href: '#'
           },
           {
             text: 'L',
-            ariaLabel: 'Select size L',
             href: '#'
           },
           {
             text: 'XL',
-            ariaLabel: 'Select size XL',
             href: '#'
           }
         ]
@@ -85,38 +82,35 @@ module.exports = {
       name: 'color',
       context: {
         id: 'color',
-        title: 'Color',
-        text: '',
-        name: 'color',
-        class: '',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Color'
+        },
         options: [
           {
             href: '#',
             class: 'filter__color-option--active',
             attributes: 'style="background: #000"',
-            label: 'Black',
-            ariaLabel: 'Select color black'
+            label: 'Black'
           },
           {
             href: '#',
             class: 'filter__color-option',
             attributes: 'style="background: red"',
-            label: 'Red',
-            ariaLabel: 'Select color red'
+            label: 'Red'
           },
           {
             href: '#',
             class: 'filter__color-option',
             attributes: 'style="background: #5cb85c"',
-            label: 'Green',
-            ariaLabel: 'Select color green'
+            label: 'Green'
           },
           {
             href: '#',
             class: 'filter__color-option',
             attributes: 'style="background: #0275d8"',
-            label: 'Blue',
-            ariaLabel: 'Select color blue'
+            label: 'Blue'
           }
         ]
       }
@@ -125,13 +119,16 @@ module.exports = {
       name: 'range',
       context: {
         id: 'range',
-        title: 'Range',
-        text: '',
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Range'
+        },
         componentObject: {
           name: 'range',
           config: {
             attributes: '',
-            class: '',
+            class: 'filter__range',
             filter: {
               wrapperClass: '',
               input: {
@@ -177,10 +174,10 @@ module.exports = {
               }
             },
             apply: {
-              tag: 'button',
               class: 'button--secondary range-filter__button',
-              attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"',
-              text: 'Apply'
+              tag: 'button',
+              text: 'Apply',
+              attributes: 'type="button" data-min="0" data-max="1000" data-attribute="price" href="#" data-filter-url="#"'
             },
             script: true,
             showFloat: 0
@@ -188,5 +185,47 @@ module.exports = {
         }
       }
     },
+    {
+      name: 'category',
+      context: {
+        title: {
+          class: 'filter__label-title',
+          tag: 'h3',
+          text: 'Category'
+        },
+        id: 'category',
+        categories: {
+          class: 'filter__category-list',
+          listTag: 'ul',
+          elementTag: 'li',
+          elements: [
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Jackets',
+              link: '#'
+            },
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Hoodies & Sweatshirts',
+              link: '#'
+            },
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Tees',
+              link: '#'
+            },
+            {
+              class: 'filter__category-item',
+              linkClass: 'filter__category-link',
+              text: 'Tanks',
+              link: '#'
+            }
+          ]
+        }
+      }
+    }
   ]
 };

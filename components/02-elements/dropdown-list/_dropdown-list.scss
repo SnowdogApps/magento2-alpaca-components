@@ -199,7 +199,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         width: 100%;
         padding: 0;
         font-size: $dropdown-list__font-size;
-        cursor: pointer;
+
         &--collapse {
             .dropdown-list__label {
                 padding-right: 30px;
@@ -254,7 +254,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         overflow: hidden;
         transition: $dropdown-list__transition-height;
         &[aria-hidden="true"] {
-            height: 0;
+            display: none;
         }
     }
 

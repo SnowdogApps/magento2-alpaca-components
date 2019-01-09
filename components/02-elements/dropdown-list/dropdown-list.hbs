@@ -23,10 +23,10 @@
                 </{{ itemTag }}>
 
                 {{#if contentElement}}
-                    <div id="{{ id }}"
-                         class="dropdown-list__content {{ class }}"
-                         data-content="{{ id }}"
-                         aria-hidden="true"
+                    <div
+                        id="{{ id }}"
+                        class="dropdown-list__content {{ class }}"
+                        aria-hidden="true"
                     >
                         {{ render (component contentElement) contentContext }}
                     </div>

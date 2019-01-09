@@ -13,13 +13,10 @@
         class="dropdown-list__content filter__content"
         aria-hidden="true"
     >
-        <ul class="list">
-            {{#each checkboxes }}
-                <li>
-                    {{render '@checkbox--link' this }}
-                </li>
-            {{/each }}
-        </ul>
+        {{ text }}
+        {{#if componentObject }}
+            {{ render (component componentObject.name) componentObject.config }}
+        {{/if }}
         <div class="filter__divider"></div>
     </div>
 </li>
