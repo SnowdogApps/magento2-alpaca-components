@@ -1,5 +1,7 @@
-$dashboard-margin : $spacer--large !default;
-$dashboard-padding: $spacer--medium !default;
+$dashboard__margin        : $spacer--large !default;
+$dashboard__padding       : $spacer--medium !default;
+$dashboard__title--margin : 0 0 $spacer--medium 0 !default;
+$dashboard__title--padding: 0 0 $spacer 0 !default;
 
 .dashboard {
     margin-top: $spacer--medium;
@@ -13,17 +15,17 @@ $dashboard-padding: $spacer--medium !default;
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
-        margin-bottom: $dashboard-margin;
+        margin-bottom: $dashboard__margin;
     }
 
     &__title {
-        margin-bottom: $dashboard-margin;
-        padding-bottom: 10px;
+        margin: $dashboard__title--margin;
+        padding: $dashboard__title--padding;
         border-bottom: 1px solid $gray;
 
         &--wrapped {
             margin-bottom: 0;
-            margin-right: $dashboard-margin;
+            margin-right: $dashboard__margin;
         }
     }
 
@@ -35,7 +37,7 @@ $dashboard-padding: $spacer--medium !default;
     }
 
     &__item {
-        margin-bottom: $dashboard-margin;
+        margin-bottom: $dashboard__margin;
     }
 
     &__form {
@@ -67,7 +69,7 @@ $dashboard-padding: $spacer--medium !default;
     }
 
     &__input {
-        margin-bottom: $dashboard-margin;
+        margin-bottom: $dashboard__margin;
     }
 
     &__label {
@@ -105,7 +107,7 @@ $dashboard-padding: $spacer--medium !default;
         border-bottom: 0;
 
         &--current {
-            padding: $dashboard-padding;
+            padding: $dashboard__padding;
             background-color: $white;
 
             &:after {
@@ -121,6 +123,6 @@ $dashboard-padding: $spacer--medium !default;
     }
 
     &__list-link {
-        padding: $dashboard-padding;
+        padding: $dashboard__padding;
     }
 }

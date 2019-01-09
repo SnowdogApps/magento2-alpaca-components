@@ -149,6 +149,13 @@ $product-view__review-product-name-font-weight         : $font-weight-bold !defa
 $product-view__wrapper-margin                          : $spacer--medium 0 $spacer--large 0 !default;
 $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
 
+$product-view__grouped-qty-margin                      : 0 !default;
+$product-view__grouped-qty-max-width                   : 100px !default;
+$product-view__grouped-qty-width                       : 120px !default;
+$product-view__grouped-product-name-font-weight        : $font-weight-bold !default;
+$product-view__grouped-product-name-margin             : 0 $spacer--medium 0 0 !default;
+$product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
+
 .product-view {
     display: flex;
     flex-direction: column;
@@ -488,6 +495,29 @@ $product-view__wrapper-margin\@medium                  : 0 0 40px 0 !default;
 
         @include mq($screen-l) {
             margin-bottom: $product-view__extra-actions-margin-bottom\@large;
+        }
+    }
+
+    &__grouped-qty {
+        margin: $product-view__grouped-qty-margin;
+        max-width: $product-view__grouped-qty-max-width;
+    }
+
+    &__grouped-table {
+        table-layout: fixed;
+    }
+
+    &__grouped-col-qty {
+        width: $product-view__grouped-qty-width;
+    }
+
+    &__grouped-product-name {
+        display: block;
+        font-weight: $product-view__grouped-product-name-font-weight;
+        margin: $product-view__grouped-product-name-margin;
+
+        @include mq($screen-m) {
+            margin: $product-view__grouped-product-name-margin\@medium;
         }
     }
 

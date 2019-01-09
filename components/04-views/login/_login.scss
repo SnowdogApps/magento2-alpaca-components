@@ -1,51 +1,51 @@
-$login__margin-bottom                   : $spacer--extra-large !default;
-$login__padding-top                     : $spacer !default;
-$login__actions-margin                  : 0 0 $spacer--medium !default;
+$login__margin-bottom                  : $spacer--extra-large !default;
+$login__padding-top                    : $spacer !default;
+$login__actions-margin                 : 0 0 $spacer--medium !default;
 
-$login__heading-margin                  : 0 0 $spacer--medium 0 !default;
+$login__heading-margin                 : 0 0 $spacer--medium 0 !default;
 
-$login__column-padding                  : $spacer--large !default;
+$login__company-column-padding         : $spacer--medium $spacer 0 $spacer !default;
+$login__company-column-margin          : $spacer--large 0 0 0 !default;
+$login__company-column-border-top      : 1px solid $gray-light !default;
 
-$login__horizontal-padding              : 38px !default;
-$login__button-margin                   : 0 $spacer--medium 0 0 !default;
-$login__button-margin\@large            : 0 $spacer--large 0 0 !default;
-$login__button-margin--crate-account    : 0 !default;
-$login__button-min-width                : 160px !default;
+$login__horizontal-padding             : 38px !default;
+$login__button-margin                  : 0 $spacer--medium 0 0 !default;
+$login__button-margin\@large           : 0 $spacer--large 0 0 !default;
+$login__button-margin--crate-account   : 0 !default;
+$login__button-min-width               : 160px !default;
 
-$login__form-margin                     : 0 0 $spacer--medium 0 !default;
-$login__form-margin\@medium             : 0 !default;
-$login__form-padding                    : 0 0 $spacer--medium 0 !default;
-$login__form-padding\@medium            : 0 !default;
-$login__form-border                     : 1px solid $gray-light !default;
-$login__form-border\@medium             : none !default;
+$login__form-margin                    : 0 0 $spacer--medium 0 !default;
+$login__form-margin\@medium            : 0 !default;
+$login__form-padding                   : 0 0 $spacer--medium 0 !default;
+$login__form-padding\@medium           : 0 !default;
+$login__form-border                    : 1px solid $gray-light !default;
+$login__form-border\@medium            : none !default;
 
-$login__fieldset-max-width\@medium      : 488px !default;
+$login__fieldset-max-width\@medium     : 488px !default;
 
-$login__forgot-password-margin          : $spacer--medium 0 0 0 !default;
-$login__forgot-password-margin\@small   : 0 !default;
-$login__forgot-password-color           : $blue !default;
-$login__forgot-password-text-decoration : none !default;
+$login__forgot-password-margin         : $spacer--medium 0 0 0 !default;
+$login__forgot-password-margin\@small  : 0 !default;
+$login__forgot-password-color          : $blue !default;
+$login__forgot-password-text-decoration: none !default;
 
-$login__input-margin                    : 0 0 $spacer--medium !default;
+$login__input-margin                   : 0 0 $spacer--medium !default;
 
-$login__info-margin                     : $spacer--medium 0 24px 0 !default;
+$login__info-margin                    : $spacer--medium 0 24px 0 !default;
 
-$login__validation-tips-color           : $red !default;
-$login__validation-tips-margin          : 0 0 $spacer !default;
+$login__validation-tips-color          : $red !default;
+$login__validation-tips-margin         : 0 0 $spacer !default;
 
 .login {
     padding-top: $login__padding-top;
     margin-bottom: $login__margin-bottom;
 
-    &__form-column {
-        @include mq($screen-m) {
-            padding-right: $login__column-padding;
-        }
-    }
+    &__company-wrapper {
+        margin: $login__company-column-margin;
+        padding: $login__company-column-padding;
+        border-top: $login__company-column-border-top;
 
-    &__link-column {
         @include mq($screen-m) {
-            padding-left: $login__column-padding;
+            border-top: none;
         }
     }
 
@@ -57,6 +57,7 @@ $login__validation-tips-margin          : 0 0 $spacer !default;
         margin: $login__form-margin;
         padding: $login__form-padding;
         border-bottom: $login__form-border;
+
         @include mq($screen-m) {
             margin: $login__form-margin\@medium;
             padding: $login__form-padding\@medium;
@@ -90,6 +91,7 @@ $login__validation-tips-margin          : 0 0 $spacer !default;
         padding-right: $login__horizontal-padding;
         padding-left: $login__horizontal-padding;
         min-width: $login__button-min-width;
+
         @include mq($screen-s) {
             width: auto;
             flex: 0 0 auto;
@@ -108,6 +110,7 @@ $login__validation-tips-margin          : 0 0 $spacer !default;
         margin: $login__forgot-password-margin;
         color: $login__forgot-password-color;
         text-decoration: $login__forgot-password-text-decoration;
+
         @include mq($screen-s) {
             margin: $login__forgot-password-margin\@small;
         }
