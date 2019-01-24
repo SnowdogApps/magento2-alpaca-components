@@ -40,7 +40,7 @@ module.exports = {
       imageAlt: 'Alpaca Logo',
       imageAttributes: '',
       imageClass: '',
-      imageSrc: '/images/logo/alpaca.svg',
+      imageSrc: '/images/logo/logo.svg',
       href: '#'
     },
     searchInput: {
