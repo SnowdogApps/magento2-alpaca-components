@@ -1,6 +1,7 @@
 $newsletter__font-size                  : $font-size-base !default;
 $newsletter__font-size--agreements      : $font-size-small !default;
 $newsletter__field-height               : 32px !default;
+$newsletter__field-border               : none !default;
 $newsletter__field-border-radius        : 32px !default;
 $newsletter__field-padding              : 0 $spacer--medium !default;
 $newsletter__line-height                : 1.2 !default;
@@ -59,7 +60,7 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         background: $newsletter__input-background;
         padding: $newsletter__field-padding;
         margin: 0;
-        border: none;
+        border: $newsletter__field-border;
         border-radius: $newsletter__field-border-radius;
         height: $newsletter__field-height;
         color: $newsletter__input-color;

@@ -6,9 +6,11 @@ $footer__newsletter-padding            : 0 $spacer--medium !default;
 
 $footer__link-color                    : $gray-lighter !default;
 $footer__link-color-hover              : $color-primary !default;
+$footer__link-text-decoration-hover    : none !default;
 
 $footer__link-inner-padding            : $spacer--medium !default;
 
+$footer__bottom-bar-background         : $color-primary !default;
 $footer__bottom-bar-background\@large  : $gray-darkest !default;
 $footer__bottom-bar-color              : $gray-lighter !default;
 $footer__bottom-bar-font-size          : $font-size-small !default;
@@ -91,11 +93,13 @@ $footer__icon-fill-hover               : $color-primary !default;
         &:hover,
         &:focus {
             color: $footer__link-color-hover;
+            text-decoration: $footer__link-text-decoration-hover;
         }
     }
 
     &__bottom-bar {
         color: $footer__bottom-bar-color;
+        background-color: $footer__bottom-bar-background;
         @include mq($screen-l) {
             background-color: $footer__bottom-bar-background\@large;
         }
