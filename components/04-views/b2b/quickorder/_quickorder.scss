@@ -1,11 +1,16 @@
+$quickorder__product-margin-bottom      : $spacer--medium !default;
 $quickorder__list-item-max-width        : 500px !default;
 $quickorder__list-item-margin-bottom    : $spacer--large !default;
 $quickorder__product-margin-bottom      : $spacer--medium !default;
 $quickorder__product-defails-margin-left: $spacer !default;
 $quickorder__qty-field-max-width        : 200px !default;
 $quickorder__textarea-margin-bottom     : $spacer !default;
+$quickorder__ui-autocomplete-bg-color   : $white !default;
+$quickorder__ui-helper-display          : none !default;
 
 .quickorder {
+    margin-bottom: $quickorder__product-margin-bottom;
+
     &__list-item {
         max-width: $quickorder__list-item-max-width;
         margin-bottom: $quickorder__list-item-margin-bottom;
@@ -28,4 +33,13 @@ $quickorder__textarea-margin-bottom     : $spacer !default;
     &__textarea {
         margin-bottom: $quickorder__textarea-margin-bottom;
     }
+
+}
+
+.ui-autocomplete {
+    background-color: $quickorder__ui-autocomplete-bg-color;
+}
+
+.ui-helper-hidden-accessible {
+    display: $quickorder__ui-helper-display;
 }

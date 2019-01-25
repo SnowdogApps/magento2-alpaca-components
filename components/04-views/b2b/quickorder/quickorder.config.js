@@ -70,7 +70,7 @@ module.exports = {
             class: 'quickorder__qty-field',
             id: 'qty2',
             name: 'qty2',
-            type: 'text'
+            type: 'number'
           }
         },
         remove: {
