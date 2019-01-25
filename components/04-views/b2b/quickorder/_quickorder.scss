@@ -1,14 +1,17 @@
-$quickorder__product-margin-bottom      : $spacer--medium !default;
-$quickorder__list-item-max-width        : 500px !default;
-$quickorder__list-item-margin-bottom    : $spacer--large !default;
-$quickorder__product-margin-bottom      : $spacer--medium !default;
-$quickorder__product-image-width        : auto !default;
-$quickorder__product-defails-margin-left: $spacer !default;
-$quickorder__qty-field-max-width        : 200px !default;
-$quickorder__textarea-margin-bottom     : $spacer !default;
-$quickorder__autocomplete-item-cursor   : pointer !default;
-$quickorder__ui-autocomplete-bg-color   : $white !default;
-$quickorder__ui-helper-display          : none !default;
+$quickorder__product-margin-bottom        : $spacer--medium !default;
+$quickorder__list-item-max-width          : 500px !default;
+$quickorder__list-item-margin-bottom      : $spacer--large !default;
+$quickorder__product-margin-bottom        : $spacer--medium !default;
+$quickorder__product-image-width          : auto !default;
+$quickorder__product-defails-margin-left  : $spacer !default;
+$quickorder__qty-field-max-width          : 200px !default;
+$quickorder__textarea-margin-bottom       : $spacer !default;
+$quickorder__autocomplete-item-cursor     : pointer !default;
+$quickorder__autocomplete-item-line-height: $font-line-height !default;
+$quickorder__autocomplete-item-color      : $blue !default;
+$quickorder__ui-autocomplete-bg-color     : $white !default;
+$quickorder__ui-autocomplete-padding      : $spacer 0 $spacer 40px !default;
+$quickorder__ui-helper-display            : none !default;
 
 .quickorder {
     margin-bottom: $quickorder__product-margin-bottom;
@@ -42,11 +45,17 @@ $quickorder__ui-helper-display          : none !default;
 
     &__autocomplete-item {
         cursor: $quickorder__autocomplete-item-cursor;
+        line-height: $quickorder__autocomplete-item-line-height;
+
+        &:hover {
+            color: $quickorder__autocomplete-item-color;
+        }
     }
 }
 
 .ui-autocomplete {
     background-color: $quickorder__ui-autocomplete-bg-color;
+    padding: $quickorder__ui-autocomplete-padding;
 }
 
 .ui-helper-hidden-accessible {
