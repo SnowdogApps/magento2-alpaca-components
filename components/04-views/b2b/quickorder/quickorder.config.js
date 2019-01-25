@@ -17,14 +17,23 @@ module.exports = {
             type: 'text'
           }
         },
+        image: {
+          src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+          dataSrc: '/images/gallery/product-img-80-80.jpg'
+        },
+        link: {
+          href: '#',
+          text: 'Mona Pullover Hoodlie'
+        },
         qty: {
           label: {
             text: 'Qty'
           },
           field: {
+            class: 'quickorder__qty-field',
             id: 'qty1',
             name: 'qty1',
-            type: 'text'
+            type: 'number'
           }
         },
         remove: {
@@ -40,18 +49,27 @@ module.exports = {
             text: 'Enter SKU or Product Name'
           },
           field: {
-            id: 'sku1',
-            name: 'sku1',
+            id: 'sku2',
+            name: 'sku2',
             type: 'text'
           }
+        },
+        image: {
+          src: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==',
+          dataSrc: '/images/gallery/product-img-80-80.jpg'
+        },
+        link: {
+          href: '#',
+          text: 'Chaz Kangeroo Hoodie'
         },
         qty: {
           label: {
             text: 'Qty'
           },
           field: {
-            id: 'qty1',
-            name: 'qty1',
+            class: 'quickorder__qty-field',
+            id: 'qty2',
+            name: 'qty2',
             type: 'text'
           }
         },

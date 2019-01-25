@@ -7,8 +7,15 @@
             <form>
                 <ul class="list">
                     {{#each products }}
-                        <li class="list__item">
+                        <li class="list__item quickorder__list-item">
                             {{ render '@input' this.name }}
+                            <div class="quickorder__product">
+                                {{ render '@image' this.image }}
+                                <div class="quickorder__product-details">
+                                    {{ render '@link' this.link }}
+                                    {{ render '@price' }}
+                                </div>
+                            </div>
                             {{ render '@input' this.qty }}
                             {{ render '@button' this.remove }}
                         </li>

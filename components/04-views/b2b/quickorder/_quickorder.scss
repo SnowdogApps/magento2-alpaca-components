@@ -1,0 +1,26 @@
+$quickorder__list-item-max-width        : 500px !default;
+$quickorder__list-item-margin-bottom    : $spacer--large !default;
+$quickorder__product-margin-bottom      : $spacer--medium !default;
+$quickorder__product-defails-margin-left: $spacer !default;
+$quickorder__qty-field-max-width        : 200px !default;
+
+.quickorder {
+    &__list-item {
+        max-width: $quickorder__list-item-max-width;
+        margin-bottom: $quickorder__list-item-margin-bottom;
+    }
+
+    &__product {
+        display: flex;
+        align-items: center;
+        margin-bottom: $quickorder__product-margin-bottom;
+    }
+
+    &__product-details {
+        margin-left: $quickorder__product-defails-margin-left;
+    }
+
+    &__qty-field {
+        max-width: $quickorder__qty-field-max-width;
+    }
+}
