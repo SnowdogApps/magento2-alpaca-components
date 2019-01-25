@@ -6,6 +6,7 @@ $quickorder__product-image-width        : auto !default;
 $quickorder__product-defails-margin-left: $spacer !default;
 $quickorder__qty-field-max-width        : 200px !default;
 $quickorder__textarea-margin-bottom     : $spacer !default;
+$quickorder__autocomplete-item-cursor   : pointer !default;
 $quickorder__ui-autocomplete-bg-color   : $white !default;
 $quickorder__ui-helper-display          : none !default;
 
@@ -39,6 +40,9 @@ $quickorder__ui-helper-display          : none !default;
         margin-bottom: $quickorder__textarea-margin-bottom;
     }
 
+    &__autocomplete-item {
+        cursor: $quickorder__autocomplete-item-cursor;
+    }
 }
 
 .ui-autocomplete {
