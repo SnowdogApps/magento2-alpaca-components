@@ -1,0 +1,22 @@
+<div class="page-wrapper">
+    {{ render '@header' }}
+
+    <div class="container">
+        <div class="quickorder">
+            {{ render '@heading' mainHeading }}
+            <form>
+                <ul class="list">
+                    {{#each products }}
+                        <li class="list__item">
+                            {{ render '@input' this.name }}
+                            {{ render '@input' this.qty }}
+                            {{ render '@button' this.remove }}
+                        </li>
+                    {{/each }}
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{ render '@footer' }}
