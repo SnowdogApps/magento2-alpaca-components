@@ -80,6 +80,36 @@ module.exports = {
           text: 'Remove Row'
         }
       }
-    ]
+    ],
+    multiple: {
+      class: 'quickorder__textarea',
+      label: {
+        text: 'Enter Multiple SKUs'
+      },
+      field: {
+        id: 'msku',
+        name: 'msku'
+      }
+    },
+    multipleDesc: 'Use commas or paragraph to separate SKUs.',
+    addToList: {
+      tag: 'button',
+      class: 'button--secondary',
+      attributes: 'type="button"',
+      text: 'Add to List'
+    },
+    file: {
+      title: 'Add from File',
+      desc: 'File must be in .csv format and include "SKU" and "QTY" columns',
+      sample: {
+        href: '#',
+        text: 'Download Sample'
+      }
+    },
+    addToCart: {
+      tag: 'button',
+      attributes: 'type="submit"',
+      text: 'Add to Cart'
+    }
   }
 }

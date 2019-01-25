@@ -3,6 +3,7 @@ $quickorder__list-item-margin-bottom    : $spacer--large !default;
 $quickorder__product-margin-bottom      : $spacer--medium !default;
 $quickorder__product-defails-margin-left: $spacer !default;
 $quickorder__qty-field-max-width        : 200px !default;
+$quickorder__textarea-margin-bottom     : $spacer !default;
 
 .quickorder {
     &__list-item {
@@ -22,5 +23,9 @@ $quickorder__qty-field-max-width        : 200px !default;
 
     &__qty-field {
         max-width: $quickorder__qty-field-max-width;
+    }
+
+    &__textarea {
+        margin-bottom: $quickorder__textarea-margin-bottom;
     }
 }
