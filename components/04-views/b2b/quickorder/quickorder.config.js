@@ -8,6 +8,7 @@ module.exports = {
     products: [
       {
         name: {
+          class: 'required',
           label: {
             text: 'Enter SKU or Product Name'
           },
@@ -26,6 +27,7 @@ module.exports = {
           text: 'Mona Pullover Hoodlie'
         },
         qty: {
+          class: 'required',
           label: {
             text: 'Qty'
           },
@@ -45,6 +47,7 @@ module.exports = {
       },
       {
         name: {
+          class: 'required',
           label: {
             text: 'Enter SKU or Product Name'
           },
@@ -63,6 +66,7 @@ module.exports = {
           text: 'Chaz Kangeroo Hoodie'
         },
         qty: {
+          class: 'required',
           label: {
             text: 'Qty'
           },
