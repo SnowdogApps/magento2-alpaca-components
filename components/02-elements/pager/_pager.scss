@@ -1,13 +1,15 @@
 $pager__list-padding                        : $spacer !default;
-$pager__item-margin                         : 0 $spacer;
-$pager__item-after-height--current          : $spacer;
-$pager__item-after-background-color--current: $color-primary;
+$pager__item-margin                         : 0 $spacer !default;
+$pager__item-after-height--current          : $spacer !default;
+$pager__item-after-background-color--current: $color-primary !default;
 $pager__item-after-transition--current      : $transition-base  !default;
 $pager__item-size                           : 48px !default;
+$pager__item--current                       : $font-color-base !default;
+$pager__item-text-decoration--current       : none !default;
 $pager__icon-width                          : 15px !default;
 $pager__icon-height                         : 15px !default;
 $pager__link-fill-disabled                  : $gray !default;
-$pager__link-fill                           : $green !default;
+$pager__link-fill                           : $color-primary !default;
 
 .pager {
     width: 100%;
@@ -40,7 +42,10 @@ $pager__link-fill                           : $green !default;
         }
 
         &--current {
+            color: $pager__item--current;
             position: relative;
+            text-decoration: $pager__item-text-decoration--current;
+
             &:after {
                 content: '';
                 position: absolute;
