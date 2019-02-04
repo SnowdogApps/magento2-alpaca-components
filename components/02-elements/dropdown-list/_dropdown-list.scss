@@ -10,6 +10,7 @@ $dropdown-list__transition                : $transition-base !default;
 $dropdown-list__item-padding              : $spacer--medium !default;
 $dropdown-list__item-color                : $font-color-base !default;
 $dropdown-list__item-color--open          : $color-primary !default;
+$dropdown-list__item-color-hover          : $blue !default;
 $dropdown-list__item-bg-color             : $white !default;
 $dropdown-list__item-bg-color--open       : $gray-darker !default;
 $dropdown-list__item-bg-color-hover       : $gray-darker !default;
@@ -220,9 +221,11 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         text-align: left;
         cursor: pointer;
         transition: $dropdown-list__transition;
+        color: $dropdown-list__item-color;
 
         &:hover,
         &:focus {
+            color: $dropdown-list__item-color-hover;
             background-color: $dropdown-list__item-bg-color-hover;
             text-decoration: none;
             outline: $dropdown-list__outline;
