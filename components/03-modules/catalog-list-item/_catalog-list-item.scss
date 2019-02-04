@@ -51,6 +51,7 @@ $catalog-list-item__actions-secondary-button-icon-width\@medium  : 18px !default
 $catalog-list-item__actions-secondary-button-icon-height         : 12px !default;
 $catalog-list-item__actions-secondary-button-icon-height\@medium : 18px !default;
 $catalog-list-item__actions-secondary-button-icon-fill           : $gray-darker !default;
+$catalog-list-item__actions-secondary-button-icon-fill--hover    : $color-primary !default;
 
 $catalog-list-item__stock-status-font-weight                     : $font-weight-bold !default;
 $catalog-list-item__stock-status-color--in-stock                 : $color-success !default;
@@ -201,6 +202,10 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
             &:hover,
             &:focus {
                 background-color: transparent;
+
+                .button__icon {
+                    fill: $catalog-list-item__actions-secondary-button-icon-fill--hover;
+                }
             }
         }
 
