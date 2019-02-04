@@ -13,7 +13,6 @@ $catalog-list-item__badge-top-position\@medium                   : 24px !default
 $catalog-list-item__badge-left-position\@medium                  : 0 !default;
 $catalog-list-item__badge-padding                                : 3px 7px !default;
 $catalog-list-item__badge-padding\@medium                        : 6px 13px !default;
-$catalog-list-item__badge-bg-color                               : $color-primary !default;
 $catalog-list-item__badge-font-size                              : 10px !default;
 $catalog-list-item__badge-font-size\@medium                      : 12px !default;
 
@@ -91,7 +90,6 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         border-radius: 0;
         padding: $catalog-list-item__badge-padding;
         font-size: $catalog-list-item__badge-font-size;
-        background-color: $catalog-list-item__badge-bg-color;
         @include mq($screen-m) {
             position: absolute;
             top: $catalog-list-item__badge-top-position\@medium;

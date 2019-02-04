@@ -10,7 +10,6 @@ $catalog-grid-item__badge-top-position        : $spacer--medium !default;
 $catalog-grid-item__badge-left-position       : 0 !default;
 $catalog-grid-item__badge-z-index             : 1 !default;
 $catalog-grid-item__badge-padding             : 5px 12px !default;
-$catalog-grid-item__badge-bg-color            : $color-primary !default;
 $catalog-grid-item__badge-font-size           : $font-size-small !default;
 $catalog-grid-item__badge-border-radius       : 0 !default;
 
@@ -112,7 +111,6 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         border-radius: $catalog-grid-item__badge-border-radius;
         padding: $catalog-grid-item__badge-padding;
         font-size: $catalog-grid-item__badge-font-size;
-        background-color: $catalog-grid-item__badge-bg-color;
     }
 
     &__link {
