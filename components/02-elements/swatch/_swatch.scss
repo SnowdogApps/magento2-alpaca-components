@@ -73,4 +73,8 @@ $swatch__option-border-color--active : $color-primary !default;
             border: $swatch__option-border--white;
         }
     }
+
+    &__input {
+        @include visually-hidden;
+    }
 }
