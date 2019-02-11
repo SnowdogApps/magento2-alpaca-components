@@ -92,6 +92,7 @@ $product-view__price-bottom-margin                     : $spacer--medium !defaul
 $product-view__price-bottom-margin\@medium             : 0 !default;
 $product-view__price-color                             : $gray-darker !default;
 $product-view__price-color--old                        : $gray !default;
+$product-view__price-color--special                    : $gray-darker !default;
 $product-view__price-font-size                         : $font-size-large !default;
 $product-view__price-font-weight                       : $font-weight-bold !default;
 
@@ -268,6 +269,10 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
             &--old {
                 color: $product-view__price-color--old;
+            }
+
+            &--special {
+                color: $product-view__price-color--special;
             }
         }
     }
