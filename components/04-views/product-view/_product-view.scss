@@ -123,7 +123,9 @@ $product-view__swatch-margin-right                     : $spacer--medium !defaul
 $product-view__swatch-option-title-font-size           : $font-size-base !default;
 $product-view__swatch-option-title-font-weight         : $font-weight-bold !default;
 
+$product-view__slider-name-font-size                   : $font-size-medium !default;
 $product-view__slider-add-to-cart-padding              : 0 $spacer--medium !default;
+
 $product-view__slider-margin-bottom                    : $spacer !default;
 $product-view__slider-margin-bottom\@medium            : 72px !default;
 $product-view__slider-margin-bottom--last\@medium      : 56px !default;
@@ -753,7 +755,7 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
     &__grid-item {
         .catalog-grid-item__name {
-            font-size: 16px;
+            font-size: $product-view__slider-name-font-size;
             text-transform: initial;
         }
 
