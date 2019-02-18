@@ -1,7 +1,7 @@
 $loader__size                : 100% !default;
 $loader__circle-size         : 80px !default;
-$loader__circle-border       : 8px solid $gray-lightest !default;
-$loader__circle-border-top   : 8px solid $color-primary !default;
+$loader__circle-border       : $spacer solid $gray-lightest !default;
+$loader__circle-border-top   : $spacer solid $color-primary !default;
 $loader__circle-border-radius: 50% !default;
 $loader__circle-animation    : rotate 1s infinite linear !default;
 

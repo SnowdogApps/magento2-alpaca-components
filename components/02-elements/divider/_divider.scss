@@ -1,6 +1,6 @@
 $divider__color--left : $color-primary !default;
 $divider__color--right: $gray-lighter !default;
-$divider__size        : 8px !default;
+$divider__size        : $spacer !default;
 
 .divider {
     display: none;
