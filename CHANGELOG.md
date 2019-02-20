@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Refactor dropdown list and nested list
 - Update dependencies to work with node lts v10.15.0
+- Deployment moved from Heroku to Now
 
 ### Removed
 - Wrong z-index from rating stars
