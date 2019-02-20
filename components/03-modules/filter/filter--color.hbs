@@ -1,31 +1,36 @@
-<li class="dropdown-list__item dropdown-list__item--collapse filter">
-    <div class="dropdown-list__label filter__label"
-         data-dropdown="{{id}}"
+<li class="dropdown-list__item dropdown-list__item--collapse filter {{ class }}">
+    <button
+        type="button"
+        class="dropdown-list__label filter__label"
+        aria-controls="{{ id }}"
+        aria-expanded="false"
     >
-        {{title}}
-
+        {{ render '@heading' title }}
         {{ render '@icon' icon }}
-    </div>
-    <div id="{{id}}"
-         class="dropdown-list__content filter__content"
-         data-content="{{id}}"
-         aria-hidden="true"
+    </button>
+    <div
+        id="{{ id }}"
+        class="dropdown-list__content filter__content"
+        aria-hidden="true"
     >
-        <div class="filter__color">
-            {{# each options }}
-                <a href='{{href}}'
-                   class="filter__color-option {{class}}"
-                   aria-label="{{ariaLabel}}"
-                >
-                    <div class="filter__color-sample"
-                         {{{ attributes }}}
-                    ></div>
-                    <span class="filter__color-label">
-                        {{label}}
-                    </span>
-                </a>
-            {{/each}}
-        </div>
+        <ul class="list filter__list">
+            {{#each options }}
+                <li class="filter__color-item">
+                    <a
+                        href='{{ href }}'
+                        class="filter__color-option {{ class }}"
+                    >
+                        <div
+                            class="filter__color-sample"
+                            {{{ attributes }}}
+                        ></div>
+                        <span class="filter__color-label">
+                            {{ label }}
+                        </span>
+                    </a>
+                </li>
+            {{/each }}
+        </ul>
         <div class="filter__divider"></div>
     </div>
 </li>

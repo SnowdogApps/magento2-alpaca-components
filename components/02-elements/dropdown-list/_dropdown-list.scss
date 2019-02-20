@@ -35,7 +35,7 @@ $dropdown-list__icon-fill---secondary-open: $color-primary !default;
 // Dark list variant
 $dropdown-list__bg-color--dark            : $gray-darker !default;
 $dropdown-list__list-padding--dark        : $spacer--medium !default;
-$dropdown-list__item-border-color--dark   : $gray-darkest !default;
+$dropdown-list__item-border--dark         : 2px solid $gray-darkest !default;
 $dropdown-list__icon-fill--dark           : $white !default;
 $dropdown-list__item-color--dark          : $white !default;
 $dropdown-list__item-color-hover--dark    : $white !default;
@@ -113,7 +113,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         padding: 0 $dropdown-list__list-padding--dark;
 
         .dropdown-list__item {
-            border-bottom: 2px solid $dropdown-list__item-border-color--dark;
+            border-bottom: $dropdown-list__item-border--dark;
         }
 
         .dropdown-list__item {
@@ -199,7 +199,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         width: 100%;
         padding: 0;
         font-size: $dropdown-list__font-size;
-        cursor: pointer;
+
         &--collapse {
             .dropdown-list__label {
                 padding-right: 30px;
@@ -254,7 +254,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         overflow: hidden;
         transition: $dropdown-list__transition-height;
         &[aria-hidden="true"] {
-            height: 0;
+            display: none;
         }
     }
 
