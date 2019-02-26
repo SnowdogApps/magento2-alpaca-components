@@ -94,6 +94,7 @@ $product-view__price-color                             : $gray-darker !default;
 $product-view__price-color--old                        : $gray !default;
 $product-view__price-font-size                         : $font-size-large !default;
 $product-view__price-font-weight                       : $font-weight-bold !default;
+$product-view__price-label-font-weight                 : $font-weight-normal !default;
 
 $product-view__qty-margin-right\@small                 : $spacer--medium !default;
 
@@ -263,11 +264,23 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
             margin-bottom: $product-view__price-bottom-margin\@medium;
         }
 
+        .price-box {
+            display: flex;
+        }
+
+        .price-label {
+            font-weight: $product-view__price-label-font-weight;
+        }
+
         .price__value {
             color: $product-view__price-color;
 
             &--old {
                 color: $product-view__price-color--old;
+            }
+
+            &.sly-old-price {
+                display: none;
             }
         }
     }
