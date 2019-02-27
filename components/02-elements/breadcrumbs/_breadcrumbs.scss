@@ -5,12 +5,14 @@ $breadcrumbs__font-family        : $font-family-base !default;
 $breadcrumbs__color--active      : $blue !default;
 $breadcrumbs__font-family--active: $font-family-base !default;
 $breadcrumbs__font-size          : $font-size-small !default;
+$breadcrumbs__min-height         : 50px !default;
 
 .breadcrumbs {
     display: none;
 
     @include mq($screen-m) {
         display: block;
+        min-height: $breadcrumbs__min-height;
     }
 
     &__list {
