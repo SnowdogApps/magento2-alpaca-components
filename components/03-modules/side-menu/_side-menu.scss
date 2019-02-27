@@ -15,6 +15,7 @@ $side-menu__trigger-icon-margin         : 0 0 2px 0 !default;
 $side-menu__trigger-icon-margin\@medium : 0 0 4px 0 !default;
 $side-menu__trigger-icon-padding        : 0 0 4px 0 !default;
 $side-menu__trigger-icon-color          : $gray-darker !default;
+$side-menu__trigger-icon-color--hover   : $color-primary !default;
 
 $side-menu__content-top                 : 0 !default;
 $side-menu__content-bottom              : 0 !default;
@@ -29,6 +30,9 @@ $side-menu__content-padding             : 0 !default;
 $side-menu__content-background-color    : $white !default;
 $side-menu__content-transition          : $transition-base !default;
 $side-menu__content-box-shadow          : 0 2px 4px 0 rgba(0, 0, 0, 0.5) !default;
+
+$side-menu__dropdown-width              : 100% !default;
+$side-menu__dropdown-margin             : 0 !default;
 
 $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
 
@@ -67,6 +71,13 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
         border: $side-menu__trigger-border;
         background-color: $side-menu__trigger-background-color;
         cursor: pointer;
+
+        &:focus,
+        &:hover {
+            .side-menu__trigger-icon {
+                fill: $side-menu__trigger-icon-color--hover;
+            }
+        }
     }
 
     &__trigger-text {
@@ -119,5 +130,10 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
         @include mq($screen-xl) {
             display: none;
         }
+    }
+
+    &__dropdown {
+        margin: $side-menu__dropdown-margin;
+        width: $side-menu__dropdown-width;
     }
 }
