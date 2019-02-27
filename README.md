@@ -9,7 +9,7 @@ This components liblary is built on top of [Fractal.js](http://fractal.build/gui
 Magento 2 experience isn't required to work with this code.
 
 ## Demo / Preview
-https://alpaca-components-staging.herokuapp.com/
+https://alpaca-components.now.sh/
 
 ## Installation
 - Install dependencies using `yarn`

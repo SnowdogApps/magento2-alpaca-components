@@ -31,6 +31,7 @@ $catalog-list-item__reviews-padding\@medium                      : 0 !default;
 $catalog-list-item__price-margin                                 : $spacer 0 !default;
 $catalog-list-item__price-margin\@medium                         : $spacer--medium 0 0 0 !default;
 $catalog-list-item__price-font-weight                            : $font-weight-bold !default;
+$catalog-list-item__price-label-font-weight                      : $font-weight-normal !default;
 
 $catalog-list-item__actions-margin                               : $spacer 0 !default;
 $catalog-list-item__actions-primary-margin\@medium               : $spacer 0 0 0 !default;
@@ -147,6 +148,10 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         @include mq($screen-m) {
             margin: $catalog-list-item__price-margin\@medium;
             font-size: $catalog-list-item__font-size--main\@medium;
+        }
+
+        .price-label {
+            font-weight: $catalog-list-item__price-label-font-weight;
         }
     }
 
