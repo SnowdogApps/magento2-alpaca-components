@@ -1,7 +1,7 @@
 {
   "name": "alpaca-components",
   "scripts": {
-    "heroku-postbuild": "gulp fractal:build --ci"
+    "now-build": "gulp fractal:build --ci"
   },
   "dependencies": {
     "@frctl/fractal": "~1.1.7",
