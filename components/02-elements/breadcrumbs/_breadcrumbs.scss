@@ -1,11 +1,12 @@
-$breadcrumbs__margin             : $spacer !default;
-$breadcrumbs__padding            : $spacer--medium $spacer !default;
-$breadcrumbs__color              : $gray-dark !default;
-$breadcrumbs__font-family        : $font-family-base !default;
-$breadcrumbs__color--active      : $blue !default;
-$breadcrumbs__font-family--active: $font-family-base !default;
-$breadcrumbs__font-size          : $font-size-small !default;
-$breadcrumbs__min-height         : 50px !default;
+$breadcrumbs__margin                 : $spacer !default;
+$breadcrumbs__padding                : $spacer--medium $spacer !default;
+$breadcrumbs__color                  : $gray-dark !default;
+$breadcrumbs__font-family            : $font-family-base !default;
+$breadcrumbs__color--active          : $blue !default;
+$breadcrumbs__font-family--active    : $font-family-base !default;
+$breadcrumbs__font-size              : $font-size-small !default;
+$breadcrumbs__text-decoration--active: none !default;
+$breadcrumbs__min-height             : 50px !default;
 
 .breadcrumbs {
     display: none;
@@ -50,6 +51,7 @@ $breadcrumbs__min-height         : 50px !default;
                 padding: $breadcrumbs__padding;
                 font-family: $breadcrumbs__font-family--active;
                 color: $breadcrumbs__color--active;
+                text-decoration: $breadcrumbs__text-decoration--active;
             }
 
             &:after {
