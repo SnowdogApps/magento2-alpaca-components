@@ -10,9 +10,11 @@ $dropdown-list__transition                : $transition-base !default;
 $dropdown-list__item-padding              : $spacer--medium !default;
 $dropdown-list__item-color                : $font-color-base !default;
 $dropdown-list__item-color--open          : $color-primary !default;
+$dropdown-list__item-color-hover          : $blue !default;
 $dropdown-list__item-bg-color             : $white !default;
 $dropdown-list__item-bg-color--open       : $gray-darker !default;
 $dropdown-list__item-bg-color-hover       : $gray-darker !default;
+$dropdown-list__item-font-weight          : $font-weight-base !default;
 
 // List icon
 $dropdown-list__icon-width                : 16px !default;
@@ -28,6 +30,7 @@ $dropdown-list__item-color--secondary     : $dropdown-list__item-color !default;
 $dropdown-list__icon-size---secondary     : 24px !default;
 $dropdown-list__icon-padding--secondary   : 0 5px !default;
 $dropdown-list__icon-margin--secondary    : 0 0 0 5px !default;
+$dropdown-list__icon-rotate--open         : rotate(180deg) !default;
 $dropdown-list__icon-fill--secondary      : $dropdown-list__icon-fill !default;
 $dropdown-list__icon-fill-hover--secondary: $gray !default;
 $dropdown-list__icon-fill---secondary-open: $color-primary !default;
@@ -47,6 +50,7 @@ $dropdown-list__item-color--inner         : $white !default;
 $dropdown-list__icon-fill--inner          : $white !default;
 $dropdown-list__item-border--inner        : 1px solid $white !default;
 $dropdown-list__item-border--inner-level2 : 1px solid $gray-dark !default;
+$dropdown-list__item-font-weight--inner   : $font-weight-base !default;
 
 // screen-m list variables
 $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
@@ -58,6 +62,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
     background-color: $dropdown-list__bg-color;
 
     &--secondary {
+        background-color: $dropdown-list__bg-color--secondary;
 
         .dropdown-list__item,
         .dropdown-list__item[aria-expanded="true"] {
@@ -144,13 +149,13 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
     }
 
     &--inner {
-
         .dropdown-list__item {
             border-bottom: $dropdown-list__item-border--inner;
         }
         .dropdown-list__label {
             color: $dropdown-list__item-color--inner;
             background-color: $dropdown-list__item-bg-color--inner;
+            font-weight: $dropdown-list__item-font-weight--inner;
             &:hover,
             &:focus {
                 color: $dropdown-list__item-color--inner;
@@ -220,9 +225,12 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         text-align: left;
         cursor: pointer;
         transition: $dropdown-list__transition;
+        color: $dropdown-list__item-color;
+        font-weight: $dropdown-list__item-font-weight;
 
         &:hover,
         &:focus {
+            color: $dropdown-list__item-color-hover;
             background-color: $dropdown-list__item-bg-color-hover;
             text-decoration: none;
             outline: $dropdown-list__outline;
@@ -238,7 +246,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
 
             & > .dropdown-list__icon {
                 fill: $dropdown-list__icon-fill--open;
-                transform: rotate(180deg);
+                transform: $dropdown-list__icon-rotate--open;
             }
         }
 
