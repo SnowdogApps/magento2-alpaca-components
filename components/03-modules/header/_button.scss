@@ -11,7 +11,7 @@ $header-button__icon-color--hover   : $color-primary !default;
 $header-button__transition          : $transition-base !default;
 
 $header-button__text-font-family    : $font-family-base !default;
-$header-button__text-font-color     : $gray !default;
+$header-button__text-color          : $gray !default;
 $header-button__text-font-size      : 10px !default;
 $header-button__text-line-height    : 10px !default;
 
@@ -72,7 +72,7 @@ $header-button__counter-dot-bg-color: $white !default;
         font-size: $header-button__text-font-size;
         line-height: $header-button__text-line-height;
         text-align: center;
-        color: $header-button__text-font-color;
+        color: $header-button__text-color;
     }
 
     &__counter {
