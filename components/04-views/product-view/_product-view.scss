@@ -118,6 +118,7 @@ $product-view__stock-color                             : $gray-dark !default;
 $product-view__stock-color--out-of-stock               : $red !default;
 $product-view__stock-color--alert                      : $red !default;
 $product-view__stock-font-weight\@medium               : $font-weight-bold !default;
+$product-view__stock-text-transform\@medium            : uppercase !default;
 
 $product-view__swatch-margin-bottom                    : $spacer--medium !default;
 $product-view__swatch-margin-right                     : $spacer--medium !default;
@@ -416,7 +417,7 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
             margin-bottom: 0;
             float: right;
             font-weight: $product-view__stock-font-weight\@medium;
-            text-transform: uppercase;
+            text-transform: $product-view__stock-text-transform\@medium;
             position: absolute;
             right: 0;
             width: 45%;
