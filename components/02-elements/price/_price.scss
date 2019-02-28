@@ -1,8 +1,8 @@
-$price__spacing               : $spacer !default;
-$price__color--special        : $green !default;
-$price__font-weight           : $font-weight-bold !default;
-$price__font-weight--old      : $font-weight-normal !default;
-$price__font-weight--special  : $font-weight-bold !default;
+$price__spacing             : $spacer !default;
+$price__color--special      : $green !default;
+$price__font-weight         : $font-weight-bold !default;
+$price__font-weight--old    : $font-weight-normal !default;
+$price__font-weight--special: $font-weight-bold !default;
 
 .price {
     &__value {
