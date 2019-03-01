@@ -46,6 +46,7 @@ $catalog-grid-item__price-label-font-weight   : $font-weight-normal !default;
 
 $catalog-grid-item__primary-padding           : 0 $spacer !default;
 $catalog-gird-item__primary-form-margin       : 0 !default;
+$catalog-grid-item__primary-icon-fill         : $gray-darker !default;
 
 $catalog-grid-item__action-size               : 48px !default;
 $catalog-grid-item__action-padding            : 0 !default;
@@ -231,6 +232,13 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         justify-content: center;
         width: 100%;
         padding: $catalog-grid-item__primary-padding;
+
+        &:hover,
+        &:focus {
+            .icon {
+                fill: $catalog-grid-item__primary-icon-fill;
+            }
+        }
     }
 
     &__cart-icon {
