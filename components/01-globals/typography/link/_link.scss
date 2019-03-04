@@ -5,6 +5,7 @@ $link__font-weight        : $font-weight-normal !default;
 $link__color-hover        : $color-secondary !default;
 $link__line-height        : $font-line-height !default;
 $link__transition         : $transition-base !default;
+$link__text-decoration    : none !default;
 $link__color--invert      : $gray-darker !default;
 $link__color-hover--invert: $blue !default;
 
@@ -15,7 +16,7 @@ $link__color-hover--invert: $blue !default;
     font-family: $link__font-family;
     font-weight: $link__font-weight;
     line-height: $link__line-height;
-    text-decoration: none;
+    text-decoration: $link__text-decoration;
 
     &:hover,
     &:focus {

@@ -1,8 +1,9 @@
-$checkbox__margin               : 10px !default;
 $checkbox__line-height          : $font-line-height !default;
-$checkbox__label-padding        : 26px !default;
+$checkbox__label-margin         : 0 !default;
+$checkbox__label-padding        : 14px 26px !default;
 $checkbox__spacer               : 18px !default;
-$checkbox__gap                  : 0 !default;
+$checkbox__top                  : 14px !default;
+$checkbox__left                 : 0 !default;
 $checkbox__icon-border-radius   : 2px !default;
 $checkbox__icon-check-mark-color: $white !default;
 $checkbox__icon-fill            : $color-primary !default;
@@ -13,22 +14,25 @@ $checkbox__color--fake          : $gray-dark !default;
 
 .checkbox {
     position: relative;
-    margin-bottom: $checkbox__margin;
 
     &--link {
         display: block;
         text-decoration: none;
         color: $checkbox__color--fake;
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
+
     &--link-checked {
         display: block;
+
         .checkbox__icon {
             opacity: 1;
         }
+
         .checkbox__label:before {
             border: $checkbox__border--checked;
         }
@@ -36,8 +40,8 @@ $checkbox__color--fake          : $gray-dark !default;
 
     &__field {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: $checkbox__top;
+        left: $checkbox__left;
         opacity: 0;
 
         &:checked + .checkbox__icon {
@@ -51,14 +55,16 @@ $checkbox__color--fake          : $gray-dark !default;
 
     &__label {
         display: block;
-        padding-left: $checkbox__label-padding;
+        margin: $checkbox__label-margin;
+        padding: $checkbox__label-padding;
         line-height: $checkbox__line-height;
         cursor: pointer;
+
         &:before {
             content: '';
             position: absolute;
-            top: $checkbox__gap;
-            left: $checkbox__gap;
+            top: $checkbox__top;
+            left: $checkbox__left;
             width: $checkbox__spacer;
             height: $checkbox__spacer;
             border: $checkbox__border;
@@ -68,8 +74,8 @@ $checkbox__color--fake          : $gray-dark !default;
 
     &__icon {
         position: absolute;
-        top: $checkbox__gap;
-        left: $checkbox__gap;
+        top: $checkbox__top;
+        left: $checkbox__left;
         width: $checkbox__spacer;
         height: $checkbox__spacer;
         fill: $checkbox__icon-fill;

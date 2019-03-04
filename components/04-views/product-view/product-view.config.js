@@ -270,7 +270,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -278,21 +278,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action',
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -303,155 +297,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          {
-            itemClass: 'product-view__slide-item',
-            content: 'catalog-grid-item',
-            contentContext: {
-              class: 'product-view__grid-item',
-              tag: 'div',
-              badge: {
-                name: 'badge--new',
-                context: {
-                  class: 'badge catalog-grid-item__badge',
-                  text: 'NEW'
-                }
-              },
-              image: {
-                class: 'catalog-grid-item__image',
-                dataSrc: '/images/product-view/slider-image.jpg'
-              },
-              name: 'Some product name - very long name because that\'s important and maybe SKU ?',
-              price: {
-                name: 'price',
-                context: {
-                  regularPrice: '1 400',
-                  specialPrice: '',
-                  prefix: {
-                    tag: '',
-                    text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
-                  }
-                }
-              },
-              primaryAction: {
-                tag: 'button',
-                text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
-              },
-              secondaryActions: {
-                wishlist: {
-                  iconId: 'heart',
-                  iconTitle: 'Heart'
-                },
-                compare: {
-                  iconId: 'compare',
-                  iconTitle: 'Compare'
-                }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -461,7 +307,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -469,21 +315,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -494,56 +334,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -553,7 +344,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -561,21 +352,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -586,56 +371,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -645,7 +381,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -653,21 +389,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -678,56 +408,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -737,7 +418,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -745,21 +426,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -770,60 +445,11 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
-          },
+          }
         ]
-      },
+      }
     },
     upsellProducts: {
       heading: 'You may also like',
@@ -858,7 +484,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -866,21 +492,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -891,155 +511,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"',
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          {
-            itemClass: 'product-view__slide-item',
-            content: 'catalog-grid-item',
-            contentContext: {
-              class: 'product-view__grid-item',
-              tag: 'div',
-              badge: {
-                name: 'badge--new',
-                context: {
-                  class: 'badge catalog-grid-item__badge',
-                  text: 'NEW'
-                }
-              },
-              image: {
-                class: 'catalog-grid-item__image',
-                dataSrc: '/images/product-view/slider-image.jpg'
-              },
-              name: 'Some product name - very long name because that\'s important and maybe SKU ?',
-              price: {
-                name: 'price',
-                context: {
-                  regularPrice: '1 400',
-                  specialPrice: '',
-                  prefix: {
-                    tag: '',
-                    text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
-                  }
-                }
-              },
-              primaryAction: {
-                tag: 'button',
-                text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
-              },
-              secondaryActions: {
-                wishlist: {
-                  iconId: 'heart',
-                  iconTitle: 'Heart'
-                },
-                compare: {
-                  iconId: 'compare',
-                  iconTitle: 'Compare'
-                }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -1049,7 +521,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -1057,21 +529,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -1082,56 +548,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -1141,7 +558,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -1149,21 +566,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -1174,56 +585,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -1233,7 +595,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -1241,21 +603,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -1266,56 +622,7 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
           },
           {
@@ -1325,7 +632,7 @@ module.exports = {
               class: 'product-view__grid-item',
               tag: 'div',
               image: {
-                class: 'catalog-grid-item__image',
+                wrapperClass: 'catalog-grid-item__image-wrapper',
                 dataSrc: '/images/product-view/slider-image.jpg'
               },
               name: 'Some product name',
@@ -1333,21 +640,15 @@ module.exports = {
                 name: 'price',
                 context: {
                   regularPrice: '1 400',
-                  specialPrice: '',
                   prefix: {
-                    tag: '',
                     text: '$'
-                  },
-                  suffix: {
-                    tag: '',
-                    text: ''
                   }
                 }
               },
               primaryAction: {
                 tag: 'button',
                 text: 'Add to Cart',
-                class: 'button catalog-grid-item__primary-action'
+                class: 'button button--secondary catalog-grid-item__primary-action'
               },
               secondaryActions: {
                 wishlist: {
@@ -1358,58 +659,9 @@ module.exports = {
                   iconId: 'compare',
                   iconTitle: 'Compare'
                 }
-              },
-              swatches: [
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small swatch--image',
-                    options: [
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-orange.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-green.jpg);"'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-red.jpg);"'
-                      },
-                      {
-                        attributes: 'style="background-image: url(../../images/swatch/swatch-white.jpg);"'
-                      }
-                    ]
-                  }
-                },
-                {
-                  name: 'swatch',
-                  context: {
-                    class: 'swatch--small',
-                    attributes: '',
-                    titleClass: '',
-                    options: [
-                      {
-                        text: 'XS'
-                      },
-                      {
-                        class: 'swatch__option--active',
-                        text: 'S'
-                      },
-                      {
-                        text: 'M'
-                      },
-                      {
-                        text: 'L'
-                      },
-                      {
-                        text: 'XL'
-                      }
-                    ]
-                  }
-                }
-              ]
+              }
             }
-          },
+          }
         ]
       }
     },

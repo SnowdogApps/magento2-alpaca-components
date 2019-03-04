@@ -1,44 +1,111 @@
-$filter__transition                        : $transition-base !default;
+$filter__transition                               : $transition-base !default;
+
+// Category
+$filter__category-list-margin                     : 0 0 $spacer 0 !default;
+$filter__category-list-margin--nested             : 0 0 0 $spacer--large !default;
+$filter__category-list-margin--nested-second-level: 0 0 0 #{$spacer--large * 2} !default;
+$filter__category-link-padding                    : 14px 0 !default;
+$filter__category-link-color                      : $color-secondary !default;
+$filter__category-link-text-decoration            : underline !default;
+
 // Swatch
-$filter__swatch-margin                     : 0 0 $spacer--medium 0 !default;
-$filter__swatch-option-size                : 48px !default;
-$filter__swatch-option-margin              : $spacer--medium !default;
-$filter__swatch-option-background          : $white !default;
-$filter__swatch-option-color               : $gray-dark !default;
-$filter__swatch-option-border              : 3px solid $white !default;
-$filter__swatch-option-border-color-hover  : $color-primary !default;
-$filter__swatch-option-border-color--active: $color-primary !default;
+$filter__swatch-size\@large                       : 25% !default;
+$filter__swatch-margin                            : 0 $spacer $spacer--medium $spacer !default;
+$filter__swatch-margin\@large                     : 0 0 $spacer--medium 0 !default;
+$filter__swatch-option-size                       : 48px !default;
+$filter__swatch-option-background                 : $white !default;
+$filter__swatch-option-color                      : $gray-dark !default;
+$filter__swatch-option-border                     : 3px solid $white !default;
+$filter__swatch-option-border-color-hover         : $color-primary !default;
+$filter__swatch-option-border-color--active       : $color-primary !default;
+
 // Label
-$filter__label-padding                     : $spacer--medium 0 !default;
+$filter__label-padding                            : $spacer--medium 0 !default;
+
 // Color
-$filter__color-option-width                : 56px !default;
-$filter__color-option-height               : 80px !default;
-$filter__color-option-border               : 2px solid transparent !default;
-$filter__color-option-after-top            : 4px !default;
-$filter__color-option-after-left           : 8px !default;
-$filter__color-option-after-size           : 40px !default;
-$filter__color-option-after-border-radius  : 100% !default;
-$filter__color-option-after-border-color   : $color-primary !default;
-$filter__color-sample-size                 : 32px !default;
-$filter__color-sample-margin               : $spacer !default;
-$filter__color-sample-border               : 1px solid $gray-lighter;
-$filter__color-sample-border-radius        : 100% !default;
-$filter__color-label-font-size             : $font-size-extra-small !default;
-$filter__color-label-color                 : $gray-darkest !default;
+$filter__color-padding                            : 0 $spacer !default;
+$filter__color-size\@large                        : 25% !default;
+$filter__color-option-width                       : 56px !default;
+$filter__color-option-height                      : 80px !default;
+$filter__color-option-border                      : 2px solid transparent !default;
+$filter__color-option-after-top                   : 4px !default;
+$filter__color-option-after-left                  : 8px !default;
+$filter__color-option-after-size                  : 40px !default;
+$filter__color-option-after-border-radius         : 100% !default;
+$filter__color-option-after-border-color          : $color-primary !default;
+$filter__color-sample-size                        : 32px !default;
+$filter__color-sample-margin                      : $spacer !default;
+$filter__color-sample-border                      : 1px solid $gray-lighter !default;
+$filter__color-sample-border-radius               : 100% !default;
+$filter__color-label-font-size                    : $font-size-small !default;
+$filter__color-label-color                        : $gray-darkest !default;
+
 // Divider
-$filter__divider-border-top                : 1px solid $gray-light !default;
+$filter__divider-border-top                       : 1px solid $gray-light !default;
+
 // Range
-$filter__range-margin                      : 0 0 $spacer--medium 0 !default;
+$filter__range-margin                             : 0 0 $spacer--medium 0 !default;
 
 .filter {
     &__label {
         padding: $filter__label-padding;
+
+        &:hover,
+        &:focus {
+            .filter__label-title {
+                color: $color-primary;
+            }
+        }
     }
 
-    &__swatch {
+    &__label-title {
+        margin: 0;
+        text-transform: inherit;
+        color: inherit;
+        transition: $filter__transition;
+    }
+
+    &__category-list {
+        margin: $filter__category-list-margin;
+
+        &--nested {
+            margin: $filter__category-list-margin--nested;
+        }
+
+        &--nested-second-level {
+            margin: $filter__category-list-margin--nested-second-level;
+        }
+    }
+
+    &__category-item {
+        padding: 0;
+    }
+
+    &__category-link {
+        display: block;
+        padding: $filter__category-link-padding;
+        color: $filter__category-link-color;
+
+        &:hover,
+        &:focus {
+            text-decoration: $filter__category-link-text-decoration;
+        }
+    }
+
+    &__list {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    &__swatch-item {
         margin: $filter__swatch-margin;
+
+        @include mq($screen-l) {
+            display: flex;
+            justify-content: center;
+            flex-basis: $filter__swatch-size\@large;
+            margin: $filter__swatch-margin\@large;
+        }
     }
 
     &__swatch-option {
@@ -47,7 +114,6 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         align-items: center;
         min-width: $filter__swatch-option-size;
         min-height: $filter__swatch-option-size;
-        margin-right: $filter__swatch-option-margin;
         border: $filter__swatch-option-border;
         background-color: $filter__swatch-option-background;
         color: $filter__swatch-option-color;
@@ -61,19 +127,19 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
             border-color: $filter__swatch-option-border-color-hover;
         }
 
-        &:last-child {
-            margin-right: 0;
-        }
-
         &--active {
             border-color: $filter__swatch-option-border-color--active;
         }
     }
 
-    &__color,
-    &__swatch-wrapper {
-        display: flex;
-        flex-flow: row wrap;
+    &__color-item {
+        padding: $filter__color-padding;
+
+        @include mq($screen-l) {
+            display: flex;
+            justify-content: center;
+            flex-basis: $filter__color-size\@large;
+        }
     }
 
     &__color-option {
@@ -105,6 +171,7 @@ $filter__range-margin                      : 0 0 $spacer--medium 0 !default;
         &:hover,
         &:focus {
             text-decoration: none;
+
             &:after {
                 border-color: $filter__color-option-after-border-color;
             }

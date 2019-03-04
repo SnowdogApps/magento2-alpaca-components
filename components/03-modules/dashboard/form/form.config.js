@@ -29,7 +29,6 @@ module.exports = {
     checkboxes: [
       {
         checkbox: {
-          class: 'dashboard-form__divider',
           id: 'changeEmail',
           label: {
             text: 'Change Email'

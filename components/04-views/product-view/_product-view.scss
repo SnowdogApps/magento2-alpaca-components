@@ -92,8 +92,10 @@ $product-view__price-bottom-margin                     : $spacer--medium !defaul
 $product-view__price-bottom-margin\@medium             : 0 !default;
 $product-view__price-color                             : $gray-darker !default;
 $product-view__price-color--old                        : $gray !default;
+$product-view__price-color--special                    : $gray-darker !default;
 $product-view__price-font-size                         : $font-size-large !default;
 $product-view__price-font-weight                       : $font-weight-bold !default;
+$product-view__price-label-font-weight                 : $font-weight-normal !default;
 
 $product-view__qty-margin-right\@small                 : $spacer--medium !default;
 
@@ -116,13 +118,14 @@ $product-view__stock-color                             : $gray-dark !default;
 $product-view__stock-color--out-of-stock               : $red !default;
 $product-view__stock-color--alert                      : $red !default;
 $product-view__stock-font-weight\@medium               : $font-weight-bold !default;
+$product-view__stock-text-transform\@medium            : uppercase !default;
 
 $product-view__swatch-margin-bottom                    : $spacer--medium !default;
 $product-view__swatch-margin-right                     : $spacer--medium !default;
 $product-view__swatch-option-title-font-size           : $font-size-base !default;
 $product-view__swatch-option-title-font-weight         : $font-weight-bold !default;
 
-$product-view__slider-add-to-cart-padding              : 0 $spacer--medium !default;
+$product-view__slider-name-font-size                   : $font-size-medium !default;
 $product-view__slider-margin-bottom                    : $spacer !default;
 $product-view__slider-margin-bottom\@medium            : 72px !default;
 $product-view__slider-margin-bottom--last\@medium      : 56px !default;
@@ -159,21 +162,6 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 .product-view {
     display: flex;
     flex-direction: column;
-
-    .catalog-grid-item__image-wrapper {
-        height: 0;
-        overflow: hidden;
-        padding-top: 624px / 640px * 100%;
-        position: relative;
-
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
 
     &__wrapper {
         display: flex;
@@ -263,11 +251,27 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
             margin-bottom: $product-view__price-bottom-margin\@medium;
         }
 
+        .price-box {
+            display: flex;
+        }
+
+        .price-label {
+            font-weight: $product-view__price-label-font-weight;
+        }
+
         .price__value {
             color: $product-view__price-color;
 
             &--old {
                 color: $product-view__price-color--old;
+            }
+
+            &--special {
+                color: $product-view__price-color--special;
+            }
+
+            &.sly-old-price {
+                display: none;
             }
         }
     }
@@ -396,7 +400,7 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
             margin-bottom: 0;
             float: right;
             font-weight: $product-view__stock-font-weight\@medium;
-            text-transform: uppercase;
+            text-transform: $product-view__stock-text-transform\@medium;
             position: absolute;
             right: 0;
             width: 45%;
@@ -748,12 +752,8 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
     &__grid-item {
         .catalog-grid-item__name {
-            font-size: 12px;
+            font-size: $product-view__slider-name-font-size;
             text-transform: initial;
-        }
-
-        .catalog-grid-item__primary-action {
-            padding: $product-view__slider-add-to-cart-padding;
         }
     }
 

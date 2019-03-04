@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.2.0] - 04.03.2019
+### Added
+- Support for escape key in dropdown script
+- B2B Quickorder view
+- reCAPTCHA styles
+
+### Changed
+- Refactor filters and accessibility improvements
+- Checkbox styles
+- Variables Scope and variable inheritance
+- Price styles for configurable products
+
+### Fixed
+- Related products styles in product view
+
 ## [1.1.0] - 07.01.2019
 ### Added
 - `email-to-friend` view
