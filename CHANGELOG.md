@@ -16,6 +16,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Variables Scope and variable inheritance
 - Price styles for configurable products
 
+### Fixed
+- Related products styles in product view
+
 ## [1.1.0] - 07.01.2019
 ### Added
 - `email-to-friend` view

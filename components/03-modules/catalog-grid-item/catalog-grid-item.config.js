@@ -32,6 +32,7 @@ module.exports = {
     rating: {
       class: 'catalog-grid-item__rating'
     },
+    swatches: true,
     primaryAction: {
       tag: 'button',
       text: '<span class="catalog-grid-item__cart-text">Add to Cart</span>',
