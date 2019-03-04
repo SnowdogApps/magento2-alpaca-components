@@ -167,6 +167,10 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         &:focus,
         &:hover {
             background-color: $minicart-product__action-button-bg;
+
+            .minicart-product__button-icon {
+                fill: $minicart-product__action-icon-color--active;
+            }
         }
     }
 
@@ -175,9 +179,5 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         width: $minicart-product__action-icon-size;
         padding: $minicart-product__action-icon-padding;
         fill: $minicart-product__action-icon-color;
-        &:focus,
-        &:hover {
-            fill: $minicart-product__action-icon-color--active;
-        }
     }
 }

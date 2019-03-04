@@ -10,7 +10,6 @@ $catalog-grid-item__badge-top-position        : $spacer--medium !default;
 $catalog-grid-item__badge-left-position       : 0 !default;
 $catalog-grid-item__badge-z-index             : 1 !default;
 $catalog-grid-item__badge-padding             : 5px 12px !default;
-$catalog-grid-item__badge-bg-color            : $color-primary !default;
 $catalog-grid-item__badge-font-size           : $font-size-small !default;
 $catalog-grid-item__badge-border-radius       : 0 !default;
 
@@ -43,9 +42,11 @@ $catalog-grid-item__name-padding--bigger      : $spacer--medium 0 !default;
 
 $catalog-grid-item__rating-margin-bottom      : $spacer !default;
 $catalog-grid-item__price-margin-bottom       : $spacer !default;
+$catalog-grid-item__price-label-font-weight   : $font-weight-normal !default;
 
 $catalog-grid-item__primary-padding           : 0 $spacer !default;
 $catalog-gird-item__primary-form-margin       : 0 !default;
+$catalog-grid-item__primary-icon-fill         : $gray-darker !default;
 
 $catalog-grid-item__action-size               : 48px !default;
 $catalog-grid-item__action-padding            : 0 !default;
@@ -112,7 +113,6 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         border-radius: $catalog-grid-item__badge-border-radius;
         padding: $catalog-grid-item__badge-padding;
         font-size: $catalog-grid-item__badge-font-size;
-        background-color: $catalog-grid-item__badge-bg-color;
     }
 
     &__link {
@@ -184,6 +184,10 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         @include mq($screen-xxl) {
             font-size: $catalog-grid-item__font-size\@large;
         }
+
+        .price-label {
+            font-weight: $catalog-grid-item__price-label-font-weight;
+        }
     }
 
     &__details {
@@ -228,6 +232,13 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         justify-content: center;
         width: 100%;
         padding: $catalog-grid-item__primary-padding;
+
+        &:hover,
+        &:focus {
+            .icon {
+                fill: $catalog-grid-item__primary-icon-fill;
+            }
+        }
     }
 
     &__cart-icon {

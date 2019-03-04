@@ -95,14 +95,14 @@
             <h3 class="heading">
                 {{ relatedProducts.heading }}
             </h3>
-            {{render '@slider' relatedProducts.slider }}
+            {{ render '@slider' relatedProducts.slider }}
         </div>
 
         <div class="product-view__slider">
             <h3 class="heading">
                 {{ upsellProducts.heading }}
             </h3>
-            {{render '@slider' upsellProducts.slider }}
+            {{ render '@slider' upsellProducts.slider }}
         </div>
         {{render '@additional-content' additionalContent merge=true }}
     </div>

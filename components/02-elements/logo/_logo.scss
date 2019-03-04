@@ -1,17 +1,25 @@
+$logo__max-width               : 84px !default;
+$logo__max-width\@medium       : 112px !default;
+$logo__image-height            : 25px !default;
+$logo__image-height\@medium    : 34px !default;
+
 .logo {
     display: flex;
     align-items: center;
-    flex: 1 84px;
+    flex: 1 $logo__max-width;
     justify-content: center;
-    max-width: 84px;
+    max-width: $logo__max-width;
+
     @include mq($screen-m) {
-        flex: 1 112px;
-        max-width: 112px;
+        flex: 1 $logo__max-width\@medium;
+        max-width: $logo__max-width\@medium;
     }
+
     &__image {
-        height: 25px;
+        height: $logo__image-height;
+
         @include mq($screen-m) {
-            height: 34px;
+            height: $logo__image-height\@medium;
         }
     }
 }

@@ -1,0 +1,48 @@
+<div class="page-wrapper">
+    {{ render '@header' }}
+
+    <div class="container">
+        <div class="quickorder">
+            {{ render '@heading' mainHeading }}
+            <form>
+                <ul class="list">
+                    {{#each products }}
+                        <li class="list__item quickorder__list-item">
+                            {{ render '@input' this.name }}
+                            <div class="quickorder__product">
+                                {{ render '@image' this.image }}
+                                <div class="quickorder__product-details">
+                                    {{ render '@link' this.link }}
+                                    {{ render '@price' }}
+                                </div>
+                            </div>
+                            {{ render '@input' this.qty }}
+                            {{ render '@button' this.remove }}
+                        </li>
+                    {{/each }}
+                    <li class="list__item quickorder__list-item">
+                        {{ render '@input--textarea' multiple }}
+                        <p>
+                            {{ multipleDesc }}
+                        </p>
+                        {{ render '@button' addToList }}
+                    </li>
+                    <li class="list__item quickorder__list-item">
+                        <p>
+                            {{ file.title }}
+                        </p>
+                        <p>
+                            {{ file.desc }}
+                            {{ render '@link' file.sample }}
+                        </p>
+                        <label for="file">Choose File</label>
+                        <input id="file" type="file">
+                    </li>
+                </ul>
+                {{ render '@button' addToCart }}
+            </form>
+        </div>
+    </div>
+</div>
+
+{{ render '@footer' }}

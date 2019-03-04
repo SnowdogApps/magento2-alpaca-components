@@ -5,13 +5,13 @@
 .DS_Store
 
 # Dependencies
-node_modules/*
+node_modules
 
 # Build
-build/*
-dest/*
-public/css/*
+build
+dest
+public/css
 public/images/icons-sprite.svg
 
 # Libs
-vendor/*
+vendor

@@ -7,10 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Support for escape key in dropdown script
+- B2B Quickorder view
+- reCAPTCHA styles
 
 ### Changed
 - Refactor filters and accessibility improvements
 - Checkbox styles
+- Variables Scope and variable inheritance
+- Price styles for configurable products
+
+### Fixed
+- Related products styles in product view
 
 ## [1.1.0] - 07.01.2019
 ### Added
@@ -31,6 +38,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Refactor dropdown list and nested list
 - Update dependencies to work with node lts v10.15.0
+- Deployment moved from Heroku to Now
 
 ### Removed
 - Wrong z-index from rating stars
