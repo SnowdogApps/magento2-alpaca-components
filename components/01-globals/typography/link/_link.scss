@@ -1,13 +1,17 @@
-$link__color              : $blue !default;
-$link__decoration         : underline !default;
-$link__font-family        : $font-family-base !default;
-$link__font-weight        : $font-weight-normal !default;
-$link__color-hover        : $color-secondary !default;
-$link__line-height        : $font-line-height !default;
-$link__transition         : $transition-base !default;
-$link__text-decoration    : none !default;
-$link__color--invert      : $gray-darker !default;
-$link__color-hover--invert: $blue !default;
+$link__color                         : $blue !default;
+$link__decoration                    : underline !default;
+$link__font-family                   : $font-family-base !default;
+$link__font-weight                   : $font-weight-normal !default;
+$link__color-hover                   : $color-secondary !default;
+$link__line-height                   : $font-line-height !default;
+$link__transition                    : $transition-base !default;
+$link__text-decoration               : none !default;
+$link__color--invert                 : $gray-darker !default;
+$link__color-hover--invert           : $blue !default;
+$link__color--focus-in-text          : $white !default;
+$link__bg-color--focus-in-text       : $color-focus !default;
+$link__text-decoration--focus-in-text: underline !default;
+$link__outline--focus-in-text        : $outline-base !default;
 
 .link {
     color: $link__color;
@@ -44,6 +48,17 @@ $link__color-hover--invert: $blue !default;
     // visible only for screen readers and when focused
     &--visually-hidden {
         @include visually-hidden($usePseudo: true);
+    }
+
+    &--focus-in-text {
+        color: $link__color--focus-in-text;
+        background-color: $link__bg-color--focus-in-text;
+        outline: $link__outline--focus-in-text;
+        text-decoration: $link__text-decoration--focus-in-text;
+    }
+
+    p &:focus {
+        @extend .link--focus-in-text;
     }
 }
 
