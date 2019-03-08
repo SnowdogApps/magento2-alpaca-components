@@ -9,6 +9,7 @@
 
 // Mixins
 @import 'mixins/clearfix';
+@import 'mixins/focus';
 @import 'mixins/isIE';
 @import 'mixins/mq';
 @import 'mixins/svg-uri';
@@ -17,6 +18,7 @@
 // Base
 @import '_base/base';
 @import '_container/container';
+@import '_focus/focus';
 @import 'grid/grid';
 @import 'icon/icon';
 @import 'layouts/layouts';

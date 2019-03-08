@@ -1,0 +1,27 @@
+*:focus {
+    @include focus();
+}
+
+// // Safari 10.1+
+// @media not all and (min-resolution: 0.001dpcm) {
+//     @supports (-webkit-appearance: none) { // sass-lint:disable-line no-vendor-prefixes
+//         *:focus,
+//         .button:focus:not(.button--icon) {
+//             outline-offset: -2px;
+//         }
+//         .button--icon:focus,
+//         .header__button-popup:focus {
+//             outline-offset: -2px;
+//         }
+
+//         .choices:focus {
+//             outline-offset: 2px;
+//         }
+//     }
+// }
+
+// @-moz-document url-prefix() { // sass-lint:disable-line no-vendor-prefixes
+//     .button:focus:not(.button--icon) {
+//         outline-offset: -1px;
+//     }
+// }

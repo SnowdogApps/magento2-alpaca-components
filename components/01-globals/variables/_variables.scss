@@ -27,6 +27,7 @@ $color-info                 : $teal !default;
 $color-warning              : $orange !default;
 $color-danger               : $red !default;
 $color-inverse              : $gray-darker !default;
+$color-focus                : $blue !default;
 
 // Background
 $bg-color-base              : $white !default;
@@ -38,6 +39,7 @@ $border-width-base          : 1px !default;
 $border-style-base          : solid !default;
 
 $border-base                : $border-width-base $border-style-base $border-color-base !default;
+$border-focus               : 2px dashed $color-focus !default;
 
 // Outline
 $outline-base               : none !default;

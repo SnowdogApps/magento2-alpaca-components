@@ -1,0 +1,5 @@
+@mixin focus() {
+    outline: $border-focus;
+    outline-offset: -1px;
+    z-index: 1;
+}
