@@ -1,0 +1,22 @@
+<li class="dropdown-list__item dropdown-list__item--collapse filter {{ class }}">
+    <button
+        type="button"
+        class="dropdown-list__label filter__label"
+        aria-controls="{{ id }}"
+        aria-expanded="false"
+    >
+        {{ render '@heading' title }}
+        {{ render '@icon' icon }}
+    </button>
+    <div
+        id="{{ id }}"
+        class="dropdown-list__content filter__content"
+        aria-hidden="true"
+    >
+        {{ text }}
+        {{#if componentObject }}
+            {{ render (component componentObject.name) componentObject.config }}
+        {{/if }}
+        <div class="filter__divider"></div>
+    </div>
+</li>

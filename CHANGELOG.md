@@ -5,19 +5,47 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.2.0] - 04.03.2019
+### Added
+- Support for escape key in dropdown script
+- B2B Quickorder view
+- reCAPTCHA styles
+
+### Changed
+- Refactor filters and accessibility improvements
+- Checkbox styles
+- Variables Scope and variable inheritance
+- Price styles for configurable products
+
+### Fixed
+- Related products styles in product view
+
+## [1.1.0] - 07.01.2019
 ### Added
 - `email-to-friend` view
+- `confirmation-link` view
+- `price--between` element variant
+- `bundle-option` module
+- `product-view--bundle` view variant
+- `product-view--grouped` view variant
+- Support for B2B module
+- Grid based on flexboxgrid2
 
 ### Fixed
 - Review alignment
 - Alignment for buttons
 - Alignment for quick search input (Safari issue)
+- Input text on safari browsers
 
 ### Changed
 - Refactor dropdown list and nested list
+- Update dependencies to work with node lts v10.15.0
+- Deployment moved from Heroku to Now
 
 ### Removed
 - Wrong z-index from rating stars
+- Grid styles and references in modules and views
 
 ## [1.0.1] - 18.10.2018
 ### Changed

@@ -10,6 +10,9 @@ module.exports = {
       iconId: 'close',
       iconTitle: 'Close',
       class: 'side-menu__trigger-icon'
+    },
+    dropdown: {
+      class: 'side-menu__dropdown'
     }
   }
 }

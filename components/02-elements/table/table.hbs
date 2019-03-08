@@ -23,7 +23,11 @@
                                     {{{ content }}}
                                 </span>
                             {{else}}
-                                {{{ content }}}
+                                {{#if contentComponent}}
+                                    {{ render (component contentComponent) contentContext }}
+                                {{else}}
+                                    {{{ content }}}
+                                {{/if}}
                             {{/if}}
                         </{{{ childTag }}}>
                     {{/each}}

@@ -14,11 +14,7 @@ $modal__close-button-top             : $spacer !default;
 $modal__close-button-right           : $spacer !default;
 $modal__close-button-border          : none !default;
 $modal__close-button-background-color: transparent !default;
-
 $modal__close-button-icon-color      : $color-primary !default;
-
-$modal__section-margin-bottom        : $spacer--medium !default;
-$modal__section-margin-bottom--main  : $spacer--large !default;
 
 .modal {
     position: fixed;

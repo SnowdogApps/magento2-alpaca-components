@@ -21,12 +21,16 @@
             {{ render (component price.name) price.context }}
         </div>
 
-        {{ render '@rating' rating merge=true }}
+        {{#if rating }}
+            {{ render '@rating' rating merge=true }}
+        {{/if }}
 
-        <div class="catalog-grid-item__options">
-            {{ render '@swatch' }}
-            {{ render '@swatch--image' }}
-        </div>
+        {{#if swatches }}
+            <div class="catalog-grid-item__options">
+                {{ render '@swatch' }}
+                {{ render '@swatch--image' }}
+            </div>
+        {{/if }}
 
         <div class="catalog-grid-item__actions">
             <form action="#" class="catalog-grid-item__primary-form">

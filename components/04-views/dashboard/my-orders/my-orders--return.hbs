@@ -2,17 +2,17 @@
     {{ render '@header' }}
 
     <div class="dashboard container">
-        <div class="grid">
-            <div class="grid__column grid__column--1-4 dashboard__sidebar">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-lg-3">
                 {{ render '@dashboard-nav' }}
             </div>
 
-            <div class="grid__column grid__column--3-4 dashboard__content">
+            <div class="col-xs-12 col-md-8 col-lg-9">
                 <h2 class="heading heading--fourth-level dashboard__title">
                     {{ title }}
                 </h2>
 
-                <div class="grid">
+                <div class="row">
                     {{> '@information' info }}
                 </div>
 

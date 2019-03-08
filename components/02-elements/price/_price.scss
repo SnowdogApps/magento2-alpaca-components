@@ -1,20 +1,38 @@
-$price__spacing            : $spacer !default;
-$price__special-price-color: $green !default;
-$price__font-weight        : $font-weight-bold !default;
-$price__font-weight--old   : $font-weight-normal !default;
+$price__spacing             : $spacer !default;
+$price__color--special      : $green !default;
+$price__font-weight         : $font-weight-bold !default;
+$price__font-weight--old    : $font-weight-normal !default;
+$price__font-weight--special: $font-weight-bold !default;
+
 .price {
     &__value {
         font-weight: $price__font-weight;
+
         &--old {
             text-decoration: line-through;
             font-weight: $price__font-weight--old;
             margin-right: $price__spacing;
         }
+
         &--special {
-            color: $price__special-price-color;
+            color: $price__color--special;
+            font-weight: $price__font-weight--special;
+
             & > ins {
                 text-decoration: none;
             }
         }
+
+        &--between {
+            display: block;
+
+            &:last-child {
+                margin-top: $price__spacing;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: $price__font-weight--old;
     }
 }

@@ -1,0 +1,13 @@
+$confirmation-link__max-width      : 600px !default;
+$confirmation-link__margin-bottom  : $spacer--extra-large !default;
+$confirmation-link__link-margin-top: $spacer--medium !default;
+
+.confirmation-link {
+    max-width: $confirmation-link__max-width;
+    margin-bottom: $confirmation-link__margin-bottom;
+
+    &__link {
+        display: block;
+        margin-top: $confirmation-link__link-margin-top;
+    }
+}

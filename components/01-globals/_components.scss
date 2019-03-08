@@ -9,7 +9,6 @@
 
 // Mixins
 @import 'mixins/clearfix';
-@import 'mixins/grid-column-width';
 @import 'mixins/isIE';
 @import 'mixins/mq';
 @import 'mixins/svg-uri';
@@ -21,6 +20,7 @@
 @import 'grid/grid';
 @import 'icon/icon';
 @import 'layouts/layouts';
+@import 'recaptcha/recaptcha';
 
 // Typography
 @import '_fonts/fonts';
