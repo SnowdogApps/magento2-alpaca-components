@@ -1,7 +1,8 @@
 $table__padding                  : $spacer--medium !default;
 $table__color                    : $black !default;
 $table__background               : $white !default;
-$table__font-size                : $font-size-small !default;
+$table__font-size                : $font-size-base !default;
+$table__line-height              : $font-line-height !default;
 $table__border-radius            : $border-radius !default;
 $table__border                   : 1px solid $gray-light !default;
 $table__th-background            : $gray-lightest !default;
@@ -24,8 +25,10 @@ $table__background-even--clean   : $white !default;
     border-collapse: separate;
     border-spacing: 0;
     font-size: $table__font-size;
+    line-height: $table__line-height;
 
-    &__caption {
+    &__caption,
+    &__visually-hidden {
         @include visually-hidden();
     }
 
