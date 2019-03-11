@@ -21,6 +21,10 @@ $select__field-list-border-radius--single: 20px !default;
             border: $select__border;
             border-radius: $select__border-radius;
             appearance: none;
+
+            &:focus {
+                @include focus-input();
+            }
         }
     }
 
@@ -62,6 +66,13 @@ $select__field-list-border-radius--single: 20px !default;
                 border-bottom: 0;
             }
         }
+    }
+
+    &.is-focused {
+        .select__field-list {
+            @include focus-input();
+        }
+
     }
 
     &__list--dropdown {

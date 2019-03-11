@@ -39,6 +39,10 @@ $input__date-background-position     : center center !default;
             color: $input__placeholder-color;
         }
 
+        &:focus {
+            @include focus-input();
+        }
+
         &--textarea {
             display: block;
             border-radius: $input__field-border-radius--textarea;
