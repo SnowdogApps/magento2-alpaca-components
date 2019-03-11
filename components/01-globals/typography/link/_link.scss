@@ -8,10 +8,6 @@ $link__transition                    : $transition-base !default;
 $link__text-decoration               : none !default;
 $link__color--invert                 : $gray-darker !default;
 $link__color-hover--invert           : $blue !default;
-$link__color--focus-in-text          : $white !default;
-$link__bg-color--focus-in-text       : $color-focus !default;
-$link__text-decoration--focus-in-text: underline !default;
-$link__outline--focus-in-text        : $outline-base !default;
 
 .link {
     color: $link__color;
@@ -22,16 +18,18 @@ $link__outline--focus-in-text        : $outline-base !default;
     line-height: $link__line-height;
     text-decoration: $link__text-decoration;
 
-    &:hover,
-    &:focus {
+    &:hover {
         color: $link__color-hover;
+    }
+
+    &:focus {
+        @include focus();
     }
 
     &--invert {
         color: $link__color--invert;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $link__color-hover--invert;
         }
     }
@@ -39,8 +37,7 @@ $link__outline--focus-in-text        : $outline-base !default;
     &--secondary {
         color: $gray-lighter;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $color-primary;
         }
     }
@@ -50,15 +47,12 @@ $link__outline--focus-in-text        : $outline-base !default;
         @include visually-hidden($usePseudo: true);
     }
 
-    &--focus-in-text {
-        color: $link__color--focus-in-text;
-        background-color: $link__bg-color--focus-in-text;
-        outline: $link__outline--focus-in-text;
-        text-decoration: $link__text-decoration--focus-in-text;
-    }
-
-    p &:focus {
-        @extend .link--focus-in-text;
+    p &,
+    cite & {
+        background-clip: content-box;
+        &:focus:not(.banner) {
+            @include focus-inline();
+        }
     }
 }
 

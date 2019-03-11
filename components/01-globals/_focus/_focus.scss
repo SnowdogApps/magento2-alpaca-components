@@ -21,7 +21,7 @@
 // }
 
 // @-moz-document url-prefix() { // sass-lint:disable-line no-vendor-prefixes
-//     .button:focus:not(.button--icon) {
-//         outline-offset: -1px;
+//     *:focus {
+//         outline-offset: -2px;
 //     }
 // }
