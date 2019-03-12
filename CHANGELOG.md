@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - focus state for components
 
+### Changed
+- Dashboard My Orders page - a11y updates
+
 ## [1.2.0] - 04.03.2019
 ### Added
 - Support for escape key in dropdown script
