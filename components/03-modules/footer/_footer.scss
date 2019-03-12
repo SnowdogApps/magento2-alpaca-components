@@ -158,8 +158,7 @@ $footer__icon-fill-hover               : $color-primary !default;
         right: 0;
         top: $footer__scroll-top-top;
 
-        &:hover,
-        &:focus {
+        &:hover {
             .footer__icon {
                 fill: $footer__icon-fill-hover;
             }

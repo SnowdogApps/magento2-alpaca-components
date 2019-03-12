@@ -44,10 +44,12 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         height: $newsletter__controls-height;
         border-radius: $newsletter__field-border-radius;
         padding: 0 $newsletter__button-padding;
-        &:hover,
-        &:focus {
+        &:hover {
             cursor: pointer;
             outline: none;
+        }
+        &:focus {
+            @include focus('dark');
         }
     }
     &__input {
