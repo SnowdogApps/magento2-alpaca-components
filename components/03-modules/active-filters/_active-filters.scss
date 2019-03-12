@@ -40,6 +40,7 @@ $active-filters__clear-color\@medium : $color-secondary !default;
 
         &:hover,
         &:focus {
+            outline-offset: -7px;
             .active-filters__remove-icon {
                 fill: $active-filters__icon-fill--hover;
             }
