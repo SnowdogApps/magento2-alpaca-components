@@ -10,15 +10,15 @@
             <div class="catalog-list__products">
                 {{ render '@toolbar' }}
                 <ul class="catalog-grid">
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
-                    {{ render '@catalog-grid-item' }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
+                    {{ render '@catalog-grid-item' gridItem merge=true }}
                 </ul>
                 {{ render '@pager' }}
             </div>
