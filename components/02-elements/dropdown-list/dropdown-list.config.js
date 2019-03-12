@@ -172,7 +172,7 @@ module.exports = {
                   itemTag: 'a',
                   title: 'Item name',
                   itemAttributes: 'href="#" aria-expanded="false"',
-                  id: 'dropdown-1-2',
+                  id: 'dropdown-2-2',
                   collapse: {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
