@@ -19,7 +19,7 @@ $swatch__option-border-color--active : $color-primary !default;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: auto;
     }
 
     &__option-container {
