@@ -1,13 +1,13 @@
-$link__color                         : $blue !default;
-$link__decoration                    : underline !default;
-$link__font-family                   : $font-family-base !default;
-$link__font-weight                   : $font-weight-normal !default;
-$link__color-hover                   : $color-secondary !default;
-$link__line-height                   : $font-line-height !default;
-$link__transition                    : $transition-base !default;
-$link__text-decoration               : none !default;
-$link__color--invert                 : $gray-darker !default;
-$link__color-hover--invert           : $blue !default;
+$link__color              : $blue !default;
+$link__decoration         : underline !default;
+$link__font-family        : $font-family-base !default;
+$link__font-weight        : $font-weight-normal !default;
+$link__color-hover        : $color-secondary !default;
+$link__line-height        : $font-line-height !default;
+$link__transition         : $transition-base !default;
+$link__text-decoration    : none !default;
+$link__color--invert      : $gray-darker !default;
+$link__color-hover--invert: $blue !default;
 
 .link {
     color: $link__color;
