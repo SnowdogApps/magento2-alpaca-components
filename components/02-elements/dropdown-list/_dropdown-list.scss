@@ -159,7 +159,6 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             &:hover,
             &:focus {
                 color: $dropdown-list__item-color-hover--inner;
-                // text-decoration: underline;
             }
             &[aria-expanded="true"] {
                 border-bottom: none;
