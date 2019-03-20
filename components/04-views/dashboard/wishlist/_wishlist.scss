@@ -47,6 +47,10 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         }
     }
 
+    &__link {
+        display: block;
+    }
+
     &__item-name {
         display: block;
         padding: $wishlist__name-padding;

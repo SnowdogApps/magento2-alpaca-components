@@ -185,10 +185,10 @@ $rating__error-color            : $red !default;
                     content: '';
                     display: block;
                     position: absolute;
-                    top: -48px;
+                    top: -56px;
                     width: 42px;
                     height: 45px;
-                    border: 2px dashed $blue;
+                    border: $border-focus;
                 }
             }
         }

@@ -90,10 +90,12 @@ $footer__icon-fill-hover               : $color-primary !default;
         color: $footer__link-color;
         text-decoration: none;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $footer__link-color-hover;
             text-decoration: $footer__link-text-decoration-hover;
+        }
+        &:focus {
+            @include focus-inline('dark');
         }
     }
 
@@ -115,6 +117,12 @@ $footer__icon-fill-hover               : $color-primary !default;
 
     &__social-handler {
         margin: $footer__social-handl-margin;
+
+        .list__icon-link {
+            &:focus {
+                @include focus('dark');
+            }
+        }
 
         @include mq($screen-m) {
             display: flex;
@@ -150,8 +158,7 @@ $footer__icon-fill-hover               : $color-primary !default;
         right: 0;
         top: $footer__scroll-top-top;
 
-        &:hover,
-        &:focus {
+        &:hover {
             .footer__icon {
                 fill: $footer__icon-fill-hover;
             }

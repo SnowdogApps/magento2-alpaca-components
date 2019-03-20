@@ -42,6 +42,10 @@ $radio__icon-transition   : $transition-base !default;
                 }
             }
         }
+
+        &:focus + .radio__label {
+            @include focus();
+        }
     }
 
     &__label {

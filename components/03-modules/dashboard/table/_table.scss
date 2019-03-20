@@ -33,6 +33,9 @@ $dashboard-table-margin: $spacer--medium !default;
 
     &__link {
         display: inline-flex;
+        &:focus {
+            @include focus-inline();
+        }
     }
 
     &__spacer {

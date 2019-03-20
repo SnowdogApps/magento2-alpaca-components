@@ -6,7 +6,6 @@ $button__border-radius              : 100px !default;
 $button__border-hover               : none !default;
 $button__background                 : $color-primary !default;
 $button__background-hover           : $gray-dark !default;
-$button__outline                    : none !default;
 $button__font-family                : $font-family-base !default;
 $button__font-weight                : $font-weight-bold !default;
 $button__font-size                  : $font-size-base !default;
@@ -46,7 +45,6 @@ $button__width--fluid               : 100% !default;
     padding: $button__padding;
     border: $button__border;
     border-radius: $button__border-radius;
-    outline: $button__outline;
     background: $button__background;
     font-family: $button__font-family;
     font-size: $button__font-size;
@@ -54,8 +52,7 @@ $button__width--fluid               : 100% !default;
     transition: $button__transition;
     font-weight: $button__font-weight;
 
-    &:hover,
-    &:focus {
+    &:hover {
         background: $button__background-hover;
         border-color: $button__border-hover;
         color: $button__font-color-hover;
@@ -69,8 +66,7 @@ $button__width--fluid               : 100% !default;
         align-items: center;
         text-decoration: none;
 
-        &:hover,
-        &:focus {
+        &:hover {
             text-decoration: none;
             color: $button__font-color-hover;
         }
@@ -81,8 +77,7 @@ $button__width--fluid               : 100% !default;
         color: $button__font-color--secondary;
         background: $button__background--secondary;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border-color: $button__border-hover--secondary;
             color: $button__font-color-hover--secondary;
             background: $button__background-hover--secondary;
@@ -95,8 +90,7 @@ $button__width--fluid               : 100% !default;
         border: $button__border--icon;
         background: $button__background--icon;
 
-        &:hover,
-        &:focus {
+        &:hover {
             border-color: $button__border-hover--icon;
             background: $button__background-hover--icon;
             .button__icon,

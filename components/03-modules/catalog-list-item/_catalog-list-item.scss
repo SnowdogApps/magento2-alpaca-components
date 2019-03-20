@@ -103,6 +103,13 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
     &__link {
         display: block;
+        &:focus {
+            outline: $outline-base;
+            z-index: 0;
+            .image {
+                @include focus();
+            }
+        }
     }
 
     &__details {

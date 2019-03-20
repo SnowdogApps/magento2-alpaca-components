@@ -21,6 +21,8 @@ $filter__swatch-option-border-color--active       : $color-primary !default;
 
 // Label
 $filter__label-padding                            : $spacer--medium 0 !default;
+$filter__label-color-active                       : $color-primary !default;
+$filter__label-bg-color                           : $bg-color-base !default;
 
 // Color
 $filter__color-padding                            : 0 $spacer !default;
@@ -50,10 +52,18 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
     &__label {
         padding: $filter__label-padding;
 
-        &:hover,
-        &:focus {
+        // to override dropdown-list styles
+        &[aria-expanded="false"]:hover,
+        &[aria-expanded="false"]:focus,
+        &[aria-expanded="true"]:hover,
+        &[aria-expanded="true"]:focus {
+            background-color: $filter__label-bg-color;
+            color: $filter__label-color-active;
             .filter__label-title {
-                color: $color-primary;
+                color: $filter__label-color-active;
+            }
+            & > .dropdown-list__icon {
+                fill: $filter__label-color-active;
             }
         }
     }

@@ -1,9 +1,13 @@
-<{{{ tag }}} class="catalog-grid-item {{ class }}">
+<{{{ tag }}} class="catalog-grid-item {{ class }}" tabindex="0">
     {{#if badge}}
         {{ render (component badge.name) badge.context }}
     {{/if}}
 
-    <a href="#" class="catalog-grid-item__link">
+    <a
+        href="#"
+        class="catalog-grid-item__link"
+        tabindex="-1"
+    >
         {{ render '@image' image merge=true }}
     </a>
 

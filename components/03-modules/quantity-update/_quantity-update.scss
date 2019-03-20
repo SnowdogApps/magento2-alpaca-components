@@ -33,7 +33,7 @@ $quantity-updater__error-max-width                   : 120px !default;
         appearance: none;
 
         &:focus {
-            outline: none;
+            @include focus-input();
         }
     }
 
@@ -41,6 +41,10 @@ $quantity-updater__error-max-width                   : 120px !default;
         border: $quantity-update__button-border;
         background: $quantity-update__button-background;
         margin: 0;
+
+        &:focus {
+            @include focus-input();
+        }
 
         &--plus {
             border-radius: 0 100% 100% 0;

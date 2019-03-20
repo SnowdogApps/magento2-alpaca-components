@@ -19,7 +19,7 @@ $swatch__option-border-color--active : $color-primary !default;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
+        width: auto;
     }
 
     &__option-container {
@@ -32,6 +32,7 @@ $swatch__option-border-color--active : $color-primary !default;
         &:hover,
         &:focus,
         &.selected {
+            outline: none;
             border-color: $swatch__option-border-color--active;
             .swatch__option--white {
                 border: 0;
