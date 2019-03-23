@@ -124,6 +124,10 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
             white-space: $catalog-grid-item__link-white-space;
             text-overflow: $catalog-grid-item__link-text-overflow;
         }
+
+        .is-touch-device & {
+            pointer-events: none;
+        }
     }
 
     &__image-wrapper {
