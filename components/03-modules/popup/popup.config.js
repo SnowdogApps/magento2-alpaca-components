@@ -1,9 +1,14 @@
 module.exports = {
   context: {
-    class: '',
-    popupId: 'popup-minicart',
-    content: 'button',
     popupTrigger: true,
+    buttonPopupTrigger: {
+      class: 'popup-trigger',
+      text: 'Popup trigger button',
+      attributes: 'data-popuptrigger="popup-1" type="button"'
+    },
+    class: '',
+    popupId: 'popup-1',
+    content: 'button',
     buttonClose: {
       tag: 'button',
       text: '',
