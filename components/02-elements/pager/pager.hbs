@@ -6,7 +6,7 @@
                aria-label="{{ ariaLabelLeft }}"
                {{#unless arrowLeftActive}}disabled tabindex="-1"{{/unless}}
             >
-                <svg class="pager__icon" aria-hidden="true">
+                <svg class="pager__icon" role="presentation">
                     <use xlink:href="{{ svg 'arrow-left' }}"></use>
                 </svg>
             </a>
@@ -39,7 +39,7 @@
                aria-label="{{ ariaLabelRight }}"
                {{#unless arrowRightActive}}disabled tabindex="-1"{{/unless}}
             >
-                <svg class="pager__icon" aria-hidden="true">
+                <svg class="pager__icon" role="presentation">
                     <use xlink:href="{{ svg 'arrow-right' }}"></use>
                 </svg>
             </a>

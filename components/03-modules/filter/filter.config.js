@@ -5,7 +5,8 @@ module.exports = {
     icon: {
       iconId: 'angle-down',
       iconTitle: 'Arrow down',
-      class: 'dropdown-list__icon'
+      class: 'dropdown-list__icon',
+      hidden: true
     }
   },
   variants: [

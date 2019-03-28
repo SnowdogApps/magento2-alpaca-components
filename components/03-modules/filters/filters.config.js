@@ -13,7 +13,8 @@ module.exports = {
     switcherIcon: {
       class: 'filters__switcher-icon',
       iconId: 'angle-down',
-      iconTitle: 'Arrow down'
+      iconTitle: 'Arrow down',
+      hidden: true
     },
     divider: {
       class: 'filters__divider'

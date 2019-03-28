@@ -1,4 +1,12 @@
-<svg class="icon {{ class }}" {{{ attributes }}} role="img">
+<svg
+    class="icon {{ class }}"
+    {{{ attributes }}}
+    {{#if hidden}}
+        role="presentation"
+    {{else}}
+        role="img"
+    {{/if}}
+>
     {{#if iconTitle }}
         <title>{{ iconTitle }}</title>
     {{/if}}

@@ -17,7 +17,7 @@ module.exports = {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
           iconTitle: 'Arrow down',
-          attributes: 'aria-hidden="true"'
+          hidden: true
         },
         contentElement: 'image'
       },
@@ -30,7 +30,7 @@ module.exports = {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
           iconTitle: 'Arrow down',
-          attributes: 'aria-hidden="true"'
+          hidden: true
         },
         contentElement: 'paragraph'
       },
@@ -43,7 +43,7 @@ module.exports = {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
           iconTitle: 'Arrow down',
-          attributes: 'aria-hidden="true"'
+          hidden: true
         },
         contentElement: 'image'
       },
@@ -56,7 +56,7 @@ module.exports = {
           class: 'dropdown-list__icon',
           iconId: 'angle-down',
           iconTitle: 'Arrow down',
-          attributes: 'aria-hidden="true"'
+          hidden: true
         },
         contentElement: 'paragraph'
       }
@@ -106,7 +106,7 @@ module.exports = {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
               iconTitle: 'Arrow Down',
-              attributes: 'aria-hidden="true"'
+              hidden: true
             },
             contentElement: 'dropdown-list',
             contentContext: {
@@ -121,7 +121,7 @@ module.exports = {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
                     iconTitle: 'Arrow Down',
-                    attributes: 'aria-hidden="true"'
+                    hidden: true
                   },
                   contentElement: 'dropdown-list',
                   contentContext: {
@@ -136,7 +136,7 @@ module.exports = {
                           class: 'dropdown-list__icon',
                           iconId: 'angle-down',
                           iconTitle: 'Arrow Down',
-                          attributes: 'aria-hidden="true"'
+                          hidden: true
                         },
                         contentElement: 'dropdown-list',
                         contentContext: {
@@ -177,7 +177,7 @@ module.exports = {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
                     iconTitle: 'Arrow Down',
-                    attributes: 'aria-hidden="true"'
+                    hidden: true
                   },
                   contentElement: 'dropdown-list',
                   contentContext: {
@@ -223,7 +223,7 @@ module.exports = {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
               iconTitle: 'Arrow Down',
-              attributes: 'aria-hidden="true"'
+              hidden: true
             },
             contentElement: 'dropdown-list',
             contentContext: {
@@ -251,7 +251,7 @@ module.exports = {
               class: 'dropdown-list__icon',
               iconId: 'angle-down',
               iconTitle: 'Arrow Down',
-              attributes: 'aria-hidden="true"'
+              hidden: true
             },
             contentElement: 'dropdown-list',
             contentContext: {
@@ -266,7 +266,7 @@ module.exports = {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
                     iconTitle: 'Arrow Down',
-                    attributes: 'aria-hidden="true"'
+                    hidden: true
                   },
                   contentElement: 'dropdown-list',
                   contentContext: {
@@ -299,7 +299,7 @@ module.exports = {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
                     iconTitle: 'Arrow Down',
-                    attributes: 'aria-hidden="true"'
+                    hidden: true
                   },
                   contentElement: 'dropdown-list',
                   contentContext: {
@@ -347,7 +347,7 @@ module.exports = {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
                     iconTitle: 'Arrow Down',
-                    attributes: 'aria-hidden="true"'
+                    hidden: true
                   },
                   contentElement: 'dropdown-list',
                   contentContext: {
@@ -370,7 +370,7 @@ module.exports = {
                     class: 'dropdown-list__icon',
                     iconId: 'angle-down',
                     iconTitle: 'Arrow Down',
-                    attributes: 'aria-hidden="true"'
+                    hidden: true
                   },
                   contentElement: 'dropdown-list',
                   contentContext: {

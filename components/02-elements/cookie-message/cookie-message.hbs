@@ -20,7 +20,10 @@
                 {{ closeLabel }}
             {{/if}}
             {{#if closeIcon}}
-                <svg class="cookie-message__close-icon" aria-hidden="true">
+                <svg
+                    class="cookie-message__close-icon"
+                    role="presentaton"
+                >
                     <use xlink:href="{{ svg closeIcon }}"></use>
                 </svg>
             {{/if}}

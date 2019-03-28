@@ -9,7 +9,8 @@ module.exports = {
         icon: {
           iconId: 'heart',
           iconTitle: 'Heart',
-          class: 'header-button__icon'
+          class: 'header-button__icon',
+          hidden: true
         }
       },
       {
@@ -19,7 +20,8 @@ module.exports = {
         icon: {
           iconId: 'phone',
           iconTitle: 'Phone',
-          class: 'header-button__icon'
+          class: 'header-button__icon',
+          hidden: true
         }
       },
       {
@@ -29,7 +31,8 @@ module.exports = {
         icon: {
           iconId: 'account',
           iconTitle: 'User\'s account',
-          class: 'header-button__icon'
+          class: 'header-button__icon',
+          hidden: true
         }
       }
     ],
@@ -69,7 +72,8 @@ module.exports = {
       icon: {
         iconId: 'shopping-cart',
         iconTitle: 'Shopping cart',
-        class: 'header-button__icon'
+        class: 'header-button__icon',
+        hidden: true
       },
       text: 'Cart',
       link: '/cart',
