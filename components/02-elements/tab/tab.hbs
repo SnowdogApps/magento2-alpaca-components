@@ -1,6 +1,6 @@
 <div
     class="tab {{#if modifier}}tab--{{modifier}}{{/if}} {{ class }}"
-    role="widget"
+    role="tablist"
     {{{ attributes }}}
 >
     {{#each tabs as |tab|}}
@@ -11,6 +11,7 @@
             aria-controls="{{ tabId }}"
             aria-selected="{{#if active}}true{{else}}false{{/if}}"
             aria-expanded="{{#if active}}true{{else}}false{{/if}}"
+            role="tab"
         >
             {{ title }}
             {{#if ../icon}}
@@ -28,6 +29,7 @@
             data-content="{{ tabId }}"
             aria-labelledby="{{ titleId }}"
             aria-hidden="{{#if active}}false{{else}}true{{/if}}"
+            role="tabpanel"
         >
             {{#if content}}
                 {{{ content }}}
