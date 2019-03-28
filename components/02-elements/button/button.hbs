@@ -1,7 +1,14 @@
 <{{{ tag }}} class="button {{ class }}" {{{ attributes }}}>
     {{{ text }}}
     {{#if iconId }}
-        <svg class="{{ iconClass }}">
+        <svg
+            class="{{ iconClass }}"
+            {{#if iconHidden}}
+                role="presentation"
+            {{else}}
+                role="img"
+            {{/if}}
+        >
             {{#if iconTitle }}
                 <title>{{ iconTitle }}</title>
             {{/if}}
