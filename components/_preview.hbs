@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>{{ title }}</title>
@@ -8,5 +8,8 @@
     </head>
     <body>
         {{{ yield }}}
+
+        <script src="{{ path '/tests/libs/axe.min.js' }}"></script>
+        <script src="{{ path '/tests/a11y-test.js' }}"></script>
     </body>
 </html>
