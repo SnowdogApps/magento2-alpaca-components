@@ -72,8 +72,8 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
     }
 
     &__item {
-        &--parent {
-            &:hover .mega-menu__inner-list--level1 {
+        &--active {
+            .mega-menu__inner-list--level1 {
                 display: flex;
             }
         }
