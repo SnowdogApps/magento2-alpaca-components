@@ -85,6 +85,5 @@ $swatch__option-image-width--small\@large
 ```
 
 ## Accessibility
-You can run `gulp a11y` to run dev server with accessibility tests enabled.
-
-If on some view there is no a11y message, please go to the component config and comment out `preview: '@docs-only-styles'`
+Components are tested with [axe-core](https://github.com/dequelabs/axe-core). The results are displayed as a console output in browser tools.
+A11y test files you can find in `/public/tests/`
