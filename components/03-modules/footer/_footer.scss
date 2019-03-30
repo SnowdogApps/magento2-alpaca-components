@@ -56,7 +56,6 @@ $footer__icon-fill-hover               : $color-primary !default;
         padding: $footer__newsletter-padding;
 
         @include mq($screen-l) {
-            order: 1;
             padding-top: $footer__padding;
         }
     }
