@@ -13,9 +13,11 @@ module.exports = {
       context: {
         text: '',
         class: 'button--icon',
-        iconId: 'arrow-left',
-        iconTitle: 'Arrow left',
-        iconClass: 'button__icon',
+        icon: {
+          iconId: 'arrow-left',
+          iconTitle: 'Arrow left',
+          class: 'button__icon',
+        },
         attributes: 'type="button" aria-label="click to do something"'
       }
     },
