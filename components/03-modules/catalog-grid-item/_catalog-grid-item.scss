@@ -1,70 +1,77 @@
-$catalog-grid-item__base-spacing              : $spacer !default;
-$catalog-grid-item__padding                   : 0 !default;
-$catalog-grid-item__border                    : 1px solid $gray-lightest !default;
-$catalog-grid-item__font-size                 : $font-size-base !default;
-$catalog-grid-item__font-size\@large          : 16px !default;
-$catalog-grid-item__line-height               : 1.5 !default;
-$catalog-grid-item__font-weight               : $font-weight-bold !default;
+$catalog-grid-item__base-spacing                  : $spacer !default;
+$catalog-grid-item__padding                       : 0 !default;
+$catalog-grid-item__border                        : 1px solid $gray-lightest !default;
+$catalog-grid-item__font-size                     : $font-size-base !default;
+$catalog-grid-item__font-size\@large              : 16px !default;
+$catalog-grid-item__line-height                   : 1.5 !default;
+$catalog-grid-item__font-weight                   : $font-weight-bold !default;
 
-$catalog-grid-item__badge-top-position        : $spacer--medium !default;
-$catalog-grid-item__badge-left-position       : 0 !default;
-$catalog-grid-item__badge-z-index             : 1 !default;
-$catalog-grid-item__badge-padding             : 5px 12px !default;
-$catalog-grid-item__badge-font-size           : $font-size-small !default;
-$catalog-grid-item__badge-border-radius       : 0 !default;
+$catalog-grid-item__badge-top-position            : $spacer--medium !default;
+$catalog-grid-item__badge-left-position           : 0 !default;
+$catalog-grid-item__badge-z-index                 : 1 !default;
+$catalog-grid-item__badge-padding                 : 5px 12px !default;
+$catalog-grid-item__badge-font-size               : $font-size-small !default;
+$catalog-grid-item__badge-border-radius           : 0 !default;
 
-$catalog-grid-item__image-margin              : 0 auto !default;
-$catalog-grid-item__image-width               : auto !default;
-$catalog-grid-item__image-width--lazyload     : 100% !default;
-$catalog-grid-item__image-height              : auto !default;
+$catalog-grid-item__link-width                    : 100% !default;
+$catalog-grid-item__link-z-index--focus           : 0 !default;
+$catalog-grid-item__link-outline--focus           : none !default;
 
-$catalog-grid-item__loader-margin-top         : 30% !default;
+$catalog-grid-item__image-margin                  : 0 auto !default;
+$catalog-grid-item__image-width                   : auto !default;
+$catalog-grid-item__image-width--lazyload         : 100% !default;
+$catalog-grid-item__image-height                  : auto !default;
 
-$catalog-grid-item__link-overflow             : hidden !default;
-$catalog-grid-item__link-overflow--visible    : visible !default;
-$catalog-grid-item__link-white-space          : nowrap !default;
-$catalog-grid-item__link-white-space--visible : normal !default;
-$catalog-grid-item__link-text-overflow        : ellipsis !default;
+$catalog-grid-item__loader-margin-top             : 30% !default;
 
-$catalog-grid-item__content-bg-color          : $white !default;
-$catalog-grid-item__content-padding           : $spacer !default;
-$catalog-grid-item__content-width             : 100% !default;
-$catalog-grid-item__content-height            : 67px !default;
-$catalog-grid-item__content-height\@large     : 73px !default;
-$catalog-grid-item__content-translateY        : translateY(-$catalog-grid-item__content-height) !default;
-$catalog-grid-item__content-translateY\@large : translateY(-$catalog-grid-item__content-height\@large) !default;
-$catalog-grid-item__content-translateY--active: translateY(-100%) !default;
+$catalog-grid-item__link-name-overflow            : hidden !default;
+$catalog-grid-item__link-name-overflow--visible   : visible !default;
+$catalog-grid-item__link-name-white-space         : nowrap !default;
+$catalog-grid-item__link-name-white-space--visible: normal !default;
+$catalog-grid-item__link-name-text-overflow       : ellipsis !default;
 
-$catalog-grid-item__name-color                : $font-color-base !default;
-$catalog-grid-item__name-font-weight          : $font-weight-normal !default;
-$catalog-grid-item__name-margin-botttom       : $spacer !default;
-$catalog-grid-item__name-padding--bigger      : $spacer--medium 0 !default;
+$catalog-grid-item__content-bg-color              : $white !default;
+$catalog-grid-item__content-padding               : $spacer !default;
+$catalog-grid-item__content-width                 : 100% !default;
+$catalog-grid-item__content-top\@large            : 100% !default;
+$catalog-grid-item__content-height                : 67px !default;
+$catalog-grid-item__content-height\@large         : 73px !default;
+$catalog-grid-item__content-translateY            : translateY(-$catalog-grid-item__content-height) !default;
+$catalog-grid-item__content-translateY\@large     : translateY(-$catalog-grid-item__content-height\@large) !default;
+$catalog-grid-item__content-translateY--active    : translateY(-100%) !default;
 
-$catalog-grid-item__rating-margin-bottom      : $spacer !default;
-$catalog-grid-item__price-margin-bottom       : $spacer !default;
-$catalog-grid-item__price-label-font-weight   : $font-weight-normal !default;
+$catalog-grid-item__name-color                    : $font-color-base !default;
+$catalog-grid-item__name-font-weight              : $font-weight-normal !default;
+$catalog-grid-item__name-margin-botttom           : $spacer !default;
+$catalog-grid-item__name-padding--bigger          : $spacer--medium 0 !default;
 
-$catalog-grid-item__primary-padding           : 0 $spacer !default;
-$catalog-gird-item__primary-form-margin       : 0 !default;
-$catalog-grid-item__primary-icon-fill         : $gray-darker !default;
+$catalog-grid-item__rating-margin-bottom          : $spacer !default;
+$catalog-grid-item__price-margin-bottom           : $spacer !default;
+$catalog-grid-item__price-label-font-weight       : $font-weight-normal !default;
 
-$catalog-grid-item__action-size               : 48px !default;
-$catalog-grid-item__action-padding            : 0 !default;
-$catalog-grid-item__action-background         : transparent !default;
-$catalog-grid-item__action-border             : none !default;
-$catalog-grid-item__action-cursor             : pointer !default;
-$catalog-grid-item__action-icon-size          : 18px !default;
-$catalog-grid-item__action-icon-transition    : $transition-base !default;
-$catalog-grid-item__action-icon-fill          : $gray-darker !default;
-$catalog-grid-item__action-icon-fill-hover    : $green !default;
+$catalog-grid-item__primary-padding               : 0 $spacer !default;
+$catalog-gird-item__primary-form-margin           : 0 !default;
+$catalog-grid-item__primary-icon-fill             : $gray-darker !default;
 
-$catalog-grid-item__IE-margin                 : 0 $spacer $spacer--medium $spacer !default;
-$catalog-grid-item__IE-width                  : calc(50% - #{$spacer--medium} - 1px) !default;
-$catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--medium} - 1px) !default;
+$catalog-grid-item__action-size                   : 48px !default;
+$catalog-grid-item__action-padding                : 0 !default;
+$catalog-grid-item__action-background             : transparent !default;
+$catalog-grid-item__action-border                 : none !default;
+$catalog-grid-item__action-cursor                 : pointer !default;
+$catalog-grid-item__action-icon-size              : 18px !default;
+$catalog-grid-item__action-icon-transition        : $transition-base !default;
+$catalog-grid-item__action-icon-fill              : $gray-darker !default;
+$catalog-grid-item__action-icon-fill-hover        : $green !default;
+
+$catalog-grid-item__IE-margin                     : 0 $spacer $spacer--medium $spacer !default;
+$catalog-grid-item__IE-width                      : calc(50% - #{$spacer--medium} - 1px) !default;
+$catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--medium} - 1px) !default;
 
 .catalog-grid-item {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: $catalog-grid-item__border;
     padding: $catalog-grid-item__padding;
     overflow: hidden;
@@ -79,15 +86,17 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     }
 
     @include mq($screen-m) {
+        flex-direction: row;
+
         &:hover,
         &:focus-within {
             .catalog-grid-item__details {
                 transform: $catalog-grid-item__content-translateY--active;
             }
 
-            .catalog-grid-item__link--name {
-                overflow: $catalog-grid-item__link-overflow--visible;
-                white-space: $catalog-grid-item__link-white-space--visible;
+            .catalog-grid-item__name-link {
+                overflow: $catalog-grid-item__link-name-overflow--visible;
+                white-space: $catalog-grid-item__link-name-white-space--visible;
             }
         }
 
@@ -97,9 +106,9 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
                     transform: $catalog-grid-item__content-translateY--active;
                 }
 
-                .catalog-grid-item__link--name {
-                    overflow: $catalog-grid-item__link-overflow--visible;
-                    white-space: $catalog-grid-item__link-white-space--visible;
+                .catalog-grid-item__name-link {
+                    overflow: $catalog-grid-item__link-name-overflow--visible;
+                    white-space: $catalog-grid-item__link-name-white-space--visible;
                 }
             }
         }
@@ -116,13 +125,16 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
     }
 
     &__link {
-        display: block;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto;
+        align-items: center;
+        align-self: stretch;
+        width: $catalog-grid-item__link-width;
 
-        &--name {
-            color: $catalog-grid-item__name-color;
-            overflow: $catalog-grid-item__link-overflow;
-            white-space: $catalog-grid-item__link-white-space;
-            text-overflow: $catalog-grid-item__link-text-overflow;
+        &:focus {
+            z-index: $catalog-grid-item__link-z-index--focus;
+            outline: $catalog-grid-item__link-outline--focus;
         }
     }
 
@@ -169,6 +181,17 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
         }
     }
 
+    &__name-link {
+        display: block;
+        color: $catalog-grid-item__name-color;
+
+        @include mq($screen-m) {
+            overflow: $catalog-grid-item__link-name-overflow;
+            white-space: $catalog-grid-item__link-name-white-space;
+            text-overflow: $catalog-grid-item__link-name-text-overflow;
+        }
+    }
+
     &__rating {
         margin-bottom: $catalog-grid-item__rating-margin-bottom;
     }
@@ -197,6 +220,7 @@ $catalog-grid-item__IE-width\@medium          : calc(100% / 3 - #{$spacer--mediu
 
         @include mq($screen-m) {
             position: absolute;
+            top: $catalog-grid-item__content-top\@large;
             transform: $catalog-grid-item__content-translateY;
             width: $catalog-grid-item__content-width;
             border-top: $catalog-grid-item__border;
