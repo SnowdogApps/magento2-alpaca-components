@@ -83,12 +83,6 @@ gulp.task('fractal:build', ['inheritance', 'svg-sprite', 'sass'], () => {
   });
 });
 
-// Gulp tasks
-gulp.task('a11y', () => {
-  fractal.components.set('default.preview', '@a11y-tests');
-  runSequence('fractal:start');
-});
-
 gulp.task('watch', () => {
   gulp.watch([
     fractal.components.get('path') + '/**/*.scss',
