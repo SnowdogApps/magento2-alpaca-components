@@ -1,9 +1,6 @@
 'use-strict'
 
-const options = {
-        resultTypes: ['violations', 'incomplete']
-      },
-      critical = [
+const critical = [
         'background: red',
         'color: white'
       ].join(';'),
@@ -18,7 +15,22 @@ const options = {
       baseStyles = [
         'background: transparent',
         'color: inherit'
-      ].join(';');
+      ].join(';'),
+      optionsComponents = {
+        resultTypes: ['violations', 'incomplete'],
+        rules: {
+          'bypass': { enabled: false },
+          'landmark-one-main': { enabled: false },
+          'page-has-heading-one': { enabled: false },
+          'region': { enabled: false }
+        }
+      },
+      optionsViews = {
+        resultTypes: ['violations', 'incomplete']
+      };
+
+let components = (document.querySelector('body')).classList.contains('components'),
+    options = (components) ? optionsComponents : optionsViews;
 
 function displayResults(results) {
   const violations = results.violations,
@@ -29,8 +41,9 @@ function displayResults(results) {
     violations.forEach((item) => {
       let errorColor = (item.impact === ('critical' || 'serious')) ? critical : moderate;
       console.log(
-        '%cImpact %s. %s. %s.\n%cElement: %s.\n%c%s, More information: %s',
+        '%cRule id: %s. Impact %s. %s. %s.\n%cElement: %s.\n%c%s, More information: %s',
         errorColor,
+        item.id,
         item.impact,
         item.help,
         item.description,
@@ -44,7 +57,20 @@ function displayResults(results) {
   };
   if (incomplete) {
     incomplete.forEach((item) => {
-      console.log(item);
+      let errorColor = (item.impact === ('critical' || 'serious')) ? critical : moderate;
+      console.log(
+        '%cRule id: %s. Impact %s. %s. %s.\n%cElement: %s.\n%c%s, More information: %s',
+        errorColor,
+        item.id,
+        item.impact,
+        item.help,
+        item.description,
+        element,
+        item.nodes[0].html,
+        baseStyles,
+        item.nodes[0].failureSummary,
+        item.helpUrl
+      );
     })
   }
 }
