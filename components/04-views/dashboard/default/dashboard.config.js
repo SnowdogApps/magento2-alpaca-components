@@ -1,4 +1,5 @@
 module.exports = {
+  preview: '@views',
   context: {
     title: 'My dashboard',
     account: {

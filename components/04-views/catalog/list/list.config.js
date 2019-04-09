@@ -1,3 +1,4 @@
 module.exports = {
-  name: 'list-view'
+  name: 'list-view',
+  preview: '@views'
 }

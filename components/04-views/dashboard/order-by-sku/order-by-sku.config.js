@@ -1,4 +1,5 @@
 module.exports = {
+  preview: '@views',
   context: {
     form: {
       title: 'Order by SKU',
