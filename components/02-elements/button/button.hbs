@@ -1,11 +1,6 @@
 <{{{ tag }}} class="button {{ class }}" {{{ attributes }}}>
     {{{ text }}}
-    {{#if iconId }}
-        <svg class="{{ iconClass }}">
-            {{#if iconTitle }}
-                <title>{{ iconTitle }}</title>
-            {{/if}}
-            <use xlink:href="{{ svg iconId }}"></use>
-        </svg>
+    {{#if icon }}
+        {{ render '@icon' icon }}
     {{/if}}
 </{{{ tag }}}>
