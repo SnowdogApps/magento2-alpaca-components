@@ -1,18 +1,18 @@
-$divider-height                 : $spacer !default;
-$divider-height-before          : 100% !default;
-$divider-width-before           : 30% !default;
-$divider-background-color       : $gray-lighter !default;
-$divider-background-color-before: $color-primary !default;
+$divider__height                 : 8px !default;
+$divider__height-before          : 100% !default;
+$divider__width-before           : 30% !default;
+$divider__background-color       : $gray-lighter !default;
+$divider__background-color-before: $color-primary !default;
 
 .divider {
     display: flex;
-    height: $divider-height;
-    background-color: $divider-background-color;
+    height: $divider__height;
+    background-color: $divider__background-color;
 
     &::before {
         content: '';
-        width: $divider-width-before;
-        height: $divider-height-before;
-        background-color: $divider-background-color-before;
+        width: $divider__width-before;
+        height: $divider__height-before;
+        background-color: $divider__background-color-before;
     }
 }
