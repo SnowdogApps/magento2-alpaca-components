@@ -1,8 +1,8 @@
 $divider__height                 : 8px !default;
-$divider__height-before          : 100% !default;
-$divider__width-before           : 30% !default;
+$divider__height--before          : 100% !default;
+$divider__width--before           : 30% !default;
 $divider__background-color       : $gray-lighter !default;
-$divider__background-color-before: $color-primary !default;
+$divider__background-color--before: $color-primary !default;
 
 .divider {
     display: flex;
@@ -11,8 +11,8 @@ $divider__background-color-before: $color-primary !default;
 
     &::before {
         content: '';
-        width: $divider__width-before;
-        height: $divider__height-before;
-        background-color: $divider__background-color-before;
+        width: $divider__width--before;
+        height: $divider__height--before;
+        background-color: $divider__background-color--before;
     }
 }
