@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - Dashboard My Orders page - a11y updates
+- Refactor divider component
+- Update preview grid
 
 ## Fixed
 - Quantity icons config
