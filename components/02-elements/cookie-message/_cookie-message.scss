@@ -55,6 +55,10 @@ $cookie-message__close-icon-margin-left : $spacer !default;
 
     &__link {
         color: $cookie-message__link-color;
+        background-clip: content-box;
+        &:focus {
+            @include focus-inline();
+        }
     }
 
     &__close {

@@ -44,8 +44,12 @@ $product-review__borders: 1px solid $gray-light;
     }
     .review__summary-add {
         text-align: left;
+        flex-grow: 0;
         @include mq($screen-m) {
             flex-basis: auto;
+        }
+        &:focus {
+            @include focus-inline();
         }
     }
     .list__item:last-child {

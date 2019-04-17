@@ -39,6 +39,11 @@ $action-padding: 15px !default;
     &__link {
         padding: $action-padding 0;
         margin-right: 15px;
+        background-clip: content-box;
+
+        &:focus {
+            @include focus-inline();
+        }
 
         &:last-child {
             margin-right: 0;

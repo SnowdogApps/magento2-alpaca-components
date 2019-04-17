@@ -21,6 +21,11 @@ $select__field-list-border-radius--single: 20px !default;
             border: $select__border;
             border-radius: $select__border-radius;
             appearance: none;
+            transition: $transition-base;
+
+            &:focus {
+                @include focus-input();
+            }
         }
     }
 
@@ -44,6 +49,8 @@ $select__field-list-border-radius--single: 20px !default;
     }
 
     &__field-input {
+        transition: $transition-base;
+
         &:focus {
             outline: none;
         }
@@ -61,6 +68,13 @@ $select__field-list-border-radius--single: 20px !default;
                 border-top-right-radius: $select__field-list-border-radius--single;
                 border-bottom: 0;
             }
+        }
+    }
+
+    &.is-focused {
+        .select__field-list {
+            transition: $transition-base;
+            @include focus-input();
         }
     }
 

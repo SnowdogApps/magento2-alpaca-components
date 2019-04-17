@@ -1,3 +1,8 @@
 module.exports = {
-  name: 'grid-view'
+  name: 'grid-view',
+  context: {
+    gridItem: {
+      tag: 'li'
+    }
+  }
 }

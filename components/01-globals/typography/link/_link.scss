@@ -18,16 +18,18 @@ $link__color-hover--invert: $blue !default;
     line-height: $link__line-height;
     text-decoration: $link__text-decoration;
 
-    &:hover,
-    &:focus {
+    &:hover {
         color: $link__color-hover;
+    }
+
+    &:focus {
+        @include focus();
     }
 
     &--invert {
         color: $link__color--invert;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $link__color-hover--invert;
         }
     }
@@ -35,8 +37,7 @@ $link__color-hover--invert: $blue !default;
     &--secondary {
         color: $gray-lighter;
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $color-primary;
         }
     }
@@ -44,6 +45,14 @@ $link__color-hover--invert: $blue !default;
     // visible only for screen readers and when focused
     &--visually-hidden {
         @include visually-hidden($usePseudo: true);
+    }
+
+    p &,
+    cite & {
+        background-clip: content-box;
+        &:focus:not(.banner) {
+            @include focus-inline();
+        }
     }
 }
 

@@ -1,27 +1,18 @@
-$divider__color--left : $color-primary !default;
-$divider__color--right: $gray-lighter !default;
-$divider__size        : $spacer !default;
+$divider__height                  : 8px !default;
+$divider__height--before          : 100% !default;
+$divider__width--before           : 30% !default;
+$divider__background-color        : $gray-lighter !default;
+$divider__background-color--before: $color-primary !default;
 
 .divider {
-    display: none;
+    display: flex;
+    height: $divider__height;
+    background-color: $divider__background-color;
 
-    @include mq($screen-m) {
-        display: flex;
-    }
-
-    &__left,
-    &__right {
-        border-top: $divider__size solid;
-        flex: 1;
-    }
-
-    &__left {
-        border-color: $divider__color--left;
-        flex-grow: 1;
-    }
-
-    &__right {
-        border-color: $divider__color--right;
-        flex-grow: 2;
+    &::before {
+        content: '';
+        width: $divider__width--before;
+        height: $divider__height--before;
+        background-color: $divider__background-color--before;
     }
 }

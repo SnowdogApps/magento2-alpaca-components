@@ -34,9 +34,14 @@ $input__date-background-position     : center center !default;
         padding: $input__field-padding;
         border: $input__field-border;
         border-radius: $input__field-border-radius;
+        transition: $transition-base;
 
         &::placeholder {
             color: $input__placeholder-color;
+        }
+
+        &:focus {
+            @include focus-input();
         }
 
         &--textarea {

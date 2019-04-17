@@ -10,7 +10,11 @@
                 <div class="row wishlist__grid">
                     {{#each wishlistItems}}
                         <div class="wishlist__item col-sm-4">
-                            <a href="#" title="{{ product.name.text }}">
+                            <a
+                                href="#"
+                                aria-label="{{ product.name.text }}"
+                                class="wishlist__link"
+                            >
                                 {{ render '@image' product.image }}
                             </a>
                             <h2 class="wishlist__item-name">

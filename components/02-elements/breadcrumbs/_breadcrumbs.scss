@@ -66,6 +66,11 @@ $breadcrumbs__min-height             : 50px !default;
         padding: $breadcrumbs__padding;
         font-family: $breadcrumbs__font-family;
         text-decoration: none;
+        background-clip: content-box;
+
+        &:focus {
+            @include focus-inline();
+        }
     }
 
     & + .page-main {

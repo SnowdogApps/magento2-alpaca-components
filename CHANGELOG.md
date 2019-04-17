@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.3.0] - 17.04.2019
+### Added
+- Focus state for components
+
+### Changed
+- Dashboard My Orders page - a11y updates
+- Refactor divider component
+- Update preview grid
+
+## Fixed
+- Quantity icons config
+- Catalog grid item styles for images with different sizes
+
 ## [1.2.0] - 04.03.2019
 ### Added
 - Support for escape key in dropdown script
@@ -30,6 +43,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `product-view--bundle` view variant
 - `product-view--grouped` view variant
 - Support for B2B module
+- Grid based on flexboxgrid2
 
 ### Fixed
 - Review alignment

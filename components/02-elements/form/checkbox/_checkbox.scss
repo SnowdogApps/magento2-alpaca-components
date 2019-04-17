@@ -51,6 +51,10 @@ $checkbox__color--fake          : $gray-dark !default;
         &:checked ~ .checkbox__label:before {
             border: $checkbox__border--checked;
         }
+
+        &:focus ~ .checkbox__label {
+            @include focus();
+        }
     }
 
     &__label {

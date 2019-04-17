@@ -152,6 +152,7 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
     }
 
     &__link {
+        display: block;
         text-decoration: none;
     }
 

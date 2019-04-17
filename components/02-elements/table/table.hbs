@@ -18,11 +18,17 @@
                              class="{{ childTagClasses }}"
                              {{{ childTagAttributes }}}
                         >
-                            {{#if contentComponent }}
-                                {{ render (component contentComponent) contentContext }}
-                            {{else }}
-                                {{{ content }}}
-                            {{/if }}
+                            {{#if contentVisuallyHidden}}
+                                <span class="table__visually-hidden">
+                                    {{{ content }}}
+                                </span>
+                            {{else}}
+                                {{#if contentComponent}}
+                                    {{ render (component contentComponent) contentContext }}
+                                {{else}}
+                                    {{{ content }}}
+                                {{/if}}
+                            {{/if}}
                         </{{{ childTag }}}>
                     {{/each}}
                 </{{{ rowTag }}}>

@@ -1,7 +1,7 @@
 $rating__margin                  : $spacer--medium !default;
 $review__info-column-width       : 20% !default;
 $review__decsription-column-width: 80% !default;
-$review__summary-max-width\@large: 300px !default;
+$review__summary-max-width\@large: 200px !default;
 
 .review {
     width: 100%;
@@ -117,6 +117,10 @@ $review__summary-max-width\@large: 300px !default;
             margin-right: 0;
         }
 
+        &:focus {
+            @include focus-inline();
+        }
+
         &-text {
             display: none;
         }
@@ -124,11 +128,10 @@ $review__summary-max-width\@large: 300px !default;
 
     &__summary-add {
         text-decoration: underline;
-        flex-grow: 1;
         text-align: right;
 
-        @include mq($screen-m) {
-            flex-basis: 100%;
+        &:focus {
+            @include focus-inline();
         }
     }
 }
