@@ -9,7 +9,7 @@
     "eslint-config-idiomatic": "~4.0.0",
     "fs-extra": "~7.0.1",
     "globby": "~9.1.0",
-    "gulp": "~3.9.1",
+    "gulp": "~4.0.1",
     "gulp-eslint": "~5.0.0",
     "gulp-if": "~2.0.2",
     "gulp-logger": "^0.0.2",
