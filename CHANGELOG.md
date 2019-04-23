@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Missing mega-menu item classes
+
+### Changed
+- Remove lazyload from logo image
 
 ## [1.3.0] - 17.04.2019
 ### Added
