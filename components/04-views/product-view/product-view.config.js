@@ -56,17 +56,21 @@ module.exports = {
           tag: 'button',
           class: 'button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled',
           attributes: 'type="button" aria-label="Decrease the quantity"',
-          iconClass: 'button__icon quantity-update__icon',
-          iconId: 'minus',
-          iconTitle: 'Minus mark'
+          icon: {
+            iconClass: 'button__icon quantity-update__icon',
+            iconId: 'minus',
+            iconTitle: 'Minus mark'
+          }
         },
         plusQtyButton: {
           tag: 'button',
           class: 'button--icon quantity-update__button quantity-update__button--plus',
           attributes: 'type="button" aria-label="Increase the quantity"',
-          iconClass: 'button__icon quantity-update__icon',
-          iconId: 'plus',
-          iconTitle: 'Plus mark',
+          icon: {
+            iconClass: 'button__icon quantity-update__icon',
+            iconId: 'plus',
+            iconTitle: 'Plus mark',
+          }
         }
       },
     },
@@ -247,18 +251,22 @@ module.exports = {
           tag: 'button',
           text: '',
           class: 'button--icon slider__navigation-icon slider__prev',
-          iconId: 'angle-left',
-          iconTitle: 'Arrow left',
-          iconClass: 'button__icon slider__icon',
+          icon: {
+            iconId: 'angle-left',
+            iconTitle: 'Arrow left',
+            iconClass: 'button__icon slider__icon'
+          },
           attributes: 'type="button" aria-label="Previous slide"'
         },
         iconNext: {
           tag: 'button',
           text: '',
           class: 'button--icon slider__navigation-icon slider__next',
-          iconId: 'angle-right',
-          iconTitle: 'Arrow right',
-          iconClass: 'button__icon slider__icon',
+          icon: {
+            iconId: 'angle-right',
+            iconTitle: 'Arrow right',
+            iconClass: 'button__icon slider__icon'
+          },
           attributes: 'type="button" aria-label="Next slide"'
         },
         navigationClass: 'product-view__slider-navigation',
@@ -461,18 +469,22 @@ module.exports = {
           tag: 'button',
           text: '',
           class: 'button--icon slider__navigation-icon slider__prev',
-          iconId: 'angle-left',
-          iconTitle: 'Arrow left',
-          iconClass: 'button__icon slider__icon',
+          icon: {
+            iconId: 'angle-left',
+            iconTitle: 'Arrow left',
+            iconClass: 'button__icon slider__icon'
+          },
           attributes: 'type="button" aria-label="Previous slide"'
         },
         iconNext: {
           tag: 'button',
           text: '',
           class: 'button--icon slider__navigation-icon slider__next',
-          iconId: 'angle-right',
-          iconTitle: 'Arrow right',
-          iconClass: 'button__icon slider__icon',
+          icon: {
+            iconId: 'angle-right',
+            iconTitle: 'Arrow right',
+            iconClass: 'button__icon slider__icon'
+          },
           attributes: 'type="button" aria-label="Next slide"'
         },
         navigationClass: 'product-view__slider-navigation',

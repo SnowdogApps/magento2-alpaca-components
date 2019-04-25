@@ -70,17 +70,21 @@ module.exports = {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'edit',
-          iconTitle: 'Edit pencil',
-          iconClass: 'button__icon'
+          icon: {
+            iconId: 'edit',
+            iconTitle: 'Edit pencil',
+            iconClass: 'button__icon'
+          }
         },
         buttonRemove: {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'remove',
-          iconTitle: 'Trash bin',
-          iconClass: 'button__icon'
+          icon: {
+            iconId: 'remove',
+            iconTitle: 'Trash bin',
+            iconClass: 'button__icon'
+          }
         }
       },
       {
@@ -122,17 +126,21 @@ module.exports = {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'edit',
-          iconTitle: 'Edit pencil',
-          iconClass: 'button__icon'
+          icon: {
+            iconId: 'edit',
+            iconTitle: 'Edit pencil',
+            iconClass: 'button__icon'
+          }
         },
         buttonRemove: {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'remove',
-          iconTitle: 'Trash bin',
-          iconClass: 'button__icon'
+          icon: {
+            iconId: 'remove',
+            iconTitle: 'Trash bin',
+            iconClass: 'button__icon'
+          }
         }
       }
     ],

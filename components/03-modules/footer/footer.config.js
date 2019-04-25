@@ -4,9 +4,11 @@ module.exports = {
     scrollToTop: {
       tag: 'button',
       class: 'footer__scroll-top',
-      iconId: 'arrow-up',
-      iconTitle: 'Arrow up',
-      iconClass: 'footer__icon',
+      icon: {
+        iconId: 'arrow-up',
+        iconTitle: 'Arrow up',
+        iconClass: 'footer__icon'
+      },
       attributes: 'type="button" aria-label="Scroll to top"'
     },
     bottomBar: {

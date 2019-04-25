@@ -80,18 +80,22 @@ module.exports = {
       attributes: 'href="#" aria-label="edit product in your shopping cart"',
       text: '',
       class: 'button--icon minicart-product__button',
-      iconClass: 'button__icon minicart-product__button-icon',
-      iconId: 'edit',
-      iconTitle: 'Edit pencil'
+      icon: {
+        iconClass: 'button__icon minicart-product__button-icon',
+        iconId: 'edit',
+        iconTitle: 'Edit pencil'
+      }
     },
     removeIcon: {
       tag: 'a',
       attributes: 'href="#" aria-label="remove this product from your shopping cart"',
       text: '',
       class: 'button--icon minicart-product__button',
-      iconClass: 'button__icon minicart-product__button-icon',
-      iconId: 'remove',
-      iconTitle: 'Trash bin'
+      icon: {
+        iconClass: 'button__icon minicart-product__button-icon',
+        iconId: 'remove',
+        iconTitle: 'Trash bin'
+      }
     },
     configurable: true
   }

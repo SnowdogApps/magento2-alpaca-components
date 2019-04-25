@@ -60,9 +60,11 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon search-form__button',
-      iconId: 'search',
-      iconTitle: 'Search',
-      iconClass: 'button__icon',
+      icon: {
+        iconId: 'search',
+        iconTitle: 'Search',
+        iconClass: 'button__icon'
+      },
       attributes: 'type="button" aria-label="Search"',
     },
     minicartTrigger: {
