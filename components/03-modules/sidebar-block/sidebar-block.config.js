@@ -21,9 +21,11 @@ module.exports = {
           attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
           text: '',
           class: 'sidebar-block__remove',
-          iconClass: 'icon sidebar-block__remove-icon',
-          iconId: 'close',
-          iconTitle: 'Close'
+          icon: {
+            iconClass: 'icon sidebar-block__remove-icon',
+            iconId: 'close',
+            iconTitle: 'Close'
+          }
         }
       },
       {
@@ -37,9 +39,11 @@ module.exports = {
           attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
           text: '',
           class: 'sidebar-block__remove',
-          iconClass: 'icon sidebar-block__remove-icon',
-          iconId: 'close',
-          iconTitle: 'Close'
+          icon: {
+            iconClass: 'icon sidebar-block__remove-icon',
+            iconId: 'close',
+            iconTitle: 'Close'
+          }
         }
       },
       {
@@ -53,9 +57,11 @@ module.exports = {
           attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
           text: '',
           class: 'sidebar-block__remove',
-          iconClass: 'icon sidebar-block__remove-icon',
-          iconId: 'close',
-          iconTitle: 'Close'
+          icon: {
+            iconClass: 'icon sidebar-block__remove-icon',
+            iconId: 'close',
+            iconTitle: 'Close'
+          }
         }
       }
     ],
