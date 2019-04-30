@@ -14,8 +14,8 @@ module.exports = {
         text: '',
         class: 'button--icon',
         icon: {
-          iconId: 'arrow-left',
-          iconTitle: 'Arrow left',
+          id: 'arrow-left',
+          title: 'Arrow left',
           class: 'button__icon',
         },
         attributes: 'type="button" aria-label="click to do something"'

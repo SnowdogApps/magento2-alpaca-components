@@ -25,18 +25,22 @@ module.exports = {
       attributes: 'href="#" aria-label="edit product in your shopping cart"',
       text: '',
       class: 'button--icon cart-list-item__actions-item',
-      iconClass: 'button__icon',
-      iconId: 'edit',
-      iconTitle: 'Edit pencil'
+      icon: {
+        id: 'edit',
+        title: 'Edit pencil',
+        class: 'button__icon'
+      }
     },
     removeIcon: {
       tag: 'button',
       attributes: 'href="#" aria-label="remove this product from your shopping cart"',
       text: '',
       class: 'button--icon cart-list-item__actions-item',
-      iconClass: 'button__icon',
-      iconId: 'remove',
-      iconTitle: 'Trash bin'
+      icon: {
+        id: 'remove',
+        title: 'Trash bin',
+        class: 'button__icon'
+      }
     },
     attributes: {
       class: 'cart-list-item__attributes',

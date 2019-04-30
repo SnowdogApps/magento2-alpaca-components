@@ -2,9 +2,9 @@ module.exports = {
   context: {
     script: true,
     icon: {
-      class: 'tab__icon',
-      iconId: 'angle-down',
-      iconTitle: 'Arrow Down'
+      id: 'angle-down',
+      title: 'Arrow Down',
+      class: 'tab__icon'
     },
     tabs: [
       {
