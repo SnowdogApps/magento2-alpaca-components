@@ -11,9 +11,9 @@ module.exports = {
       class: 'button--icon quantity-update__button quantity-update__button--minus quantity-update__button--disabled',
       attributes: 'type="button" aria-label="Decrease the quantity"',
       icon: {
-        class: 'button__icon quantity-update__icon',
-        iconId: 'minus',
-        iconTitle: 'Minus mark'
+        id: 'minus',
+        title: 'Minus mark',
+        class: 'button__icon quantity-update__icon'
       }
     },
     plusQtyButton: {
@@ -21,9 +21,9 @@ module.exports = {
       class: 'button--icon quantity-update__button quantity-update__button--plus',
       attributes: 'type="button" aria-label="Increase the quantity"',
       icon: {
-        class: 'button__icon quantity-update__icon',
-        iconId: 'plus',
-        iconTitle: 'Plus mark'
+        id: 'plus',
+        title: 'Plus mark',
+        class: 'button__icon quantity-update__icon'
       }
     },
     script: true

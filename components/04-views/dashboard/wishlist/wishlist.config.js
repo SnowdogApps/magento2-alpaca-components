@@ -41,16 +41,20 @@ module.exports = {
           tag: 'a',
           attributes: 'href="#" aria-label="Edit product parameters"',
           class: 'button--icon',
-          iconClass: 'button__icon',
-          iconId: 'edit'
+          icon: {
+            id: 'edit',
+            title: 'Edit',
+            class: 'button__icon'
+          }
         },
         removeIcon: {
           tag: 'button',
           attributes: 'type="button" aria-label="Remove product from wishlist"',
           class: 'button--icon wishlist__remove',
           icon: {
-            iconClass: 'button__icon ',
-            iconId: 'remove'
+            id: 'remove',
+            title: 'Remove',
+            class: 'button__icon '
           }
         },
         addToCart: {
@@ -99,16 +103,20 @@ module.exports = {
           tag: 'a',
           attributes: 'href="#" aria-label="Edit product parameters"',
           class: 'button--icon',
-          iconClass: 'button__icon',
-          iconId: 'edit'
+          icon: {
+            id: 'edit',
+            title: 'Edit',
+            class: 'button__icon'
+          }
         },
         removeIcon: {
           tag: 'button',
           attributes: 'href="#" aria-label="Remove product from wishlist"',
           class: 'button--icon wishlist__remove',
           icon: {
-            iconClass: 'button__icon',
-            iconId: 'remove'
+            id: 'remove',
+            title: 'Remove',
+            class: 'button__icon'
           }
         },
         addToCart: {

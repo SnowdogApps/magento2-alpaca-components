@@ -38,9 +38,9 @@ module.exports = {
       text: '<span class="catalog-grid-item__cart-text">Add to Cart</span>',
       class: 'button button--secondary catalog-grid-item__primary-action',
       icon: {
-        iconId: 'shopping-cart',
-        iconTitle: 'Shopping cart',
-        iconClass: 'icon catalog-grid-item__cart-icon'
+        id: 'shopping-cart',
+        title: 'Shopping cart',
+        class: 'icon catalog-grid-item__cart-icon'
       }
     },
     secondaryActions: {
@@ -48,9 +48,9 @@ module.exports = {
         tag: 'button',
         class: 'button--icon',
         icon: {
-          iconId: 'heart',
-          iconTitle: 'Heart',
-          iconClass: 'button__icon'
+          id: 'heart',
+          title: 'Heart',
+          class: 'button__icon'
         },
         attributes: 'type="button" aria-label="Add to Wish List"',
       },
@@ -58,9 +58,9 @@ module.exports = {
         tag: 'button',
         class: 'button--icon',
         icon: {
-          iconId: 'compare',
-          iconTitle: 'Compare',
-          iconClass: 'button__icon'
+          id: 'compare',
+          title: 'Compare',
+          class: 'button__icon'
         },
         attributes: 'type="button" aria-label="Add to compare"',
       }

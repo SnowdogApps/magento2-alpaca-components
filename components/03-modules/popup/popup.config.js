@@ -14,9 +14,9 @@ module.exports = {
       text: '',
       class: 'button--icon popup__close-button',
       icon: {
-        iconId: 'close',
-        iconTitle: 'Close',
-        iconClass: 'button__icon popup__close-button-icon'
+        id: 'close',
+        title: 'Close',
+        class: 'button__icon popup__close-button-icon'
       },
       attributes: 'type="button" aria-label="close popup button, click to close the popup"'
     },

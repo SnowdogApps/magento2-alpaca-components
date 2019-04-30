@@ -9,9 +9,9 @@ module.exports = {
       text: '',
       class: 'button--icon marketing-bar__close',
       icon: {
-        iconId: 'close',
-        iconTitle: 'Close',
-        iconClass: 'marketing-bar__close-icon'
+        id: 'close',
+        title: 'Close',
+        class: 'marketing-bar__close-icon'
       },
       attributes: 'type="button" aria-label="Close marketing bar"',
     },

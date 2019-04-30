@@ -39,9 +39,9 @@ module.exports = {
       text: '',
       class: 'button--icon',
       icon: {
-        iconId: 'heart',
-        iconTitle: 'Heart',
-        iconClass: 'button__icon'
+        id: 'heart',
+        title: 'Heart',
+        class: 'button__icon'
       },
       attributes: 'type="button" aria-label="Add to wishlist"'
     },
@@ -50,9 +50,9 @@ module.exports = {
       text: '',
       class: 'button--icon',
       icon: {
-        iconId: 'compare',
-        iconTitle: 'Compare',
-        iconClass: 'button__icon'
+        id: 'compare',
+        title: 'Compare',
+        class: 'button__icon'
       },
       attributes: 'type="button" aria-label="Add to compare"'
     }

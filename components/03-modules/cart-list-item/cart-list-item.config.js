@@ -26,9 +26,9 @@ module.exports = {
       text: '',
       class: 'button--icon cart-list-item__actions-item',
       icon: {
-        iconClass: 'button__icon',
-        iconId: 'edit',
-        iconTitle: 'Edit pencil'
+        id: 'edit',
+        title: 'Edit pencil',
+        class: 'button__icon'
       }
     },
     removeIcon: {
@@ -37,9 +37,9 @@ module.exports = {
       text: '',
       class: 'button--icon cart-list-item__actions-item',
       icon: {
-        iconClass: 'button__icon',
-        iconId: 'remove',
-        iconTitle: 'Trash bin'
+        id: 'remove',
+        title: 'Trash bin',
+        class: 'button__icon'
       }
     },
     attributes: {
