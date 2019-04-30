@@ -39,9 +39,9 @@ module.exports = {
           title: 'See Details',
           id: 'see-details',
           collapse: {
-            class: 'dropdown-list__icon',
-            iconId: 'angle-down',
-            iconTitle: 'Arrow down'
+            id: 'angle-down',
+            title: 'Arrow down',
+            class: 'dropdown-list__icon'
           },
           contentElement: 'list--description',
           contentContext: {
@@ -80,18 +80,22 @@ module.exports = {
       attributes: 'href="#" aria-label="edit product in your shopping cart"',
       text: '',
       class: 'button--icon minicart-product__button',
-      iconClass: 'button__icon minicart-product__button-icon',
-      iconId: 'edit',
-      iconTitle: 'Edit pencil'
+      icon: {
+        id: 'edit',
+        title: 'Edit pencil',
+        class: 'button__icon minicart-product__button-icon'
+      }
     },
     removeIcon: {
       tag: 'a',
       attributes: 'href="#" aria-label="remove this product from your shopping cart"',
       text: '',
       class: 'button--icon minicart-product__button',
-      iconClass: 'button__icon minicart-product__button-icon',
-      iconId: 'remove',
-      iconTitle: 'Trash bin'
+      icon: {
+        id: 'remove',
+        title: 'Trash bin',
+        class: 'button__icon minicart-product__button-icon'
+      }
     },
     configurable: true
   }

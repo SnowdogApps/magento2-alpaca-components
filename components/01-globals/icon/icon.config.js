@@ -1,6 +1,6 @@
 module.exports = {
   context: {
-    iconId: 'angle-down',
-    iconTitle: 'Angle down icon'
+    id: 'angle-down',
+    title: 'Angle down icon'
   }
 }

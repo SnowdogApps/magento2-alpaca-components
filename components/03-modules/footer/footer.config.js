@@ -4,9 +4,11 @@ module.exports = {
     scrollToTop: {
       tag: 'button',
       class: 'footer__scroll-top',
-      iconId: 'arrow-up',
-      iconTitle: 'Arrow up',
-      iconClass: 'footer__icon',
+      icon: {
+        id: 'arrow-up',
+        title: 'Arrow up',
+        class: 'footer__icon'
+      },
       attributes: 'type="button" aria-label="Scroll to top"'
     },
     bottomBar: {
@@ -22,9 +24,9 @@ module.exports = {
           title: 'Help',
           id: 'dropdown-help',
           collapse: {
-            class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down',
-            iconTitle: 'Arrow down'
+            id: 'angle-down',
+            title: 'Arrow down',
+            class: 'dropdown-list__icon dropdown-list__icon--inner'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -71,9 +73,9 @@ module.exports = {
           title: 'Information',
           id: 'dropdown-info',
           collapse: {
-            class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down',
-            iconTitle: 'Arrow down'
+            id: 'angle-down',
+            title: 'Arrow down',
+            class: 'dropdown-list__icon dropdown-list__icon--inner'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -114,9 +116,9 @@ module.exports = {
           title: 'Why is worth it',
           id: 'dropdown-worth',
           collapse: {
-            class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down',
-            iconTitle: 'Arrow down'
+            id: 'angle-down',
+            title: 'Arrow down',
+            class: 'dropdown-list__icon dropdown-list__icon--inner'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -157,9 +159,9 @@ module.exports = {
           title: 'Alpaca.pl',
           id: 'dropdown-alpaca',
           collapse: {
-            class: 'dropdown-list__icon dropdown-list__icon--inner',
-            iconId: 'angle-down',
-            iconTitle: 'Arrow down'
+            id: 'angle-down',
+            title: 'Arrow down',
+            class: 'dropdown-list__icon dropdown-list__icon--inner'
           },
           contentElement: 'list--link',
           contentContext: {
@@ -211,32 +213,32 @@ module.exports = {
       elements: [
         {
           icon: {
-            iconId: 'youtube',
-            iconTitle: 'Youtube logo',
+            id: 'youtube',
+            title: 'Youtube logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Go to Alpaca Youtube Channel"'
         },
         {
           icon: {
-            iconId: 'facebook',
-            iconTitle: 'Facebook logo',
+            id: 'facebook',
+            title: 'Facebook logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Go to Alpaca Facebook Page"'
         },
         {
           icon: {
-            iconId: 'instagram',
-            iconTitle: 'Instagram logo',
+            id: 'instagram',
+            title: 'Instagram logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Check Alpaca on Instagram"'
         },
         {
           icon: {
-            iconId: 'google-plus',
-            iconTitle: 'Google plus logo',
+            id: 'google-plus',
+            title: 'Google plus logo',
             class: 'footer__social-icon',
           },
           linkAttributes: 'aria-label="Find Alpaca on Google Plus"'

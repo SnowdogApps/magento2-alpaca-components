@@ -21,9 +21,11 @@ module.exports = {
           attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
           text: '',
           class: 'sidebar-block__remove',
-          iconClass: 'icon sidebar-block__remove-icon',
-          iconId: 'close',
-          iconTitle: 'Close'
+          icon: {
+            id: 'close',
+            title: 'Close',
+            class: 'icon sidebar-block__remove-icon'
+          }
         }
       },
       {
@@ -37,9 +39,11 @@ module.exports = {
           attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
           text: '',
           class: 'sidebar-block__remove',
-          iconClass: 'icon sidebar-block__remove-icon',
-          iconId: 'close',
-          iconTitle: 'Close'
+          icon: {
+            id: 'close',
+            title: 'Close',
+            class: 'icon sidebar-block__remove-icon'
+          }
         }
       },
       {
@@ -53,9 +57,11 @@ module.exports = {
           attributes: 'aria-label="Remove product from compare" title="Remove product from compare"',
           text: '',
           class: 'sidebar-block__remove',
-          iconClass: 'icon sidebar-block__remove-icon',
-          iconId: 'close',
-          iconTitle: 'Close'
+          icon: {
+            id: 'close',
+            title: 'Close',
+            class: 'icon sidebar-block__remove-icon'
+          }
         }
       }
     ],
@@ -88,7 +94,8 @@ module.exports = {
             name: 'Chaz Kangeroo Hoodie',
             iconLabel: 'Remove product from compare',
             icon: {
-              iconId: 'close',
+              id: 'close',
+              title: 'Close',
               class: 'sidebar-block__remove-icon'
             },
             addToCart: {
@@ -108,7 +115,8 @@ module.exports = {
             name: 'Bruno Compete Hoodie',
             iconLabel: 'Remove product from compare',
             icon: {
-              iconId: 'close',
+              id: 'close',
+              title: 'Close',
               class: 'sidebar-block__remove-icon'
             },
             addToCart: {
@@ -128,7 +136,8 @@ module.exports = {
             name: 'Hero Hoodie',
             iconLabel: 'Remove product from compare',
             icon: {
-              iconId: 'close',
+              id: 'close',
+              title: 'Close',
               class: 'sidebar-block__remove-icon'
             },
             addToCart: {
