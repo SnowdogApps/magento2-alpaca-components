@@ -20,6 +20,7 @@ $catalog-grid-item__link-outline--focus           : none !default;
 $catalog-grid-item__image-margin                  : 0 auto !default;
 $catalog-grid-item__image-width                   : auto !default;
 $catalog-grid-item__image-width--lazyload         : 100% !default;
+$catalog-grid-item__image-height--lazyload        : 300px !default;
 $catalog-grid-item__image-height                  : auto !default;
 
 $catalog-grid-item__loader-margin-top             : 30% !default;
@@ -159,6 +160,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         .lazyload,
         .lazyloading {
             width: $catalog-grid-item__image-width--lazyload;
+            height: $catalog-grid-item__image-height--lazyload;
         }
 
         .loader__circle {
