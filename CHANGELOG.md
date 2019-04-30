@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Missing icons
+- Lazyload in catalog
 
 ## [1.3.0] - 17.04.2019
 ### Added
