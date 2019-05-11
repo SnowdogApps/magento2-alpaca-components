@@ -11,9 +11,11 @@ module.exports = {
     close: {
       tag: 'button',
       class: 'button--icon quicksearch__close-button',
-      iconId: 'close',
-      iconClass: 'button__icon quicksearch__close-icon',
-      iconTitle: 'Close',
+      icon: {
+        id: 'close',
+        title: 'Close',
+        iconClass: 'button__icon quicksearch__close-icon'
+      },
       attributes: 'type="button" aria-label="Close quicksearch"',
     },
     product: [

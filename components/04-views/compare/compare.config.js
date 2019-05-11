@@ -21,25 +21,31 @@ module.exports = {
           tag: 'button',
           text: '<span class="compare__cart-text">Add to Cart</span>',
           class: 'button--secondary compare__cart',
-          iconId: 'shopping-cart',
-          iconTitle: 'Shopping Cart',
-          iconClass: 'icon compare__cart-icon',
+          icon: {
+            id: 'shopping-cart',
+            title: 'Shopping Cart',
+            class: 'button__icon compare__cart-icon'
+          },
           attributes: 'type="submit" aria-label="Add to Cart" title="Add to Cart"'
         },
         wishlist: {
           tag: 'button',
           class: 'button--icon compare__wishlist',
-          iconId: 'heart',
-          iconTitle: 'Heart',
-          iconClass: 'button__icon compare__wishlist-icon',
+          icon: {
+            id: 'heart',
+            title: 'Heart',
+            class: 'button__icon compare__wishlist-icon'
+          },
           attributes: 'type="button" aria-label="Add to Wish List" title="Add to Wish List"'
         },
         remove: {
           tag: 'button',
           class: 'button--icon compare__remove',
-          iconId: 'remove',
-          iconTitle: 'Trash bin',
-          iconClass: 'button__icon compare__remove-icon',
+          icon: {
+            id: 'remove',
+            title: 'Trash bin',
+            class: 'button__icon compare__remove-icon'
+          },
           attributes: 'type="button" aria-label="Remove from Compare" title="Remove from Compare"'
         }
       },
@@ -59,25 +65,31 @@ module.exports = {
           tag: 'button',
           text: '<span class="compare__cart-text">Add to Cart</span>',
           class: 'button--secondary compare__cart',
-          iconId: 'shopping-cart',
-          iconTitle: 'Shopping cart',
-          iconClass: 'icon compare__cart-icon',
+          icon: {
+            id: 'shopping-cart',
+            title: 'Shopping cart',
+            class: 'icon compare__cart-icon',
+          },
           attributes: 'type="submit" aria-label="Add to Cart" title="Add to Cart"'
         },
         wishlist: {
           tag: 'button',
           class: 'button--icon compare__wishlist',
-          iconId: 'heart',
-          iconTitle: 'Heart',
-          iconClass: 'button__icon compare__wishlist-icon',
+          icon: {
+            id: 'heart',
+            title: 'Heart',
+            class: 'button__icon compare__wishlist-icon'
+          },
           attributes: 'type="button" aria-label="Add to Wish List" title="Add to Wish List"'
         },
         remove: {
           tag: 'button',
           class: 'button--icon compare__remove',
-          iconId: 'remove',
-          iconTitle: 'Trash bin',
-          iconClass: 'button__icon compare__remove-icon',
+          icon: {
+            id: 'remove',
+            title: 'Trash bin',
+            class: 'button__icon compare__remove-icon'
+          },
           attributes: 'type="button" aria-label="Remove from Compare" title="Remove from Compare"'
         }
       }

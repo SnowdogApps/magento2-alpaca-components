@@ -8,9 +8,9 @@ module.exports = {
     discount: {
       title: 'Apply Discount Code',
       icon: {
-        class: 'discount__title-icon',
-        iconId: 'arrow-down',
-        iconTitle: 'Arrow down'
+        id: 'arrow-down',
+        title: 'Arrow down',
+        class: 'discount__title-icon'
       },
       button: {
         tag: 'button',
@@ -30,7 +30,7 @@ module.exports = {
         }
       },
     },
-    productlist: [
+    productList: [
       {
         name: 'Product name whatever',
         image: {
@@ -70,17 +70,21 @@ module.exports = {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'edit',
-          iconTitle: 'Edit pencil',
-          iconClass: 'button__icon'
+          icon: {
+            id: 'edit',
+            title: 'Edit pencil',
+            class: 'button__icon'
+          }
         },
         buttonRemove: {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'remove',
-          iconTitle: 'Trash bin',
-          iconClass: 'button__icon'
+          icon: {
+            id: 'remove',
+            title: 'Trash bin',
+            class: 'button__icon'
+          }
         }
       },
       {
@@ -122,17 +126,21 @@ module.exports = {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'edit',
-          iconTitle: 'Edit pencil',
-          iconClass: 'button__icon'
+          icon: {
+            id: 'edit',
+            title: 'Edit pencil',
+            class: 'button__icon'
+          }
         },
         buttonRemove: {
           tag: 'a',
           text: '',
           class: 'button--icon products-list-item__actions-button',
-          iconId: 'remove',
-          iconTitle: 'Trash bin',
-          iconClass: 'button__icon'
+          icon: {
+            id: 'remove',
+            title: 'Trash bin',
+            class: 'button__icon'
+          }
         }
       }
     ],

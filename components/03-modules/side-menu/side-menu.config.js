@@ -2,13 +2,13 @@ module.exports = {
   title: 'Header module',
   context: {
     sideMenuIconOpen: {
-      iconId: 'mobile-menu',
-      iconTitle: 'Mobile menu',
+      id: 'mobile-menu',
+      title: 'Mobile menu',
       class: 'side-menu__trigger-icon'
     },
     sideMenuIconClose: {
-      iconId: 'close',
-      iconTitle: 'Close',
+      id: 'close',
+      title: 'Close',
       class: 'side-menu__trigger-icon'
     },
     dropdown: {

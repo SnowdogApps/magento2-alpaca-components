@@ -47,22 +47,22 @@ module.exports = {
         elements: [
           {
             icon: {
-              iconId: 'facebook',
-              iconTitle: 'Facebook logo'
+              id: 'facebook',
+              title: 'Facebook logo'
             },
             iconItemLink: '#'
           },
           {
             icon: {
-              iconId: 'twitter',
-              iconTitle: 'Twitter logo'
+              id: 'twitter',
+              title: 'Twitter logo'
             },
             iconItemLink: '#'
           },
           {
             icon: {
-              iconId: 'linkedin',
-              iconTitle: 'LinkedIn logo'
+              id: 'linkedin',
+              title: 'LinkedIn logo'
             },
             iconItemLink: '#'
           }
