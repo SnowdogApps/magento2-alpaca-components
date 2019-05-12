@@ -75,7 +75,7 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
         &--parent {
             &:hover,
             &:focus {
-              .mega-menu__inner-list--level1 {
+                .mega-menu__inner-list--level1 {
                     display: flex;
                 }
             }
