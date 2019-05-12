@@ -72,8 +72,26 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
     }
 
     &__item {
-        &--active {
-            .mega-menu__inner-list--level1 {
+        &--parent {
+            &:hover,
+            &:focus {
+              .mega-menu__inner-list--level1 {
+                    display: flex;
+                }
+            }
+
+            // support for keyboard focus, for different browsers
+            & > .mega-menu__inner-list--level1:focus {
+                display: flex;
+            }
+
+            &:focus-within {
+                .mega-menu__inner-list--level1 {
+                    display: flex;
+                }
+            }
+
+            & > .mega-menu__link:focus + .mega-menu__inner-list--level1 {
                 display: flex;
             }
         }
@@ -83,7 +101,7 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
         &--parent {
             padding: $mega-menu__inner-item-padding--parent;
             & > .mega-menu__inner-link {
-                display: block;
+                display: inline-block;
                 margin: $mega-menu__inner-item-maargin--parent-child;
                 padding:  $mega-menu__inner-item-padding--parent-child;
                 font-size: $mega-menu__font-size;
@@ -96,6 +114,16 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
             flex-basis: 100%;
             justify-content: flex-end;
             padding: $mega-menu__inner-item-padding--image;
+
+            .mega-menu__inner-link {
+                display: block;
+                &:focus {
+                    @include focus();
+                    background-color: transparent;
+                    color: $font-color-base;
+                }
+            }
+
             img {
                 width: auto;
             }
@@ -125,10 +153,14 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
         font-weight: $mega-menu__inner-link-font-weight;
         color: $mega-menu__inner-link-color;
         text-decoration: $mega-menu__inner-link-text-decoration;
-        &:focus,
+
         &:hover {
             text-decoration: $mega-menu__inner-link-text-decoration;
             color: $mega-menu__inner-link-color--active;
+        }
+
+        &:focus {
+            @include focus-inline();
         }
     }
 
