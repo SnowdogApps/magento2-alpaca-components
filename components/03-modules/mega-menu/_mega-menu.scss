@@ -33,6 +33,7 @@ $mega-menu__inner-link-font-weight           : $font-weight-normal !default;
 $mega-menu__inner-link-text-decoration       : none !default;
 $mega-menu__inner-link-color                 : $gray-darker !default;
 $mega-menu__inner-link-color--active         : $color-primary !default;
+$mega-menu__inner-link-color--image-focus    : $font-color-base !default;
 
 .mega-menu {
     display: none;
@@ -120,7 +121,7 @@ $mega-menu__inner-link-color--active         : $color-primary !default;
                 &:focus {
                     @include focus();
                     background-color: transparent;
-                    color: $font-color-base;
+                    color: $mega-menu__inner-link-color--image-focus;
                 }
             }
 
