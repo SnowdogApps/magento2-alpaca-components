@@ -94,7 +94,7 @@ gulp.task('watch', () => {
     fractal.components.get('path') + '/**/*.scss',
     fractal.docs.get('path') + '/styles/**/*.scss'
   ], () => {
-    runSequence('sass-lint', 'sass', 'css-lint');
+    runSequence('stylelint', 'sass');
   });
 
   gulp.watch(fractal.components.get('path') + '/**/*.js', () => {
@@ -132,7 +132,7 @@ gulp.task('sass', () => {
     .pipe(gulp.dest(fractal.web.get('static.path') + '/css'));
 });
 
-gulp.task('sass-lint', () => {
+gulp.task('stylelint', () => {
   return gulp.src(fractal.components.get('path') + '/**/*.scss')
     .pipe(
       gulpif(
@@ -157,30 +157,6 @@ gulp.task('sass-lint', () => {
       ],
       { syntax: postcssScss }
     ));
-});
-
-gulp.task('css-lint', () => {
-  return gulp.src(fractal.web.get('static.path') + '/**/*.css')
-    .pipe(
-      gulpif(
-        util.env.ci,
-        log({
-          display: 'name',
-          beforeEach: 'Processing: '
-        })
-      )
-    )
-    .pipe(
-      gulpif(!util.env.ci,
-        plumber({
-          errorHandler: notify.onError('Error: <%= error.message %>')
-        })
-      )
-    )
-    .pipe(postcss([
-      stylelint(),
-      reporter({ throwError: util.env.ci || false })
-    ]));
 });
 
 gulp.task('js-lint', () => {
