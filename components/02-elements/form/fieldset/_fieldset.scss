@@ -6,13 +6,13 @@ $fieldset__legend-font-size  : $font-size-large !default;
 $fieldset__legend-line-height: 1.2 !default;
 
 .fieldset {
-    border: $fieldset__border;
-    padding: $fieldset__padding;
     margin: $fieldset__margin;
+    padding: $fieldset__padding;
+    border: $fieldset__border;
 
     &__legend {
-        padding: 0;
         margin: $fieldset__legend-margin;
+        padding: 0;
         font-size: $fieldset__legend-font-size;
         line-height: $fieldset__legend-line-height;
     }

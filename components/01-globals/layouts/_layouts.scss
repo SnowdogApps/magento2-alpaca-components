@@ -14,8 +14,8 @@ $layout-content-width: calc(100% - #{$layout-sidebar-width}) !default;
 
     .main {
         @include mq($screen-m) {
-            order: 1;
             flex: 1 0 $layout-content-width;
+            order: 1;
             max-width: $layout-content-width;
         }
     }

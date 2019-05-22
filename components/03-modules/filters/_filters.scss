@@ -24,12 +24,12 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
 .filters {
     &__heading {
-        font-weight: $filters__heading-font-weight;
         margin: $filters__heading-margin;
+        font-weight: $filters__heading-font-weight;
 
         @include mq($screen-l) {
-            font-weight: $filters__heading-font-weight\@medium;
             margin: $filters__heading-margin\@medium;
+            font-weight: $filters__heading-font-weight\@medium;
         }
 
         &--mobile-hidden {
@@ -48,16 +48,16 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
 
         &:focus {
             height: $filters__skip-button-height;
-            padding: $filters__skip-button-padding;
             margin-bottom: $filters__skip-button-margin-bottom;
+            padding: $filters__skip-button-padding;
         }
     }
 
     &__switcher {
         display: flex;
         align-items: center;
-        height: $filters__switcher-size;
         min-width: 100%;
+        height: $filters__switcher-size;
         margin: $filters__switcher-margin;
         padding: $filters__switcher-padding;
         border: none;
@@ -65,10 +65,10 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
         border-radius: $filters__switcher-border-radius;
         background-color: $filters__switcher-background-color;
         color: $filters__switcher-color;
-        font-size: $filters__switcher-font-size;
         font-family: $filters__switcher-font-family;
-        text-decoration: none;
+        font-size: $filters__switcher-font-size;
         text-align: left;
+        text-decoration: none;
 
         &:hover,
         &:focus {
@@ -88,8 +88,8 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
         transition: $filters__switcher-transition;
 
         &--active {
-            fill: $filters__switcher-fill;
             transform: rotate(180deg);
+            fill: $filters__switcher-fill;
         }
     }
 

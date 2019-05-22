@@ -44,8 +44,8 @@ $quickorder__ui-helper-display            : none !default;
     }
 
     &__autocomplete-item {
-        cursor: $quickorder__autocomplete-item-cursor;
         line-height: $quickorder__autocomplete-item-line-height;
+        cursor: $quickorder__autocomplete-item-cursor;
 
         &:hover {
             color: $quickorder__autocomplete-item-color;
@@ -54,8 +54,8 @@ $quickorder__ui-helper-display            : none !default;
 }
 
 .ui-autocomplete {
-    background-color: $quickorder__ui-autocomplete-bg-color;
     padding: $quickorder__ui-autocomplete-padding;
+    background-color: $quickorder__ui-autocomplete-bg-color;
 }
 
 .ui-helper-hidden-accessible {

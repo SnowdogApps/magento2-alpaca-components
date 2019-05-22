@@ -9,8 +9,8 @@ $link__color--invert      : $gray-darker !default;
 $link__color-hover--invert: $blue !default;
 
 .link {
-    color: $link__color;
     transition: $link__transition;
+    color: $link__color;
     font-family: $link__font-family;
     font-weight: $link__font-weight;
     line-height: $link__line-height;

@@ -7,13 +7,13 @@ $paragraph-margin     : 0 0 $spacer--medium 0 !default;
 $paragraph-transition : none !default;
 
 .paragraph {
-    color: $paragraph-color;
-    font-family: $paragraph-font-family;
-    font-weight: $paragraph-font-weight;
-    line-height: $paragraph-line-height;
-    font-size: $paragraph-font-size;
     margin: $paragraph-margin;
     transition: $paragraph-transition;
+    color: $paragraph-color;
+    font-family: $paragraph-font-family;
+    font-size: $paragraph-font-size;
+    font-weight: $paragraph-font-weight;
+    line-height: $paragraph-line-height;
 }
 
 p {

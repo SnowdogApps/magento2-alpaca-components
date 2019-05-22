@@ -1,8 +1,8 @@
 $title-wrapper__margin        : 0 0 $spacer--medium 0 !default;
 
 .title-wrapper {
-    margin: $title-wrapper__margin;
     flex-direction: column;
+    margin: $title-wrapper__margin;
 
     @include mq($screen_m) {
         flex-direction: row;
@@ -10,8 +10,8 @@ $title-wrapper__margin        : 0 0 $spacer--medium 0 !default;
 
     &__actions {
         display: flex;
-        justify-content: center;
         flex-direction: column;
+        justify-content: center;
     }
 }
 

@@ -36,8 +36,8 @@ $login__validation-tips-color          : $red !default;
 $login__validation-tips-margin         : 0 0 $spacer !default;
 
 .login {
-    padding-top: $login__padding-top;
     margin-bottom: $login__margin-bottom;
+    padding-top: $login__padding-top;
 
     &__company-wrapper {
         margin: $login__company-column-margin;
@@ -78,23 +78,23 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
     &__actions {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
         align-items: center;
+        justify-content: flex-start;
         margin: $login__actions-margin;
     }
 
     &__button {
-        width: 100%;
         flex: 0 0 100%;
         justify-content: center;
+        width: 100%;
+        min-width: $login__button-min-width;
         margin: $login__button-margin;
         padding-right: $login__horizontal-padding;
         padding-left: $login__horizontal-padding;
-        min-width: $login__button-min-width;
 
         @include mq($screen-s) {
-            width: auto;
             flex: 0 0 auto;
+            width: auto;
         }
 
         @include mq($screen-l) {
@@ -121,7 +121,7 @@ $login__validation-tips-margin         : 0 0 $spacer !default;
     }
 
     &__validation-tips {
-        color: $login__validation-tips-color;
         margin: $login__validation-tips-margin;
+        color: $login__validation-tips-color;
     }
 }

@@ -24,16 +24,16 @@ $swatch__option-border-color--active : $color-primary !default;
 
     &__option-container {
         box-sizing: border-box;
-        border: $swatch__option-border;
         margin-right: $swatch__option-margin;
         transition: $swatch__transition;
+        border: $swatch__option-border;
         cursor: pointer;
 
         &:hover,
         &:focus,
         &.selected {
-            outline: none;
             border-color: $swatch__option-border-color--active;
+            outline: none;
 
             .swatch__option--white {
                 border: 0;
@@ -57,8 +57,8 @@ $swatch__option-border-color--active : $color-primary !default;
 
     &__option {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         min-width: $swatch__option-size;
         min-height: $swatch__option-size;
         background-color: $swatch__option-background;
@@ -66,8 +66,8 @@ $swatch__option-border-color--active : $color-primary !default;
 
         &--image {
             min-height: $swatch__option-size--image;
-            background-size: cover;
             background-position: top center;
+            background-size: cover;
         }
 
         &--white {

@@ -18,10 +18,10 @@ $select__field-list-border-radius--single: 20px !default;
             width: 100%;
             height: $select__spacing;
             padding: $select__padding;
+            transition: $transition-base;
             border: $select__border;
             border-radius: $select__border-radius;
             appearance: none;
-            transition: $transition-base;
 
             &:focus {
                 @include focus-input();
@@ -32,19 +32,19 @@ $select__field-list-border-radius--single: 20px !default;
     &__field-item {
         position: relative;
         height: $select__spacing;
-        line-height: $select__spacing;
         padding: $select__padding;
-        cursor: pointer;
         font-size: $font-size-base;
+        line-height: $select__spacing;
+        cursor: pointer;
     }
 
     &__field-list {
         &--single {
             height: $select__spacing;
-            line-height: $select__spacing;
             padding: 0;
             border: $select__border;
             border-radius: $select__border-radius;
+            line-height: $select__spacing;
         }
     }
 
@@ -62,11 +62,11 @@ $select__field-list-border-radius--single: 20px !default;
     &.is-open {
         .select__field-list {
             &--single {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
+                border-bottom: 0;
                 border-top-left-radius: $select__field-list-border-radius--single;
                 border-top-right-radius: $select__field-list-border-radius--single;
-                border-bottom: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
             }
         }
     }

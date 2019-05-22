@@ -112,8 +112,8 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
 
         &.list--horizontal {
             .list__item {
-                border-bottom: none;
                 border-right: $list__border--divider;
+                border-bottom: none;
 
                 &:last-child {
                     border-right: none;
@@ -124,8 +124,8 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
         &.list--horizontal\@medium {
             .list__item {
                 @include mq($screen-m) {
-                    border-bottom: none;
                     border-right: $list__border--divider;
+                    border-bottom: none;
                 }
 
                 &:last-child {
@@ -153,8 +153,8 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
                 left: 12px;
                 width: $spacer;
                 height: $spacer;
-                background-color: $color-primary;
                 border-radius: 4px;
+                background-color: $color-primary;
             }
         }
     }
@@ -173,9 +173,9 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
     }
 
     &__label {
-        clear: left;
-        float: left;
         padding: $list__label-padding;
+        float: left;
+        clear: left;
 
         &::after {
             content: ': ';
@@ -183,8 +183,8 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
     }
 
     &__value {
-        float: left;
         padding: $list__label-padding;
+        float: left;
     }
 
     &__content {

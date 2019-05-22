@@ -7,10 +7,10 @@ $dashboard-nav-margin : 15px !default;
     &__mobile {
         display: block;
         position: relative;
-        border-width: 1px 0;
-        border-color: $gray-dark;
-        border-style: solid;
         padding: $dashboard-nav-padding 0;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: $gray-dark;
         cursor: pointer;
 
         @include mq($screen-m) {
@@ -20,11 +20,11 @@ $dashboard-nav-margin : 15px !default;
         &::after {
             content: '\25bc';
             position: absolute;
+            top: 0;
+            right: 15px;
+            bottom: 0;
             width: 15px;
             height: 15px;
-            right: 15px;
-            top: 0;
-            bottom: 0;
             margin: auto;
         }
 
@@ -37,9 +37,9 @@ $dashboard-nav-margin : 15px !default;
 
     &__content {
         display: none;
-        background-color: $gray-lighter;
-        padding: $dashboard-nav-padding;
         margin-bottom: $dashboard-nav-margin;
+        padding: $dashboard-nav-padding;
+        background-color: $gray-lighter;
 
         &--visible {
             display: block;
@@ -78,8 +78,8 @@ $dashboard-nav-margin : 15px !default;
     // This class is changing by Magento
     .current {
         position: relative;
-        padding: $dashboard-nav-padding $dashboard-nav-padding $dashboard-nav-padding ($dashboard-nav-padding * 2);
         margin-left: -$dashboard-nav-margin;
+        padding: $dashboard-nav-padding $dashboard-nav-padding $dashboard-nav-padding ($dashboard-nav-padding * 2);
         border-left: 2px solid $red;
         color: $red;
 

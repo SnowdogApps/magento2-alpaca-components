@@ -12,9 +12,9 @@ $radio__icon-transition   : $transition-base !default;
     margin-bottom: $spacer--medium;
 
     &__fieldset {
-        border: 0;
-        padding: 0;
         margin: 0;
+        padding: 0;
+        border: 0;
     }
 
     &__legend {
@@ -27,19 +27,19 @@ $radio__icon-transition   : $transition-base !default;
 
     &__field {
         position: absolute;
-        left: 0;
-        height: $radio__size;
-        width: $radio__size;
-        opacity: 0;
         z-index: -1;
+        left: 0;
+        width: $radio__size;
+        height: $radio__size;
+        opacity: 0;
 
         &:checked + .radio__label {
             color: $radio__label-color-active;
 
             .radio__icon {
                 &::before {
-                    opacity: 1;
                     transform: scale(1);
+                    opacity: 1;
                 }
             }
         }
@@ -51,40 +51,40 @@ $radio__icon-transition   : $transition-base !default;
 
     &__label {
         position: relative;
-        height: $radio__size;
         width: 100%;
-        vertical-align: top;
-        line-height: $radio__size;
-        cursor: pointer;
-        font-size: $radio__label-font-size;
+        height: $radio__size;
         color: $radio__label-color;
+        font-size: $radio__label-font-size;
+        line-height: $radio__size;
+        vertical-align: top;
+        cursor: pointer;
     }
 
     &__icon {
-        position: relative;
         display: inline-block;
-        border: $radio__icon-border;
-        border-radius: $radio__size;
+        position: relative;
         width: $radio__size;
         height: $radio__size;
         margin-right: $spacer;
+        border: $radio__icon-border;
+        border-radius: $radio__size;
         vertical-align: top;
 
         &::before {
+            content: '';
             position: absolute;
             top: 0;
+            right: 0;
             bottom: 0;
             left: 0;
-            right: 0;
-            content: '';
             width: $radio__dot-size;
             height: $radio__dot-size;
-            border-radius: $radio__dot-size;
             margin: auto;
-            opacity: 0;
             transform: scale(0);
-            background-color: $radio__icon-background;
             transition: $radio__icon-transition;
+            border-radius: $radio__dot-size;
+            opacity: 0;
+            background-color: $radio__icon-background;
         }
     }
 }

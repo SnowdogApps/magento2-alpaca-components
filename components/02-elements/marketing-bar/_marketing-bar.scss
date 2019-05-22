@@ -13,8 +13,8 @@ $marketing-bar__button-icon-size    : 18px !default;
 $marketing-bar__button-icon-padding : 2px !default;
 
 .marketing-bar {
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     padding: $marketing-bar__padding;
@@ -35,9 +35,9 @@ $marketing-bar__button-icon-padding : 2px !default;
 
     &__text {
         padding: $marketing-bar__text-padding;
+        color: $marketing-bar__text-font-color;
         font-size: $marketing-bar__text-font-size;
         font-weight: $marketing-bar__text-font-weight;
-        color: $marketing-bar__text-font-color;
 
         @include mq($screen-m) {
             padding: $marketing-bar__text-padding--medium;
@@ -47,10 +47,10 @@ $marketing-bar__button-icon-padding : 2px !default;
     &__close {
         position: absolute;
         top: 0;
-        bottom: 0;
         right: 0;
-        height: $marketing-bar__button-size;
+        bottom: 0;
         min-width: $marketing-bar__button-size;
+        height: $marketing-bar__button-size;
         margin: auto;
         border: none;
         background-color: transparent;

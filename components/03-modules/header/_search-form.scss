@@ -19,13 +19,13 @@ $search-form__placeholder-color : $gray !default;
 
 .search-form {
     position: relative;
+    z-index: 1;
+    align-self: $search-form__alignment;
     width: $search-form__width;
     height: $search-form__height;
-    align-self: $search-form__alignment;
     margin: $search-form__margin;
     border: $search-form__border;
     border-radius: $search-form__height;
-    z-index: 1;
 
     @include mq($screen-xl) {
         width: $search-form__width--extra-large;

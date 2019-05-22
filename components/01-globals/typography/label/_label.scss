@@ -10,12 +10,12 @@ $label-transition    : none !default;
 .label {
     display: block;
     margin: $label-margin;
-    font-size: $label-font-size;
+    transition: $label-transition;
     color: $label-color;
     font-family: $label-font-family;
+    font-size: $label-font-size;
     font-weight: $label-font-weight;
     line-height: $label-line-height;
-    transition: $label-transition;
 
     &--inline {
         margin: $label-margin--inline;

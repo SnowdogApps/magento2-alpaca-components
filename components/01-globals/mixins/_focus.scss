@@ -1,6 +1,6 @@
 @mixin focus($mode: '') {
-    outline-offset: -1px;
     z-index: 1;
+    outline-offset: -1px;
 
     @if $mode == 'dark' {
         outline: $border-focus-dark;

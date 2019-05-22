@@ -37,24 +37,24 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
 
 .mega-menu {
     display: none;
-    background: $mega-menu__background-color;
-    color: $mega-menu__font-color;
     position: relative;
     margin: $mega-menu__margin;
     border-bottom: $mega-menu__border-bottom;
+    background: $mega-menu__background-color;
+    color: $mega-menu__font-color;
 
     @include mq($screen-xl) {
         display: block;
     }
 
     &__list {
-        position: relative;
         display: flex;
+        position: relative;
         flex-wrap: nowrap;
         justify-content: $mega-menu__list-justify-content;
         padding: $mega-menu__list-padding;
-        list-style: none;
         background-color: $mega-menu__list-background-color;
+        list-style: none;
     }
 
     &__inner-list {
@@ -65,9 +65,9 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
         &--level1 {
             display: none;
             position: absolute;
+            z-index: 4;
             top: 100%;
             left: 0;
-            z-index: 4;
             width: 100%;
             border-top: $mega-menu__inner-list-border--level1;
             box-shadow: $mega-menu__inner-list-box-shadow--level1;
@@ -140,30 +140,30 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
         display: block;
         margin: $mega-menu__link-margin;
         padding: $mega-menu__link-padding;
+        color: $mega-menu__link-color;
         font-size: $mega-menu__font-size--large;
         font-weight: $mega-menu__font-weight;
-        color: $mega-menu__link-color;
         text-decoration: $mega-menu__link-text-decoration;
 
         &:focus,
         &:hover {
-            text-decoration: $mega-menu__link-text-decoration;
             color: $mega-menu__link-color--active;
+            text-decoration: $mega-menu__link-text-decoration;
         }
     }
 
     &__inner-link {
         margin: $mega-menu__inner-link-margin;
         padding: $mega-menu__inner-link-padding;
-        white-space: nowrap;
+        color: $mega-menu__inner-link-color;
         font-size: $mega-menu__font-size;
         font-weight: $mega-menu__inner-link-font-weight;
-        color: $mega-menu__inner-link-color;
         text-decoration: $mega-menu__inner-link-text-decoration;
+        white-space: nowrap;
 
         &:hover {
-            text-decoration: $mega-menu__inner-link-text-decoration;
             color: $mega-menu__inner-link-color--active;
+            text-decoration: $mega-menu__inner-link-text-decoration;
         }
 
         &:focus {

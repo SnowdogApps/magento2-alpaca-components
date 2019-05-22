@@ -14,21 +14,21 @@ $badge__background--discount : $white !default;
 .badge {
     display: inline-flex;
     padding: $badge__padding;
+    border-radius: $badge__border-radius;
+    background: $badge__background;
+    color: $badge__color;
     font-family: $badge__font-family;
     font-size: $badge__font-size;
     font-weight: $badge__font-weight;
     text-transform: $badge__text-transform;
-    color: $badge__color;
-    background: $badge__background;
-    border-radius: $badge__border-radius;
 
     &--new {
-        color: $badge__color--new;
         background: $badge__background--new;
+        color: $badge__color--new;
     }
 
     &--discount {
-        color: $badge__color--discount;
         background: $badge__background--discount;
+        color: $badge__color--discount;
     }
 }

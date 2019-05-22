@@ -4,8 +4,8 @@ $action-padding: 15px !default;
 .action {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 
     &__handler {
@@ -19,12 +19,12 @@ $action-padding: 15px !default;
     }
 
     &__button {
-        margin-right: $action-margin;
+        width: 100%;
         height: 30px;
+        margin-right: $action-margin;
+        margin-bottom: $action-margin;
         padding: 0 20px;
         font-size: 14px;
-        width: 100%;
-        margin-bottom: $action-margin;
 
         @include mq($screen-m) {
             width: auto;
@@ -37,8 +37,8 @@ $action-padding: 15px !default;
     }
 
     &__link {
-        padding: $action-padding 0;
         margin-right: 15px;
+        padding: $action-padding 0;
         background-clip: content-box;
 
         &:focus {

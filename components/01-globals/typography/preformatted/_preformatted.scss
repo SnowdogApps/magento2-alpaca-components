@@ -5,8 +5,8 @@ $preformatted__font-family: $font-family-monospace !default;
 
 .preformatted {
     padding: $preformatted__padding;
-    background: $preformatted__background;
     overflow: $preformatted__overflow;
+    background: $preformatted__background;
     font-family: $preformatted__font-family;
 }
 

@@ -33,9 +33,9 @@ $registration__password-margin                              : 0 !default;
 
     &__legend {
         position: relative;
+        width: $registration__legend-width;
         margin: $registration__legend-margin;
         padding: $registration__legend-padding;
-        width: $registration__legend-width;
         font-size: $registration__legend-font-size;
         font-weight: $registration__legend-font-weight;
     }

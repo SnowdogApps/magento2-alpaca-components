@@ -69,17 +69,17 @@ $catalog-grid-item__IE-width                      : calc(50% - #{$spacer--medium
 $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--medium} - 1px) !default;
 
 .catalog-grid-item {
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
-    border: $catalog-grid-item__border;
     padding: $catalog-grid-item__padding;
     overflow: hidden;
+    border: $catalog-grid-item__border;
 
     @include isIE() {
-        margin: $catalog-grid-item__IE-margin;
         width: $catalog-grid-item__IE-width;
+        margin: $catalog-grid-item__IE-margin;
 
         @include mq($screen-m) {
             width: $catalog-grid-item__IE-width\@medium;
@@ -117,20 +117,20 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
 
     &__badge {
         position: absolute;
+        z-index: $catalog-grid-item__badge-z-index;
         top: $catalog-grid-item__badge-top-position;
         left: $catalog-grid-item__badge-left-position;
-        z-index: $catalog-grid-item__badge-z-index;
-        border-radius: $catalog-grid-item__badge-border-radius;
         padding: $catalog-grid-item__badge-padding;
+        border-radius: $catalog-grid-item__badge-border-radius;
         font-size: $catalog-grid-item__badge-font-size;
     }
 
     &__link {
         display: flex;
-        justify-content: center;
         flex: 1 1 auto;
         align-items: center;
         align-self: stretch;
+        justify-content: center;
         width: $catalog-grid-item__link-width;
 
         &:focus {
@@ -153,9 +153,9 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         }
 
         .image {
-            margin: $catalog-grid-item__image-margin;
             width: $catalog-grid-item__image-width;
             height: $catalog-grid-item__image-height;
+            margin: $catalog-grid-item__image-margin;
         }
 
         .lazyload,
@@ -170,10 +170,10 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
     }
 
     &__name {
-        font-weight: $catalog-grid-item__name-font-weight;
-        font-size: $catalog-grid-item__font-size;
-        line-height: $catalog-grid-item__line-height;
         margin-bottom: $catalog-grid-item__name-margin-botttom;
+        font-size: $catalog-grid-item__font-size;
+        font-weight: $catalog-grid-item__name-font-weight;
+        line-height: $catalog-grid-item__line-height;
 
         @include mq($screen-xxl) {
             font-size: $catalog-grid-item__font-size\@large;
@@ -190,8 +190,8 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
 
         @include mq($screen-m) {
             overflow: $catalog-grid-item__link-name-overflow;
-            white-space: $catalog-grid-item__link-name-white-space;
             text-overflow: $catalog-grid-item__link-name-text-overflow;
+            white-space: $catalog-grid-item__link-name-white-space;
         }
     }
 
@@ -203,8 +203,8 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         margin-bottom: $catalog-grid-item__price-margin-bottom;
         padding: $catalog-grid-item__padding;
         font-size: $catalog-grid-item__font-size;
-        line-height: $catalog-grid-item__line-height;
         font-weight: $catalog-grid-item__font-weight;
+        line-height: $catalog-grid-item__line-height;
         white-space: nowrap;
 
         @include mq($screen-xxl) {
@@ -218,14 +218,14 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
 
     &__details {
         padding: $catalog-grid-item__content-padding;
-        background: $catalog-grid-item__content-bg-color;
         transition: $transition-base;
+        background: $catalog-grid-item__content-bg-color;
 
         @include mq($screen-m) {
             position: absolute;
             top: $catalog-grid-item__content-top\@large;
-            transform: $catalog-grid-item__content-translateY;
             width: $catalog-grid-item__content-width;
+            transform: $catalog-grid-item__content-translateY;
             border-top: $catalog-grid-item__border;
         }
 
@@ -289,11 +289,11 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         justify-content: center;
 
         .button {
-            height: $catalog-grid-item__action-size;
             width: $catalog-grid-item__action-size;
+            height: $catalog-grid-item__action-size;
             padding: $catalog-grid-item__action-padding;
-            background: $catalog-grid-item__action-background;
             border: $catalog-grid-item__action-border;
+            background: $catalog-grid-item__action-background;
             cursor: $catalog-grid-item__action-cursor;
 
             &:hover,

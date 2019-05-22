@@ -17,8 +17,8 @@ $slider__dot-inside-border-radius     : $spacer !default;
 $slider__dot-inside-background--active: $color-primary !default;
 
 .slider {
-    margin-bottom: $slider__margin;
     position: relative;
+    margin-bottom: $slider__margin;
 
     &__handler {
         overflow: hidden;
@@ -40,19 +40,19 @@ $slider__dot-inside-background--active: $color-primary !default;
 
     &__navigation {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         margin-top: $slider__navigation-margin;
     }
 
     &__navigation-icon {
         display: flex;
-        justify-content: center;
         align-items: center;
-        height: $slider__navigation-icon-size;
+        justify-content: center;
         width: $slider__navigation-icon-size;
-        background-color: $slider__navigation-icon-background;
+        height: $slider__navigation-icon-size;
         border: 0;
+        background-color: $slider__navigation-icon-background;
 
         &:first-child {
             margin-right: $slider__navigation-icon-margin;
@@ -76,8 +76,8 @@ $slider__dot-inside-background--active: $color-primary !default;
     &__icon {
         width: $slider__icon-size;
         height: $slider__icon-size;
-        fill: $slider__icon-fill;
         transition: $slider__transition;
+        fill: $slider__icon-fill;
         cursor: pointer;
     }
 
@@ -90,8 +90,8 @@ $slider__dot-inside-background--active: $color-primary !default;
 
     &__dot {
         display: block;
-        padding: $slider__dot-padding;
         margin-right: $slider__dot-margin;
+        padding: $slider__dot-padding;
         cursor: pointer;
 
         &--active {
@@ -110,7 +110,7 @@ $slider__dot-inside-background--active: $color-primary !default;
         display: block;
         width: $slider__dot-inside-size;
         height: $slider__dot-inside-size;
-        background-color: $slider__dot-inside-background;
         border-radius: $slider__dot-inside-border-radius;
+        background-color: $slider__dot-inside-background;
     }
 }

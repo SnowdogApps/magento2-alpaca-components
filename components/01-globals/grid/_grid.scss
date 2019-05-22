@@ -5,8 +5,8 @@ $grid__gutter-half-width  : calc(#{$grid__gutter-width} * 0.5) !default;
 $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
 
 .row {
-    box-sizing: border-box;
     display: flex;
+    box-sizing: border-box;
     flex: 0 1 auto;
     flex-direction: row;
     flex-wrap: wrap;
@@ -14,8 +14,8 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
     margin-left: $grid__gutter-compensation;
 
     &--no-margins {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -95,14 +95,14 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
     box-sizing: border-box;
     flex: 0 0 auto;
     flex-basis: 100%;
+    max-width: 100%;
     padding-right: $grid__gutter-half-width;
     padding-left: $grid__gutter-half-width;
-    max-width: 100%;
 }
 
 .col-xs {
-    flex-grow: 1;
     flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
 }
 
@@ -215,8 +215,8 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
 
 @include mq($screen-s) {
     .col-sm {
-        flex-grow: 1;
         flex-basis: 0;
+        flex-grow: 1;
         max-width: 100%;
     }
 
@@ -349,8 +349,8 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
     }
 
     .col-md {
-        flex-grow: 1;
         flex-basis: 0;
+        flex-grow: 1;
         max-width: 100%;
     }
 
@@ -483,8 +483,8 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
     }
 
     .col-lg {
-        flex-grow: 1;
         flex-basis: 0;
+        flex-grow: 1;
         max-width: 100%;
     }
 
@@ -617,8 +617,8 @@ $grid__gutter-compensation: calc(#{$grid__gutter-half-width} * -1) !default;
     }
 
     .col-xl {
-        flex-grow: 1;
         flex-basis: 0;
+        flex-grow: 1;
         max-width: 100%;
     }
 

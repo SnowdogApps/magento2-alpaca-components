@@ -6,14 +6,14 @@ $product-reviews__product-name-margin  : 0 !default;
 .product-reviews {
     &__image {
         display: block;
-        margin: $product-reviews__image-margin;
         max-width: $product-reviews__image-max-width;
+        margin: $product-reviews__image-margin;
     }
 
     &__details {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: $product-reviews__details-margin-bottom;
     }
 

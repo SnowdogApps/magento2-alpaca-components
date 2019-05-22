@@ -17,8 +17,8 @@ $checkbox__color--fake          : $gray-dark !default;
 
     &--link {
         display: block;
-        text-decoration: none;
         color: $checkbox__color--fake;
+        text-decoration: none;
 
         &:hover,
         &:focus {
@@ -82,10 +82,10 @@ $checkbox__color--fake          : $gray-dark !default;
         left: $checkbox__left;
         width: $checkbox__spacer;
         height: $checkbox__spacer;
-        fill: $checkbox__icon-fill;
-        background: $checkbox__icon-check-mark-color;
-        cursor: pointer;
-        opacity: 0;
         transition: $checkbox__icon-transition;
+        opacity: 0;
+        background: $checkbox__icon-check-mark-color;
+        fill: $checkbox__icon-fill;
+        cursor: pointer;
     }
 }

@@ -34,18 +34,18 @@ $rating__error-color            : $red !default;
 
     &__star {
         position: relative;
-        height: $rating__item-size;
         width: $rating__size;
+        height: $rating__item-size;
         margin: 0;
 
         &::before { // inactive
             content: '';
-            position: absolute;
             display: block;
-            bottom: 0;
-            left: 0;
+            position: absolute;
             top: 0;
             right: 0;
+            bottom: 0;
+            left: 0;
             width: $rating__size;
             height: $rating__item-size;
             background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M-2-2h24v24H-2z'/><path fill='#{$icon__inactive-color}' d='M20 7.24l-7.19-.62L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27 16.18 19l-1.63-7.03L20 7.24zM10 13.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L10 4.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L10 13.4z'/></svg>");
@@ -66,22 +66,22 @@ $rating__error-color            : $red !default;
     }
 
     &__indicator {
-        left: 0;
-        top: 0;
         display: block;
-        height: $rating__item-size;
+        top: 0;
+        left: 0;
         width: $rating__size;
+        height: $rating__item-size;
         overflow: hidden;
         text-indent: -10000px;
 
         &::before { // active
             content: '';
-            position: absolute;
             display: block;
-            left: 0;
-            right: 0;
+            position: absolute;
             top: 0;
+            right: 0;
             bottom: 0;
+            left: 0;
             width: auto;
             height: $rating__item-size;
             background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27z' fill='#{$icon__active-color}'/></svg>");
@@ -109,8 +109,8 @@ $rating__error-color            : $red !default;
 
         &::after { //active star with border
             content: '';
-            position: absolute;
             display: block;
+            position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
@@ -118,8 +118,8 @@ $rating__error-color            : $red !default;
             height: $rating__item-size;
             background-image: svg-uri("<svg viewBox='0 0 20 19' xmlns='http://www.w3.org/2000/svg'><path fill='none' d='M-2-2h24v24H-2z'/><path d='M10 15.27L16.18 19l-1.64-7.03L20 7.24l-7.19-.61L10 0 7.19 6.63 0 7.24l5.46 4.73L3.82 19 10 15.27z' fill='#{$icon__active-color--with-border}'/></svg>");
             background-repeat: repeat-x;
-            background-size: $rating__item-size;
             background-position: left center;
+            background-size: $rating__item-size;
 
             @include isIE() {
                 width: 100%;
@@ -136,8 +136,8 @@ $rating__error-color            : $red !default;
 
     &__error {
         display: none;
-        color: $rating__error-color;
         margin-bottom: $rating__error-margin-bottom;
+        color: $rating__error-color;
 
         &--visible {
             display: block;
@@ -150,8 +150,8 @@ $rating__error-color            : $red !default;
 
     &--rate {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: $rating__size--rate;
         margin-bottom: $rating__margin--rate;
 
@@ -160,8 +160,8 @@ $rating__error-color            : $red !default;
         }
 
         .rating__star {
-            height: $rating__item-size--rate;
             width: $rating__item-size--rate;
+            height: $rating__item-size--rate;
             border: 0;
             background-color: transparent;
             cursor: pointer;
@@ -169,9 +169,9 @@ $rating__error-color            : $red !default;
             &::before {
                 width: $rating__item-size--rate;
                 height: $rating__item-size--rate;
-                background-size: $rating__item-size--rate - 10;
-                background-position: center;
                 background-repeat: no-repeat;
+                background-position: center;
+                background-size: $rating__item-size--rate - 10;
 
                 @include isIE() {
                     background-size: $rating__item-size--rate - 10 100%;
@@ -184,14 +184,14 @@ $rating__error-color            : $red !default;
         }
 
         .radio__field {
+            bottom: 0;
             width: 1px;
             height: 1px;
-            bottom: 0;
 
             &:focus {
-                opacity: 1;
                 height: 0;
                 outline: none;
+                opacity: 1;
                 appearance: none;
 
                 &::before {
@@ -207,21 +207,21 @@ $rating__error-color            : $red !default;
         }
 
         .rating__indicator {
-            height: $rating__item-size--rate;
             width: $rating__item-size--rate;
+            height: $rating__item-size--rate;
 
             &::before {
                 height: $rating__item-size--rate;
-                background-size: $rating__item-size--rate - 10;
-                background-position: center;
                 background-repeat: no-repeat;
+                background-position: center;
+                background-size: $rating__item-size--rate - 10;
             }
 
             &::after {
                 height: $rating__item-size--rate;
-                background-size: $rating__item-size--rate - 10;
-                background-position: center;
                 background-repeat: no-repeat;
+                background-position: center;
+                background-size: $rating__item-size--rate - 10;
             }
         }
     }

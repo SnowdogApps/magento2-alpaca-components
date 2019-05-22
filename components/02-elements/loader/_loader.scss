@@ -12,10 +12,10 @@ $loader__circle-animation    : rotate 1s infinite linear !default;
 }
 
 .loader {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
-    display: none;
     width: $loader__size;
     height: $loader__size;
     background-color: inherit;
@@ -27,15 +27,15 @@ $loader__circle-animation    : rotate 1s infinite linear !default;
     &__circle {
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
         width: $loader__circle-size;
         height: $loader__circle-size;
         margin: auto;
+        animation: $loader__circle-animation;
         border: $loader__circle-border;
         border-top: $loader__circle-border-top;
         border-radius: $loader__circle-border-radius;
-        animation: $loader__circle-animation;
     }
 }

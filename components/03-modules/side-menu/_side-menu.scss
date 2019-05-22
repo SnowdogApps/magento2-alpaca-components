@@ -43,8 +43,8 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
 
     &--is-open {
         .side-menu__content {
-            opacity: 1;
             transform: $side-menu__content-transform--open;
+            opacity: 1;
         }
 
         .side-menu__overlay {
@@ -62,10 +62,10 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
     &__trigger {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        height: $side-menu__trigger-size;
+        justify-content: center;
         min-width: $side-menu__trigger-size;
+        height: $side-menu__trigger-size;
         margin: $side-menu__trigger-margin;
         padding: $side-menu__trigger-padding;
         border: $side-menu__trigger-border;
@@ -81,10 +81,10 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
     }
 
     &__trigger-text {
+        color: $side-menu__trigger-text-color;
         font-size: $side-menu__trigger-text-font-size;
         line-height: $side-menu__trigger-text-line-height;
         text-align: $side-menu__trigger-text-alignment;
-        color: $side-menu__trigger-text-color;
     }
 
     &__trigger-icon {
@@ -101,21 +101,21 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
 
     &__content {
         position: fixed;
+        z-index: 100;
         top: $side-menu__content-top;
-        bottom: $side-menu__content-bottom;
         right: $side-menu__content-right;
+        bottom: $side-menu__content-bottom;
         width: $side-menu__content-height;
-        height: $side-menu__content-height;
         max-width: $side-menu__content-max-width;
+        height: $side-menu__content-height;
         max-height: $side-menu__content-max-height;
         padding: $side-menu__content-padding;
-        z-index: 100;
         overflow-y: auto;
-        background: $side-menu__content-background-color;
-        box-shadow: $side-menu__content-box-shadow;
-        opacity: 1;
         transform: $side-menu__content-transform;
         transition: $side-menu__content-transition;
+        opacity: 1;
+        background: $side-menu__content-background-color;
+        box-shadow: $side-menu__content-box-shadow;
 
         @include mq($screen-m) {
             max-width: $side-menu__content-max-width\@medium;
@@ -124,10 +124,10 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
 
     &__overlay {
         position: fixed;
+        z-index: 5;
         top: 0;
         bottom: 0;
         left: 0;
-        z-index: 5;
         background-color: $side-menu__overlay-background-color;
 
         @include mq($screen-xl) {
@@ -136,7 +136,7 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
     }
 
     &__dropdown {
-        margin: $side-menu__dropdown-margin;
         width: $side-menu__dropdown-width;
+        margin: $side-menu__dropdown-margin;
     }
 }

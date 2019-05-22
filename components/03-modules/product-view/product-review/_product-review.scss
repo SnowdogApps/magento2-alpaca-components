@@ -5,10 +5,10 @@ $product-review__borders: 1px solid $gray-light;
 
     &__title {
         margin-bottom: $spacer--large;
-        text-transform: uppercase;
         font-size: $font-size-large;
         font-weight: $font-weight-base;
         letter-spacing: 2px;
+        text-transform: uppercase;
     }
 
     &__reviews {
@@ -19,9 +19,9 @@ $product-review__borders: 1px solid $gray-light;
     }
 
     .review--summary {
+        margin-bottom: $spacer--medium;
         padding-bottom: $spacer--large;
         border-bottom: $product-review__borders;
-        margin-bottom: $spacer--medium;
 
         .rating {
             @include mq($screen-m) {
@@ -51,8 +51,8 @@ $product-review__borders: 1px solid $gray-light;
     }
 
     .review__summary-add {
-        text-align: left;
         flex-grow: 0;
+        text-align: left;
 
         @include mq($screen-m) {
             flex-basis: auto;

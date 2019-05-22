@@ -20,19 +20,19 @@ $message__icon-fill--success : $color-primary !default;
 $message__icon-fill--error   : $red !default;
 
 .message {
-    position: relative;
     display: flex;
+    position: relative;
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    padding: $message__padding;
     margin: $message__margin-base;
-    background-color: $message__background;
+    padding: $message__padding;
+    transition: $message__transition;
     border: $message__border;
     border-radius: $message__border-radius;
+    background-color: $message__background;
     color: $message__color;
     font-size: $message__font-size;
-    transition: $message__transition;
 
     &:first-child {
         margin-top: $message__margin-top;
@@ -45,11 +45,11 @@ $message__icon-fill--error   : $red !default;
     &::after {
         content: "";
         position: absolute;
-        left: $message__icon-spacer;
         top: 0;
         bottom: 0;
-        height: $message__icon-spacer;
+        left: $message__icon-spacer;
         width: $message__icon-spacer;
+        height: $message__icon-spacer;
         margin: auto;
         background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill}" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm.667 10H6.333V9h1.334v1.333zm0-2.666H6.333v-4h1.334v4z"/></svg>');
         background-repeat: no-repeat;
@@ -57,8 +57,8 @@ $message__icon-fill--error   : $red !default;
     }
 
     &--success {
-        background-color: $message__background--success;
         border: $message__border--success;
+        background-color: $message__background--success;
         color: $message__color--success;
 
         &::after {
@@ -67,8 +67,8 @@ $message__icon-fill--error   : $red !default;
     }
 
     &--error {
-        background-color: $message__background--error;
         border: $message__border--error;
+        background-color: $message__background--error;
         color: $message__color--error;
 
         &::after {

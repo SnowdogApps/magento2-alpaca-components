@@ -49,8 +49,8 @@ $breadcrumbs__min-height             : 50px !default;
             &:not(:first-child) {
                 align-items: center;
                 padding: $breadcrumbs__padding;
-                font-family: $breadcrumbs__font-family--active;
                 color: $breadcrumbs__color--active;
+                font-family: $breadcrumbs__font-family--active;
                 text-decoration: $breadcrumbs__text-decoration--active;
             }
 
@@ -64,9 +64,9 @@ $breadcrumbs__min-height             : 50px !default;
         display: flex;
         align-items: center;
         padding: $breadcrumbs__padding;
+        background-clip: content-box;
         font-family: $breadcrumbs__font-family;
         text-decoration: none;
-        background-clip: content-box;
 
         &:focus {
             @include focus-inline();

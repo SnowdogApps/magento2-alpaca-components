@@ -16,20 +16,20 @@ $popup__margin                   : 0 !default;
 .popup {
     display: none;
     position: fixed;
+    z-index: $popup__z-index;
     right: 0;
     left: auto;
     width: $popup__width--screen-s;
-    padding: $popup__padding;
     margin: $popup__margin;
-    z-index: $popup__z-index;
-    box-shadow: $popup__box-shadow;
-    background-color: $popup__background;
+    padding: $popup__padding;
     border: $popup__border;
+    background-color: $popup__background;
+    box-shadow: $popup__box-shadow;
 
     @include mq($screen-s) {
         position: absolute;
-        width: $popup__width;
         right: - $spacer;
+        width: $popup__width;
     }
 
     &--active {
@@ -45,8 +45,8 @@ $popup__margin                   : 0 !default;
         position: absolute;
         top: -48px;
         right: -16px;
-        background-color: $popup__close-button-bg;
         border: $popup__close-button-border;
+        background-color: $popup__close-button-bg;
 
         &:hover,
         &:focus {

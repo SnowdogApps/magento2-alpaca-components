@@ -18,13 +18,13 @@ $gallery__thumb-width--large               : 80px !default;
 
 .gallery {
     display: flex;
+    flex-direction: column;
     flex-flow: nowrap;
     justify-content: flex-start;
     width: 100%;
     margin: 0;
     padding: 0;
     list-style-type: none;
-    flex-direction: column;
 
     &--vertical {
         @include mq($screen-m) {
@@ -57,15 +57,15 @@ $gallery__thumb-width--large               : 80px !default;
     }
 
     &__nav {
-        order: 2;
         display: flex;
         align-items: center;
+        order: 2;
 
         &--vertical {
             @include mq($screen-m) {
-                margin-right: $gallery__nav-vertical-margin-right\@medium;
                 flex-direction: column;
                 order: 1;
+                margin-right: $gallery__nav-vertical-margin-right\@medium;
             }
 
             @include mq($screen-l) {
@@ -75,15 +75,15 @@ $gallery__thumb-width--large               : 80px !default;
     }
 
     &__thumb {
-        overflow: hidden;
-        margin-right: $gallery__thumb-spacing;
-        border: $gallery__thumb-border;
         width: $gallery__thumb-width;
         height: $gallery__thumb-height;
+        margin-right: $gallery__thumb-spacing;
+        overflow: hidden;
+        border: $gallery__thumb-border;
 
         @include mq($screen-m) {
-            margin-bottom: $gallery__thumb-spacing;
             margin-right: 0;
+            margin-bottom: $gallery__thumb-spacing;
         }
 
         @include mq($screen-l) {
@@ -103,8 +103,8 @@ $gallery__thumb-width--large               : 80px !default;
 
     &__thumb-arr {
         display: flex !important;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: $gallery__thumb-arrow-width;
         height: $gallery__thumb-arrow-height;
         margin: 0 auto;
@@ -133,8 +133,8 @@ $gallery__thumb-width--large               : 80px !default;
 
     &__product-label {
         position: absolute;
-        left: $gallery__label-offset-left;
         top: $gallery__label-offset-top;
+        left: $gallery__label-offset-left;
     }
 
     &-placeholder {

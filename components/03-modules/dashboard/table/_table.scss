@@ -4,8 +4,8 @@ $dashboard-table-margin: $spacer--medium !default;
     overflow: hidden;
 
     &--tab {
-        padding: 10px;
         margin-bottom: $dashboard-table-margin;
+        padding: 10px;
         border: 1px solid $gray;
 
         .dashboard-table__content {
@@ -44,7 +44,7 @@ $dashboard-table-margin: $spacer--medium !default;
     }
 
     &__title {
-        margin-bottom: 0;
         margin-right: $dashboard-table-margin;
+        margin-bottom: 0;
     }
 }

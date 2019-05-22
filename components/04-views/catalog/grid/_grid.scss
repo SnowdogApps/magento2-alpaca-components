@@ -5,8 +5,8 @@ $catalog-grid__border : 1px solid $gray-light !default;
 
 .catalog-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     grid-gap: $catalog-grid__gap;
+    grid-template-columns: 1fr 1fr;
     margin: $catalog-gird__margin;
     padding: $catalog-grid__padding;
     border-bottom: $catalog-grid__border;

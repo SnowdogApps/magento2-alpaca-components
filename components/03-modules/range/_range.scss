@@ -35,8 +35,8 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
     }
 
     &__dash {
-        text-align: center;
         padding: $range__dash-padding;
+        text-align: center;
     }
 
     &__suffix {
@@ -48,8 +48,8 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
     }
 
     &__input {
-        width: auto;
         flex-grow: 1;
+        width: auto;
         margin: $range__input-margin;
     }
 
@@ -60,8 +60,8 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
 }
 
 .noUi-connect {
-    background-color: $range__track-bg-color--active;
     border-radius: $range__connect-border-radius;
+    background-color: $range__track-bg-color--active;
 }
 
 .noUi-tooltip {
@@ -69,11 +69,11 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
 }
 
 .noUi-target {
-    background-color: $range__track-bg-color;
-    box-shadow: $range__track-box-shadow;
+    height: $range__height;
     border: $range__track-border;
     border-radius: $range__track-border-radius;
-    height: $range__height;
+    background-color: $range__track-bg-color;
+    box-shadow: $range__track-box-shadow;
 }
 
 .noUi-handle {
@@ -82,13 +82,13 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
     }
 
     .noUi-horizontal & {
-        border-radius: $range__handler-border-radius;
-        background: $range__handler-bg-color;
+        top: $range__handler-offset-top;
         width: $range__handler-width;
         height: $range__handler-height;
         border: $range__handler-border;
+        border-radius: $range__handler-border-radius;
+        background: $range__handler-bg-color;
         box-shadow: $range__handler-box-shadow;
-        top: $range__handler-offset-top;
 
         &::before,
         &::after {

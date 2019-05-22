@@ -35,8 +35,8 @@ $active-filters__clear-color\@medium : $color-secondary !default;
         border: $active-filters__remove-border;
         outline: none;
         background: $active-filters__remove-background;
-        cursor: pointer;
         word-break: break-all;
+        cursor: pointer;
 
         &:hover,
         &:focus {
@@ -50,18 +50,18 @@ $active-filters__clear-color\@medium : $color-secondary !default;
 
     &__remove-icon {
         display: block;
-        padding: $active-filters__remove-icon-padding;
-        margin: $active-filters__remove-icon-margin;
         width: $active-filters__icon-size;
         height: $active-filters__icon-size;
-        fill: $active-filters__icon-fill;
+        margin: $active-filters__remove-icon-margin;
+        padding: $active-filters__remove-icon-padding;
         transition: $active-filters__icon-transition;
+        fill: $active-filters__icon-fill;
     }
 
     &__label {
         max-width: calc(100% - #{$active-filters__remove-size});
-        word-break: break-all;
         font-weight: $active-filters__label-font-weight;
+        word-break: break-all;
     }
 
     &__value {
@@ -71,30 +71,30 @@ $active-filters__clear-color\@medium : $color-secondary !default;
 
     &__clear-all {
         display: flex;
-        text-align: center;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         min-width: 100%;
         min-height: $active-filters__clear-height;
-        color: $active-filters__clear-color;
         border: $active-filters__clear-border;
         border-radius: $active-filters__clear-border-radius;
+        color: $active-filters__clear-color;
         font-size: $active-filters__clear-font-size;
         font-weight: $active-filters__clear-font-weight;
         line-height: $active-filters__clear-line-height;
+        text-align: center;
         text-decoration: none;
 
         &:hover,
         &:focus {
-            text-decoration: none;
             color: $active-filters__clear-color;
+            text-decoration: none;
         }
 
         @include mq($screen-m) {
             display: inline-flex;
-            margin: $active-filters__clear-margin;
             justify-content: flex-start;
             min-width: 0;
+            margin: $active-filters__clear-margin;
             border: none;
             text-decoration: none;
 

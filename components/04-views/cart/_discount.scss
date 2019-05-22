@@ -66,13 +66,13 @@ $discount__button-padding           : 0 21px !default;
 
     &__field {
         height: $discount__field-height;
-        padding: $discount__field-padding;
         margin: 0;
+        padding: $discount__field-padding;
         border: none;
         border-radius: $discount__field-border-radius;
+        background: $discount__field-background;
         color: $discount__field-color;
         line-height: $discount__field-height;
-        background: $discount__field-background;
 
         &::placeholder {
             color: $discount__field-color--placeholder;
@@ -83,15 +83,15 @@ $discount__button-padding           : 0 21px !default;
         position: absolute;
         top: 0;
         right: -2px;
-        height: $discount__button-height;
         width: auto;
-        border-radius: $discount__button-border-radius;
+        height: $discount__button-height;
         padding: $discount__button-padding;
+        border-radius: $discount__button-border-radius;
 
         &:hover,
         &:focus {
-            cursor: pointer;
             outline: none;
+            cursor: pointer;
         }
     }
 }

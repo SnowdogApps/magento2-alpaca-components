@@ -9,9 +9,9 @@ $price__font-weight--special: $font-weight-bold !default;
         font-weight: $price__font-weight;
 
         &--old {
-            text-decoration: line-through;
-            font-weight: $price__font-weight--old;
             margin-right: $price__spacing;
+            font-weight: $price__font-weight--old;
+            text-decoration: line-through;
         }
 
         &--special {

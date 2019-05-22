@@ -17,22 +17,22 @@ $modal__close-button-background-color: transparent !default;
 $modal__close-button-icon-color      : $color-primary !default;
 
 .modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 99;
     display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     padding: $modal__padding;
+    overflow: auto;
     background-color: $modal__background-color;
 
     &--active {
         display: flex;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     &__description {
@@ -40,16 +40,16 @@ $modal__close-button-icon-color      : $color-primary !default;
     }
 
     &__content {
-        position: relative;
         display: block;
+        position: relative;
         width: $modal__content-width;
         max-width: $modal__content-max-width;
         padding: $spacer;
-        border: $modal__content-border;
-        box-shadow: $modal__content-box-shadow;
-        background-color: $modal__content-background-color;
         animation-name: animatetop;
         animation-duration: 0.4s;
+        border: $modal__content-border;
+        background-color: $modal__content-background-color;
+        box-shadow: $modal__content-box-shadow;
 
         @include mq($screen-xl) {
             width: $modal__content-width\@extra-large;

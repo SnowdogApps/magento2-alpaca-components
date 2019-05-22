@@ -5,8 +5,8 @@ $logo__image-height\@medium    : 34px !default;
 
 .logo {
     display: flex;
-    align-items: center;
     flex: 1 $logo__max-width;
+    align-items: center;
     justify-content: center;
     max-width: $logo__max-width;
 

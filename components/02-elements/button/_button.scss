@@ -37,24 +37,24 @@ $button__width--fluid               : 100% !default;
 
 .button {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    cursor: pointer;
-    height: $button__height;
+    justify-content: center;
     min-width: $button__width;
+    height: $button__height;
     padding: $button__padding;
+    transition: $button__transition;
     border: $button__border;
     border-radius: $button__border-radius;
     background: $button__background;
+    color: $button__font-color;
     font-family: $button__font-family;
     font-size: $button__font-size;
-    color: $button__font-color;
-    transition: $button__transition;
     font-weight: $button__font-weight;
+    cursor: pointer;
 
     &:hover {
-        background: $button__background-hover;
         border-color: $button__border-hover;
+        background: $button__background-hover;
         color: $button__font-color-hover;
     }
 
@@ -67,20 +67,20 @@ $button__width--fluid               : 100% !default;
         text-decoration: none;
 
         &:hover {
-            text-decoration: none;
             color: $button__font-color-hover;
+            text-decoration: none;
         }
     }
 
     &--secondary {
         border: $button__border--secondary;
-        color: $button__font-color--secondary;
         background: $button__background--secondary;
+        color: $button__font-color--secondary;
 
         &:hover {
             border-color: $button__border-hover--secondary;
-            color: $button__font-color-hover--secondary;
             background: $button__background-hover--secondary;
+            color: $button__font-color-hover--secondary;
         }
     }
 
@@ -108,7 +108,7 @@ $button__width--fluid               : 100% !default;
     &__icon {
         width: $button__size--icon;
         height: $button__size--icon;
-        fill: $button__fill--icon;
         transition: $button__transition;
+        fill: $button__fill--icon;
     }
 }

@@ -21,16 +21,16 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
         padding: $catalog-list__products-padding;
 
         @include mq($screen-l) {
-            float: right;
             width: $catalog-list__products-width\@medium;
+            float: right;
         }
     }
 
     &__sidebar,
     &__sidebar-additional {
         @include mq($screen-l) {
-            float: left;
             width: $catalog-list__sidebar-width\@medium;
+            float: left;
         }
     }
 

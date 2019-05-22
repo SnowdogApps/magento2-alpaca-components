@@ -31,8 +31,8 @@ $compare__wishlist-icon-transition : $transition-base !default;
     overflow-x: auto;
 
     &__table {
-        border-collapse: collapse;
         border-spacing: 0;
+        border-collapse: collapse;
         border: $compare__border;
 
         @include mq($screen-m) {
@@ -44,8 +44,8 @@ $compare__wishlist-icon-transition : $transition-base !default;
     &__label {
         width: $compare__label-width;
         padding: $compare__label-padding;
-        background-color: $compare__label-background;
         border-bottom: $compare__border;
+        background-color: $compare__label-background;
 
         @include mq($screen-m) {
             padding: $compare__label-padding\@medium;
@@ -54,10 +54,10 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     &__cell {
         position: relative;
-        padding: $compare__cell-padding;
         min-width: $compare__cell-min-width;
-        border-left: $compare__border;
+        padding: $compare__cell-padding;
         border-bottom: $compare__border;
+        border-left: $compare__border;
 
         ul {
             padding-left: $compare__cell-list-padding-left;
@@ -76,8 +76,8 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     .image {
         width: $compare__image-size;
-        height: $compare__image-size;
         max-width: $compare__image-max-size;
+        height: $compare__image-size;
         max-height: $compare__image-max-size;
     }
 
@@ -134,11 +134,11 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     &__wishlist,
     &__remove {
-        height: $compare__wishlist-size;
         width: $compare__wishlist-size;
+        height: $compare__wishlist-size;
         padding: $compare__wishlist-padding;
-        background: $compare__wishlist-background;
         border: $compare__wishlist-border;
+        background: $compare__wishlist-background;
         cursor: $compare__wishlist-cursor;
 
         &:hover,
@@ -154,9 +154,9 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     &__wishlist-icon,
     &__remove-icon {
-        fill: $compare__wishlist-icon-fill;
         width: $compare__wishlist-icon-size;
         height: $compare__wishlist-icon-size;
         transition: $compare__wishlist-icon-transition;
+        fill: $compare__wishlist-icon-fill;
     }
 }

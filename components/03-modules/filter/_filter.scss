@@ -72,9 +72,9 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 
     &__label-title {
         margin: 0;
-        text-transform: inherit;
-        color: inherit;
         transition: $filter__transition;
+        color: inherit;
+        text-transform: inherit;
     }
 
     &__category-list {
@@ -114,29 +114,29 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 
         @include mq($screen-l) {
             display: flex;
-            justify-content: center;
             flex-basis: $filter__swatch-size\@large;
+            justify-content: center;
             margin: $filter__swatch-margin\@large;
         }
     }
 
     &__swatch-option {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         min-width: $filter__swatch-option-size;
         min-height: $filter__swatch-option-size;
+        transition: $filter__transition;
         border: $filter__swatch-option-border;
         background-color: $filter__swatch-option-background;
         color: $filter__swatch-option-color;
-        transition: $filter__transition;
-        cursor: pointer;
         text-decoration: none;
+        cursor: pointer;
 
         &:hover,
         &:focus {
-            text-decoration: none;
             border-color: $filter__swatch-option-border-color-hover;
+            text-decoration: none;
         }
 
         &--active {
@@ -149,19 +149,19 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 
         @include mq($screen-l) {
             display: flex;
-            justify-content: center;
             flex-basis: $filter__color-size\@large;
+            justify-content: center;
         }
     }
 
     &__color-option {
-        position: relative;
         display: flex;
+        position: relative;
         flex-direction: column;
-        justify-content: flex-start;
         align-items: center;
-        max-width: $filter__color-option-width;
+        justify-content: flex-start;
         width: $filter__color-option-width;
+        max-width: $filter__color-option-width;
         height: $filter__color-option-height;
         max-height: $filter__color-option-height;
         text-decoration: none;
@@ -173,10 +173,10 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
             left: $filter__color-option-after-left;
             width: $filter__color-option-after-size;
             height: $filter__color-option-after-size;
-            background-color: transparent;
+            transition: $filter__transition;
             border: $filter__color-option-border;
             border-radius: $filter__color-option-after-border-radius;
-            transition: $filter__transition;
+            background-color: transparent;
         }
 
         &--active,
@@ -200,10 +200,10 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 
     &__color-label {
         max-width: 100%;
-        font-size: $filter__color-label-font-size;
         color: $filter__color-label-color;
-        word-break: break-all;
+        font-size: $filter__color-label-font-size;
         text-align: center;
+        word-break: break-all;
     }
 
     &__range {

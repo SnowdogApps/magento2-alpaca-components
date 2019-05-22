@@ -38,8 +38,8 @@ $home__brand-width--small       : 33.33% !default;
     &__brands-list {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
         align-items: center;
+        justify-content: space-around;
         margin: $home__banner-spacer-large 0 $home__banner-spacer-extra-large 0;
 
         @include mq($screen-m) {
@@ -47,8 +47,8 @@ $home__brand-width--small       : 33.33% !default;
         }
 
         .list__item {
-            margin-bottom: $home__banner-spacer;
             width: $home__brand-width--small;
+            margin-bottom: $home__banner-spacer;
             padding: $home__banner-spacer;
             border-right: $home__block-border;
             text-align: center;
@@ -91,8 +91,8 @@ $home__brand-width--small       : 33.33% !default;
 
     &__static-text {
         @include mq($screen-m) {
-            column-count: 2;
             column-gap: $home__text-column-gap;
+            column-count: 2;
             text-align: justify;
         }
     }

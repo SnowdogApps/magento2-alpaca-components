@@ -31,24 +31,24 @@ $tab__icon-size                       : 48px !default;
     }
 
     &__title {
-        position: relative;
         display: block;
+        position: relative;
         width: 100%;
         padding: $tab__title-padding;
         border: $tab__title-border;
         border-width: $tab__border-width 0 0 0;
         background: $tab__title-background;
-        text-align: center;
-        font-weight: $tab__title-font-weight;
         color: $tab__title-color;
+        font-weight: $tab__title-font-weight;
+        text-align: center;
         cursor: pointer;
 
         &:nth-last-child(2) {
             border-bottom: $tab__title-border;
 
             @include mq($screen-l) {
-                border-bottom: $tab__title-border--large;
                 width: auto;
+                border-bottom: $tab__title-border--large;
             }
         }
 
@@ -79,10 +79,10 @@ $tab__icon-size                       : 48px !default;
             }
 
             @include mq($screen-l) {
+                z-index: 2;
                 border-bottom: $tab__title-border--large-active;
                 background-color: $tab__title-background--large-active;
                 font-weight: $tab__title-font-weight--large-active;
-                z-index: 2;
             }
 
             .tab__icon {
@@ -104,12 +104,12 @@ $tab__icon-size                       : 48px !default;
 
     &__icon {
         position: absolute;
-        right: 15px;
         top: 0;
+        right: 15px;
         bottom: 0;
-        margin: auto;
         width: $tab__icon-size;
         height: $tab__icon-size;
+        margin: auto;
         padding: $tab__icon-padding;
 
         @include mq($screen-l) {
@@ -118,24 +118,24 @@ $tab__icon-size                       : 48px !default;
     }
 
     &__content {
-        position: relative;
         display: none;
+        position: relative;
+        z-index: -1;
         width: 100%;
         padding: $tab__content-padding;
-        z-index: -1;
-        opacity: 0;
         overflow: hidden;
+        opacity: 0;
 
         @include mq($screen-l) {
-            padding: $tab__content-padding--large;
-            flex-basis: 100%;
             z-index: 1;
+            flex-basis: 100%;
+            padding: $tab__content-padding--large;
         }
 
         &--active {
             display: block;
-            opacity: 1;
             z-index: 1;
+            opacity: 1;
 
             &:nth-last-child(1) {
                 border-bottom: $tab__title-border;

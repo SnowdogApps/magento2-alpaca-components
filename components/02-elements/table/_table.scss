@@ -17,13 +17,13 @@ $table__background-even--clean   : $white !default;
 
 .table {
     width: 100%;
-    background: $table__background;
     margin: 1em 0;
+    border-spacing: 0;
+    border-collapse: separate;
     border: $table__border;
     border-radius: $table__border-radius;
+    background: $table__background;
     color: $table__color;
-    border-collapse: separate;
-    border-spacing: 0;
     font-size: $table__font-size;
     line-height: $table__line-height;
 
@@ -64,9 +64,9 @@ $table__background-even--clean   : $white !default;
         border-bottom: $table__border;
 
         @include mq($screen-m) {
+            display: table-row;
             padding: 0;
             border-bottom: 0;
-            display: table-row;
         }
     }
 
@@ -82,9 +82,9 @@ $table__background-even--clean   : $white !default;
         @include mq($screen-m) {
             display: table-cell;
             padding: $table__padding;
-            background: $table__th-background;
-            border-bottom: $table__border;
             border-right: $table__border;
+            border-bottom: $table__border;
+            background: $table__th-background;
         }
     }
 
@@ -95,11 +95,11 @@ $table__background-even--clean   : $white !default;
 
         &::before {
             content: attr(data-th);
-            font-weight: bold;
-            margin-right: 10px;
-            max-width: 25%;
-            width: 25%;
             display: block;
+            width: 25%;
+            max-width: 25%;
+            margin-right: 10px;
+            font-weight: bold;
 
             @include mq($screen-m) {
                 display: none;
@@ -115,9 +115,9 @@ $table__background-even--clean   : $white !default;
         @include mq($screen-m) {
             display: table-cell;
             padding: $table__padding;
-            background: $table__td-background;
-            border-bottom: $table__border;
             border-right: $table__border;
+            border-bottom: $table__border;
+            background: $table__td-background;
         }
     }
 
@@ -172,8 +172,8 @@ $table__background-even--clean   : $white !default;
             @include mq($screen-m) {
                 display: table-cell;
                 padding: $table__padding;
-                background: $table__tfoot-background;
                 border-right: $table__border;
+                background: $table__tfoot-background;
             }
         }
     }
@@ -219,16 +219,16 @@ $table__background-even--clean   : $white !default;
         }
 
         th {
-            border-bottom: 0;
             border-right: 0;
+            border-bottom: 0;
             background: $table__th-background--clean;
-            text-align: left;
             font-weight: $table__th-font-weight--clean;
+            text-align: left;
         }
 
         td {
-            border-bottom: 0;
             border-right: 0;
+            border-bottom: 0;
             background: $table__th-background--clean;
         }
 

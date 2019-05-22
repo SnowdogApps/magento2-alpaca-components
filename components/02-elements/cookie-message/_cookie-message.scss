@@ -17,18 +17,18 @@ $cookie-message__close-icon-margin-left : $spacer !default;
 
 .cookie-message {
     display: none;
+    box-sizing: border-box;
     align-items: stretch;
     width: $cookie-message__width;
     background-color: $cookie-message__background-color;
-    box-sizing: border-box;
-    font-size: $cookie-message__font-size;
     font-family: $cookie-message__font-family;
+    font-size: $cookie-message__font-size;
 
     &__container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-end;
         align-items: center;
+        justify-content: flex-end;
         min-width: 100%;
         text-align: center;
 
@@ -40,22 +40,22 @@ $cookie-message__close-icon-margin-left : $spacer !default;
 
     &__text {
         flex-basis: 100%;
-        color: $cookie-message__text-color;
-        text-align: justify;
         padding: $cookie-message__text-padding;
-        font-size: inherit;
+        color: $cookie-message__text-color;
         font-family: inherit;
+        font-size: inherit;
+        text-align: justify;
 
         @include mq($screen-s) {
-            text-align: left;
             flex-basis: auto;
             padding: $cookie-message__text-padding--small;
+            text-align: left;
         }
     }
 
     &__link {
-        color: $cookie-message__link-color;
         background-clip: content-box;
+        color: $cookie-message__link-color;
 
         &:focus {
             @include focus-inline();
@@ -64,19 +64,19 @@ $cookie-message__close-icon-margin-left : $spacer !default;
 
     &__close {
         display: flex;
-        align-items: center;
         flex-basis: auto;
         flex-shrink: 0;
+        align-items: center;
         min-width: $cookie_message__close-size;
         height: $cookie-message__close-size;
         padding: $cookie-message__close-padding;
-        background: none;
         border: none;
+        background: none;
         color: $cookie-message__close-color;
-        cursor: pointer;
-        font-weight: $cookie-message__close-font-weight;
         font-family: inherit;
         font-size: inherit;
+        font-weight: $cookie-message__close-font-weight;
+        cursor: pointer;
 
         @include mq($screen-s) {
             padding: $cookie-message__close-padding--small;
@@ -84,10 +84,10 @@ $cookie-message__close-icon-margin-left : $spacer !default;
     }
 
     &__close-icon {
-        fill: $cookie-message__close-icon-fill;
         width: $cookie-message__close-icon-size;
         height: $cookie-message__close-icon-size;
         margin-left: $cookie-message__close-icon-margin-left;
+        fill: $cookie-message__close-icon-fill;
     }
 
     &--open {

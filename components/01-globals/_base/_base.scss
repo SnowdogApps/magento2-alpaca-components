@@ -6,12 +6,12 @@
 
 html,
 body {
-    height: 100%;
     min-width: 320px;
-    font-family: $font-family-base;
-    font-weight: $font-weight-base;
-    font-size: $font-size-base;
+    height: 100%;
     color: $font-color-base;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
 }
 
 body {

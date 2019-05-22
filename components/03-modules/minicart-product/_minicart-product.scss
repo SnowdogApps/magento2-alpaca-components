@@ -43,8 +43,8 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
 
 .minicart-product {
     display: flex;
-    width: 100%;
     flex-flow: row nowrap;
+    width: 100%;
     padding: $minicart-product__padding;
     border-bottom: $minicart-product__border;
 
@@ -98,8 +98,8 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         }
 
         &.dropdown-list__label {
-            color: $minicart-product__attributes-button-color;
             background-color: $minicart-product__attributes-button-bg-color;
+            color: $minicart-product__attributes-button-color;
 
             &:focus,
             &:hover {
@@ -115,8 +115,8 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
 
     &__price {
         width: 100%;
-        font-weight: $minicart-product__price-font-weight;
         color: $minicart-product__price-color;
+        font-weight: $minicart-product__price-font-weight;
     }
 
     &__bottom {
@@ -133,10 +133,10 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
 
     &__update {
         display: none;
-        height: $minicart-product__update-height;
         width: $minicart-product__update-width;
-        padding: $minicart-product__update-padding;
+        height: $minicart-product__update-height;
         margin: $minicart-product__update-margin;
+        padding: $minicart-product__update-padding;
     }
 
     &__label,
@@ -149,10 +149,10 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     }
 
     &__field {
-        padding: $minicart-product__field-padding;
         width: $minicart-product__field-width;
         height: $minicart-product__field-height;
         margin: $minicart-product__field-margin;
+        padding: $minicart-product__field-padding;
     }
 
     &__actions {
@@ -177,8 +177,8 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
     }
 
     &__button-icon {
-        height: $minicart-product__action-icon-size;
         width: $minicart-product__action-icon-size;
+        height: $minicart-product__action-icon-size;
         padding: $minicart-product__action-icon-padding;
         fill: $minicart-product__action-icon-color;
     }

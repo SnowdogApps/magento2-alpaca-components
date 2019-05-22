@@ -21,13 +21,13 @@ $quantity-updater__error-max-width                   : 120px !default;
     display: flex;
 
     &__input {
-        border-top: $quantity-update__input-border;
-        border-bottom: $quantity-update__input-border;
-        border-left: 0;
-        border-right: 0;
-        border-radius: 0;
         width: $quantity-update__input-width;
         height: $quantity-update__input-width;
+        border-top: $quantity-update__input-border;
+        border-right: 0;
+        border-bottom: $quantity-update__input-border;
+        border-left: 0;
+        border-radius: 0;
         color: $quantity-update__input-color;
         text-align: center;
         appearance: none;
@@ -38,22 +38,22 @@ $quantity-updater__error-max-width                   : 120px !default;
     }
 
     &__button {
+        margin: 0;
         border: $quantity-update__button-border;
         background: $quantity-update__button-background;
-        margin: 0;
 
         &:focus {
             @include focus-input();
         }
 
         &--plus {
-            border-radius: 0 100% 100% 0;
             border-left: 0;
+            border-radius: 0 100% 100% 0;
         }
 
         &--minus {
-            border-radius: 100% 0 0 100%;
             border-right: 0;
+            border-radius: 100% 0 0 100%;
         }
 
         &--disabled {
@@ -75,15 +75,15 @@ $quantity-updater__error-max-width                   : 120px !default;
     }
 
     &__icon {
-        fill: $quantity-updater__icon-fill;
         width: $quantity-updater__icon-spacing;
         height: $quantity-updater__icon-spacing;
+        fill: $quantity-updater__icon-fill;
     }
 
     div.mage-error {
         order: 1;
-        margin: $quantity-updater__error-margin;
         max-width: $quantity-updater__error-max-width;
+        margin: $quantity-updater__error-margin;
     }
 
     // Disable spin buttons in number input type

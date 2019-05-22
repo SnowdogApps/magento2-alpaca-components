@@ -24,15 +24,15 @@ $dashboard__title--padding: 0 0 $spacer 0 !default;
         border-bottom: 1px solid $gray;
 
         &--wrapped {
-            margin-bottom: 0;
             margin-right: $dashboard__margin;
+            margin-bottom: 0;
         }
     }
 
     &__status {
+        padding: 5px 15px;
         border: 1px solid $gray;
         border-radius: $border-radius;
-        padding: 5px 15px;
         font-size: $font-size-small;
     }
 
@@ -57,8 +57,8 @@ $dashboard__title--padding: 0 0 $spacer 0 !default;
     }
 
     &__product {
-        border: 0;
         padding: 0;
+        border: 0;
     }
 
     &__field-qty {
@@ -96,13 +96,13 @@ $dashboard__title--padding: 0 0 $spacer 0 !default;
 
     &__list-item {
         display: flex;
-        align-items: center;
         position: relative;
-        padding: 0;
+        align-items: center;
         margin-right: 5px;
-        background-color: $gray-lighter;
+        padding: 0;
         border: 1px solid $gray;
         border-bottom: 0;
+        background-color: $gray-lighter;
 
         &--current {
             padding: $dashboard__padding;

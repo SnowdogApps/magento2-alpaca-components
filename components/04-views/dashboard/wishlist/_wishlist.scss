@@ -54,8 +54,8 @@ $wishlist__action-padding-top    : $spacer--medium !default;
 
     &__item-name {
         display: block;
-        padding: $wishlist__name-padding;
         margin: $wishlist__name-margin;
+        padding: $wishlist__name-padding;
     }
 
     &__item-name-link {
@@ -100,8 +100,8 @@ $wishlist__action-padding-top    : $spacer--medium !default;
         margin-bottom: $wishlist__actions-margin-bottom;
 
         &--to-cart {
-            order: 3;
             flex-basis: $wishlist__to-cart-flex-basis;
+            order: 3;
             padding-top: $wishlist__to-cart-padding-top;
         }
     }

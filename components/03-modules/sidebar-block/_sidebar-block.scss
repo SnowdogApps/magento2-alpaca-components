@@ -29,8 +29,8 @@ $sidebar-block__message-margin             : 0 !default;
 
 .sidebar-block {
     position: relative;
-    padding: $sidebar-block__padding;
     min-height: $sidebar-block__min-height;
+    padding: $sidebar-block__padding;
 
     &--hidden {
         display: none;
@@ -42,14 +42,14 @@ $sidebar-block__message-margin             : 0 !default;
 
     &__heading {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
         margin-bottom: $sidebar-block__heading-margin-bottom;
     }
 
     &__title {
-        font-weight: $sidebar-block__title-font-weight;
         margin-bottom: $sidebar-block__title-margin-bottom;
+        font-weight: $sidebar-block__title-font-weight;
     }
 
     &__divider {
@@ -71,10 +71,10 @@ $sidebar-block__message-margin             : 0 !default;
 
         &::before {
             content: counter(sidebarIndex) ".";
-            counter-increment: sidebarIndex;
-            margin: $sidebar-block__index-margin;
             min-width: $sidebar-block__index-min-width;
+            margin: $sidebar-block__index-margin;
             font-weight: $sidebar-block__index-font-weight;
+            counter-increment: sidebarIndex;
         }
 
         &--wishlist {
@@ -83,8 +83,8 @@ $sidebar-block__message-margin             : 0 !default;
     }
 
     &__remove {
-        padding: $sidebar-block__remove-padding;
         margin-right: $sidebar-block__remove-margin-right;
+        padding: $sidebar-block__remove-padding;
         background-color: $sidebar-block__remove-background;
 
         &:hover,
@@ -98,9 +98,9 @@ $sidebar-block__message-margin             : 0 !default;
     }
 
     &__remove-icon {
-        padding: $sidebar-block__remove-icon-padding;
         width: $sidebar-block__icon-size;
         height: $sidebar-block__icon-size;
+        padding: $sidebar-block__remove-icon-padding;
         transition: $sidebar-block__remove-icon-transition;
         fill: $sidebar-block__icon-fill;
     }

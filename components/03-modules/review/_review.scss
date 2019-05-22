@@ -59,8 +59,8 @@ $review__summary-max-width\@large: 200px !default;
     &__title-product {
         display: block;
         margin: $spacer 0;
-        text-transform: none;
         font-weight: bold;
+        text-transform: none;
     }
 
     &__author {
@@ -108,10 +108,10 @@ $review__summary-max-width\@large: 200px !default;
     }
 
     &__amount {
-        font-size: $font-size-small;
-        text-decoration: underline;
-        letter-spacing: 2px;
         margin-right: $spacer;
+        font-size: $font-size-small;
+        letter-spacing: 2px;
+        text-decoration: underline;
 
         @include mq($screen-m) {
             margin-right: 0;
@@ -127,8 +127,8 @@ $review__summary-max-width\@large: 200px !default;
     }
 
     &__summary-add {
-        text-decoration: underline;
         text-align: right;
+        text-decoration: underline;
 
         &:focus {
             @include focus-inline();
