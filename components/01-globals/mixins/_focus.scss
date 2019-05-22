@@ -16,13 +16,13 @@
     text-decoration: $text-decoration-focus-inline;
 
     @if $mode == 'dark' {
-        color: $color-focus-inline-dark;
         background-color: $bg-focus-inline-dark;
+        color: $color-focus-inline-dark;
     }
 
     @else {
-        color: $color-focus-inline;
         background-color: $bg-focus-inline;
+        color: $color-focus-inline;
     }
 }
 
@@ -30,8 +30,8 @@
     outline: $outline-base;
 
     @if $mode == 'dark' {
-        box-shadow: none;
         border: 2px solid $color-primary;
+        box-shadow: none;
     }
 
     @else {

@@ -18,8 +18,7 @@ $gallery__thumb-width--large               : 80px !default;
 
 .gallery {
     display: flex;
-    flex-direction: column;
-    flex-flow: nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
     width: 100%;
     margin: 0;

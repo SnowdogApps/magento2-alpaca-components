@@ -5,7 +5,9 @@
     "now-build": "gulp fractal:build --ci"
   },
   "dependencies": {
-    "@frctl/fractal": "~1.1.7",
+    "@frctl/fractal": "~1.1.7"
+  },
+  "devDependencies": {
     "autoprefixer": "~9.5.1",
     "eslint-config-idiomatic": "~4.0.0",
     "fs-extra": "~8.0.1",
