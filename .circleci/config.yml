@@ -16,6 +16,6 @@ jobs:
       - run: sudo npm install -g gulp-cli
       - run: cd vendor/snowdog/frontools && yarn && gulp setup
       - run: cd tools && gulp inheritance
-      # - run: cd tools && gulp sasslint --ci
+      - run: cd tools && gulp sasslint --ci
       - run: cd tools && gulp styles --ci --pipeline
-      # - run: cd tools && gulp csslint --ci
+      - run: cd tools && gulp csslint --ci
