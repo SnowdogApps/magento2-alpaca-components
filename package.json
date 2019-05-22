@@ -27,7 +27,7 @@
     "postcss-scss": "^2.0.0",
     "run-sequence": "~2.2.0",
     "stylelint": "^10.0.1",
-    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-property-sort-order-smacss": "^4.0.2",
     "stylelint-config-standard": "~18.3.0",
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.6.1"
