@@ -16,11 +16,11 @@ const autoprefixer = require('autoprefixer'),
       path         = require('path'),
       plumber      = require('gulp-plumber'),
       postcss      = require('gulp-postcss'),
+      postcssScss  = require('postcss-scss'),
       reporter     = require('postcss-reporter'),
       runSequence  = require('run-sequence'),
       sass         = require('gulp-sass'),
       sassError    = require('gulp-sass-error'),
-      sassLint     = require('gulp-sass-lint'),
       sourcemaps   = require('gulp-sourcemaps'),
       stylelint    = require('stylelint'),
       svgSprite    = require('gulp-svg-sprite'),
@@ -150,9 +150,13 @@ gulp.task('sass-lint', () => {
         })
       )
     )
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(gulpif(util.env.ci, sassLint.failOnError()));
+    .pipe(postcss(
+      [
+        stylelint(),
+        reporter({ throwError: util.env.ci || false })
+      ],
+      { syntax: postcssScss }
+    ));
 });
 
 gulp.task('css-lint', () => {
