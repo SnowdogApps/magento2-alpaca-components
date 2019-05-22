@@ -712,6 +712,7 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
 
     &__slider {
         margin-bottom: $product-view__slider-margin-bottom;
+        overflow: hidden;
 
         @include mq($screen-m) {
             margin-bottom: $product-view__slider-margin-bottom\@medium;
@@ -732,6 +733,10 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
             font-weight: $product-view__slider-heading-font-size-weight;
             text-transform: $product-view__slider-heading-text-transform;
         }
+
+        .slider__handler {
+            margin-right: -$spacer--medium;
+        }
     }
 
     &__slider-navigation {
@@ -746,7 +751,6 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
         @include mq($screen-m) {
             display: block;
             margin-bottom: $product-view__additional-content-margin-bottom\@medium;
-
         }
     }
 
@@ -754,14 +758,6 @@ $product-view__grouped-product-name-margin\@medium     : 0 0 $spacer !default;
         .catalog-grid-item__name {
             font-size: $product-view__slider-name-font-size;
             text-transform: initial;
-        }
-    }
-
-    &__slider {
-        overflow: hidden;
-
-        .slider__handler {
-            margin-right: -$spacer--medium;
         }
     }
 

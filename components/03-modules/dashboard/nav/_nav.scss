@@ -17,7 +17,7 @@ $dashboard-nav-margin : 15px !default;
             display: none;
         }
 
-        &:after {
+        &::after {
             content: '\25bc';
             position: absolute;
             width: 15px;
@@ -29,7 +29,7 @@ $dashboard-nav-margin : 15px !default;
         }
 
         &--active {
-            &:after {
+            &::after {
                 content: '\25b2';
             }
         }
@@ -100,9 +100,7 @@ $dashboard-nav-margin : 15px !default;
 
     .nav.item.current {
         @extend .current;
-    }
 
-    .nav.item.current {
         & > a {
             color: $red;
         }

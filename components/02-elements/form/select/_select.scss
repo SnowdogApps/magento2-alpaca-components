@@ -74,6 +74,7 @@ $select__field-list-border-radius--single: 20px !default;
     &.is-focused {
         .select__field-list {
             transition: $transition-base;
+
             @include focus-input();
         }
     }

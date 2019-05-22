@@ -1,6 +1,7 @@
 {
   "name": "alpaca-components",
   "scripts": {
+    "stylelint": "stylelint 'components/**/*.scss'",
     "now-build": "gulp fractal:build --ci"
   },
   "dependencies": {

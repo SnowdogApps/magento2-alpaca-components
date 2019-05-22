@@ -10,6 +10,7 @@ $featured-info__icon-color        : $color-primary !default;
     margin: $featured-info__margin;
     color: $featured-info__title-color;
     text-decoration: none;
+
     &:focus,
     &:hover {
         text-decoration: none;
@@ -25,6 +26,7 @@ $featured-info__icon-color        : $color-primary !default;
             width: 24px;
             height: 24px;
             fill: $featured-info__icon-color;
+
             &--delivery-truck {
                 width: 35px;
                 height: 20px;

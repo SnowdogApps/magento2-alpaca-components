@@ -141,10 +141,11 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
 
     &__image-wrapper {
         @include mq($screen-m) {
-            &:after {
+            &::after {
                 content: "";
                 display: block;
                 height: $catalog-grid-item__content-height;
+
                 @include mq($screen-xxl) {
                     height: $catalog-grid-item__content-height\@large;
                 }
@@ -248,6 +249,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
 
     &__primary-form {
         margin: $catalog-gird-item__primary-form-margin;
+
         @include mq($screen-m) {
             flex: 1;
         }
@@ -275,6 +277,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
 
     &__cart-text {
         display: none;
+
         @include mq($screen-m) {
             display: block;
         }
@@ -284,6 +287,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         display: flex;
         align-items: center;
         justify-content: center;
+
         .button {
             height: $catalog-grid-item__action-size;
             width: $catalog-grid-item__action-size;
@@ -291,12 +295,14 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
             background: $catalog-grid-item__action-background;
             border: $catalog-grid-item__action-border;
             cursor: $catalog-grid-item__action-cursor;
+
             &:hover,
             &:focus {
                 .button__icon {
                     fill: $catalog-grid-item__action-icon-fill-hover;
                 }
             }
+
             .button__icon {
                 width: $catalog-grid-item__action-icon-size;
                 height: $catalog-grid-item__action-icon-size;

@@ -20,6 +20,7 @@ $home__brand-width--small       : 33.33% !default;
 
     &__banner-content {
         margin-bottom: $home__banner-spacer-medium;
+
         @include mq($screen-m) {
             margin-right: $home__banner-spacer;
 
@@ -55,6 +56,7 @@ $home__brand-width--small       : 33.33% !default;
             &:nth-child(3n) {
                 border-right: 0;
             }
+
             @include mq($screen-m) {
                 width: 20%;
 

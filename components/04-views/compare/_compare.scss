@@ -34,6 +34,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
         border-collapse: collapse;
         border-spacing: 0;
         border: $compare__border;
+
         @include mq($screen-m) {
             width: $compare__table-width;
             table-layout: fixed;
@@ -45,6 +46,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
         padding: $compare__label-padding;
         background-color: $compare__label-background;
         border-bottom: $compare__border;
+
         @include mq($screen-m) {
             padding: $compare__label-padding\@medium;
         }
@@ -56,9 +58,11 @@ $compare__wishlist-icon-transition : $transition-base !default;
         min-width: $compare__cell-min-width;
         border-left: $compare__border;
         border-bottom: $compare__border;
+
         ul {
             padding-left: $compare__cell-list-padding-left;
         }
+
         li {
             line-height: $compare__cell-item-line-height;
         }
@@ -91,6 +95,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
     &__buttons-container {
         display: flex;
         justify-content: center;
+
         @include mq($screen-m) {
             flex-wrap: wrap;
         }
@@ -106,6 +111,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     &__cart {
         padding: $compare__cart-padding;
+
         @include mq($screen-m) {
             width: $compare__cart-width;
             padding: $compare__cart-padding\@medium;
@@ -114,6 +120,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
 
     &__cart-text {
         display: none;
+
         @include mq($screen-m) {
             display: inline;
         }
@@ -137,6 +144,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
         &:hover,
         &:focus {
             background: $compare__wishlist-background;
+
             .compare__wishlist-icon,
             .compare__remove-icon {
                 fill: $compare__wishlist-icon-fill--hover;

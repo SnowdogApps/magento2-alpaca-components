@@ -42,6 +42,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
     position: relative;
     margin: $mega-menu__margin;
     border-bottom: $mega-menu__border-bottom;
+
     @include mq($screen-xl) {
         display: block;
     }
@@ -60,6 +61,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
         padding: $mega-menu__inner-list-padding;
         background-color: $mega-menu__inner-list-background-color;
         list-style: none;
+
         &--level1 {
             display: none;
             position: absolute;
@@ -101,10 +103,11 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
     &__inner-item {
         &--parent {
             padding: $mega-menu__inner-item-padding--parent;
+
             & > .mega-menu__inner-link {
                 display: inline-block;
                 margin: $mega-menu__inner-item-maargin--parent-child;
-                padding:  $mega-menu__inner-item-padding--parent-child;
+                padding: $mega-menu__inner-item-padding--parent-child;
                 font-size: $mega-menu__font-size;
                 font-weight: $mega-menu__font-weight;
             }
@@ -118,8 +121,10 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
 
             .mega-menu__inner-link {
                 display: block;
+
                 &:focus {
                     @include focus();
+
                     background-color: transparent;
                     color: $mega-menu__inner-link-color--image-focus;
                 }
@@ -139,6 +144,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
         font-weight: $mega-menu__font-weight;
         color: $mega-menu__link-color;
         text-decoration: $mega-menu__link-text-decoration;
+
         &:focus,
         &:hover {
             text-decoration: $mega-menu__link-text-decoration;

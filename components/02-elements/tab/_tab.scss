@@ -56,7 +56,7 @@ $tab__icon-size                       : 48px !default;
             flex: 1;
             order: -1;
             border-top: none;
-            border-bottom : $tab__title-border--large;
+            border-bottom: $tab__title-border--large;
         }
 
         .tab__icon {
@@ -92,11 +92,11 @@ $tab__icon-size                       : 48px !default;
         }
 
         .counter {
-            &:before {
+            &::before {
                 content: "(";
             }
 
-            &:after {
+            &::after {
                 content: ")";
             }
         }

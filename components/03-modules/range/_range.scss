@@ -23,41 +23,51 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
 .range-filter {
     padding: $range__padding;
     overflow: hidden;
+
     &__slider {
         margin: $range__margin;
     }
+
     &__inputs-wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+
     &__dash {
         text-align: center;
         padding: $range__dash-padding;
     }
+
     &__suffix {
         padding: $range__suffix-padding;
     }
+
     &__label {
         @include visually-hidden();
     }
+
     &__input {
         width: auto;
         flex-grow: 1;
         margin: $range__input-margin;
     }
+
     &__button {
         margin: $range__button-margin;
         padding: $range__button-padding;
     }
 }
+
 .noUi-connect {
     background-color: $range__track-bg-color--active;
     border-radius: $range__connect-border-radius;
 }
+
 .noUi-tooltip {
     display: none;
 }
+
 .noUi-target {
     background-color: $range__track-bg-color;
     box-shadow: $range__track-box-shadow;
@@ -65,10 +75,12 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
     border-radius: $range__track-border-radius;
     height: $range__height;
 }
+
 .noUi-handle {
     &:hover {
         cursor: pointer;
     }
+
     .noUi-horizontal & {
         border-radius: $range__handler-border-radius;
         background: $range__handler-bg-color;
@@ -77,10 +89,12 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
         border: $range__handler-border;
         box-shadow: $range__handler-box-shadow;
         top: $range__handler-offset-top;
-        &:before,
-        &:after {
+
+        &::before,
+        &::after {
             display: none;
         }
+
         &:focus {
             outline: none;
 
@@ -90,12 +104,15 @@ $range__button-margin         : 0 0 $spacer--medium 0 !default;
         }
     }
 }
+
 .noUi-extended {
     padding-right: 24px;
 }
+
 .noUi-extended .noUi-handle {
     left: 0;
 }
-.noUi-extended .noUi-origin  {
+
+.noUi-extended .noUi-origin {
     right: -24px;
 }

@@ -93,6 +93,7 @@ $button__width--fluid               : 100% !default;
         &:hover {
             border-color: $button__border-hover--icon;
             background: $button__background-hover--icon;
+
             .button__icon,
             .icon {
                 fill: $button__fill-hover--icon;

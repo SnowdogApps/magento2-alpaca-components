@@ -32,11 +32,13 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         text-align: left;
         margin: $newsletter__heading-margin;
     }
+
     &__controls {
         position: relative;
         height: auto;
         margin-bottom: $newsletter__bottom-gap;
     }
+
     &__button {
         position: absolute;
         top: 0;
@@ -44,20 +46,25 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         height: $newsletter__controls-height;
         border-radius: $newsletter__field-border-radius;
         padding: 0 $newsletter__button-padding;
+
         &:hover {
             cursor: pointer;
             outline: none;
         }
+
         &:focus {
             @include focus('dark');
         }
     }
+
     &__input {
         margin: 0;
     }
+
     &__label {
         @include visually-hidden;
     }
+
     &__field {
         background: $newsletter__input-background;
         padding: $newsletter__field-padding;
@@ -67,29 +74,36 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         height: $newsletter__field-height;
         color: $newsletter__input-color;
         line-height: $newsletter__field-height;
+
         &::placeholder {
             color: $newsletter__input-color--placeholder;
         }
+
         &:focus {
             @include focus-input('dark');
         }
     }
+
     &__agreements {
         margin-left: $spacer;
     }
+
     .checkbox__icon {
         top: $newsletter__checkbox-icon-position-top;
         left: 0;
         border-radius: $newsletter__checkbox-icon-border-radius;
     }
+
     .checkbox__field {
-        &:checked ~ .checkbox__label:before {
+        &:checked ~ .checkbox__label::before {
             background: none;
         }
+
         &:focus ~ .checkbox__label {
             @include focus('dark');
         }
     }
+
     .checkbox__label {
         width: 100%;
         opacity: 1;
@@ -99,7 +113,8 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         padding-left: $newsletter__checkbox-label-padding-left;
         padding-top: $newsletter__checkbox-label-padding-top;
         color: $newsletter__checkbox-label-color;
-        &:before {
+
+        &::before {
             top: $newsletter__checkbox-icon-position-top; // to align with label, depends on line-height of label
             width: $newsletter__checkbox-icon-size;
             height: $newsletter__checkbox-icon-size;
@@ -109,9 +124,11 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
 
         & > a {
             color: $color-primary;
+
             &:hover {
                 color: $newsletter__checkbox-label-color;
             }
+
             &:focus {
                 @include focus-inline('dark');
             }

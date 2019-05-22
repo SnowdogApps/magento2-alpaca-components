@@ -11,6 +11,7 @@ $top-bar__link-text-decoration: none !default;
 .top-bar {
     display: none;
     background-color: $top-bar__background-color;
+
     @include mq($screen-xl) {
         display: block;
     }
@@ -61,8 +62,8 @@ $top-bar__link-text-decoration: none !default;
         }
 
         &-icon {
-            width: $top-bar__icon-size ;
-            height: $top-bar__icon-size ;
+            width: $top-bar__icon-size;
+            height: $top-bar__icon-size;
             margin-right: 8px;
             vertical-align: top;
         }

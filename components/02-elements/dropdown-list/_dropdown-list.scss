@@ -96,13 +96,16 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             &:focus {
                 background-color: $dropdown-list__bg-color--secondary;
                 color: $dropdown-list__item-color--secondary;
+
                 & > .dropdown-list__icon {
                     fill: $dropdown-list__icon-fill-hover--secondary;
                 }
             }
+
             &[aria-expanded="true"] {
                 background-color: $dropdown-list__bg-color--secondary;
                 color: $dropdown-list__item-color--secondary-open;
+
                 & > .dropdown-list__icon {
                     fill: $dropdown-list__icon-fill---secondary-open;
                 }
@@ -147,24 +150,30 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         .dropdown-list__item {
             border-bottom: $dropdown-list__item-border--inner;
         }
+
         .dropdown-list__label {
             color: $dropdown-list__item-color--inner;
             background-color: $dropdown-list__item-bg-color--inner;
             font-weight: $dropdown-list__item-font-weight--inner;
+
             &:hover,
             &:focus {
                 color: $dropdown-list__item-color-hover--inner;
             }
+
             &[aria-expanded="true"] {
                 border-bottom: none;
             }
+
             & > .dropdown-list__icon {
                 fill: $dropdown-list__icon-fill--inner;
             }
         }
+
         .dropdown-list--inner {
             .dropdown-list__item {
                 border-bottom: $dropdown-list__item-border--inner-level2;
+
                 &:last-child {
                     border-bottom: none;
                 }
@@ -247,6 +256,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         .dropdown-list--inner .dropdown-list--inner & {
             padding-left: $dropdown-list__item-padding * 2;
         }
+
         .dropdown-list--inner .dropdown-list--inner .dropdown-list--inner & {
             padding-left: $dropdown-list__item-padding * 3;
         }
@@ -255,6 +265,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
     &__content {
         overflow: hidden;
         transition: $dropdown-list__transition-height;
+
         &[aria-hidden="true"] {
             display: none;
         }
@@ -275,6 +286,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
 
             .dropdown-list__label {
                 cursor: default;
+
                 &:hover,
                 &:focus {
                     color: $dropdown-list__item-color;
@@ -282,9 +294,11 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
                     text-decoration: none;
                 }
             }
+
             .dropdown-list__icon {
                 display: none;
             }
+
             .dropdown-list__content {
                 margin: $dropdown-list__content-margin--screen-m;
                 height: auto;

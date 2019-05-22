@@ -21,8 +21,10 @@ $input__date-background-position     : center center !default;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+
         .input__label {
             @extend .label--inline;
+
             margin-right: $input__label-margin-right;
         }
     }
@@ -58,6 +60,7 @@ $input__date-background-position     : center center !default;
     .ui-datepicker-trigger {
         @extend .button;
         @extend .button--icon;
+
         background-image: $input__date-background-image;
         background-size: $input__date-background-size;
         background-repeat: $input__date-background-repeat;

@@ -50,17 +50,15 @@ $dashboard__title--padding: 0 0 $spacer 0 !default;
         &:last-child {
             padding-right: 5px;
         }
+
+        &--hidden {
+            display: none;
+        }
     }
 
     &__product {
         border: 0;
         padding: 0;
-    }
-
-    &__form {
-        &--hidden {
-            display: none;
-        }
     }
 
     &__field-qty {
@@ -110,7 +108,7 @@ $dashboard__title--padding: 0 0 $spacer 0 !default;
             padding: $dashboard__padding;
             background-color: $white;
 
-            &:after {
+            &::after {
                 content: "";
                 position: absolute;
                 bottom: -1px;

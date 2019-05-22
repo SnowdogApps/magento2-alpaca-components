@@ -22,10 +22,11 @@ $minicart-content__products-list-padding    : 0 $spacer--medium !default;
 $minicart-content__products-list-margin     : $spacer 0 0 0 !default;
 
 .minicart-content {
-    height: auto !important; // sass-lint:disable-line no-important
+    height: auto !important;
     max-height: calc(100vh - 90px);
     font-size: $minicart-content__font-size;
     overflow-y: auto;
+
     @include mq($screen-l) {
         max-height: calc(100vh - 120px);
     }
@@ -36,7 +37,7 @@ $minicart-content__products-list-margin     : $spacer 0 0 0 !default;
         width: 100%;
         background-color: $minicart-content__top-bar-background;
 
-        &:after {
+        &::after {
             position: absolute;
             top: 0;
             right: 0;
@@ -79,6 +80,7 @@ $minicart-content__products-list-margin     : $spacer 0 0 0 !default;
         font-weight: $minicart-content__edit-font-weight;
         text-align: center;
         text-decoration: $minicart-content__edit-text-decoration;
+
         &:focus,
         &:hover {
             text-decoration: $minicart-content__edit-text-decoration;

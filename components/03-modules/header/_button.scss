@@ -42,6 +42,7 @@ $header-button__counter-dot-bg-color: $white !default;
     text-decoration: none;
     background-color: #fff;
     font-family: $header-button__text-font-family;
+
     @include mq($screen-xl) {
         margin: $header-button__margin--extra-large;
     }
@@ -49,6 +50,7 @@ $header-button__counter-dot-bg-color: $white !default;
     &:focus,
     &:hover {
         text-decoration: none;
+
         .header-button__icon {
             fill: $header-button__icon-color--hover;
         }
@@ -63,6 +65,7 @@ $header-button__counter-dot-bg-color: $white !default;
         padding: $header-button__icon-padding;
         fill: $header-button__icon-color;
         transition: $header-button__transition;
+
         @include mq($screen-m) {
             margin: $header-button__icon-margin--medium;
         }
@@ -89,12 +92,15 @@ $header-button__counter-dot-bg-color: $white !default;
         text-align: center;
         color: $header-button__counter-color;
         background-color: $header-button__counter-background;
+
         &--hidden {
             display: none;
         }
+
         @include mq($screen-m) {
             top: $header-button__counter-top--medium;
         }
+
         &-dot {
             width: $header-button__counter-dot-size;
             height: $header-button__counter-dot-size;

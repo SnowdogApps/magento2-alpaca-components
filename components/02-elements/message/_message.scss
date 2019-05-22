@@ -42,7 +42,7 @@ $message__icon-fill--error   : $red !default;
         margin: $message__margin-base\@medium;
     }
 
-    &:after {
+    &::after {
         content: "";
         position: absolute;
         left: $message__icon-spacer;
@@ -61,7 +61,7 @@ $message__icon-fill--error   : $red !default;
         border: $message__border--success;
         color: $message__color--success;
 
-        &:after {
+        &::after {
             background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill--success}" d="M7 .333A6.67 6.67 0 0 0 .333 7 6.67 6.67 0 0 0 7 13.667 6.67 6.67 0 0 0 13.667 7 6.67 6.67 0 0 0 7 .333zm-1.333 10L2.333 7l.94-.94 2.394 2.387 5.06-5.06.94.946-6 6z"/></svg>');
         }
     }
@@ -71,7 +71,7 @@ $message__icon-fill--error   : $red !default;
         border: $message__border--error;
         color: $message__color--error;
 
-        &:after {
+        &::after {
             background-image: svg-uri('<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path fill="#{$message__icon-fill--error}" d="M.667 13h14.666L8 .333.667 13zm8-2H7.333V9.667h1.334V11zm0-2.667H7.333V5.667h1.334v2.666z"/></svg>');
         }
     }

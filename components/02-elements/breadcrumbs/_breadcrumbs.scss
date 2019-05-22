@@ -31,7 +31,7 @@ $breadcrumbs__min-height             : 50px !default;
         color: $breadcrumbs__color;
         font-size: $breadcrumbs__font-size;
 
-        &:after {
+        &::after {
             content: '/';
             display: flex;
             align-items: center;
@@ -54,7 +54,7 @@ $breadcrumbs__min-height             : 50px !default;
                 text-decoration: $breadcrumbs__text-decoration--active;
             }
 
-            &:after {
+            &::after {
                 display: none;
             }
         }

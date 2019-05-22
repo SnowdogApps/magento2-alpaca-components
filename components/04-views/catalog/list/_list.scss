@@ -9,14 +9,17 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
     display: flex;
     flex-direction: column;
     margin: $catalog-list__margin;
+
     @include mq($screen-l) {
         display: block;
     }
+
     @include clearfix;
 
     &__products {
         order: 1;
         padding: $catalog-list__products-padding;
+
         @include mq($screen-l) {
             float: right;
             width: $catalog-list__products-width\@medium;
@@ -34,6 +37,7 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
     &__sidebar {
         order: 0;
         border-bottom: $catalog-list__sidebar-border;
+
         @include mq($screen-l) {
             margin: $catalog-list__sidebar-margin\@medium;
             border-bottom: none;
@@ -42,6 +46,7 @@ $catalog-list__products-padding       : 0 0 $spacer--large 0 !default;
 
     &__sidebar-additional {
         order: 2;
+
         @include mq($screen-l) {
             clear: left;
         }

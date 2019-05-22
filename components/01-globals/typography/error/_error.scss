@@ -9,7 +9,7 @@ div {
 
     &.required {
         label {
-            &:after {
+            &::after {
                 content: '*';
                 color: $input__error-color;
             }

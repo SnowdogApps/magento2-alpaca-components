@@ -93,7 +93,7 @@ $table__background-even--clean   : $white !default;
         padding: 5px $table__padding;
         background: $table__td-background;
 
-        &:before {
+        &::before {
             content: attr(data-th);
             font-weight: bold;
             margin-right: 10px;

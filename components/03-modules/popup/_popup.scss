@@ -25,6 +25,7 @@ $popup__margin                   : 0 !default;
     box-shadow: $popup__box-shadow;
     background-color: $popup__background;
     border: $popup__border;
+
     @include mq($screen-s) {
         position: absolute;
         width: $popup__width;

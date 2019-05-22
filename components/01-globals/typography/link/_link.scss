@@ -1,5 +1,4 @@
 $link__color              : $blue !default;
-$link__decoration         : underline !default;
 $link__font-family        : $font-family-base !default;
 $link__font-weight        : $font-weight-normal !default;
 $link__color-hover        : $color-secondary !default;
@@ -11,7 +10,6 @@ $link__color-hover--invert: $blue !default;
 
 .link {
     color: $link__color;
-    text-decoration: $link__decoration;
     transition: $link__transition;
     font-family: $link__font-family;
     font-weight: $link__font-weight;
@@ -50,6 +48,7 @@ $link__color-hover--invert: $blue !default;
     p &,
     cite & {
         background-clip: content-box;
+
         &:focus:not(.banner) {
             @include focus-inline();
         }

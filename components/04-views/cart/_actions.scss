@@ -9,6 +9,7 @@ $cart-actions__padding: 10px !default;
     &__button {
         width: 100%;
         margin-bottom: $cart-actions__margin;
+
         @include mq($screen-m) {
             width: 190px;
             margin: 0 0 $cart-actions__margin $cart-actions__margin;

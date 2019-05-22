@@ -58,18 +58,17 @@ $brief-info__title-margin-bottom             : 0 !default;
         // It's related to IE10/11 bug, which is solved by adding unit to flex-basis
         // Detailed description:
         // https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored
-        // sass-lint:disable no-css-comments
-        /* stylelint-disable length-zero-no-unit */
         flex: 1 0 0;
-        /* stylelint-enable length-zero-no-unit */
-        // sass-lint:enable no-css-comments
+
         @include mq($screen-m) {
             align-items: flex-start;
         }
+
         @include mq($screen-l) {
             align-items: center;
             flex-flow: row nowrap;
         }
+
         &:first-child,
         &:last-child {
             @include mq($screen-m) {
@@ -85,9 +84,11 @@ $brief-info__title-margin-bottom             : 0 !default;
         width: $brief-info__icon-size;
         height: $brief-info__icon-size;
         flex-shrink: 0;
+
         @include mq($screen-l) {
             margin-bottom: $brief-info__icon-margin-bottom\@large;
         }
+
         &--delivery-truck {
             padding: $brief-info__icon-delivery-truck-padding;
         }
@@ -97,11 +98,13 @@ $brief-info__title-margin-bottom             : 0 !default;
         width: 100%;
         height: 100%;
         padding: 14px;
+
         &--delivery-truck {
             padding: $brief-info__icon-delivery-truck-svg-padding;
             width: $brief-info__icon-delivery-truck-svg-width;
             height: $brief-info__icon-delivery-truck-svg-height;
         }
+
         &--shield {
             padding: $brief-info__icon-shield-padding;
             width: $brief-info__icon-shield-svg-width;
@@ -115,6 +118,7 @@ $brief-info__title-margin-bottom             : 0 !default;
         text-transform: $brief-info__title-text-transform;
         line-height: $brief-info__title-line-height;
         font-weight: $brief-info__title-font-weight;
+
         @include mq($screen-l) {
             font-size: $brief-info__title-font-size\@large;
             margin: 0 0 0 10px;
@@ -126,8 +130,10 @@ $brief-info__title-margin-bottom             : 0 !default;
         font-weight: $brief-info__link-font-weight;
         text-decoration: $brief-info__link-text-decoration;
     }
+
     &__content {
         text-align: $brief-info__content-text-align;
+
         @include mq($screen-m) {
             text-align: $brief-info__content-text-align\@medium;
         }

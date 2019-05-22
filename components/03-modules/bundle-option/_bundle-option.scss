@@ -16,7 +16,7 @@ $bundle-option__qty-input-cursor--disabled : default !default;
         margin: $bundle-option__title-margin;
 
         &--required {
-            &:after {
+            &::after {
                 content: '*';
                 color: $bundle-option__title-color--required;
                 font-weight: $bundle-option__title-font-weight--required;

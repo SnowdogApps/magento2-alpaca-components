@@ -32,6 +32,7 @@ $wishlist__action-padding-top    : $spacer--medium !default;
 
     &__item {
         margin-bottom: $wishlist__item-margin-bottom;
+
         @include mq($screen-s) {
             padding: $wishlist__item-padding;
         }

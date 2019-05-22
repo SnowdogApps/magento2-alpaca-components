@@ -64,6 +64,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
     padding: $catalog-list-item__padding;
     overflow: hidden;
     border-bottom: $catalog-list-item__border;
+
     &:first-child {
         border-top: $catalog-list-item__border;
     }
@@ -72,6 +73,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         .image {
             width: $catalog-list-item__image-width;
             height: $catalog-list-item__image-height--inner;
+
             @include mq($screen-m) {
                 width: $catalog-list-item__image-width\@medium;
             }
@@ -82,6 +84,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         flex: 1 calc(100% - #{$catalog-list-item__image-width});
         max-width: calc(100% - #{$catalog-list-item__image-width});
         padding: $spacer;
+
         @include mq($screen-m) {
             flex: 1 calc(100% - #{$catalog-list-item__image-width\@medium});
             padding: $spacer $spacer $spacer $spacer--large;
@@ -92,6 +95,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         border-radius: 0;
         padding: $catalog-list-item__badge-padding;
         font-size: $catalog-list-item__badge-font-size;
+
         @include mq($screen-m) {
             position: absolute;
             top: $catalog-list-item__badge-top-position\@medium;
@@ -103,9 +107,11 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
     &__link {
         display: block;
+
         &:focus {
             outline: $outline-base;
             z-index: 0;
+
             .image {
                 @include focus();
             }
@@ -118,6 +124,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         justify-content: space-between;
         width: $catalog-list-item__details-width;
         margin: $catalog-list-item__details-margin;
+
         @include mq($screen-m) {
             flex-direction: row;
             margin: $catalog-list-item__details-margin\@medium;
@@ -128,6 +135,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         margin: $catalog-list-item__name-margin;
         font-weight: $catalog-list-item__name-font-weight;
         font-size: $catalog-list-item__font-size--main;
+
         @include mq($screen-m) {
             margin: $catalog-list-item__name-margin\@medium;
             font-size: $catalog-list-item__font-size--main\@medium;
@@ -141,6 +149,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
     &__reviews {
         margin: $catalog-list-item__reviews-padding;
+
         @include mq($screen-m) {
             margin: $catalog-list-item__reviews-padding\@medium;
         }
@@ -165,6 +174,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
     &__actions {
         display: flex;
         margin: $catalog-list-item__actions-margin;
+
         @include mq($screen-m) {
             flex-direction: column-reverse;
         }
@@ -180,6 +190,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         height: $catalog-list-item__actions-primary-button-height;
         width: $catalog-list-item__actions-primary-button-width;
         font-size: $catalog-list-item__font-size;
+
         @include mq($screen-m) {
             height: $catalog-list-item__actions-primary-button-height\@medium;
             width: $catalog-list-item__actions-primary-button-width\@medium;
@@ -193,6 +204,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
         align-items: center;
         justify-content: flex-end;
         margin: $catalog-list-item__actions-secondary-margin\@medium;
+
         @include mq($screen-m) {
             justify-content: flex-start;
             margin: $catalog-list-item__actions-secondary-margin\@medium;
@@ -205,6 +217,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
             border: none;
             border-radius: 0;
             background-color: transparent;
+
             @include mq($screen-m) {
                 margin: $catalog-list-item__actions-secondary-button-margin\@medium;
                 width: $catalog-list-item__actions-secondary-button-width\@medium;
@@ -225,6 +238,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
             width: $catalog-list-item__actions-secondary-button-icon-width;
             height: $catalog-list-item__actions-secondary-button-icon-height;
             fill: $catalog-list-item__actions-secondary-button-icon-fill;
+
             @include mq($screen-m) {
                 width: $catalog-list-item__actions-secondary-button-icon-width\@medium;
                 height: $catalog-list-item__actions-secondary-button-icon-height\@medium;

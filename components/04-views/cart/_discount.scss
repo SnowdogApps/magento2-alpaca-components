@@ -73,6 +73,7 @@ $discount__button-padding           : 0 21px !default;
         color: $discount__field-color;
         line-height: $discount__field-height;
         background: $discount__field-background;
+
         &::placeholder {
             color: $discount__field-color--placeholder;
         }
@@ -86,6 +87,7 @@ $discount__button-padding           : 0 21px !default;
         width: auto;
         border-radius: $discount__button-border-radius;
         padding: $discount__button-padding;
+
         &:hover,
         &:focus {
             cursor: pointer;

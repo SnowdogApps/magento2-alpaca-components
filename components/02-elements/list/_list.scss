@@ -35,12 +35,14 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
     &--horizontal {
         display: flex;
         flex-flow: row wrap;
+
         .list__item {
             padding: $list__padding--horizontal;
 
             &:first-child {
                 padding-top: $list__padding--horizontal;
             }
+
             &:last-child {
                 padding-bottom: $list__padding--horizontal;
             }
@@ -58,6 +60,7 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
                 &:first-child {
                     padding-top: $list__padding--horizontal\@medium;
                 }
+
                 &:last-child {
                     padding-bottom: $list__padding--horizontal\@medium;
                 }
@@ -76,10 +79,12 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
             &:first-child {
                 padding-top: 0;
             }
+
             &:last-child {
                 padding-bottom: 0;
             }
         }
+
         .list__icon-link {
             padding: $list__padding--with-icon;
         }
@@ -89,6 +94,7 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
         .list__item {
             display: flex;
         }
+
         .list__image {
             width: $list__width--image;
             height: auto;
@@ -98,6 +104,7 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
     &--divided {
         .list__item {
             border-bottom: $list__border--divider;
+
             &:last-child {
                 border-bottom: none;
             }
@@ -107,6 +114,7 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
             .list__item {
                 border-bottom: none;
                 border-right: $list__border--divider;
+
                 &:last-child {
                     border-right: none;
                 }
@@ -119,6 +127,7 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
                     border-bottom: none;
                     border-right: $list__border--divider;
                 }
+
                 &:last-child {
                     @include mq($screen-m) {
                         border-right: none;
@@ -137,7 +146,7 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
             position: relative;
             padding: $list__item-padding--native;
 
-            &:before {
+            &::before {
                 content: "";
                 position: absolute;
                 top: 5px;
@@ -167,7 +176,8 @@ $list__item-padding--native        : 0 0 $spacer--medium $spacer--large !default
         clear: left;
         float: left;
         padding: $list__label-padding;
-        &:after {
+
+        &::after {
             content: ': ';
         }
     }

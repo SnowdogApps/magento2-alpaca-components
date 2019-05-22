@@ -59,9 +59,11 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         &[aria-expanded="true"]:focus {
             background-color: $filter__label-bg-color;
             color: $filter__label-color-active;
+
             .filter__label-title {
                 color: $filter__label-color-active;
             }
+
             & > .dropdown-list__icon {
                 fill: $filter__label-color-active;
             }
@@ -164,7 +166,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         max-height: $filter__color-option-height;
         text-decoration: none;
 
-        &:after {
+        &::after {
             content: '';
             position: absolute;
             top: $filter__color-option-after-top;
@@ -182,7 +184,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         &:focus {
             text-decoration: none;
 
-            &:after {
+            &::after {
                 border-color: $filter__color-option-after-border-color;
             }
         }

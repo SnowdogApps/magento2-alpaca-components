@@ -27,6 +27,7 @@ $modal__close-button-icon-color      : $color-primary !default;
     overflow: auto;
     padding: $modal__padding;
     background-color: $modal__background-color;
+
     &--active {
         display: flex;
         justify-content: center;
@@ -45,10 +46,11 @@ $modal__close-button-icon-color      : $color-primary !default;
         max-width: $modal__content-max-width;
         padding: $spacer;
         border: $modal__content-border;
-        box-shadow: $modal__content-box-shadow ;
+        box-shadow: $modal__content-box-shadow;
         background-color: $modal__content-background-color;
         animation-name: animatetop;
         animation-duration: 0.4s;
+
         @include mq($screen-xl) {
             width: $modal__content-width\@extra-large;
         }
@@ -60,6 +62,7 @@ $modal__close-button-icon-color      : $color-primary !default;
         right: $modal__close-button-right;
         border: $modal__close-button-border;
         background-color: $modal__close-button-background-color;
+
         &-icon {
             fill: $modal__close-button-icon-color;
         }
@@ -70,6 +73,7 @@ $modal__close-button-icon-color      : $color-primary !default;
             top: -300px;
             opacity: 0;
         }
+
         to {
             top: 0;
             opacity: 1;

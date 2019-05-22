@@ -19,9 +19,11 @@ $marketing-bar__button-icon-padding : 2px !default;
     justify-content: center;
     padding: $marketing-bar__padding;
     background-color: $marketing-bar__background-color;
+
     @include mq($screen-m) {
         text-align: center;
     }
+
     &--closed {
         display: none;
     }
@@ -36,6 +38,7 @@ $marketing-bar__button-icon-padding : 2px !default;
         font-size: $marketing-bar__text-font-size;
         font-weight: $marketing-bar__text-font-weight;
         color: $marketing-bar__text-font-color;
+
         @include mq($screen-m) {
             padding: $marketing-bar__text-padding--medium;
         }

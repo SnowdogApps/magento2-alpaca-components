@@ -34,6 +34,7 @@ $swatch__option-border-color--active : $color-primary !default;
         &.selected {
             outline: none;
             border-color: $swatch__option-border-color--active;
+
             .swatch__option--white {
                 border: 0;
             }

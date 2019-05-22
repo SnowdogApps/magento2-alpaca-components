@@ -59,6 +59,7 @@ $sidebar-block__message-margin             : 0 !default;
     &__list {
         margin-bottom: $sidebar-block__list-margin-bottom;
         counter-reset: sidebarIndex;
+
         &--hidden {
             display: none;
         }
@@ -67,13 +68,15 @@ $sidebar-block__message-margin             : 0 !default;
     &__item {
         display: flex;
         align-items: center;
-        &:before {
+
+        &::before {
             content: counter(sidebarIndex) ".";
             counter-increment: sidebarIndex;
             margin: $sidebar-block__index-margin;
             min-width: $sidebar-block__index-min-width;
             font-weight: $sidebar-block__index-font-weight;
         }
+
         &--wishlist {
             margin-bottom: $sidebar-block__item-margin-bottom;
         }
@@ -92,7 +95,6 @@ $sidebar-block__message-margin             : 0 !default;
                 fill: $sidebar-block__icon-fill--active;
             }
         }
-
     }
 
     &__remove-icon {

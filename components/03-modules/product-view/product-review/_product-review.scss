@@ -2,6 +2,7 @@ $product-review__borders: 1px solid $gray-light;
 
 .product-review {
     padding: $spacer--medium;
+
     &__title {
         margin-bottom: $spacer--large;
         text-transform: uppercase;
@@ -9,22 +10,26 @@ $product-review__borders: 1px solid $gray-light;
         font-weight: $font-weight-base;
         letter-spacing: 2px;
     }
+
     &__reviews {
         .review {
             margin-bottom: $spacer--large;
             border-bottom: $product-review__borders;
         }
     }
+
     .review--summary {
         padding-bottom: $spacer--large;
         border-bottom: $product-review__borders;
         margin-bottom: $spacer--medium;
+
         .rating {
             @include mq($screen-m) {
                 margin-right: $spacer--extra-large;
             }
         }
     }
+
     .review__amount {
         display: none;
 
@@ -33,8 +38,10 @@ $product-review__borders: 1px solid $gray-light;
             margin-right: $spacer--extra-large;
         }
     }
+
     .review__summary-handle {
         flex-wrap: wrap;
+
         @include mq($screen-m) {
             flex-wrap: nowrap;
             justify-content: flex-start;
@@ -42,21 +49,26 @@ $product-review__borders: 1px solid $gray-light;
             max-width: none;
         }
     }
+
     .review__summary-add {
         text-align: left;
         flex-grow: 0;
+
         @include mq($screen-m) {
             flex-basis: auto;
         }
+
         &:focus {
             @include focus-inline();
         }
     }
+
     .list__item:last-child {
         .review {
             margin-bottom: 0;
         }
     }
+
     .toolbar {
         margin-bottom: $spacer--extra-large;
     }
