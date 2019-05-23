@@ -5,8 +5,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Focus & Keyboard support for mega-menu
+
 ### Changed
 - Switching to Gulp 4 
+
+### Fixed
+- Rating focus style
+
+## [1.3.1] - 30.04.2019
+### Added
+- Missing mega-menu item classes
+
+### Changed
+- Remove lazyload from logo image
+
+### Fixed
+- Missing icons
+- Lazyload in catalog
 
 ## [1.3.0] - 17.04.2019
 ### Added

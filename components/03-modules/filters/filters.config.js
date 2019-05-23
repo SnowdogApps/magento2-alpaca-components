@@ -11,9 +11,9 @@ module.exports = {
     },
     allFiltersHeading: 'Shopping Options',
     switcherIcon: {
-      class: 'filters__switcher-icon',
-      iconId: 'angle-down',
-      iconTitle: 'Arrow down'
+      id: 'angle-down',
+      title: 'Arrow down',
+      class: 'filters__switcher-icon'
     },
     divider: {
       class: 'filters__divider'

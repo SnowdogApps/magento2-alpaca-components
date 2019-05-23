@@ -3,223 +3,223 @@ module.exports = {
   context: {
     icons: [
       {
-        iconId: 'account-mini',
-        iconTitle: 'User\'s account in circle',
+        id: 'account-mini',
+        title: 'User\'s account in circle',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'account',
-        iconTitle: 'User\'s account',
+        id: 'account',
+        title: 'User\'s account',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'angle-down',
-        iconTitle: 'Arrow down',
+        id: 'angle-down',
+        title: 'Arrow down',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'angle-up',
-        iconTitle: 'Arrow up',
+        id: 'angle-up',
+        title: 'Arrow up',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'angle-right',
-        iconTitle: 'Arrow right',
+        id: 'angle-right',
+        title: 'Arrow right',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'angle-left',
-        iconTitle: 'Arrow left',
+        id: 'angle-left',
+        title: 'Arrow left',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'arrow-down',
-        iconTitle: 'Arrow down',
+        id: 'arrow-down',
+        title: 'Arrow down',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'arrow-left',
-        iconTitle: 'Arrow left',
+        id: 'arrow-left',
+        title: 'Arrow left',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'arrow-right',
-        iconTitle: 'Arrow right',
+        id: 'arrow-right',
+        title: 'Arrow right',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'arrow-up',
-        iconTitle: 'Arrow up',
+        id: 'arrow-up',
+        title: 'Arrow up',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'check',
-        iconTitle: 'Checked',
+        id: 'check',
+        title: 'Checked',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'checked',
-        iconTitle: 'Checked',
+        id: 'checked',
+        title: 'Checked',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'close',
-        iconTitle: 'Close',
+        id: 'close',
+        title: 'Close',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'compare',
-        iconTitle: 'Compare',
+        id: 'compare',
+        title: 'Compare',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'curved-arrows',
-        iconTitle: 'Curved 2 arrows in form of circle',
+        id: 'curved-arrows',
+        title: 'Curved 2 arrows in form of circle',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'delivery-truck',
-        iconTitle: 'Delivery truck',
+        id: 'delivery-truck',
+        title: 'Delivery truck',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'edit',
-        iconTitle: 'Edit pencil',
+        id: 'edit',
+        title: 'Edit pencil',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'envelope',
-        iconTitle: 'Envelope',
+        id: 'envelope',
+        title: 'Envelope',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'error',
-        iconTitle: 'Error exclamation mark',
+        id: 'error',
+        title: 'Error exclamation mark',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'facebook',
-        iconTitle: 'Facebook logo',
+        id: 'facebook',
+        title: 'Facebook logo',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'google-plus',
-        iconTitle: 'Google plus logo',
+        id: 'google-plus',
+        title: 'Google plus logo',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'grid',
-        iconTitle: 'Grid',
+        id: 'grid',
+        title: 'Grid',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'heart',
-        iconTitle: 'Heart',
+        id: 'heart',
+        title: 'Heart',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'instagram',
-        iconTitle: 'Instagram logo',
+        id: 'instagram',
+        title: 'Instagram logo',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'linkedin',
-        iconTitle: 'Linked logo',
+        id: 'linkedin',
+        title: 'Linked logo',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'list',
-        iconTitle: 'List',
+        id: 'list',
+        title: 'List',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'loader',
-        iconTitle: 'Loader',
+        id: 'loader',
+        title: 'Loader',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'minus',
-        iconTitle: 'Minus mark',
+        id: 'minus',
+        title: 'Minus mark',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'mobile-menu',
-        iconTitle: 'Mobile menu',
+        id: 'mobile-menu',
+        title: 'Mobile menu',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'phone',
-        iconTitle: 'Phone',
+        id: 'phone',
+        title: 'Phone',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'plus',
-        iconTitle: 'Plus mark',
+        id: 'plus',
+        title: 'Plus mark',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'remove',
-        iconTitle: 'Trash bin',
+        id: 'remove',
+        title: 'Trash bin',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'search',
-        iconTitle: 'Search',
+        id: 'search',
+        title: 'Search',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'settings',
-        iconTitle: 'Settings',
+        id: 'settings',
+        title: 'Settings',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'shield',
-        iconTitle: 'Shield',
+        id: 'shield',
+        title: 'Shield',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'shipping-time-truck',
-        iconTitle: 'Delivery truck with clock',
+        id: 'shipping-time-truck',
+        title: 'Delivery truck with clock',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'shopping-cart',
-        iconTitle: 'Shopping cart',
+        id: 'shopping-cart',
+        title: 'Shopping cart',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'signin',
-        iconTitle: 'Signin',
+        id: 'signin',
+        title: 'Signin',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'star',
-        iconTitle: 'Star',
+        id: 'star',
+        title: 'Star',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'star-border',
-        iconTitle: 'Star border',
+        id: 'star-border',
+        title: 'Star border',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'twitter',
-        iconTitle: 'Twitter logo',
+        id: 'twitter',
+        title: 'Twitter logo',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'user',
-        iconTitle: 'User',
+        id: 'user',
+        title: 'User',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'warning',
-        iconTitle: 'Warning exclamation mark',
+        id: 'warning',
+        title: 'Warning exclamation mark',
         class: 'icons__single-icon'
       },
       {
-        iconId: 'youtube',
-        iconTitle: 'Youtube logo',
+        id: 'youtube',
+        title: 'Youtube logo',
         class: 'icons__single-icon'
       }
     ]

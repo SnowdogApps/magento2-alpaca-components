@@ -38,18 +38,22 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon',
-      iconId: 'heart',
-      iconTitle: 'Heart',
-      iconClass: 'button__icon',
+      icon: {
+        id: 'heart',
+        title: 'Heart',
+        class: 'button__icon'
+      },
       attributes: 'type="button" aria-label="Add to wishlist"'
     },
     buttonCompare: {
       tag: 'button',
       text: '',
       class: 'button--icon',
-      iconId: 'compare',
-      iconTitle: 'Compare',
-      iconClass: 'button__icon',
+      icon: {
+        id: 'compare',
+        title: 'Compare',
+        class: 'button__icon'
+      },
       attributes: 'type="button" aria-label="Add to compare"'
     }
   },

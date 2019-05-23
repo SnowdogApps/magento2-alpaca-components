@@ -7,8 +7,8 @@ module.exports = {
         text: 'Wishlist',
         class: 'header-button--reset-margin',
         icon: {
-          iconId: 'heart',
-          iconTitle: 'Heart',
+          id: 'heart',
+          title: 'Heart',
           class: 'header-button__icon'
         }
       },
@@ -17,8 +17,8 @@ module.exports = {
         text: 'Contact',
         class: '',
         icon: {
-          iconId: 'phone',
-          iconTitle: 'Phone',
+          id: 'phone',
+          title: 'Phone',
           class: 'header-button__icon'
         }
       },
@@ -27,8 +27,8 @@ module.exports = {
         text: 'Account',
         class: '',
         icon: {
-          iconId: 'account',
-          iconTitle: 'User\'s account',
+          id: 'account',
+          title: 'User\'s account',
           class: 'header-button__icon'
         }
       }
@@ -60,15 +60,17 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon search-form__button',
-      iconId: 'search',
-      iconTitle: 'Search',
-      iconClass: 'button__icon',
+      icon: {
+        id: 'search',
+        title: 'Search',
+        class: 'button__icon'
+      },
       attributes: 'type="button" aria-label="Search"',
     },
     minicartTrigger: {
       icon: {
-        iconId: 'shopping-cart',
-        iconTitle: 'Shopping cart',
+        id: 'shopping-cart',
+        title: 'Shopping cart',
         class: 'header-button__icon'
       },
       text: 'Cart',
