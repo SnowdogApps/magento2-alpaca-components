@@ -184,7 +184,7 @@ const lintCSS = () => {
     ]));
 }
 
-const lintSctipt = () => {
+const lintScript = () => {
   return gulp.src(fractal.components.get('path') + '/**/*.js')
     .pipe(
       gulpif(
@@ -233,7 +233,7 @@ const watchStyle = () => {
 }
 
 const watchScript = () => {
-  gulp.watch(fractal.components.get('path') + '/**/*.js', lintSctipt)
+  gulp.watch(fractal.components.get('path') + '/**/*.js', lintScript)
 }
 
 const watchSVG = () => {
@@ -280,7 +280,7 @@ exports.inheritance = inheritance
 exports.compileStyle = compileStyle
 exports.lintSASS = lintSASS
 exports.lintCSS = lintCSS
-exports.lintSctipt = lintSctipt
+exports.lintScript = lintScript
 exports.compileSVG = compileSVG
 exports.a11y = a11y
 exports.watch = watch
