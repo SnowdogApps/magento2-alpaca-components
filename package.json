@@ -1,6 +1,8 @@
 {
   "name": "alpaca-components",
   "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp",
     "now-build": "gulp fractal:build --ci"
   },
   "dependencies": {
