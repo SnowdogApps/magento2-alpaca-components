@@ -1,4 +1,5 @@
 /* eslint-env node */
+/* eslint-disable one-var */
 
 const autoprefixer = require('autoprefixer'),
       bluebird     = require('bluebird'),
@@ -74,7 +75,8 @@ const inheritance = (done) => {
           file,
           'build/' + file
         );
-      } else {
+      }
+      else {
         fs.ensureSymlinkSync(
           file,
           'build/' + file
@@ -102,7 +104,8 @@ const inheritance = (done) => {
           // Symlink all module files to build dir
           if (util.env.ci) {
             fs.copySync(srcPath, destPath, { overwrite: false });
-          } else {
+          }
+          else {
             fs.ensureSymlinkSync(srcPath, destPath);
           }
         });
