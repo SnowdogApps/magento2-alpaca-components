@@ -229,14 +229,22 @@ const a11y = () => {
 }
 
 const watchStyle = () => {
-  gulp.watch([
-    fractal.components.get('path') + '/**/*.scss',
-    fractal.docs.get('path') + '/styles/**/*.scss'
-  ], gulp.series(lintSASS, compileStyle, lintCSS));
+  gulp.watch(
+    [
+      fractal.components.get('path') + '/**/*.scss',
+      fractal.docs.get('path') + '/styles/**/*.scss'
+    ],
+    { ignored: /.*\.(js|hbs|svg)$/ },
+    gulp.series(lintSASS, compileStyle, lintCSS)
+  );
 }
 
 const watchScript = () => {
-  gulp.watch(fractal.components.get('path') + '/**/*.js', lintScript)
+  gulp.watch(
+    fractal.components.get('path') + '/**/*.js',
+    { ignored: /.*\.(scss|hbs|svg)$/ },
+    lintScript
+  )
 }
 
 const watchSVG = () => {
