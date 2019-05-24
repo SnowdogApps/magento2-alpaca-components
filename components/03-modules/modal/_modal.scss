@@ -46,7 +46,7 @@ $modal__close-button-icon-color      : $color-primary !default;
         border: $modal__content-border;
         box-shadow: $modal__content-box-shadow ;
         background-color: $modal__content-background-color;
-        overflow: auto;
+        overflow-y: auto;
         animation-name: animatetop;
         animation-duration: 0.4s;
         @include mq($screen-xl) {
