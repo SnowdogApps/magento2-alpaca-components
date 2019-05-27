@@ -31,7 +31,6 @@
     "stylelint": "^10.0.1",
     "stylelint-config-property-sort-order-smacss": "^4.0.2",
     "stylelint-config-standard": "~18.3.0",
-    "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.6.1"
   }
 }
