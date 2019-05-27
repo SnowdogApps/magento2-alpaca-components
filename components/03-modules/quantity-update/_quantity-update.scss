@@ -87,13 +87,13 @@ $quantity-updater__error-max-width                   : 120px !default;
     }
 
     // Disable spin buttons in number input type
-    input[type="number"]::-webkit-outer-spin-button,
-    input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
+    input[type="number"]::-webkit-outer-spin-button, // sass-lint:disable-line no-vendor-prefixes
+    input[type="number"]::-webkit-inner-spin-button { // sass-lint:disable-line no-vendor-prefixes
+        -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
         margin: 0;
     }
 
     input[type="number"] {
-        -moz-appearance: textfield;
+        -moz-appearance: textfield; // sass-lint:disable-line no-vendor-prefixes
     }
 }

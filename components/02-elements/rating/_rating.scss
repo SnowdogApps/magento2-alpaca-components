@@ -145,7 +145,7 @@ $rating__error-color            : $red !default;
     }
 
     .mage-error {
-        display: none !important;
+        display: none !important; // sass-lint:disable-line no-important
     }
 
     &--rate {
