@@ -47,7 +47,7 @@ class Modal {
   setListeners() {
     this.triggers.forEach(trigger => {
       const modal = {};
-      modal.triggerId   = trigger.dataset.modaltrigger,
+      modal.triggerId   = trigger.dataset.modalTrigger,
       modal.el          = document.querySelector(`.modal[data-modal=${modal.triggerId}]`),
       modal.content     = modal.el.querySelector('.modal__content'),
       modal.closeButton = [...modal.el.querySelectorAll('.modal__js-close-button')],
