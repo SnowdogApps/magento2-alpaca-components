@@ -7,9 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Focus & Keyboard support for mega-menu
-
 ### Changed
-- Switching to Gulp 4 
+- Change modal attribute to kebab case and fix modal overflow
+- Switching to Gulp 4
 
 ### Fixed
 - Rating focus style
