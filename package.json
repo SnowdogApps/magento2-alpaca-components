@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "gulp dev",
     "build": "gulp",
-    "now-build": "gulp fractal:build --ci"
+    "now-build": "gulp --ci"
   },
   "dependencies": {
     "@frctl/fractal": "~1.1.7",
