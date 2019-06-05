@@ -13,8 +13,8 @@ https://alpaca-components.now.sh/
 
 ## Installation
 - Install dependencies using `yarn`
-- Run `gulp fractal:start` to start Fractal.js development server
-- Run `gulp fractal:build` if you want to generate static files (for example to deploy them)
+- Run `gulp dev` to start Fractal.js development server
+- Run `gulp` if you want to generate static files (for example to deploy them)
 
 ## How to create a components library on top of Alpaca
 It's necessary only to work outside the Magento.
@@ -25,7 +25,7 @@ It's necessary only to work outside the Magento.
    ["../../snowdog/module-alpaca-components"]
    ```
 3. Customize or add new files following the same structure as in Alpaca components library
-4. Run `gulp fractal:start`
+4. Run `gulp dev`
 
 ## Directory structure
 - `components` directory is what you are going to import into the Magento 2 theme.
