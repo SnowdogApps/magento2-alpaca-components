@@ -15,7 +15,7 @@ module.exports = {
         tag: 'button',
         class: 'modal-trigger',
         text: 'Modal trigger button',
-        attributes: 'data-modaltrigger="myDialog" type="button"'
+        attributes: 'data-modal-trigger="myDialog" type="button"'
       }
     },
     header: {
