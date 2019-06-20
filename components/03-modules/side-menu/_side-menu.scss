@@ -45,6 +45,7 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
         .side-menu__content {
             opacity: 1;
             transform: $side-menu__content-transform--open;
+            visibility: visible;
         }
 
         .side-menu__overlay {
@@ -115,6 +116,7 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
         opacity: 1;
         transform: $side-menu__content-transform;
         transition: $side-menu__content-transition;
+        visibility: hidden;
         @include mq($screen-m) {
             max-width: $side-menu__content-max-width\@medium;
         }
