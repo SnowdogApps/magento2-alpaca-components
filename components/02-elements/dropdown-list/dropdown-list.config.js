@@ -2,6 +2,7 @@ module.exports = {
   status: 'wip',
   context: {
     script: true,
+    id: 'dropdown-default',
     dropdowns: [
       {
         itemTag: 'a',

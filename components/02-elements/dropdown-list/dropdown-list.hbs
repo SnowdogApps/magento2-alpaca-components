@@ -1,4 +1,7 @@
-<div class="dropdown-list {{ class }}" {{{ attributes }}}>
+<div
+    id="{{ id }}"
+    class="dropdown-list {{ class }}" {{{ attributes }}}
+>
     <ul class="dropdown-list__list">
         {{#each dropdowns as |dropdown|}}
             <li class="
@@ -38,4 +41,10 @@
 
 {{#if script}}
     <script src="{{static 'dropdown-list.js' }}"></script>
+{{/if}}
+
+{{#if id}}
+    <script type="text/javascript">
+        new DropdownList(document.getElementById('{{ id }}'));
+    </script>
 {{/if}}
