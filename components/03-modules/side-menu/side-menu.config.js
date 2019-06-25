@@ -12,6 +12,7 @@ module.exports = {
       class: 'side-menu__trigger-icon'
     },
     dropdown: {
+      id: 'dropdown-side-menu',
       class: 'side-menu__dropdown'
     }
   }
