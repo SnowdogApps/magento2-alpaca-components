@@ -21,8 +21,10 @@ module.exports = {
           }
         },
         attributes: {
+          id: 'test-1',
           dropdowns: [
             {
+              itemAttributes: 'aria-expanded="false" aria-controls="see-details-1"',
               id: 'see-details-1'
             }
           ]
@@ -37,8 +39,10 @@ module.exports = {
           }
         },
         attributes: {
+          id: 'test-2',
           dropdowns: [
             {
+              itemAttributes: 'aria-expanded="false" aria-controls="see-details-2"',
               id: 'see-details-2'
             }
           ]
