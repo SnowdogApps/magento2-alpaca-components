@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Rating focus style
+- Hide side-menu content from keyboard navigation
+- Fixed typo for variable in Sass catalog grid
 
 ## [1.3.1] - 30.04.2019
 ### Added

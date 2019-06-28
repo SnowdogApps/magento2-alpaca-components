@@ -1,5 +1,5 @@
 $catalog-grid__gap    : $spacer--medium !default;
-$catalog-gird__margin : 0 !default;
+$catalog-grid__margin : 0 !default;
 $catalog-grid__padding: $spacer--medium 0 $spacer--large 0 !default;
 $catalog-grid__border : 1px solid $gray-light !default;
 
@@ -7,7 +7,7 @@ $catalog-grid__border : 1px solid $gray-light !default;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: $catalog-grid__gap;
-    margin: $catalog-gird__margin;
+    margin: $catalog-grid__margin;
     padding: $catalog-grid__padding;
     border-bottom: $catalog-grid__border;
     list-style: none;
