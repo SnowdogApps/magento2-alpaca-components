@@ -1,6 +1,6 @@
 'use strict';
 
-class DropdownList {
+class DropdownList {  // eslint-disable-line
   constructor(element) {
     this.element = element;
     this.dropdownCollapseLabel = '.dropdown-list__item--collapse > .dropdown-list__label';
@@ -95,5 +95,3 @@ class DropdownList {
     });
   }
 }
-
-new DropdownList(document.querySelector('.dropdown-list'));
