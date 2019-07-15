@@ -18,6 +18,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Hide side-menu content from keyboard navigation
 - Fixed typo for variable in Sass catalog grid
 
+## [1.3.2] - 15.07.2019
+### Fixed
+- CI issues after moval of rsync from docker image
+
+### Changed
+- Frontools removed from dependecies
+- CI Frontools config update
+
 ## [1.3.1] - 30.04.2019
 ### Added
 - Missing mega-menu item classes
