@@ -10,7 +10,7 @@ jobs:
       - run: mkdir -p $THEME_PATH
       - run: rsync -r --delete . $THEME_PATH
       - run: cp "$THEME_PATH/composer.json" .
-      - run: composer update --no-interaction --prefer-dist
+      - run: composer require snowdog/frontools --no-interaction --prefer-dist
       - run: mkdir -p dev/tools/frontools
       - run: cp -r $CONFIG_PATH dev/tools/frontools
       - run: cd vendor/snowdog/frontools && yarn && yarn setup
