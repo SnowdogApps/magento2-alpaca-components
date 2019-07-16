@@ -3,16 +3,11 @@
         height: 8em;
     }
     .grid-container {
-        padding: 0 25px;
+        padding: 0 $spacer--medium;
     }
     .row {
-        min-height: 2em;
-        margin-bottom: $spacer;
-        padding-top: $spacer;
-        background: $gray;
-
         &__content {
-            margin-bottom: $spacer;
+            margin-bottom: $spacer--medium;
             padding: $spacer;
             background: $gray-light;
             text-align: center;

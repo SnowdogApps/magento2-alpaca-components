@@ -15,7 +15,7 @@ module.exports = {
         tag: 'button',
         class: 'modal-trigger',
         text: 'Modal trigger button',
-        attributes: 'data-modaltrigger="myDialog" type="button"'
+        attributes: 'data-modal-trigger="myDialog" type="button"'
       }
     },
     header: {
@@ -38,9 +38,11 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon modal__js-close-button modal__close-button',
-      iconId: 'close',
-      iconTitle: 'Close',
-      iconClass: 'button__icon modal__close-button-icon',
+      icon: {
+        id: 'close',
+        title: 'Close',
+        class: 'button__icon modal__close-button-icon'
+      },
       attributes: 'type="button" aria-label="close modal button, click to close the modal"'
     },
     script: true

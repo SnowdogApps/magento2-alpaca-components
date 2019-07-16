@@ -6,11 +6,51 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- focus state for components
+- Focus & Keyboard support for mega-menu
+
+### Changed
+- Change modal attribute to kebab case and fix modal overflow
+- Switching to Gulp 4
+- Update node modules (autoprefixer@9.6.0, globby@9.2.0, fs-extra@8.0.1, stylelint-config-standard@8.3.0, stylelint@10.1.0)
+- Load dropdown-list globally and change dropdown selector
+- a11y automatic tests with axe-core
+
+### Fixed
+- Rating focus style
+- Hide side-menu content from keyboard navigation
+- Fixed typo for variable in Sass catalog grid
+
+## [1.3.2] - 15.07.2019
+### Fixed
+- CI issues after moval of rsync from docker image
+
+### Changed
+- Frontools removed from dependecies
+- CI Frontools config update
+
+## [1.3.1] - 30.04.2019
+### Added
+- Missing mega-menu item classes
+
+### Changed
+- Remove lazyload from logo image
+
+### Fixed
+- Missing icons
+- Lazyload in catalog
+
+## [1.3.0] - 17.04.2019
+### Added
+- Focus state for components
 
 ### Changed
 - Dashboard My Orders page - a11y updates
-- a11y automatic tests with axe-core
+- Refactor divider component
+- Update preview grid
+
+## Fixed
+- Quantity icons config
+- Catalog grid item styles for images with different sizes
 
 ## [1.2.0] - 04.03.2019
 ### Added

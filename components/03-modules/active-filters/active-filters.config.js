@@ -11,8 +11,8 @@ module.exports = {
         value: 'Value',
         ariaLabel: 'Disable filter: Label - Value',
         icon: {
-          iconId: 'close',
-          iconTitle: 'Close',
+          id: 'close',
+          title: 'Close',
           class: 'active-filters__remove-icon'
         }
       },
@@ -21,8 +21,8 @@ module.exports = {
         value: 'Value',
         ariaLabel: 'Disable filter: Label - Value',
         icon: {
-          iconId: 'close',
-          iconTitle: 'Close',
+          id: 'close',
+          title: 'Close',
           class: 'active-filters__remove-icon'
         }
       },
@@ -31,8 +31,8 @@ module.exports = {
         value: 'Value',
         ariaLabel: 'Disable filter: Label - Value',
         icon: {
-          iconId: 'close',
-          iconTitle: 'Close',
+          id: 'close',
+          title: 'Close',
           class: 'active-filters__remove-icon'
         }
       }

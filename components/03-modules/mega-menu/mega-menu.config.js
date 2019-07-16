@@ -158,10 +158,12 @@ module.exports = {
         ]
       },
       {
+        class: 'mega-menu__item',
         text: 'Accessories',
         link: '/accessories'
       },
       {
+        class: 'mega-menu__item',
         text: 'World of',
         link: '/world-of'
       }

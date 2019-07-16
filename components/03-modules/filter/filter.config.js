@@ -3,8 +3,8 @@ module.exports = {
   default: 'checkbox',
   context: {
     icon: {
-      iconId: 'angle-down',
-      iconTitle: 'Arrow down',
+      id: 'angle-down',
+      title: 'Arrow down',
       class: 'dropdown-list__icon'
     }
   },

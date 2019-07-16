@@ -6,18 +6,22 @@ module.exports = {
       tag: 'button',
       text: '',
       class: 'button--icon slider__navigation-icon slider__prev',
-      iconId: 'angle-left',
-      iconTitle: 'Arrow left',
-      iconClass: 'button__icon slider__icon',
+      icon: {
+        id: 'angle-left',
+        title: 'Arrow left',
+        class: 'button__icon slider__icon'
+      },
       attributes: 'type="button" aria-label="Previous slide"'
     },
     iconNext: {
       tag: 'button',
       text: '',
       class: 'button--icon slider__navigation-icon slider__next',
-      iconId: 'angle-right',
-      iconTitle: 'Arrow right',
-      iconClass: 'button__icon slider__icon',
+      icon: {
+        id: 'angle-right',
+        title: 'Arrow right',
+        class: 'button__icon slider__icon'
+      },
       attributes: 'type="button" aria-label="Next slide"'
     },
     slides: [

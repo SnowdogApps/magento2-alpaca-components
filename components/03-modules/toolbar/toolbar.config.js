@@ -14,19 +14,17 @@ module.exports = {
     grid: {
       href: '',
       icon: {
-        iconId: 'grid',
-        iconTitle: 'Grid',
+        id: 'grid',
+        title: 'Grid',
         class: 'toolbar__mode-icon toolbar__mode-icon--active',
-        title: 'Grid view'
       }
     },
     list: {
       href: '',
       icon: {
-        iconId: 'list',
-        iconTitle: 'List',
+        id: 'list',
+        title: 'List',
         class: 'toolbar__mode-icon',
-        title: 'List view'
       }
     },
     sortBy: {
