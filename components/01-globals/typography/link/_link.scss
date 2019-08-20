@@ -1,29 +1,25 @@
-$link__color              : $blue !default;
-$link__decoration         : underline !default;
-$link__font-family        : $font-family-base !default;
-$link__font-weight        : $font-weight-normal !default;
-$link__color-hover        : $color-secondary !default;
-$link__line-height        : $font-line-height !default;
-$link__transition         : $transition-base !default;
-$link__text-decoration    : none !default;
-$link__color--invert      : $gray-darker !default;
-$link__color-hover--invert: $blue !default;
+$link__color                 : $blue !default;
+$link__decoration            : underline !default;
+$link__font-family           : $font-family-base !default;
+$link__font-weight           : $font-weight-normal !default;
+$link__color-hover           : $color-secondary !default;
+$link__line-height           : $font-line-height !default;
+$link__transition            : $transition-base !default;
+$link__color--invert         : $gray-darker !default;
+$link__color-hover--invert   : $blue !default;
+$link__color--secondary      : $gray-lighter !default;
+$link__color-hover--secondary: $color-primary !default;
 
 .link {
     color: $link__color;
-    text-decoration: $link__decoration;
-    transition: $link__transition;
     font-family: $link__font-family;
     font-weight: $link__font-weight;
     line-height: $link__line-height;
-    text-decoration: $link__text-decoration;
+    text-decoration: $link__decoration;
+    transition: $link__transition;
 
     &:hover {
         color: $link__color-hover;
-    }
-
-    &:focus {
-        @include focus();
     }
 
     &--invert {
@@ -35,10 +31,10 @@ $link__color-hover--invert: $blue !default;
     }
 
     &--secondary {
-        color: $gray-lighter;
+        color: $link__color--secondary;
 
         &:hover {
-            color: $color-primary;
+            color: $link__color-hover--secondary;
         }
     }
 
@@ -50,7 +46,7 @@ $link__color-hover--invert: $blue !default;
     p &,
     cite & {
         background-clip: content-box;
-        &:focus:not(.banner) {
+        &.focus-visible:not(.banner) {
             @include focus-inline();
         }
     }
