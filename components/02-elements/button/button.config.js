@@ -4,7 +4,7 @@ module.exports = {
   context: {
     tag: 'button',
     class: '',
-    attributes: 'type="button"',
+    attributes: 'type="button" aria-label="button"',
     text: 'I am a button'
   },
   variants: [
@@ -12,7 +12,6 @@ module.exports = {
       name: 'icon',
       context: {
         text: '',
-        class: 'button--icon',
         icon: {
           id: 'arrow-left',
           title: 'Arrow left',
@@ -43,6 +42,33 @@ module.exports = {
         class: 'button--fluid'
       }
     },
-
+    {
+      name: 'icon-before',
+      view: 'button--icon.hbs',
+      context: {
+        text: 'Button Icon before',
+        iconBefore: {
+          id: 'arrow-left',
+          title: 'Arrow left',
+          class: 'button__icon',
+          hidden: true
+        },
+        attributes: 'type="button" aria-label="click to do something"'
+      }
+    },
+    {
+      name: 'icon-after',
+      view: 'button--icon.hbs',
+      context: {
+        text: 'Button Icon after',
+        iconAfter: {
+          id: 'arrow-right',
+          title: 'Arrow Right',
+          class: 'button__icon',
+          hidden: true
+        },
+        attributes: 'type="button" aria-label="click to do something"'
+      }
+    },
   ]
 };

@@ -27,10 +27,11 @@ $button__size--icon                 : 20px !default;
 $button__border-width--icon         : 3px !default;
 $button__border--icon               : $button__border-width--icon solid $color-primary !default;
 $button__border-hover--icon         : $gray-dark !default;
-$button__fill--icon                 : $white !default;
+$button__fill--icon                 : $gray-darker !default;
 $button__fill-hover--icon           : $color-primary !default;
 $button__background--icon           : $color-primary !default;
 $button__background-hover--icon     : $gray-dark !default;
+$button__text-padding               : 0 $spacer !default;
 
 //fluid
 $button__width--fluid               : 100% !default;
@@ -40,7 +41,7 @@ $button__width--fluid               : 100% !default;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    height: $button__height;
+    min-height: $button__height;
     min-width: $button__width;
     padding: $button__padding;
     border: $button__border;
@@ -109,5 +110,9 @@ $button__width--fluid               : 100% !default;
         height: $button__size--icon;
         fill: $button__fill--icon;
         transition: $button__transition;
+    }
+
+    &__text {
+        padding: $button__text-padding;
     }
 }
