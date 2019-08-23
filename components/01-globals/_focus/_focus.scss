@@ -1,7 +1,7 @@
 .js-focus-visible :focus:not(.focus-visible) {
-  outline: $outline-base;
+    outline: $outline-base;
 }
 
 .js-focus-visible .focus-visible {
-  @include focus();
+    @include focus();
 }
