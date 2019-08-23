@@ -11,7 +11,7 @@ module.exports = {
       icon: {
         id: 'close',
         title: 'Close',
-        class: 'marketing-bar__close-icon'
+        class: 'icon marketing-bar__close-icon'
       },
       attributes: 'type="button" aria-label="Close marketing bar"',
     },

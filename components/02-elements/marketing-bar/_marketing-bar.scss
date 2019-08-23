@@ -1,16 +1,18 @@
-$marketing-bar__padding             : $spacer !default;
-$marketing-bar__background-color    : $color-primary !default;
+$marketing-bar__padding                : $spacer !default;
+$marketing-bar__background-color       : $color-primary !default;
 
-$marketing-bar__text-padding        : 0 32px 0 0 !default;
-$marketing-bar__text-padding--medium: 0 !default;
-$marketing-bar__text-font-size      : $font-size-base !default;
-$marketing-bar__text-font-color     : $gray-darker !default;
-$marketing-bar__text-font-weight    : $font-weight-bold !default;
+$marketing-bar__text-padding           : 0 32px 0 0 !default;
+$marketing-bar__text-padding--medium   : 0 !default;
+$marketing-bar__text-font-size         : $font-size-base !default;
+$marketing-bar__text-font-color        : $gray-darker !default;
+$marketing-bar__text-font-weight       : $font-weight-bold !default;
 
-$marketing-bar__button-size         : 32px !default;
-$marketing-bar__button-icon-color   : $gray-darker !default;
-$marketing-bar__button-icon-size    : 18px !default;
-$marketing-bar__button-icon-padding : 2px !default;
+$marketing-bar__button-size            : 32px !default;
+$marketing-bar__button-icon-color      : $gray-darker !default;
+$marketing-bar__button-icon-color-hover: $white !default;
+$marketing-bar__button-icon-size       : 18px !default;
+$marketing-bar__button-icon-padding    : 2px !default;
+$marketing-bar__button-transition      : $transition-base !default;
 
 .marketing-bar {
     position: relative;
@@ -51,10 +53,14 @@ $marketing-bar__button-icon-padding : 2px !default;
         margin: auto;
         border: none;
         background-color: transparent;
+        transition: $marketing-bar__button-transition;
 
         &:focus,
         &:hover {
             background-color: transparent;
+            .marketing-bar__close-icon {
+                fill: $marketing-bar__button-icon-color-hover;
+            }
         }
 
         &-icon {
