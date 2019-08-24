@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     returns: {
       title: 'Items Return Requested For',

@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     buttons: {
       class: 'dashboard__actions',

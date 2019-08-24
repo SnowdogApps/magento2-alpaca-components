@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     mainHeading: {
       tag: 'h1',

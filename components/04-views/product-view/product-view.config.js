@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     breadcrumbs: {
       class: 'product-view__breadcrumbs',

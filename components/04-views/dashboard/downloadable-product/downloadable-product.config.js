@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     products: {
       title: 'My Downloadable Products',

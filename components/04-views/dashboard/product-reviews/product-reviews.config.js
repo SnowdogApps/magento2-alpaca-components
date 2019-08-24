@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     reviews: {
       title: 'My Product Reviews',

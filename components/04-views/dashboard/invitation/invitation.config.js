@@ -1,5 +1,4 @@
 module.exports = {
-  preview: '@views',
   context: {
     invitations: {
       title: 'My Invitations',
