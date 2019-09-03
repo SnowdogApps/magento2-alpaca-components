@@ -244,4 +244,19 @@ $table__background-even--clean   : $white !default;
             }
         }
     }
+
+    &--scope-row {
+        border-width: 1px 0;
+
+        tr {
+            padding: 0;
+
+            &:nth-child(even) {
+                th[scope="row"],
+                td {
+                    background-color: $table__background-even--odd-even;
+                }
+            }
+        }
+    }
 }

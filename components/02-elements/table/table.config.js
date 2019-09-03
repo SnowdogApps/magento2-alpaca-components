@@ -120,6 +120,67 @@ module.exports = {
       context: {
         class: 'table--odd-even'
       }
+    },
+    {
+      name: 'scope-row',
+      context: {
+        class: 'table--scope-row',
+        mainTags: [
+          {
+            mainTag: 'tbody',
+            rowTags: [
+              {
+                rowTag: 'tr',
+                rowTagAttributes: 'role="row"',
+                childTags: [
+                  {
+                    childTag: 'th',
+                    childTagAttributes: 'data-th="Example heading:" scope="row" role="rowheader"',
+                    content: 'Example content'
+                  },
+                  {
+                    childTag: 'td',
+                    childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                    content: 'Example content'
+                  }
+                ]
+              },
+              {
+                rowTag: 'tr',
+                rowTagAttributes: 'role="row"',
+                childTags: [
+                  {
+                    childTag: 'th',
+                    childTagAttributes: 'data-th="Example heading:" scope="row" role="rowheader"',
+                    content: 'Example content'
+                  },
+                  {
+                    childTag: 'td',
+                    childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                    content: 'Example content'
+                  }
+                ]
+              },
+              {
+                rowTag: 'tr',
+                rowTagAttributes: 'role="row"',
+                childTags: [
+                  {
+                    childTag: 'th',
+                    childTagAttributes: 'data-th="Example heading:" scope="row" role="rowheader"',
+                    content: 'Example content'
+                  },
+                  {
+                    childTag: 'td',
+                    childTagAttributes: 'data-th="Example heading:" role="gridcell"',
+                    content: 'Example content'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 };
