@@ -27,6 +27,88 @@ $table__background-even--clean   : $white !default;
     font-size: $table__font-size;
     line-height: $table__line-height;
 
+    &--odd-even {
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background: $table__background-odd--odd-even;
+                }
+
+                &:nth-child(even) {
+                    background: $table__background-even--odd-even;
+                }
+
+                &:first-child {
+                    border-top-left-radius: $table__border-radius;
+                    border-top-right-radius: $table__border-radius;
+
+                    @include mq($screen-m) {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+            }
+
+            td {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &--clean {
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+
+        thead {
+            tr {
+                padding: 0;
+                border-bottom: 0;
+            }
+        }
+
+        th {
+            border-bottom: 0;
+            border-right: 0;
+            background: $table__th-background--clean;
+            text-align: left;
+            font-weight: $table__th-font-weight--clean;
+        }
+
+        td {
+            border-bottom: 0;
+            border-right: 0;
+            background: $table__th-background--clean;
+        }
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background: $table__background-odd--clean;
+                }
+
+                &:nth-child(even) {
+                    background: $table__background-even--clean;
+                }
+            }
+        }
+    }
+
+    &--scope-row {
+        border-width: 1px 0;
+
+        tr {
+            padding: 0;
+
+            &:nth-child(even) {
+                th[scope="row"],
+                td {
+                    background-color: $table__background-even--odd-even;
+                }
+            }
+        }
+    }
+
     &__caption,
     &__visually-hidden {
         @include visually-hidden();
@@ -174,73 +256,6 @@ $table__background-even--clean   : $white !default;
                 padding: $table__padding;
                 background: $table__tfoot-background;
                 border-right: $table__border;
-            }
-        }
-    }
-
-    &--odd-even {
-        tbody {
-            tr {
-                &:nth-child(odd) {
-                    background: $table__background-odd--odd-even;
-                }
-
-                &:nth-child(even) {
-                    background: $table__background-even--odd-even;
-                }
-
-                &:first-child {
-                    border-top-left-radius: $table__border-radius;
-                    border-top-right-radius: $table__border-radius;
-
-                    @include mq($screen-m) {
-                        border-top-left-radius: 0;
-                        border-top-right-radius: 0;
-                    }
-                }
-            }
-
-            td {
-                background-color: transparent;
-            }
-        }
-    }
-
-    &--clean {
-        margin: 0;
-        border: 0;
-        border-radius: 0;
-
-        thead {
-            tr {
-                padding: 0;
-                border-bottom: 0;
-            }
-        }
-
-        th {
-            border-bottom: 0;
-            border-right: 0;
-            background: $table__th-background--clean;
-            text-align: left;
-            font-weight: $table__th-font-weight--clean;
-        }
-
-        td {
-            border-bottom: 0;
-            border-right: 0;
-            background: $table__th-background--clean;
-        }
-
-        tbody {
-            tr {
-                &:nth-child(odd) {
-                    background: $table__background-odd--clean;
-                }
-
-                &:nth-child(even) {
-                    background: $table__background-even--clean;
-                }
             }
         }
     }

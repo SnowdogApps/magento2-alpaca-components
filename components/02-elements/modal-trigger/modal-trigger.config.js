@@ -4,7 +4,7 @@ module.exports = {
       tag: 'button',
       class: 'modal-trigger',
       text: 'Modal trigger button',
-      attributes: 'data-modaltrigger="modal-1" type="button"'
+      attributes: 'data-modal-trigger="modal-1" type="button"'
     }
   }
 };

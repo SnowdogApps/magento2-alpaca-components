@@ -1,0 +1,23 @@
+.skip-nav {
+    @include visually-hidden('focus');
+    padding: 12px $spacer--extra-large;
+    top: 0;
+    left: 0;
+
+    &:focus,
+    &:hover {
+        position: absolute;
+        margin: $spacer;
+        background-color: $color-primary;
+        color: $black;
+    }
+
+    &--relative {
+        &:focus,
+        &:hover {
+            display: block;
+            position: relative;
+            margin: $spacer--medium;
+        }
+    }
+}
