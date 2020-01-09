@@ -6,10 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Password strength and datepicker styles
+
 ## [1.4.0] - 15.10.2019
 ### Added
 - Focus & Keyboard support for mega-menu
 - Skip nav element
+
 
 ### Changed
 - Change modal attribute to kebab case and fix modal overflow
