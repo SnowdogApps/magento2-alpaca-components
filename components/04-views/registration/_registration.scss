@@ -50,6 +50,10 @@ $registration__password-margin                              : 0 !default;
         }
     }
 
+    &__newsletter-checkbox-label {
+        margin: 0 0 $spacer--medium;
+    }
+
     &__password-wrapper {
         margin: $registration__password-wrapper-margin;
     }
