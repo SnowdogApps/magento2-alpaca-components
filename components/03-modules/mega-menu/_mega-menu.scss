@@ -17,7 +17,7 @@ $mega-menu__inner-list-border--level1        : 1px solid $gray-light !default;
 
 $mega-menu__inner-item-padding--parent       : $spacer--large 0 $spacer--large ($spacer--large * 2) !default;
 $mega-menu__inner-item-padding--parent-child : 0 !default;
-$mega-menu__inner-item-maargin--parent-child : 0 0 $spacer--medium !default;
+$mega-menu__inner-item-margin--parent-child : 0 0 $spacer--medium !default;
 
 $mega-menu__inner-item-padding--image        : 0 0 0 112px !default;
 
@@ -103,7 +103,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
             padding: $mega-menu__inner-item-padding--parent;
             & > .mega-menu__inner-link {
                 display: inline-block;
-                margin: $mega-menu__inner-item-maargin--parent-child;
+                margin: $mega-menu__inner-item-margin--parent-child;
                 padding:  $mega-menu__inner-item-padding--parent-child;
                 font-size: $mega-menu__font-size;
                 font-weight: $mega-menu__font-weight;
