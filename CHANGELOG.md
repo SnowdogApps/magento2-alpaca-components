@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- Rendering attributes in select and image elements
+
 ### Changed
 - Password strength and datepicker styles
 
