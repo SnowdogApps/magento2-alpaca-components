@@ -13,6 +13,9 @@ $input__date-background-image        : url("../images/icons/calendar.svg") !defa
 $input__date-background-size         : 25px 25px !default;
 $input__date-background-repeat       : no-repeat !default;
 $input__date-background-position     : center center !default;
+$input__date-background-color--hover : $color-primary !default;
+$input__date-border-color--hover     : $input__date-background-color--hover !default;
+$input__date-margin                  : 0 0 0 $spacer !default;
 
 .input {
     margin-bottom: $input__margin-bottom;
@@ -62,6 +65,7 @@ $input__date-background-position     : center center !default;
         background-size: $input__date-background-size;
         background-repeat: $input__date-background-repeat;
         background-position: $input__date-background-position;
+        margin: $input__date-margin;
 
         &:hover,
         &:focus {
@@ -69,6 +73,8 @@ $input__date-background-position     : center center !default;
             background-size: $input__date-background-size;
             background-repeat: $input__date-background-repeat;
             background-position: $input__date-background-position;
+            background-color: $input__date-background-color--hover;
+            border-color: $input__date-border-color--hover;
         }
 
         span {
