@@ -1,30 +1,30 @@
 /* eslint-env node */
 /* eslint-disable one-var */
 
-const autoprefixer = require('autoprefixer'),
-      bluebird     = require('bluebird'),
-      eslint       = require('gulp-eslint'),
-      fractal      = require('@frctl/fractal').create(),
-      fs           = require('fs-extra'),
-      globby       = require('globby'),
-      gulp         = require('gulp'),
-      gulpif       = require('gulp-if'),
-      hbsEngine    = fractal.components.engine(),
-      log          = require('gulp-logger'),
-      logger       = fractal.cli.console,
-      mandelbrot   = require('@frctl/mandelbrot'),
-      notify       = require('gulp-notify'),
-      path         = require('path'),
-      plumber      = require('gulp-plumber'),
-      postcss      = require('gulp-postcss'),
-      reporter     = require('postcss-reporter'),
-      sass         = require('gulp-sass'),
-      sassError    = require('gulp-sass-error'),
-      sassLint     = require('gulp-sass-lint'),
-      sourcemaps   = require('gulp-sourcemaps'),
-      stylelint    = require('stylelint'),
-      svgSprite    = require('gulp-svg-sprite'),
-      util         = require('gulp-util');
+const autoprefixer = require('autoprefixer')
+const bluebird = require('bluebird')
+const eslint = require('gulp-eslint')
+const fractal = require('@frctl/fractal').create()
+const fs = require('fs-extra')
+const globby = require('globby')
+const gulp = require('gulp')
+const gulpif = require('gulp-if')
+const hbsEngine = fractal.components.engine()
+const log = require('gulp-logger')
+const logger = fractal.cli.console
+const mandelbrot = require('@frctl/mandelbrot')
+const notify = require('gulp-notify')
+const path = require('path')
+const plumber = require('gulp-plumber')
+const postcss = require('gulp-postcss')
+const reporter = require('postcss-reporter')
+const sass = require('gulp-sass')
+const sassError = require('gulp-sass-error')
+const sassLint = require('gulp-sass-lint')
+const sourcemaps = require('gulp-sourcemaps')
+const stylelint = require('stylelint')
+const svgSprite = require('gulp-svg-sprite')
+const util = require('gulp-util')
 
 // Turn off Bluebird unhandled promises warnings
 bluebird.config({
@@ -54,9 +54,9 @@ hbsEngine.handlebars.registerHelper('component', name => {
 
 // Gulp tasks
 const inheritance = (done) => {
-  const components = fractal.components.get('path').replace(__dirname + '/build/', ''),
-        docs       = fractal.docs.get('path').replace(__dirname + '/build/', ''),
-        static     = fractal.web.get('static.path').replace(__dirname + '/build/', '');
+  const components = fractal.components.get('path').replace(__dirname + '/build/', '')
+  const docs = fractal.docs.get('path').replace(__dirname + '/build/', '')
+  const static = fractal.web.get('static.path').replace(__dirname + '/build/', '')
 
   // Remove old build directory
   fs.removeSync('./build');
