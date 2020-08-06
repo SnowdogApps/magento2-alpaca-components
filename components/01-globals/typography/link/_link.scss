@@ -22,7 +22,7 @@ $link__color-hover--invert: $blue !default;
         color: $link__color-hover;
     }
 
-    &:focus {
+    &.focus-visible {
         @include focus();
     }
 
@@ -50,7 +50,7 @@ $link__color-hover--invert: $blue !default;
     p &,
     cite & {
         background-clip: content-box;
-        &:focus:not(.banner) {
+        &.focus-visible:not(.banner) {
             @include focus-inline();
         }
     }

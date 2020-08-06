@@ -46,7 +46,7 @@ $header-button__counter-dot-bg-color: $white !default;
         margin: $header-button__margin--extra-large;
     }
 
-    &:focus,
+    &.focus-visible,
     &:hover {
         text-decoration: none;
         .header-button__icon {

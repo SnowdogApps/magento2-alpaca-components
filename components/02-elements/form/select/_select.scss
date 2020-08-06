@@ -23,7 +23,7 @@ $select__field-list-border-radius--single: 20px !default;
             appearance: none;
             transition: $transition-base;
 
-            &:focus {
+            &.focus-visible {
                 @include focus-input();
             }
         }
@@ -51,7 +51,7 @@ $select__field-list-border-radius--single: 20px !default;
     &__field-input {
         transition: $transition-base;
 
-        &:focus {
+        &.focus-visible {
             outline: none;
         }
     }

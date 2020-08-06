@@ -51,7 +51,7 @@ $bundle-option__qty-input-cursor--disabled : default !default;
             color: $bundle-option__qty-input-color--disabled;
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 cursor: $bundle-option__qty-input-cursor--disabled;
             }
         }

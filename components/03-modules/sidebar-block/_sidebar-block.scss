@@ -85,7 +85,7 @@ $sidebar-block__message-margin             : 0 !default;
         background-color: $sidebar-block__remove-background;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             background-color: $sidebar-block__remove-background;
 
             .sidebar-block__remove-icon {

@@ -79,7 +79,7 @@ $minicart-content__products-list-margin     : $spacer 0 0 0 !default;
         font-weight: $minicart-content__edit-font-weight;
         text-align: center;
         text-decoration: $minicart-content__edit-text-decoration;
-        &:focus,
+        &.focus-visible,
         &:hover {
             text-decoration: $minicart-content__edit-text-decoration;
         }

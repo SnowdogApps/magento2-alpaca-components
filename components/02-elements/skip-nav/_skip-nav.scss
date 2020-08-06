@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
 
-    &:focus,
+    &.focus-visible,
     &:hover {
         position: absolute;
         margin: $spacer;
@@ -13,7 +13,7 @@
     }
 
     &--relative {
-        &:focus,
+        &.focus-visible,
         &:hover {
             display: block;
             position: relative;

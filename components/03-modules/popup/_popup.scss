@@ -48,7 +48,7 @@ $popup__margin                   : 0 !default;
         border: $popup__close-button-border;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             background-color: $popup__close-button-bg;
         }
 
@@ -56,7 +56,7 @@ $popup__margin                   : 0 !default;
             fill: $popup__button-icon-fill;
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 fill: $popup__button-icon-fill--actiive;
             }
         }

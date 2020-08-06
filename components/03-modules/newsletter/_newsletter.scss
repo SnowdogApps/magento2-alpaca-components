@@ -48,7 +48,7 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
             cursor: pointer;
             outline: none;
         }
-        &:focus {
+        &.focus-visible {
             @include focus('dark');
         }
     }
@@ -70,7 +70,7 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         &::placeholder {
             color: $newsletter__input-color--placeholder;
         }
-        &:focus {
+        &.focus-visible {
             @include focus-input('dark');
         }
     }
@@ -86,7 +86,7 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
         &:checked ~ .checkbox__label:before {
             background: none;
         }
-        &:focus ~ .checkbox__label {
+        &.focus-visible ~ .checkbox__label {
             @include focus('dark');
         }
     }
@@ -112,7 +112,7 @@ $newsletter__heading-margin             : 0 20px $newsletter__bottom-gap 0 !defa
             &:hover {
                 color: $newsletter__checkbox-label-color;
             }
-            &:focus {
+            &.focus-visible {
                 @include focus-inline('dark');
             }
         }

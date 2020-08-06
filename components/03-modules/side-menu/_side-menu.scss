@@ -73,7 +73,7 @@ $side-menu__overlay-background-color    : rgba(0, 0, 0, 0.6) !default;
         background-color: $side-menu__trigger-background-color;
         cursor: pointer;
 
-        &:focus,
+        &.focus-visible,
         &:hover {
             .side-menu__trigger-icon {
                 fill: $side-menu__trigger-icon-color--hover;

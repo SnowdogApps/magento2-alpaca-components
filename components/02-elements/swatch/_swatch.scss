@@ -30,7 +30,7 @@ $swatch__option-border-color--active : $color-primary !default;
         cursor: pointer;
 
         &:hover,
-        &:focus,
+        &.focus-visible,
         &.selected {
             outline: none;
             border-color: $swatch__option-border-color--active;
