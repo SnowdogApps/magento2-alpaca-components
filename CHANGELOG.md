@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- focus-visible styles
+### Fixed
+- spacing between dashboard items sections in 2 column layout without overriding templates
+- typo in login page styles
+
 ## [1.5.1] - 15.06.2020
 ### Added
 - Node 12.x support
