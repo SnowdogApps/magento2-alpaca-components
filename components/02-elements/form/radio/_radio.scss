@@ -43,7 +43,7 @@ $radio__icon-transition   : $transition-base !default;
             }
         }
 
-        &:focus + .radio__label {
+        &.focus-visible + .radio__label {
             @include focus();
         }
     }

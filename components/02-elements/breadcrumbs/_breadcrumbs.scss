@@ -68,7 +68,7 @@ $breadcrumbs__min-height             : 50px !default;
         text-decoration: none;
         background-clip: content-box;
 
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
     }

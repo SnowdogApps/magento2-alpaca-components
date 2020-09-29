@@ -43,7 +43,7 @@ $input__date-margin                  : 0 0 0 $spacer !default;
             color: $input__placeholder-color;
         }
 
-        &:focus {
+        &.focus-visible {
             @include focus-input();
         }
 
@@ -68,7 +68,7 @@ $input__date-margin                  : 0 0 0 $spacer !default;
         margin: $input__date-margin;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             background-image: $input__date-background-image;
             background-size: $input__date-background-size;
             background-repeat: $input__date-background-repeat;

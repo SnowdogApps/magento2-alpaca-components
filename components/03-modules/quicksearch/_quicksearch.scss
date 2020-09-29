@@ -91,7 +91,7 @@ $quicksearch__more-link-font-weight            : $font-weight-bold !default;
         border: $quicksearch__close-border;
         background-color: $quicksearch__close-background;
         &:hover,
-        &:focus {
+        &.focus-visible {
             border: $quicksearch__close-border;
             background-color: $quicksearch__close-background;
         }

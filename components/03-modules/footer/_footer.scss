@@ -94,7 +94,7 @@ $footer__icon-fill-hover               : $color-primary !default;
             color: $footer__link-color-hover;
             text-decoration: $footer__link-text-decoration-hover;
         }
-        &:focus {
+        &.focus-visible {
             @include focus-inline('dark');
         }
     }
@@ -119,7 +119,7 @@ $footer__icon-fill-hover               : $color-primary !default;
         margin: $footer__social-handl-margin;
 
         .list__icon-link {
-            &:focus {
+            &.focus-visible {
                 @include focus('dark');
             }
         }

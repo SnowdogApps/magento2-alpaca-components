@@ -48,7 +48,7 @@ $product-review__borders: 1px solid $gray-light;
         @include mq($screen-m) {
             flex-basis: auto;
         }
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
     }

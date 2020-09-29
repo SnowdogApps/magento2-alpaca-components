@@ -1,5 +1,7 @@
-$dashboard-items-padding: 15px !default;
-$dashboard-items-margin : 15px !default;
+$dashboard-items-padding         : 15px !default;
+$dashboard-items-margin          : 15px !default;
+$dashboard-items__item-max-width : calc(50% - #{$spacer--medium}) !default;
+$dashboard-items__item-margin    : 15px $spacer--medium 15px 0 !default;
 
 .dashboard-items {
     &__title {
@@ -17,7 +19,8 @@ $dashboard-items-margin : 15px !default;
     }
 
     &__item {
+        max-width: $dashboard-items__item-max-width;
+        margin: $dashboard-items__item-margin;
         padding: $dashboard-items-padding 0;
-        margin-bottom: $dashboard-items-margin;
     }
 }

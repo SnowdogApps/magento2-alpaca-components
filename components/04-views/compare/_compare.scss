@@ -135,7 +135,7 @@ $compare__wishlist-icon-transition : $transition-base !default;
         cursor: $compare__wishlist-cursor;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             background: $compare__wishlist-background;
             .compare__wishlist-icon,
             .compare__remove-icon {

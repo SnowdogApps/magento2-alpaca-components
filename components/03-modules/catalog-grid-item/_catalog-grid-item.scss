@@ -90,7 +90,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         flex-direction: row;
 
         &:hover,
-        &:focus-within {
+        &.focus-within {
             .catalog-grid-item__details {
                 transform: $catalog-grid-item__content-translateY--active;
             }
@@ -133,7 +133,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         align-self: stretch;
         width: $catalog-grid-item__link-width;
 
-        &:focus {
+        &.focus-visible {
             z-index: $catalog-grid-item__link-z-index--focus;
             outline: $catalog-grid-item__link-outline--focus;
         }
@@ -260,7 +260,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
         padding: $catalog-grid-item__primary-padding;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             .icon {
                 fill: $catalog-grid-item__primary-icon-fill;
             }
@@ -292,7 +292,7 @@ $catalog-grid-item__IE-width\@medium              : calc(100% / 3 - #{$spacer--m
             border: $catalog-grid-item__action-border;
             cursor: $catalog-grid-item__action-cursor;
             &:hover,
-            &:focus {
+            &.focus-visible {
                 .button__icon {
                     fill: $catalog-grid-item__action-icon-fill-hover;
                 }

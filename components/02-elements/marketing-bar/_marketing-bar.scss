@@ -52,7 +52,7 @@ $marketing-bar__button-icon-padding : 2px !default;
         border: none;
         background-color: transparent;
 
-        &:focus,
+        &.focus-visible,
         &:hover {
             background-color: transparent;
         }

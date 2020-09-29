@@ -42,7 +42,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
         @include visually-hidden($usePseudo: true);
         transition: none;
 
-        &:focus {
+        &.focus-visible {
             height: $filters__skip-button-height;
             padding: $filters__skip-button-padding;
             margin-bottom: $filters__skip-button-margin-bottom;
@@ -67,7 +67,7 @@ $filters__active-margin              : 0 0 $spacer--medium 0 !default;
         text-align: left;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             color: $filters__switcher-color;
             text-decoration: none;
             cursor: pointer;

@@ -33,7 +33,7 @@ $top-bar__link-text-decoration: none !default;
             line-height: $top-bar__divider-height;
             text-decoration: $top-bar__link-text-decoration;
 
-            &:focus,
+            &.focus-visible,
             &:hover {
                 text-decoration: $top-bar__link-text-decoration;
             }
@@ -50,7 +50,7 @@ $top-bar__link-text-decoration: none !default;
             line-height: $top-bar__divider-height;
             text-decoration: $top-bar__link-text-decoration;
 
-            &:focus,
+            &.focus-visible,
             &:hover {
                 text-decoration: $top-bar__link-text-decoration;
             }

@@ -117,7 +117,7 @@ $review__summary-max-width\@large: 200px !default;
             margin-right: 0;
         }
 
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
 
@@ -130,7 +130,7 @@ $review__summary-max-width\@large: 200px !default;
         text-decoration: underline;
         text-align: right;
 
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
     }

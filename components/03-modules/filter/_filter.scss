@@ -97,7 +97,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         color: $filter__category-link-color;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             text-decoration: $filter__category-link-text-decoration;
         }
     }
@@ -132,7 +132,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
         text-decoration: none;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             text-decoration: none;
             border-color: $filter__swatch-option-border-color-hover;
         }
@@ -179,7 +179,7 @@ $filter__range-margin                             : 0 0 $spacer--medium 0 !defau
 
         &--active,
         &:hover,
-        &:focus {
+        &.focus-visible {
             text-decoration: none;
 
             &:after {

@@ -103,7 +103,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
 
     &__link {
         display: block;
-        &:focus {
+        &.focus-visible {
             outline: $outline-base;
             z-index: 0;
             .image {
@@ -212,7 +212,7 @@ $catalog-list-item__stock-status-color--out-of-stock             : $color-danger
             }
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 background-color: transparent;
 
                 .button__icon {

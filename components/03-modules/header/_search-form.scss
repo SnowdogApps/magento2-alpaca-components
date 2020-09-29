@@ -58,7 +58,7 @@ $search-form__placeholder-color : $gray !default;
         border-radius: $search-form__height;
         background-color: $search-form__button-background;
 
-        &:focus,
+        &.focus-visible,
         &:hover {
             background-color: $search-form__button-background;
 

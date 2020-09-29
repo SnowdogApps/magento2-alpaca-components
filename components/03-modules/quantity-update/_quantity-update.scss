@@ -32,7 +32,7 @@ $quantity-updater__error-max-width                   : 120px !default;
         text-align: center;
         appearance: none;
 
-        &:focus {
+        &.focus-visible {
             @include focus-input();
         }
     }
@@ -42,7 +42,7 @@ $quantity-updater__error-max-width                   : 120px !default;
         background: $quantity-update__button-background;
         margin: 0;
 
-        &:focus {
+        &.focus-visible {
             @include focus-input();
         }
 
@@ -60,7 +60,7 @@ $quantity-updater__error-max-width                   : 120px !default;
             pointer-events: none;
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 background: $quantity-update__button-background-hover--disabled;
 
                 .quantity-update__icon {
