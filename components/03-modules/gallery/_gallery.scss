@@ -79,7 +79,7 @@ $gallery__thumb-width--large               : 80px !default;
             height: $gallery__thumb-height--large;
         }
         &:hover,
-        &:focus {
+        &.focus-visible {
             cursor: pointer;
         }
         &--active {
@@ -94,7 +94,7 @@ $gallery__thumb-width--large               : 80px !default;
         height: $gallery__thumb-arrow-height;
         margin: 0 auto;
         &:hover,
-        &:focus {
+        &.focus-visible {
             cursor: pointer;
         }
     }

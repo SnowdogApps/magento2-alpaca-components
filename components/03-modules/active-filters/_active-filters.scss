@@ -39,7 +39,7 @@ $active-filters__clear-color\@medium : $color-secondary !default;
         word-break: break-all;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             outline-offset: -7px;
             .active-filters__remove-icon {
                 fill: $active-filters__icon-fill--hover;
@@ -84,7 +84,7 @@ $active-filters__clear-color\@medium : $color-secondary !default;
         text-decoration: none;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             text-decoration: none;
             color: $active-filters__clear-color;
         }
@@ -98,7 +98,7 @@ $active-filters__clear-color\@medium : $color-secondary !default;
             text-decoration: none;
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 color: $active-filters__clear-color\@medium;
                 text-decoration: underline;
             }

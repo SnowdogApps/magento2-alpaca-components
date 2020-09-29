@@ -41,7 +41,7 @@ $action-padding: 15px !default;
         margin-right: 15px;
         background-clip: content-box;
 
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
 

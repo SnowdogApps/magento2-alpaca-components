@@ -75,7 +75,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
     &__item {
         &--parent {
             &:hover,
-            &:focus {
+            &.focus-visible {
                 .mega-menu__inner-list--level1 {
                     display: flex;
                 }
@@ -86,7 +86,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
                 display: flex;
             }
 
-            &:focus-within {
+            &.focus-within {
                 .mega-menu__inner-list--level1 {
                     display: flex;
                 }
@@ -118,7 +118,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
 
             .mega-menu__inner-link {
                 display: block;
-                &:focus {
+                &.focus-visible {
                     @include focus();
                     background-color: transparent;
                     color: $mega-menu__inner-link-color--image-focus;
@@ -139,7 +139,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
         font-weight: $mega-menu__font-weight;
         color: $mega-menu__link-color;
         text-decoration: $mega-menu__link-text-decoration;
-        &:focus,
+        &.focus-visible,
         &:hover {
             text-decoration: $mega-menu__link-text-decoration;
             color: $mega-menu__link-color--active;
@@ -160,7 +160,7 @@ $mega-menu__inner-link-color--image-focus    : $font-color-base !default;
             color: $mega-menu__inner-link-color--active;
         }
 
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
     }

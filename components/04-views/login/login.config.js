@@ -63,7 +63,7 @@ module.exports = {
       text: 'Sign in'
     },
     createAccountButton: {
-      class: 'button--link login__button login__button--create-accunt',
+      class: 'button--link login__button login__button--create-account',
       tag: 'a',
       text: 'Create an Account'
     },

@@ -93,7 +93,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             }
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 background-color: $dropdown-list__bg-color--secondary;
                 color: $dropdown-list__item-color--secondary;
                 & > .dropdown-list__icon {
@@ -124,7 +124,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             font-weight: $font-weight-bold;
 
             &:hover,
-            &:focus {
+            &.focus-visible {
                 color: $dropdown-list__item-color-hover--dark;
                 background-color: $dropdown-list__item-bg-color-hover--dark;
 
@@ -152,7 +152,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             background-color: $dropdown-list__item-bg-color--inner;
             font-weight: $dropdown-list__item-font-weight--inner;
             &:hover,
-            &:focus {
+            &.focus-visible {
                 color: $dropdown-list__item-color-hover--inner;
             }
             &[aria-expanded="true"] {
@@ -223,7 +223,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
         font-weight: $dropdown-list__item-font-weight;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             color: $dropdown-list__item-color-hover;
             background-color: $dropdown-list__item-bg-color-hover;
             text-decoration: underline;
@@ -276,7 +276,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             .dropdown-list__label {
                 cursor: default;
                 &:hover,
-                &:focus {
+                &.focus-visible {
                     color: $dropdown-list__item-color;
                     background-color: $dropdown-list__item-bg-color;
                     text-decoration: none;
@@ -293,7 +293,7 @@ $dropdown-list__content-margin--screen-m  : $spacer $spacer--medium !default;
             &.dropdown-list--dark {
                 .dropdown-list__label {
                     &:hover,
-                    &:focus {
+                    &.focus-visible {
                         color: $dropdown-list__item-color--dark;
                         background-color: $dropdown-list__item-bg-color-hover--dark;
                     }

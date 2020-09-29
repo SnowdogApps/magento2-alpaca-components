@@ -13,7 +13,7 @@ $rating__error-color            : $red !default;
     width: $rating__size;
 
     &:hover,
-    &:focus {
+    &.focus-visible {
         .rating__rate-item span:before {
             display: block;
         }
@@ -25,7 +25,7 @@ $rating__error-color            : $red !default;
         overflow: hidden;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             ~ .rating__rate-item span:before {
                 display: none;
             }
@@ -96,7 +96,7 @@ $rating__error-color            : $red !default;
                 display: none;
             }
             .rating__star--rate:hover &,
-            .rating__star--rate:focus &,
+            .rating__star--rate.focus-visible &,
             .rating__rate-item--active & {
                 display: block;
             }
@@ -179,7 +179,7 @@ $rating__error-color            : $red !default;
             width: 1px;
             height: 1px;
             bottom: 0;
-            &:focus {
+            &.focus-visible {
                 opacity: 1;
                 height: 0;
                 outline: none;

@@ -100,7 +100,7 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         &.dropdown-list__label {
             color: $minicart-product__attributes-button-color;
             background-color: $minicart-product__attributes-button-bg-color;
-            &:focus,
+            &.focus-visible,
             &:hover {
                 background-color: $minicart-product__attributes-button-bg-color;
             }
@@ -164,7 +164,7 @@ $minicart-product__action-icon-color--active      : $color-primary !default;
         padding: 12px;
         border: 0;
         background-color: $minicart-product__action-button-bg;
-        &:focus,
+        &.focus-visible,
         &:hover {
             background-color: $minicart-product__action-button-bg;
 

@@ -141,7 +141,7 @@ $toolbar__select-dropdown-border-radius: 0 0 $spacer--medium $spacer--medium !de
         cursor: $toolbar__mode-icon-cursor;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             .toolbar__mode-icon {
                 fill: $toolbar__icon-color--hover;
             }

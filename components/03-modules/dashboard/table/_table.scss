@@ -33,7 +33,7 @@ $dashboard-table-margin: $spacer--medium !default;
 
     &__link {
         display: inline-flex;
-        &:focus {
+        &.focus-visible {
             @include focus-inline();
         }
     }

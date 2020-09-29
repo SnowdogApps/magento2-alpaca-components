@@ -21,7 +21,7 @@ $checkbox__color--fake          : $gray-dark !default;
         color: $checkbox__color--fake;
 
         &:hover,
-        &:focus {
+        &.focus-visible {
             text-decoration: underline;
         }
     }
@@ -52,7 +52,7 @@ $checkbox__color--fake          : $gray-dark !default;
             border: $checkbox__border--checked;
         }
 
-        &:focus ~ .checkbox__label {
+        &.focus-visible ~ .checkbox__label {
             @include focus();
         }
     }
