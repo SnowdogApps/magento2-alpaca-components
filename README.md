@@ -8,6 +8,11 @@ This components liblary is built on top of [Fractal.js](http://fractal.build/gui
 
 Magento 2 experience isn't required to work with this code.
 
+⚠️ This is the first version of Alpaca Components. We have created Alpaca Components 2.0, integrated with [Alpaca Magento theme](https://github.com/SnowdogApps/magento2-alpaca-theme). The 2nd version, with new, refreshed design, is regularly updated and developed.
+Latest version of components is [deployed here](https://magento2-alpaca-theme-git-master-snowdog1.vercel.app/)
+Components can be still used separately, please check [project's README](https://github.com/SnowdogApps/magento2-alpaca-theme/blob/master/README.md) for more information.
+We recommend to use the latest version.
+
 ## Demo / Preview
 https://alpaca-components.now.sh/
 
