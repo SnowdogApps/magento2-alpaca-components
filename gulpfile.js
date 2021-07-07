@@ -223,9 +223,21 @@ const compileSVG = () => {
     .pipe(gulp.dest(fractal.web.get('static.path')));
 }
 
+const a11yPreview = '@views';
+
+function setA11yViewsPreview(args, done) {
+  const app = this.fractal;
+  for (let item of app.components.flatten()) {
+    if (item.viewPath.includes('04-views')) {
+      item.preview = a11yPreview;
+    }
+  }
+  done();
+}
+
 const a11y = () => {
-  fractal.components.set('default.preview', '@a11y-tests');
-  gulp.parallel('fractal:start');
+  fractal.cli.command('a11y-preview', setA11yViewsPreview, a11yPreview);
+  return fractal.cli.exec('a11y-preview');
 }
 
 const watchStyle = () => {
@@ -283,7 +295,7 @@ const buildFractal = () => {
   });
 }
 
-const dev = gulp.series(gulp.parallel(inheritance, compileSVG, compileStyle), startFractal, watch)
+const dev = gulp.series(gulp.parallel(a11y, inheritance, compileSVG, compileStyle), startFractal, watch)
 
 const build = gulp.series(gulp.parallel(inheritance, compileSVG, compileStyle), buildFractal)
 

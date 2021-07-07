@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>{{ title }}</title>
@@ -6,7 +6,10 @@
         <link media="all" rel="stylesheet" href="{{ path '/css/styles.css' }}" />
         {{> @libs }}
     </head>
-    <body>
+    <body class="components">
         {{{ yield }}}
+
+        <script src="{{ path '/tests/libs/axe.min.js' }}"></script>
+        <script src="{{ path '/tests/a11y-test.js' }}"></script>
     </body>
 </html>

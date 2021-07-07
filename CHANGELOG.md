@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Switching to Gulp 4
 - Update node modules (autoprefixer@9.6.0, globby@9.2.0, fs-extra@8.0.1, stylelint-config-standard@8.3.0, stylelint@10.1.0)
 - Load dropdown-list globally and change dropdown selector
+- a11y automatic tests with axe-core
 
 ### Fixed
 - Rating focus style
